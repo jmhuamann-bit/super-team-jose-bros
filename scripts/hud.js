@@ -7,6 +7,10 @@ const el = {
   xp: document.querySelector("#hud-xp b"),
   monedas: document.querySelector("#hud-monedas b"),
   tiempo: document.querySelector("#hud-tiempo b"),
+  pistas: document.querySelector("#hud-pistas b"),
+  turbo: document.getElementById("hud-turbo"),
+  turboVal: document.querySelector("#hud-turbo b"),
+  estrella: document.getElementById("hud-estrella"),
   distrito: document.getElementById("hud-distrito"),
   bichos: document.getElementById("hud-bichos"),
   cartel: document.getElementById("cartel"),
@@ -21,12 +25,17 @@ export const HUD = {
     el.distrito.textContent = `📍 ${nombre} · ${clase}`;
   },
 
-  actualizar({ vidas, xp, monedas, tiempo, resueltos, total }) {
+  actualizar({ vidas, xp, monedas, tiempo, resueltos, total, pistas = 0, turbo = 0, grande = false }) {
     el.vidas.textContent = String(Math.max(0, vidas));
     el.xp.textContent = xp;
     el.monedas.textContent = monedas;
     el.tiempo.textContent = reloj(tiempo);
+    el.pistas.textContent = pistas;
     el.bichos.textContent = `👾 ${resueltos}/${total}`;
+    // los poderes solo se muestran mientras están activos
+    el.turbo.classList.toggle("oculto", turbo <= 0);
+    if (turbo > 0) el.turboVal.textContent = `${Math.ceil(turbo / 60)}s`;
+    el.estrella.classList.toggle("oculto", !grande);
   },
 
   /** Pequeña animación para llamar la atención sobre un dato del HUD. */

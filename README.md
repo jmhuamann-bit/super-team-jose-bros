@@ -28,8 +28,13 @@ Con 0 vidas se reaparece en el **último checkpoint** con las 3 vidas de vuelta:
 se vuelve al inicio del nivel.
 
 Al chocar por primera vez con el jefe aparecen unas **viñetas estilo manga** que lo
-presentan, y cuando el distrito queda liberado llega una **combi** que recoge a José
-y se lo lleva al siguiente distrito.
+presentan. El nivel termina como en los clásicos: se sube una **escalera**, se salta al
+**mástil de la bandera** (mientras más alto lo agarres, más monedas de bonus) y, en vez
+de entrar a un castillo, llega el **transporte del distrito** —mototaxi en el Callao,
+combi en San Miguel, limosina donde corresponda— que se lleva a José al siguiente.
+
+El vehículo se elige con el campo `"vehiculo"` del JSON del nivel: `mototaxi`, `bus`
+o `limosina`.
 
 Reglas de diseño de los niveles (las revisa el validador antes de publicar):
 el salto sube **3 bloques** y cruza huecos de hasta **4 bloques**, así que ninguna
@@ -97,9 +102,11 @@ El mapa se dibuja con letras, **15 filas** de alto:
 |---|---|
 | `#` | suelo sólido |
 | `=` | plataforma flotante |
-| `?` | bloque sorpresa (suelta monedas) |
-| `1` | bloque con **vida extra** |
+| `?` | bloque sorpresa: monedas |
+| `1` | bloque con **ceviche**: una vida más |
 | `G` | bloque con la **estrella**: José crece y aguanta un golpe |
+| `V` | bloque con **chicha energética**: velocidad por unos segundos |
+| `L` | bloque con un **foco**: una pista para gastar en cualquier pregunta |
 | `o` | moneda |
 | `E` | bicho con pregunta |
 | `B` | jefe del distrito |

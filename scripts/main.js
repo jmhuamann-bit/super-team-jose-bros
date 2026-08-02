@@ -173,14 +173,21 @@ document.getElementById("btn-ayuda").onclick = () => mostrarAviso({
     <p><b>Los bichos son preguntas.</b> Al tocarlos el juego se pausa y aparecen cuatro alternativas.
     Si aciertas, el bicho desaparece y ganas XP y monedas. Si fallas, pierdes una vida y el bicho
     se queda: puedes volver a intentarlo.</p>
-    <p><b>Los bloques amarillos se rompen de cabezazo</b> saltando desde abajo. Adentro puede
-    haber monedas, una <b>vida extra</b> ❤️ o la <b>estrella</b> ⭐ que agranda a José: mientras
-    la tengas, un golpe de obstáculo no te quita vida.</p>
+    <p><b>Los bloques amarillos se rompen de cabezazo</b> saltando desde abajo. Cada uno guarda
+    algo distinto:</p>
+    <p style="margin-left:8px">
+      🪙 <b>Monedas</b> · 🐟 <b>Ceviche:</b> una vida más ·
+      ⭐ <b>Estrella:</b> José crece y aguanta un golpe ·
+      ⚡ <b>Chicha energética:</b> corres mucho más rápido unos segundos ·
+      💡 <b>Foco:</b> una pista que puedes gastar en cualquier pregunta para descartar
+      dos alternativas.</p>
     <p><b>Las preguntas se ponen más difíciles</b> conforme avanzas en el distrito, y al final
     te espera un jefe con tres preguntas seguidas.</p>
     <p><b>❤️ Vidas:</b> empiezas con 3. Si se acaban, reapareces en el último checkpoint con
     las 3 de vuelta. Nunca vuelves al inicio del nivel.</p>
-    <p>Cuando liberas el distrito llega una <b>combi</b> 🚐 que te lleva al siguiente.</p>`,
+    <p><b>El final:</b> subes la escalera y te lanzas al mástil. Mientras <b>más alto</b> lo
+    agarres, más monedas de bonus. Después te recoge el transporte del distrito
+    (mototaxi, combi o hasta limosina) y te lleva al siguiente.</p>`,
 });
 
 /* ------------------------------------------------------------------

@@ -22,8 +22,10 @@ export function crearJuego(lienzo, nivel, eventos) {
     tiempo: 0,            // segundos jugados (no corre durante las preguntas)
     corriendo: false, pausa: false, terminado: false,
     grande: false,        // con la estrella aguanta un golpe sin perder vida
+    turbo: 0,             // cuadros que le quedan a la chicha energética
+    pistas: 0,            // focos guardados para usar en las preguntas
     reaparicion: { ...nivel.inicio },
-    salida: null,         // animación de la combi al terminar el nivel
+    salida: null,         // animación del mástil y el vehículo al terminar
   };
 
   const jug = {
@@ -36,6 +38,7 @@ export function crearJuego(lienzo, nivel, eventos) {
   const particulas = [];   // chispas
   const premios = [];      // objetos que salen de los bloques y suben flotando
   const textos = [];       // textos que suben y se desvanecen ("+1 VIDA")
+  const derrotados = [];   // bichos girando por los aires tras responder bien
   let cam = 0, reloj = 0, rafId = 0, ultimo = 0;
 
   /* ---------------- utilidades ---------------- */
@@ -64,7 +67,18 @@ export function crearJuego(lienzo, nivel, eventos) {
 
   /* ---------------- física ---------------- */
   function mover() {
-    const objetivo = teclas.correr ? CFG.VEL_CORRE : CFG.VEL_CAMINA;
+    // con la chicha energética corre más rápido y deja un rastro de colores
+    if (est.turbo > 0) {
+      est.turbo--;
+      if (est.turbo === 0) flotar(jug.x, jug.y - 12, "se acabó la chicha", "#8fb4cb");
+      if (Math.abs(jug.vx) > 1 && reloj % 3 === 0) {
+        particulas.push({
+          x: jug.x + 10, y: jug.y + 20, vx: -jug.vx * 0.25, vy: -0.3,
+          vida: 14, color: reloj % 6 ? "#38bdf8" : "#ffd166",
+        });
+      }
+    }
+    const objetivo = est.turbo > 0 ? CFG.VEL_TURBO : (teclas.correr ? CFG.VEL_CORRE : CFG.VEL_CAMINA);
     let dir = 0;
     if (teclas.izquierda) dir = -1;
     if (teclas.derecha) dir = 1;
@@ -95,8 +109,18 @@ export function crearJuego(lienzo, nivel, eventos) {
     }
 
     jug.vy = Math.min(jug.vy + CFG.GRAVEDAD, CFG.VEL_MAX_CAIDA);
+    colisionar();
 
-    // --- colisión horizontal ---
+    jug.paso = (jug.enSuelo && Math.abs(jug.vx) > 0.3) ? jug.paso + Math.abs(jug.vx) * 0.28 : 0;
+    if (jug.invulnerable > 0) jug.invulnerable--;
+  }
+
+  /**
+   * Aplica la velocidad actual y resuelve los choques contra el mapa,
+   * primero en horizontal y luego en vertical (así no se traba en las esquinas).
+   */
+  function colisionar() {
+    // --- horizontal ---
     jug.x += jug.vx;
     let c0 = Math.floor(jug.x / CFG.TILE), c1 = Math.floor((jug.x + CFG.ANCHO_JUGADOR - 1) / CFG.TILE);
     let f0 = Math.floor(jug.y / CFG.TILE), f1 = Math.floor((jug.y + CFG.ALTO_JUGADOR - 1) / CFG.TILE);
@@ -105,7 +129,7 @@ export function crearJuego(lienzo, nivel, eventos) {
       else if (jug.vx < 0 && esSolido(nivel, c0, f)) { jug.x = (c0 + 1) * CFG.TILE; jug.vx = 0; }
     }
 
-    // --- colisión vertical ---
+    // --- vertical ---
     jug.y += jug.vy;
     jug.enSuelo = false;
     c0 = Math.floor(jug.x / CFG.TILE); c1 = Math.floor((jug.x + CFG.ANCHO_JUGADOR - 1) / CFG.TILE);
@@ -117,9 +141,6 @@ export function crearJuego(lienzo, nivel, eventos) {
         jug.y = (f0 + 1) * CFG.TILE; jug.vy = 0;
       }
     }
-
-    jug.paso = (jug.enSuelo && Math.abs(jug.vx) > 0.3) ? jug.paso + Math.abs(jug.vx) * 0.28 : 0;
-    if (jug.invulnerable > 0) jug.invulnerable--;
   }
 
   /* ---------------- daño y reaparición ---------------- */
@@ -182,9 +203,22 @@ export function crearJuego(lienzo, nivel, eventos) {
 
         if (b.premio === "vida") {
           est.vidas++;
-          premios.push({ x: b.x + 2, y: b.y - 24, vy: -4.2, gravedad: 0.11, sprite: "item_vida", vida: 78, gira: false });
-          flotar(b.x - 6, b.y - 34, "VIDA EXTRA", "#ff5470");
+          premios.push({ x: b.x + 2, y: b.y - 24, vy: -4.2, gravedad: 0.11, sprite: "item_ceviche", vida: 78, gira: false });
+          flotar(b.x - 16, b.y - 34, "CEVICHE: +1 VIDA", "#ff5470");
           eventos.onLatido?.("vidas");
+          Audio.victoria();
+        } else if (b.premio === "turbo") {
+          est.turbo = CFG.DURA_TURBO;
+          premios.push({ x: b.x + 2, y: b.y - 24, vy: -4.6, gravedad: 0.12, sprite: "item_rayo", vida: 70, gira: false });
+          flotar(b.x - 22, b.y - 34, "CHICHA ENERGÉTICA: ¡VELOCIDAD!", "#ffd166");
+          chispas(jug.x + 10, jug.y + 14, "#38bdf8", 20);
+          eventos.onLatido?.("turbo");
+          Audio.victoria();
+        } else if (b.premio === "pista") {
+          est.pistas++;
+          premios.push({ x: b.x + 2, y: b.y - 24, vy: -4.4, gravedad: 0.12, sprite: "item_foco", vida: 74, gira: false });
+          flotar(b.x - 18, b.y - 34, "PISTA GUARDADA", "#38bdf8");
+          eventos.onLatido?.("pistas");
           Audio.victoria();
         } else if (b.premio === "estrella") {
           est.grande = true;
@@ -242,12 +276,12 @@ export function crearJuego(lienzo, nivel, eventos) {
     const j = nivel.jefe;
     if (j && j.vivo && chocan(caja, { x: j.x, y: j.y, ancho: 40, alto: 32 })) preguntar(j, true);
 
-    // meta
-    if (chocan(caja, { x: nivel.meta.x, y: nivel.meta.y, ancho: CFG.TILE, alto: CFG.TILE * 2 })) {
+    // mástil de la meta: se puede agarrar a cualquier altura
+    if (chocan(caja, { x: nivel.meta.x - 2, y: TOPE_MASTIL, ancho: 26, alto: ALTO_MASTIL })) {
       if (est.resueltos >= nivel.totalRetos) iniciarSalida();
       else {
-        jug.x = nivel.meta.x - 40; jug.vx = 0;
-        avisar(`La meta está cerrada: te faltan ${nivel.totalRetos - est.resueltos} bichos 👾`, 150);
+        jug.x = nivel.meta.x - 44; jug.vx = 0;
+        avisar(`El mástil está bloqueado: te faltan ${nivel.totalRetos - est.resueltos} bichos 👾`, 150);
       }
     }
   }
@@ -280,6 +314,13 @@ export function crearJuego(lienzo, nivel, eventos) {
       pregunta, nombre, sprite, esJefe,
       paso: esJefe ? entidad.paso + 1 : 0,
       total: esJefe ? entidad.preguntas.length : 0,
+      pistas: est.pistas,
+      // gastar un foco descarta dos alternativas equivocadas
+      usarPista: () => {
+        if (est.pistas <= 0) return false;
+        est.pistas--; refrescar();
+        return true;
+      },
     }, (acerto) => {
       est.intentos++;
       if (acerto) {
@@ -288,17 +329,26 @@ export function crearJuego(lienzo, nivel, eventos) {
         est.monedas += CFG.MONEDAS_ACIERTO;
         Audio.acierto();
 
+        flotar(entidad.x, entidad.y - 14, `+${CFG.XP[pregunta.nivel] || 10} XP`, "#4ade80");
+
         if (esJefe) {
           entidad.paso++; entidad.golpes++;
-          chispas(entidad.x + 20, entidad.y + 16, "#ffd166", 14);
+          entidad.sacudida = 18;                      // el jefe se remece con cada acierto
+          chispas(entidad.x + 20, entidad.y + 16, "#ffd166", 16);
           if (entidad.paso >= entidad.preguntas.length) {
             entidad.vivo = false; est.resueltos++;
-            chispas(entidad.x + 20, entidad.y + 16, "#4ade80", 26);
-            avisar(`¡${nombre} derrotado! La meta se abrió 🚩`, 200);
+            chispas(entidad.x + 20, entidad.y + 16, "#4ade80", 30);
+            derrotados.push({ x: entidad.x, y: entidad.y, sprite, vy: -7, vx: 1.2, giro: 0, vida: 90 });
+            avisar(`¡${nombre} derrotado! Corre al mástil 🚩`, 200);
           }
         } else {
           entidad.vivo = false; est.resueltos++;
-          chispas(entidad.x + 14, entidad.y + 12, "#4ade80", 16);
+          chispas(entidad.x + 14, entidad.y + 12, "#4ade80", 18);
+          // el bicho sale volando dando vueltas antes de desaparecer
+          derrotados.push({
+            x: entidad.x, y: entidad.y, sprite,
+            vy: -6.2, vx: (jug.x < entidad.x ? 1.6 : -1.6), giro: 0, vida: 70,
+          });
         }
       } else {
         Audio.error();
@@ -314,42 +364,61 @@ export function crearJuego(lienzo, nivel, eventos) {
     });
   }
 
-  /* ---------------- salida en combi ---------------- */
+  /* ---------------- final del nivel: mástil y vehículo ---------------- */
+  const SUELO_META = nivel.meta.y + CFG.TILE * 2;   // altura del piso junto al mástil
+  const ALTO_MASTIL = 232;
+  const TOPE_MASTIL = SUELO_META - ALTO_MASTIL;
+
   /**
-   * Al llegar a la meta no se corta de golpe: llega una combi, José se sube y
-   * se va rumbo al siguiente distrito. Dura poco más de dos segundos.
+   * Como en los clásicos: José se agarra del mástil, baja deslizándose con la
+   * bandera, se despide y sube al vehículo del distrito (mototaxi, combi o
+   * limosina). Mientras más alto agarre el mástil, más monedas de bonus.
    */
   function iniciarSalida() {
     if (est.salida) return;
-    est.salida = { t: 0, busX: nivel.meta.x + 460, subio: false };
-    jug.vx = 0;
+    const agarre = Math.max(TOPE_MASTIL, Math.min(jug.y, SUELO_META - 40));
+    const altura = SUELO_META - agarre;
+    const bonus = Math.max(1, Math.round((altura / ALTO_MASTIL) * 20));
+
+    est.salida = { t: 0, y: agarre, bonus, vehiculoX: nivel.meta.x + 520, subio: false };
+    est.monedas += bonus;
+    jug.x = nivel.meta.x + 2; jug.vx = 0; jug.vy = 0;
+    flotar(nivel.meta.x - 10, agarre - 16, `+${bonus} POR LA ALTURA`, "#ffd166");
     Audio.pararMusica();
     Audio.victoria();
-    avisar("¡Distrito liberado! Sube a la combi 🚐", 200);
+    avisar("¡Distrito liberado!", 220);
+    refrescar();
   }
 
   function animarSalida() {
     const s = est.salida;
     s.t++;
-    const destino = nivel.meta.x + 70;
 
-    if (s.t < 70) {                       // la combi frena junto a la meta
-      s.busX += (destino - s.busX) * 0.09;
-      if (jug.enSuelo && s.t % 26 === 0) { jug.vy = -7; Audio.salto(); }
-    } else if (s.t < 110) {               // José corre y se sube
-      jug.vx = 2.6;
-      if (jug.x > s.busX - 6) { s.subio = true; jug.vx = 0; }
-    } else {                              // la combi arranca
-      s.busX += Math.min((s.t - 110) * 0.35, 9);
-      if (s.subio) jug.x = s.busX + 4;
+    if (s.t < 55) {                         // baja deslizándose por el mástil
+      s.y = Math.min(SUELO_META - 30, s.y + 5.2);
+      jug.y = s.y;
+      if (s.t % 9 === 0) Audio.tono(500 + s.t * 6, 0.06, "square", 0.04);
+    } else if (s.t < 78) {                  // salta del mástil hacia la derecha
+      if (s.t === 55) { jug.vy = -6.5; jug.izquierda = false; Audio.salto(); }
+      jug.vx = 2.2;
+      jug.vy = Math.min(jug.vy + CFG.GRAVEDAD, CFG.VEL_MAX_CAIDA);
+      colisionar();
+    } else if (!s.subio) {                  // el vehículo llega y José se sube
+      s.vehiculoX += ((nivel.meta.x + 150) - s.vehiculoX) * 0.08;
+      jug.vx = s.t > 100 ? 2.6 : 0;
+      jug.vy = Math.min(jug.vy + CFG.GRAVEDAD, CFG.VEL_MAX_CAIDA);
+      colisionar();
+      if (jug.x > s.vehiculoX - 10) {
+        s.subio = true; jug.vx = 0;
+        chispas(jug.x + 10, jug.y + 10, "#ffd166", 16);
+      }
+    } else {                                // arranca rumbo al siguiente distrito
+      s.vehiculoX += Math.min((s.t - 110) * 0.3, 8.5);
+      jug.x = s.vehiculoX + 6;
     }
 
-    // física mínima para que el salto de celebración se vea bien
-    jug.vy = Math.min(jug.vy + CFG.GRAVEDAD, CFG.VEL_MAX_CAIDA);
-    if (!s.subio) colisionar(jug, nivel);
     cam += (Math.max(0, Math.min(jug.x - 300, nivel.ancho * CFG.TILE - CFG.ANCHO_VISTA)) - cam) * 0.1;
-
-    if (s.t > 190) terminar();
+    if (s.t > 200) terminar();
   }
 
   /* ---------------- fin ---------------- */
@@ -370,6 +439,7 @@ export function crearJuego(lienzo, nivel, eventos) {
     eventos.onHUD?.({
       vidas: est.vidas, xp: est.xp, monedas: est.monedas,
       tiempo: est.tiempo, resueltos: est.resueltos, total: nivel.totalRetos,
+      pistas: est.pistas, turbo: est.turbo, grande: est.grande,
     });
   }
 
@@ -399,17 +469,34 @@ export function crearJuego(lienzo, nivel, eventos) {
         ctx.fillRect(px + 2, cp.y + 26, 26, 5);
       }
     }
+    // --- mástil de la meta, con su bandera ---
     const mx = nivel.meta.x - cam;
-    if (mx > -80 && mx < 880) {
-      const abierta = est.resueltos >= nivel.totalRetos;
-      pintar(ctx, "meta", mx, nivel.meta.y);
-      ctx.fillStyle = abierta ? "#4ade80" : "#5b5580";
-      ctx.fillRect(mx + 6, nivel.meta.y + 34, 20, 30);
-      ctx.fillStyle = "#12102a";
-      ctx.font = "bold 9px ui-monospace, monospace";
-      ctx.textAlign = "center";
-      ctx.fillText(abierta ? "META" : "CERR", mx + 16, nivel.meta.y + 52);
-      ctx.textAlign = "left";
+    if (mx > -120 && mx < 900) {
+      const abierto = est.resueltos >= nivel.totalRetos;
+      ctx.fillStyle = "#3b3480";                                   // base
+      ctx.fillRect(mx + 2, SUELO_META - 16, 24, 16);
+      ctx.fillStyle = abierto ? "#eae7ff" : "#5b5580";             // mástil
+      ctx.fillRect(mx + 11, TOPE_MASTIL, 6, ALTO_MASTIL - 12);
+      ctx.fillStyle = abierto ? "#ffd166" : "#5b5580";             // bola de arriba
+      ctx.beginPath(); ctx.arc(mx + 14, TOPE_MASTIL - 2, 7, 0, Math.PI * 2); ctx.fill();
+
+      // la bandera baja junto con José mientras se desliza
+      const alturaBandera = est.salida
+        ? Math.min(SUELO_META - 42, est.salida.y + 6)
+        : TOPE_MASTIL + 14;
+      ctx.fillStyle = abierto ? "#ff5470" : "#4a4470";
+      ctx.beginPath();
+      ctx.moveTo(mx + 11, alturaBandera);
+      ctx.lineTo(mx - 26, alturaBandera + 12);
+      ctx.lineTo(mx + 11, alturaBandera + 24);
+      ctx.closePath(); ctx.fill();
+      if (!abierto) {
+        ctx.fillStyle = "#12102a";
+        ctx.font = "bold 9px ui-monospace, monospace";
+        ctx.textAlign = "center";
+        ctx.fillText("🔒", mx + 14, SUELO_META - 4);
+        ctx.textAlign = "left";
+      }
     }
 
     // --- monedas y bloques ---
@@ -453,13 +540,29 @@ export function crearJuego(lienzo, nivel, eventos) {
       ctx.textAlign = "left";
     }
 
+    // --- bichos derrotados dando vueltas por los aires ---
+    for (let i = derrotados.length - 1; i >= 0; i--) {
+      const d = derrotados[i];
+      d.x += d.vx; d.y += d.vy; d.vy += 0.28; d.giro += 0.22; d.vida--;
+      if (d.vida <= 0) { derrotados.splice(i, 1); continue; }
+      const m = medida(d.sprite);
+      ctx.save();
+      ctx.globalAlpha = Math.min(1, d.vida / 25);
+      ctx.translate(d.x - cam + m.ancho / 2, d.y + m.alto / 2);
+      ctx.rotate(d.giro);
+      pintar(ctx, d.sprite, -m.ancho / 2, -m.alto / 2);
+      ctx.restore();
+      ctx.globalAlpha = 1;
+    }
+
     // --- jefe ---
     const j = nivel.jefe;
     if (j && j.vivo) {
       const px = j.x - cam;
       if (px > -90 && px < 890) {
         const flota = Math.sin(reloj / 20) * 3;
-        pintar(ctx, tema.jefe, px, j.y + flota);
+        const temblor = j.sacudida > 0 ? (j.sacudida-- % 4 < 2 ? -3 : 3) : 0;
+        pintar(ctx, tema.jefe, px + temblor, j.y + flota);
         // barra de vida del jefe
         const total = j.preguntas.length;
         ctx.fillStyle = "rgba(18,16,42,.85)";
@@ -480,11 +583,16 @@ export function crearJuego(lienzo, nivel, eventos) {
       ctx.globalAlpha = 1;
     }
 
-    // --- la combi de salida ---
-    if (est.salida) {
-      const bx = est.salida.busX - cam;
-      const brinca = est.salida.t > 110 ? Math.abs(Math.sin(est.salida.t / 3)) * 2 : 0;
-      pintar(ctx, "bus", bx, nivel.meta.y + 36 + brinca);   // apoyada en el piso de la meta
+    // --- el vehículo que se lo lleva (según el distrito) ---
+    if (est.salida && est.salida.t > 60) {
+      const vx = est.salida.vehiculoX - cam;
+      const brinca = est.salida.subio ? Math.abs(Math.sin(est.salida.t / 3)) * 2 : 0;
+      const alto = medida(nivel.vehiculo).alto;
+      pintar(ctx, nivel.vehiculo, vx, SUELO_META - alto + brinca, true);
+      if (est.salida.subio && reloj % 8 < 4) {              // humito del tubo de escape
+        ctx.fillStyle = "rgba(200,210,230,.5)";
+        ctx.beginPath(); ctx.arc(vx + 54, SUELO_META - 8, 5, 0, Math.PI * 2); ctx.fill();
+      }
     }
 
     // --- jugador ---
@@ -562,6 +670,8 @@ export function crearJuego(lienzo, nivel, eventos) {
   /* ---------------- API pública ---------------- */
   return {
     estado: est,
+    jugador: jug,      // expuesto para poder inspeccionarlo en las pruebas
+    get camara() { return cam; },
     teclas,
     iniciar() {
       est.corriendo = true; ultimo = 0;

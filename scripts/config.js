@@ -31,6 +31,8 @@ export const CFG = {
   MONEDAS_ACIERTO: 5,
   MONEDAS_BLOQUE: 3,
   XP: { reconocimiento: 10, comprension: 15, aplicacion: 25 },
+  VEL_TURBO: 7.2,      // velocidad con la chicha energética
+  DURA_TURBO: 420,     // cuadros que dura (unos 7 segundos)
 
   // --- enemigos ---
   VEL_BICHO: 0.75,
@@ -42,9 +44,11 @@ export const SIMBOLOS = {
   VACIO: " ",
   SUELO: "#",
   PLATAFORMA: "=",
-  BLOQUE: "?",   // bloque sorpresa: suelta monedas
-  BLOQUE_VIDA: "1",      // bloque sorpresa con vida extra (1-UP)
-  BLOQUE_ESTRELLA: "G",  // bloque sorpresa con la estrella que agranda a José
+  BLOQUE: "?",           // bloque sorpresa: suelta monedas
+  BLOQUE_VIDA: "1",      // ceviche: una vida más
+  BLOQUE_ESTRELLA: "G",  // estrella: José crece y aguanta un golpe
+  BLOQUE_TURBO: "V",     // chicha energética: corre más rápido un rato
+  BLOQUE_PISTA: "L",     // foco: una pista para usar en cualquier pregunta
   MONEDA: "o",
   BICHO: "E",    // enemigo con pregunta
   JEFE: "B",     // jefe final del distrito

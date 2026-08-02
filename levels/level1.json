@@ -5,6 +5,7 @@
   "titulo": "El puerto de las decisiones",
   "tema": "puerto",
   "musica": "puerto",
+  "vehiculo": "mototaxi",
   "intro": "En el puerto todo se decide entre dos barcos: el que tomas y el que dejas ir. Los bichos del muelle creen que pueden llevarse todas las alternativas a la vez. Demuéstrales que el costo de oportunidad es una sola.",
   "repaso": [
     "Economizar es usar el recurso de la mejor manera posible, no ahorrarlo.",
@@ -13,20 +14,20 @@
     "Cuando dos alternativas empatan no se puede definir cuál es, pero sigue siendo una sola."
   ],
   "mapa": [
-    "                                                                                                                                                            ",
-    "                                                                                                                                                            ",
-    "                                                                                                                                                            ",
-    "                                                                                                                                                            ",
-    "                                                                                                                                                            ",
-    "                                                                                                                                                            ",
-    "                                                                                                                                                            ",
-    "                                                                                                  o o o o                                                   ",
-    "                 o    ?           o     o o o o           1          o            G      o        ====                   ?   o        o o o o               ",
-    "                o o              o o    ====                        o o   #             o o                                 o o       ====                  ",
-    "      o o o o  o   o          o o o o                            o o o o ##         o ooo  o ===                           o   o            o o o o         ",
-    "  P                        E                   E  X   C       E         ###   E                         E   C   X    E            E               B     M   ",
-    "################  ###############   ################################  ##################   #################################  ##############################",
-    "################  ###############   ################################  ##################   #################################  ##############################",
-    "################  ###############   ################################  ##################   #################################  ##############################"
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                                                                                      ",
+    "                                                                                                  o o o o                                           #                 ",
+    "                 o    ?           o     o o o o           1          o            V      o        ====                   G   oL       o o o o      ##                 ",
+    "                o o              o o    ====                        o o   #             o o                                 o o       ====        ###                 ",
+    "      o o o o  o   o          o o o o                            o o o o ##         o ooo  o ===                           o   o             o o ####                 ",
+    "  P                        E                   E  X   C       E         ###   E                         E   C   X    E            E       B     #####   M             ",
+    "################  ###############   ################################  ##################   #################################  ########################################",
+    "################  ###############   ################################  ##################   #################################  ########################################",
+    "################  ###############   ################################  ##################   #################################  ########################################"
   ]
 }

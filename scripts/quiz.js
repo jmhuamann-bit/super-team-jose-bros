@@ -40,8 +40,9 @@ function barraDificultad(nivel) {
  * @param {function} alTerminar  recibe true si acertó
  */
 export function mostrarPregunta(datos, alTerminar) {
-  const { pregunta, nombre, sprite, esJefe, paso, total } = datos;
+  const { pregunta, nombre, sprite, esJefe, paso, total, pistas = 0, usarPista } = datos;
   const letras = ["A", "B", "C", "D", "E", "F"];
+  let descartadas = [];
 
   tarjeta.className = "tarjeta";
   tarjeta.innerHTML = `
@@ -56,10 +57,34 @@ export function mostrarPregunta(datos, alTerminar) {
         <button class="opcion" data-i="${i}">
           <span class="letra">${letras[i]}</span><span>${escapar(o)}</span>
         </button>`).join("")}
+    </div>
+    <div class="fila-pista">
+      <button class="btn-pista" id="q-pista" ${pistas > 0 ? "" : "disabled"}>
+        💡 Usar pista <b>(${pistas})</b>
+      </button>
+      <span>Descarta dos alternativas. Los focos salen de los bloques del nivel.</span>
     </div>`;
   tarjeta.querySelector("#q-sprite").appendChild(miniatura(sprite, 3));
   velo.hidden = false;
   tarjeta.querySelector(".opcion")?.focus();
+
+  // --- pista: apaga dos alternativas equivocadas ---
+  tarjeta.querySelector("#q-pista").addEventListener("click", (e) => {
+    if (!usarPista || !usarPista()) return;
+    const malas = pregunta.opciones
+      .map((_, i) => i)
+      .filter((i) => i !== pregunta.correcta)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 2);
+    descartadas = malas;
+    malas.forEach((i) => {
+      const b = tarjeta.querySelector(`.opcion[data-i="${i}"]`);
+      b.disabled = true;
+      b.classList.add("descartada");
+    });
+    e.currentTarget.disabled = true;
+    e.currentTarget.innerHTML = "💡 Pista usada";
+  });
 
   const responder = (elegida) => {
     const acerto = elegida === pregunta.correcta;
@@ -95,7 +120,9 @@ export function mostrarPregunta(datos, alTerminar) {
     const n = "1234".indexOf(e.key);
     const l = "abcd".indexOf(e.key.toLowerCase());
     const i = n >= 0 ? n : l;
-    if (i >= 0 && i < pregunta.opciones.length) { e.preventDefault(); responder(i); }
+    if (i >= 0 && i < pregunta.opciones.length && !descartadas.includes(i)) {
+      e.preventDefault(); responder(i);
+    }
   };
   window.addEventListener("keydown", manejadorTeclas, true);
 }

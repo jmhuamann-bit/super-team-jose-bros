@@ -62,6 +62,12 @@ function construir(definicion, mapa, banco) {
         case S.BLOQUE_ESTRELLA:
           bloques.push({ x: px(c) + 4, y: px(f) + 4, usado: false, rebote: 0, premio: "estrella" });
           break;
+        case S.BLOQUE_TURBO:
+          bloques.push({ x: px(c) + 4, y: px(f) + 4, usado: false, rebote: 0, premio: "turbo" });
+          break;
+        case S.BLOQUE_PISTA:
+          bloques.push({ x: px(c) + 4, y: px(f) + 4, usado: false, rebote: 0, premio: "pista" });
+          break;
         case S.BICHO:
           bichos.push({ col: c, x: px(c), y: px(f) + 8, origen: px(c), dir: c % 2 ? 1 : -1, vivo: true, fase: c });
           break;
@@ -110,6 +116,8 @@ function construir(definicion, mapa, banco) {
     repaso: mapa.repaso || [],
     tema: mapa.tema,
     musica: mapa.musica || mapa.tema,
+    // el vehículo que lo lleva al siguiente distrito: mototaxi, bus o limosina
+    vehiculo: mapa.vehiculo || "bus",
     ancho, alto, tiles,
     inicio, meta, monedas, bloques, bichos, peligros, checkpoints, jefe,
     totalRetos: bichos.length + (jefe ? 1 : 0),

@@ -333,6 +333,82 @@ const ITEM_ESTRELLA = [   // vuelve grande a José
   "..y......y..",
   "............",
 ];
+const ITEM_CEVICHE = [   // plato de ceviche: una vida más
+  "............",
+  "....gg......",
+  "...ggg......",
+  "..wwwwwwww..",
+  ".wwrrwwrrww.",
+  "wwwwwwwwwwww",
+  "wwwwwwwwwwww",
+  ".wwwwwwwwww.",
+  "..wwwwwwww..",
+  "...YYYYYY...",
+  "............",
+  "............",
+];
+const ITEM_RAYO = [      // chicha energética: velocidad por unos segundos
+  "......yy....",
+  ".....yyy....",
+  "....yyy.....",
+  "...yyyy.....",
+  "..yyyyyyy...",
+  ".....yyy....",
+  "....yyy.....",
+  "...yyy......",
+  "..yyy.......",
+  ".yy.........",
+  "............",
+  "............",
+];
+const ITEM_FOCO = [      // pista para usar en una pregunta
+  "....wwww....",
+  "..wwyyyyww..",
+  ".wyyyyyyyyw.",
+  ".wyyyyyyyyw.",
+  ".wyyyyyyyyw.",
+  "..wyyyyyyw..",
+  "...wyyyyw...",
+  "....kkkk....",
+  "....wwww....",
+  "....kkkk....",
+  ".....kk.....",
+  "............",
+];
+const MOTOTAXI = [   // torito: el vehículo del primer distrito (24 × 14)
+  ".......rrrrrrrrrr.......",
+  "......rrrrrrrrrrrr......",
+  "......RRRRRRRRRRRR......",
+  "......r..........r......",
+  "...mmmm..........r......",
+  "..mvvvm..........r......",
+  "..mvvvmmmmmmmmmmmm......",
+  "..mmmmmmmmmmmmmmmm......",
+  "..mmmmmmmmmmmmmmmm......",
+  "...kk........kk.........",
+  "..kkkk......kkkk........",
+  "..kkkk......kkkk........",
+  "...kk........kk.........",
+  "........................",
+];
+const P_MOTO = { r: "#ff5470", R: "#c2264a", m: "#4a5568", v: "#dff4ff", k: "#241a2e", y: "#ffd166" };
+
+const LIMOSINA = [   // para los distritos más pitucos (32 × 12)
+  "........kkkkkkkkkkkkkk..........",
+  "......kkvvkkvvkkvvkkkk..........",
+  "....kkkkkkkkkkkkkkkkkkkk........",
+  "..kkkkkkkkkkkkkkkkkkkkkkkkkk....",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkkkkky..",
+  "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKy..",
+  "KKKKKKKKKKKKKKKKKKKKKKKKKKKKK...",
+  "..nnn................nnn........",
+  ".nnnnn..............nnnnn.......",
+  ".nnwnn..............nnwnn.......",
+  ".nnnnn..............nnnnn.......",
+  "..nnn................nnn........",
+];
+const P_LIMO = { k: "#20202e", K: "#12121c", v: "#9fd6f5", y: "#ffd166", w: "#ffffff", n: "#2c2c3a" };
+
 const BUS = [   // la combi que se lo lleva al siguiente distrito (24 × 14)
   "...cccccccccccccccccc...",
   "..cccccccccccccccccccc..",
@@ -413,7 +489,12 @@ const DEFINICIONES = {
   meta:         [META, P_OBJ],
   item_vida:    [ITEM_VIDA, P_OBJ],
   item_estrella:[ITEM_ESTRELLA, P_OBJ],
+  item_ceviche: [ITEM_CEVICHE, P_OBJ],
+  item_rayo:    [ITEM_RAYO, P_OBJ],
+  item_foco:    [ITEM_FOCO, P_OBJ],
   bus:          [BUS, P_BUS],
+  mototaxi:     [MOTOTAXI, P_MOTO],
+  limosina:     [LIMOSINA, P_LIMO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
