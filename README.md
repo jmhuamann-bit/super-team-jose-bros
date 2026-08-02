@@ -27,6 +27,15 @@ seguidas, y la meta solo se abre cuando todos los bichos fueron resueltos.
 Con 0 vidas se reaparece en el **último checkpoint** con las 3 vidas de vuelta: nunca
 se vuelve al inicio del nivel.
 
+Al chocar por primera vez con el jefe aparecen unas **viñetas estilo manga** que lo
+presentan, y cuando el distrito queda liberado llega una **combi** que recoge a José
+y se lo lleva al siguiente distrito.
+
+Reglas de diseño de los niveles (las revisa el validador antes de publicar):
+el salto sube **3 bloques** y cruza huecos de hasta **4 bloques**, así que ninguna
+plataforma puede estar a más de 3 bloques de un piso, y los bloques sorpresa van
+siempre 3 o 4 filas encima de un piso para poder cabecearlos.
+
 ---
 
 ## Estructura del proyecto
@@ -41,6 +50,7 @@ scripts/
   nivel.js                 traduce el JSON del nivel a algo jugable
   motor.js                 física, colisiones, cámara y dibujo
   quiz.js                  ventana de preguntas
+  escena.js                viñetas manga del jefe, portada animada y galería
   hud.js                   barra superior y cartelitos
   mapa.js                  pantalla del mapa de distritos
   almacen.js               progreso en LocalStorage
@@ -88,6 +98,8 @@ El mapa se dibuja con letras, **15 filas** de alto:
 | `#` | suelo sólido |
 | `=` | plataforma flotante |
 | `?` | bloque sorpresa (suelta monedas) |
+| `1` | bloque con **vida extra** |
+| `G` | bloque con la **estrella**: José crece y aguanta un golpe |
 | `o` | moneda |
 | `E` | bicho con pregunta |
 | `B` | jefe del distrito |
@@ -178,5 +190,5 @@ y entrar a `http://localhost:8000`.
 
 ---
 
-Contenido de las clases: apuntes de Economía General I, Universidad del Pacífico.
+Contenido de las clases: apuntes propios del curso de Economía General I.
 Código y gráficos originales; no se usa ningún recurso de terceros.

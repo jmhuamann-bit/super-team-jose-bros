@@ -21,7 +21,9 @@ export function crearJuego(lienzo, nivel, eventos) {
     aciertos: 0, intentos: 0, resueltos: 0,
     tiempo: 0,            // segundos jugados (no corre durante las preguntas)
     corriendo: false, pausa: false, terminado: false,
+    grande: false,        // con la estrella aguanta un golpe sin perder vida
     reaparicion: { ...nivel.inicio },
+    salida: null,         // animación de la combi al terminar el nivel
   };
 
   const jug = {
@@ -31,7 +33,9 @@ export function crearJuego(lienzo, nivel, eventos) {
   };
 
   const teclas = { izquierda: false, derecha: false, saltar: false, correr: false };
-  const particulas = [];
+  const particulas = [];   // chispas
+  const premios = [];      // objetos que salen de los bloques y suben flotando
+  const textos = [];       // textos que suben y se desvanecen ("+1 VIDA")
   let cam = 0, reloj = 0, rafId = 0, ultimo = 0;
 
   /* ---------------- utilidades ---------------- */
@@ -51,6 +55,11 @@ export function crearJuego(lienzo, nivel, eventos) {
 
   function avisar(texto, duracion = 150) {
     eventos.onCartel?.(texto, duracion);
+  }
+
+  /** Texto que sube flotando desde un punto del mapa. */
+  function flotar(x, y, texto, color = "#ffd166") {
+    textos.push({ x, y, texto, color, vida: 70 });
   }
 
   /* ---------------- física ---------------- */
@@ -116,6 +125,17 @@ export function crearJuego(lienzo, nivel, eventos) {
   /* ---------------- daño y reaparición ---------------- */
   function perderVida(motivo, reaparecer = true) {
     if (jug.invulnerable > 0 && reaparecer) return;
+
+    // con la estrella, José aguanta un golpe: se encoge en vez de perder vida
+    if (est.grande && reaparecer) {
+      est.grande = false;
+      jug.invulnerable = CFG.INVULNERABLE;
+      chispas(jug.x + 10, jug.y + 10, "#ffd166", 18);
+      flotar(jug.x, jug.y - 10, "¡UF! Perdiste la estrella", "#ffd166");
+      Audio.daño();
+      return;
+    }
+
     est.vidas--;
     jug.invulnerable = CFG.INVULNERABLE;
     Audio.daño();
@@ -148,15 +168,33 @@ export function crearJuego(lienzo, nivel, eventos) {
       }
     }
 
-    // bloques sorpresa: se golpean desde abajo
+    // bloques sorpresa: se golpean desde abajo y sueltan un premio
     for (const b of nivel.bloques) {
       if (b.rebote > 0) b.rebote--;
       if (b.usado) continue;
       if (chocan(caja, { x: b.x, y: b.y, ancho: 24, alto: 24 }) && jug.vy < 0) {
-        b.usado = true; b.rebote = 10;
-        est.monedas += CFG.MONEDAS_BLOQUE;
-        Audio.bloque(); chispas(b.x + 12, b.y, "#ffd166", 12);
-        avisar(`+${CFG.MONEDAS_BLOQUE} monedas 🪙`, 80);
+        b.usado = true; b.rebote = 12;
+        Audio.bloque();
+        chispas(b.x + 12, b.y, "#ffd166", 14);
+
+        if (b.premio === "vida") {
+          est.vidas++;
+          premios.push({ x: b.x + 2, y: b.y, sprite: "item_vida", vida: 55 });
+          flotar(b.x, b.y - 8, "¡VIDA EXTRA!", "#ff5470");
+          eventos.onLatido?.("vidas");
+          Audio.victoria();
+        } else if (b.premio === "estrella") {
+          est.grande = true;
+          premios.push({ x: b.x + 2, y: b.y, sprite: "item_estrella", vida: 55 });
+          flotar(b.x, b.y - 8, "¡CRECISTE! Aguantas un golpe", "#ffd166");
+          chispas(jug.x + 10, jug.y + 10, "#ffd166", 24);
+          Audio.victoria();
+        } else {
+          est.monedas += CFG.MONEDAS_BLOQUE;
+          premios.push({ x: b.x + 2, y: b.y, sprite: "moneda_a", vida: 40 });
+          flotar(b.x, b.y - 8, `+${CFG.MONEDAS_BLOQUE} 🪙`);
+          Audio.moneda();
+        }
         refrescar();
       }
     }
@@ -202,7 +240,7 @@ export function crearJuego(lienzo, nivel, eventos) {
 
     // meta
     if (chocan(caja, { x: nivel.meta.x, y: nivel.meta.y, ancho: CFG.TILE, alto: CFG.TILE * 2 })) {
-      if (est.resueltos >= nivel.totalRetos) terminar();
+      if (est.resueltos >= nivel.totalRetos) iniciarSalida();
       else {
         jug.x = nivel.meta.x - 40; jug.vx = 0;
         avisar(`La meta está cerrada: te faltan ${nivel.totalRetos - est.resueltos} bichos 👾`, 150);
@@ -212,7 +250,7 @@ export function crearJuego(lienzo, nivel, eventos) {
 
   /* ---------------- preguntas ---------------- */
   function preguntar(entidad, esJefe) {
-    if (est.pausa) return;
+    if (est.pausa || est.salida) return;
     est.pausa = true;
     Audio.golpe();
 
@@ -222,6 +260,18 @@ export function crearJuego(lienzo, nivel, eventos) {
       : tema.nombresBichos[entidad.tipo % tema.nombresBichos.length];
     const sprite = esJefe ? tema.jefe : tema.bichos[entidad.tipo % tema.bichos.length];
 
+    // la primera vez que se topa con el jefe, se muestra la viñeta estilo manga
+    if (esJefe && !entidad.presentado && eventos.onIntroJefe) {
+      entidad.presentado = true;
+      eventos.onIntroJefe(
+        { nombre, sprite, distrito: nivel.distrito, retos: entidad.preguntas.length },
+        () => lanzarPregunta(entidad, esJefe, pregunta, nombre, sprite));
+      return;
+    }
+    lanzarPregunta(entidad, esJefe, pregunta, nombre, sprite);
+  }
+
+  function lanzarPregunta(entidad, esJefe, pregunta, nombre, sprite) {
     eventos.onPregunta({
       pregunta, nombre, sprite, esJefe,
       paso: esJefe ? entidad.paso + 1 : 0,
@@ -260,12 +310,50 @@ export function crearJuego(lienzo, nivel, eventos) {
     });
   }
 
+  /* ---------------- salida en combi ---------------- */
+  /**
+   * Al llegar a la meta no se corta de golpe: llega una combi, José se sube y
+   * se va rumbo al siguiente distrito. Dura poco más de dos segundos.
+   */
+  function iniciarSalida() {
+    if (est.salida) return;
+    est.salida = { t: 0, busX: nivel.meta.x + 460, subio: false };
+    jug.vx = 0;
+    Audio.pararMusica();
+    Audio.victoria();
+    avisar("¡Distrito liberado! Sube a la combi 🚐", 200);
+  }
+
+  function animarSalida() {
+    const s = est.salida;
+    s.t++;
+    const destino = nivel.meta.x + 70;
+
+    if (s.t < 70) {                       // la combi frena junto a la meta
+      s.busX += (destino - s.busX) * 0.09;
+      if (jug.enSuelo && s.t % 26 === 0) { jug.vy = -7; Audio.salto(); }
+    } else if (s.t < 110) {               // José corre y se sube
+      jug.vx = 2.6;
+      if (jug.x > s.busX - 6) { s.subio = true; jug.vx = 0; }
+    } else {                              // la combi arranca
+      s.busX += Math.min((s.t - 110) * 0.35, 9);
+      if (s.subio) jug.x = s.busX + 4;
+    }
+
+    // física mínima para que el salto de celebración se vea bien
+    jug.vy = Math.min(jug.vy + CFG.GRAVEDAD, CFG.VEL_MAX_CAIDA);
+    if (!s.subio) colisionar(jug, nivel);
+    cam += (Math.max(0, Math.min(jug.x - 300, nivel.ancho * CFG.TILE - CFG.ANCHO_VISTA)) - cam) * 0.1;
+
+    if (s.t > 190) terminar();
+  }
+
   /* ---------------- fin ---------------- */
   function terminar() {
     if (est.terminado) return;
     est.terminado = true; est.corriendo = false;
     cancelAnimationFrame(rafId);
-    Audio.victoria(); Audio.pararMusica();
+    Audio.pararMusica();
     eventos.onFin({
       tiempo: Math.round(est.tiempo),
       monedas: est.monedas, xp: est.xp,
@@ -368,14 +456,57 @@ export function crearJuego(lienzo, nivel, eventos) {
       }
     }
 
+    // --- premios que salen de los bloques ---
+    for (let i = premios.length - 1; i >= 0; i--) {
+      const p = premios[i];
+      p.y -= 0.9; p.vida--;
+      if (p.vida <= 0) { premios.splice(i, 1); continue; }
+      ctx.globalAlpha = Math.min(1, p.vida / 18);
+      pintar(ctx, p.sprite, p.x - cam, p.y);
+      ctx.globalAlpha = 1;
+    }
+
+    // --- la combi de salida ---
+    if (est.salida) {
+      const bx = est.salida.busX - cam;
+      const brinca = est.salida.t > 110 ? Math.abs(Math.sin(est.salida.t / 3)) * 2 : 0;
+      pintar(ctx, "bus", bx, nivel.meta.y + 36 + brinca);   // apoyada en el piso de la meta
+    }
+
     // --- jugador ---
-    if (!(jug.invulnerable > 0 && Math.floor(reloj / 4) % 2)) {
+    const escondido = est.salida && est.salida.subio;
+    if (!escondido && !(jug.invulnerable > 0 && Math.floor(reloj / 4) % 2)) {
       let sprite = "jose_quieto";
       if (!jug.enSuelo) sprite = "jose_salta";
       else if (Math.abs(jug.vx) > 0.3) sprite = Math.floor(jug.paso) % 2 ? "jose_paso_a" : "jose_paso_b";
+      const escala = est.grande ? 1.35 : 1;
       const m = medida(sprite);
-      pintar(ctx, sprite, jug.x - cam - (m.ancho - CFG.ANCHO_JUGADOR) / 2, jug.y, jug.izquierda);
+      const ancho = m.ancho * escala, alto = m.alto * escala;
+      if (est.grande) {   // aura dorada mientras dura la estrella
+        ctx.fillStyle = `rgba(255,209,102,${0.16 + Math.sin(reloj / 9) * 0.06})`;
+        ctx.beginPath();
+        ctx.arc(jug.x - cam + 10, jug.y + 15, 26, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      pintar(ctx, sprite, jug.x - cam - (ancho - CFG.ANCHO_JUGADOR) / 2,
+             jug.y + CFG.ALTO_JUGADOR - alto, jug.izquierda, escala);
     }
+
+    // --- textos flotantes ---
+    ctx.textAlign = "center";
+    for (let i = textos.length - 1; i >= 0; i--) {
+      const t = textos[i];
+      t.y -= 0.55; t.vida--;
+      if (t.vida <= 0) { textos.splice(i, 1); continue; }
+      ctx.globalAlpha = Math.min(1, t.vida / 22);
+      ctx.font = "bold 13px ui-monospace, monospace";
+      ctx.fillStyle = "rgba(18,16,42,.85)";
+      ctx.fillText(t.texto, t.x - cam + 13, t.y + 1);
+      ctx.fillStyle = t.color;
+      ctx.fillText(t.texto, t.x - cam + 12, t.y);
+      ctx.globalAlpha = 1;
+    }
+    ctx.textAlign = "left";
 
     // --- partículas ---
     for (let i = particulas.length - 1; i >= 0; i--) {
@@ -395,15 +526,19 @@ export function crearJuego(lienzo, nivel, eventos) {
     rafId = requestAnimationFrame(paso);
     if (!est.corriendo) return;
     if (!est.pausa) {
-      mover();
-      revisarObjetos();
-      // cámara suave, siempre un poco adelante del jugador
-      const objetivo = Math.max(0, Math.min(jug.x - 300, nivel.ancho * CFG.TILE - CFG.ANCHO_VISTA));
-      cam += (objetivo - cam) * 0.12;
-      // reloj de juego
-      if (ultimo) est.tiempo += Math.min((ahora - ultimo) / 1000, 0.1);
+      if (est.salida) {
+        animarSalida();
+      } else {
+        mover();
+        revisarObjetos();
+        // cámara suave, siempre un poco adelante del jugador
+        const objetivo = Math.max(0, Math.min(jug.x - 300, nivel.ancho * CFG.TILE - CFG.ANCHO_VISTA));
+        cam += (objetivo - cam) * 0.12;
+        // reloj de juego
+        if (ultimo) est.tiempo += Math.min((ahora - ultimo) / 1000, 0.1);
+        if (reloj % 30 === 0) refrescar();
+      }
       ultimo = ahora;
-      if (reloj % 30 === 0) refrescar();
     } else {
       ultimo = ahora;   // el tiempo no corre mientras se responde
     }

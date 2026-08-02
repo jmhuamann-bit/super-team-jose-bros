@@ -305,6 +305,52 @@ const PUA = [
   "bbbbbbbbbbbb",
   "bbbbbbbbbbbb",
 ];
+const ITEM_VIDA = [   // 1-UP que sale de un bloque
+  "............",
+  "..rr....rr..",
+  ".rrrr..rrrr.",
+  "rrrrrrrrrrrr",
+  "rrrrrrrrrrrr",
+  "rrrrrrrrrrrr",
+  ".rrrrrrrrrr.",
+  "..rrrrrrrr..",
+  "...rrrrrr...",
+  "....rrrr....",
+  ".....rr.....",
+  "............",
+];
+const ITEM_ESTRELLA = [   // vuelve grande a José
+  ".....yy.....",
+  "....yyyy....",
+  "....yyyy....",
+  "yyyyyyyyyyyy",
+  ".yyyyyyyyyy.",
+  "..yyyyyyyy..",
+  "..yyywwyyy..",
+  "..yyyyyyyy..",
+  ".yyyy..yyyy.",
+  ".yyy....yyy.",
+  "..y......y..",
+  "............",
+];
+const BUS = [   // la combi que se lo lleva al siguiente distrito (24 × 14)
+  "...cccccccccccccccccc...",
+  "..cccccccccccccccccccc..",
+  "..cvvvvcvvvvcvvvvcvvvc..",
+  "..cvvvvcvvvvcvvvvcvvvc..",
+  "..cccccccccccccccccccc..",
+  "..cyyccccccccccccccyyc..",
+  "..cccccccccccccccccccc..",
+  "..crrccccccccccccccrrc..",
+  "..CCCCCCCCCCCCCCCCCCCC..",
+  "..CCwwCCCCCCCCCCwwCCCC..",
+  "...kkk........kkk.......",
+  "...kkk........kkk.......",
+  "....k..........k........",
+  "........................",
+];
+const P_BUS = { c: "#38bdf8", C: "#0e7fb8", v: "#dff4ff", k: "#241a2e", y: "#ffd166", w: "#ffffff", r: "#ff5470" };
+
 const BANDERA = [   // checkpoint (12 × 16)
   "..bggggggg..",
   "..bgggggg...",
@@ -365,6 +411,9 @@ const DEFINICIONES = {
   pua:          [PUA, P_OBJ],
   bandera:      [BANDERA, P_OBJ],
   meta:         [META, P_OBJ],
+  item_vida:    [ITEM_VIDA, P_OBJ],
+  item_estrella:[ITEM_ESTRELLA, P_OBJ],
+  bus:          [BUS, P_BUS],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
@@ -410,11 +459,19 @@ export function prepararSprites(escala = 2) {
   return problemas;
 }
 
-/** Dibuja un sprite con su esquina superior izquierda en (x, y). */
-export function pintar(ctx, nombre, x, y, mirandoIzquierda = false) {
+/**
+ * Dibuja un sprite con su esquina superior izquierda en (x, y).
+ * Con `escala` se puede agrandar (por ejemplo, José en modo grande).
+ */
+export function pintar(ctx, nombre, x, y, mirandoIzquierda = false, escala = 1) {
   const s = (mirandoIzquierda ? espejos : cocidos)[nombre];
   if (!s) return;
-  ctx.drawImage(s.canvas, Math.round(x), Math.round(y));
+  if (escala === 1) {
+    ctx.drawImage(s.canvas, Math.round(x), Math.round(y));
+  } else {
+    ctx.drawImage(s.canvas, Math.round(x), Math.round(y),
+      Math.round(s.ancho * escala), Math.round(s.alto * escala));
+  }
 }
 
 /** Tamaño ya escalado de un sprite, útil para centrarlo sobre una caja. */

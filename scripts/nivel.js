@@ -54,7 +54,13 @@ function construir(definicion, mapa, banco) {
           monedas.push({ x: px(c) + 10, y: px(f) + 8, tomada: false, fase: (c * 7) % 60 });
           break;
         case S.BLOQUE:
-          bloques.push({ x: px(c) + 4, y: px(f) + 4, usado: false, rebote: 0 });
+          bloques.push({ x: px(c) + 4, y: px(f) + 4, usado: false, rebote: 0, premio: "monedas" });
+          break;
+        case S.BLOQUE_VIDA:
+          bloques.push({ x: px(c) + 4, y: px(f) + 4, usado: false, rebote: 0, premio: "vida" });
+          break;
+        case S.BLOQUE_ESTRELLA:
+          bloques.push({ x: px(c) + 4, y: px(f) + 4, usado: false, rebote: 0, premio: "estrella" });
           break;
         case S.BICHO:
           bichos.push({ col: c, x: px(c), y: px(f) + 8, origen: px(c), dir: c % 2 ? 1 : -1, vivo: true, fase: c });

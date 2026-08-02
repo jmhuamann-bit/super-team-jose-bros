@@ -16,14 +16,23 @@
   <!-- ============ PORTADA ============ -->
   <section class="pantalla activa" id="p-portada">
     <div class="portada">
-      <p class="eyebrow">Universidad del Pacífico · Economía General I</p>
+      <p class="eyebrow">Economía General I · Campaña de Lima</p>
       <h1 class="logo">Súper Team<br><span>José Bros</span></h1>
-      <p class="lema">Cada distrito de Lima es una clase. Corre, salta y derrota a los bichos respondiendo bien.</p>
+
+      <div class="escena-portada">
+        <canvas id="portada-lienzo" width="760" height="190" aria-hidden="true"></canvas>
+      </div>
+
+      <p class="lema">Cada distrito de Lima es una clase. Corre, salta, revienta bloques y
+        derrota a los bichos respondiendo bien.</p>
       <div class="fila-botones">
         <button class="btn grande" id="btn-jugar">Jugar</button>
         <button class="btn fantasma" id="btn-ayuda">¿Cómo se juega?</button>
       </div>
       <p class="nota" id="nota-progreso"></p>
+
+      <p class="eyebrow" style="margin-top:18px">A quiénes te vas a encontrar</p>
+      <div class="galeria" id="galeria"></div>
     </div>
   </section>
 
@@ -82,6 +91,9 @@
 <div class="velo" id="velo" hidden role="dialog" aria-modal="true">
   <div class="tarjeta" id="tarjeta"></div>
 </div>
+
+<!-- Viñetas estilo manga antes de cada jefe -->
+<div class="manga" id="manga" hidden aria-hidden="true"></div>
 
 <noscript>
   <p style="padding:24px;color:#fff">Este juego necesita JavaScript activado.</p>

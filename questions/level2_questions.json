@@ -46,7 +46,7 @@
     {
       "id": "l2-q4",
       "nivel": "comprension",
-      "enunciado": "CASO 1B. Lord Parodi evalúa tres caminos:\n\na) Profe UP: 13 000 de ingresos, 1 000 de gasolina\nb) Cafetería: 15 000 de ingresos, 5 000 de alquiler\nc) Droguería: 20 000 de ingresos, 9 000 de inversión\n\n¿Cuál es el beneficio contable de la DROGUERÍA?",
+      "enunciado": "CASO 1B. Lord Parodi evalúa tres caminos:\n\na) Profe de la uni: 13 000 de ingresos, 1 000 de gasolina\nb) Cafetería: 15 000 de ingresos, 5 000 de alquiler\nc) Droguería: 20 000 de ingresos, 9 000 de inversión\n\n¿Cuál es el beneficio contable de la DROGUERÍA?",
       "opciones": ["20 000", "11 000", "9 000", "12 000"],
       "correcta": 1,
       "explicacion": "20 000 − 9 000 = 11 000. Otra vez la opción con más ingresos no es la que más beneficio deja."
@@ -54,10 +54,10 @@
     {
       "id": "l2-q5",
       "nivel": "comprension",
-      "enunciado": "CASO 1B (beneficios contables: profe UP 12 000 · cafetería 10 000 · droguería 11 000).\n\nParodi eligió la droguería. ¿Cuál es su costo de oportunidad?",
-      "opciones": ["10 000 (la cafetería)", "11 000 (la droguería)", "12 000 (seguir de profe UP)", "22 000 (las dos que dejó)"],
+      "enunciado": "CASO 1B (beneficios contables: profe de la uni 12 000 · cafetería 10 000 · droguería 11 000).\n\nParodi eligió la droguería. ¿Cuál es su costo de oportunidad?",
+      "opciones": ["10 000 (la cafetería)", "11 000 (la droguería)", "12 000 (seguir de profe de la uni)", "22 000 (las dos que dejó)"],
       "correcta": 2,
-      "explicacion": "Se tacha la droguería y se toma la mejor de las que quedan: seguir de profe UP, con 12 000."
+      "explicacion": "Se tacha la droguería y se toma la mejor de las que quedan: seguir de profe de la uni, con 12 000."
     },
     {
       "id": "l2-q6",
@@ -65,7 +65,7 @@
       "enunciado": "CASO 1B. La droguería deja 11 000 y su costo de oportunidad es 12 000.\n\n¿Cuál es el beneficio económico y qué recomienda?",
       "opciones": [
         "+1 000: hizo bien en abrir la droguería",
-        "−1 000: le convenía seguir de profe UP",
+        "−1 000: le convenía seguir de profe de la uni",
         "23 000: es lo que gana en total",
         "0: le da lo mismo una u otra"
       ],

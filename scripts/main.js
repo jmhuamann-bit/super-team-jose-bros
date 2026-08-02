@@ -7,6 +7,7 @@ import { prepararSprites } from "./sprites.js";
 import { cargarNivel } from "./nivel.js";
 import { crearJuego } from "./motor.js";
 import { mostrarPregunta, mostrarAviso } from "./quiz.js";
+import { introJefe, animarPortada, galeriaPersonajes } from "./escena.js";
 import { pintarMapa } from "./mapa.js";
 import { HUD } from "./hud.js";
 import { Almacen } from "./almacen.js";
@@ -18,12 +19,19 @@ const pantallas = ["p-portada", "p-mapa", "p-juego", "p-fin"];
 let campana = null;     // contenido de levels/index.json
 let juego = null;       // instancia del motor
 let nivelActual = null;
+let pararPortada = null;   // detiene la animación de la pantalla de inicio
 
 /* ------------------------------------------------------------------
    Pantallas
    ------------------------------------------------------------------ */
 function ver(id) {
   pantallas.forEach((p) => document.getElementById(p).classList.toggle("activa", p === id));
+  // la escena de la portada solo corre mientras se ve la portada
+  if (id === "p-portada" && !pararPortada) {
+    pararPortada = animarPortada(document.getElementById("portada-lienzo"));
+  } else if (id !== "p-portada" && pararPortada) {
+    pararPortada(); pararPortada = null;
+  }
   window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
 }
 
@@ -69,6 +77,7 @@ async function empezarNivel(definicion) {
         onCartel: (t, d) => HUD.cartel(t, d),
         onLatido: (q) => HUD.latir(q),
         onPregunta: (datos, listo) => mostrarPregunta(datos, listo),
+        onIntroJefe: (datos, listo) => introJefe(datos, listo),
         onFin: (resumen) => terminarNivel(resumen),
       });
       juego.iniciar();
@@ -164,10 +173,14 @@ document.getElementById("btn-ayuda").onclick = () => mostrarAviso({
     <p><b>Los bichos son preguntas.</b> Al tocarlos el juego se pausa y aparecen cuatro alternativas.
     Si aciertas, el bicho desaparece y ganas XP y monedas. Si fallas, pierdes una vida y el bicho
     se queda: puedes volver a intentarlo.</p>
+    <p><b>Los bloques amarillos se rompen de cabezazo</b> saltando desde abajo. Adentro puede
+    haber monedas, una <b>vida extra</b> ❤️ o la <b>estrella</b> ⭐ que agranda a José: mientras
+    la tengas, un golpe de obstáculo no te quita vida.</p>
     <p><b>Las preguntas se ponen más difíciles</b> conforme avanzas en el distrito, y al final
     te espera un jefe con tres preguntas seguidas.</p>
     <p><b>❤️ Vidas:</b> empiezas con 3. Si se acaban, reapareces en el último checkpoint con
-    las 3 de vuelta. Nunca vuelves al inicio del nivel.</p>`,
+    las 3 de vuelta. Nunca vuelves al inicio del nivel.</p>
+    <p>Cuando liberas el distrito llega una <b>combi</b> 🚐 que te lleva al siguiente.</p>`,
 });
 
 /* ------------------------------------------------------------------
@@ -176,6 +189,9 @@ document.getElementById("btn-ayuda").onclick = () => mostrarAviso({
 async function arrancar() {
   const problemas = prepararSprites(2);
   if (problemas.length) console.warn("Sprites con filas desparejas:\n" + problemas.join("\n"));
+
+  galeriaPersonajes(document.getElementById("galeria"));
+  pararPortada = animarPortada(document.getElementById("portada-lienzo"));
 
   try {
     campana = await (await fetch("levels/index.json", { cache: "no-cache" })).json();

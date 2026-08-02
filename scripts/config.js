@@ -43,6 +43,8 @@ export const SIMBOLOS = {
   SUELO: "#",
   PLATAFORMA: "=",
   BLOQUE: "?",   // bloque sorpresa: suelta monedas
+  BLOQUE_VIDA: "1",      // bloque sorpresa con vida extra (1-UP)
+  BLOQUE_ESTRELLA: "G",  // bloque sorpresa con la estrella que agranda a José
   MONEDA: "o",
   BICHO: "E",    // enemigo con pregunta
   JEFE: "B",     // jefe final del distrito
