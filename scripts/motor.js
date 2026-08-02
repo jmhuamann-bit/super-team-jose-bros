@@ -173,26 +173,30 @@ export function crearJuego(lienzo, nivel, eventos) {
       if (b.rebote > 0) b.rebote--;
       if (b.usado) continue;
       if (chocan(caja, { x: b.x, y: b.y, ancho: 24, alto: 24 }) && jug.vy < 0) {
-        b.usado = true; b.rebote = 12;
+        b.usado = true;
+        b.rebote = 14;        // el bloque salta hacia arriba y vuelve
+        b.destello = 14;      // anillo blanco que se expande
+        jug.vy = 1.4;         // el cabezazo corta el salto, como en los clásicos
         Audio.bloque();
-        chispas(b.x + 12, b.y, "#ffd166", 14);
+        chispas(b.x + 12, b.y - 2, "#ffd166", 16);
 
         if (b.premio === "vida") {
           est.vidas++;
-          premios.push({ x: b.x + 2, y: b.y, sprite: "item_vida", vida: 55 });
-          flotar(b.x, b.y - 8, "¡VIDA EXTRA!", "#ff5470");
+          premios.push({ x: b.x + 2, y: b.y - 24, vy: -4.2, gravedad: 0.11, sprite: "item_vida", vida: 78, gira: false });
+          flotar(b.x - 6, b.y - 34, "VIDA EXTRA", "#ff5470");
           eventos.onLatido?.("vidas");
           Audio.victoria();
         } else if (b.premio === "estrella") {
           est.grande = true;
-          premios.push({ x: b.x + 2, y: b.y, sprite: "item_estrella", vida: 55 });
-          flotar(b.x, b.y - 8, "¡CRECISTE! Aguantas un golpe", "#ffd166");
-          chispas(jug.x + 10, jug.y + 10, "#ffd166", 24);
+          premios.push({ x: b.x + 2, y: b.y - 24, vy: -4.2, gravedad: 0.11, sprite: "item_estrella", vida: 78, gira: false });
+          flotar(b.x - 14, b.y - 34, "CRECISTE", "#ffd166");
+          chispas(jug.x + 10, jug.y + 10, "#ffd166", 26);
           Audio.victoria();
         } else {
           est.monedas += CFG.MONEDAS_BLOQUE;
-          premios.push({ x: b.x + 2, y: b.y, sprite: "moneda_a", vida: 40 });
-          flotar(b.x, b.y - 8, `+${CFG.MONEDAS_BLOQUE} 🪙`);
+          // la moneda sale disparada, llega a su punto más alto y desaparece
+          premios.push({ x: b.x + 2, y: b.y - 20, vy: -6.4, gravedad: 0.34, sprite: "moneda_a", vida: 40, gira: true });
+          flotar(b.x - 4, b.y - 40, `+${CFG.MONEDAS_BLOQUE}`);
           Audio.moneda();
         }
         refrescar();
@@ -417,7 +421,16 @@ export function crearJuego(lienzo, nivel, eventos) {
     }
     for (const b of nivel.bloques) {
       const px = b.x - cam; if (px < -40 || px > 840) continue;
-      pintar(ctx, b.usado ? "bloque_usado" : "bloque", px, b.y - (b.rebote > 0 ? 6 : 0));
+      // el rebote sube y baja en vez de saltar de golpe
+      const alto = b.rebote > 0 ? Math.sin((b.rebote / 14) * Math.PI) * 9 : 0;
+      pintar(ctx, b.usado ? "bloque_usado" : "bloque", px, b.y - alto);
+      if (b.destello > 0) {                       // anillo blanco al golpearlo
+        b.destello--;
+        const r = (14 - b.destello) * 2.6;
+        ctx.strokeStyle = `rgba(255,246,216,${b.destello / 16})`;
+        ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.arc(px + 12, b.y + 12, r, 0, Math.PI * 2); ctx.stroke();
+      }
     }
     for (const p of nivel.peligros) {
       const px = p.x - cam; if (px < -40 || px > 840) continue;
@@ -456,13 +469,14 @@ export function crearJuego(lienzo, nivel, eventos) {
       }
     }
 
-    // --- premios que salen de los bloques ---
+    // --- premios que salen de los bloques (salen disparados y caen un poco) ---
     for (let i = premios.length - 1; i >= 0; i--) {
       const p = premios[i];
-      p.y -= 0.9; p.vida--;
+      p.y += p.vy; p.vy += p.gravedad; p.vida--;
       if (p.vida <= 0) { premios.splice(i, 1); continue; }
-      ctx.globalAlpha = Math.min(1, p.vida / 18);
-      pintar(ctx, p.sprite, p.x - cam, p.y);
+      ctx.globalAlpha = Math.min(1, p.vida / 16);
+      const sprite = p.gira && Math.floor(p.vida / 5) % 3 === 1 ? "moneda_b" : p.sprite;
+      pintar(ctx, sprite, p.x - cam, p.y);
       ctx.globalAlpha = 1;
     }
 
