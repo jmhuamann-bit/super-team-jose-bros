@@ -1,0 +1,243 @@
+/* =============================================================
+   SÚPER TEAM JOSÉ BROS — hoja de estilos única
+   Identidad: afiche chicha (fucsia, amarillo, verde limón, cyan)
+   sobre fondo índigo noche. Todo pixel-friendly y sin dependencias.
+   ============================================================= */
+
+:root{
+  /* --- superficies --- */
+  --fondo:#12102a;
+  --fondo-2:#1b1840;
+  --panel:#221e4d;
+  --borde:#3b3480;
+  /* --- tinta --- */
+  --tinta:#eae7ff;
+  --tinta-2:#a49dd8;
+  /* --- acentos chicha --- */
+  --fucsia:#ff5470;
+  --fucsia-2:#c2264a;
+  --amarillo:#ffd166;
+  --verde:#4ade80;
+  --cyan:#38bdf8;
+  --naranja:#ff9f45;
+  /* --- semánticos --- */
+  --ok:var(--verde);
+  --mal:#ff6b6b;
+  /* --- tipografía --- */
+  --display:"Impact","Haettenschweiler","Franklin Gothic Medium","Arial Black",system-ui,sans-serif;
+  --texto:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",sans-serif;
+  --dato:ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace;
+  --sombra-dura:0 5px 0 rgba(0,0,0,.45);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:var(--fondo);color:var(--tinta);
+  font-family:var(--texto);font-size:16px;line-height:1.55;
+  -webkit-text-size-adjust:100%;
+}
+#app{min-height:100%;display:flex;flex-direction:column;align-items:center}
+
+/* ---------- pantallas ---------- */
+.pantalla{display:none;width:100%;max-width:900px;padding:18px 14px 40px;animation:entra .28s ease}
+.pantalla.activa{display:block}
+@keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .pantalla{animation:none}
+  *{transition-duration:.01ms!important}
+}
+
+.eyebrow{
+  margin:0;font-family:var(--dato);font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--cyan);
+}
+
+/* ---------- portada ---------- */
+.portada{
+  text-align:center;padding:46px 10px 10px;display:flex;flex-direction:column;
+  align-items:center;gap:16px;
+}
+.logo{
+  margin:0;font-family:var(--display);font-weight:400;line-height:.86;
+  font-size:clamp(44px,13vw,88px);letter-spacing:.02em;text-transform:uppercase;
+  color:var(--amarillo);
+  text-shadow:4px 4px 0 var(--fucsia-2),8px 8px 0 rgba(0,0,0,.5);
+}
+.logo span{color:var(--fucsia);text-shadow:4px 4px 0 #6d1029,8px 8px 0 rgba(0,0,0,.5)}
+.lema{margin:0;max-width:44ch;color:var(--tinta-2)}
+.nota{margin:0;font-family:var(--dato);font-size:12px;color:var(--tinta-2)}
+.fila-botones{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+/* ---------- botones ---------- */
+.btn{
+  font-family:var(--display);font-size:19px;letter-spacing:.05em;text-transform:uppercase;
+  background:var(--fucsia);color:#2b0410;border:0;border-bottom:5px solid var(--fucsia-2);
+  padding:11px 20px;cursor:pointer;transition:filter .12s,transform .06s;
+}
+.btn.grande{font-size:24px;padding:14px 32px}
+.btn.chico{font-size:14px;padding:7px 12px;border-bottom-width:4px}
+.btn.mini{font-size:12px;padding:4px 9px;border-bottom-width:3px}
+.btn:hover{filter:brightness(1.1)}
+.btn:active{transform:translateY(3px);border-bottom-width:2px}
+.btn.fantasma{background:var(--panel);color:var(--tinta);border-bottom-color:#100e26}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+
+/* ---------- mapa ---------- */
+.barra-mapa{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.barra-mapa h2{margin:2px 0 0;font-family:var(--display);font-weight:400;font-size:34px;letter-spacing:.02em;text-transform:uppercase}
+.totales{display:flex;gap:8px;font-family:var(--dato);font-size:12px;flex-wrap:wrap}
+.totales span{background:var(--panel);border:2px solid var(--borde);padding:5px 9px}
+
+.ruta{display:flex;flex-direction:column;gap:0}
+.parada{position:relative;display:flex;gap:14px;align-items:stretch;padding-bottom:6px}
+/* línea vertical que conecta los distritos */
+.parada::before{
+  content:"";position:absolute;left:27px;top:34px;bottom:-6px;width:4px;
+  background:repeating-linear-gradient(to bottom,var(--borde) 0 6px,transparent 6px 12px);
+}
+.parada:last-child::before{display:none}
+.pin{
+  flex:none;width:58px;height:58px;display:grid;place-items:center;
+  background:var(--panel);border:3px solid var(--borde);border-radius:50%;
+  font-size:24px;position:relative;z-index:1;
+}
+.parada.abierta .pin{border-color:var(--cyan);box-shadow:0 0 0 4px rgba(56,189,248,.15)}
+.parada.hecha .pin{border-color:var(--verde);background:#123425}
+.tarjeta-nivel{
+  flex:1;text-align:left;background:var(--fondo-2);border:3px solid var(--borde);
+  padding:12px 14px;cursor:pointer;color:var(--tinta);
+  transition:transform .12s,border-color .12s,background .12s;
+}
+.tarjeta-nivel:hover:not(:disabled){transform:translateX(4px);border-color:var(--fucsia);background:#251f57}
+.tarjeta-nivel:disabled{cursor:not-allowed;opacity:.5}
+.tarjeta-nivel .clase{font-family:var(--dato);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--amarillo)}
+.tarjeta-nivel .distrito{display:block;font-family:var(--display);font-size:24px;letter-spacing:.02em;text-transform:uppercase;line-height:1.05;margin:1px 0 2px}
+.tarjeta-nivel .desc{display:block;font-size:13.5px;color:var(--tinta-2)}
+.tarjeta-nivel .marcas{display:flex;gap:10px;margin-top:7px;font-family:var(--dato);font-size:11.5px;color:var(--tinta-2);flex-wrap:wrap}
+.tarjeta-nivel .marcas b{color:var(--amarillo);font-weight:600}
+.proximo .distrito{color:var(--tinta-2)}
+.pie-mapa{display:flex;justify-content:space-between;gap:10px;margin-top:22px;flex-wrap:wrap}
+
+/* ---------- HUD ---------- */
+.hud{
+  display:flex;gap:6px;align-items:center;flex-wrap:wrap;
+  background:var(--fondo-2);border:3px solid var(--borde);border-bottom:0;padding:7px 9px;
+  font-family:var(--dato);font-size:13px;font-variant-numeric:tabular-nums;
+}
+.hud-item{background:#100e26;border:2px solid var(--borde);padding:3px 8px;white-space:nowrap}
+.hud-item b{color:var(--amarillo);font-weight:700}
+.hud-item.ancho{flex:1;min-width:120px;color:var(--cyan);border-color:#2a4a63}
+#btn-salir{margin-left:auto}
+.late{animation:late .5s ease}
+@keyframes late{0%,100%{transform:none}30%{transform:scale(1.22)}}
+
+/* ---------- canvas ---------- */
+.marco-canvas{position:relative;border:3px solid var(--borde);background:#000;line-height:0}
+#lienzo{width:100%;height:auto;display:block;image-rendering:pixelated}
+.crt{
+  position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(to bottom,rgba(0,0,0,.16) 0 1px,transparent 1px 3px);
+  mix-blend-mode:multiply;
+}
+.cartel{
+  position:absolute;left:50%;top:16px;transform:translateX(-50%);
+  background:rgba(18,16,42,.94);border:3px solid var(--amarillo);
+  padding:8px 16px;font-family:var(--dato);font-size:13px;color:var(--tinta);
+  white-space:nowrap;max-width:92%;overflow:hidden;text-overflow:ellipsis;
+  animation:entra .2s ease;
+}
+
+/* ---------- mandos táctiles ---------- */
+.mandos{
+  display:none;justify-content:space-between;gap:10px;padding:10px;
+  background:var(--fondo-2);border:3px solid var(--borde);border-top:0;
+  user-select:none;-webkit-user-select:none;touch-action:none;
+}
+.mandos .grupo{display:flex;gap:10px}
+.mandos button{
+  min-width:64px;height:60px;background:var(--panel);border:3px solid var(--borde);
+  color:var(--tinta);font-family:var(--display);font-size:22px;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+}
+.mandos button small{font-family:var(--dato);font-size:9px;letter-spacing:.08em;color:var(--tinta-2)}
+.mandos button:active{background:var(--fucsia);color:#2b0410}
+.mandos .salta{background:var(--fucsia);color:#2b0410;border-color:var(--fucsia-2)}
+body.tactil .mandos{display:flex}
+
+/* ---------- modal ---------- */
+.velo{
+  position:fixed;inset:0;z-index:60;background:rgba(9,8,22,.9);
+  display:flex;align-items:center;justify-content:center;padding:14px;overflow:auto;
+  font-family:var(--texto);color:var(--tinta);
+}
+.velo[hidden]{display:none}
+.tarjeta{
+  width:100%;max-width:640px;background:var(--fondo-2);
+  border:4px solid var(--tinta);box-shadow:0 0 0 4px var(--fondo),0 12px 0 rgba(0,0,0,.45);
+  padding:18px;display:flex;flex-direction:column;gap:12px;animation:entra .2s ease;
+}
+.tarjeta.bien{border-color:var(--ok)}
+.tarjeta.mal{border-color:var(--mal)}
+.encabezado{
+  display:flex;justify-content:space-between;gap:10px;align-items:center;
+  font-family:var(--dato);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);
+}
+.tarjeta.bien .encabezado{color:var(--ok)}
+.tarjeta.mal .encabezado{color:var(--mal)}
+.bicho-nombre{display:flex;align-items:center;gap:10px}
+.bicho-nombre canvas{image-rendering:pixelated;width:48px;height:48px}
+.bicho-nombre b{font-family:var(--display);font-size:20px;letter-spacing:.03em;color:var(--fucsia);font-weight:400}
+.enunciado{margin:0;font-size:17px;white-space:pre-line}
+.opciones{display:flex;flex-direction:column;gap:8px}
+.opcion{
+  display:flex;gap:10px;align-items:flex-start;text-align:left;
+  background:var(--panel);color:var(--tinta);border:3px solid var(--borde);
+  padding:10px 12px;font-size:15px;cursor:pointer;transition:border-color .12s,background .12s;
+}
+.opcion:hover:not(:disabled){border-color:var(--cyan);background:#2b2560}
+.opcion .letra{
+  flex:none;font-family:var(--dato);font-size:12px;color:var(--cyan);
+  border:2px solid var(--borde);padding:0 6px;margin-top:1px;
+}
+.opcion:disabled{opacity:.35;cursor:not-allowed}
+.opcion.correcta{border-color:var(--ok);background:#12351f}
+.opcion.correcta .letra{color:var(--ok)}
+.opcion.incorrecta{border-color:var(--mal);background:#3a1420}
+.explicacion{padding:10px 12px;background:#100e26;border-left:5px solid var(--cyan);font-size:15px}
+.explicacion.bien{border-left-color:var(--ok)}
+.explicacion.mal{border-left-color:var(--mal)}
+.explicacion .titulo{
+  display:block;font-family:var(--display);font-size:20px;letter-spacing:.03em;text-transform:uppercase;
+}
+.explicacion.bien .titulo{color:var(--ok)}
+.explicacion.mal .titulo{color:var(--mal)}
+.premio{padding:8px 12px;background:#2f2712;border-left:5px solid var(--amarillo);font-family:var(--dato);font-size:13px}
+.acciones{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.escala-dificultad{display:flex;gap:4px;align-items:center}
+.escala-dificultad i{width:16px;height:6px;background:var(--borde);display:block}
+.escala-dificultad i.on{background:var(--amarillo)}
+
+/* ---------- fin de nivel ---------- */
+.resumen{max-width:600px;margin:36px auto;text-align:center;display:flex;flex-direction:column;gap:14px}
+.resumen h2{
+  margin:0;font-family:var(--display);font-weight:400;font-size:40px;
+  letter-spacing:.02em;text-transform:uppercase;color:var(--amarillo);
+  text-shadow:3px 3px 0 var(--fucsia-2);
+}
+.marcador{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;font-family:var(--dato);font-size:12px}
+.marcador div{background:var(--fondo-2);border:3px solid var(--borde);padding:10px 16px;min-width:96px}
+.marcador span{display:block;font-size:26px;color:var(--amarillo);font-variant-numeric:tabular-nums}
+.repaso{text-align:left;background:var(--fondo-2);border-left:5px solid var(--verde);padding:12px 14px}
+.repaso p{margin:0 0 8px}
+.repaso p:last-child{margin:0}
+
+/* ---------- utilidades ---------- */
+.oculto{display:none!important}
+@media (max-width:560px){
+  .hud{font-size:12px}
+  .logo{letter-spacing:0}
+  .pin{width:46px;height:46px;font-size:20px}
+  .parada::before{left:21px}
+}

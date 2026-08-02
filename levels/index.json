@@ -1,0 +1,33 @@
+{
+  "titulo": "Lima",
+  "descripcion": "Cada distrito es una clase del curso. Se desbloquean en orden.",
+  "niveles": [
+    {
+      "id": "level1",
+      "clase": "Clase 01",
+      "distrito": "Callao",
+      "titulo": "El puerto de las decisiones",
+      "icono": "⚓",
+      "retos": 8,
+      "duracion": "3 min",
+      "mapa": "levels/level1.json",
+      "preguntas": "questions/level1_questions.json"
+    },
+    {
+      "id": "level2",
+      "clase": "Clase 02",
+      "distrito": "San Miguel",
+      "titulo": "La cuenta del malecón",
+      "icono": "🌳",
+      "retos": 8,
+      "duracion": "3 min",
+      "mapa": "levels/level2.json",
+      "preguntas": "questions/level2_questions.json"
+    },
+    { "id": "level3", "clase": "Clase 03", "distrito": "Pueblo Libre", "icono": "🏛", "titulo": "" },
+    { "id": "level4", "clase": "Clase 04", "distrito": "Jesús María", "icono": "🌺", "titulo": "" },
+    { "id": "level5", "clase": "Clase 05", "distrito": "Lince", "icono": "🎪", "titulo": "" },
+    { "id": "level6", "clase": "Clase 06", "distrito": "San Isidro", "icono": "🏢", "titulo": "" },
+    { "id": "level7", "clase": "Clase 07", "distrito": "Miraflores", "icono": "🪂", "titulo": "" }
+  ]
+}

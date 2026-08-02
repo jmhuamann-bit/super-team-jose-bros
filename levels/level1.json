@@ -1,0 +1,32 @@
+{
+  "id": "level1",
+  "distrito": "Callao",
+  "clase": "Clase 01",
+  "titulo": "El puerto de las decisiones",
+  "tema": "puerto",
+  "musica": "puerto",
+  "intro": "En el puerto todo se decide entre dos barcos: el que tomas y el que dejas ir. Los bichos del muelle creen que pueden llevarse todas las alternativas a la vez. Demuéstrales que el costo de oportunidad es una sola.",
+  "repaso": [
+    "Economizar es usar el recurso de la mejor manera posible, no ahorrarlo.",
+    "El costo de oportunidad es la MEJOR alternativa de todas las dejadas de lado (nunca la suma).",
+    "Si te preguntan el costo de oportunidad DE una opción, esa ya fue elegida: la tachas y tomas la mejor de las que quedan.",
+    "Cuando dos alternativas empatan no se puede definir cuál es, pero sigue siendo una sola."
+  ],
+  "mapa": [
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    "                                                                                             o o o o o",
+    "                 o                o     o o o o                      o                   o   =====                        o         o o o o",
+    "                o o   ?          o o    ====              ?         o o           ?     o o                           ?  o o        ====",
+    "               o   o            o   o                              o   o  #            o   o                            o   o",
+    "      o o o o                 o o o                              o o o   ##         o o o                                                   o o o o",
+    "  P                        E                   E  X   C       E         ###   E                     E     C   X    E            E                 B     M",
+    "################  ###############   ################################  ##################   ##############################  #################################",
+    "################  ###############   ################################  ##################   ##############################  #################################",
+    "################  ###############   ################################  ##################   ##############################  #################################"
+  ]
+}

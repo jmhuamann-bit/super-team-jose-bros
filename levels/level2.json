@@ -1,0 +1,32 @@
+{
+  "id": "level2",
+  "distrito": "San Miguel",
+  "clase": "Clase 02",
+  "titulo": "La cuenta del malecón",
+  "tema": "parque",
+  "musica": "parque",
+  "intro": "Ya sabes identificar el costo de oportunidad; ahora toca sacar la calculadora. En el malecón los bichos confunden ingresos con beneficios y creen que la plata que entra es lo único que cuenta. Ordénalos con la recetita.",
+  "repaso": [
+    "Beneficio contable = ingreso contable − costo contable.",
+    "Beneficio económico = beneficio contable de la elegida − costo de oportunidad.",
+    "Beneficio económico positivo: buena elección. Negativo: convenía cambiar. Cero: da lo mismo.",
+    "Lo que ya es tuyo (un taxi, un local, tus horas) también tiene costo de oportunidad."
+  ],
+  "mapa": [
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    "                                                                               o o o",
+    "               o                 o       o o o o                     o         ===          o               o o o o     o",
+    "          ?   o o  o o o        o o      ====      ?          #     o o                    o o  ?           ====       o o        ?",
+    "             o   o ===         o   o                         ##    o   o ===              o   o                       o   o             #",
+    "      o o o                                                 ### o o o                                                                  ##  o o o o",
+    "  P                      E   X       E         C       E   ####                      E  X          E    C          E          E       ###             B     M",
+    "##############   ###############   #################################   ####################  ##########################   ######################################",
+    "##############   ###############   #################################   ####################  ##########################   ######################################",
+    "##############   ###############   #################################   ####################  ##########################   ######################################"
+  ]
+}

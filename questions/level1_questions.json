@@ -1,0 +1,118 @@
+{
+  "nivel": "level1",
+  "clase": "Clase 01 · Costo de oportunidad",
+  "fuente": "Apuntes de la 1era sesión — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l1-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "En economía, ¿qué significa ECONOMIZAR?",
+      "opciones": [
+        "Ahorrar la mayor cantidad de dinero posible",
+        "Usar el recurso de la mejor manera posible",
+        "Gastar lo menos posible en todo",
+        "Repartir el recurso entre todas las alternativas"
+      ],
+      "correcta": 1,
+      "explicacion": "Economizar no es ahorrar: es sacarle el mejor provecho al recurso. A veces economizar significa gastarlo todo en la mejor alternativa."
+    },
+    {
+      "id": "l1-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "La definición de oro: el costo de oportunidad es…",
+      "opciones": [
+        "La suma de todas las alternativas dejadas de lado",
+        "El dinero que gastaste en la opción que elegiste",
+        "La mejor alternativa de todas las dejadas de lado",
+        "El promedio de las alternativas que no elegiste"
+      ],
+      "correcta": 2,
+      "explicacion": "Es la MEJOR de las dejadas de lado. Nunca se suman: no podías hacer dos cosas a la vez, así que solo sacrificas una."
+    },
+    {
+      "id": "l1-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "Parodi planea salir este fin de semana:\n• Su enamorada → 70\n• Su mejor amigo → 90\n• Su crush → 100\n\n¿Con quién economiza?",
+      "opciones": [
+        "Con su enamorada (70)",
+        "Con su mejor amigo (90)",
+        "Con su crush (100)",
+        "Con nadie: se queda en casa"
+      ],
+      "correcta": 2,
+      "explicacion": "Economiza con su crush, porque 100 > 90 > 70. Esa es la alternativa elegida; todavía no es el costo de oportunidad."
+    },
+    {
+      "id": "l1-q4",
+      "nivel": "comprension",
+      "enunciado": "Mismo caso de Parodi (enamorada 70, mejor amigo 90, crush 100).\n\n¿Cuál es su costo de oportunidad?",
+      "opciones": ["70", "90", "160 (70 + 90)", "100"],
+      "correcta": 1,
+      "explicacion": "90: su mejor amigo. Es la mejor de las que quedaron fuera. Sumar 70 + 90 es el error más caro del ciclo."
+    },
+    {
+      "id": "l1-q5",
+      "nivel": "comprension",
+      "enunciado": "Carlita invita a comer:\n• Jimin → 90\n• Suga → 120\n• Jungkook → 150\n\n¿Cuál es el costo de oportunidad de escoger a SUGA?",
+      "opciones": ["90 (Jimin)", "150 (Jungkook)", "240 (Jimin + Jungkook)", "120 (Suga)"],
+      "correcta": 1,
+      "explicacion": "Cuando preguntan el costo de oportunidad DE alguien, esa persona ya fue elegida: la tachas y te quedas con la mejor de las que sobran. Aquí, Jungkook con 150."
+    },
+    {
+      "id": "l1-q6",
+      "nivel": "comprension",
+      "enunciado": "La Serna hace pijamada:\n• Messi → 900 útiles\n• CR7 → 899 útiles\n• Mbappé → 300 útiles\n• Lapadula → 500 útiles\n\n¿Cuál es el costo de oportunidad de hacer la pijamada con MESSI?",
+      "opciones": ["899 útiles (CR7)", "900 útiles (Messi)", "1 699 útiles", "500 útiles (Lapadula)"],
+      "correcta": 0,
+      "explicacion": "899 útiles: CR7. Aunque la diferencia sea de un solo útil, el costo de oportunidad sigue siendo enorme… y la decisión fue correcta, porque 900 > 899."
+    },
+    {
+      "id": "l1-q7",
+      "nivel": "comprension",
+      "enunciado": "Portocarrero hace pijamada:\n• Messi → 100 útiles\n• CR7 → 999 útiles\n• Mbappé → 999 útiles\n• Lapadula → 500 útiles\n\n¿Cuál es el costo de oportunidad de elegir a LAPADULA?",
+      "opciones": [
+        "999 útiles, pero no se puede definir si es CR7 o Mbappé: es solo una de las dos",
+        "1 998 útiles: CR7 más Mbappé",
+        "500 útiles, porque es la elegida",
+        "No hay costo de oportunidad porque hay un empate"
+      ],
+      "correcta": 0,
+      "explicacion": "A veces el costo de oportunidad no se puede definir con nombre y apellido, pero su valor sí se conoce y SIEMPRE es una sola alternativa."
+    },
+    {
+      "id": "l1-q8",
+      "nivel": "aplicacion",
+      "enunciado": "CASO 1A. Para tu primera chamba tienes tres opciones:\n\na) Administrador: 2 000 de ingresos, 500 de pasajes\nb) Emprender un chifa: 3 000 de ingresos, 1 000 de alquiler\nc) Restaurante criollo: 5 000 de ingresos, 3 100 de inversión\n\n¿Con cuál economizas?",
+      "opciones": [
+        "El restaurante criollo, porque genera 5 000 de ingresos",
+        "El chifa, con un beneficio contable de 2 000",
+        "El administrador, porque es el trabajo más seguro",
+        "Da lo mismo: las tres dejan ganancia"
+      ],
+      "correcta": 1,
+      "explicacion": "Se comparan beneficios contables, no ingresos: 1 500 · 2 000 · 1 900. Gana el chifa. El criollo es el que más ingresos trae y aun así no es la mejor opción."
+    },
+    {
+      "id": "l1-q9",
+      "nivel": "aplicacion",
+      "enunciado": "CASO 1A (beneficios contables: administrador 1 500 · chifa 2 000 · criollo 1 900).\n\nEliges el chifa. ¿A cuánto asciende tu costo de oportunidad?",
+      "opciones": ["1 500", "1 900", "3 400 (1 500 + 1 900)", "2 000"],
+      "correcta": 1,
+      "explicacion": "1 900: el restaurante criollo, la mejor de las dejadas de lado."
+    },
+    {
+      "id": "l1-q10",
+      "nivel": "aplicacion",
+      "enunciado": "CASO 1A. Elegiste el chifa (beneficio contable 2 000) y tu costo de oportunidad es 1 900.\n\n¿Cuál es tu beneficio económico y qué significa?",
+      "opciones": [
+        "100, positivo: fue una buena elección",
+        "3 900, porque se suman las dos cifras",
+        "−100, así que convenía el restaurante criollo",
+        "2 000, porque es lo que realmente ganas"
+      ],
+      "correcta": 0,
+      "explicacion": "Beneficio económico = 2 000 − 1 900 = 100. Positivo significa que economizaste: esos 100 son lo que ganaste por decidir bien."
+    }
+  ]
+}

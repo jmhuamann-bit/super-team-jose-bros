@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Súper Team José Bros · Economía 1</title>
+<meta name="description" content="Juego de plataformas para aprender Economía General I. Cada distrito de Lima es una clase.">
+<meta name="theme-color" content="#12102a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%2312102a'/><rect x='4' y='3' width='8' height='3' fill='%23ff5470'/><rect x='5' y='6' width='6' height='4' fill='%23ffd9a0'/><rect x='4' y='10' width='8' height='4' fill='%2338bdf8'/></svg>">
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ============ PORTADA ============ -->
+  <section class="pantalla activa" id="p-portada">
+    <div class="portada">
+      <p class="eyebrow">Universidad del Pacífico · Economía General I</p>
+      <h1 class="logo">Súper Team<br><span>José Bros</span></h1>
+      <p class="lema">Cada distrito de Lima es una clase. Corre, salta y derrota a los bichos respondiendo bien.</p>
+      <div class="fila-botones">
+        <button class="btn grande" id="btn-jugar">Jugar</button>
+        <button class="btn fantasma" id="btn-ayuda">¿Cómo se juega?</button>
+      </div>
+      <p class="nota" id="nota-progreso"></p>
+    </div>
+  </section>
+
+  <!-- ============ MAPA ============ -->
+  <section class="pantalla" id="p-mapa">
+    <header class="barra-mapa">
+      <div>
+        <p class="eyebrow">Mapa de campaña</p>
+        <h2 id="mapa-titulo">Lima</h2>
+      </div>
+      <div class="totales" id="mapa-totales"></div>
+    </header>
+    <div class="ruta" id="ruta"></div>
+    <footer class="pie-mapa">
+      <button class="btn fantasma chico" id="btn-portada">← Inicio</button>
+      <button class="btn fantasma chico" id="btn-borrar">Borrar progreso</button>
+    </footer>
+  </section>
+
+  <!-- ============ JUEGO ============ -->
+  <section class="pantalla" id="p-juego">
+    <div class="hud" id="hud">
+      <span class="hud-item" id="hud-vidas" title="Vidas">❤️ <b>3</b></span>
+      <span class="hud-item" id="hud-xp" title="Experiencia">⭐ <b>0</b></span>
+      <span class="hud-item" id="hud-monedas" title="Monedas">🪙 <b>0</b></span>
+      <span class="hud-item" id="hud-tiempo" title="Tiempo">⏱ <b>0:00</b></span>
+      <span class="hud-item ancho" id="hud-distrito" title="Distrito">📍 —</span>
+      <span class="hud-item" id="hud-bichos" title="Bichos resueltos">👾 0/0</span>
+      <button class="btn fantasma mini" id="btn-salir">Salir</button>
+    </div>
+
+    <div class="marco-canvas">
+      <canvas id="lienzo" width="800" height="480"></canvas>
+      <div class="crt"></div>
+      <div class="cartel" id="cartel" hidden></div>
+    </div>
+
+    <div class="mandos" id="mandos">
+      <div class="grupo">
+        <button class="dpad" data-tecla="izquierda" aria-label="Izquierda">◀</button>
+        <button class="dpad" data-tecla="derecha" aria-label="Derecha">▶</button>
+      </div>
+      <div class="grupo">
+        <button class="accion" data-tecla="correr" aria-label="Correr">B<small>correr</small></button>
+        <button class="accion salta" data-tecla="saltar" aria-label="Saltar">A<small>saltar</small></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FIN DE NIVEL ============ -->
+  <section class="pantalla" id="p-fin"></section>
+
+</div>
+
+<!-- Modal de preguntas y avisos -->
+<div class="velo" id="velo" hidden role="dialog" aria-modal="true">
+  <div class="tarjeta" id="tarjeta"></div>
+</div>
+
+<noscript>
+  <p style="padding:24px;color:#fff">Este juego necesita JavaScript activado.</p>
+</noscript>
+
+<script type="module" src="scripts/main.js"></script>
+<script>
+// Aviso claro si el juego se abre con doble clic (file://): los módulos y los
+// JSON no se pueden cargar por seguridad del navegador. Debe abrirse por http.
+if (location.protocol === "file:") {
+  document.getElementById("app").innerHTML =
+    '<div style="max-width:560px;margin:80px auto;padding:24px;font:16px/1.6 system-ui;color:#e8e6ff">' +
+    '<h1 style="font:700 24px/1.2 system-ui">Ábrelo desde el enlace 🙂</h1>' +
+    '<p>Este juego está partido en módulos y archivos JSON, y los navegadores bloquean esa carga cuando el archivo se abre con doble clic.</p>' +
+    '<p>Usa el enlace publicado, o levanta un servidor local en esta carpeta con:</p>' +
+    '<pre style="background:#000;padding:12px;overflow:auto">python -m http.server 8000</pre>' +
+    '<p>y entra a <b>http://localhost:8000</b></p></div>';
+}
+</script>
+</body>
+</html>
