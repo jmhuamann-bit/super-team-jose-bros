@@ -264,6 +264,9 @@ body.tactil .mandos{display:flex}
   display:flex;align-items:center;justify-content:center;padding:14px;
   opacity:0;transition:opacity .22s ease;cursor:pointer;overflow:hidden;
 }
+/* OJO: sin esta regla el overlay sigue ocupando la pantalla completa aunque
+   tenga el atributo hidden, y se traga todos los clics de la página. */
+.manga[hidden]{display:none}
 .manga.visible{opacity:1}
 .manga-tiras{
   position:relative;width:100%;max-width:820px;display:grid;gap:8px;
