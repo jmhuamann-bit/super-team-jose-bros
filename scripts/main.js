@@ -149,7 +149,10 @@ document.querySelectorAll("#mandos button").forEach((b) => {
   b.addEventListener("pointerleave", off);
   b.addEventListener("pointercancel", off);
 });
-if (matchMedia("(pointer:coarse)").matches) document.body.classList.add("tactil");
+// se muestran los botones si el aparato tiene pantalla táctil, sin importar cómo se declare el puntero
+if (matchMedia("(pointer:coarse)").matches || navigator.maxTouchPoints > 0) {
+  document.body.classList.add("tactil");
+}
 
 /* ------------------------------------------------------------------
    Botones de la interfaz
