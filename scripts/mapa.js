@@ -32,7 +32,9 @@ export function pintarMapa(campana, alElegir) {
 
   campana.niveles.forEach((nivel) => {
     const completado = Almacen.estaCompletado(nivel.id);
-    const disponible = !!nivel.mapa && anteriorCompletado;
+    // un distrito se puede jugar si tiene mapa y, o bien está marcado como
+    // "abierto" en el JSON, o bien ya se terminó el distrito anterior
+    const disponible = !!nivel.mapa && (nivel.abierto === true || anteriorCompletado);
     const marca = Almacen.marcaDe(nivel.id);
 
     const parada = document.createElement("div");

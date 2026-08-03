@@ -333,6 +333,61 @@ const ITEM_ESTRELLA = [   // vuelve grande a José
   "..y......y..",
   "............",
 ];
+/* ---------------------------------------------------------------
+   BICHOS DE PUEBLO LIBRE (14 × 12)
+   --------------------------------------------------------------- */
+const CUY = [
+  "..............",
+  "...bbbbbb.....",
+  "..bbbbbbbb....",
+  ".bbkbbbbbbb...",
+  ".bbbbbbbbbbb..",
+  ".wwbbbbbbbbb..",
+  ".wwwbbbbbbbb..",
+  "..wwbbbbbbb...",
+  "...wwwbbbb....",
+  "....y..y......",
+  "....y..y......",
+  "...yy..yy.....",
+];
+const P_CUY = { b: "#a8703f", k: "#241a2e", w: "#f2f6ff", y: "#ffb020" };
+
+const FAROL = [   // farol colonial que se apagó de tanto discutir
+  ".....kk.....",
+  "....kkkk....",
+  "...kyyyyk...",
+  "..kyyyyyyk..",
+  "..kyywwyyk..",
+  "..kyywwyyk..",
+  "..kyyyyyyk..",
+  "...kyyyyk...",
+  "....kkkk....",
+  ".....kk.....",
+  ".....kk.....",
+  "....kkkk....",
+];
+const P_FAROL = { k: "#3b2a1a", y: "#ffd166", w: "#fff6d8" };
+
+const TORITO = [  // Torito de Pucará: jefe de Pueblo Libre (20 × 16)
+  "....................",
+  "...cc..........cc...",
+  "..cccc........cccc..",
+  "...rrrrrrrrrrrrrr...",
+  "..rrwwrrrrrrwwrrrr..",
+  "..rrwkrrrrrrwkrrrr..",
+  "..rrrrrrrrrrrrrrrr..",
+  "..rryyrrrrrryyrrrr..",
+  "..rrrrrrrrrrrrrrrr..",
+  "..rrrggrrrrggrrrrr..",
+  "..rrrrrrrrrrrrrrrr..",
+  "..rrrrrrrrrrrrrrrr..",
+  "...kk..kk..kk..kk...",
+  "...kk..kk..kk..kk...",
+  "....................",
+  "....................",
+];
+const P_TORITO = { r: "#d9552f", c: "#f2e2c4", w: "#ffffff", k: "#241a2e", y: "#ffd166", g: "#4ade80" };
+
 const ITEM_CEVICHE = [   // plato de ceviche: una vida más
   "............",
   "....gg......",
@@ -408,6 +463,22 @@ const LIMOSINA = [   // para los distritos más pitucos (32 × 12)
   "..nnn................nnn........",
 ];
 const P_LIMO = { k: "#20202e", K: "#12121c", v: "#9fd6f5", y: "#ffd166", w: "#ffffff", n: "#2c2c3a" };
+
+const TAXI = [   // el taxi amarillo de toda la vida (22 × 12)
+  "......yyyyyyy.........",
+  ".....yvvvvvvy.........",
+  "....yyvvvvvvyy........",
+  "..yyyyyyyyyyyyyyyy....",
+  ".yyyyyyyyyyyyyyyyyy...",
+  ".yyyyyyyyyyyyyyyyyy...",
+  ".kyyyyyyyyyyyyyyyyk...",
+  "..kkk........kkk......",
+  ".kkkkk......kkkkk.....",
+  ".kkwkk......kkwkk.....",
+  ".kkkkk......kkkkk.....",
+  "..kkk........kkk......",
+];
+const P_TAXI = { y: "#ffc93c", v: "#dff4ff", k: "#241a2e", w: "#ffffff" };
 
 const BUS = [   // la combi que se lo lleva al siguiente distrito (24 × 14)
   "...cccccccccccccccccc...",
@@ -495,6 +566,10 @@ const DEFINICIONES = {
   bus:          [BUS, P_BUS],
   mototaxi:     [MOTOTAXI, P_MOTO],
   limosina:     [LIMOSINA, P_LIMO],
+  taxi:         [TAXI, P_TAXI],
+  cuy:          [CUY, P_CUY],
+  farol:        [FAROL, P_FAROL],
+  torito:       [TORITO, P_TORITO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

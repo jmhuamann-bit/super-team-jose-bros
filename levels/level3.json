@@ -1,0 +1,33 @@
+{
+  "id": "level3",
+  "distrito": "Pueblo Libre",
+  "clase": "Clase 03",
+  "titulo": "La plaza del equilibrio",
+  "tema": "plaza",
+  "musica": "parque",
+  "vehiculo": "taxi",
+  "intro": "En la plaza de Pueblo Libre nadie se pone de acuerdo con los precios: unos confunden la demanda con la cantidad demandada y otros no saben despejar una ecuación. Encuentra el equilibrio del mercado.",
+  "repaso": [
+    "Ley de la demanda: P y Qd tienen relación INVERSA. Ley de la oferta: relación DIRECTA.",
+    "La cantidad demandada (Qd) es un número; la demanda (D) es la curva entera.",
+    "Un cambio de precio te mueve SOBRE la curva; para mover la curva tiene que cambiar otra cosa.",
+    "El equilibrio se halla igualando oferta y demanda (P con P o Q con Q)."
+  ],
+  "mapa": [
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                                                                                                                        ",
+    "                                                                            o o o o                                                                          #          ",
+    "            ?    o   o o o o    o       1                          o        ====       V    o                 o o o o    G    o        L                    ##          ",
+    "                o o  ====      o o                    #           o o                      o o                ====           o o             #             ###          ",
+    "      o o o o  o   o          o   o                  ##       o ooo  o ===                o   o                             o   o           ##  o o o     ####          ",
+    "  P                        E        E       X   C   ###   E                        E             E    C   X          E             E       ###      B    #####   M      ",
+    "################  #############   ################################   ######################  ################################   ########################################",
+    "################  #############   ################################   ######################  ################################   ########################################",
+    "################  #############   ################################   ######################  ################################   ########################################"
+  ]
+}

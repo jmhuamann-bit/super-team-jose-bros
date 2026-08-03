@@ -162,6 +162,83 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     PUEBLO LIBRE — plaza colonial al mediodía, casonas y palmeras
+     ========================================================= */
+  plaza: {
+    nombre: "Plaza",
+    cielo: [[0, "#5fb2e8"], [0.55, "#9ad6f2"], [0.85, "#ffe9c2"], [1, "#f7d9a0"]],
+    suelo: { cara: "#c9a877", borde: "#e8cfa0", tierra: "#8f7448", plataforma: "#b8543f", plataformaBorde: "#e08f74" },
+    acento: "#ff9f45",
+    bichos: ["cuy", "farol", "paloma"],
+    nombresBichos: ["Cuy Regateador", "Farol Apagado", "Paloma de la Plaza"],
+    jefe: "torito",
+    nombreJefe: "El Torito de Pucará",
+
+    fondo(ctx, cam, t) {
+      // sol de mediodía bien alto
+      ctx.fillStyle = "rgba(255,244,200,.95)";
+      ctx.beginPath(); ctx.arc(120, 62, 30, 0, Math.PI * 2); ctx.fill();
+      // cerros secos al fondo
+      for (let i = 0; i < 10; i++) {
+        const hx = i * 300 - (cam * 0.2) % 3000;
+        ctx.fillStyle = "#c2a882";
+        ctx.beginPath();
+        ctx.moveTo(hx, 330); ctx.lineTo(hx + 130, 214); ctx.lineTo(hx + 260, 330);
+        ctx.closePath(); ctx.fill();
+      }
+      // casonas coloniales con balcones y teja
+      repetir(ctx, cam, 210, 0.45, (x, i) => {
+        const alto = 110 + ((i * 41) % 46);
+        const cuerpo = ["#f4e7d2", "#f2d6b8", "#e8dcc0"][i % 3];
+        ctx.fillStyle = cuerpo;
+        ctx.fillRect(x + 20, 330 - alto, 118, alto);
+        ctx.fillStyle = "#a8452c";                       // techo de teja
+        ctx.fillRect(x + 12, 330 - alto - 12, 134, 12);
+        ctx.fillStyle = "#7a5c3a";                       // balcón de madera
+        ctx.fillRect(x + 36, 330 - alto + 30, 86, 26);
+        ctx.fillStyle = "#3d2c1a";
+        for (let bx = x + 40; bx < x + 118; bx += 10) ctx.fillRect(bx, 330 - alto + 34, 4, 18);
+        ctx.fillStyle = "#5b7d99";                       // portón
+        ctx.fillRect(x + 62, 330 - 42, 34, 42);
+      });
+      // palmeras de la plaza
+      repetir(ctx, cam, 160, 0.66, (x, i) => {
+        const px = x + 50, py = 352 - (i % 2) * 6;
+        ctx.fillStyle = "#8a6a3f";
+        ctx.fillRect(px + 8, py - 46, 7, 46);
+        ctx.fillStyle = i % 2 ? "#3f9d55" : "#4fbb63";
+        for (let k = -2; k <= 2; k++) {
+          ctx.beginPath();
+          ctx.ellipse(px + 11 + k * 13, py - 50, 15, 6, k * 0.35, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+      // banderitas de fiesta cruzando la plaza
+      repetir(ctx, cam, 240, 0.55, (x) => {
+        ctx.strokeStyle = "rgba(60,40,20,.5)"; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(x, 150); ctx.quadraticCurveTo(x + 120, 178, x + 240, 150); ctx.stroke();
+        for (let k = 1; k < 8; k++) {
+          const bx = x + k * 30, by = 150 + Math.sin((k / 8) * Math.PI) * 26;
+          ctx.fillStyle = ["#ff5470", "#ffd166", "#4ade80", "#38bdf8"][k % 4];
+          ctx.beginPath();
+          ctx.moveTo(bx, by); ctx.lineTo(bx + 9, by); ctx.lineTo(bx + 4, by + 12);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+    },
+
+    clima(ctx, t) {
+      // polvillo dorado flotando en el aire caliente
+      for (let i = 0; i < 26; i++) {
+        const x = (i * 173 + t * 0.6) % 860 - 30;
+        const y = 90 + ((i * 97) % 280) + Math.sin(t / 40 + i) * 10;
+        ctx.fillStyle = "rgba(255,226,160,.55)";
+        ctx.fillRect(x, y, 3, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

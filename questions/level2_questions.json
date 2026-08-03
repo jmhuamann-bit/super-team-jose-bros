@@ -9,12 +9,12 @@
       "nivel": "reconocimiento",
       "enunciado": "La recetita para resolver problemas de costo de oportunidad.\n\n¿Cuál es el PRIMER paso?",
       "opciones": [
-        "Hallar el beneficio económico",
         "Identificar cuántas opciones tienes",
+        "Hallar el beneficio económico",
         "Calcular el costo de oportunidad",
         "Opinar si la decisión fue correcta"
       ],
-      "correcta": 1,
+      "correcta": 0,
       "explicacion": "Primero se cuentan las opciones. Recién después vienen los ingresos y costos de cada una, el beneficio contable, la elección, el costo de oportunidad y el beneficio económico."
     },
     {
@@ -35,27 +35,37 @@
       "nivel": "reconocimiento",
       "enunciado": "¿Y el BENEFICIO ECONÓMICO?",
       "opciones": [
-        "Beneficio contable de la opción elegida − costo de oportunidad",
+        "La suma de los beneficios de todas las alternativas",
         "Ingreso contable − costo contable",
         "Costo contable + costo de oportunidad",
-        "La suma de los beneficios de todas las alternativas"
+        "Beneficio contable de la opción elegida − costo de oportunidad"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "El beneficio económico descuenta además lo que sacrificaste, por eso sirve para juzgar la decisión. (La tercera opción es el costo económico.)"
     },
     {
       "id": "l2-q4",
       "nivel": "comprension",
       "enunciado": "CASO 1B. Lord Parodi evalúa tres caminos:\n\na) Profe de la uni: 13 000 de ingresos, 1 000 de gasolina\nb) Cafetería: 15 000 de ingresos, 5 000 de alquiler\nc) Droguería: 20 000 de ingresos, 9 000 de inversión\n\n¿Cuál es el beneficio contable de la DROGUERÍA?",
-      "opciones": ["20 000", "11 000", "9 000", "12 000"],
-      "correcta": 1,
+      "opciones": [
+        "20 000",
+        "9 000",
+        "11 000",
+        "12 000"
+      ],
+      "correcta": 2,
       "explicacion": "20 000 − 9 000 = 11 000. Otra vez la opción con más ingresos no es la que más beneficio deja."
     },
     {
       "id": "l2-q5",
       "nivel": "comprension",
       "enunciado": "CASO 1B (beneficios contables: profe de la uni 12 000 · cafetería 10 000 · droguería 11 000).\n\nParodi eligió la droguería. ¿Cuál es su costo de oportunidad?",
-      "opciones": ["10 000 (la cafetería)", "11 000 (la droguería)", "12 000 (seguir de profe de la uni)", "22 000 (las dos que dejó)"],
+      "opciones": [
+        "10 000 (la cafetería)",
+        "11 000 (la droguería)",
+        "12 000 (seguir de profe de la uni)",
+        "22 000 (las dos que dejó)"
+      ],
       "correcta": 2,
       "explicacion": "Se tacha la droguería y se toma la mejor de las que quedan: seguir de profe de la uni, con 12 000."
     },
@@ -65,11 +75,11 @@
       "enunciado": "CASO 1B. La droguería deja 11 000 y su costo de oportunidad es 12 000.\n\n¿Cuál es el beneficio económico y qué recomienda?",
       "opciones": [
         "+1 000: hizo bien en abrir la droguería",
-        "−1 000: le convenía seguir de profe de la uni",
+        "0: le da lo mismo una u otra",
         "23 000: es lo que gana en total",
-        "0: le da lo mismo una u otra"
+        "−1 000: le convenía seguir de profe de la uni"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "11 000 − 12 000 = −1 000. Gana plata contablemente, pero pierde 1 000 frente a su mejor alternativa: se sugiere cambiar."
     },
     {
@@ -77,12 +87,12 @@
       "nivel": "comprension",
       "enunciado": "A Jhon Nieves le heredaron un taxi que podría alquilar por 2 000 al mes.\n\na) Quedarse en su empleo ganando 3 500\nb) Ponerse a taxear y ganar 5 000\n\nSi se queda en su empleo, ¿cuánto obtiene realmente?",
       "opciones": [
-        "3 500",
-        "5 000",
         "5 500: su sueldo más el alquiler del taxi",
+        "5 000",
+        "3 500",
         "1 500: la diferencia entre las dos opciones"
       ],
-      "correcta": 2,
+      "correcta": 0,
       "explicacion": "Quedarse en el empleo no le impide alquilar el taxi: las dos cosas suman 5 500. Por eso taxear (5 000) le deja un beneficio económico de −500, aunque parezca que 'da más platita'."
     },
     {
@@ -102,8 +112,13 @@
       "id": "l2-q9",
       "nivel": "aplicacion",
       "enunciado": "PROBLEMA 05 (2024-I). Leonardo elige la empresa C (6 500). Las otras quedan en A = 5 000 y B = 4 200.\n\n¿Cuál es el costo de oportunidad de su elección?",
-      "opciones": ["4 200 (la empresa B)", "5 000 (la empresa A)", "9 200 (A + B)", "6 500 (la empresa C)"],
-      "correcta": 1,
+      "opciones": [
+        "4 200 (la empresa B)",
+        "6 500 (la empresa C)",
+        "9 200 (A + B)",
+        "5 000 (la empresa A)"
+      ],
+      "correcta": 3,
       "explicacion": "5 000: la empresa A, la mejor de las dejadas de lado. Su beneficio económico es 6 500 − 5 000 = +1 500."
     },
     {
@@ -112,11 +127,11 @@
       "enunciado": "PROBLEMA 21 (2023-II). Anny deja de cocinar y empieza a comprar menú. El menú cuesta 20; cocinar cuesta 8 de insumos y le toma una hora que ella valora en 15. La comida sabe igual.\n\n¿Es económicamente racional su decisión?",
       "opciones": [
         "No, porque 8 de insumos es menos que 20 del menú",
-        "Sí: cocinar le cuesta 23 en total y el menú solo 20",
         "No, porque el tiempo no es un costo real",
+        "Sí: cocinar le cuesta 23 en total y el menú solo 20",
         "Da lo mismo: los dos cuestan 20"
       ],
-      "correcta": 1,
+      "correcta": 2,
       "explicacion": "Cocinar cuesta 8 + 15 = 23. Comprar el menú cuesta 20, así que ahorra 3. Ojo: si además disfrutara cocinando y ese disfrute valiera 5, cocinar bajaría a 18 y convendría cocinar."
     }
   ]

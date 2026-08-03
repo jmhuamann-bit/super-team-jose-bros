@@ -1,0 +1,138 @@
+{
+  "nivel": "level3",
+  "clase": "Clase 03 · Demanda, oferta y equilibrio",
+  "fuente": "Apuntes de la 3era clase — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l3-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "LEY DE LA DEMANDA.\n\n¿Qué relación tienen el precio (P) y la cantidad demandada (Qd), ceteris paribus?",
+      "opciones": [
+        "Directa: si sube el precio, sube la cantidad demandada",
+        "No tienen ninguna relación",
+        "Inversa: si sube el precio, baja la cantidad demandada",
+        "Depende del bien"
+      ],
+      "correcta": 2,
+      "explicacion": "Relación INVERSA, siempre con el «ceteris paribus» de la mano. Por eso la curva de demanda baja de izquierda a derecha."
+    },
+    {
+      "id": "l3-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "LEY DE LA OFERTA.\n\n¿Qué relación tienen el precio (P) y la cantidad ofertada (Qs)?",
+      "opciones": [
+        "Directa: si sube el precio, sube la cantidad ofertada",
+        "Inversa: si sube el precio, baja la cantidad ofertada",
+        "Ninguna: la oferta no depende del precio",
+        "Directa solo si el bien es de lujo"
+      ],
+      "correcta": 0,
+      "explicacion": "Relación DIRECTA: a mayor precio, más quieren vender los productores. Por eso la curva de oferta sube."
+    },
+    {
+      "id": "l3-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Cuál de estas es una ecuación de DEMANDA inversa típica (pendiente negativa)?",
+      "opciones": [
+        "p = 3q + 2",
+        "p = 4q − 1",
+        "p = −3q + 2",
+        "p = 3k + 2"
+      ],
+      "correcta": 2,
+      "explicacion": "La demanda tiene pendiente NEGATIVA: p = −3q + 2. Ojo con la última: usa la letra k, que no es ni p ni q, así que ni siquiera es una ecuación del mercado."
+    },
+    {
+      "id": "l3-q4",
+      "nivel": "comprension",
+      "enunciado": "Si el precio varía y todo lo demás se mantiene igual (ceteris paribus)…\n\n¿se mueve la DEMANDA o la CANTIDAD DEMANDADA?",
+      "opciones": [
+        "Se mueve la demanda: la curva entera se desplaza",
+        "Se mueven las dos por igual",
+        "No se mueve nada",
+        "Se mueve la cantidad demandada: es un punto que se desliza sobre la MISMA curva"
+      ],
+      "correcta": 3,
+      "explicacion": "La Qd es un número; la D es la curva. Un cambio de precio te mueve a lo largo de la curva, no mueve la curva. Para mover la curva tiene que cambiar OTRA cosa."
+    },
+    {
+      "id": "l3-q5",
+      "nivel": "comprension",
+      "enunciado": "El error clásico (¡cachetada!): «Cuando el precio aumenta, entonces la DEMANDA disminuye».\n\n¿Cómo se dice bien?",
+      "opciones": [
+        "Está bien dicho",
+        "Cuando el precio aumenta, disminuye la CANTIDAD DEMANDADA",
+        "Cuando el precio aumenta, aumenta la demanda",
+        "Cuando el precio aumenta, la oferta disminuye"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo que cae es la cantidad demandada (Qd), no la demanda (D). Confundirlas es el error que más se penaliza en el examen."
+    },
+    {
+      "id": "l3-q6",
+      "nivel": "comprension",
+      "enunciado": "Tienes la demanda INVERSA: p = −2q + 10.\n\n¿Cuál es su forma NORMAL (despejando q)?",
+      "opciones": [
+        "q = −0,5p + 5",
+        "q = −2p + 10",
+        "q = 2p − 10",
+        "q = −0,5p + 10"
+      ],
+      "correcta": 0,
+      "explicacion": "Despejando: 2q = −p + 10 → q = −p/2 + 5 = −0,5p + 5. Ojo que el intercepto también cambia: 10 pasa a ser 5."
+    },
+    {
+      "id": "l3-q7",
+      "nivel": "comprension",
+      "enunciado": "En la demanda inversa p = −2q + 5 la pendiente es m = −2.\n\n¿Cómo se interpreta?",
+      "opciones": [
+        "Ante un aumento de 2 soles en el precio, la Qd aumenta 1 unidad",
+        "Ante una disminución de 1 sol en el precio, la Qd aumenta 2 unidades",
+        "Por cada unidad vendida el precio sube 2 soles",
+        "Ante una disminución de 2 soles en el precio, la Qd aumenta 1 unidad"
+      ],
+      "correcta": 3,
+      "explicacion": "La lectura se hace con la «m» de la inversa: si el precio baja 2, la cantidad demandada sube 1. El signo negativo es justamente la ley de la demanda."
+    },
+    {
+      "id": "l3-q8",
+      "nivel": "aplicacion",
+      "enunciado": "EQUILIBRIO. La oferta inversa de panetones es P = 3q + 1 y la demanda inversa es P = −q + 13.\n\n¿Cuál es el punto de equilibrio?",
+      "opciones": [
+        "q = 4 · P = 9",
+        "q = 3 · P = 10",
+        "q = 12 · P = 1",
+        "q = 3 · P = 13"
+      ],
+      "correcta": 1,
+      "explicacion": "Se igualan: 3q + 1 = −q + 13 → 4q = 12 → q = 3. Reemplazando: P = 3(3) + 1 = 10. El equilibrio es (3 ; 10)."
+    },
+    {
+      "id": "l3-q9",
+      "nivel": "aplicacion",
+      "enunciado": "HOTELES CUSCO-PUNO (2024-0). Demanda: Qd = 7000 − 2P · Oferta: Qo = 3000 + 6P.\n\n¿Cuál es el precio y la cantidad de equilibrio?",
+      "opciones": [
+        "P = 400 · Q = 6200",
+        "P = 1000 · Q = 5000",
+        "P = 500 · Q = 6000",
+        "P = 250 · Q = 6500"
+      ],
+      "correcta": 2,
+      "explicacion": "7000 − 2P = 3000 + 6P → 4000 = 8P → P = 500. Reemplazando: Q = 7000 − 2(500) = 6000 habitaciones."
+    },
+    {
+      "id": "l3-q10",
+      "nivel": "aplicacion",
+      "enunciado": "Mismo mercado (equilibrio en P = 500). La Asociación de Hoteles fija el precio en 1 000 soles.\n\n¿En qué situación queda el mercado?",
+      "opciones": [
+        "Exceso de OFERTA de 4 000 habitaciones: sobran cuartos vacíos",
+        "Exceso de demanda de 4 000 habitaciones",
+        "En equilibrio, solo que más caro",
+        "Exceso de oferta de 2 000 habitaciones"
+      ],
+      "correcta": 0,
+      "explicacion": "Con P = 1 000: Qd = 7000 − 2000 = 5 000 y Qo = 3000 + 6000 = 9 000. Sobran 4 000 habitaciones. Un precio por ENCIMA del equilibrio siempre genera exceso de oferta."
+    }
+  ]
+}

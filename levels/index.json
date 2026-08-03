@@ -1,6 +1,6 @@
 {
   "titulo": "Lima",
-  "descripcion": "Cada distrito es una clase del curso. Se desbloquean en orden.",
+  "descripcion": "Cada distrito es una clase del curso. Los tres primeros están abiertos para practicar en cualquier orden.",
   "niveles": [
     {
       "id": "level1",
@@ -10,6 +10,7 @@
       "icono": "⚓",
       "retos": 8,
       "duracion": "3 min",
+      "abierto": true,
       "mapa": "levels/level1.json",
       "preguntas": "questions/level1_questions.json"
     },
@@ -21,10 +22,22 @@
       "icono": "🌳",
       "retos": 8,
       "duracion": "3 min",
+      "abierto": true,
       "mapa": "levels/level2.json",
       "preguntas": "questions/level2_questions.json"
     },
-    { "id": "level3", "clase": "Clase 03", "distrito": "Pueblo Libre", "icono": "🏛", "titulo": "" },
+    {
+      "id": "level3",
+      "clase": "Clase 03",
+      "distrito": "Pueblo Libre",
+      "titulo": "La plaza del equilibrio",
+      "icono": "🏛",
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level3.json",
+      "preguntas": "questions/level3_questions.json"
+    },
     { "id": "level4", "clase": "Clase 04", "distrito": "Jesús María", "icono": "🌺", "titulo": "" },
     { "id": "level5", "clase": "Clase 05", "distrito": "Lince", "icono": "🎪", "titulo": "" },
     { "id": "level6", "clase": "Clase 06", "distrito": "San Isidro", "icono": "🏢", "titulo": "" },
