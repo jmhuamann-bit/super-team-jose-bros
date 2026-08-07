@@ -388,6 +388,74 @@ const TORITO = [  // Torito de Pucará: jefe de Pueblo Libre (20 × 16)
 ];
 const P_TORITO = { r: "#d9552f", c: "#f2e2c4", w: "#ffffff", k: "#241a2e", y: "#ffd166", g: "#4ade80" };
 
+const FLOR = [   // la flor "paradita" del Campo de Marte: demanda vertical (12 × 12)
+  "............",
+  "....ppp.....",
+  "...ppppp....",
+  "..ppyyyypp..",
+  "..ppywwypp..",
+  "..ppyyyypp..",
+  "...ppppp....",
+  "....ppp.....",
+  ".....g......",
+  "....gg......",
+  ".....g......",
+  "....ggg.....",
+];
+const P_FLOR = { p: "#ff5ea8", y: "#ffd166", w: "#fff6d8", g: "#3f9d55" };
+
+const BANCA = [   // banca del parque: bien echada, como una recta de pendiente 0 (14 × 12)
+  "..............",
+  "..............",
+  ".mmmmmmmmmmmm.",
+  ".m..........m.",
+  ".mmmmmmmmmmmm.",
+  "..............",
+  "mmmmmmmmmmmmmm",
+  "mmmmmmmmmmmmmm",
+  ".k..........k.",
+  ".k..........k.",
+  ".k..........k.",
+  ".kk........kk.",
+];
+const P_BANCA = { m: "#c98a5e", k: "#3b2a1a" };
+
+const ARDILLA = [   // ardilla de cola curva: la que no es lineal (13 × 12)
+  ".........ttt.",
+  "........tt.tt",
+  "..bb....tt.tt",
+  ".bbbb...tt.tt",
+  ".bkbb...ttttt",
+  ".bbbbbbbtttt.",
+  "..bbbbbbbbtt.",
+  "..wbbbbbbbtt.",
+  "..wwbbbbbtt..",
+  "...wwbbbb....",
+  "...kk..kk....",
+  "..kkk..kkk...",
+];
+const P_ARDILLA = { b: "#b5651d", t: "#d98c3f", k: "#241a2e", w: "#f2f6ff" };
+
+const MONUMENTO = [  // jefe de Jesús María: el monumento que no se mueve ni un milímetro (20 × 16)
+  "........cccc........",
+  ".......cccccc.......",
+  ".......ckkckc.......",
+  ".......cccccc.......",
+  "....c...cccc...c....",
+  "....cccccccccccc....",
+  "........cccc........",
+  ".......cccccc.......",
+  ".......cccccc.......",
+  "......cccccccc......",
+  ".....gggggggggg.....",
+  "....gggggggggggg....",
+  "....gggyyyyyyggg....",
+  "....gggggggggggg....",
+  "...gggggggggggggg...",
+  "...gggggggggggggg...",
+];
+const P_MONUMENTO = { c: "#9db4c0", g: "#6b7683", k: "#2b3440", y: "#ffd166" };
+
 const ITEM_CEVICHE = [   // plato de ceviche: una vida más
   "............",
   "....gg......",
@@ -570,6 +638,10 @@ const DEFINICIONES = {
   cuy:          [CUY, P_CUY],
   farol:        [FAROL, P_FAROL],
   torito:       [TORITO, P_TORITO],
+  flor:         [FLOR, P_FLOR],
+  banca:        [BANCA, P_BANCA],
+  ardilla:      [ARDILLA, P_ARDILLA],
+  monumento:    [MONUMENTO, P_MONUMENTO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

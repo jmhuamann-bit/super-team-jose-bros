@@ -1,0 +1,138 @@
+{
+  "nivel": "level4",
+  "clase": "Clase 04 · Equilibrio, casos atípicos y avanzados",
+  "fuente": "Apuntes de la 4ta clase — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l4-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "CASOS ATÍPICOS.\n\n¿Qué hace que una oferta o una demanda sea un caso ATÍPICO?",
+      "opciones": [
+        "Que tenga pendiente positiva, como cualquier oferta normal",
+        "Que esté mal calculada",
+        "Que su pendiente no sea la común (positiva o negativa), sino 0 o infinita",
+        "Que dependa del precio de otro bien"
+      ],
+      "correcta": 2,
+      "explicacion": "Un caso atípico sigue siendo oferta o demanda: lo raro es la pendiente. En vez de la común (+ para la oferta, − para la demanda), vale 0 y se dibuja echada, o es infinita y se dibuja parada."
+    },
+    {
+      "id": "l4-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "La ecuación de un mercado es simplemente P = 15.\n\n¿Cómo se ve en el gráfico y cuánto vale su pendiente?",
+      "opciones": [
+        "Una recta HORIZONTAL a la altura 15, con pendiente m = 0",
+        "Una recta VERTICAL en q = 15, con pendiente infinita",
+        "Una recta con pendiente −15",
+        "No se puede graficar: le falta la q"
+      ],
+      "correcta": 0,
+      "explicacion": "El truco del cuaderno: si solo depende de P, desde el eje P nacerá. Sale echada, horizontal en 15, con m = 0. El precio es 15 para cualquier cantidad: q = 1, 2, 3… da igual."
+    },
+    {
+      "id": "l4-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "Ahora la ecuación es Q = 8.\n\n¿Cómo se ve y cuánto vale su pendiente?",
+      "opciones": [
+        "Horizontal a la altura 8, con m = 0",
+        "Una recta que pasa por el origen",
+        "Una recta con pendiente 8",
+        "VERTICAL en q = 8, con pendiente infinita (m = ∞)"
+      ],
+      "correcta": 3,
+      "explicacion": "Solo depende de Q, así que nace del eje q y sale parada: vertical en q = 8. La cantidad es 8 cueste lo que cueste (P = 1, 5 o 100). Mientras más parada la recta, más pendiente: acá, infinita."
+    },
+    {
+      "id": "l4-q4",
+      "nivel": "comprension",
+      "enunciado": "Oferta: p = 2q + 5 · Demanda atípica: p = 2.\n\nIguala las dos y decide qué pasa con este mercado.",
+      "opciones": [
+        "El equilibrio es q = 1,5 con P = 2",
+        "Da q = −1,5: una cantidad negativa, así que NO hay mercado",
+        "El equilibrio es q = 3,5 con P = 2",
+        "Hay exceso de demanda"
+      ],
+      "correcta": 1,
+      "explicacion": "2q + 5 = 2 → 2q = −3 → q = −1,5. Una cantidad negativa no existe: la oferta y la demanda están en desacuerdo, no hay compra ni venta. Compáralo con p = 6, donde sí sale q = 0,5 y el mercado existe."
+    },
+    {
+      "id": "l4-q5",
+      "nivel": "comprension",
+      "enunciado": "La oferta es atípica y vertical: q = 1 (solo hay una unidad, pase lo que pase). La demanda es p = −2q + 5.\n\nSi ahora la demanda AUMENTA y se desplaza a la derecha, ¿qué cambia en el equilibrio?",
+      "opciones": [
+        "Cambian la cantidad y el precio",
+        "Cambia solo la cantidad; el precio se queda en 3",
+        "No cambia nada",
+        "Cambia SOLO el precio: la cantidad sigue clavada en q = 1"
+      ],
+      "correcta": 3,
+      "explicacion": "El equilibrio inicial es P = −2(1) + 5 = 3. Como la oferta está parada en q = 1, por más que la demanda se desplace la cantidad no se mueve: lo único que sube es el precio."
+    },
+    {
+      "id": "l4-q6",
+      "nivel": "comprension",
+      "enunciado": "CASOS AVANZADOS. Un compañero dice: «Q = 20/P no puede ser una demanda porque no es una recta».\n\n¿Tiene razón?",
+      "opciones": [
+        "No: si P sube, Q baja, así que cumple la ley de la demanda y SÍ es una demanda (no lineal)",
+        "Sí: toda demanda tiene que ser una recta con pendiente negativa",
+        "No, porque en realidad es una oferta",
+        "Sí, porque una ecuación así no se puede graficar"
+      ],
+      "correcta": 0,
+      "explicacion": "Lo que define a una demanda no es su forma, sino la RELACIÓN entre P y Q. En Q = 20/P, si P sube la Q baja: relación inversa, ley de la demanda. Es una demanda no lineal. Una ecuación es lineal solo si el exponente de la variable es 1."
+    },
+    {
+      "id": "l4-q7",
+      "nivel": "aplicacion",
+      "enunciado": "RETO AVANZADO. La demanda es Q = 10/P (no lineal) y la oferta es la atípica P = 10.\n\nHalla el punto de equilibrio.",
+      "opciones": [
+        "q = 10 · P = 1",
+        "q = 100 · P = 10",
+        "q = 1 · P = 10",
+        "No hay equilibrio: una es curva y la otra recta"
+      ],
+      "correcta": 2,
+      "explicacion": "La oferta ya te regala el precio: P = 10. Se reemplaza en la demanda: 10 = 10/q → q = 10/10 = 1. El equilibrio es (q = 1 ; P = 10). Que una curva no sea lineal no impide que se crucen."
+    },
+    {
+      "id": "l4-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — ROSATEL.\n\nUn enamorado compra rosas y su demanda completa es Q = −2P + 100 + A − R, donde A es el nivel de AMOR y R el de RABIA por los problemas del año.\n\n¿Qué relación tiene la Q con A y con R?",
+      "opciones": [
+        "Con A inversa y con R directa",
+        "Con A directa (más amor, más rosas) y con R inversa (más rabia, menos rosas)",
+        "Con las dos directa",
+        "Con las dos inversa"
+      ],
+      "correcta": 1,
+      "explicacion": "La cantidad no depende solo del precio. A entra sumando: si A sube, Q sube, relación DIRECTA. R entra restando: si R sube, Q baja, relación INVERSA. Eso es una demanda completa."
+    },
+    {
+      "id": "l4-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — PREGUNTA DE EXAMEN 2024-I.\n\nGwendoline estimó la demanda de escudos del Valle de Arryn: una función NO lineal en la que la cantidad depende del precio del escudo, del precio de los sables y de la renta. Kit afirma: «no puede ser demanda, porque la demanda es una recta y su pendiente es negativa».\n\n¿La afirmación de Kit es…?",
+      "opciones": [
+        "Verdadera: toda demanda es una recta de pendiente negativa",
+        "Verdadera, porque una demanda solo puede depender de su propio precio",
+        "Incierta: falta saber el valor de la renta",
+        "FALSA: una demanda puede ser no lineal y depender de más variables; lo que importa es la relación inversa entre el precio del bien y su cantidad"
+      ],
+      "correcta": 3,
+      "explicacion": "Kit se equivoca dos veces. Primero, una demanda no tiene que ser lineal (Q = 20/P también lo es). Segundo, la Q puede depender de la renta y del precio de otros bienes: es una demanda completa. Lo único que la define es que, ceteris paribus, si sube el precio del escudo baja la cantidad demandada de escudos."
+    },
+    {
+      "id": "l4-q10",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3 — PREGUNTA DE EXAMEN 2024-I.\n\nEl profesor Tyrion tiene una oferta de tronos NO lineal (una parábola). De la demanda solo sabe que su elasticidad precio es INFINITA en todos sus puntos, y que el mercado está en equilibrio en 62 tronos.\n\n¿Qué forma tiene esa demanda y cómo se halla el precio de equilibrio?",
+      "opciones": [
+        "Es una demanda atípica HORIZONTAL (P = constante); el precio de equilibrio sale reemplazando q = 62 en la oferta",
+        "Es una demanda vertical (q = constante) y el precio no se puede hallar",
+        "Es una recta de pendiente negativa; hay que igualar oferta con demanda",
+        "No hay equilibrio, porque la oferta no es lineal"
+      ],
+      "correcta": 0,
+      "explicacion": "Una demanda con elasticidad precio infinita en todos sus puntos es la recta echada: horizontal, P = constante, con m = 0 (en los apuntes aparece como «una función parecida a P = 10»). Como esa recta fija el precio, basta meter la cantidad de equilibrio (62 tronos) en la ecuación de la oferta para obtener el P de equilibrio, y la demanda inversa es justamente P = ese valor."
+    }
+  ]
+}

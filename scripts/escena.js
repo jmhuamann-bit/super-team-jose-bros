@@ -162,6 +162,11 @@ const FICHAS = [
   { sprite: "pulpo", nombre: "El Pulpo Sumador", texto: "Jefe del puerto: suma todo lo que dejaste de lado." },
   { sprite: "paloma", nombre: "Paloma Presumida", texto: "Confunde ingresos con beneficios." },
   { sprite: "combi", nombre: "La Combi Indecisa", texto: "Jefa del malecón: nunca escoge su ruta." },
+  { sprite: "cuy", nombre: "Cuy Regateador", texto: "Confunde la demanda con la cantidad demandada." },
+  { sprite: "torito", nombre: "El Torito de Pucará", texto: "Jefe de la plaza: no sabe igualar oferta con demanda." },
+  { sprite: "flor", nombre: "La Flor Paradita", texto: "Vertical y orgullosa: pase lo que pase, la cantidad no se mueve." },
+  { sprite: "ardilla", nombre: "La Ardilla Curvilínea", texto: "Jura que si no es recta, no es demanda." },
+  { sprite: "monumento", nombre: "El Monumento Inamovible", texto: "Jefe de Jesús María: pendiente infinita y cero ganas de moverse." },
 ];
 
 export function galeriaPersonajes(contenedor) {

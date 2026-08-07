@@ -239,6 +239,74 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     JESÚS MARÍA — Campo de Marte por la tarde: jacarandás en flor,
+     las torres de la Residencial San Felipe y jardines geométricos
+     ========================================================= */
+  campo: {
+    nombre: "Campo",
+    cielo: [[0, "#3d5a9e"], [0.42, "#7f8fd0"], [0.78, "#e2a6c8"], [1, "#ffd9b0"]],
+    suelo: { cara: "#6f8f4a", borde: "#9ed46b", tierra: "#4a5b30", plataforma: "#8f7bbd", plataformaBorde: "#c9b6ef" },
+    acento: "#c084fc",
+    bichos: ["flor", "banca", "ardilla"],
+    nombresBichos: ["La Flor Paradita", "La Banca Echada", "La Ardilla Curvilínea"],
+    jefe: "monumento",
+    nombreJefe: "El Monumento Inamovible",
+
+    fondo(ctx, cam, t) {
+      // sol bajo de la tarde
+      ctx.fillStyle = "rgba(255,214,170,.95)";
+      ctx.beginPath(); ctx.arc(610, 150, 38, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,196,150,.16)";
+      ctx.beginPath(); ctx.arc(610, 150, 66, 0, Math.PI * 2); ctx.fill();
+
+      // torres de la Residencial San Felipe: bloques altos y parejos
+      repetir(ctx, cam, 260, 0.32, (x, i) => {
+        const alto = 150 + ((i * 53) % 70);
+        ctx.fillStyle = ["#b9b0a4", "#a8a396", "#c6bcae"][i % 3];
+        ctx.fillRect(x + 30, 330 - alto, 78, alto);
+        // ventanas en rejilla, algunas ya encendidas
+        for (let fy = 330 - alto + 14; fy < 318; fy += 18) {
+          for (let fx = x + 38; fx < x + 102; fx += 16) {
+            const encendida = ((fx + fy + i * 7) % 5) === 0;
+            ctx.fillStyle = encendida ? "rgba(255,214,140,.9)" : "rgba(70,80,96,.6)";
+            ctx.fillRect(fx, fy, 9, 11);
+          }
+        }
+      });
+
+      // jacarandás en flor: copa morada y tronco delgado
+      repetir(ctx, cam, 145, 0.66, (x, i) => {
+        const bx = x + 36, by = 352 - (i % 2) * 10;
+        ctx.fillStyle = "#5b4630"; ctx.fillRect(bx + 13, by - 34, 6, 34);
+        ctx.fillStyle = i % 2 ? "#8b5cf6" : "#a678f0";
+        ctx.beginPath(); ctx.arc(bx + 16, by - 42, 20, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(bx + 3, by - 34, 13, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(bx + 29, by - 34, 13, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "rgba(255,255,255,.16)";
+        ctx.beginPath(); ctx.arc(bx + 9, by - 50, 8, 0, Math.PI * 2); ctx.fill();
+      });
+
+      // jardines geométricos del parque, en franjas horizontales
+      repetir(ctx, cam, 96, 0.82, (x, i) => {
+        ctx.fillStyle = ["#e05f8f", "#ffd166", "#f2f6ff"][i % 3];
+        for (let k = 0; k < 4; k++) ctx.fillRect(x + 10 + k * 18, 362 - (i % 2) * 4, 9, 5);
+        ctx.fillStyle = "#4c6b33";
+        ctx.fillRect(x + 6, 368 - (i % 2) * 4, 82, 4);
+      });
+    },
+
+    clima(ctx, t) {
+      // pétalos de jacarandá cayendo en diagonal
+      for (let i = 0; i < 24; i++) {
+        const x = (i * 167 - t * 0.9) % 860 - 30;
+        const y = (50 + i * 89 + t * 0.7) % 380;
+        ctx.fillStyle = i % 4 ? "rgba(168,120,240,.6)" : "rgba(255,214,180,.65)";
+        ctx.fillRect(x, y, 4, 6);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

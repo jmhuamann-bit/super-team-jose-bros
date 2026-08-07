@@ -1,0 +1,34 @@
+{
+  "id": "level4",
+  "distrito": "Jesús María",
+  "clase": "Clase 04",
+  "titulo": "El parque de las curvas raras",
+  "tema": "campo",
+  "musica": "campo",
+  "vehiculo": "combi",
+  "intro": "En el Campo de Marte las curvas amanecieron raras: unas están echadas, otras paradas y otras ni siquiera son rectas. Los bichos de Jesús María juran que si no es una recta con pendiente negativa no puede ser demanda. Enséñales los casos atípicos y los avanzados.",
+  "repaso": [
+    "Caso atípico: la pendiente ya no es la común (+ oferta, − demanda), sino 0 (recta echada) o infinita (recta parada).",
+    "Truco: si la ecuación solo depende de P, nace del eje P y sale HORIZONTAL; si solo depende de Q, nace del eje q y sale VERTICAL.",
+    "Si al igualar oferta y demanda te sale una cantidad negativa, no hay compra ni venta: no hay mercado.",
+    "Una ecuación es lineal solo si el exponente de la variable es 1. Una demanda puede ser curva y seguir siendo demanda.",
+    "Lo que define a la oferta y a la demanda es la RELACIÓN entre P y Q, no la forma del gráfico."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                        ",
+    "                                                                                                                                                                                        ",
+    "                                                                                                                                                                                        ",
+    "                                                                                                                                                                                        ",
+    "                                                                                                                                                                                        ",
+    "                                                                                                                                                                                        ",
+    "                                                                                                                                                                                        ",
+    "                  o o o o                               o o o                                                         o o o                                     o o o                   ",
+    "            ?                     o o           L                             o o       G                 o o                   V       o o             1               ?               ",
+    "                  ====                                  ====                                            ====          ====                                      ====                    ",
+    "                              o o          o                                            o o        o                          o o              o                                        ",
+    "  P             E             C                     E         X           E           C       E               X     E         C       E               X       E           B         M   ",
+    "##########################################   #####################################################   #########################################   #######################################",
+    "##########################################   #####################################################   #########################################   #######################################",
+    "##########################################   #####################################################   #########################################   #######################################"
+  ]
+}
