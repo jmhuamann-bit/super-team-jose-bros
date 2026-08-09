@@ -1,6 +1,6 @@
 {
   "titulo": "Lima",
-  "descripcion": "Cada distrito es una clase del curso. Los cuatro primeros están abiertos para practicar en cualquier orden.",
+  "descripcion": "Cada distrito es una clase del curso. Los cinco primeros están abiertos para practicar en cualquier orden.",
   "niveles": [
     {
       "id": "level1",
@@ -50,7 +50,18 @@
       "mapa": "levels/level4.json",
       "preguntas": "questions/level4_questions.json"
     },
-    { "id": "level5", "clase": "Clase 05", "distrito": "Lince", "icono": "🎪", "titulo": "" },
+    {
+      "id": "level5",
+      "clase": "Clase 05",
+      "distrito": "Lince",
+      "titulo": "La feria de las ecuaciones",
+      "icono": "🎪",
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level5.json",
+      "preguntas": "questions/level5_questions.json"
+    },
     { "id": "level6", "clase": "Clase 06", "distrito": "San Isidro", "icono": "🏢", "titulo": "" },
     { "id": "level7", "clase": "Clase 07", "distrito": "Miraflores", "icono": "🪂", "titulo": "" }
   ]

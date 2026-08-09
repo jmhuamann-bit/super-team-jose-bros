@@ -46,6 +46,13 @@ const TEMAS_MUSICA = {
               "F4",2,"A4",1,"C5",1,"B4",2,"A4",2,"G4",4,"A4",4],
     bajo:    ["A2",4,"E2",4,"F2",4,"C3",4,"D3",4,"A2",4,"E2",4,"A2",4],
   },
+  feria: { // Lince: vals de feria, juguetón y un poco circense
+    tempo: 0.13, onda: "square",
+    melodia: ["G4",1,"C5",1,"E5",1,"G5",2,"E5",1,"C5",1,"D5",2,"F5",2,"E5",2,
+              "G4",1,"C5",1,"F5",1,"A5",2,"G5",1,"E5",1,"C5",2,"G4",2],
+    bajo:    ["C3",2,"G2",2,"C3",2,"G2",2,"F2",2,"C3",2,"G2",2,"C3",2,
+              "C3",2,"G2",2,"A2",2,"E2",2,"F2",2,"G2",2,"C3",4],
+  },
 };
 
 function arrancarCtx() {

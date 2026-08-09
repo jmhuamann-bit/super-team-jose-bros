@@ -307,6 +307,97 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     LINCE — feria de noche: carpa de circo, rueda de la fortuna,
+     guirnaldas de focos y confeti en el aire
+     ========================================================= */
+  feria: {
+    nombre: "Feria",
+    cielo: [[0, "#140d2e"], [0.45, "#2b1b58"], [0.8, "#5b2a72"], [1, "#a3486b"]],
+    suelo: { cara: "#7a4a8f", borde: "#c98adf", tierra: "#3f2455", plataforma: "#e0b23c", plataformaBorde: "#ffe28a" },
+    acento: "#ffd166",
+    bichos: ["globo", "diana", "algodon"],
+    nombresBichos: ["El Globo Invertido", "La Diana sin Punto", "El Algodón Volteado"],
+    jefe: "payaso",
+    nombreJefe: "El Payaso de las Máximas",
+
+    fondo(ctx, cam, t) {
+      // luna y estrellas
+      ctx.fillStyle = "rgba(255,247,214,.95)";
+      ctx.beginPath(); ctx.arc(690, 74, 26, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#1b1240";
+      ctx.beginPath(); ctx.arc(700, 66, 22, 0, Math.PI * 2); ctx.fill();
+      for (let i = 0; i < 40; i++) {
+        const x = (i * 197 - (cam * 0.05)) % 900 - 20;
+        const y = 20 + ((i * 71) % 200);
+        const brillo = 0.35 + 0.45 * Math.abs(Math.sin(t / 30 + i));
+        ctx.fillStyle = `rgba(255,255,255,${brillo.toFixed(2)})`;
+        ctx.fillRect(x, y, 2, 2);
+      }
+
+      // rueda de la fortuna al fondo
+      repetir(ctx, cam, 520, 0.22, (x) => {
+        const cx = x + 150, cy = 208, r = 72;
+        ctx.strokeStyle = "rgba(255,209,102,.75)"; ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.stroke();
+        for (let k = 0; k < 8; k++) {
+          const a = (k / 8) * Math.PI * 2 + t / 120;
+          ctx.beginPath(); ctx.moveTo(cx, cy);
+          ctx.lineTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r); ctx.stroke();
+          ctx.fillStyle = ["#ff5470", "#ffd166", "#4ade80", "#38bdf8"][k % 4];
+          ctx.fillRect(cx + Math.cos(a) * r - 5, cy + Math.sin(a) * r - 5, 10, 10);
+        }
+        ctx.strokeStyle = "rgba(200,160,90,.6)";
+        ctx.beginPath(); ctx.moveTo(cx - 26, 330); ctx.lineTo(cx, cy);
+        ctx.lineTo(cx + 26, 330); ctx.stroke();
+      });
+
+      // carpas de circo a rayas
+      repetir(ctx, cam, 230, 0.48, (x, i) => {
+        const bx = x + 30, base = 330, alto = 96 + ((i * 29) % 26);
+        ctx.fillStyle = i % 2 ? "#d94f6b" : "#e0396b";
+        ctx.beginPath();
+        ctx.moveTo(bx + 62, base - alto - 26);
+        ctx.lineTo(bx + 124, base); ctx.lineTo(bx, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(255,245,225,.85)";
+        for (let k = 0; k < 3; k++) {
+          ctx.beginPath();
+          ctx.moveTo(bx + 62, base - alto - 26);
+          ctx.lineTo(bx + 20 + k * 34, base); ctx.lineTo(bx + 32 + k * 34, base);
+          ctx.closePath(); ctx.fill();
+        }
+        ctx.fillStyle = "#ffd166";
+        ctx.beginPath(); ctx.arc(bx + 62, base - alto - 30, 5, 0, Math.PI * 2); ctx.fill();
+      });
+
+      // guirnaldas de focos cruzando la feria
+      repetir(ctx, cam, 250, 0.7, (x) => {
+        ctx.strokeStyle = "rgba(255,255,255,.28)"; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(x, 172); ctx.quadraticCurveTo(x + 125, 214, x + 250, 172); ctx.stroke();
+        for (let k = 1; k < 9; k++) {
+          const p = k / 9;
+          const fx = x + 250 * p;
+          const fy = 172 + Math.sin(p * Math.PI) * 40;
+          const on = ((k + Math.floor(t / 18)) % 3) !== 0;
+          ctx.fillStyle = on ? ["#ffd166", "#ff8fab", "#8ef2c0"][k % 3] : "rgba(120,110,150,.5)";
+          ctx.beginPath(); ctx.arc(fx, fy, 3.5, 0, Math.PI * 2); ctx.fill();
+        }
+      });
+    },
+
+    clima(ctx, t) {
+      // confeti cayendo y girando
+      for (let i = 0; i < 30; i++) {
+        const x = (i * 149 + Math.sin(t / 40 + i) * 22) % 860 - 20;
+        const y = (i * 73 + t * 1.1) % 400;
+        ctx.fillStyle = ["rgba(255,209,102,.75)", "rgba(255,143,171,.75)", "rgba(142,242,192,.7)", "rgba(139,180,255,.7)"][i % 4];
+        const ancho = 3 + (i % 2) * 2;
+        ctx.fillRect(x, y, ancho, 5);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

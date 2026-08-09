@@ -167,6 +167,9 @@ const FICHAS = [
   { sprite: "flor", nombre: "La Flor Paradita", texto: "Vertical y orgullosa: pase lo que pase, la cantidad no se mueve." },
   { sprite: "ardilla", nombre: "La Ardilla Curvilínea", texto: "Jura que si no es recta, no es demanda." },
   { sprite: "monumento", nombre: "El Monumento Inamovible", texto: "Jefe de Jesús María: pendiente infinita y cero ganas de moverse." },
+  { sprite: "globo", nombre: "El Globo Invertido", texto: "Confunde la pendiente con la pendiente inversa." },
+  { sprite: "diana", nombre: "La Diana sin Punto", texto: "Tiene la pendiente lista, pero nunca encuentra el punto." },
+  { sprite: "payaso", nombre: "El Payaso de las Máximas", texto: "Jefe de Lince: no distingue la máxima de las máximas disposiciones a pagar." },
 ];
 
 export function galeriaPersonajes(contenedor) {

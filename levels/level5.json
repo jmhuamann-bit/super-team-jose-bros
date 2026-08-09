@@ -1,0 +1,35 @@
+{
+  "id": "level5",
+  "distrito": "Lince",
+  "clase": "Clase 05",
+  "titulo": "La feria de las ecuaciones",
+  "tema": "feria",
+  "musica": "feria",
+  "vehiculo": "limosina",
+  "intro": "En la feria de Lince nadie te da la ecuación servida: te la cuentan con palabras. Que si el precio sube tanto, que si con eso ya nadie compra, que si te lo regalan… Arma tú las ecuaciones de oferta y demanda antes de que el Payaso de las Máximas te enrede con sus disposiciones a pagar.",
+  "repaso": [
+    "La recetita: PASO 1 la pendiente, PASO 2 un punto, PASO 3 reemplazar y despejar el intercepto.",
+    "m = ΔP/ΔQ es la pendiente de la ecuación INVERSA. n = ΔQ/ΔP es la pendiente de la NORMAL. No son lo mismo.",
+    "Los puntos se escriben (Q ; P): la cantidad va primero.",
+    "Demanda: «desde ese precio ya nadie compra» es el intercepto en P (Qd = 0). «Si lo regalaran comprarían X» es el intercepto en Q (P = 0).",
+    "Oferta: «no vende por debajo de ese precio» es el intercepto en P (Qs = 0), porque recién ahí cubre costos. «Parte del origen» significa intercepto 0.",
+    "Si la ecuación trae más letras, reemplazas los datos que te dan y te queda la demanda de siempre, en P y Q."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                ",
+    "                o o o o                       o o o                                       o o o               o o o                       o o o                         o o o                   ",
+    "          ?                   o o       L                 o o     G                 o o                 V                   o o     1                   o o       L             ?               ",
+    "                ====                          ====                                        ====                ====                        ====                          ====                    ",
+    "                          o o      o                                  o o    o                  o o                    o        o o                          o                                  ",
+    "  P           E           C                 E         X         E     C                 E           X       E                   C       E           X                 E           B         M   ",
+    "##################################   #######################################   #######################################   ###################################   #################################",
+    "##################################   #######################################   #######################################   ###################################   #################################",
+    "##################################   #######################################   #######################################   ###################################   #################################"
+  ]
+}

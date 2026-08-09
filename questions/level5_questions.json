@@ -1,0 +1,138 @@
+{
+  "nivel": "level5",
+  "clase": "Clase 05 · Creación de ecuaciones de oferta y demanda",
+  "fuente": "Apuntes de la 5ta clase — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l5-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "LA RECETITA (el esqueleto es oro).\n\n¿Cuáles son los tres pasos para construir una ecuación de demanda a partir de un enunciado?",
+      "opciones": [
+        "Graficar, tabular y despejar",
+        "Igualar oferta con demanda, despejar y graficar",
+        "1) Hallar la pendiente · 2) Identificar un punto · 3) Reemplazar y despejar el intercepto",
+        "Buscar el equilibrio, luego la pendiente y por último el punto"
+      ],
+      "correcta": 2,
+      "explicacion": "Siempre el mismo esqueleto: primero la pendiente (o la pendiente inversa), después UN punto cualquiera de la curva, y con esos dos datos reemplazas para sacar el intercepto. Igualar oferta con demanda viene después, y solo si te piden el equilibrio."
+    },
+    {
+      "id": "l5-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "Te dicen: «si el precio fuese 10 soles, la cantidad demandada sería 20».\n\n¿Cómo se anota ese punto?",
+      "opciones": [
+        "(20 ; 10), porque el par se escribe (Q ; P): la cantidad va primero",
+        "(10 ; 20), porque el precio siempre va primero",
+        "Da igual el orden",
+        "No es un punto, es una pendiente"
+      ],
+      "correcta": 0,
+      "explicacion": "El par ordenado es (X ; Y) = (Q ; P). La cantidad va en el eje horizontal y el precio en el vertical, así que la cantidad se escribe primero. Invertirlos es el error que arruina el paso 3 completo."
+    },
+    {
+      "id": "l5-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "PENDIENTE vs PENDIENTE INVERSA.\n\n¿Cuál es cuál?",
+      "opciones": [
+        "Las dos se calculan igual, solo cambia el nombre",
+        "m = ΔQ/ΔP y se usa en la ecuación inversa",
+        "m es siempre positiva y n siempre negativa",
+        "m = ΔP/ΔQ va en la ecuación INVERSA; n = ΔQ/ΔP va en la NORMAL"
+      ],
+      "correcta": 3,
+      "explicacion": "La inversa tiene la P despejada, así que su pendiente es m = ΔP/ΔQ. La normal tiene la Q despejada, así que usa n = ΔQ/ΔP. Son una el recíproco de la otra: si las confundes, el número te sale volteado."
+    },
+    {
+      "id": "l5-q4",
+      "nivel": "comprension",
+      "enunciado": "PROBLEMA DE SOFTWARES. Te dicen: «cuando el precio es igual o supera los 1 340 soles, no habrá consumidores que deseen adquirir softwares».\n\n¿Qué punto te están regalando?",
+      "opciones": [
+        "El punto (1 340 ; 0): a ese precio se venden 1 340 unidades",
+        "El intercepto en P: el punto (0 ; 1 340), porque ahí la cantidad demandada es CERO",
+        "La pendiente de la demanda",
+        "El punto de equilibrio del mercado"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuando te dicen que a partir de cierto precio ya nadie compra, ese precio es el intercepto en P: el precio máximo que alguien pagaría, con Qd = 0. Escrito como (Q ; P) es (0 ; 1 340)."
+    },
+    {
+      "id": "l5-q5",
+      "nivel": "comprension",
+      "enunciado": "EL GRAN RETO. Ojo con la redacción:\n\n«La máxima disposición a pagar por la PRIMERA cerveza es de 10 soles».\n\n¿Qué punto es?",
+      "opciones": [
+        "(0 ; 10), es el intercepto en P",
+        "(10 ; 0), es el intercepto en Q",
+        "(10 ; 1), porque el precio va primero",
+        "(1 ; 10): es la primera unidad, así que Q = 1 y P = 10"
+      ],
+      "correcta": 3,
+      "explicacion": "Acá está la trampa del cuaderno. Si dice «por la PRIMERA cerveza», te están dando la unidad 1: el punto es (1 ; 10). El intercepto en P sería si dijeran «la máxima DE LAS MÁXIMAS disposiciones a pagar es 10», que da (0 ; 10). Y si dijeran «por el 5to producto», sería (5 ; 10)."
+    },
+    {
+      "id": "l5-q6",
+      "nivel": "comprension",
+      "enunciado": "AHORA LA OFERTA. Parodi «no ofrece carne de pollo a un precio menor de 25 soles».\n\n¿Qué significa eso y por qué?",
+      "opciones": [
+        "Es el intercepto en P de la oferta: en P = 25 la cantidad ofertada es 0, porque recién ahí empieza a cubrir COSTOS",
+        "Que en P = 25 vende su cantidad máxima",
+        "Que la oferta parte del origen",
+        "Que su pendiente es 25"
+      ],
+      "correcta": 0,
+      "explicacion": "En la oferta, el intercepto en P es el precio mínimo desde el cual recién aparecen vendedores: por debajo de eso no cubren sus costos de producción y no venden nada (Qs = 0). El punto es (0 ; 25). Distinto es «parte del origen», que significa intercepto igual a 0."
+    },
+    {
+      "id": "l5-q7",
+      "nivel": "aplicacion",
+      "enunciado": "MERCADO DE SOFTWARES. Ya tienes el punto (0 ; 1 340). Además: «si el precio subiera en un sol, 3 softwares dejarían de comprarse al año».\n\n¿Cuál es la ecuación de la demanda NORMAL?",
+      "opciones": [
+        "Q = −3P + 1 340",
+        "Q = 3P − 4 020",
+        "Q = −3P + 4 020",
+        "P = −3Q + 1 340"
+      ],
+      "correcta": 2,
+      "explicacion": "La pendiente inversa es n = ΔQ/ΔP = −3/1 = −3. Planteas Q = −3P + b y reemplazas el punto (0 ; 1 340): 0 = −3(1 340) + b → b = 4 020. Queda Q = −3P + 4 020. Compruébalo: si P = 1 340, entonces Q = 0."
+    },
+    {
+      "id": "l5-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — PREGUNTA DE EXAMEN 2023-0 (el beskar).\n\nLa máxima disposición a pagar es de 10 000 créditos por el PRIMER kilo, y por cada 100 créditos menos en el precio los clientes compran 2,5 kilos más.\n\n¿Cuál es la demanda INVERSA?",
+      "opciones": [
+        "P = −40Q + 10 000",
+        "P = −40Q + 10 040",
+        "P = −2,5Q + 10 000",
+        "Q = −40P + 10 040"
+      ],
+      "correcta": 1,
+      "explicacion": "Pendiente de la inversa: m = ΔP/ΔQ = −100/2,5 = −40. El punto no es el intercepto: dice «por el PRIMER kilo», así que es (1 ; 10 000). Reemplazas: 10 000 = −40(1) + b → b = 10 040. Queda P = −40Q + 10 040. La pendiente se interpreta así: por cada kilo adicional que quieran vender, el precio debe bajar 40 créditos."
+    },
+    {
+      "id": "l5-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — PREGUNTA DE EXAMEN 2019-I (los Rappicréditos).\n\nDemanda: Q = 16 000 + 200·RC − 200P · Oferta: Q = 4 000 + 200P.\n\nSi RC = 10, ¿cuál es el punto de equilibrio?",
+      "opciones": [
+        "P = 30 · Q = 10 000",
+        "P = 60 · Q = 16 000",
+        "P = 40 · Q = 12 000",
+        "P = 35 · Q = 11 000"
+      ],
+      "correcta": 3,
+      "explicacion": "Primero reemplazas la letra nueva: con RC = 10 la demanda queda Q = 16 000 + 2 000 − 200P = 18 000 − 200P. Recién ahí igualas: 18 000 − 200P = 4 000 + 200P → 14 000 = 400P → P = 35. Y la cantidad: Q = 4 000 + 200(35) = 11 000."
+    },
+    {
+      "id": "l5-q10",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3 — Te cae una demanda con muchas letras:\n\nQ = −3P + 0,5M + 2X − 0,6R + 20\n\ndonde M es el ingreso. ¿Qué relación tiene la Q con M, y qué haces con las demás letras?",
+      "opciones": [
+        "Relación DIRECTA con M (entra sumando): si el ingreso sube, la Q sube. A las demás letras les reemplazas el dato que te den y vuelves a una demanda de siempre en P y Q",
+        "Relación inversa con M, porque toda demanda tiene pendiente negativa",
+        "Ninguna relación: solo el precio afecta a la Q",
+        "Hay que igualar con la oferta antes de poder decir algo"
+      ],
+      "correcta": 0,
+      "explicacion": "El signo manda: M entra con +0,5, así que la relación es directa (más ingreso, más cantidad). La R entra restando, así que con ella es inversa. Y no te asustes por las letras: los problemas te dan sus valores justamente para que los reemplaces y la ecuación quede otra vez en P y Q, lista para hallar el equilibrio."
+    }
+  ]
+}
