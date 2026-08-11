@@ -398,6 +398,75 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     SAN ISIDRO — el distrito financiero al mediodía: torres de
+     vidrio, los olivos del Olivar y garúa fina de Lima
+     ========================================================= */
+  torres: {
+    nombre: "Torres",
+    cielo: [[0, "#8fa8c4"], [0.45, "#b6c8db"], [0.8, "#d8e3ec"], [1, "#eef3f7"]],
+    suelo: { cara: "#8d99a6", borde: "#5f8f52", tierra: "#5b6470", plataforma: "#3f6f9e", plataformaBorde: "#8fc4ea" },
+    acento: "#2f7fc4",
+    bichos: ["maletin", "corbata", "cafe"],
+    nombresBichos: ["El Maletín Deslizado", "La Corbata Sustituta", "El Café Inferior"],
+    jefe: "ejecutivo",
+    nombreJefe: "El Ejecutivo de las Expectativas",
+
+    fondo(ctx, cam, t) {
+      // sol tapado por la garúa limeña
+      ctx.fillStyle = "rgba(255,255,240,.45)";
+      ctx.beginPath(); ctx.arc(560, 88, 40, 0, Math.PI * 2); ctx.fill();
+
+      // torres de vidrio, altas y de distinto tono
+      repetir(ctx, cam, 190, 0.3, (x, i) => {
+        const alto = 170 + ((i * 61) % 90);
+        const tono = ["#6f8ba8", "#7e99b4", "#607d9b"][i % 3];
+        ctx.fillStyle = tono;
+        ctx.fillRect(x + 24, 330 - alto, 92, alto);
+        // franjas de vidrio con reflejo
+        for (let fy = 330 - alto + 10; fy < 322; fy += 14) {
+          ctx.fillStyle = "rgba(200,226,245,.55)";
+          ctx.fillRect(x + 30, fy, 80, 7);
+        }
+        ctx.fillStyle = "rgba(255,255,255,.22)";
+        ctx.fillRect(x + 30, 330 - alto, 18, alto);
+        // antena
+        ctx.fillStyle = "#4a5b6b";
+        ctx.fillRect(x + 68, 330 - alto - 18, 3, 18);
+      });
+
+      // torres bajas de segunda fila
+      repetir(ctx, cam, 120, 0.5, (x, i) => {
+        const alto = 70 + ((i * 37) % 40);
+        ctx.fillStyle = ["#93a7ba", "#a4b5c5"][i % 2];
+        ctx.fillRect(x + 14, 330 - alto, 62, alto);
+        ctx.fillStyle = "rgba(70,90,110,.45)";
+        for (let fy = 330 - alto + 8; fy < 324; fy += 12)
+          for (let fx = x + 20; fx < x + 70; fx += 12) ctx.fillRect(fx, fy, 7, 7);
+      });
+
+      // los olivos del Olivar
+      repetir(ctx, cam, 132, 0.7, (x, i) => {
+        const bx = x + 40, by = 354 - (i % 2) * 8;
+        ctx.fillStyle = "#6b5a3f"; ctx.fillRect(bx + 12, by - 30, 7, 30);
+        ctx.fillStyle = i % 2 ? "#6f9a5c" : "#7fae6a";
+        ctx.beginPath(); ctx.ellipse(bx + 15, by - 38, 22, 15, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "rgba(255,255,255,.18)";
+        ctx.beginPath(); ctx.ellipse(bx + 8, by - 43, 9, 6, 0, 0, Math.PI * 2); ctx.fill();
+      });
+    },
+
+    clima(ctx, t) {
+      // garúa fina: hilitos verticales muy tenues
+      for (let i = 0; i < 34; i++) {
+        const x = (i * 131 - t * 0.5) % 860 - 20;
+        const y = (i * 97 + t * 2.6) % 400;
+        ctx.fillStyle = "rgba(226,238,248,.35)";
+        ctx.fillRect(x, y, 1, 9);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

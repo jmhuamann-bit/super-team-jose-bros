@@ -170,6 +170,9 @@ const FICHAS = [
   { sprite: "globo", nombre: "El Globo Invertido", texto: "Confunde la pendiente con la pendiente inversa." },
   { sprite: "diana", nombre: "La Diana sin Punto", texto: "Tiene la pendiente lista, pero nunca encuentra el punto." },
   { sprite: "payaso", nombre: "El Payaso de las Máximas", texto: "Jefe de Lince: no distingue la máxima de las máximas disposiciones a pagar." },
+  { sprite: "maletin", nombre: "El Maletín Deslizado", texto: "Cree que la curva se desplaza cuando solo cambia el precio." },
+  { sprite: "corbata", nombre: "La Corbata Sustituta", texto: "Confunde los bienes sustitutos con los complementarios." },
+  { sprite: "ejecutivo", nombre: "El Ejecutivo de las Expectativas", texto: "Jefe de San Isidro: olvida que las expectativas mueven las dos curvas." },
 ];
 
 export function galeriaPersonajes(contenedor) {

@@ -524,6 +524,74 @@ const PAYASO = [  // jefe de Lince: el payaso de las máximas disposiciones (20 
 ];
 const P_PAYASO = { r: "#e0396b", c: "#f7e3d0", k: "#241a2e", b: "#5b8ff0", y: "#ffd166" };
 
+const MALETIN = [   // maletín de oficina: se desliza en vez de desplazarse (12 × 12)
+  "............",
+  "....kkkk....",
+  "....k..k....",
+  "..bbbbbbbb..",
+  "..bbbbbbbb..",
+  "..bbbbbbbb..",
+  "..bbbyybbb..",
+  "..bbbyybbb..",
+  "..bbbbbbbb..",
+  "..bbbbbbbb..",
+  "..bbbbbbbb..",
+  "............",
+];
+const P_MALETIN = { b: "#7a4a2c", k: "#3b2a1a", y: "#ffd166" };
+
+const CORBATA = [   // corbata de San Isidro: nunca sabe con quién se sustituye (12 × 12)
+  "............",
+  "...ww..ww...",
+  "...wwwwww...",
+  "....rrrr....",
+  "....rrrr....",
+  "....rrrr....",
+  "...rrrrrr...",
+  "...rrrrrr...",
+  "...rrrrrr...",
+  "....rrrr....",
+  ".....rr.....",
+  "............",
+];
+const P_CORBATA = { r: "#c02d4a", w: "#f2f6ff" };
+
+const CAFE = [   // café del Olivar: barato cuando el sueldo baja (12 × 12)
+  "............",
+  "...vvv......",
+  "..v.v.v.....",
+  "............",
+  ".wwwwwwww...",
+  ".wkkkkkkw...",
+  ".wkkkkkkwww.",
+  ".wkkkkkkw.w.",
+  ".wkkkkkkwww.",
+  "..wwwwwww...",
+  "...wwwww....",
+  "............",
+];
+const P_CAFE = { w: "#f2f6ff", k: "#5b3a22", v: "#c9d4e0" };
+
+const EJECUTIVO = [  // jefe de San Isidro: el ejecutivo de las expectativas (20 × 16)
+  ".......kkkkkk.......",
+  "......kkkkkkkk......",
+  "......ccccccccc.....",
+  ".....ccccccccccc....",
+  ".....cckkcccckkcc...",
+  ".....ccccccccccc....",
+  ".....ccckkkkkccc....",
+  "......ccccccccc.....",
+  "....nnnnwwwnnnn.....",
+  "...nnnnnwrwnnnnn....",
+  "...nnnnnwrwnnnnn....",
+  "...nnnnnnwnnnnnn....",
+  "...nnnnnnnnnnnnn....",
+  "...nnnn.....nnnn....",
+  "...nnnn.....nnnn....",
+  "..kkkkk.....kkkkk...",
+];
+const P_EJECUTIVO = { k: "#241a2e", c: "#f7d9bd", n: "#2f3a56", w: "#f2f6ff", r: "#c02d4a" };
+
 const ITEM_CEVICHE = [   // plato de ceviche: una vida más
   "............",
   "....gg......",
@@ -714,6 +782,10 @@ const DEFINICIONES = {
   diana:        [DIANA, P_DIANA],
   algodon:      [ALGODON, P_ALGODON],
   payaso:       [PAYASO, P_PAYASO],
+  maletin:      [MALETIN, P_MALETIN],
+  corbata:      [CORBATA, P_CORBATA],
+  cafe:         [CAFE, P_CAFE],
+  ejecutivo:    [EJECUTIVO, P_EJECUTIVO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

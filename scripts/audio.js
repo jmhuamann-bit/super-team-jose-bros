@@ -53,6 +53,12 @@ const TEMAS_MUSICA = {
     bajo:    ["C3",2,"G2",2,"C3",2,"G2",2,"F2",2,"C3",2,"G2",2,"C3",2,
               "C3",2,"G2",2,"A2",2,"E2",2,"F2",2,"G2",2,"C3",4],
   },
+  torres: { // San Isidro: oficinista, ordenado y con paso firme
+    tempo: 0.15, onda: "triangle",
+    melodia: ["D4",2,"F4",2,"A4",2,"D5",2,"C5",2,"A4",2,"F4",2,"D4",2,
+              "E4",2,"G4",2,"B4",2,"E5",2,"D5",4,"A4",4],
+    bajo:    ["D3",4,"D3",4,"A2",4,"A2",4,"E3",4,"E3",4,"D3",4,"D3",4],
+  },
 };
 
 function arrancarCtx() {

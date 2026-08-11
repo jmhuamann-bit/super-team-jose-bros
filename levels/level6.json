@@ -1,0 +1,35 @@
+{
+  "id": "level6",
+  "distrito": "San Isidro",
+  "clase": "Clase 06",
+  "titulo": "Las torres que desplazan",
+  "tema": "torres",
+  "musica": "torres",
+  "vehiculo": "taxi",
+  "intro": "En San Isidro las curvas ya no se quedan quietas: se corren enteras. Cambió el ingreso, salió una moda, se especula con los precios del próximo mes… Los bichos de la oficina siguen creyendo que todo se arregla moviéndose sobre la misma curva. Enséñales cuándo la curva se desplaza de verdad.",
+  "repaso": [
+    "Si cambia el PRECIO del bien, te mueves A LO LARGO de la curva. Si cambia CUALQUIER OTRA cosa, la curva se DESPLAZA.",
+    "Expansión = desplazamiento a la DERECHA. Contracción = desplazamiento a la IZQUIERDA.",
+    "Los 5 factores de la demanda: número de demandantes, gustos y preferencias, expectativas, precio de bienes relacionados e ingreso del consumidor.",
+    "Sustituto: si sube el precio del sustituto, la demanda del bien se EXPANDE. Complementario: si sube, se CONTRAE.",
+    "Bien normal: más ingreso, más demanda. Bien INFERIOR: más ingreso, MENOS demanda (y al revés).",
+    "Las expectativas mueven las DOS curvas: si el precio subirá el próximo mes, la demanda se expande hoy y la oferta se contrae."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                        ",
+    "                    o o o o                       o o o                                         o o o               o o o                       o o o                         o o o                     ",
+    "            ?                     o o       L                 o o     G                 o o                   V                   o o     1                   o o       L             ?                 ",
+    "                    ====                          ====                                          ====                ====                        ====                          ====                      ",
+    "                              o o      o                                    o o    o                  o o                    oo       o o                          o                                    ",
+    "  P               E           C                 E         X         E       C                 E           X       E                   C       E           X                 E           B           M   ",
+    "######################################   #########################################   #######################################    ##################################   ###################################",
+    "######################################   #########################################   #######################################    ##################################   ###################################",
+    "######################################   #########################################   #######################################    ##################################   ###################################"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "nivel": "level6",
+  "clase": "Clase 06 · Factores de expansión y contracción de la oferta y la demanda",
+  "fuente": "Apuntes de la 6ta clase — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l6-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "LA GRAN DIFERENCIA.\n\n¿Cuándo te mueves A LO LARGO de la curva y cuándo la curva se DESPLAZA?",
+      "opciones": [
+        "Siempre se desplaza, da igual qué cambie",
+        "Se desplaza solo si cambia el precio del bien",
+        "Si cambia el PRECIO del bien te mueves sobre la misma curva; si cambia OTRA cosa, la curva se desplaza",
+        "Nunca se desplaza: solo cambia la pendiente"
+      ],
+      "correcta": 2,
+      "explicacion": "Es la misma idea del ceteris paribus. Mientras solo se mueva el precio, resbalas sobre la curva de siempre. Apenas cambia otro factor (ingreso, gustos, número de compradores…), la curva entera se corre de sitio."
+    },
+    {
+      "id": "l6-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "VOCABULARIO.\n\n¿Hacia qué lado se corre la curva en una EXPANSIÓN y en una CONTRACCIÓN?",
+      "opciones": [
+        "Expansión a la DERECHA, contracción a la IZQUIERDA",
+        "Expansión a la izquierda, contracción a la derecha",
+        "Expansión hacia arriba, contracción hacia abajo",
+        "Las dos hacia la derecha, solo cambia la pendiente"
+      ],
+      "correcta": 0,
+      "explicacion": "Expandirse es crecer: la curva se corre a la derecha. Contraerse es encogerse: se va a la izquierda. Sirve igual para la oferta y para la demanda."
+    },
+    {
+      "id": "l6-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "LOS 5 FACTORES DE LA DEMANDA.\n\n¿Cuál de estos NO es uno de ellos?",
+      "opciones": [
+        "El número de demandantes",
+        "Los gustos y preferencias",
+        "El ingreso del consumidor",
+        "La TECNOLOGÍA de producción"
+      ],
+      "correcta": 3,
+      "explicacion": "Los cinco de la demanda son: número de demandantes, gustos y preferencias, expectativas, precio de bienes relacionados e ingreso del consumidor. La tecnología es un factor de la OFERTA: entra por el lado de «¿es rentable producir?»."
+    },
+    {
+      "id": "l6-q4",
+      "nivel": "comprension",
+      "enunciado": "El precio del POLLO se dispara y el kilo llega a 100 soles. El precio del pescado se mantiene igual.\n\n¿Qué pasa en el mercado del PESCADO?",
+      "opciones": [
+        "Se contrae su demanda, porque todo sube junto",
+        "Se EXPANDE su demanda: el pollo es un sustituto y la gente se pasa al pescado",
+        "No pasa nada, son bienes no relacionados",
+        "Se expande su oferta, porque los pescadores ganan más"
+      ],
+      "correcta": 1,
+      "explicacion": "Son sustitutos: si uno se pone carísimo, la gente se cambia al otro. La regla es que, si sube el precio del sustituto, la demanda del bien se EXPANDE. Ojo que lo que se mueve es la demanda del pescado, no su oferta."
+    },
+    {
+      "id": "l6-q5",
+      "nivel": "comprension",
+      "enunciado": "Los precios de las entradas al cine acaban de subir un 400 %.\n\n¿Qué pasa en el mercado de la CANCHITA del cine?",
+      "opciones": [
+        "Se expande su demanda, porque la gente se consuela comiendo",
+        "No pasa nada",
+        "Se expande su oferta",
+        "Se CONTRAE su demanda: la entrada y la canchita son complementarios"
+      ],
+      "correcta": 3,
+      "explicacion": "Los complementarios se consumen juntos: si la entrada se vuelve carísima, va menos gente al cine y, de paso, se compra menos canchita. Cuando sube el precio del complementario, la demanda del bien se CONTRAE."
+    },
+    {
+      "id": "l6-q6",
+      "nivel": "comprension",
+      "enunciado": "Tus ingresos acaban de reducirse.\n\n¿Qué pasa con la demanda de un bien INFERIOR (de los baratitos)?",
+      "opciones": [
+        "Se EXPANDE: con menos plata compras más de lo barato",
+        "Se contrae, igual que la de todos los bienes",
+        "No cambia: el ingreso no afecta a los bienes inferiores",
+        "Se contrae su oferta"
+      ],
+      "correcta": 0,
+      "explicacion": "Acá está lo contraintuitivo. En los bienes normales o superiores, más ingreso significa más demanda. En los INFERIORES es al revés: si te baja el sueldo compras más de lo barato, así que su demanda se expande. Si te subiera, la dejarías de comprar."
+    },
+    {
+      "id": "l6-q7",
+      "nivel": "aplicacion",
+      "enunciado": "OJITO CON ESTE. Se especula que el próximo año las casas subirán un 300 % de precio.\n\n¿Qué pasa HOY en el mercado de casas?",
+      "opciones": [
+        "Solo se expande la demanda; la oferta no se entera",
+        "Se contraen las dos curvas",
+        "La demanda se EXPANDE (conviene comprar ya) y la oferta se CONTRAE (conviene vender después)",
+        "No pasa nada hasta que el precio suba de verdad"
+      ],
+      "correcta": 2,
+      "explicacion": "Las expectativas son el único factor que mueve las dos curvas a la vez, y en sentidos opuestos. Al comprador le conviene adelantar la compra: la demanda se expande. Al vendedor le conviene esperar para vender más caro: la oferta se contrae. Las dos empujan el precio hacia arriba."
+    },
+    {
+      "id": "l6-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — PANETÓN BELLS (bien INFERIOR).\n\nPor la pandemia mucha gente perdió el empleo y sus ingresos cayeron. Además, Bells acaba de mejorar su tecnología.\n\n¿Qué se puede afirmar del mercado?",
+      "opciones": [
+        "El precio sube con certeza y la cantidad es incierta",
+        "En todos los casos la CANTIDAD aumenta, pero no hay certeza sobre el PRECIO",
+        "En todos los casos la cantidad disminuye",
+        "Las dos curvas se contraen"
+      ],
+      "correcta": 1,
+      "explicacion": "Dos movimientos: como es un bien inferior y los ingresos cayeron, la demanda se EXPANDE; y la mejora tecnológica EXPANDE la oferta. Las dos se corren a la derecha, así que la cantidad sube seguro. El precio depende de cuál se movió más: por eso la respuesta se redacta «en todos los casos la cantidad aumenta, pero no existe certeza sobre el precio»."
+    },
+    {
+      "id": "l6-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — PREGUNTA DE EXAMEN 2015-II (transporte público).\n\nEl 25 % de los universitarios se irá a estudiar a Europa, y a la vez el gobierno financiará la compra de nuevas unidades de transporte. Un asesor concluye que el precio de los pasajes SUBIRÁ.\n\n¿Tiene razón?",
+      "opciones": [
+        "Sí: hay más unidades, así que el pasaje sube",
+        "Sí, porque las dos medidas empujan el precio hacia arriba",
+        "No se puede saber nada del precio",
+        "NO: la demanda se contrae y la oferta se expande, así que el precio BAJA con certeza; lo incierto es la cantidad"
+      ],
+      "correcta": 3,
+      "explicacion": "Menos universitarios significa menos demandantes, o sea CONTRACCIÓN de la demanda. El financiamiento trae más unidades, o sea EXPANSIÓN de la oferta. Una curva va a la izquierda y la otra a la derecha: las dos empujan el precio hacia ABAJO, así que el asesor se equivoca. Lo que queda incierto es la cantidad."
+    },
+    {
+      "id": "l6-q10",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3 — Cuando la oferta y la demanda se mueven al mismo tiempo, hay que analizar «los famosos 3 casos».\n\n¿Cuál es la estructura de la respuesta?",
+      "opciones": [
+        "«En todos los casos ……, pero no existe certeza sobre qué pasará en ……»",
+        "«El precio y la cantidad siempre suben»",
+        "«Hay que esperar a que el mercado se estabilice»",
+        "«No se puede concluir nada cuando las dos curvas se mueven»"
+      ],
+      "correcta": 0,
+      "explicacion": "Los pasos son: identificar el mercado con su ofertante y su demandante, reconocer qué se expande y qué se contrae, graficar los tres casos según cuál se mueva más, y recién concluir. Cuando las dos curvas se mueven, siempre una variable queda determinada y la otra incierta: eso es justo lo que dice la frase."
+    }
+  ]
+}
