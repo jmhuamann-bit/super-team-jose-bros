@@ -59,6 +59,12 @@ const TEMAS_MUSICA = {
               "E4",2,"G4",2,"B4",2,"E5",2,"D5",4,"A4",4],
     bajo:    ["D3",4,"D3",4,"A2",4,"A2",4,"E3",4,"E3",4,"D3",4,"D3",4],
   },
+  acantilado: { // Miraflores: atardecer en el malecón, amplio y de cierre
+    tempo: 0.18, onda: "triangle",
+    melodia: ["C5",2,"E5",2,"G5",4,"F5",2,"E5",2,"D5",4,
+              "A4",2,"C5",2,"E5",4,"D5",2,"C5",2,"C5",4],
+    bajo:    ["F2",4,"C3",4,"G2",4,"A2",4,"F2",4,"G2",4,"C3",8],
+  },
 };
 
 function arrancarCtx() {

@@ -592,6 +592,74 @@ const EJECUTIVO = [  // jefe de San Isidro: el ejecutivo de las expectativas (20
 ];
 const P_EJECUTIVO = { k: "#241a2e", c: "#f7d9bd", n: "#2f3a56", w: "#f2f6ff", r: "#c02d4a" };
 
+const PARAPENTE = [   // parapente del malecón: cree que se aterriza al instante (14 × 12)
+  "..............",
+  "...mmmmmmmm...",
+  "..mmmmmmmmmm..",
+  ".mmmmmmmmmmmm.",
+  "..w........w..",
+  "...w......w...",
+  "....w....w....",
+  ".....w..w.....",
+  "......cc......",
+  ".....kcck.....",
+  "......kk......",
+  ".....k..k.....",
+];
+const P_PARAPENTE = { m: "#e0562f", w: "#dfe7ef", c: "#f7d9bd", k: "#2f3a56" };
+
+const TABLA = [   // tabla de surf: confunde escasez con sobreproducción (12 × 12)
+  "............",
+  ".....ww.....",
+  "....wwww....",
+  "...wwwwww...",
+  "...wwrrww...",
+  "...wwrrww...",
+  "...wwwwww...",
+  "...wwrrww...",
+  "...wwwwww...",
+  "....wwww....",
+  ".....ww.....",
+  "............",
+];
+const P_TABLA = { w: "#f2f6ff", r: "#2f7fc4" };
+
+const CANGREJO = [   // cangrejo del acantilado: muy legalista con las leyes (13 × 12)
+  ".............",
+  ".k.........k.",
+  "..k.......k..",
+  "...rrrrrrr...",
+  "..rrrrrrrrr..",
+  ".rrwkrrrkwrr.",
+  ".rrrrrrrrrrr.",
+  ".rrrrrrrrrrr.",
+  "..rrrrrrrrr..",
+  "...rrrrrrr...",
+  "..k.k...k.k..",
+  ".k...k.k...k.",
+];
+const P_CANGREJO = { r: "#d9482f", w: "#f2f6ff", k: "#241a2e" };
+
+const GATO = [  // jefe de Miraflores: el gato del parque Kennedy (20 × 16)
+  "...gg..........gg...",
+  "..gggg........gggg..",
+  "..ggpg........gpgg..",
+  "....gggggggggggg....",
+  "...gggggggggggggg...",
+  "...ggkkggggggkkgg...",
+  "...gggggggggggggg...",
+  "...ggggwwppwwgggg...",
+  "...gggggwwwwggggg...",
+  "....gggggggggggg....",
+  ".....gggggggggg.....",
+  "....gggggggggggg....",
+  "....gggggggggggg....",
+  "....gggggggggggg....",
+  "...gggg....gggg.....",
+  "...kkkk....kkkk.....",
+];
+const P_GATO = { g: "#8a8d96", k: "#241a2e", p: "#f2a0b8", w: "#f7f2e8" };
+
 const ITEM_CEVICHE = [   // plato de ceviche: una vida más
   "............",
   "....gg......",
@@ -786,6 +854,10 @@ const DEFINICIONES = {
   corbata:      [CORBATA, P_CORBATA],
   cafe:         [CAFE, P_CAFE],
   ejecutivo:    [EJECUTIVO, P_EJECUTIVO],
+  parapente:    [PARAPENTE, P_PARAPENTE],
+  tabla:        [TABLA, P_TABLA],
+  cangrejo:     [CANGREJO, P_CANGREJO],
+  gato:         [GATO, P_GATO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

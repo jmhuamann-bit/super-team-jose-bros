@@ -173,6 +173,9 @@ const FICHAS = [
   { sprite: "maletin", nombre: "El Maletín Deslizado", texto: "Cree que la curva se desplaza cuando solo cambia el precio." },
   { sprite: "corbata", nombre: "La Corbata Sustituta", texto: "Confunde los bienes sustitutos con los complementarios." },
   { sprite: "ejecutivo", nombre: "El Ejecutivo de las Expectativas", texto: "Jefe de San Isidro: olvida que las expectativas mueven las dos curvas." },
+  { sprite: "parapente", nombre: "El Parapente sin Ajuste", texto: "Cree que del viejo equilibrio se salta al nuevo de un tirón." },
+  { sprite: "tabla", nombre: "La Tabla Escasa", texto: "Confunde la escasez con la sobreproducción." },
+  { sprite: "gato", nombre: "El Gato del Desequilibrio", texto: "Jefe de Miraflores: jura que la ley de la demanda dejó de cumplirse." },
 ];
 
 export function galeriaPersonajes(contenedor) {

@@ -1,0 +1,35 @@
+{
+  "id": "level7",
+  "distrito": "Miraflores",
+  "clase": "Clase 07",
+  "titulo": "El acantilado del ajuste",
+  "tema": "acantilado",
+  "musica": "acantilado",
+  "vehiculo": "limosina",
+  "intro": "Último distrito, y el más exigente. En el malecón de Miraflores ya no basta con saber hacia dónde se corre la curva: hay que contar el viaje completo, desde que aparece la escasez hasta que el mercado encuentra su nuevo equilibrio. Ojo con el Gato del Desequilibrio, que jura que las leyes dejaron de cumplirse.",
+  "repaso": [
+    "Escasez = exceso de demanda (Qd > Qs). Sobreproducción = exceso de oferta (Qs > Qd).",
+    "Generan ESCASEZ: la expansión de la demanda y la contracción de la oferta. Generan SOBREPRODUCCIÓN: la contracción de la demanda y la expansión de la oferta.",
+    "La escasez se soluciona SUBIENDO el precio; la sobreproducción, BAJÁNDOLO.",
+    "Al ajustarse, las curvas NO se vuelven a mover: lo que hay es un movimiento a lo largo de ellas. Por ley de oferta y de demanda, las cantidades se acercan hasta cruzarse.",
+    "Comparar dos equilibrios de curvas distintas no viola ninguna ley: las leyes se cumplen SOBRE una misma curva.",
+    "Lo primero que se ajusta es la cantidad que la gente decide comprar o vender; el precio se demora."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                ",
+    "                  o o o                       o o o                                           o o o                         o o o             o o                         o o o                   o o           ",
+    "          ?             o o             L                 o o       G                   o o               V         o o           1                     o o         L                     ?             1       ",
+    "                  ====                        ====                                            ====                          ====              ====                        ====                    ====          ",
+    "                            o o    o                                     o          o o                        oo                     o o          o                               o                            ",
+    "  P             E           C               E           X       E                   C       E         X                   E           C     E                 X         E                     B             M   ",
+    "##################################   ###################################   ###################################    ################################   #############################   ###########################",
+    "##################################   ###################################   ###################################    ################################   #############################   ###########################",
+    "##################################   ###################################   ###################################    ################################   #############################   ###########################"
+  ]
+}

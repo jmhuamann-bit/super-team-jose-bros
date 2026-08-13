@@ -467,6 +467,90 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     MIRAFLORES — el malecón al atardecer: acantilado sobre el
+     Pacífico, parapentes en el cielo y el sol metiéndose al mar
+     ========================================================= */
+  acantilado: {
+    nombre: "Acantilado",
+    cielo: [[0, "#1f3a6e"], [0.4, "#5a6fae"], [0.72, "#e8896b"], [1, "#ffd39b"]],
+    suelo: { cara: "#9a7f5e", borde: "#7fae5c", tierra: "#6b563c", plataforma: "#2f7fc4", plataformaBorde: "#93cdf2" },
+    acento: "#ff9f45",
+    bichos: ["parapente", "tabla", "cangrejo"],
+    nombresBichos: ["El Parapente sin Ajuste", "La Tabla Escasa", "El Cangrejo Legalista"],
+    jefe: "gato",
+    nombreJefe: "El Gato del Desequilibrio",
+
+    fondo(ctx, cam, t) {
+      // sol metiéndose al mar
+      ctx.fillStyle = "rgba(255,214,140,.95)";
+      ctx.beginPath(); ctx.arc(600, 240, 44, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,180,120,.20)";
+      ctx.beginPath(); ctx.arc(600, 240, 74, 0, Math.PI * 2); ctx.fill();
+
+      // el Pacífico, con el reflejo del sol
+      ctx.fillStyle = "#274a80";
+      ctx.fillRect(0, 258, CFG.ANCHO_VISTA, 76);
+      for (let i = 0; i < 30; i++) {
+        const x = (i * 61 - (cam * 0.08)) % 880 - 30;
+        const y = 268 + ((i * 23) % 56);
+        const cerca = Math.abs(x - 600) < 110;
+        ctx.fillStyle = cerca ? "rgba(255,214,150,.45)" : "rgba(255,255,255,.16)";
+        ctx.fillRect(x, y, 18, 2);
+      }
+
+      // parapentes cruzando el cielo
+      repetir(ctx, cam, 300, 0.12, (x, i) => {
+        const px = x + 90;
+        const py = 80 + ((i * 47) % 70) + Math.sin(t / 50 + i) * 10;
+        ctx.fillStyle = ["#e0562f", "#ffd166", "#4ade80"][i % 3];
+        ctx.beginPath();
+        ctx.moveTo(px - 22, py); ctx.quadraticCurveTo(px, py - 14, px + 22, py);
+        ctx.quadraticCurveTo(px, py + 5, px - 22, py);
+        ctx.closePath(); ctx.fill();
+        ctx.strokeStyle = "rgba(255,255,255,.4)"; ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(px - 14, py + 2); ctx.lineTo(px, py + 18);
+        ctx.moveTo(px + 14, py + 2); ctx.lineTo(px, py + 18); ctx.stroke();
+        ctx.fillStyle = "#2f3a56";
+        ctx.fillRect(px - 3, py + 18, 6, 8);
+      });
+
+      // edificios del malecón, en el borde del acantilado
+      repetir(ctx, cam, 165, 0.42, (x, i) => {
+        const alto = 96 + ((i * 43) % 54);
+        ctx.fillStyle = ["#e6ddd0", "#d8cfc2", "#efe6da"][i % 3];
+        ctx.fillRect(x + 18, 334 - alto, 74, alto);
+        ctx.fillStyle = "rgba(90,110,140,.5)";
+        for (let fy = 334 - alto + 10; fy < 328; fy += 15)
+          for (let fx = x + 24; fx < x + 86; fx += 14) ctx.fillRect(fx, fy, 8, 9);
+        ctx.fillStyle = "rgba(255,200,150,.5)";
+        ctx.fillRect(x + 18, 334 - alto, 74, 4);
+      });
+
+      // la baranda del malecón y el pasto del borde
+      repetir(ctx, cam, 64, 0.72, (x) => {
+        ctx.fillStyle = "#5f7a4a";
+        ctx.fillRect(x, 356, 64, 8);
+        ctx.strokeStyle = "rgba(240,240,235,.55)"; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(x, 348); ctx.lineTo(x + 64, 348); ctx.stroke();
+        ctx.fillStyle = "rgba(240,240,235,.55)";
+        ctx.fillRect(x + 8, 348, 3, 10);
+        ctx.fillRect(x + 44, 348, 3, 10);
+      });
+    },
+
+    clima(ctx, t) {
+      // brisa del mar: motitas claras cruzando en horizontal
+      for (let i = 0; i < 22; i++) {
+        const x = (i * 179 - t * 2.2) % 900 - 30;
+        const y = 70 + ((i * 89) % 260) + Math.sin(t / 26 + i) * 6;
+        ctx.fillStyle = "rgba(255,236,210,.4)";
+        ctx.fillRect(x, y, 9, 1);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

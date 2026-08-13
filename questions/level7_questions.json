@@ -1,0 +1,138 @@
+{
+  "nivel": "level7",
+  "clase": "Clase 07 · Modelos de problemas y ajuste del equilibrio",
+  "fuente": "Apuntes de la 7ma clase — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l7-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "PRIMER APRENDIZAJE.\n\n¿Qué es una escasez y qué es una sobreproducción?",
+      "opciones": [
+        "Escasez es que el precio esté bajo; sobreproducción, que esté alto",
+        "Escasez es que no exista el producto; sobreproducción, que sobre dinero",
+        "Escasez es exceso de DEMANDA (Qd > Qs); sobreproducción es exceso de OFERTA (Qs > Qd)",
+        "Las dos significan que el mercado está en equilibrio"
+      ],
+      "correcta": 2,
+      "explicacion": "Se comparan las dos cantidades a un mismo precio. Si la gente quiere comprar más de lo que hay a la venta, falta producto: escasez. Si se ofrece más de lo que se compra, sobra producto: sobreproducción. Es lo primero que debes identificar antes de explicar cualquier ajuste."
+    },
+    {
+      "id": "l7-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "Se acaba de expandir la DEMANDA (entraron más consumidores al mercado).\n\n¿Qué se genera de inmediato?",
+      "opciones": [
+        "Una ESCASEZ: al precio de antes, ahora la gente quiere comprar más de lo que hay",
+        "Una sobreproducción",
+        "Nada, el mercado ya está en equilibrio",
+        "Una contracción de la oferta"
+      ],
+      "correcta": 0,
+      "explicacion": "Al precio inicial la Qd se dispara pero la Qs sigue igual, así que falta producto. Las dos cosas que generan escasez son la expansión de la demanda y la contracción de la oferta; las otras dos (contracción de la demanda y expansión de la oferta) generan sobreproducción."
+    },
+    {
+      "id": "l7-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "Hiciste 500 panes con pollo para el concierto y en 20 horas vendiste 10.\n\n¿Qué hay en ese mercado y cómo se soluciona?",
+      "opciones": [
+        "Escasez; se soluciona subiendo el precio",
+        "Escasez; se soluciona bajando el precio",
+        "Equilibrio; no hay nada que solucionar",
+        "SOBREPRODUCCIÓN; se soluciona BAJANDO el precio"
+      ],
+      "correcta": 3,
+      "explicacion": "Sobra producto: la cantidad ofertada le ganó de lejos a la demandada. La única salida es bajar el precio. Al bajar, por ley de la oferta se ofrece menos y por ley de la demanda se compra más, hasta que las dos cantidades se cruzan."
+    },
+    {
+      "id": "l7-q4",
+      "nivel": "comprension",
+      "enunciado": "EL AJUSTE. Hay una escasez y el precio empieza a subir.\n\n¿Qué pasa con las cantidades mientras sube?",
+      "opciones": [
+        "Las dos cantidades aumentan",
+        "Por ley de la OFERTA la Qs aumenta, y por ley de la DEMANDA la Qd disminuye, hasta que se encuentran",
+        "Las dos cantidades disminuyen",
+        "La oferta se expande hasta alcanzar a la demanda"
+      ],
+      "correcta": 1,
+      "explicacion": "El precio subiendo empuja a las dos cantidades una hacia la otra: los vendedores quieren vender más y los compradores quieren comprar menos. Cuando se igualan, ahí está el nuevo equilibrio. Ojo: nadie desplaza ninguna curva en este paso."
+    },
+    {
+      "id": "l7-q5",
+      "nivel": "comprension",
+      "enunciado": "Una sequía severa encarece los costos y CONTRAE la oferta de maíz.\n\n¿Cómo queda el nuevo equilibrio comparado con el inicial?",
+      "opciones": [
+        "El Pe y la Qe aumentan",
+        "El Pe y la Qe disminuyen",
+        "El Pe disminuye y la Qe aumenta",
+        "El Pe AUMENTA y la Qe DISMINUYE"
+      ],
+      "correcta": 3,
+      "explicacion": "La contracción de la oferta genera escasez, que se resuelve subiendo el precio. Al subir, la Qd cae. Resultado: se paga más y se transa menos. Es el caso clásico del desastre climático encareciendo un alimento."
+    },
+    {
+      "id": "l7-q6",
+      "nivel": "comprension",
+      "enunciado": "Ahora al revés: entran muchos productores nuevos y la oferta se EXPANDE.\n\n¿Cómo queda el nuevo equilibrio?",
+      "opciones": [
+        "El Pe DISMINUYE y la Qe AUMENTA",
+        "El Pe y la Qe disminuyen",
+        "El Pe y la Qe aumentan",
+        "El Pe aumenta y la Qe disminuye"
+      ],
+      "correcta": 0,
+      "explicacion": "La expansión de la oferta genera sobreproducción, que se resuelve bajando el precio. Y acá está la clave: al bajar el precio, por ley de la demanda la Qd AUMENTA. Así que se termina pagando menos pero transando más. Es el espejo exacto de la contracción de la oferta."
+    },
+    {
+      "id": "l7-q7",
+      "nivel": "aplicacion",
+      "enunciado": "ESTRUCTURA DEL MODELO 2 (un solo movimiento).\n\n¿Cuál es el orden correcto para responder?",
+      "opciones": [
+        "Graficar los 3 casos y decir que no hay certeza",
+        "Calcular el equilibrio inicial y el final, sin explicar nada más",
+        "Identificar el mercado · reconocer el desplazamiento · graficarlo · explicar el AJUSTE y recién comparar el equilibrio inicial con el final",
+        "Explicar el ajuste primero y después identificar el mercado"
+      ],
+      "correcta": 2,
+      "explicacion": "Los tres casos son del modelo 1, cuando se mueven las dos curvas. Acá se mueve una sola, así que no hay incertidumbre: hay un único gráfico y lo que se pide es el mecanismo de fondo. Y ese mecanismo son cuatro pasos: escasez o sobreproducción, subir o bajar el precio, aplicar las dos leyes, y comparar los equilibrios."
+    },
+    {
+      "id": "l7-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — PREGUNTA DE EXAMEN 2024-I.\n\nAriana dice: «la expansión de la demanda genera escasez, y el ajuste consiste en que LA OFERTA SE EXPANDIRÁ hasta llegar al nuevo equilibrio».\n\n¿Es correcto?",
+      "opciones": [
+        "Verdadero: la oferta reacciona expandiéndose",
+        "FALSO: la oferta NO se desplaza. Sube el precio y hay un movimiento A LO LARGO de la curva de oferta, así que crece la CANTIDAD ofertada, no la oferta",
+        "Verdadero, pero solo si el bien es normal",
+        "Incierto: depende de la pendiente de la oferta"
+      ],
+      "correcta": 1,
+      "explicacion": "Este es el error estrella del curso, y es justo la diferencia que viste en San Isidro. Solo un cambio en un factor distinto al precio desplaza una curva. Acá lo único que cambió fue el precio, así que la oferta se queda quietecita y lo que se mueve es un punto sobre ella: aumenta la cantidad ofertada."
+    },
+    {
+      "id": "l7-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — PREGUNTA DE EXAMEN 2022-II.\n\nSe expandió la demanda de chocolates: subieron el precio y la cantidad de equilibrio. Andrea concluye que «NO se cumple la ley de la demanda, porque el precio sube y la cantidad también».\n\n¿Tiene razón?",
+      "opciones": [
+        "Verdadero: si suben los dos, la ley se rompe",
+        "Verdadero, por eso a ese mercado se le llama atípico",
+        "Incierto: falta saber si el chocolate es un bien normal",
+        "FALSO: la ley se cumple SOBRE una misma curva. Acá la demanda se desplazó, así que se están comparando puntos de curvas distintas"
+      ],
+      "correcta": 3,
+      "explicacion": "La ley de la demanda habla de moverse a lo largo de una curva, con todo lo demás constante. Si la curva entera se corrió, comparar el equilibrio viejo con el nuevo no dice nada sobre la ley. De hecho la demanda nueva sigue teniendo pendiente negativa, que es lo único que la ley exige."
+    },
+    {
+      "id": "l7-q10",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3 — LA CURIOSIDAD DEL AJUSTE.\n\nCuando una curva se desplaza, ¿se llega de inmediato al nuevo equilibrio?",
+      "opciones": [
+        "NO: primero se ajusta la cantidad que la gente decide comprar o vender, y el precio se demora en cambiar",
+        "Sí, el mercado salta al nuevo equilibrio al instante",
+        "Sí, porque el precio es lo primero que cambia",
+        "No se llega nunca a un nuevo equilibrio"
+      ],
+      "correcta": 0,
+      "explicacion": "El ajuste toma su tiempito. Lo primero que reacciona son las cantidades que compradores y vendedores deciden, y el precio recién se va acomodando después. Por eso los problemas te piden explicar «el proceso de transición» y no solo el resultado final: eso es lo que separa una respuesta de 3 puntos de una de 1."
+    }
+  ]
+}

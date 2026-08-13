@@ -1,6 +1,6 @@
 {
   "titulo": "Lima",
-  "descripcion": "Cada distrito es una clase del curso. Los seis primeros están abiertos para practicar en cualquier orden.",
+  "descripcion": "Cada distrito es una clase del curso. Los siete están abiertos para practicar en cualquier orden.",
   "niveles": [
     {
       "id": "level1",
@@ -74,6 +74,17 @@
       "mapa": "levels/level6.json",
       "preguntas": "questions/level6_questions.json"
     },
-    { "id": "level7", "clase": "Clase 07", "distrito": "Miraflores", "icono": "🪂", "titulo": "" }
+    {
+      "id": "level7",
+      "clase": "Clase 07",
+      "distrito": "Miraflores",
+      "titulo": "El acantilado del ajuste",
+      "icono": "🪂",
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level7.json",
+      "preguntas": "questions/level7_questions.json"
+    }
   ]
 }
