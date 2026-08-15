@@ -8,6 +8,9 @@ Hecho con HTML, CSS y JavaScript puro: **sin frameworks, sin instalar nada y sin
 imágenes ni audio externos** (los sprites son pixel art escrito en texto y la música
 se sintetiza en el navegador).
 
+
+> **¿Vas a integrarlo a otra plataforma?** Lee [INTEGRACION.md](INTEGRACION.md):
+> tiene el contrato de datos y cómo detectar que se publicó una clase nueva.
 ---
 
 ## Cómo se juega
