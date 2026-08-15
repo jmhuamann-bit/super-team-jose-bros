@@ -65,6 +65,13 @@ const TEMAS_MUSICA = {
               "A4",2,"C5",2,"E5",4,"D5",2,"C5",2,"C5",4],
     bajo:    ["F2",4,"C3",4,"G2",4,"A2",4,"F2",4,"G2",4,"C3",8],
   },
+  barranco: { // Barranco: vals criollo de peña, lento y con swing
+    tempo: 0.19, onda: "triangle",
+    melodia: ["A4",2,"B4",1,"C5",3,"B4",2,"A4",2,"G4",4,
+              "E4",2,"G4",1,"A4",3,"G4",2,"E4",2,"A4",4],
+    bajo:    ["A2",3,"E3",3,"A2",2,"D3",3,"A2",3,"E2",2,
+              "A2",3,"C3",3,"E3",2,"A2",4,"E2",4],
+  },
 };
 
 function arrancarCtx() {

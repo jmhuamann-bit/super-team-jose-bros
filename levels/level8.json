@@ -1,0 +1,35 @@
+{
+  "id": "level8",
+  "distrito": "Barranco",
+  "clase": "Clase 08",
+  "titulo": "El puente de los suspiros",
+  "tema": "barranco",
+  "musica": "barranco",
+  "vehiculo": "combi",
+  "intro": "Última parada, bajando de Miraflores. En la bohemia de Barranco cada consumidor trae su propia demanda y hay que juntarlas todas en una sola. Pero los bichos multiplican precios, confunden la Q con la q y suman los tres grupos de un tirón sin mirar en qué precio entra cada uno. Arma la demanda de mercado.",
+  "repaso": [
+    "La Q mayúscula es la cantidad del MERCADO; la q minúscula, la INDIVIDUAL.",
+    "REGLA DE ORO: jamás multipliques precios, inflarías la economía. Se multiplica la forma NORMAL, con la q despejada.",
+    "Si te dan la inversa (p despejada), primero despeja la q y recién multiplica por el número de consumidores.",
+    "Consumidores idénticos: Q = n · q. Para ir al revés, q = Q / n.",
+    "Consumidores distintos: la demanda sale PARTIDA por tramos, porque cada grupo entra al mercado a un precio distinto.",
+    "El grupo que aguanta el precio más alto es el que entra primero: mira los interceptos en P."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                        ",
+    "                    o o o                       o o o                                             o o o                         o o o             o o                           o o o                     o o           ",
+    "            ?             o o             L                   o o     G                   o o                 V       o o             1                     o o         L                         ?             1       ",
+    "                    ====                        ====                                              ====                          ====              ====                          ====                      ====          ",
+    "                              o o    o                                     oo         o o                        o                        o o          o                                   o                            ",
+    "  P               E           C               E           X       E                   C         E         X                   E           C     E                 X           E                       B             M   ",
+    "####################################   ###################################    ##################################   ###################################   #################################   ###########################",
+    "####################################   ###################################    ##################################   ###################################   #################################   ###########################",
+    "####################################   ###################################    ##################################   ###################################   #################################   ###########################"
+  ]
+}

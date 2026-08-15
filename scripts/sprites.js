@@ -660,6 +660,74 @@ const GATO = [  // jefe de Miraflores: el gato del parque Kennedy (20 × 16)
 ];
 const P_GATO = { g: "#8a8d96", k: "#241a2e", p: "#f2a0b8", w: "#f7f2e8" };
 
+const GUITARRA = [   // guitarra de peña: multiplica lo que no debe (12 × 12)
+  "............",
+  ".....kk.....",
+  ".....kk.....",
+  ".....kk.....",
+  "....wwww....",
+  "...wwwwww...",
+  "...wwkkww...",
+  "...wwwwww...",
+  "..wwwwwwww..",
+  "..wwwwwwww..",
+  "...wwwwww...",
+  "....wwww....",
+];
+const P_GUITARRA = { w: "#c98a5e", k: "#3b2a1a" };
+
+const AEROSOL = [   // aerosol de los murales: confunde la Q con la q (12 × 12)
+  "............",
+  ".....y......",
+  "....kkk.....",
+  "....kkk.....",
+  "...rrrrr....",
+  "...rwwwr....",
+  "...rwwwr....",
+  "...rrrrr....",
+  "...rrrrr....",
+  "...rrrrr....",
+  "...rrrrr....",
+  "............",
+];
+const P_AEROSOL = { r: "#e0396b", w: "#f2f6ff", k: "#241a2e", y: "#8ef2c0" };
+
+const CAJON = [   // cajón peruano: la demanda le sale partida (12 × 12)
+  "............",
+  "..wwwwwwww..",
+  "..wwwwwwww..",
+  "..wwwwwwww..",
+  "..wwwkkwww..",
+  "..wwwkkwww..",
+  "..wwwwwwww..",
+  "..wwwwwwww..",
+  "..wwwwwwww..",
+  "..wwwwwwww..",
+  "..k......k..",
+  "............",
+];
+const P_CAJON = { w: "#b5651d", k: "#241a2e" };
+
+const BOHEMIO = [  // jefe de Barranco: el bohemio del Puente de los Suspiros (20 × 16)
+  "....kkkkkkkkkk......",
+  "...kkkkkkkkkkkk.....",
+  "......kkkkkk........",
+  "......cccccc........",
+  ".....cccccccc.......",
+  ".....ckkccckkc......",
+  ".....cccccccc.......",
+  "......cckkcc........",
+  ".....cccccccc.......",
+  "....rrrrrrrrrr......",
+  "...nnnnnnnnnnnn.....",
+  "...nnnnnnnnnnnn.....",
+  "...nnnnnnnnnnnn.....",
+  "...nnnn....nnnn.....",
+  "...nnnn....nnnn.....",
+  "..kkkkk...kkkkk.....",
+];
+const P_BOHEMIO = { k: "#241a2e", c: "#f7d9bd", n: "#5b4a7a", r: "#e0562f" };
+
 const ITEM_CEVICHE = [   // plato de ceviche: una vida más
   "............",
   "....gg......",
@@ -858,6 +926,10 @@ const DEFINICIONES = {
   tabla:        [TABLA, P_TABLA],
   cangrejo:     [CANGREJO, P_CANGREJO],
   gato:         [GATO, P_GATO],
+  guitarra:     [GUITARRA, P_GUITARRA],
+  aerosol:      [AEROSOL, P_AEROSOL],
+  cajon:        [CAJON, P_CAJON],
+  bohemio:      [BOHEMIO, P_BOHEMIO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

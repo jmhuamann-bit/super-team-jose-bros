@@ -551,6 +551,107 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     BARRANCO — la bohemia de noche: casonas de colores, murales,
+     el Puente de los Suspiros y guirnaldas sobre la bajada
+     ========================================================= */
+  barranco: {
+    nombre: "Barranco",
+    cielo: [[0, "#160f33"], [0.4, "#33205c"], [0.75, "#7a3f76"], [1, "#c9705f"]],
+    suelo: { cara: "#7b6b8f", borde: "#c9a4d6", tierra: "#3d3350", plataforma: "#e07a3f", plataformaBorde: "#ffbc82" },
+    acento: "#ff8fab",
+    bichos: ["guitarra", "aerosol", "cajon"],
+    nombresBichos: ["La Guitarra Multiplicada", "El Aerosol Individual", "El Cajón Partido"],
+    jefe: "bohemio",
+    nombreJefe: "El Bohemio de los Suspiros",
+
+    fondo(ctx, cam, t) {
+      // luna llena sobre el mar
+      ctx.fillStyle = "rgba(255,246,222,.92)";
+      ctx.beginPath(); ctx.arc(650, 84, 30, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,230,190,.14)";
+      ctx.beginPath(); ctx.arc(650, 84, 52, 0, Math.PI * 2); ctx.fill();
+      for (let i = 0; i < 34; i++) {
+        const x = (i * 173 - (cam * 0.04)) % 900 - 20;
+        const y = 18 + ((i * 67) % 170);
+        ctx.fillStyle = `rgba(255,255,255,${(0.3 + 0.4 * Math.abs(Math.sin(t / 34 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 2, 2);
+      }
+
+      // el mar al fondo, con el reflejo de la luna
+      ctx.fillStyle = "#1d2b52";
+      ctx.fillRect(0, 250, CFG.ANCHO_VISTA, 52);
+      for (let i = 0; i < 24; i++) {
+        const x = (i * 71 - (cam * 0.07)) % 880 - 30;
+        const y = 258 + ((i * 19) % 38);
+        ctx.fillStyle = Math.abs(x - 650) < 90 ? "rgba(255,240,200,.4)" : "rgba(255,255,255,.12)";
+        ctx.fillRect(x, y, 14, 2);
+      }
+
+      // el Puente de los Suspiros, en silueta
+      repetir(ctx, cam, 430, 0.26, (x) => {
+        const bx = x + 60, base = 302;
+        ctx.fillStyle = "#2c2140";
+        ctx.fillRect(bx, base - 8, 150, 10);
+        // arco
+        ctx.beginPath();
+        ctx.moveTo(bx + 30, base + 2);
+        ctx.quadraticCurveTo(bx + 75, base - 34, bx + 120, base + 2);
+        ctx.lineTo(bx + 120, base + 26); ctx.lineTo(bx + 30, base + 26);
+        ctx.closePath(); ctx.fill();
+        // barandas
+        ctx.fillStyle = "#3d2f56";
+        for (let k = 0; k < 10; k++) ctx.fillRect(bx + 6 + k * 15, base - 22, 3, 14);
+        ctx.fillRect(bx, base - 24, 150, 3);
+        // farolitos
+        ctx.fillStyle = "rgba(255,209,120,.9)";
+        ctx.beginPath(); ctx.arc(bx + 8, base - 30, 3.5, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(bx + 142, base - 30, 3.5, 0, Math.PI * 2); ctx.fill();
+      });
+
+      // casonas de colores con murales
+      repetir(ctx, cam, 158, 0.48, (x, i) => {
+        const alto = 104 + ((i * 47) % 44);
+        const cuerpo = ["#e0568f", "#f0a03c", "#4fb0a8", "#8f6fd0"][i % 4];
+        ctx.fillStyle = cuerpo;
+        ctx.fillRect(x + 16, 334 - alto, 78, alto);
+        // teja
+        ctx.fillStyle = "#8f3b2c";
+        ctx.fillRect(x + 10, 334 - alto - 9, 90, 9);
+        // ventanas encendidas
+        ctx.fillStyle = "rgba(255,220,150,.85)";
+        for (let fy = 334 - alto + 16; fy < 322; fy += 22)
+          for (let fx = x + 24; fx < x + 86; fx += 22) ctx.fillRect(fx, fy, 11, 13);
+        // mural en la pared
+        ctx.fillStyle = "rgba(255,255,255,.22)";
+        ctx.beginPath(); ctx.arc(x + 55, 334 - 30, 13, 0, Math.PI * 2); ctx.fill();
+      });
+
+      // guirnaldas de foquitos sobre la bajada
+      repetir(ctx, cam, 220, 0.72, (x) => {
+        ctx.strokeStyle = "rgba(255,255,255,.25)"; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(x, 190); ctx.quadraticCurveTo(x + 110, 228, x + 220, 190); ctx.stroke();
+        for (let k = 1; k < 8; k++) {
+          const p = k / 8;
+          const fx = x + 220 * p, fy = 190 + Math.sin(p * Math.PI) * 36;
+          ctx.fillStyle = ["#ffd166", "#ff8fab", "#8ef2c0", "#9fc4ff"][k % 4];
+          ctx.beginPath(); ctx.arc(fx, fy, 3, 0, Math.PI * 2); ctx.fill();
+        }
+      });
+    },
+
+    clima(ctx, t) {
+      // luciérnagas tibias flotando entre las casonas
+      for (let i = 0; i < 20; i++) {
+        const x = (i * 157 + Math.sin(t / 50 + i) * 30) % 880 - 20;
+        const y = 120 + ((i * 83) % 230) + Math.cos(t / 38 + i) * 12;
+        const brillo = 0.25 + 0.5 * Math.abs(Math.sin(t / 22 + i * 1.7));
+        ctx.fillStyle = `rgba(255,214,140,${brillo.toFixed(2)})`;
+        ctx.fillRect(x, y, 3, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

@@ -176,6 +176,9 @@ const FICHAS = [
   { sprite: "parapente", nombre: "El Parapente sin Ajuste", texto: "Cree que del viejo equilibrio se salta al nuevo de un tirón." },
   { sprite: "tabla", nombre: "La Tabla Escasa", texto: "Confunde la escasez con la sobreproducción." },
   { sprite: "gato", nombre: "El Gato del Desequilibrio", texto: "Jefe de Miraflores: jura que la ley de la demanda dejó de cumplirse." },
+  { sprite: "guitarra", nombre: "La Guitarra Multiplicada", texto: "Multiplica el precio por el número de consumidores e infla la economía." },
+  { sprite: "aerosol", nombre: "El Aerosol Individual", texto: "Escribe Q donde va q, y al revés." },
+  { sprite: "bohemio", nombre: "El Bohemio de los Suspiros", texto: "Jefe de Barranco: suma todas las demandas de una, sin fijarse en los tramos." },
 ];
 
 export function galeriaPersonajes(contenedor) {

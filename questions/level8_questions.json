@@ -1,0 +1,138 @@
+{
+  "nivel": "level8",
+  "clase": "Clase 08 · Demanda y oferta de mercado",
+  "fuente": "Apuntes de la 8va clase — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l8-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "PRIMERA REGLA DE ORO.\n\n¿Qué diferencia hay entre la Q mayúscula y la q minúscula?",
+      "opciones": [
+        "La mayúscula es la oferta y la minúscula la demanda",
+        "La mayúscula lleva decimales y la minúscula no",
+        "La Q mayúscula es la cantidad del MERCADO; la q minúscula, la cantidad INDIVIDUAL",
+        "Son lo mismo, solo cambia el estilo"
+      ],
+      "correcta": 2,
+      "explicacion": "Es una convención chiquita pero que ordena todo el ejercicio: si ves Q sabes que ya estás hablando de todo el mercado, y si ves q es lo que hace un solo consumidor. Escribir una por la otra es la forma más rápida de perderse en la corrección."
+    },
+    {
+      "id": "l8-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "SEGUNDA REGLA DE ORO: «jamás multipliques precios, inflarás la economía».\n\n¿Qué forma de la ecuación se multiplica por el número de consumidores?",
+      "opciones": [
+        "La forma NORMAL, con la q despejada",
+        "La forma inversa, con la p despejada",
+        "Cualquiera de las dos, da el mismo resultado",
+        "Ninguna: se multiplica el intercepto solamente"
+      ],
+      "correcta": 0,
+      "explicacion": "Lo que se suma entre consumidores son CANTIDADES, no precios. Todos enfrentan el mismo precio de mercado; lo que cambia es cuánto compra cada uno. Por eso se agrega horizontalmente, sumando las q, y para eso la ecuación tiene que estar con la q despejada."
+    },
+    {
+      "id": "l8-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "En el mercado de álbumes, la demanda DE MERCADO de figuritas es Q = −50p + 10 y hay 5 consumidores idénticos.\n\n¿Cuál es la demanda INDIVIDUAL?",
+      "opciones": [
+        "q = −250p + 50",
+        "q = −50p + 10",
+        "q = −45p + 5",
+        "q = −10p + 2"
+      ],
+      "correcta": 3,
+      "explicacion": "Acá vas al revés: si Q = n · q, entonces q = Q / n. Se divide TODA la ecuación entre 5: −50p/5 = −10p y 10/5 = 2. Queda q = −10p + 2. Comprueba multiplicando de vuelta: 5(−10p + 2) = −50p + 10."
+    },
+    {
+      "id": "l8-q4",
+      "nivel": "comprension",
+      "enunciado": "En la fiesta de parciales, la demanda individual de cada UPapi es q = −p + 2 y hay 500 que planean ir.\n\n¿Cuál es la demanda de mercado?",
+      "opciones": [
+        "Q = −p + 1 000",
+        "Q = −500p + 1 000",
+        "Q = −500p + 2",
+        "Q = −p + 500"
+      ],
+      "correcta": 1,
+      "explicacion": "Se multiplica toda la ecuación por 500, término por término: 500(−p) = −500p y 500(2) = 1 000. Queda Q = −500p + 1 000. Un error frecuente es multiplicar solo el intercepto y dejar la pendiente intacta."
+    },
+    {
+      "id": "l8-q5",
+      "nivel": "comprension",
+      "enunciado": "OJO CON ESTA. La demanda individual de cigarros electrónicos viene como p = −2q + 10 y hay 15 consumidores.\n\n¿Cuál es la demanda de mercado?",
+      "opciones": [
+        "Q = −30q + 150",
+        "P = −30q + 150",
+        "Q = −2Q + 150",
+        "Q = −7,5p + 75"
+      ],
+      "correcta": 3,
+      "explicacion": "Te la dieron en forma INVERSA, así que no se puede multiplicar de frente. Primero despejas: 2q = −p + 10, o sea q = −0,5p + 5. Recién ahí multiplicas por 15: Q = −7,5p + 75. Si multiplicabas la p por 15 estarías inflando el precio, que es justo lo que prohíbe la regla de oro."
+    },
+    {
+      "id": "l8-q6",
+      "nivel": "comprension",
+      "enunciado": "DEMANDA PARTIDA. Cuando hay grupos con demandas DISTINTAS, la demanda de mercado sale por tramos.\n\n¿Por qué?",
+      "opciones": [
+        "Porque cada grupo entra al mercado a un PRECIO distinto, así que a precios altos no todos están comprando",
+        "Porque las pendientes se anulan entre sí",
+        "Porque hay que graficar cada grupo por separado",
+        "Porque los precios se suman por tramos"
+      ],
+      "correcta": 0,
+      "explicacion": "Cada grupo tiene su propio intercepto en P, o sea su propio precio máximo. Por encima de ese precio, ese grupo compra cero y no aporta nada a la suma. Recién cuando el precio baja lo suficiente se le suma su cantidad, y ahí la demanda de mercado cambia de pendiente."
+    },
+    {
+      "id": "l8-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Messi tiene q = −p + 8 y Cristiano q = −2p + 10 (un consumidor de cada uno).\n\n¿Cuál es la demanda de mercado cuando el precio es MENOR a 5?",
+      "opciones": [
+        "Q = −p + 8",
+        "Q = −2p + 10",
+        "Q = −3p + 18",
+        "Q = −3p + 40"
+      ],
+      "correcta": 2,
+      "explicacion": "Messi deja de comprar en p = 8 y Cristiano en p = 5. Por debajo de 5 están los dos, así que se suman las cantidades: (−p + 8) + (−2p + 10) = −3p + 18. Comprueba en p = 0: Messi compra 8 y Cristiano 10, total 18. Entre 5 y 8 solo queda Messi y el tramo sería Q = −p + 8."
+    },
+    {
+      "id": "l8-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — EXAMEN 2022-II (combustibles).\n\nGrupo de mayores ingresos: q = 10 − 0,2P · Grupo de menores ingresos: q = 2 − 0,1P. Cada grupo tiene 100 compradores.\n\n¿Cuál es la demanda de mercado cuando compran los dos grupos?",
+      "opciones": [
+        "Qd = 12 − 0,3P",
+        "Qd = 1 200 − 30P",
+        "Qd = 1 000 − 20P",
+        "Qd = 200 − 10P"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada grupo se agrega primero: 100(10 − 0,2P) = 1 000 − 20P y 100(2 − 0,1P) = 200 − 10P. Sumados dan 1 200 − 30P. Ojo que este tramo solo vale mientras los dos estén comprando: el grupo de menores ingresos se sale en P = 20, y de ahí para arriba la demanda pasa a ser solo 1 000 − 20P."
+    },
+    {
+      "id": "l8-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — Mismo mercado. La oferta es Qs = 90P y la demanda del tramo bajo es Qd = 1 200 − 30P.\n\n¿Cuál es el equilibrio?",
+      "opciones": [
+        "P = 20 · Q = 1 800",
+        "P = 40 · Q = 3 600",
+        "P = 13,33 · Q = 1 200",
+        "P = 10 · Q = 900"
+      ],
+      "correcta": 3,
+      "explicacion": "Se igualan: 90P = 1 200 − 30P → 120P = 1 200 → P = 10. Y la cantidad: Q = 90(10) = 900, que cuadra con la demanda: 1 200 − 30(10) = 900. Importante verificar que el precio caiga dentro del tramo usado: 10 es menor que 20, así que efectivamente los dos grupos están comprando."
+    },
+    {
+      "id": "l8-q10",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3 — POKEMERCADO 2016-II. Tres grupos:\nValor P = 240 − 2Q · Instinto Q = 150 − ½P · Sabiduría Q = 80 − ⅓P\n\n¿Cuál grupo entra PRIMERO al mercado, o sea el que aguanta el precio más alto?",
+      "opciones": [
+        "INSTINTO, que compra hasta P = 300; los otros dos recién entran en P = 240",
+        "Valor, porque su ecuación empieza en 240",
+        "Sabiduría, porque tiene la pendiente más suave",
+        "Los tres entran al mismo tiempo"
+      ],
+      "correcta": 0,
+      "explicacion": "Hay que comparar los interceptos en P, o sea el precio donde cada Q se hace cero. Valor: hay que despejarla primero, Q = 120 − 0,5P, así que corta en 240. Instinto corta en 300 y Sabiduría en 240. Gana Instinto: entre 300 y 240 es el único comprando, y por debajo de 240 ya están los tres, con Q = 350 − (4/3)P."
+    }
+  ]
+}
