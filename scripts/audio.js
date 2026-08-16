@@ -72,6 +72,12 @@ const TEMAS_MUSICA = {
     bajo:    ["A2",3,"E3",3,"A2",2,"D3",3,"A2",3,"E2",2,
               "A2",3,"C3",3,"E3",2,"A2",4,"E2",4],
   },
+  muelle: { // Chorrillos: amanecer en el muelle, marinera lenta que va sumando
+    tempo: 0.17, onda: "triangle",
+    melodia: ["D4",2,"F4",1,"A4",1,"D5",2,"C5",2,"A4",2,"F4",2,"G4",4,
+              "F4",2,"A4",1,"C5",1,"D5",2,"C5",2,"A4",4,"D4",4],
+    bajo:    ["D3",4,"A2",4,"B2",4,"F2",4,"G2",4,"D3",4,"A2",4,"D3",4],
+  },
 };
 
 function arrancarCtx() {

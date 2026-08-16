@@ -1,0 +1,138 @@
+{
+  "nivel": "level9",
+  "clase": "Clase 09 · Oferta de mercado (partida)",
+  "fuente": "Apuntes de la 9na clase — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l9-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "REGLA DE ORO. Te dan la oferta individual de cada vendedor como p = 15q + 150 y sabes que hay 15 vendedores.\n\n¿Qué es lo PRIMERO que haces?",
+      "opciones": [
+        "Multiplicas la ecuación entera por 15, tal como te la dieron",
+        "Multiplicas solo el 150 por los 15 vendedores",
+        "Despejas la q primero (la forma NORMAL) y recién multiplicas por los 15 vendedores",
+        "Multiplicas solo el 15 que acompaña a la q"
+      ],
+      "correcta": 2,
+      "explicacion": "Es la misma regla de oro de la demanda: jamás multipliques precios, inflarías la economía. Lo que se multiplica por el número de vendedores es la CANTIDAD, así que primero hay que dejar la q sola de un lado. Recién ahí se multiplica."
+    },
+    {
+      "id": "l9-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "OFERTA DE MERCADO con vendedores IDÉNTICOS. Cada uno ofrece una cantidad q y hay n vendedores exactamente iguales.\n\n¿Cuál es la oferta de mercado?",
+      "opciones": [
+        "Q = n · q: la cantidad individual multiplicada por el número de vendedores",
+        "Q = n · p: el precio multiplicado por el número de vendedores",
+        "Q = q / n",
+        "Q = n + q"
+      ],
+      "correcta": 0,
+      "explicacion": "Si todos son iguales, basta con contar cuántos son. Ojo con las letras: la Q mayúscula es la del MERCADO y la q minúscula la INDIVIDUAL. Para volver del mercado al individual se va al revés: q = Q / n."
+    },
+    {
+      "id": "l9-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "OFERTA PARTIDA.\n\n¿Por qué la oferta de mercado sale por TRAMOS cuando los vendedores son distintos?",
+      "opciones": [
+        "Porque cada tramo se mide con un precio distinto en el eje",
+        "Porque las pendientes son distintas y por eso no se pueden sumar",
+        "Porque a veces sobra un vendedor y hay que sacarlo",
+        "Porque cada vendedor tiene su propio precio mínimo y no todos están en el mercado a la vez"
+      ],
+      "correcta": 3,
+      "explicacion": "Un vendedor no produce a cualquier precio: hay un precio por debajo del cual no le conviene salir a vender. Ese precio es su intercepto en P. Mientras el precio del mercado no llegue a ese nivel, ese vendedor aporta cero, y por eso la oferta cambia de fórmula cada vez que entra uno nuevo."
+    },
+    {
+      "id": "l9-q4",
+      "nivel": "comprension",
+      "enunciado": "En el mercado la oferta individual de cada vendedor es p = 15q + 150 y hay 15 vendedores.\n\n¿Cuál es la OFERTA DE MERCADO?",
+      "opciones": [
+        "Q = 15p − 150",
+        "Q = p − 150",
+        "Q = 15p − 2 250",
+        "p = 225q + 2 250"
+      ],
+      "correcta": 1,
+      "explicacion": "Despejas: 15q = p − 150, o sea q = p/15 − 10. Multiplicas por los 15 vendedores: Q = 15(p/15 − 10) = p − 150. Compruébalo con un precio cualquiera: en p = 300 cada vendedor ofrece 10 unidades y entre los 15 son 150, igualito que 300 − 150."
+    },
+    {
+      "id": "l9-q5",
+      "nivel": "comprension",
+      "enunciado": "En la DEMANDA partida entra primero el grupo que aguanta el precio más alto.\n\nEn la OFERTA partida, ¿quién entra primero al mercado?",
+      "opciones": [
+        "El que tiene la pendiente más grande",
+        "El que tiene más locales o sucursales",
+        "El mismo criterio que en la demanda: el del precio más alto",
+        "El que vende más barato: el de MENOR precio mínimo, o sea el menor intercepto en P"
+      ],
+      "correcta": 3,
+      "explicacion": "Acá se invierte la lógica de la demanda. El comprador entra cuando el precio le alcanza para abajo; el vendedor entra cuando el precio le alcanza para arriba. Por eso en la oferta ordenas los interceptos en P de menor a mayor: el más barato es el primero en zarpar."
+    },
+    {
+      "id": "l9-q6",
+      "nivel": "comprension",
+      "enunciado": "Para el 2022 hay dos ofertas de conciertos. Coldplay: p = 5q + 8 (entra recién en p = 8). Bad Bunny: q = p − 5 (entra desde p = 5).\n\n¿Cuál es la oferta de mercado en el tramo de p = 5 a p = 8?",
+      "opciones": [
+        "Q = p − 5, porque en ese tramo el único en el mercado es Bad Bunny",
+        "Q = 1,2p − 6,6, porque los dos ya están dentro",
+        "Q = 0,2p − 1,6, porque el único es Coldplay",
+        "No hay oferta de mercado en ese tramo"
+      ],
+      "correcta": 0,
+      "explicacion": "Coldplay despejado queda q = 0,2p − 1,6, y eso recién se vuelve positivo en p = 8. Entre 5 y 8 Coldplay aporta cero, así que la oferta del mercado es únicamente la de Bad Bunny. Sumarlo antes de tiempo sería inventar conciertos que nadie está ofreciendo."
+    },
+    {
+      "id": "l9-q7",
+      "nivel": "aplicacion",
+      "enunciado": "De p = 8 en adelante ya están los dos: Coldplay con q = 0,2p − 1,6 y Bad Bunny con q = p − 5.\n\n¿Cuál es la oferta de mercado en ese tramo?",
+      "opciones": [
+        "Q = 5,2p − 13",
+        "Q = p − 6,6",
+        "Q = 1,2p − 6,6",
+        "Q = 1,2p + 3,4"
+      ],
+      "correcta": 2,
+      "explicacion": "Se suman las CANTIDADES, nunca los precios: (p − 5) + (0,2p − 1,6) = 1,2p − 6,6. Compruébalo en p = 10: Bad Bunny ofrece 5 y Coldplay 0,4, o sea 5,4 en total, y la fórmula devuelve exactamente 5,4."
+    },
+    {
+      "id": "l9-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — PROBLEMA 2017-I. En Lema hay tres vendedoras de agua:\nNubes P = 2 + Q · San Caño P = 2Q + 5 · Sin Mar P = 2Q + 7\n\n¿Cómo queda la OFERTA DEL MERCADO?",
+      "opciones": [
+        "Q = 2P − 8 para cualquier precio, sumando las tres de una vez",
+        "Q = P − 2 entre 2 y 5; Q = 1,5P − 4,5 entre 5 y 7; Q = 2P − 8 de 7 en adelante",
+        "P = 5Q + 14, sumando las tres ecuaciones tal como vienen",
+        "Q = P − 2 entre 2 y 5; Q = 0,5P − 2,5 entre 5 y 7; Q = 0,5P − 3,5 de 7 en adelante"
+      ],
+      "correcta": 1,
+      "explicacion": "Despejas las tres: Nubes Q = P − 2 (entra en 2), San Caño Q = 0,5P − 2,5 (entra en 5) y Sin Mar Q = 0,5P − 3,5 (entra en 7). Con eso los tramos salen solos. Ojo con la última alternativa: ahí el error es REEMPLAZAR al anterior en vez de SUMARLE, cuando Nubes nunca se va del mercado."
+    },
+    {
+      "id": "l9-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — El equilibrio de Lema. La demanda de agua es P = 8 − Q, o sea Q = 8 − P.\n\nCon la oferta partida que acabas de armar, ¿cuál es el equilibrio de mercado?",
+      "opciones": [
+        "P = 4 y Q = 4, usando el primer tramo",
+        "P = 8 y Q = 8",
+        "P = 6 y Q = 2",
+        "P = 5 y Q = 3, en el tramo donde están Nubes y San Caño"
+      ],
+      "correcta": 3,
+      "explicacion": "Igualas la oferta del tramo con la demanda: 1,5P − 4,5 = 8 − P, de donde 2,5P = 12,5 y P = 5. La cantidad sale de cualquiera de las dos: Q = 8 − 5 = 3. Falta el paso que casi todos se saltan: comprobar que ese P = 5 de verdad cae dentro del tramo, y sí cae. A ese precio Nubes pone las 3 unidades, San Caño recién está entrando con 0 y Sin Mar todavía ni aparece."
+    },
+    {
+      "id": "l9-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3 — EL PLUS AVANZADO. Ya no hay una sola demanda: te dan VARIAS ofertas y también VARIAS demandas.\n\n¿Qué cambia de la recetita?",
+      "opciones": [
+        "Solo el paso de los tramos: para hallar el equilibrio se mezclan los intervalos de la OFERTA con los de la DEMANDA en una sola lista",
+        "Cambia todo, hay que empezar de cero con otro método",
+        "No cambia nada, se resuelve exactamente igual que con una sola demanda",
+        "Hay que multiplicar los precios de los dos lados antes de igualar"
+      ],
+      "correcta": 0,
+      "explicacion": "Los tres primeros pasos son los mismos: despejar, ver el precio de entrada de cada uno y armar los tramos de cada lado. Lo único que se modifica es el cuarto paso: si la oferta cambia de fórmula en unos precios y la demanda en otros, hay que juntar todos esos cortes en una sola recta numérica, porque el equilibrio tiene que caer en un tramo donde las dos fórmulas sean válidas al mismo tiempo."
+    }
+  ]
+}

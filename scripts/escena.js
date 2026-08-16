@@ -179,6 +179,9 @@ const FICHAS = [
   { sprite: "guitarra", nombre: "La Guitarra Multiplicada", texto: "Multiplica el precio por el número de consumidores e infla la economía." },
   { sprite: "aerosol", nombre: "El Aerosol Individual", texto: "Escribe Q donde va q, y al revés." },
   { sprite: "bohemio", nombre: "El Bohemio de los Suspiros", texto: "Jefe de Barranco: suma todas las demandas de una, sin fijarse en los tramos." },
+  { sprite: "bote", nombre: "El Bote Multiplicado", texto: "Multiplica la oferta sin despejar la q: se le infla el precio." },
+  { sprite: "red", nombre: "La Red sin Tramos", texto: "Junta a todos los vendedores de un tirón, aunque no hayan entrado todavía." },
+  { sprite: "pescador", nombre: "El Pescador de los Tramos", texto: "Jefe de Chorrillos: nunca sabe quién zarpa primero al mercado." },
 ];
 
 export function galeriaPersonajes(contenedor) {

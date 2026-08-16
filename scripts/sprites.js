@@ -728,6 +728,74 @@ const BOHEMIO = [  // jefe de Barranco: el bohemio del Puente de los Suspiros (2
 ];
 const P_BOHEMIO = { k: "#241a2e", c: "#f7d9bd", n: "#5b4a7a", r: "#e0562f" };
 
+const BOTE = [   // bote del muelle: multiplica el precio en vez de la cantidad (14 × 12)
+  "..............",
+  "......k.......",
+  "......kww.....",
+  "......kwwww...",
+  "......kwwwww..",
+  "......k.......",
+  ".rrrrrrrrrrrr.",
+  ".ryyyyyyyyyyr.",
+  ".rrrrrrrrrrrr.",
+  "..rrrrrrrrrr..",
+  "...rrrrrrrr...",
+  "....rrrrrr....",
+];
+const P_BOTE = { r: "#c9553f", y: "#f0c987", w: "#f2f6ff", k: "#5b4630" };
+
+const RED = [   // red de pesca: junta a todos de un tirón, sin tramos (12 × 12)
+  "..y..y..y...",
+  ".wwwwwwwwww.",
+  ".w..w..w..w.",
+  ".wwwwwwwwww.",
+  ".w..w..w..w.",
+  ".wwwwwwwwww.",
+  ".w..w..w..w.",
+  ".wwwwwwwwww.",
+  "..wwwwwwww..",
+  "...wwwwww...",
+  "....wwww....",
+  "............",
+];
+const P_RED = { w: "#8fa6b8", y: "#e0a03c" };
+
+const PELICANO = [   // pelícano del muelle: cree que todos entran al mismo precio (13 × 12)
+  ".............",
+  "....kkkk.....",
+  "...kwwwwk....",
+  "...kwkwwk....",
+  "...kwwwwkyy..",
+  "...kwwwwkyyy.",
+  "....wwwww....",
+  "...wwwwwww...",
+  "..wwwwwwwww..",
+  "...wwwwwww...",
+  "....y...y....",
+  "...yy...yy...",
+];
+const P_PELICANO = { w: "#f2f6ff", k: "#6b7683", y: "#e0a03c" };
+
+const PESCADOR = [  // jefe de Chorrillos: el pescador que reparte por tramos (20 × 16)
+  "......kkkkkkkk......",
+  ".....kkkkkkkkkk.....",
+  "....kkkkkkkkkkkk....",
+  "......cccccccc......",
+  ".....cccccccccc.....",
+  ".....cckkcckkcc.....",
+  ".....cccccccccc.....",
+  "......cckkkkcc......",
+  ".....cccccccccc.....",
+  "....aayyyyyyyyaa....",
+  "...aaayyyyyyyyaaa...",
+  "...aaayyyyyyyyaaa...",
+  "...aaaaaaaaaaaaaa...",
+  "...aaaa......aaaa...",
+  "...aaaa......aaaa...",
+  "..kkkkk....kkkkk....",
+];
+const P_PESCADOR = { k: "#3b4a5c", c: "#e8b98d", a: "#2f5f7a", y: "#e0b23c" };
+
 const ITEM_CEVICHE = [   // plato de ceviche: una vida más
   "............",
   "....gg......",
@@ -930,6 +998,10 @@ const DEFINICIONES = {
   aerosol:      [AEROSOL, P_AEROSOL],
   cajon:        [CAJON, P_CAJON],
   bohemio:      [BOHEMIO, P_BOHEMIO],
+  bote:         [BOTE, P_BOTE],
+  red:          [RED, P_RED],
+  pelicano:     [PELICANO, P_PELICANO],
+  pescador:     [PESCADOR, P_PESCADOR],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

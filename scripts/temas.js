@@ -652,6 +652,109 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     CHORRILLOS — el muelle de pescadores al amanecer: el Morro
+     Solar atrás, los botes amarrados y los pelícanos en fila
+     ========================================================= */
+  muelle: {
+    nombre: "Chorrillos",
+    cielo: [[0, "#1d3a5c"], [0.34, "#4a6c96"], [0.7, "#e8a06a"], [1, "#ffd9a0"]],
+    suelo: { cara: "#8a6a48", borde: "#c49a68", tierra: "#4a3826", plataforma: "#5b4630", plataformaBorde: "#e0a03c" },
+    acento: "#ffb04a",
+    bichos: ["bote", "red", "pelicano"],
+    nombresBichos: ["El Bote Multiplicado", "La Red sin Tramos", "El Pelícano Madrugador"],
+    jefe: "pescador",
+    nombreJefe: "El Pescador de los Tramos",
+
+    fondo(ctx, cam, t) {
+      // el sol saliendo, todavía bajo y anaranjado
+      ctx.fillStyle = "rgba(255,214,140,.16)";
+      ctx.beginPath(); ctx.arc(178, 206, 76, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,196,110,.95)";
+      ctx.beginPath(); ctx.arc(178, 206, 38, 0, Math.PI * 2); ctx.fill();
+
+      // el Morro Solar en silueta, con la cruz en la cumbre
+      repetir(ctx, cam, 620, 0.16, (x) => {
+        const bx = x + 380;
+        ctx.fillStyle = "#3b4d6b";
+        ctx.beginPath();
+        ctx.moveTo(bx - 160, 262);
+        ctx.lineTo(bx - 44, 148);
+        ctx.lineTo(bx + 12, 170);
+        ctx.lineTo(bx + 126, 262);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#2c3a52";
+        ctx.fillRect(bx - 46, 126, 5, 24);
+        ctx.fillRect(bx - 54, 134, 21, 4);
+      });
+
+      // el mar, con el camino del sol encima
+      ctx.fillStyle = "#2f5b78";
+      ctx.fillRect(0, 258, CFG.ANCHO_VISTA, 48);
+      for (let i = 0; i < 28; i++) {
+        const x = (i * 63 - (cam * 0.08)) % 880 - 30;
+        const y = 264 + ((i * 23) % 38);
+        ctx.fillStyle = Math.abs(x - 178) < 100 ? "rgba(255,206,140,.5)" : "rgba(255,255,255,.13)";
+        ctx.fillRect(x, y, 13, 2);
+      }
+
+      // botes amarrados, meciéndose con el oleaje
+      repetir(ctx, cam, 196, 0.4, (x, i) => {
+        const bx = x + 28, mece = Math.sin(t / 26 + i) * 2.5;
+        ctx.fillStyle = "#5b4630";
+        ctx.fillRect(bx + 20, 246 + mece, 3, 26);
+        ctx.fillStyle = "rgba(255,250,240,.9)";
+        ctx.beginPath();
+        ctx.moveTo(bx + 23, 246 + mece);
+        ctx.lineTo(bx + 44, 262 + mece);
+        ctx.lineTo(bx + 23, 268 + mece);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = ["#c9553f", "#e0a03c", "#4f8fa8", "#d8d2c4"][i % 4];
+        ctx.beginPath();
+        ctx.moveTo(bx, 270 + mece);
+        ctx.lineTo(bx + 54, 270 + mece);
+        ctx.lineTo(bx + 44, 282 + mece);
+        ctx.lineTo(bx + 10, 282 + mece);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // el muelle de madera, adelante, con las cajas de pescado apiladas encima
+      repetir(ctx, cam, 132, 0.66, (x) => {
+        ctx.fillStyle = "#6b5236";
+        ctx.fillRect(x + 12, 336, 108, 7);
+        ctx.fillStyle = "#5a4229";
+        for (let k = 0; k < 4; k++) ctx.fillRect(x + 20 + k * 30, 343, 6, 41);
+        ctx.fillStyle = "#a8b8c4"; ctx.fillRect(x + 70, 320, 24, 16);
+        ctx.fillStyle = "#8a9aa8"; ctx.fillRect(x + 75, 306, 20, 14);
+      });
+
+      // pelícanos cruzando en fila, esperando su turno
+      repetir(ctx, cam, 340, 0.9, (x, i) => {
+        const y = 94 + ((i * 37) % 46) + Math.sin(t / 30 + i) * 5;
+        ctx.strokeStyle = "rgba(40,52,70,.55)"; ctx.lineWidth = 2;
+        for (let k = 0; k < 3; k++) {
+          const px = x + k * 28, py = y + k * 9;
+          ctx.beginPath();
+          ctx.moveTo(px, py);
+          ctx.quadraticCurveTo(px + 7, py - 6, px + 14, py);
+          ctx.stroke();
+        }
+      });
+    },
+
+    clima(ctx, t) {
+      // salpicadura salada: la reventazón levanta gotitas contra el muelle
+      for (let i = 0; i < 22; i++) {
+        const ciclo = (t / 2 + i * 17) % 120;
+        const x = (i * 137) % 880 - 20;
+        const y = 300 - ciclo * 0.9;
+        const alfa = Math.max(0, 0.42 - ciclo / 290);
+        ctx.fillStyle = `rgba(226,240,250,${alfa.toFixed(2)})`;
+        ctx.fillRect(x, y, 2, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

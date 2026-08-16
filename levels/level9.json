@@ -1,0 +1,36 @@
+{
+  "id": "level9",
+  "distrito": "Chorrillos",
+  "clase": "Clase 09",
+  "titulo": "El muelle de la oferta",
+  "tema": "muelle",
+  "musica": "muelle",
+  "vehiculo": "mototaxi",
+  "intro": "Bajando de Barranco llegas al muelle de Chorrillos al amanecer. Acá el que vende es el que manda: cada pescador tiene su propia oferta y su propio precio mínimo para zarpar. Los bichos del muelle multiplican el precio en vez de la cantidad, suman a todos los vendedores de un tirón y creen que todos salen a la mar al mismo tiempo. Arma la oferta de mercado y encuentra el equilibrio.",
+  "repaso": [
+    "Las mismas reglas de oro de la demanda: la Q mayúscula es del MERCADO, la q minúscula es INDIVIDUAL.",
+    "Jamás multipliques precios. Antes de multiplicar por el número de vendedores hay que despejar la q (la forma NORMAL).",
+    "Vendedores idénticos: Q = n · q. Si te dan la inversa (p despejada), primero despejas y recién multiplicas.",
+    "Vendedores distintos: la oferta sale PARTIDA por tramos, porque cada uno entra al mercado a un precio distinto.",
+    "En la oferta entra primero el que vende más barato: mira el intercepto en P de cada uno, ese es su precio mínimo.",
+    "Para el equilibrio, primero ubica en qué tramo cae y recién iguala oferta con demanda; después comprueba que el precio de verdad pertenezca a ese tramo.",
+    "En el caso avanzado, cuando hay varias ofertas Y varias demandas, se mezclan los intervalos de las dos para armar los tramos."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                ",
+    "                    o o o                               o o o                               o o o                     o o o                     o o o                     o o o                       o o o                     ",
+    "            ?               o o         L         o o             G           o o                     V         o o               1         o o         o o         L                 o o       ?         o o         1         ",
+    "                    ====                                ====                                ====                      ====                      ====                      ====                        ====                      ",
+    "                        o o                 o o               o o                   o o             o o                         o o               o             o o           o o             o o                 o o           ",
+    "  P               E           C                 E           X       E                   C       E       X                   E             C                 E           X         E                 X         B             M   ",
+    "####################################   ###################################    ################################   ###################################    ##################################   ###################################",
+    "####################################   ###################################    ################################   ###################################    ##################################   ###################################",
+    "####################################   ###################################    ################################   ###################################    ##################################   ###################################"
+  ]
+}
