@@ -182,6 +182,9 @@ const FICHAS = [
   { sprite: "bote", nombre: "El Bote Multiplicado", texto: "Multiplica la oferta sin despejar la q: se le infla el precio." },
   { sprite: "red", nombre: "La Red sin Tramos", texto: "Junta a todos los vendedores de un tirón, aunque no hayan entrado todavía." },
   { sprite: "pescador", nombre: "El Pescador de los Tramos", texto: "Jefe de Chorrillos: nunca sabe quién zarpa primero al mercado." },
+  { sprite: "carretilla", nombre: "La Carretilla Amontonada", texto: "Echa todas las demandas al mismo montón, sin mirar quién ya entró." },
+  { sprite: "casco", nombre: "El Casco sin Comprobar", texto: "Despeja el precio y se va contento, sin revisar si cae en el tramo." },
+  { sprite: "capataz", nombre: "El Capataz de los Dos Frentes", texto: "Jefe de Villa El Salvador: se pierde cuando la oferta y la demanda se parten a la vez." },
 ];
 
 export function galeriaPersonajes(contenedor) {

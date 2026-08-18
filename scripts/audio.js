@@ -78,6 +78,13 @@ const TEMAS_MUSICA = {
               "F4",2,"A4",1,"C5",1,"D5",2,"C5",2,"A4",4,"D4",4],
     bajo:    ["D3",4,"A2",4,"B2",4,"F2",4,"G2",4,"D3",4,"A2",4,"D3",4],
   },
+  arenal: { // Villa El Salvador: mediodía en el arenal, chicha de taller, insistente
+    tempo: 0.13, onda: "square",
+    melodia: ["G4",1,"A4",1,"C5",2,"D5",1,"C5",1,"A4",2,"G4",1,"A4",1,"C5",2,"D5",4,
+              "F5",1,"D5",1,"C5",2,"A4",1,"G4",1,"A4",2,"G4",4],
+    bajo:    ["C3",2,"G2",2,"C3",2,"G2",2,"F2",2,"C3",2,"G2",2,"C3",2,
+              "D3",2,"A2",2,"C3",2,"G2",2,"C3",4],
+  },
 };
 
 function arrancarCtx() {

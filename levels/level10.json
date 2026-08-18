@@ -1,0 +1,36 @@
+{
+  "id": "level10",
+  "distrito": "Villa El Salvador",
+  "clase": "Clase 10",
+  "titulo": "El arenal de los repartos",
+  "tema": "arenal",
+  "musica": "arenal",
+  "vehiculo": "bus",
+  "intro": "Subiendo del muelle llegas a los arenales de Villa El Salvador, donde todo se arma por partes. Esta clase no trae temas nuevos: trae la colección de problemas de examen de 2014 a 2023, y ahí caen los tres casos juntos. La demanda partida, la oferta partida, y el más bravo de todos, los dos partidos a la vez. Encima ahora te pueden dar el mercado y pedirte una individual, o darte solo palabras y pedirte la ecuación. Los bichos del parque industrial amontonan todo sin mirar quién entró, arman una sola ecuación en vez de tramos y nunca comprueban si el precio cayó donde debía.",
+  "repaso": [
+    "LA PREVIA: primero se arma la demanda u oferta de cada grupo de gente parecida. Recién después, si los grupos son distintos, se parte por tramos.",
+    "CASO 01: te dan las individuales y pides el mercado, o sea SUMAS las cantidades por tramos.",
+    "CASO 02 (al revés): te dan el mercado y te piden una individual. Ahí se RESTA: la que buscas es el mercado menos la que ya conoces, en el tramo donde las dos están.",
+    "Para armar una ecuación desde palabras van tres pasos: 1) la pendiente, 2) un punto, 3) reemplazar para hallar el intercepto.",
+    "La pista de la pendiente está en «por cada sol que sube el precio compra n menos»; la del punto, en «si fuera gratis compraría n» o en la máxima disposición a pagar por la n-ésima unidad.",
+    "Siempre COMPRUEBA que el precio de equilibrio caiga dentro del tramo que usaste. Si no cae, ese tramo no era y toca probar el siguiente.",
+    "Cuando la oferta Y la demanda están partidas a la vez, se juntan TODOS los cortes de los dos lados en una sola recta numérica y se prueban esos intervalos."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                        ",
+    "                    o o o                                 o o o                                 o o o                     o o o                     o o o                       o o o                         o o o                     ",
+    "            ?               o o         L         o o             G           o o                     V         o o               1         o o         o o         L                 o o       ?         o o                 1         ",
+    "                    ====                                  ====                                  ====                      ====                      ====                        ====                          ====                      ",
+    "                        o o                 o o               o o                   o o             o o                         o o               o o           o o           o o             o                   o o                   ",
+    "  P               E             C                 E           X       E                     C       E       X                   E               C                 E           X         E                 X           B             M   ",
+    "######################################   #####################################    ##################################   ###################################    ##################################   #####################################",
+    "######################################   #####################################    ##################################   ###################################    ##################################   #####################################",
+    "######################################   #####################################    ##################################   ###################################    ##################################   #####################################"
+  ]
+}

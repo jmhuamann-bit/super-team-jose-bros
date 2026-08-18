@@ -1,0 +1,138 @@
+{
+  "nivel": "level10",
+  "clase": "Clase 10 · Colección de problemas de demanda y oferta partida",
+  "fuente": "Apuntes de la 10ma clase — Economía General I (problemas de examen 2014-2023)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l10-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "LA PREVIA DE LA RECETITA. Te dan 150 estudiantes con una demanda y 200 estudiantes con otra.\n\n¿Qué haces ANTES de ponerte a partir por tramos?",
+      "opciones": [
+        "Armas primero la demanda de cada grupo parecido por separado (los 150 por un lado, los 200 por el otro), y recién ahí partes por tramos",
+        "Partes por tramos de una vez y después multiplicas por la cantidad de gente",
+        "Sumas 150 + 200 y trabajas con 350 estudiantes iguales",
+        "Promedias las dos demandas para tener una sola"
+      ],
+      "correcta": 0,
+      "explicacion": "La previa siempre es la misma: dentro de un grupo de gente parecida se multiplica por cuántos son, y eso te deja UNA demanda por grupo. Recién cuando ya tienes las de cada grupo, y son distintas entre sí, empieza el trabajo de los tramos. Saltarse la previa es lo que hace que después no cuadren los interceptos."
+    },
+    {
+      "id": "l10-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "LOS DOS CASOS. En el CASO 01 te dan las individuales y pides la de mercado.\n\n¿Qué te piden en el CASO 02, «al revés»?",
+      "opciones": [
+        "Que grafiques en vez de calcular",
+        "Que halles el equilibrio sin usar la oferta",
+        "Que conviertas la demanda en oferta",
+        "Que te den la de MERCADO y halles una individual: ahí se RESTA, no se suma"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la misma balanza pero al revés. Si mercado = conocida + desconocida, entonces desconocida = mercado − conocida. Ojo con el detalle que casi todos fallan: esa resta solo vale en el tramo donde las DOS ya están dentro del mercado, no en todo el rango de precios."
+    },
+    {
+      "id": "l10-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "CREAR UNA ECUACIÓN DESDE PALABRAS. No te dan la ecuación, te la cuentan.\n\n¿Cuáles son los tres pasos?",
+      "opciones": [
+        "Graficar, medir y estimar",
+        "Sumar, restar y comprobar",
+        "1) la pendiente, 2) un punto, 3) reemplazar para hallar el intercepto",
+        "1) el intercepto, 2) el equilibrio, 3) la pendiente"
+      ],
+      "correcta": 2,
+      "explicacion": "La pendiente sale de la frase «por cada sol que sube el precio compra n unidades menos». El punto sale de «si fuera gratis compraría n» (ahí P = 0) o de «su máxima disposición a pagar por la n-ésima unidad es tanto». Con la pendiente y un punto, reemplazas y despejas el intercepto."
+    },
+    {
+      "id": "l10-q4",
+      "nivel": "comprension",
+      "enunciado": "CARAMELOS (2021-0). La máxima disposición a pagar de Alice por el CUARTO caramelo es 10 soles, y cada vez que el precio baja 5 soles compra 1 caramelo más.\n\n¿Cuál es su demanda inversa?",
+      "opciones": [
+        "P = 10 − 5Q",
+        "P = 30 − 5Q",
+        "P = 20 − 5Q",
+        "P = 10 − 4Q"
+      ],
+      "correcta": 1,
+      "explicacion": "Paso 1, la pendiente: baja 5 soles por cada caramelo más, así que P = a − 5Q. Paso 2, el punto: en el cuarto caramelo paga 10, o sea Q = 4 con P = 10. Paso 3, reemplazas: 10 = a − 5(4) = a − 20, de donde a = 30. Queda P = 30 − 5Q. Compruébalo: en Q = 4 da 30 − 20 = 10, tal como dice el enunciado."
+    },
+    {
+      "id": "l10-q5",
+      "nivel": "comprension",
+      "enunciado": "EL FOODTRUCK DEL CHOCHE (2019-I). Tres tipos de clientes:\nExtranjeros P = 40 − 2Q · Hipsters P = 20 − 0,5Q · Universitarios P = 10 − 0,1Q\n\n¿En qué orden van entrando al mercado conforme baja el precio?",
+      "opciones": [
+        "Todos entran a la vez, porque están en el mismo mercado",
+        "Primero los universitarios, que son los más sensibles al precio",
+        "Primero los hipsters, porque tienen la pendiente del medio",
+        "Primero los extranjeros (aguantan hasta 40), luego los hipsters (desde 20) y al final los universitarios (desde 10)"
+      ],
+      "correcta": 3,
+      "explicacion": "En la demanda entra primero el que aguanta el precio más alto, y eso se lee en el intercepto en P de cada uno: 40, 20 y 10. Por eso los tramos se arman de arriba hacia abajo: entre 20 y 40 solo hay extranjeros, entre 10 y 20 se les suman los hipsters, y de 10 para abajo ya están los tres."
+    },
+    {
+      "id": "l10-q6",
+      "nivel": "comprension",
+      "enunciado": "HOSPEDAJES CUSCO-PUNO (2023-II). Con el primer tramo de la oferta (solo los familiares, Q = 30P − 1 500) igualas contra la demanda Q = 2 000 − 10P y te sale P = 87,5. Pero ese tramo solo vale entre 50 y 70.\n\n¿Qué haces?",
+      "opciones": [
+        "Descartas ese resultado: 87,5 se salió del tramo, así que ese no era. Pruebas el siguiente, donde ya entraron los modernos",
+        "Te quedas con P = 87,5, que para eso lo calculaste",
+        "Promedias 87,5 con 70 y usas 78,75",
+        "Cambias la demanda hasta que el resultado caiga dentro del tramo"
+      ],
+      "correcta": 0,
+      "explicacion": "Cada fórmula por tramos solo es válida dentro de su intervalo. Si el precio que te sale se escapa, es que ahí adentro no había equilibrio: a 87,5 los hospedajes modernos ya están vendiendo, y tu fórmula los ignoraba. Pasando al tramo de arriba, 80P − 5 000 = 2 000 − 10P, sale P ≈ 77,8 y Q ≈ 1 222, que sí cae por encima de 70. Este paso de comprobación es el que más puntos cuesta en el examen."
+    },
+    {
+      "id": "l10-q7",
+      "nivel": "aplicacion",
+      "enunciado": "EL CHOCHE, PARTE a). Su oferta es P = 21 + Q, o sea Q = P − 21, y arranca recién en P = 21. El equilibrio cae en P ≈ 27,3 con Q ≈ 6,3.\n\n¿QUIÉNES terminan comiendo las hamburguesas?",
+      "opciones": [
+        "Los tres grupos, repartidos en partes iguales",
+        "Los hipsters y los universitarios, que son más",
+        "Solo los extranjeros: a 27,3 soles los hipsters (tope 20) y los universitarios (tope 10) ya están fuera",
+        "Nadie, porque el precio es demasiado alto"
+      ],
+      "correcta": 2,
+      "explicacion": "Acá está la gracia del problema. El precio de equilibrio queda por encima de la máxima disposición a pagar de dos de los tres grupos, así que compran cero. Por eso el equilibrio se resuelve con el tramo de arriba, Q = 20 − 0,5P, y no con la suma de los tres. En la parte b) la recomendación es mover la OFERTA hacia la derecha: si el precio baja de 20 entran los hipsters, y si baja de 10 entran también los universitarios."
+    },
+    {
+      "id": "l10-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — AL REVÉS CON LA OFERTA (2019-II). Inka Kola tiene P = Q + 3. La oferta del mercado es Q = P − 3 entre 3 y 4, y Q = 1,5P − 5 de 4 en adelante. Coca Cola recién vende desde más de 4 soles.\n\n¿Cuál es la oferta individual INVERSA de Coca Cola?",
+      "opciones": [
+        "P = 1,5Q + 4",
+        "P = 2Q + 4",
+        "P = 0,5Q − 2",
+        "P = Q + 3"
+      ],
+      "correcta": 1,
+      "explicacion": "Restas en el tramo donde las dos están: Q de Coca Cola = (1,5P − 5) − (P − 3) = 0,5P − 2. Como te piden la INVERSA, despejas P: 0,5P = Q + 2, o sea P = 2Q + 4. La comprobación es bonita: en P = 4 da Q = 0, justo el precio desde el que el enunciado dice que Coca Cola empieza a vender."
+    },
+    {
+      "id": "l10-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — ROLEGUES, EXAMEN PARCIAL (2024-I). Los coleccionistas tienen Qd = 50 − P/800. Con los políticos ambiciosos adentro, la demanda del mercado es Qd = 150 − 3P/400. La oferta es Qs = P/400.\n\n¿Cuál es la demanda de los políticos y el equilibrio con los dos grupos?",
+      "opciones": [
+        "Políticos Qd = 100 − P/160; equilibrio en P = 15 000 y Q = 37,5",
+        "Políticos Qd = 100 − 3P/400; equilibrio en P = 15 000 y Q = 37,5",
+        "Políticos Qd = 200 − P/400; equilibrio en P = 13 333 y Q = 33,3",
+        "Políticos Qd = 100 − P/160; equilibrio en P = 37,5 y Q = 15 000"
+      ],
+      "correcta": 0,
+      "explicacion": "Restas: (150 − 3P/400) − (50 − P/800). Pasando todo a octavos de mil, 3P/400 son 6P/800, así que queda 100 − 6P/800 + P/800 = 100 − 5P/800 = 100 − P/160. Para el equilibrio igualas la del mercado con la oferta: 150 − 3P/400 = P/400, o sea 150 = 4P/400 = P/100, de donde P = 15 000 y Q = 15 000/400 = 37,5. Ojo con la última alternativa: tiene la demanda bien pero cambia P por Q."
+    },
+    {
+      "id": "l10-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3 — LOS DOS PARTIDOS A LA VEZ (Backus 2016-I). La demanda se corta en 2,5 · 3,33 · 10 y la oferta se corta en 2 · 5.\n\n¿Cómo se arman los intervalos para buscar el equilibrio?",
+      "opciones": [
+        "Se usan solo los cortes de la demanda, que es la que manda",
+        "Se usan solo los cortes de la oferta, que es la que fija el precio mínimo",
+        "Se multiplican los cortes de los dos lados",
+        "Se juntan TODOS los cortes de los dos lados en una sola recta: 2 · 2,5 · 3,33 · 5 · 10, y se prueba intervalo por intervalo"
+      ],
+      "correcta": 3,
+      "explicacion": "Es el único paso que cambia respecto de la recetita normal. Un intervalo sirve solo si ahí adentro las DOS fórmulas son válidas al mismo tiempo, así que los cortes de ambos lados parten la recta. Acá, probando el intervalo de 3,33 a 5 sale P = 8,4, que se escapa y se descarta; en el de 5 a 10 sale 7P = 52, o sea P ≈ 7,43 con Q ≈ 10,29, y ese sí cae dentro. A ese precio solo compra el grupo de los mayores de 46, porque los otros dos tienen topes de 2,5 y 3,33."
+    }
+  ]
+}

@@ -755,6 +755,98 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     VILLA EL SALVADOR — mediodía en los arenales: las dunas del
+     Lomo de Corvina, las torres de alta tensión y los talleres
+     del parque industrial con sus techos de calamina
+     ========================================================= */
+  arenal: {
+    nombre: "Villa El Salvador",
+    cielo: [[0, "#4a8fc4"], [0.42, "#8fc0dd"], [0.78, "#e8d3a8"], [1, "#f0dcb4"]],
+    suelo: { cara: "#c9a86a", borde: "#e8d09a", tierra: "#8a6f42", plataforma: "#5f5348", plataformaBorde: "#e8823c" },
+    acento: "#e8823c",
+    bichos: ["carretilla", "ladrillo", "casco"],
+    nombresBichos: ["La Carretilla Amontonada", "El Ladrillo de un Solo Tramo", "El Casco sin Comprobar"],
+    jefe: "capataz",
+    nombreJefe: "El Capataz de los Dos Frentes",
+
+    fondo(ctx, cam, t) {
+      // el sol del mediodía, blanco y sin piedad
+      ctx.fillStyle = "rgba(255,250,225,.20)";
+      ctx.beginPath(); ctx.arc(600, 66, 62, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,252,238,.95)";
+      ctx.beginPath(); ctx.arc(600, 66, 30, 0, Math.PI * 2); ctx.fill();
+
+      // las dunas del fondo, una detrás de otra
+      repetir(ctx, cam, 520, 0.14, (x) => {
+        ctx.fillStyle = "#c2a173";
+        ctx.beginPath();
+        ctx.moveTo(x - 60, 300);
+        ctx.quadraticCurveTo(x + 130, 176, x + 330, 300);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 380, 0.24, (x) => {
+        ctx.fillStyle = "#d4b585";
+        ctx.beginPath();
+        ctx.moveTo(x - 40, 308);
+        ctx.quadraticCurveTo(x + 100, 216, x + 250, 308);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // torres de alta tensión cruzando el arenal
+      repetir(ctx, cam, 300, 0.36, (x) => {
+        const bx = x + 40, base = 306, alto = 118;
+        ctx.strokeStyle = "#6b6357"; ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(bx - 14, base); ctx.lineTo(bx, base - alto);
+        ctx.moveTo(bx + 14, base); ctx.lineTo(bx, base - alto);
+        for (let k = 1; k <= 4; k++) {
+          const y = base - (alto / 5) * k, w = 13 - k * 2.4;
+          ctx.moveTo(bx - w, y); ctx.lineTo(bx + w, y);
+        }
+        ctx.moveTo(bx - 22, base - alto + 16); ctx.lineTo(bx + 22, base - alto + 16);
+        ctx.stroke();
+        // los cables colgando hacia la siguiente torre
+        ctx.strokeStyle = "rgba(70,66,58,.55)";
+        ctx.beginPath();
+        ctx.moveTo(bx + 22, base - alto + 16);
+        ctx.quadraticCurveTo(bx + 150, base - alto + 46, bx + 300 - 22, base - alto + 16);
+        ctx.stroke();
+      });
+
+      // los talleres del parque industrial, con techo de calamina
+      repetir(ctx, cam, 176, 0.52, (x, i) => {
+        const bx = x + 18, alto = 62 + ((i * 29) % 26), base = 336;
+        ctx.fillStyle = ["#d9d2c4", "#e0c9a8", "#cfd6d2", "#e8d2b0"][i % 4];
+        ctx.fillRect(bx, base - alto, 96, alto);
+        // techo de calamina en dientes de sierra
+        ctx.fillStyle = "#8a9098";
+        for (let k = 0; k < 6; k++) {
+          ctx.beginPath();
+          ctx.moveTo(bx + k * 16, base - alto);
+          ctx.lineTo(bx + k * 16 + 8, base - alto - 11);
+          ctx.lineTo(bx + k * 16 + 16, base - alto);
+          ctx.closePath(); ctx.fill();
+        }
+        // portón del taller y ventanitas
+        ctx.fillStyle = "#6b6357";
+        ctx.fillRect(bx + 12, base - 30, 30, 30);
+        ctx.fillStyle = "rgba(90,120,140,.55)";
+        for (let fx = bx + 54; fx < bx + 90; fx += 16) ctx.fillRect(fx, base - alto + 22, 11, 13);
+      });
+    },
+
+    clima(ctx, t) {
+      // la arena que levanta el viento, de costado
+      for (let i = 0; i < 26; i++) {
+        const x = (i * 149 - t * 3.1) % 880 - 20;
+        const y = 150 + ((i * 61) % 200) + Math.sin(t / 18 + i) * 7;
+        ctx.fillStyle = `rgba(232,214,168,${(0.16 + 0.2 * Math.abs(Math.sin(t / 26 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 9, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

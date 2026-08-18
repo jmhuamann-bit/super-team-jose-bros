@@ -796,6 +796,74 @@ const PESCADOR = [  // jefe de Chorrillos: el pescador que reparte por tramos (2
 ];
 const P_PESCADOR = { k: "#3b4a5c", c: "#e8b98d", a: "#2f5f7a", y: "#e0b23c" };
 
+const CARRETILLA = [   // carretilla del parque industrial: carga todo junto sin ordenar (14 × 12)
+  "..............",
+  "..........mm..",
+  ".........mm...",
+  "..rrrrrrrrm...",
+  ".rrrrrrrrrr...",
+  ".rrrrrrrrrr...",
+  "..rrrrrrrr....",
+  "...m....m.....",
+  "..kkk...m.....",
+  ".kkkkk..m.....",
+  "..kkk.........",
+  "..............",
+];
+const P_CARRETILLA = { r: "#d9552f", m: "#8a7460", k: "#3b3b3b" };
+
+const LADRILLO = [   // ladrillos apilados: se salta los tramos y arma una sola pared (12 × 12)
+  "............",
+  "............",
+  ".rrrrrrrrrr.",
+  ".rrrr.rrrrr.",
+  ".rrrrrrrrrr.",
+  ".kkkkkkkkkk.",
+  ".rrrrrrrrrr.",
+  ".rrrrrrr.rr.",
+  ".rrrrrrrrrr.",
+  ".kkkkkkkkkk.",
+  ".rrrrrrrrrr.",
+  "............",
+];
+const P_LADRILLO = { r: "#b5503a", k: "#8a7460" };
+
+const CASCO = [   // casco de obra: se olvida de comprobar en que tramo cayo (13 × 12)
+  ".............",
+  ".............",
+  ".....www.....",
+  "....ywwwy....",
+  "...yywwwyy...",
+  "...yywwwyy...",
+  "..yyywwwyyy..",
+  ".yyyyyyyyyyy.",
+  "yyyyyyyyyyyyy",
+  "kkkkkkkkkkkkk",
+  ".............",
+  ".............",
+];
+const P_CASCO = { y: "#e8b13c", w: "#f7d98a", k: "#8a6a2c" };
+
+const CAPATAZ = [  // jefe de Villa El Salvador: el capataz que reparte el trabajo mal (20 × 16)
+  "......yyyyyy........",
+  ".....yyyyyyyy.......",
+  "....yyyyyyyyyy......",
+  "......cccccc........",
+  ".....cccccccc.......",
+  ".....cckkcckkc......",
+  ".....cccccccc.......",
+  "......ckkkkc........",
+  ".....cccccccc.......",
+  "....nnnnnnnnnn......",
+  "...nnnnnnnnnnnn.....",
+  "...nnnnnnnnnnww.....",
+  "...nnnnnnnnnnww.....",
+  "...nnnn..nnnn.......",
+  "...nnnn..nnnn.......",
+  "..kkkkk..kkkkk......",
+];
+const P_CAPATAZ = { y: "#e8b13c", c: "#e8b98d", k: "#3b3b3b", n: "#3f6b8a", w: "#f2f6ff" };
+
 const ITEM_CEVICHE = [   // plato de ceviche: una vida más
   "............",
   "....gg......",
@@ -1002,6 +1070,10 @@ const DEFINICIONES = {
   red:          [RED, P_RED],
   pelicano:     [PELICANO, P_PELICANO],
   pescador:     [PESCADOR, P_PESCADOR],
+  carretilla:   [CARRETILLA, P_CARRETILLA],
+  ladrillo:     [LADRILLO, P_LADRILLO],
+  casco:        [CASCO, P_CASCO],
+  capataz:      [CAPATAZ, P_CAPATAZ],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
