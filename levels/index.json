@@ -1,6 +1,6 @@
 {
   "titulo": "Lima",
-  "descripcion": "Cada distrito es una clase del curso. Los diez están abiertos para practicar en cualquier orden.",
+  "descripcion": "Cada distrito es una clase del curso. Los once están abiertos para practicar en cualquier orden.",
   "niveles": [
     {
       "id": "level1",
@@ -121,6 +121,18 @@
       "abierto": true,
       "mapa": "levels/level10.json",
       "preguntas": "questions/level10_questions.json"
+    },
+    {
+      "id": "level11",
+      "clase": "Clase 11",
+      "distrito": "Lurín",
+      "titulo": "El oráculo de la elasticidad",
+      "icono": "🏺",
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level11.json",
+      "preguntas": "questions/level11_questions.json"
     }
   ]
 }

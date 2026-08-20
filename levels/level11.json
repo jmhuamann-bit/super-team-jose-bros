@@ -1,0 +1,39 @@
+{
+  "id": "level11",
+  "distrito": "Lurín",
+  "clase": "Clase 11",
+  "titulo": "El oráculo de la elasticidad",
+  "tema": "ruinas",
+  "musica": "ruinas",
+  "vehiculo": "taxi",
+  "intro": "Última parada del valle: las pirámides de adobe de Pachacámac, donde durante siglos la gente vino a preguntarle al oráculo qué iba a pasar. Ahora te toca a ti responder, pero con números. Acá se mide cuánto se mueve la cantidad demandada cuando cambia el precio, y ese número decide si al vendedor le conviene subir o bajar. Los bichos del santuario confunden la elasticidad con la pendiente, se olvidan del signo y creen que un solo punto vale para toda la curva.",
+  "repaso": [
+    "ERROR DE CLASE: la elasticidad precio NO es la pendiente de la demanda. La pendiente es la misma en toda la recta; la elasticidad cambia punto por punto.",
+    "La elasticidad precio punto SIEMPRE sale negativa, porque la ley de la demanda dice que si el precio sube la cantidad baja.",
+    "1RA FÓRMULA, cuando te dan variaciones porcentuales: Ep = %ΔQd / %ΔP.",
+    "2DA FÓRMULA, cuando te dan dos puntos: se sacan las dos variaciones porcentuales desde el punto INICIAL y se dividen.",
+    "3RA FÓRMULA, cuando te dan la ecuación y un punto: Ep = (pendiente de la NORMAL) × (P / Q). Ojo: la pendiente de la normal, con la q despejada, no la de la inversa.",
+    "|Ep| mayor que 1 es ELÁSTICO, menor que 1 es INELÁSTICO, e igual a 1 es UNITARIO.",
+    "Cómo se lee: «si el precio subiera 100 %, la cantidad demandada caería X %», y de ahí sale si es muy o poco sensible.",
+    "Por qué es elástico o inelástico: por los SUSTITUTOS que tenga y por si es una NECESIDAD.",
+    "IDEA FUNDAMENTAL: el ingreso por ventas del productor es el mismo dinero que el gasto del consumidor, o sea P × Q.",
+    "ESTRATEGIA: si es inelástico conviene SUBIR el precio; si es elástico conviene BAJARLO; si es unitario da igual, el ingreso no se mueve."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                ",
+    "                    o o o                                   o o o                                   o o o                     o o o                       o o o                         o o o                         o o o                     ",
+    "            ?                 o o       L               o o       G                     o o                 V                     o o       1                     o o       L   o o                         ?   o o             o o   1         ",
+    "                    ====                                    ====                                    ====                      ====                        ====                          ====                          ====                      ",
+    "                          o o                 o o                   o o                     o o           o o                             o o               o o           o o               o o               o o                 o o           ",
+    "  P               E               C                 E           X         E                     C       E       X                       E             C                 E           X         E                   X           B             M   ",
+    "########################################   #######################################    ####################################   ###################################    ##################################   #######################################",
+    "########################################   #######################################    ####################################   ###################################    ##################################   #######################################",
+    "########################################   #######################################    ####################################   ###################################    ##################################   #######################################"
+  ]
+}

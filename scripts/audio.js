@@ -78,6 +78,12 @@ const TEMAS_MUSICA = {
               "F4",2,"A4",1,"C5",1,"D5",2,"C5",2,"A4",4,"D4",4],
     bajo:    ["D3",4,"A2",4,"B2",4,"F2",4,"G2",4,"D3",4,"A2",4,"D3",4],
   },
+  ruinas: { // Lurín: tarde en Pachacámac, pentatónica andina, ancha y ceremoniosa
+    tempo: 0.20, onda: "triangle",
+    melodia: ["A4",2,"C5",2,"D5",4,"E5",2,"D5",2,"C5",4,
+              "A4",2,"G4",2,"A4",4,"C5",2,"A4",2,"A4",4],
+    bajo:    ["A2",4,"A2",4,"F2",4,"C3",4,"G2",4,"D3",4,"A2",8],
+  },
   arenal: { // Villa El Salvador: mediodía en el arenal, chicha de taller, insistente
     tempo: 0.13, onda: "square",
     melodia: ["G4",1,"A4",1,"C5",2,"D5",1,"C5",1,"A4",2,"G4",1,"A4",1,"C5",2,"D5",4,

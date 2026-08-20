@@ -847,6 +847,93 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     LURÍN — la tarde en Pachacámac: las pirámides de adobe en
+     terrazas, los huarangos del valle y el polvo dorado en el aire
+     ========================================================= */
+  ruinas: {
+    nombre: "Lurín",
+    cielo: [[0, "#6ba3c9"], [0.38, "#a8c4d4"], [0.72, "#e8b87a"], [1, "#f2d4a0"]],
+    suelo: { cara: "#b59060", borde: "#dcbc8a", tierra: "#7a5f3c", plataforma: "#8a6b4a", plataformaBorde: "#e8c15a" },
+    acento: "#c9764a",
+    bichos: ["huaco", "cantaro", "zorro"],
+    nombresBichos: ["El Huaco de un Solo Punto", "El Cántaro sin Signo", "El Zorro de la Pendiente"],
+    jefe: "sacerdote",
+    nombreJefe: "El Sacerdote del Oráculo",
+
+    fondo(ctx, cam, t) {
+      // el sol de la tarde, bajo y polvoriento
+      ctx.fillStyle = "rgba(255,226,168,.22)";
+      ctx.beginPath(); ctx.arc(150, 150, 70, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,214,140,.92)";
+      ctx.beginPath(); ctx.arc(150, 150, 34, 0, Math.PI * 2); ctx.fill();
+
+      // los cerros secos del valle, al fondo
+      repetir(ctx, cam, 460, 0.14, (x) => {
+        ctx.fillStyle = "#a8916e";
+        ctx.beginPath();
+        ctx.moveTo(x - 60, 300);
+        ctx.quadraticCurveTo(x + 120, 190, x + 300, 300);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // las pirámides de adobe, en terrazas escalonadas
+      repetir(ctx, cam, 340, 0.3, (x, i) => {
+        const bx = x + 50, base = 306;
+        const gradas = 5, alto = 22, ancho0 = 150;
+        ctx.fillStyle = i % 2 ? "#c2a074" : "#b59060";
+        for (let k = 0; k < gradas; k++) {
+          const w = ancho0 - k * 26;
+          ctx.fillRect(bx + (ancho0 - w) / 2, base - (k + 1) * alto, w, alto);
+          // el borde iluminado de cada terraza
+          ctx.fillStyle = "rgba(255,222,168,.45)";
+          ctx.fillRect(bx + (ancho0 - w) / 2, base - (k + 1) * alto, w, 3);
+          ctx.fillStyle = i % 2 ? "#c2a074" : "#b59060";
+        }
+        // la rampa de acceso
+        ctx.fillStyle = "#9c8058";
+        ctx.beginPath();
+        ctx.moveTo(bx + 62, base);
+        ctx.lineTo(bx + 88, base - gradas * alto);
+        ctx.lineTo(bx + 100, base - gradas * alto);
+        ctx.lineTo(bx + 86, base);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // los huarangos del valle, retorcidos y con poca hoja
+      repetir(ctx, cam, 190, 0.58, (x, i) => {
+        const bx = x + 24, base = 336;
+        ctx.strokeStyle = "#5c452c"; ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.moveTo(bx, base);
+        ctx.quadraticCurveTo(bx + 6, base - 26, bx - 4, base - 44);
+        ctx.stroke();
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(bx - 4, base - 40); ctx.lineTo(bx - 22, base - 52);
+        ctx.moveTo(bx - 2, base - 42); ctx.lineTo(bx + 18, base - 56);
+        ctx.stroke();
+        ctx.fillStyle = i % 2 ? "#6b8f4a" : "#7fa055";
+        ctx.beginPath(); ctx.ellipse(bx - 4, base - 56, 26, 12, 0, 0, Math.PI * 2); ctx.fill();
+      });
+
+      // la franja verde del río Lurín, justo antes de la arena
+      ctx.fillStyle = "rgba(110,150,80,.5)";
+      ctx.fillRect(0, 330, CFG.ANCHO_VISTA, 10);
+    },
+
+    clima(ctx, t) {
+      // el polvo dorado que flota en la luz de la tarde
+      for (let i = 0; i < 30; i++) {
+        const x = (i * 131 - t * 0.9) % 880 - 20;
+        const y = 90 + ((i * 71) % 240) + Math.sin(t / 40 + i) * 10;
+        const brillo = 0.14 + 0.26 * Math.abs(Math.sin(t / 30 + i * 1.3));
+        ctx.fillStyle = `rgba(255,232,186,${brillo.toFixed(2)})`;
+        ctx.fillRect(x, y, 2, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

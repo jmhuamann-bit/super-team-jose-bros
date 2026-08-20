@@ -1,0 +1,138 @@
+{
+  "nivel": "level11",
+  "clase": "Clase 11 · Elasticidad precio en un punto",
+  "fuente": "Apuntes de la 11va clase — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l11-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "EL ERROR DE CLASE. Muchos calculan la elasticidad precio y entregan la pendiente de la demanda.\n\n¿Son lo mismo?",
+      "opciones": [
+        "NO. La pendiente es la misma en toda la recta; la elasticidad cambia en cada punto",
+        "Sí, la elasticidad es exactamente la pendiente",
+        "Sí, pero cambiada de signo",
+        "Son lo mismo solo si la demanda es inversa"
+      ],
+      "correcta": 0,
+      "explicacion": "La pendiente es un pedazo de la fórmula, no toda. La elasticidad multiplica esa pendiente por la razón P/Q del punto donde estás parado, y esa razón cambia conforme te mueves por la curva. Por eso una misma demanda puede ser inelástica abajo y elástica arriba, con la pendiente idéntica todo el tiempo."
+    },
+    {
+      "id": "l11-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "RECONOCIMIENTO DE LA ELASTICIDAD PRECIO PUNTO.\n\n¿Qué signo tiene siempre?",
+      "opciones": [
+        "Positivo, porque es una razón entre porcentajes",
+        "Depende del tramo de la demanda",
+        "Positivo si el bien es de lujo y negativo si es de primera necesidad",
+        "SIEMPRE negativo, porque por la ley de la demanda el precio y la cantidad se mueven al revés"
+      ],
+      "correcta": 3,
+      "explicacion": "Si el precio sube la cantidad demandada baja, así que arriba y abajo de la fracción siempre llevan signos contrarios y el resultado sale negativo. Por eso muchos exámenes te dan el dato «en valor absoluto»: para no marearte con el signo. Pero si te piden la elasticidad a secas, va con su menos adelante."
+    },
+    {
+      "id": "l11-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "LAS 3 FÓRMULAS. Te dan la ecuación de la demanda y el punto de equilibrio.\n\n¿Cuál usas y con qué pendiente?",
+      "opciones": [
+        "La primera, porque siempre hay variaciones porcentuales escondidas",
+        "La segunda, tomando el equilibrio como los dos puntos",
+        "La TERCERA: Ep = (pendiente de la NORMAL) × (P/Q), con la q ya despejada",
+        "La tercera, pero con la pendiente de la ecuación inversa tal como te la dieron"
+      ],
+      "correcta": 2,
+      "explicacion": "La primera fórmula es para cuando te dan variaciones porcentuales y la segunda para cuando te dan dos puntos. Con una ecuación y un punto va la tercera. El detalle que más puntos cuesta está en la última alternativa: si te dan P = 25 − 2Q, la pendiente que entra NO es −2, hay que despejar la q primero y usar −0,5."
+    },
+    {
+      "id": "l11-q4",
+      "nivel": "comprension",
+      "enunciado": "1RA FÓRMULA. El precio aumenta 100 % y la cantidad demandada disminuye 50 %.\n\n¿Cuánto vale la elasticidad y cómo se llama?",
+      "opciones": [
+        "Ep = −2, elástico",
+        "Ep = −0,5, inelástico",
+        "Ep = −50, elástico",
+        "Ep = −1, unitario"
+      ],
+      "correcta": 1,
+      "explicacion": "Ep = %ΔQd / %ΔP = −50 / 100 = −0,5. Como el valor absoluto es menor que 1, es INELÁSTICO. Se lee así: si el precio subiera 100 %, la cantidad caería apenas 50 %, o sea que la gente es poco sensible al precio de ese bien. Cuidado con voltear la fracción: −100/50 daría −2 y cambiaría por completo la conclusión."
+    },
+    {
+      "id": "l11-q5",
+      "nivel": "comprension",
+      "enunciado": "PREGUNTA DE EXAMEN. En una demanda lineal la pendiente es la misma a lo largo de toda la recta.\n\n¿La elasticidad precio punto también?",
+      "opciones": [
+        "Sí, por eso se llama elasticidad de la demanda y no de un punto",
+        "Sí, salvo que la demanda sea vertical",
+        "Solo cambia si cambia la pendiente",
+        "NO: la elasticidad cambia en cada punto, porque depende de la razón P/Q y esa razón se mueve"
+      ],
+      "correcta": 3,
+      "explicacion": "Tómalo con la demanda Q = 12,5 − 0,5P. La pendiente es −0,5 siempre, pero en P = 2 la elasticidad es −0,09 (bien inelástica) y en P = 20 es −4 (bien elástica). Arriba de la recta el precio es alto y la cantidad chica, así que P/Q se dispara. Eso es lo que hay detrás de la frase «los consumidores cambian de comportamiento a medida que les suben o bajan el precio»."
+    },
+    {
+      "id": "l11-q6",
+      "nivel": "comprension",
+      "enunciado": "APLICACIÓN A LA VIDA REAL. Don Fortunato vende naranjas con |Ep| = 0,25 y kiwis con |Ep| = 2,5, y quiere aumentar su ingreso por ventas.\n\n¿Qué le aconsejas para cada fruta?",
+      "opciones": [
+        "SUBIR el precio de la naranja (inelástica) y BAJAR el del kiwi (elástico)",
+        "Bajar el precio de la naranja y subir el del kiwi",
+        "Subir el precio de las dos, siempre conviene",
+        "Bajar el precio de las dos, así vende más"
+      ],
+      "correcta": 0,
+      "explicacion": "El ingreso por ventas es P × Q, y es exactamente el mismo dinero que el gasto del consumidor. Si el bien es inelástico, subir el precio casi no le quita clientes y el ingreso sube. Si es elástico, subir el precio espanta tanta gente que pierde más de lo que gana, así que le conviene bajarlo. Con el plátano, que tiene |Ep| = 1, da lo mismo: el ingreso no se mueve."
+    },
+    {
+      "id": "l11-q7",
+      "nivel": "aplicacion",
+      "enunciado": "LOS SORBETES (2019-I). Los alumnos usan 2 000 sorbetes al día y la elasticidad precio en valor absoluto es 1,3. Por la crisis del plástico, los sorbetes se encarecen 20 %.\n\n¿Cuántos consumirán?",
+      "opciones": [
+        "2 000, porque no tienen con qué reemplazarlos",
+        "1 600 sorbetes",
+        "1 480 sorbetes",
+        "2 520 sorbetes"
+      ],
+      "correcta": 2,
+      "explicacion": "Acá la fórmula se usa «abierta»: si conoces la elasticidad y la variación del precio, despejas la de la cantidad. %ΔQd = Ep × %ΔP = (−1,3)(20) = −26 %. Entonces la cantidad final es 2 000 × (1 − 0,26) = 1 480. Ojo con la alternativa B: ese 1 600 sale de restar solo el 20 % del precio, olvidando multiplicar por la elasticidad."
+    },
+    {
+      "id": "l11-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — EL MERCADO DE LA PIÑA (2022-II).\nDemanda inversa: P = 25 − 2Q · Oferta inversa: P = 2 + (3/10)Q\n\n¿Cuál es el punto de equilibrio?",
+      "opciones": [
+        "P = 10 y Q = 5",
+        "P = 5 y Q = 10",
+        "P = 25 y Q = 0",
+        "P = 2 y Q = 11,5"
+      ],
+      "correcta": 1,
+      "explicacion": "Igualas las dos inversas: 25 − 2Q = 2 + 0,3Q, de donde 23 = 2,3Q y Q = 10. El precio sale reemplazando en cualquiera de las dos: 25 − 2(10) = 5, y por la oferta 2 + 0,3(10) = 5. Cuadran. Ojo con la alternativa A: tiene los números correctos pero cambiados de lugar, y eso arruina todo lo que viene después."
+    },
+    {
+      "id": "l11-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — LA PIÑA, PARTE 2. Con el equilibrio en P = 5 y Q = 10, y la demanda P = 25 − 2Q.\n\n¿Cuál es la elasticidad precio en ese punto y cuál el ingreso por ventas?",
+      "opciones": [
+        "Ep = −0,25 (inelástico) y un ingreso de S/ 50",
+        "Ep = −1 (unitario) y un ingreso de S/ 50",
+        "Ep = −4 (elástico) y un ingreso de S/ 50",
+        "Ep = −0,25 (inelástico) y un ingreso de S/ 250"
+      ],
+      "correcta": 0,
+      "explicacion": "Primero despejas la normal: de P = 25 − 2Q sale Q = 12,5 − 0,5P, así que la pendiente que entra es −0,5. Luego Ep = (−0,5)(5/10) = −0,25, o sea inelástico: la piña tiene pocos sustitutos que hagan lo mismo. El ingreso por ventas es P × Q = 5 × 10 = S/ 50. Como es inelástica, si don Fortunato quisiera ganar más le convendría SUBIR el precio."
+    },
+    {
+      "id": "l11-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3 — LOS ALMUERZOS (2023-II). El precio del almuerzo subió 20 %. Los de último año consumieron 10 % menos; los de primer año, 30 % menos.\n\n¿Qué pasó con el GASTO de cada grupo?",
+      "opciones": [
+        "Los dos gastaron más, porque el precio subió para todos",
+        "Los dos gastaron menos, porque los dos comieron menos",
+        "El gasto no cambió en ninguno de los dos grupos",
+        "Los de último año (Ep = −0,5, inelástico) gastaron MÁS; los de primer año (Ep = −1,5, elástico) gastaron MENOS"
+      ],
+      "correcta": 3,
+      "explicacion": "Último año: −10/20 = −0,5, inelástico, así que dejaron de comprar tan poco que igual terminaron pagando más. Primer año: −30/20 = −1,5, elástico, recortaron tanto que su gasto total bajó. La razón detrás es de sustitución: un alumno de primer año recién llega, no tiene horario armado y le es fácil traer lonchera o comer fuera; el de último año ya tiene su rutina pegada al campus."
+    }
+  ]
+}

@@ -864,6 +864,74 @@ const CAPATAZ = [  // jefe de Villa El Salvador: el capataz que reparte el traba
 ];
 const P_CAPATAZ = { y: "#e8b13c", c: "#e8b98d", k: "#3b3b3b", n: "#3f6b8a", w: "#f2f6ff" };
 
+const HUACO = [   // huaco retrato de Pachacámac: se queda con un solo punto (12 × 12)
+  "............",
+  ".....kk.....",
+  "....k..k....",
+  "....k..k....",
+  "...cccccc...",
+  "..cccccccc..",
+  "..ckkcckkc..",
+  "..cccccccc..",
+  "..cckkkkcc..",
+  "..cccccccc..",
+  "...cccccc...",
+  "............",
+];
+const P_HUACO = { c: "#c9764a", k: "#3b2a1a" };
+
+const CANTARO = [   // cántaro del valle: le da lo mismo el signo (12 × 12)
+  "............",
+  "....nnnn....",
+  "....n..n....",
+  "...nnnnnn...",
+  "..nnnnnnnn..",
+  ".nnnnnnnnnn.",
+  ".nnnyyyynnn.",
+  ".nnnnnnnnnn.",
+  ".nnnnnnnnnn.",
+  "..nnnnnnnn..",
+  "...nnnnnn...",
+  "....nnnn....",
+];
+const P_CANTARO = { n: "#b5651d", y: "#e8d09a" };
+
+const ZORRO = [   // zorro costeño del santuario: confunde la pendiente con la elasticidad (14 × 12)
+  "..............",
+  "..n........n..",
+  "..nn......nn..",
+  "..nnn....nnn..",
+  "..nnnnnnnnnn..",
+  "..nknnnnnnkn..",
+  "..nnnnkknnnn..",
+  "..wnnnnnnnnw..",
+  "...nnnnnnnn...",
+  "...nnnnnnnn...",
+  "...nn....nn...",
+  "..............",
+];
+const P_ZORRO = { n: "#c47a3c", k: "#241a2e", w: "#f2f6ff" };
+
+const SACERDOTE = [  // jefe de Lurín: el sacerdote del oráculo de Pachacámac (20 × 16)
+  ".....y.y.y.y.y......",
+  "....yyyyyyyyyyyy....",
+  "....rrrrrrrrrrrr....",
+  "....rrrrrrrrrrrr....",
+  "......cccccccc......",
+  "......cckcckcc......",
+  "......cccccccc......",
+  "......cckkkkcc......",
+  "......cccccccc......",
+  "...aaaaaaaaaaaaaa...",
+  "...aaaaaaaaaaaaaa...",
+  "...aaaayyyyyyaaaa...",
+  "...aaaaaaaaaaaaaa...",
+  "....aaaa....aaaa....",
+  "....aaaa....aaaa....",
+  "...kkkkk...kkkkk....",
+];
+const P_SACERDOTE = { y: "#e8c15a", r: "#a8442e", c: "#e8b98d", k: "#3b2a1a", a: "#6b4a7a" };
+
 const ITEM_CEVICHE = [   // plato de ceviche: una vida más
   "............",
   "....gg......",
@@ -1074,6 +1142,10 @@ const DEFINICIONES = {
   ladrillo:     [LADRILLO, P_LADRILLO],
   casco:        [CASCO, P_CASCO],
   capataz:      [CAPATAZ, P_CAPATAZ],
+  huaco:        [HUACO, P_HUACO],
+  cantaro:      [CANTARO, P_CANTARO],
+  zorro:        [ZORRO, P_ZORRO],
+  sacerdote:    [SACERDOTE, P_SACERDOTE],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

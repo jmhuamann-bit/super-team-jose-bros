@@ -185,6 +185,9 @@ const FICHAS = [
   { sprite: "carretilla", nombre: "La Carretilla Amontonada", texto: "Echa todas las demandas al mismo montón, sin mirar quién ya entró." },
   { sprite: "casco", nombre: "El Casco sin Comprobar", texto: "Despeja el precio y se va contento, sin revisar si cae en el tramo." },
   { sprite: "capataz", nombre: "El Capataz de los Dos Frentes", texto: "Jefe de Villa El Salvador: se pierde cuando la oferta y la demanda se parten a la vez." },
+  { sprite: "zorro", nombre: "El Zorro de la Pendiente", texto: "Entrega la pendiente cuando le piden la elasticidad." },
+  { sprite: "cantaro", nombre: "El Cántaro sin Signo", texto: "Se olvida de que la elasticidad precio siempre sale negativa." },
+  { sprite: "sacerdote", nombre: "El Sacerdote del Oráculo", texto: "Jefe de Lurín: predice con un solo punto lo que pasa en toda la curva." },
 ];
 
 export function galeriaPersonajes(contenedor) {
