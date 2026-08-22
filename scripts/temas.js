@@ -934,6 +934,101 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     PUNTA HERMOSA — mediodía de verano en la rompiente: La Isla
+     al fondo, las casas trepadas al acantilado, las carpas en la
+     arena y las olas rompiendo una tras otra
+     ========================================================= */
+  rompiente: {
+    nombre: "Punta Hermosa",
+    cielo: [[0, "#2f7fc4"], [0.4, "#7fc0e0"], [0.78, "#cfe8f0"], [1, "#f0e2c0"]],
+    suelo: { cara: "#e0cfa0", borde: "#f2e6c4", tierra: "#a89068", plataforma: "#5b4630", plataformaBorde: "#e8c15a" },
+    acento: "#e0562f",
+    bichos: ["ola", "boya", "lobo"],
+    nombresBichos: ["La Ola de Ida y Vuelta", "La Boya Anclada", "El Lobo del Menos"],
+    jefe: "surfista",
+    nombreJefe: "El Campeón de Punta Rocas",
+
+    fondo(ctx, cam, t) {
+      // el sol de verano, alto y blanco
+      ctx.fillStyle = "rgba(255,250,220,.22)";
+      ctx.beginPath(); ctx.arc(620, 60, 60, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,252,235,.95)";
+      ctx.beginPath(); ctx.arc(620, 60, 28, 0, Math.PI * 2); ctx.fill();
+
+      // La Isla, la roca que se ve desde toda la bahía
+      repetir(ctx, cam, 700, 0.12, (x) => {
+        const bx = x + 250;
+        ctx.fillStyle = "#6b7a86";
+        ctx.beginPath();
+        ctx.moveTo(bx - 70, 250);
+        ctx.lineTo(bx - 30, 196);
+        ctx.lineTo(bx - 6, 214);
+        ctx.lineTo(bx + 22, 184);
+        ctx.lineTo(bx + 76, 250);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(255,255,255,.30)";
+        ctx.fillRect(bx - 30, 196, 12, 5);
+      });
+
+      // el mar, con las olas rompiendo en linea
+      ctx.fillStyle = "#2f6f9e";
+      ctx.fillRect(0, 248, CFG.ANCHO_VISTA, 62);
+      for (let f = 0; f < 3; f++) {
+        const y = 262 + f * 16;
+        repetir(ctx, cam, 120, 0.2 + f * 0.09, (x) => {
+          ctx.fillStyle = `rgba(255,255,255,${(0.5 - f * 0.12).toFixed(2)})`;
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          ctx.quadraticCurveTo(x + 30, y - 7 - f * 2, x + 62, y);
+          ctx.lineTo(x + 62, y + 4); ctx.lineTo(x, y + 4);
+          ctx.closePath(); ctx.fill();
+        });
+      }
+
+      // las casas de playa, plantadas en la arena delante de la rompiente
+      repetir(ctx, cam, 210, 0.44, (x, i) => {
+        const bx = x + 22, base = 322, alto = 46 + ((i * 23) % 24);
+        // la plataforma de arena sobre la que se paran
+        ctx.fillStyle = "#d8c49a";
+        ctx.fillRect(bx - 10, base - 4, 94, 20);
+        ctx.fillStyle = ["#f2f6ff", "#e8dcc4", "#dfe8ec", "#f0e0d0"][i % 4];
+        ctx.fillRect(bx, base - alto, 74, alto);
+        ctx.fillStyle = "#c2604a";
+        ctx.fillRect(bx - 5, base - alto - 7, 84, 7);
+        ctx.fillStyle = "rgba(70,110,140,.5)";
+        for (let fx = bx + 8; fx < bx + 66; fx += 20) ctx.fillRect(fx, base - alto + 14, 13, 14);
+        // la escalerita que baja al mar
+        ctx.fillStyle = "rgba(150,138,116,.7)";
+        for (let k = 0; k < 4; k++) ctx.fillRect(bx + 78 + k * 3, base - 10 - k * 7, 12, 4);
+      });
+
+      // las sombrillas en la arena
+      repetir(ctx, cam, 148, 0.7, (x, i) => {
+        const bx = x + 30, base = 336;
+        ctx.strokeStyle = "#8a7a60"; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(bx, base); ctx.lineTo(bx, base - 26); ctx.stroke();
+        ctx.fillStyle = ["#e0562f", "#e8c15a", "#4fb0a8"][i % 3];
+        ctx.beginPath();
+        ctx.moveTo(bx - 24, base - 26);
+        ctx.quadraticCurveTo(bx, base - 42, bx + 24, base - 26);
+        ctx.closePath(); ctx.fill();
+      });
+    },
+
+    clima(ctx, t) {
+      // la brisa salada que levanta la reventazón
+      for (let i = 0; i < 24; i++) {
+        const ciclo = (t / 2 + i * 19) % 130;
+        const x = (i * 143) % 880 - 20;
+        const y = 300 - ciclo * 0.8;
+        const alfa = Math.max(0, 0.34 - ciclo / 340);
+        ctx.fillStyle = `rgba(240,250,255,${alfa.toFixed(2)})`;
+        ctx.fillRect(x, y, 2, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

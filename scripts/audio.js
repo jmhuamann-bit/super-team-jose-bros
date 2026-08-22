@@ -78,6 +78,13 @@ const TEMAS_MUSICA = {
               "F4",2,"A4",1,"C5",1,"D5",2,"C5",2,"A4",4,"D4",4],
     bajo:    ["D3",4,"A2",4,"B2",4,"F2",4,"G2",4,"D3",4,"A2",4,"D3",4],
   },
+  rompiente: { // Punta Hermosa: verano en la rompiente, surf rock rápido y salado
+    tempo: 0.12, onda: "square",
+    melodia: ["E5",1,"D5",1,"B4",2,"A4",1,"B4",1,"D5",2,"E5",1,"G5",1,"E5",2,"D5",4,
+              "B4",1,"D5",1,"E5",2,"G5",1,"E5",1,"D5",2,"B4",2,"A4",2],
+    bajo:    ["E3",2,"E3",2,"A2",2,"A2",2,"B2",2,"B2",2,"E3",2,"E3",2,
+              "G2",2,"D3",2,"A2",2,"E3",2,"E3",4],
+  },
   ruinas: { // Lurín: tarde en Pachacámac, pentatónica andina, ancha y ceremoniosa
     tempo: 0.20, onda: "triangle",
     melodia: ["A4",2,"C5",2,"D5",4,"E5",2,"D5",2,"C5",4,

@@ -1,0 +1,138 @@
+{
+  "nivel": "level12",
+  "clase": "Clase 12 · Elasticidad precio arco y de la oferta",
+  "fuente": "Apuntes de la 12va clase — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l12-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "La elasticidad ARCO también se llama «punto medio» o «promedio».\n\n¿Entre qué se divide cada variación?",
+      "opciones": [
+        "Entre el PROMEDIO de los dos puntos, no entre uno solo",
+        "Entre el punto inicial, como siempre",
+        "Entre el punto final",
+        "Entre la diferencia de los dos puntos"
+      ],
+      "correcta": 0,
+      "explicacion": "Queda Ep = [(Q2 − Q1)/(Q1 + Q2)] ÷ [(P2 − P1)/(P1 + P2)]. Los dos del promedio se cancelan arriba y abajo, por eso la fórmula se ve sin ellos."
+    },
+    {
+      "id": "l12-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "La elasticidad precio de la DEMANDA siempre sale negativa.\n\n¿Y la de la OFERTA?",
+      "opciones": [
+        "También negativa",
+        "Negativa solo si es elástica",
+        "Puede ser cualquiera de las dos",
+        "POSITIVA: si el precio sube, la cantidad ofrecida sube"
+      ],
+      "correcta": 3,
+      "explicacion": "En la oferta el precio y la cantidad se mueven en la MISMA dirección, así que arriba y abajo llevan el mismo signo. Por eso acá no hace falta el «en valor absoluto»."
+    },
+    {
+      "id": "l12-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Para qué sirve el método ARCO frente al método PUNTO?",
+      "opciones": [
+        "Para evitar los decimales",
+        "Para que la elasticidad salga positiva",
+        "Para que dé el MISMO resultado midas de ida o de vuelta entre los dos puntos",
+        "Para poder usarlo con la oferta"
+      ],
+      "correcta": 2,
+      "explicacion": "Con el método punto, cambiar cuál es el punto de partida te cambia la respuesta. El arco promedia los dos extremos, así que la dirección deja de importar."
+    },
+    {
+      "id": "l12-q4",
+      "nivel": "comprension",
+      "enunciado": "Halla la elasticidad ARCO entre los puntos (P = 20 ; Q = 5) y (P = 10 ; Q = 25).",
+      "opciones": [
+        "−8",
+        "−2",
+        "−0,8",
+        "−0,5"
+      ],
+      "correcta": 1,
+      "explicacion": "Arriba: (25 − 5)/(5 + 25) = 20/30. Abajo: (10 − 20)/(20 + 10) = −10/30. El cociente da −2. Ojo: −8 y −0,8 son lo que sale por el método punto según el extremo que uses de base."
+    },
+    {
+      "id": "l12-q5",
+      "nivel": "comprension",
+      "enunciado": "«SOLO IMPORTA DE DÓNDE NACE». Una oferta pasa por el ORIGEN, como Q = 2P.\n\n¿Cuánto vale su elasticidad?",
+      "opciones": [
+        "Cambia en cada punto, como en la demanda",
+        "Vale 2, que es la pendiente",
+        "Es inelástica en todos sus puntos",
+        "UNITARIA: vale 1 en todos sus puntos"
+      ],
+      "correcta": 3,
+      "explicacion": "Es = pendiente × P/Q = 2 × P/(2P) = 1, y la P se cancela sea cual sea. Es la única curva donde la elasticidad no se mueve en todo el recorrido."
+    },
+    {
+      "id": "l12-q6",
+      "nivel": "comprension",
+      "enunciado": "Ahora dos ofertas que NO nacen del origen: una es Q = 20 + 3P (hay cantidad ofrecida aun con precio cero) y otra es Q = 2P − 10 (necesita un precio mínimo para arrancar).\n\n¿Cómo son?",
+      "opciones": [
+        "La primera INELÁSTICA (nace del eje Q) y la segunda ELÁSTICA (nace del eje P)",
+        "Las dos inelásticas",
+        "Las dos elásticas",
+        "La primera elástica y la segunda inelástica"
+      ],
+      "correcta": 0,
+      "explicacion": "Con Q = c + dP la elasticidad es dP/(c + dP). Si c es positivo el denominador se infla y queda menor que 1; si c es negativo se achica y queda mayor que 1. Del origen, c = 0 y sale justo 1."
+    },
+    {
+      "id": "l12-q7",
+      "nivel": "aplicacion",
+      "enunciado": "LAS POKEBOLAS (2016-II).\nDemanda: Q = 100 − 5P   |   Oferta: Q = 20 + 3P\n\n¿Cuál es el equilibrio y la elasticidad de la OFERTA ahí?",
+      "opciones": [
+        "P = 10, Q = 50 y Es = 3, elástica",
+        "P = 12,5, Q = 37,5 y Es = 1, unitaria",
+        "P = 10, Q = 50 y Es = 0,6, inelástica",
+        "P = 10, Q = 50 y Es = −0,6, inelástica"
+      ],
+      "correcta": 2,
+      "explicacion": "100 − 5P = 20 + 3P da 8P = 80, o sea P = 10 y Q = 50. Luego Es = 3 × (10/50) = 0,6. Sale inelástica y cuadra con la regla: esa oferta nace del eje Q, en 20."
+    },
+    {
+      "id": "l12-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3 — FRUTALETAS (2023-I). La demanda es lineal y pasa por (Q₀ ; 60) y (700 ; 70). Entre esos dos puntos el |Ep| por ARCO es 0,228.\n\n¿Cuánto vale Q₀?",
+      "opciones": [
+        "700",
+        "725",
+        "675",
+        "760"
+      ],
+      "correcta": 1,
+      "explicacion": "Abajo: (70 − 60)/(60 + 70) = 10/130. Entonces |(700 − Q₀)/(Q₀ + 700)| = 0,228 × 10/130 = 0,01754. Despejando sale 725. Compruébalo: 25/1 425 × 13 = 0,228."
+    },
+    {
+      "id": "l12-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3 — FRUTALETAS, la función. Ya tienes los tres puntos de la recta: (725 ; 60), (700 ; 70) y (675 ; 80).\n\n¿Cuál es la función de demanda?",
+      "opciones": [
+        "Q = 875 − 2,5P",
+        "Q = 700 − 2,5P",
+        "Q = 875 − 0,4P",
+        "Q = 350 − 2,5P"
+      ],
+      "correcta": 0,
+      "explicacion": "La pendiente es (700 − 725)/(70 − 60) = −2,5. Reemplazas un punto: 700 = a − 2,5(70), de donde a = 875. La inversa sería P = 350 − 0,4Q."
+    },
+    {
+      "id": "l12-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3 — FRUTALETAS, parte b. Diego compra en el tramo entre (675 ; 80) y (700 ; 70), donde el |Ep| es 0,273.\n\nSi el precio BAJA, ¿qué pasa con su gasto?",
+      "opciones": [
+        "Sube, porque comprará más paquetes",
+        "No cambia, el gasto siempre es el mismo",
+        "No se puede saber sin conocer el ingreso de Diego",
+        "BAJA: con |Ep| menor que 1 el tramo es inelástico, así que la cantidad casi no reacciona"
+      ],
+      "correcta": 3,
+      "explicacion": "En un tramo inelástico la cantidad se mueve menos que el precio, así que manda el precio: si baja, el gasto baja. Y como gasto del consumidor es lo mismo que ingreso del vendedor, a la marca no le convendría rematar."
+    }
+  ]
+}

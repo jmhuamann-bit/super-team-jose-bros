@@ -188,6 +188,10 @@ const FICHAS = [
   { sprite: "zorro", nombre: "El Zorro de la Pendiente", texto: "Entrega la pendiente cuando le piden la elasticidad." },
   { sprite: "cantaro", nombre: "El Cántaro sin Signo", texto: "Se olvida de que la elasticidad precio siempre sale negativa." },
   { sprite: "sacerdote", nombre: "El Sacerdote del Oráculo", texto: "Jefe de Lurín: predice con un solo punto lo que pasa en toda la curva." },
+  { sprite: "ola", nombre: "La Ola de Ida y Vuelta", texto: "Le sale una elasticidad distinta según de qué lado la midas." },
+  { sprite: "boya", nombre: "La Boya Anclada", texto: "Se queda amarrada al punto de partida en vez de usar el promedio." },
+  { sprite: "lobo", nombre: "El Lobo del Menos", texto: "Le pone signo menos a todo, hasta a la elasticidad de la oferta." },
+  { sprite: "surfista", nombre: "El Campeón de Punta Rocas", texto: "Jefe de Punta Hermosa: gana campeonatos pero no sabe dónde nace su propia ola." },
 ];
 
 export function galeriaPersonajes(contenedor) {

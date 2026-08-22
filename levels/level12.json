@@ -1,0 +1,39 @@
+{
+  "id": "level12",
+  "distrito": "Punta Hermosa",
+  "clase": "Clase 12",
+  "titulo": "La rompiente del arco",
+  "tema": "rompiente",
+  "musica": "rompiente",
+  "vehiculo": "combi",
+  "intro": "Kilómetro 40 de la Panamericana Sur: Punta Hermosa, donde las olas rompen una tras otra y nadie mide una ola parándose en un solo punto. Eso es la elasticidad ARCO: en vez de anclarte a un extremo, promedias los dos y te sale el mismo número vayas de ida o de vuelta. Y del otro lado del mar entra la OFERTA, donde el signo cambia y solo importa una cosa: de dónde nace.",
+  "repaso": [
+    "ARCO, también llamada punto medio o promedio: divides entre el PROMEDIO de los dos puntos, no entre uno solo.",
+    "Ep arco = [(Q2 − Q1) / (Q1 + Q2)] ÷ [(P2 − P1) / (P1 + P2)]. Los dos del promedio se cancelan arriba y abajo.",
+    "Su gracia: da el MISMO resultado midas de ida o de vuelta. Con el método punto, cambiar el punto de partida cambia la respuesta.",
+    "Usa PUNTO cuando te den un punto exacto, y ARCO cuando te den dos puntos y te pidan el tramo entre ellos.",
+    "La elasticidad de la OFERTA es POSITIVA: si el precio sube, la cantidad ofrecida sube. No lleva el menos de la demanda.",
+    "SOLO IMPORTA DE DÓNDE NACE la oferta: del ORIGEN sale unitaria (Es = 1) en todos sus puntos.",
+    "Si nace del eje Q (hay cantidad ofrecida aun con precio cero) es INELÁSTICA; si nace del eje P (necesita un precio mínimo) es ELÁSTICA.",
+    "Las 3 fórmulas son las mismas de la demanda: variaciones, dos puntos, o ecuación con un punto (Es = pendiente de la normal × P/Q).",
+    "Se interpreta por la FLEXIBILIDAD de la capacidad de producción y la abundancia de factores productivos.",
+    "La estrategia de subir o bajar el precio para el ingreso solo aplica a la DEMANDA, no a la oferta."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                        ",
+    "                    o o o                                     o o o                                     o o o                     o o o                       o o o                           o o o                           o o o                     ",
+    "            ?                 o o       L                 o o     G                       o o                   V                     o o         1                   o o         L   o o               o o         ?               o o       1         ",
+    "                    ====                                      ====                                      ====                      ====                        ====                            ====                            ====                      ",
+    "                          o o                   o o                   o o                       o o           o o                               o o               o o             o o             o o                 o o                 o o           ",
+    "  P               E               C                   E           X         E                     C         E       X                       E             C                   E           X         E                   X             B             M   ",
+    "##########################################   #######################################    ######################################   #####################################    ####################################   #######################################",
+    "##########################################   #######################################    ######################################   #####################################    ####################################   #######################################",
+    "##########################################   #######################################    ######################################   #####################################    ####################################   #######################################"
+  ]
+}

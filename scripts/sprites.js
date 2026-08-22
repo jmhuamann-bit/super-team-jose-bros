@@ -932,6 +932,74 @@ const SACERDOTE = [  // jefe de Lurín: el sacerdote del oráculo de Pachacámac
 ];
 const P_SACERDOTE = { y: "#e8c15a", r: "#a8442e", c: "#e8b98d", k: "#3b2a1a", a: "#6b4a7a" };
 
+const OLA = [   // la ola de Punta Rocas: solo mira un punto del recorrido (12 × 12)
+  "............",
+  "........www.",
+  "......wwwwww",
+  ".....wwcccww",
+  "....wwcccccw",
+  "...wwccccccw",
+  "..wwcccccccw",
+  ".wwccccccccw",
+  "wwcccccccccw",
+  "wcccccccccww",
+  "wwwwwwwwwwww",
+  "cccccccccccc",
+];
+const P_OLA = { w: "#f2f6ff", c: "#2f7fc4" };
+
+const BOYA = [   // boya de la rompiente: se ancla al punto de partida (12 × 12)
+  ".....k......",
+  ".....k......",
+  "....rrr.....",
+  "...rrrrr....",
+  "..rrrrrrr...",
+  "..rwwwwwr...",
+  "..rrrrrrr...",
+  "..rrrrrrr...",
+  "...rrrrr....",
+  "..wwwwwww...",
+  ".wwwwwwwww..",
+  "............",
+];
+const P_BOYA = { r: "#e0562f", w: "#f2f6ff", k: "#3b3b3b" };
+
+const LOBO = [   // lobo marino de La Isla: le pone signo menos a todo (14 × 12)
+  "..............",
+  "....nnnn......",
+  "...nnnnnn.....",
+  "...nknnkn.....",
+  "...nnnnnn.....",
+  "...nnkknn.....",
+  "..nnnnnnnn....",
+  ".nnnnnnnnnn...",
+  "nnnnnnnnnnnn..",
+  "nnnnnnnnnnnnn.",
+  ".nnnnnnnnnnnnn",
+  "..nn.......nnn",
+];
+const P_LOBO = { n: "#8a6f52", k: "#241a2e" };
+
+const SURFISTA = [  // jefe de Punta Hermosa: el campeón que no sabe medir su propia ola (20 × 16)
+  ".......kkkkk........",
+  "......kkkkkkk.......",
+  "......ccccccc.......",
+  "......ckcckcc.......",
+  "......ccccccc.......",
+  ".......ckkkc........",
+  "......ccccccc.......",
+  ".....aaaaaaaaa......",
+  "....aaaaaaaaaaa.....",
+  "....aaaaaaaaaaa.....",
+  "....aaaaaaaaaaa.....",
+  ".....aaaa.aaaa......",
+  ".....aaaa.aaaa......",
+  "....cccc...cccc.....",
+  "..rrrrrrrrrrrrrrrr..",
+  "...rrrrrrrrrrrrrr...",
+];
+const P_SURFISTA = { k: "#3b2a1a", c: "#e8b98d", a: "#2f7fc4", r: "#e8c15a" };
+
 const ITEM_CEVICHE = [   // plato de ceviche: una vida más
   "............",
   "....gg......",
@@ -1146,6 +1214,10 @@ const DEFINICIONES = {
   cantaro:      [CANTARO, P_CANTARO],
   zorro:        [ZORRO, P_ZORRO],
   sacerdote:    [SACERDOTE, P_SACERDOTE],
+  ola:          [OLA, P_OLA],
+  boya:         [BOYA, P_BOYA],
+  lobo:         [LOBO, P_LOBO],
+  surfista:     [SURFISTA, P_SURFISTA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
