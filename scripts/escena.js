@@ -192,6 +192,10 @@ const FICHAS = [
   { sprite: "boya", nombre: "La Boya Anclada", texto: "Se queda amarrada al punto de partida en vez de usar el promedio." },
   { sprite: "lobo", nombre: "El Lobo del Menos", texto: "Le pone signo menos a todo, hasta a la elasticidad de la oferta." },
   { sprite: "surfista", nombre: "El Campeón de Punta Rocas", texto: "Jefe de Punta Hermosa: gana campeonatos pero no sabe dónde nace su propia ola." },
+  { sprite: "lancha", nombre: "La Lancha sin Signo", texto: "Calcula la elasticidad ingreso y se come el menos que separa lo normal de lo inferior." },
+  { sprite: "yate", nombre: "El Yate Presumido", texto: "Se cree de lujo con cualquier elasticidad positiva, aunque no pase de 1." },
+  { sprite: "chita", nombre: "La Chita del Precio", texto: "Le mueven el ingreso y ella responde con la elasticidad precio." },
+  { sprite: "patron", nombre: "El Patrón que Mueve el Precio", texto: "Jefe de Pucusana: cuando suben los ingresos él también mueve el precio, y el precio debía quedarse quieto." },
 ];
 
 export function galeriaPersonajes(contenedor) {

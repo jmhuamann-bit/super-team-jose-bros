@@ -1,0 +1,40 @@
+{
+  "id": "level13",
+  "distrito": "Pucusana",
+  "clase": "Clase 13",
+  "titulo": "La bahía del ingreso",
+  "tema": "caleta",
+  "musica": "caleta",
+  "vehiculo": "limosina",
+  "intro": "Fin del camino: Pucusana, la última caleta de Lima. En la misma bahía están fondeadas las lanchas de los pescadores y los yates del club, y esa foto es toda la clase. Cuando a alguien le sube el sueldo, unas cosas las compra más y otras las deja de comprar. Eso es la elasticidad ingreso, y el signo te dice de qué lado de la bahía está cada bien.",
+  "repaso": [
+    "Elasticidad INGRESO: mide la sensibilidad de la Qd ante cambios en el INGRESO del consumidor, no en el precio.",
+    "1ERA FÓRMULA, con variaciones porcentuales: Ei = %ΔQd / %ΔM.",
+    "EL CUADRO: Ei menor que 0 es INFERIOR · Ei igual a 0 es NORMAL LÍMITE · entre 0 y 1 es NORMAL (necesario) · mayor que 1 es SUPERIOR o de lujo.",
+    "INFERIOR quiere decir que si te sube el sueldo, COMPRAS MENOS de ese bien. Ahí está el único caso con signo negativo.",
+    "Ojo con los dos negativos: si el ingreso BAJA y la cantidad también BAJA, la elasticidad sale POSITIVA.",
+    "2DA FÓRMULA, con un momento inicial y uno final: sacas las dos variaciones porcentuales y las divides. Vale igual por punto o por arco.",
+    "FÓRMULA ABIERTA: si te dan la elasticidad y una de las dos variaciones, despejas la que falta.",
+    "ESTRATEGIA: a quien le subió el sueldo le ofreces bienes normales y de lujo; a quien le bajó, los inferiores.",
+    "MODELO DEL DESPLAZAMIENTO. Paso 1: hallas el equilibrio original entre oferta y demanda.",
+    "Paso 2: con la NUEVA demanda pero manteniendo el PRECIO DE EQUILIBRIO ANTERIOR, hallas la nueva Qd. El precio se queda quieto porque lo que cambió fue el ingreso, no el precio del bien.",
+    "La elasticidad NO se saca del nuevo punto de equilibrio: ahí ya se movieron las dos cosas a la vez y el número sale distinto."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                ",
+    "                    o o o                                       o o o                                       o o o                     o o o                         o o o                           o o o                             o o o                     ",
+    "            ?                 o o       L                   o o   G                           o o                   V                     o o           1                 o o           L   o o                 o o         ?               o o       1         ",
+    "                    ====                                        ====                                        ====                      ====                          ====                            ====                              ====                      ",
+    "                          o o                     o o                   o o                         o o                   o o                       o o                 o o               o o             o o                 o o                 o o           ",
+    "  P               E                 C                   E           X           E                     C         E       X                         E             C                   E           X           E                   X             B             M   ",
+    "############################################   #########################################    ######################################   #######################################    ####################################   #########################################",
+    "############################################   #########################################    ######################################   #######################################    ####################################   #########################################",
+    "############################################   #########################################    ######################################   #######################################    ####################################   #########################################"
+  ]
+}

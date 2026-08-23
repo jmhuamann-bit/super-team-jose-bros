@@ -1000,6 +1000,74 @@ const SURFISTA = [  // jefe de Punta Hermosa: el campeón que no sabe medir su p
 ];
 const P_SURFISTA = { k: "#3b2a1a", c: "#e8b98d", a: "#2f7fc4", r: "#e8c15a" };
 
+const LANCHA = [   // lancha de pesca de la caleta: el bien de todos los días (14 × 12)
+  "..............",
+  "......k.......",
+  "......k.......",
+  "......k.......",
+  "..cccccccccc..",
+  ".cccccccccccc.",
+  ".cwwwwwwwwwwc.",
+  ".cccccccccccc.",
+  "..cccccccccc..",
+  "...cccccccc...",
+  "....cccccc....",
+  "..............",
+];
+const P_LANCHA = { c: "#3f9d55", w: "#f2f6ff", k: "#5b4630" };
+
+const YATE = [   // yate del club: el bien de lujo que solo aparece con más ingreso (16 × 12)
+  "................",
+  ".........ww.....",
+  "........wwww....",
+  ".......wwwwww...",
+  "....wwwwwwwwww..",
+  "..wwwwwwwwwwwww.",
+  ".wwwwwwwwwwwwwww",
+  ".bbbbbbbbbbbbbbb",
+  ".wwwwwwwwwwwwww.",
+  "..wwwwwwwwwwww..",
+  "...wwwwwwwwww...",
+  "................",
+];
+const P_YATE = { w: "#f2f6ff", b: "#2f6f9e" };
+
+const CHITA = [   // chita de la caleta: confunde el ingreso con el precio (14 × 12)
+  "..............",
+  "..............",
+  "k....gggggg...",
+  "kk..gggggggggg",
+  "kkkggggggggggg",
+  "kkkkgggwggggg.",
+  "kkkkgggggggggg",
+  "kkkggggggggggg",
+  "kk..gggggggggg",
+  "k....gggggg...",
+  "..............",
+  "..............",
+];
+const P_CHITA = { g: "#5b7a8f", k: "#3b4a5c", w: "#f2f6ff" };
+
+const PATRON = [  // jefe de Pucusana: el patrón que no sabe clasificar sus propios bienes (20 × 16)
+  "......kkkkkkkk......",
+  ".....kkkkkkkkkk.....",
+  "....kkkkkkkkkkkk....",
+  "......cccccccc......",
+  ".....cccccccccc.....",
+  ".....cckkcckkcc.....",
+  ".....cccccccccc.....",
+  "......cckkkkcc......",
+  ".....cccccccccc.....",
+  "....wwwwwwwwwwww....",
+  "...wwwwwwwwwwwwww...",
+  "...wwwbbbbbbwwwww...",
+  "...wwwwwwwwwwwwww...",
+  "...nnnn......nnnn...",
+  "...nnnn......nnnn...",
+  "..kkkkk....kkkkk....",
+];
+const P_PATRON = { k: "#2c3a4a", c: "#c99a6a", w: "#f2f6ff", b: "#2f6f9e", n: "#3b4a5c" };
+
 const ITEM_CEVICHE = [   // plato de ceviche: una vida más
   "............",
   "....gg......",
@@ -1218,6 +1286,10 @@ const DEFINICIONES = {
   boya:         [BOYA, P_BOYA],
   lobo:         [LOBO, P_LOBO],
   surfista:     [SURFISTA, P_SURFISTA],
+  lancha:       [LANCHA, P_LANCHA],
+  yate:         [YATE, P_YATE],
+  chita:        [CHITA, P_CHITA],
+  patron:       [PATRON, P_PATRON],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

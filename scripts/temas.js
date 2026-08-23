@@ -1029,6 +1029,113 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     PUCUSANA — la última caleta de Lima: la bahía cerrada, las
+     casas de colores trepando el cerro, la isla al frente y las
+     lanchas de pesca fondeadas junto a los yates del club
+     ========================================================= */
+  caleta: {
+    nombre: "Pucusana",
+    cielo: [[0, "#3f8fc4"], [0.42, "#8fc8e0"], [0.76, "#d8ecf2"], [1, "#f2e4c8"]],
+    suelo: { cara: "#c4a878", borde: "#e4d0a4", tierra: "#8a7048", plataforma: "#4f7a8f", plataformaBorde: "#a8d4e4" },
+    acento: "#e0562f",
+    bichos: ["lancha", "yate", "chita"],
+    nombresBichos: ["La Lancha sin Signo", "El Yate Presumido", "La Chita del Precio"],
+    jefe: "patron",
+    nombreJefe: "El Patrón que Mueve el Precio",
+
+    fondo(ctx, cam, t) {
+      // sol de mediodía sobre la bahía
+      ctx.fillStyle = "rgba(255,250,224,.20)";
+      ctx.beginPath(); ctx.arc(160, 74, 58, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,252,238,.95)";
+      ctx.beginPath(); ctx.arc(160, 74, 27, 0, Math.PI * 2); ctx.fill();
+
+      // la isla al frente de la bahía
+      repetir(ctx, cam, 760, 0.1, (x) => {
+        const bx = x + 430;
+        ctx.fillStyle = "#5f6f7c";
+        ctx.beginPath();
+        ctx.moveTo(bx - 96, 252);
+        ctx.quadraticCurveTo(bx - 30, 178, bx + 20, 214);
+        ctx.quadraticCurveTo(bx + 60, 190, bx + 104, 252);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(255,255,255,.22)";
+        ctx.fillRect(bx - 26, 186, 14, 6);
+      });
+
+      // el cerro que cierra la caleta, con las casas trepadas
+      repetir(ctx, cam, 320, 0.26, (x, i) => {
+        const bx = x + 40;
+        ctx.fillStyle = "#a8926e";
+        ctx.beginPath();
+        ctx.moveTo(bx - 50, 250);
+        ctx.lineTo(bx + 60, 150);
+        ctx.lineTo(bx + 200, 250);
+        ctx.closePath(); ctx.fill();
+        // casitas de colores trepando la ladera, apoyadas sobre la pendiente
+        // (la izquierda va de (bx-50,250) a (bx+60,150), o sea -100/110 por pixel)
+        const cols = ["#e0562f", "#e8c15a", "#4fb0a8", "#f2f6ff", "#d0709a"];
+        for (let k = 0; k < 5; k++) {
+          const dx = 18 + k * 20;
+          const cx = bx - 50 + dx;
+          const suelo = 250 - (100 / 110) * dx;   // altura del cerro justo ahí
+          const cy = suelo - 18;
+          ctx.fillStyle = cols[(i + k) % cols.length];
+          ctx.fillRect(cx, cy, 24, 18);
+          ctx.fillStyle = "#8f3b2c";
+          ctx.fillRect(cx - 3, cy - 4, 30, 4);
+          ctx.fillStyle = "rgba(60,80,100,.45)";
+          ctx.fillRect(cx + 8, cy + 5, 8, 9);
+        }
+      });
+
+      // el agua quieta de la bahía
+      ctx.fillStyle = "#2f7090";
+      ctx.fillRect(0, 250, CFG.ANCHO_VISTA, 60);
+      for (let i = 0; i < 26; i++) {
+        const x = (i * 67 - (cam * 0.06)) % 880 - 30;
+        const y = 258 + ((i * 21) % 42);
+        ctx.fillStyle = Math.abs(x - 160) < 90 ? "rgba(255,248,210,.42)" : "rgba(255,255,255,.14)";
+        ctx.fillRect(x, y, 12, 2);
+      }
+
+      // las lanchas fondeadas, meciéndose
+      repetir(ctx, cam, 168, 0.44, (x, i) => {
+        const bx = x + 24, mece = Math.sin(t / 28 + i) * 2;
+        ctx.fillStyle = "#5b4630";
+        ctx.fillRect(bx + 18, 252 + mece, 3, 22);
+        ctx.fillStyle = ["#3f9d55", "#e0562f", "#e8c15a", "#4fb0a8"][i % 4];
+        ctx.beginPath();
+        ctx.moveTo(bx, 276 + mece);
+        ctx.lineTo(bx + 46, 276 + mece);
+        ctx.lineTo(bx + 38, 286 + mece);
+        ctx.lineTo(bx + 8, 286 + mece);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // el muellecito de tablones y las cajas de la pesca
+      repetir(ctx, cam, 140, 0.68, (x) => {
+        ctx.fillStyle = "#7a6242";
+        ctx.fillRect(x + 14, 330, 100, 6);
+        ctx.fillStyle = "#65503a";
+        for (let k = 0; k < 4; k++) ctx.fillRect(x + 22 + k * 28, 336, 5, 40);
+        ctx.fillStyle = "#b8c4cc"; ctx.fillRect(x + 70, 316, 20, 14);
+      });
+    },
+
+    clima(ctx, t) {
+      // el brillo del sol rebotando en el agua quieta
+      for (let i = 0; i < 20; i++) {
+        const x = (i * 151 + Math.sin(t / 34 + i) * 14) % 880 - 20;
+        const y = 254 + ((i * 29) % 48);
+        const brillo = 0.2 + 0.4 * Math.abs(Math.sin(t / 18 + i * 1.4));
+        ctx.fillStyle = `rgba(255,252,230,${brillo.toFixed(2)})`;
+        ctx.fillRect(x, y, 3, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

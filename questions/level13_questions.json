@@ -1,0 +1,138 @@
+{
+  "nivel": "level13",
+  "clase": "Clase 13 · Elasticidad ingreso del consumidor",
+  "fuente": "Apuntes de la 13va clase — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l13-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Qué mide la elasticidad INGRESO?",
+      "opciones": [
+        "La sensibilidad de la cantidad demandada ante cambios en el INGRESO del consumidor",
+        "La sensibilidad de la cantidad ante cambios en el precio del bien",
+        "Cuánto ingreso recibe el vendedor por sus ventas",
+        "La sensibilidad de la oferta ante el precio"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el factor 5 de los que desplazan la demanda. Acá el precio del bien se queda quieto: lo único que se mueve es la plata que tiene el consumidor en el bolsillo."
+    },
+    {
+      "id": "l13-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "EL CUADRO DE VALORES. ¿Qué tipo de bien es cada uno?",
+      "opciones": [
+        "Ei < 0 superior · Ei > 1 inferior",
+        "Todos los positivos son de lujo",
+        "Ei = 0 no existe, siempre hay reacción",
+        "Ei < 0 INFERIOR · Ei = 0 normal límite · entre 0 y 1 NORMAL · Ei > 1 SUPERIOR o de lujo"
+      ],
+      "correcta": 3,
+      "explicacion": "El único con signo negativo es el inferior: te sube el sueldo y compras MENOS. El normal límite es el que ni se inmuta, como los litros de agua que tomas al día."
+    },
+    {
+      "id": "l13-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "Te dan las dos variaciones porcentuales.\n\n¿Cuál es la primera fórmula de la elasticidad ingreso?",
+      "opciones": [
+        "Ei = %ΔM / %ΔQd",
+        "Ei = %ΔQd − %ΔM",
+        "Ei = %ΔQd / %ΔM",
+        "Ei = %ΔQd × %ΔM"
+      ],
+      "correcta": 2,
+      "explicacion": "Arriba va siempre lo que reacciona (la cantidad) y abajo lo que provoca (el ingreso). Es la misma estructura de la elasticidad precio, cambiando el precio por el ingreso."
+    },
+    {
+      "id": "l13-q4",
+      "nivel": "comprension",
+      "enunciado": "Te ascienden y tu INGRESO sube 100 %. Con eso, la cantidad de jamonadas que consumes cae 100 %.\n\n¿Cuál es la elasticidad y qué tipo de bien es?",
+      "opciones": [
+        "Ei = 1, normal",
+        "Ei = −1, bien INFERIOR",
+        "Ei = 0, normal límite",
+        "Ei = 100, superior"
+      ],
+      "correcta": 1,
+      "explicacion": "Ei = −100 / 100 = −1. El signo negativo es la firma del bien inferior: con más plata dejas de comprarlo y te pasas a algo mejor."
+    },
+    {
+      "id": "l13-q5",
+      "nivel": "comprension",
+      "enunciado": "OJO CON LOS DOS NEGATIVOS. El ingreso DISMINUYE 20 % y la cantidad demandada DISMINUYE 60 %.\n\n¿Qué sale?",
+      "opciones": [
+        "Ei = −3, bien inferior",
+        "Ei = −0,33, bien inferior",
+        "Ei = 0,33, bien normal",
+        "Ei = 3, bien SUPERIOR o de lujo"
+      ],
+      "correcta": 3,
+      "explicacion": "Ei = −60 / −20 = +3. Los dos signos se cancelan y queda positiva. Tiene sentido: si al bajarte el sueldo lo primero que recortas es ese bien, era un lujo."
+    },
+    {
+      "id": "l13-q6",
+      "nivel": "comprension",
+      "enunciado": "ESTRATEGIA DE VENTA. A un cliente le acaban de SUBIR el sueldo.\n\n¿Qué le ofreces?",
+      "opciones": [
+        "Bienes normales y de lujo, que son los que compra más cuando tiene más plata",
+        "Bienes inferiores, que ahora podrá pagar mejor",
+        "Da igual, el ingreso no cambia lo que compra",
+        "Solo bienes de elasticidad cero"
+      ],
+      "correcta": 0,
+      "explicacion": "Los normales y superiores tienen elasticidad positiva: más ingreso, más consumo. Los inferiores van al revés, así que esos se los ofreces a quien le BAJARON el sueldo."
+    },
+    {
+      "id": "l13-q7",
+      "nivel": "aplicacion",
+      "enunciado": "MODELO DEL DESPLAZAMIENTO, paso 1.\nDemanda: P = −4Q + 10   |   Oferta: P = Q\n\n¿Cuál es el equilibrio original?",
+      "opciones": [
+        "P = 10 y Q = 10",
+        "P = 3 y Q = 3",
+        "P = 2 y Q = 2",
+        "P = 5 y Q = 1,25"
+      ],
+      "correcta": 2,
+      "explicacion": "Igualas: −4Q + 10 = Q, de donde 5Q = 10 y Q = 2. El precio sale reemplazando en la oferta: P = 2. Este precio es el que vas a necesitar en el paso 2, así que guárdalo."
+    },
+    {
+      "id": "l13-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Demanda P = −Q + 50 y oferta P = Q dan un equilibrio en P = 25 y Q = 25. El ingreso sube 50 % y la nueva demanda es P = −Q + 45.\n\n¿Cuál es la nueva cantidad demandada?",
+      "opciones": [
+        "22,5, el nuevo equilibrio",
+        "20",
+        "25, no cambia",
+        "45"
+      ],
+      "correcta": 1,
+      "explicacion": "Metes el precio ORIGINAL en la nueva demanda: 25 = −Q + 45, o sea Q = 20. El precio se queda en 25 porque lo que cambió fue el ingreso, no el precio del bien."
+    },
+    {
+      "id": "l13-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. La cantidad pasó de 25 a 20 mientras el ingreso subía 50 %.\n\n¿Cuál es la elasticidad ingreso y qué tipo de bien es?",
+      "opciones": [
+        "Ei = −0,4, bien INFERIOR",
+        "Ei = −2,5, bien inferior",
+        "Ei = 0,4, bien normal",
+        "Ei = −5, bien inferior"
+      ],
+      "correcta": 0,
+      "explicacion": "La cantidad cayó de 25 a 20, o sea −20 %. Entonces Ei = −20 / 50 = −0,4. Negativa: con más ingreso la gente compró menos, así que es un bien inferior."
+    },
+    {
+      "id": "l13-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. En otro caso, usando el precio original sale Ei = 0,625, pero yéndote al nuevo punto de equilibrio saldría 0,5.\n\n¿Cuál vale y por qué?",
+      "opciones": [
+        "La del nuevo equilibrio, porque es donde termina el mercado",
+        "Las dos, según cómo lo pidan",
+        "El promedio de ambas",
+        "La del PRECIO ORIGINAL (0,625): en el nuevo equilibrio ya se movieron el precio y la cantidad a la vez, y ahí no sabrías cuánto fue por el ingreso"
+      ],
+      "correcta": 3,
+      "explicacion": "La elasticidad ingreso quiere aislar el efecto del INGRESO. Si dejas que el precio también se mueva, el número mezcla dos causas. Por eso congelas el precio viejo y lees la nueva demanda ahí."
+    }
+  ]
+}

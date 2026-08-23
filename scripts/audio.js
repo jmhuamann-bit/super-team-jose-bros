@@ -78,6 +78,12 @@ const TEMAS_MUSICA = {
               "F4",2,"A4",1,"C5",1,"D5",2,"C5",2,"A4",4,"D4",4],
     bajo:    ["D3",4,"A2",4,"B2",4,"F2",4,"G2",4,"D3",4,"A2",4,"D3",4],
   },
+  caleta: { // Pucusana: mediodía en la bahía, vals costeño tranquilo de fin de camino
+    tempo: 0.18, onda: "triangle",
+    melodia: ["G4",2,"A4",1,"B4",1,"D5",2,"B4",2,"A4",2,"G4",4,
+              "E4",2,"G4",1,"B4",1,"A4",2,"G4",2,"E4",4,"G4",4],
+    bajo:    ["G2",4,"D3",4,"E3",4,"C3",4,"G2",4,"D3",4,"G2",8],
+  },
   rompiente: { // Punta Hermosa: verano en la rompiente, surf rock rápido y salado
     tempo: 0.12, onda: "square",
     melodia: ["E5",1,"D5",1,"B4",2,"A4",1,"B4",1,"D5",2,"E5",1,"G5",1,"E5",2,"D5",4,
