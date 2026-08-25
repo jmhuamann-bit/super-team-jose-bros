@@ -1136,6 +1136,85 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     LA VICTORIA — Gamarra a media mañana: las galerías apiladas
+     piso sobre piso, los toldos, los maniquíes en la vereda y
+     las carretillas de ropa cruzando entre la gente
+     ========================================================= */
+  emporio: {
+    nombre: "La Victoria",
+    cielo: [[0, "#8fa8c4"], [0.4, "#b8c8d4"], [0.75, "#dcd4c4"], [1, "#e8dcc0"]],
+    suelo: { cara: "#8a8a90", borde: "#b8b8c0", tierra: "#4a4a52", plataforma: "#c04a5c", plataformaBorde: "#f0909c" },
+    acento: "#e0562f",
+    bichos: ["maniqui", "carrete", "tijera"],
+    nombresBichos: ["El Maniquí que se Mira", "El Carrete Suelto", "La Tijera del Signo"],
+    jefe: "jalador",
+    nombreJefe: "El Jalador de Gamarra",
+
+    fondo(ctx, cam, t) {
+      // el cielo cargado de Lima, sin sol definido
+      ctx.fillStyle = "rgba(255,250,235,.14)";
+      ctx.beginPath(); ctx.arc(560, 70, 70, 0, Math.PI * 2); ctx.fill();
+
+      // las galerías del fondo, apiladas piso sobre piso
+      repetir(ctx, cam, 240, 0.2, (x, i) => {
+        const bx = x + 20, pisos = 5 + (i % 3), alto = pisos * 26;
+        ctx.fillStyle = ["#c4b8a4", "#b0a894", "#ccc0ac"][i % 3];
+        ctx.fillRect(bx, 300 - alto, 150, alto);
+        // las ventanas de cada piso
+        for (let p = 0; p < pisos; p++) {
+          const py = 300 - alto + 8 + p * 26;
+          ctx.fillStyle = "rgba(70,80,95,.5)";
+          for (let fx = bx + 10; fx < bx + 138; fx += 24) ctx.fillRect(fx, py, 15, 14);
+        }
+        // el letrero de la galería en la azotea
+        ctx.fillStyle = ["#e0562f", "#3f8fc4", "#e8c15a"][i % 3];
+        ctx.fillRect(bx + 24, 300 - alto - 14, 102, 12);
+      });
+
+      // la fila de tiendas de la calle, con sus toldos
+      repetir(ctx, cam, 130, 0.5, (x, i) => {
+        const bx = x + 10, base = 336;
+        ctx.fillStyle = ["#e8dcc4", "#dfe4e8", "#f0e0d0"][i % 3];
+        ctx.fillRect(bx, base - 62, 108, 62);
+        // el toldo a rayas
+        for (let k = 0; k < 6; k++) {
+          ctx.fillStyle = k % 2 ? "#e0562f" : "#f2f6ff";
+          ctx.fillRect(bx - 4 + k * 19, base - 68, 19, 12);
+        }
+        // el escaparate iluminado
+        ctx.fillStyle = "rgba(255,236,180,.75)";
+        ctx.fillRect(bx + 12, base - 44, 82, 30);
+        // dos maniquíes en la vitrina
+        ctx.fillStyle = "#8a7a6a";
+        ctx.fillRect(bx + 26, base - 40, 8, 24);
+        ctx.fillRect(bx + 68, base - 40, 8, 24);
+      });
+
+      // las guirnaldas de ropa colgada cruzando la calle
+      repetir(ctx, cam, 180, 0.74, (x) => {
+        ctx.strokeStyle = "rgba(90,90,100,.4)"; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(x, 196); ctx.quadraticCurveTo(x + 90, 226, x + 180, 196); ctx.stroke();
+        for (let k = 1; k < 7; k++) {
+          const p = k / 7;
+          const px = x + 180 * p, py = 196 + Math.sin(p * Math.PI) * 29;
+          ctx.fillStyle = ["#e0562f", "#3f8fc4", "#e8c15a", "#4fb0a8", "#d0486a"][k % 5];
+          ctx.fillRect(px - 5, py, 10, 14);
+        }
+      });
+    },
+
+    clima(ctx, t) {
+      // el polvillo de tela que flota en el aire del emporio
+      for (let i = 0; i < 24; i++) {
+        const x = (i * 139 - t * 0.7) % 880 - 20;
+        const y = 130 + ((i * 67) % 200) + Math.sin(t / 36 + i) * 9;
+        ctx.fillStyle = `rgba(240,236,225,${(0.14 + 0.2 * Math.abs(Math.sin(t / 28 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 2, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

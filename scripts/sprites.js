@@ -1068,6 +1068,74 @@ const PATRON = [  // jefe de Pucusana: el patrón que no sabe clasificar sus pro
 ];
 const P_PATRON = { k: "#2c3a4a", c: "#c99a6a", w: "#f2f6ff", b: "#2f6f9e", n: "#3b4a5c" };
 
+const MANIQUI = [   // maniquí de la vereda de Gamarra: todos copian el mismo modelo (12 × 12)
+  "....kkkk....",
+  "...kkkkkk...",
+  "....kkkk....",
+  "......k.....",
+  "..rrrrrrrr..",
+  ".rrrrrrrrrr.",
+  ".rrrrrrrrrr.",
+  ".rrrrrrrrrr.",
+  "..rrrrrrrr..",
+  "...kkkkkk...",
+  "...kk..kk...",
+  "...kk..kk...",
+];
+const P_MANIQUI = { k: "#8a7a6a", r: "#d0486a" };
+
+const CARRETE = [   // carrete de hilo: no va solo, va con la aguja (12 × 12)
+  "............",
+  "..wwwwwwww..",
+  "..wwwwwwww..",
+  "...cccccc...",
+  "...cccccc...",
+  "...cccccc...",
+  "...cccccc...",
+  "...cccccc...",
+  "...cccccc...",
+  "..wwwwwwww..",
+  "..wwwwwwww..",
+  "............",
+];
+const P_CARRETE = { w: "#e0d4b8", c: "#3f8fc4" };
+
+const TIJERA = [   // tijera de cortador: le corta el signo a la elasticidad (13 × 12)
+  ".............",
+  "kk.........kk",
+  ".kk.......kk.",
+  "..kk.....kk..",
+  "...kk...kk...",
+  "....kk.kk....",
+  ".....kkk.....",
+  "....yy.yy....",
+  "...yy...yy...",
+  "..yy.....yy..",
+  "..yy.....yy..",
+  "...yy...yy...",
+];
+const P_TIJERA = { k: "#b8c0c8", y: "#e0562f" };
+
+const JALADOR = [  // jefe de La Victoria: el jalador que te mete a cualquier galería (20 × 16)
+  "......kkkkkkkk......",
+  ".....kkkkkkkkkk.....",
+  "......cccccccc......",
+  "......ckcckcc.......",
+  "......cccccccc......",
+  ".......ckkkc........",
+  "......cccccccc......",
+  "...y..aaaaaaaa..y...",
+  "..yy.aaaaaaaaaa.yy..",
+  "...y.aaaaaaaaaa.y...",
+  ".....aaaaaaaaaa.....",
+  ".....aaaaaaaaaa.....",
+  ".....nnnn.nnnn......",
+  ".....nnnn.nnnn......",
+  ".....nnnn.nnnn......",
+  "....kkkkk.kkkkk.....",
+];
+const P_JALADOR = { k: "#241a2e", c: "#c99a6a", a: "#e0562f", n: "#2f3a56", y: "#e8c15a" };
+
 const ITEM_CEVICHE = [   // plato de ceviche: una vida más
   "............",
   "....gg......",
@@ -1290,6 +1358,10 @@ const DEFINICIONES = {
   yate:         [YATE, P_YATE],
   chita:        [CHITA, P_CHITA],
   patron:       [PATRON, P_PATRON],
+  maniqui:      [MANIQUI, P_MANIQUI],
+  carrete:      [CARRETE, P_CARRETE],
+  tijera:       [TIJERA, P_TIJERA],
+  jalador:      [JALADOR, P_JALADOR],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

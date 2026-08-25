@@ -1,0 +1,138 @@
+{
+  "nivel": "level14",
+  "clase": "Clase 14 · Elasticidad cruzada",
+  "fuente": "Apuntes de la 14va clase — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "l14-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Qué mide la elasticidad CRUZADA?",
+      "opciones": [
+        "La sensibilidad de la Qd del bien X ante cambios en el precio de OTRO bien, el Y",
+        "La sensibilidad de la Qd de X ante cambios en su propio precio",
+        "La sensibilidad de la Qd ante cambios en el ingreso",
+        "La sensibilidad de la oferta ante el precio de otro bien"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el factor 4 de los que desplazan la demanda: el precio de los bienes relacionados. El precio del propio bien X no se toca, y por eso la curva de X se DESPLAZA en vez de deslizarse."
+    },
+    {
+      "id": "l14-q2",
+      "nivel": "reconocimiento",
+      "enunciado": "EL CUADRO DE VALORES. ¿Qué relación indica cada signo?",
+      "opciones": [
+        "Positivo complementarios · negativo sustitutos",
+        "Todos los positivos son no relacionados",
+        "El cero no existe, siempre hay alguna relación",
+        "Exy > 0 SUSTITUTOS · Exy < 0 COMPLEMENTARIOS · Exy = 0 NO RELACIONADOS"
+      ],
+      "correcta": 3,
+      "explicacion": "Los sustitutos se mueven en la misma dirección: sube el precio del otro y te pasas al tuyo. Los complementarios van al revés, porque se compran juntos y lo que encarece a uno hunde al otro."
+    },
+    {
+      "id": "l14-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Cómo se arma la primera fórmula de la elasticidad cruzada?",
+      "opciones": [
+        "Exy = %ΔPy / %ΔQdx",
+        "Exy = %ΔQdx / %ΔPx",
+        "Exy = %ΔQdx / %ΔPy",
+        "Exy = %ΔQdx − %ΔPy"
+      ],
+      "correcta": 2,
+      "explicacion": "Arriba va lo que reacciona, la cantidad del bien X. Abajo lo que provoca, el precio del OTRO bien. Poner Px abajo es el error más común: eso sería la elasticidad precio de siempre."
+    },
+    {
+      "id": "l14-q4",
+      "nivel": "comprension",
+      "enunciado": "El precio del café Kirma sube 100 % y la cantidad demandada de café Altomayo sube 200 %.\n\n¿Cuál es la elasticidad cruzada y qué relación hay?",
+      "opciones": [
+        "Exy = 0,5, complementarios",
+        "Exy = 2, SUSTITUTOS",
+        "Exy = −2, complementarios",
+        "Exy = 200, sustitutos"
+      ],
+      "correcta": 1,
+      "explicacion": "Exy = 200 / 100 = 2. Positiva y mayor que 1: son sustitutos fuertes. Y la lógica de fondo se ve sola: si un café se pone caro, la gente se pasa al otro."
+    },
+    {
+      "id": "l14-q5",
+      "nivel": "comprension",
+      "enunciado": "El precio de las entradas al cine sube 50 % y la cantidad demandada de canchita del cine cae 80 %.\n\n¿Qué sale?",
+      "opciones": [
+        "Exy = 1,6, sustitutos",
+        "Exy = −0,625, complementarios",
+        "Exy = 0, no relacionados",
+        "Exy = −1,6, COMPLEMENTARIOS"
+      ],
+      "correcta": 3,
+      "explicacion": "Exy = −80 / 50 = −1,6. Negativa, así que son complementarios, y tiene todo el sentido: si menos gente entra al cine, menos canchita se vende. Nadie compra canchita del cine sin ir al cine."
+    },
+    {
+      "id": "l14-q6",
+      "nivel": "comprension",
+      "enunciado": "El precio de las zapatillas sube 30 % y la cantidad demandada de alfalfa se mantiene intacta.\n\n¿Qué concluyes?",
+      "opciones": [
+        "Exy = 0: son bienes NO RELACIONADOS",
+        "Exy = 0, así que faltan datos para decidir",
+        "Exy = 30, son sustitutos",
+        "No se puede calcular si la cantidad no cambia"
+      ],
+      "correcta": 0,
+      "explicacion": "Cero arriba dividido entre cualquier cosa da cero, y eso es una respuesta, no un problema: la alfalfa y las zapatillas no tienen nada que ver. Un Exy de 0 dice que los mercados van por caminos separados."
+    },
+    {
+      "id": "l14-q7",
+      "nivel": "aplicacion",
+      "enunciado": "EL TURRÓN DE LINCE (2022-II), paso 1.\nDemanda: P = 100 − 2Q   |   Oferta: P = 10 + Q\n\n¿Cuál es el equilibrio?",
+      "opciones": [
+        "Q = 43,33 y P = 53,33",
+        "Q = 50 y P = 40",
+        "Q = 30 y P = 40",
+        "Q = 90 y P = 100"
+      ],
+      "correcta": 2,
+      "explicacion": "Igualas: 100 − 2Q = 10 + Q, de donde 3Q = 90 y Q = 30. El precio sale reemplazando: 10 + 30 = 40. Guarda ese 40, porque es el que vas a congelar en el paso siguiente."
+    },
+    {
+      "id": "l14-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Los pasteles de fresa suben de S/ 15 a S/ 25 y la demanda de turrón pasa a P = 140 − 2Q. El equilibrio original era Q = 30 con P = 40.\n\n¿Cuál es la nueva cantidad demandada de turrón?",
+      "opciones": [
+        "43,33, el nuevo equilibrio",
+        "50",
+        "30, no cambia",
+        "70"
+      ],
+      "correcta": 1,
+      "explicacion": "Metes el precio ORIGINAL del turrón en su nueva demanda: 40 = 140 − 2Q, o sea 2Q = 100 y Q = 50. El precio del turrón no se mueve porque el que subió fue el de los pasteles."
+    },
+    {
+      "id": "l14-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. La cantidad de turrón pasó de 30 a 50 mientras el pastel subía de 15 a 25. El examen pide MÉTODO DEL PUNTO MEDIO.\n\n¿Cuál es la elasticidad cruzada y qué son los dos bienes?",
+      "opciones": [
+        "Exy = 1: son SUSTITUTOS",
+        "Exy = −1: son complementarios",
+        "Exy = 0,67: son sustitutos",
+        "Exy = 1,33: son sustitutos"
+      ],
+      "correcta": 0,
+      "explicacion": "Por punto medio cada variación se divide entre el promedio: la cantidad da 20/40 = 50 % y el precio 10/20 = 50 %. Exy = 50/50 = 1, positiva, así que son sustitutos: si el pastel se encarece, la gente se pasa al turrón."
+    },
+    {
+      "id": "l14-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. Al calcular la elasticidad cruzada congelas el precio del bien X en su valor original, en vez de irte al nuevo equilibrio.\n\n¿Por qué?",
+      "opciones": [
+        "Porque el nuevo equilibrio todavía no se conoce",
+        "Porque así los números salen más redondos",
+        "Porque el precio de X nunca puede cambiar",
+        "Porque en el nuevo equilibrio ya se movieron el precio y la cantidad de X a la vez, y ahí no sabrías cuánto fue por culpa del precio de Y"
+      ],
+      "correcta": 3,
+      "explicacion": "La cruzada quiere aislar el efecto del precio de Y. Si dejas que el precio de X también se mueva, el número mezcla dos causas y deja de medir lo que te pidieron. En el mercado el precio de X sí termina cambiando, pero eso es otra pregunta."
+    }
+  ]
+}

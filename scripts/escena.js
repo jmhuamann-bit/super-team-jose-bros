@@ -196,6 +196,10 @@ const FICHAS = [
   { sprite: "yate", nombre: "El Yate Presumido", texto: "Se cree de lujo con cualquier elasticidad positiva, aunque no pase de 1." },
   { sprite: "chita", nombre: "La Chita del Precio", texto: "Le mueven el ingreso y ella responde con la elasticidad precio." },
   { sprite: "patron", nombre: "El Patrón que Mueve el Precio", texto: "Jefe de Pucusana: cuando suben los ingresos él también mueve el precio, y el precio debía quedarse quieto." },
+  { sprite: "maniqui", nombre: "El Maniquí que se Mira", texto: "Le preguntan por el precio del bien de al lado y responde mirando el suyo." },
+  { sprite: "carrete", nombre: "El Carrete Suelto", texto: "Jura que el hilo se vende solo, cuando siempre se va con la aguja." },
+  { sprite: "tijera", nombre: "La Tijera del Signo", texto: "Corta el menos de la elasticidad y convierte complementarios en sustitutos." },
+  { sprite: "jalador", nombre: "El Jalador de Gamarra", texto: "Jefe de La Victoria: te mete a cualquier galería sin saber si esa tienda le compite o le complementa." },
 ];
 
 export function galeriaPersonajes(contenedor) {

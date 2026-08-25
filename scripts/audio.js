@@ -78,6 +78,13 @@ const TEMAS_MUSICA = {
               "F4",2,"A4",1,"C5",1,"D5",2,"C5",2,"A4",4,"D4",4],
     bajo:    ["D3",4,"A2",4,"B2",4,"F2",4,"G2",4,"D3",4,"A2",4,"D3",4],
   },
+  emporio: { // La Victoria: Gamarra a media mañana, cumbia de galería, apurada y con gancho
+    tempo: 0.11, onda: "square",
+    melodia: ["A4",1,"C5",1,"E5",1,"A5",2,"G5",1,"E5",1,"D5",2,"C5",2,"A4",2,
+              "C5",1,"E5",1,"G5",1,"A5",2,"G5",1,"E5",1,"D5",2,"C5",2,"A4",2],
+    bajo:    ["A2",2,"A2",2,"E3",2,"E3",2,"F2",2,"F2",2,"G2",2,"G2",2,
+              "A2",2,"C3",2,"E3",2,"D3",2,"A2",4],
+  },
   caleta: { // Pucusana: mediodía en la bahía, vals costeño tranquilo de fin de camino
     tempo: 0.18, onda: "triangle",
     melodia: ["G4",2,"A4",1,"B4",1,"D5",2,"B4",2,"A4",2,"G4",4,

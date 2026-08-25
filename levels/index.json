@@ -1,6 +1,6 @@
 {
   "titulo": "Lima",
-  "descripcion": "Cada distrito es una clase del curso. Los trece están abiertos para practicar en cualquier orden.",
+  "descripcion": "Cada distrito es una clase del curso. Los catorce están abiertos para practicar en cualquier orden.",
   "niveles": [
     {
       "id": "level1",
@@ -157,6 +157,18 @@
       "abierto": true,
       "mapa": "levels/level13.json",
       "preguntas": "questions/level13_questions.json"
+    },
+    {
+      "id": "level14",
+      "clase": "Clase 14",
+      "distrito": "La Victoria",
+      "titulo": "El emporio de los relacionados",
+      "icono": "🧵",
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level14.json",
+      "preguntas": "questions/level14_questions.json"
     }
   ]
 }

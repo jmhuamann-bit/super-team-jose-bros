@@ -1,0 +1,40 @@
+{
+  "id": "level14",
+  "distrito": "La Victoria",
+  "clase": "Clase 14",
+  "titulo": "El emporio de los relacionados",
+  "tema": "emporio",
+  "musica": "emporio",
+  "vehiculo": "taxi",
+  "intro": "Gamarra a media mañana: galería sobre galería, maniquíes en la vereda y miles de puestos donde nada se vende solo. Dos tiendas del mismo jirón sacan el mismo polo y se pelean al cliente: son sustitutos. El carrete de hilo y la aguja se van juntos en la misma bolsa: son complementarios. La elasticidad cruzada es exactamente eso, y el signo te dice cuál de los dos casos tienes al frente.",
+  "repaso": [
+    "Elasticidad CRUZADA: mide la sensibilidad de la Qd del bien X ante cambios en el precio de OTRO bien, el Y.",
+    "1ERA FÓRMULA, con variaciones porcentuales: Exy = %ΔQdx / %ΔPy. Arriba la cantidad de X, abajo el precio de Y.",
+    "EL CUADRO: Exy mayor que 0 son SUSTITUTOS · Exy menor que 0 son COMPLEMENTARIOS · Exy igual a 0 son NO RELACIONADOS.",
+    "SUSTITUTOS: sube el precio del otro y la gente se pasa al tuyo, así que tu cantidad SUBE. Los dos se mueven igual y el signo sale positivo.",
+    "COMPLEMENTARIOS: sube el precio del otro y como van juntos, tu cantidad BAJA. Se mueven al revés y el signo sale negativo.",
+    "Exy igual a 0 no significa que falten datos: significa que los bienes no tienen nada que ver, como las zapatillas y la alfalfa.",
+    "2DA FÓRMULA, con un momento inicial y uno final: sacas las dos variaciones porcentuales y las divides. Vale por punto o por arco.",
+    "MODELO DEL DESPLAZAMIENTO. Paso 1: hallas el equilibrio original del mercado de X.",
+    "Paso 2: con la NUEVA demanda de X pero manteniendo el PRECIO DE EQUILIBRIO ANTERIOR, hallas la nueva Qd. El precio de X se queda quieto porque el que cambió fue el precio de Y.",
+    "La elasticidad NO se saca del nuevo punto de equilibrio: ahí ya se movieron el precio y la cantidad de X a la vez.",
+    "OJO con el enunciado: si te piden «método del punto medio», las dos variaciones van por arco, dividiendo entre el promedio."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                        ",
+    "                    o o o                                         o o o                                         o o o                     o o o                           o o o                           o o o                               o o o                     ",
+    "            ?                 o o       L                     o o G                               o o                   V                     o o             1                 o o           L   o o                 o o           ?               o o       1         ",
+    "                    ====                                          ====                                          ====                      ====                            ====                            ====                                ====                      ",
+    "                          o o                       o o                     o o                         o o                     o o                       o o                 o o               o o             o o                   o o                 o o           ",
+    "  P               E                   C                   E           X             E                     C         E       X                           E             C                   E           X             E                   X             B             M   ",
+    "##############################################   ###########################################    ######################################   #########################################    ####################################   ###########################################",
+    "##############################################   ###########################################    ######################################   #########################################    ####################################   ###########################################",
+    "##############################################   ###########################################    ######################################   #########################################    ####################################   ###########################################"
+  ]
+}
