@@ -111,6 +111,14 @@ const TEMAS_MUSICA = {
     bajo:    ["C3",2,"G2",2,"C3",2,"G2",2,"F2",2,"C3",2,"G2",2,"C3",2,
               "D3",2,"A2",2,"C3",2,"G2",2,"C3",4],
   },
+  galeria: { // Cercado: Mesa Redonda a media mañana, cumbia de parlante, rápida y con gancho
+    tempo: 0.12, onda: "square",
+    melodia: ["E5",1,"D5",1,"C5",2,"D5",1,"E5",1,"G5",2,
+              "E5",1,"D5",1,"C5",2,"A4",1,"C5",1,"D5",2,
+              "C5",1,"E5",1,"G5",2,"A5",1,"G5",1,"E5",2,
+              "D5",2,"C5",1,"D5",1,"C5",4],
+    bajo:    ["C3",4,"G2",4,"A2",4,"E3",4,"F2",4,"C3",4,"G2",4,"C3",4],
+  },
 };
 
 function arrancarCtx() {

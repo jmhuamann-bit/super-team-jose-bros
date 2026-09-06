@@ -1,0 +1,138 @@
+{
+  "nivel": "level15",
+  "clase": "Clase 01 · PC2 — Repaso y el mercado sin intervención del gobierno",
+  "fuente": "Apuntes de la 1era clase de la PC2 — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b15-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "En el análisis de bienestar, la demanda y la oferta tienen cada una otro nombre.\n\n¿Cuáles son?",
+      "opciones": [
+        "La demanda es la curva de las MÁXIMAS disposiciones a pagar y la oferta la de las MÍNIMAS disposiciones para vender",
+        "La demanda es la de las mínimas disposiciones a pagar y la oferta la de las máximas para vender",
+        "Las dos son curvas de disposición a pagar, una del comprador y otra del vendedor",
+        "No tienen otro nombre: son simplemente la demanda y la oferta"
+      ],
+      "correcta": 0,
+      "explicacion": "Cada punto de la demanda dice lo MÁXIMO que alguien pagaría por esa unidad, y cada punto de la oferta lo MÍNIMO que alguien aceptaría para soltarla, que va ligado a sus costos. De esos dos nombres salen los dos excedentes."
+    },
+    {
+      "id": "b15-q2",
+      "nivel": "comprension",
+      "enunciado": "En el gráfico, el EXCEDENTE DEL CONSUMIDOR cumple tres condiciones.\n\n¿Cuáles son?",
+      "opciones": [
+        "Encima de la demanda, debajo del precio y hasta la cantidad transada",
+        "DEBAJO de la demanda, ENCIMA del precio pagado y hasta la cantidad transada",
+        "Debajo de la demanda y debajo de la oferta, sin límite de cantidad",
+        "Es todo el rectángulo de precio por cantidad"
+      ],
+      "correcta": 1,
+      "explicacion": "Tres condiciones y ni una más: por debajo de la curva de máximas disposiciones a pagar, por encima del precio que se pagó de verdad, y hasta la cantidad transada. El excedente del productor es el espejo: encima de la oferta, debajo del precio y hasta la misma cantidad."
+    },
+    {
+      "id": "b15-q3",
+      "nivel": "aplicacion",
+      "enunciado": "La demanda inversa de un mercado es p = −q + 10 y la oferta inversa p = q + 2.\n\n¿Cuáles son el equilibrio y los dos excedentes?",
+      "opciones": [
+        "Qe = 4, Pe = 6, EC = 8 y EP = 8",
+        "Qe = 6, Pe = 4, EC = 8 y EP = 8",
+        "Qe = 4, Pe = 6, EC = 16 y EP = 16",
+        "Qe = 4, Pe = 6, EC = 24 y EP = 8"
+      ],
+      "correcta": 0,
+      "explicacion": "Igualas: −q + 10 = q + 2, o sea q = 4 y p = 6. El EC es el triángulo entre el intercepto 10 y el precio 6: (10 − 6)(4)/2 = 8. El EP es el de abajo, entre el precio 6 y el intercepto 2: (6 − 2)(4)/2 = 8. El excedente total es 16."
+    },
+    {
+      "id": "b15-q4",
+      "nivel": "comprension",
+      "enunciado": "El mercado está en equilibrio y sin intervención.\n\n¿Se compra y se vende una unidad que esté DESPUÉS de la cantidad transada?",
+      "opciones": [
+        "Sí, siempre hay alguien dispuesto a comprarla",
+        "Sí, pero solo si el gobierno interviene",
+        "NO: ahí la máxima disposición a pagar ya quedó por DEBAJO de la mínima disposición para vender, así que nadie gana con esa unidad",
+        "No, porque a esa altura ya se acabó el producto"
+      ],
+      "correcta": 2,
+      "explicacion": "Después de la cantidad transada, el comprador valora esa unidad menos de lo que al vendedor le cuesta soltarla: el trato dejaría a alguien perdiendo. Antes de la cantidad transada pasa al revés, la máxima a pagar está por encima de la mínima a vender, y por eso sí se transa."
+    },
+    {
+      "id": "b15-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Sube el precio de la cebada, el principal insumo de la cerveza, y la gente se pasa al pisco: la demanda de pisco se EXPANDE.\n\n¿Cómo se ajusta ese mercado?",
+      "opciones": [
+        "Se genera sobreproducción, baja el precio, y al final el Pe y la Qe son menores",
+        "Se genera ESCASEZ (Qd > Qs), que se soluciona con un alza de precios: la Qs aumenta y la Qd disminuye hasta el equilibrio final, con Pe y Qe MAYORES",
+        "No pasa nada: la cerveza y el pisco son bienes independientes",
+        "Se genera escasez pero el precio baja hasta llegar al equilibrio"
+      ],
+      "correcta": 1,
+      "explicacion": "La cerveza y el pisco son sustitutos: si la cerveza se encarece, la gente demanda más pisco. Con la demanda expandida, al precio viejo falta producto, sube el precio, y por ley de oferta la Qs aumenta mientras por ley de demanda la Qd disminuye, hasta el equilibrio final. Terminan mayores el Pe y la Qe."
+    },
+    {
+      "id": "b15-q6",
+      "nivel": "comprension",
+      "enunciado": "En otro mercado se EXPANDE la oferta.\n\n¿Cómo queda el equilibrio final?",
+      "opciones": [
+        "Escasez, sube el precio, y el Pe y la Qe terminan mayores",
+        "Escasez, baja el precio, y el Pe termina menor y la Qe mayor",
+        "SOBREPRODUCCIÓN (Qs > Qd), baja el precio, y al final el Pe es MENOR y la Qe MAYOR",
+        "Sobreproducción, baja el precio, y al final el Pe y la Qe son los dos menores"
+      ],
+      "correcta": 2,
+      "explicacion": "Con la oferta expandida sobra producto al precio viejo, así que el precio baja. Al bajar, por ley de oferta la Qs disminuye y por ley de demanda la Qd aumenta, hasta el equilibrio final: precio más bajo pero cantidad más alta. Ojo con no confundirlo con la CONTRACCIÓN de la demanda, donde caen los dos."
+    },
+    {
+      "id": "b15-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Un mercado tiene oferta p = 4q + 4 y demanda p = −2q + 10.\n\nEn el punto de equilibrio, ¿quién es más inelástico?",
+      "opciones": [
+        "La demanda, porque su pendiente es negativa",
+        "Los dos igual, porque se cruzan en el mismo punto",
+        "No se puede saber sin conocer los motivos de la elasticidad",
+        "LA OFERTA: en el equilibrio (Q = 1, P = 8) su elasticidad es 2 y la de la demanda 4 en valor absoluto"
+      ],
+      "correcta": 3,
+      "explicacion": "Igualas 4q + 4 = −2q + 10 y sale Q = 1, P = 8. Pasas cada ecuación a su forma directa: q = 5 − 0,5p y q = 0,25p − 1. Aplicas (Δq/Δp)(p/q): la demanda da −4 y la oferta 2. Las dos son elásticas, pero la oferta lo es menos."
+    },
+    {
+      "id": "b15-q8",
+      "nivel": "comprension",
+      "enunciado": "JEFE 1/3. Dos compradores tienen la misma plata, pero uno está dispuesto a pagar mucho más que el otro por el mismo producto.\n\n¿De qué depende esa máxima disposición a pagar?",
+      "opciones": [
+        "De cuánta plata tenga cada uno en el bolsillo",
+        "Del precio que le ponga el vendedor",
+        "De la cantidad que haya disponible en el mercado",
+        "De qué tan VALIOSO —o sea inelástico— sea el producto para él: mientras más inelástico, más está dispuesto a pagar"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la reflexión de la clase. Un bien de primera necesidad o sin sustitutos es inelástico, y por eso aguanta un precio altísimo. Del otro lado, la mínima disposición para vender sube mientras más costoso y más flexible sea producir cada unidad."
+    },
+    {
+      "id": "b15-q9",
+      "nivel": "comprension",
+      "enunciado": "JEFE 2/3. En un mercado la OFERTA es perfectamente ELÁSTICA (una horizontal) y la demanda es típica.\n\n¿Cómo quedan los excedentes?",
+      "opciones": [
+        "El excedente del PRODUCTOR es CERO y todo el excedente se lo lleva el consumidor",
+        "El excedente del consumidor es cero y todo se lo lleva el productor",
+        "Los dos excedentes son cero",
+        "Se reparten mitad y mitad"
+      ],
+      "correcta": 0,
+      "explicacion": "Con la oferta horizontal, el precio de mercado es exactamente la mínima disposición para vender de cada unidad: el productor no gana ni un sol por encima de su costo. Y al revés, con la DEMANDA perfectamente elástica el que se queda sin excedente es el consumidor."
+    },
+    {
+      "id": "b15-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. Sin que el gobierno meta la mano,\n\n¿cómo se mejora de forma natural el bienestar social de un mercado?",
+      "opciones": [
+        "Subiendo el precio, así los productores ganan más",
+        "Bajando el precio, así los consumidores ganan más",
+        "No se puede: sin intervención el bienestar siempre se queda igual",
+        "Con EXPANSIONES de la demanda o de la oferta: se transa más cantidad y el excedente total crece"
+      ],
+      "correcta": 3,
+      "explicacion": "En el equilibrio libre ya se hicieron todos los tratos que dejaban ganancia, así que mover solo el precio no crea bienestar nuevo: se lo pasa de un bolsillo al otro. Lo único que agranda la torta es que las curvas se corran a la derecha."
+    }
+  ]
+}

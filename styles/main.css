@@ -115,6 +115,23 @@ body{
 .totales span{background:var(--panel);border:2px solid var(--borde);padding:5px 9px}
 
 .ruta{display:flex;flex-direction:column;gap:0}
+
+/* banda que parte la campaña por práctica (PC1, PC2, …) */
+.seccion{display:flex;align-items:center;gap:12px;margin:26px 0 14px;flex-wrap:wrap}
+.ruta>.seccion:first-child{margin-top:2px}
+.seccion .etiqueta{
+  font-family:var(--display);font-size:22px;letter-spacing:.06em;text-transform:uppercase;
+  color:#12102a;background:var(--amarillo);border:3px solid var(--borde);
+  box-shadow:var(--sombra-dura);padding:3px 14px;line-height:1.25;
+}
+.seccion .nota{font-size:13.5px;color:var(--tinta-2)}
+.seccion .linea{flex:1;min-width:24px;height:4px;background:repeating-linear-gradient(to right,var(--borde) 0 8px,transparent 8px 16px)}
+.seccion .cuenta{font-family:var(--dato);font-size:12px;color:var(--tinta-2);background:var(--panel);border:2px solid var(--borde);padding:4px 9px}
+.seccion.s2 .etiqueta{background:var(--cyan)}
+.seccion.s3 .etiqueta{background:var(--verde)}
+.seccion.s4 .etiqueta{background:var(--fucsia);color:#fff}
+/* el último distrito de una práctica ya no estira su hilo hacia la siguiente */
+.parada:has(+ .seccion)::before{display:none}
 .parada{position:relative;display:flex;gap:14px;align-items:stretch;padding-bottom:6px}
 /* línea vertical que conecta los distritos */
 .parada::before{

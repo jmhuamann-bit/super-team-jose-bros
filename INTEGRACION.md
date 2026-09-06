@@ -71,6 +71,19 @@ disponibles. Un distrito solo es jugable si trae `mapa` **y** tiene `abierto: tr
 
 `retos` son 7 enemigos + 1 jefe.
 
+Dos campos opcionales agrupan los distritos por práctica:
+
+| Campo | Para qué |
+|---|---|
+| `seccion` | etiqueta corta de la práctica, por ejemplo `"PC1"` o `"PC2"` |
+| `seccionNota` | el texto chico que la acompaña, por ejemplo `"Medidas de tendencia central"` |
+
+Cada vez que `seccion` cambia respecto del distrito anterior, la campaña dibuja
+una banda separadora. La numeración de `clase` puede reiniciarse en cada práctica
+(la PC2 vuelve a empezar en `"Clase 01"`), así que **para identificar un nivel usa
+`id`, nunca `clase`**. Si un distrito no trae `seccion`, sigue apareciendo en la
+banda que esté abierta en ese momento.
+
 ### `questions/levelN_questions.json` — el banco de preguntas
 
 Diez preguntas por clase. Las últimas `preguntasJefe` se reservan para el jefe final;

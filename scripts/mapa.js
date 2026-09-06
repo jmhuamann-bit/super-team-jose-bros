@@ -5,6 +5,10 @@
  * (de Lima a Perú, a América Latina o a lo que sea) NO se toca este archivo:
  * basta con editar ese JSON. Los distritos sin nivel aún se muestran como
  * "próximamente" para que el estudiante vea hacia dónde va la campaña.
+ *
+ * Si un nivel trae "seccion" (por ejemplo "PC2"), se dibuja una banda cada
+ * vez que ese valor cambia: así la campaña queda partida por práctica sin
+ * tocar nada más. El texto chico de la banda sale de "seccionNota".
  */
 import { Almacen } from "./almacen.js";
 
@@ -29,8 +33,27 @@ export function pintarMapa(campana, alElegir) {
 
   ruta.innerHTML = "";
   let anteriorCompletado = true;   // el primer distrito siempre está abierto
+  let seccionActual = null;        // para saber cuándo toca una banda nueva
+  let numeroSeccion = 0;           // le da su color a cada banda
 
   campana.niveles.forEach((nivel) => {
+    // ¿arranca una práctica nueva? entonces va la banda antes del distrito
+    if (nivel.seccion && nivel.seccion !== seccionActual) {
+      seccionActual = nivel.seccion;
+      numeroSeccion++;
+      const dela = campana.niveles.filter((n) => n.seccion === seccionActual);
+      const hechos = dela.filter((n) => Almacen.estaCompletado(n.id)).length;
+      const banda = document.createElement("div");
+      banda.className = `seccion s${numeroSeccion}`;
+      banda.innerHTML = `
+        <span class="etiqueta">${seccionActual}</span>
+        <span class="nota">${nivel.seccionNota || ""}</span>
+        <span class="linea"></span>
+        <span class="cuenta">${hechos}/${dela.length}</span>`;
+      ruta.appendChild(banda);
+      anteriorCompletado = true;   // cada práctica arranca destrabada
+    }
+
     const completado = Almacen.estaCompletado(nivel.id);
     // un distrito se puede jugar si tiene mapa y, o bien está marcado como
     // "abierto" en el JSON, o bien ya se terminó el distrito anterior

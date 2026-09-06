@@ -1,0 +1,43 @@
+{
+  "id": "level15",
+  "distrito": "Cercado de Lima",
+  "clase": "Clase 01 · PC2",
+  "titulo": "La galería del regateo",
+  "tema": "galeria",
+  "musica": "galeria",
+  "vehiculo": "mototaxi",
+  "intro": "Entre Mesa Redonda y Polvos Azules el precio no lo pone nadie: se negocia. El comprador llega con un máximo en la cabeza, el vendedor con un mínimo, y lo que sobra en el medio es lo que cada uno se lleva de regalo. Eso son los EXCEDENTES, y de eso trata la PC2. Arrancamos con el mercado libre, sin que el gobierno meta la mano.",
+  "repaso": [
+    "REPASO. Demanda inversa es la que está despejada en P (p = −q + 10) y directa la despejada en Q (q = p − 2). Para el equilibrio se igualan las dos en la misma forma.",
+    "REPASO. Motivos de la elasticidad precio de la DEMANDA: la necesidad y la sustitución. De la OFERTA: la flexibilidad de producción y la abundancia de insumos. Y con el tiempo, los bienes se vuelven más ELÁSTICOS.",
+    "REPASO. Elasticidad punto: E = (Δq/Δp)·(p/q), con la ecuación en su forma DIRECTA y evaluada en el punto de equilibrio.",
+    "La DEMANDA también se llama curva de las MÁXIMAS DISPOSICIONES A PAGAR: cada punto dice lo más que alguien pagaría por esa unidad.",
+    "La OFERTA también se llama curva de las MÍNIMAS DISPOSICIONES PARA VENDER: cada punto dice lo menos que alguien aceptaría, y va ligado a sus costos.",
+    "EXCEDENTE DEL CONSUMIDOR: lo que va DEBAJO de la demanda, ENCIMA del precio pagado y hasta la CANTIDAD TRANSADA. Son esas tres condiciones, ni una más.",
+    "EXCEDENTE DEL PRODUCTOR: el espejo. ENCIMA de la oferta, DEBAJO del precio y hasta la cantidad transada.",
+    "Una unidad ANTES de la cantidad transada sí se compra y se vende: la máxima a pagar está por encima de la mínima a vender, así que hay ganancia para repartir. Una unidad DESPUÉS ya no: ahí el comprador la valora menos de lo que al vendedor le cuesta soltarla.",
+    "Sin intervención, el bienestar social solo mejora de forma natural con EXPANSIONES de la demanda o de la oferta: sube la cantidad transada y con ella el excedente total.",
+    "MODELO DEL AJUSTE AL EQUILIBRIO: 1) identificar el mercado, ofertante y demandante; 2) reconocer si hay expansión (a la derecha) o contracción (a la izquierda); 3) graficar el único desplazamiento; 4) explicar el ajuste.",
+    "Y el ajuste se explica así: (a) ¿hay ESCASEZ (exceso de demanda) o SOBREPRODUCCIÓN (exceso de oferta)?; (b) se soluciona subiendo o bajando el precio; (c) al moverse el precio, por ley de oferta la Qs va para un lado y por ley de demanda la Qd para el otro, «hasta llegar al equilibrio final»; (d) comparas el equilibrio inicial con el final.",
+    "Los cuatro casos ya armados: expansión de la D → escasez → sube el precio → Pe y Qe MAYORES. Contracción de la S → escasez → sube el precio → Pe mayor y Qe MENOR. Contracción de la D → sobreproducción → baja el precio → Pe y Qe MENORES. Expansión de la S → sobreproducción → baja el precio → Pe MENOR y Qe MAYOR.",
+    "CASOS ATÍPICOS de eficiencia: con la OFERTA perfectamente elástica (horizontal) el excedente del productor es CERO; con la DEMANDA perfectamente elástica el que queda en cero es el del consumidor.",
+    "Dos reflexiones: la MÁXIMA disposición a pagar sube mientras más valioso —o sea más inelástico— sea el producto. Y la MÍNIMA disposición para vender sube mientras más costoso y más flexible sea producir cada unidad."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                ",
+    "                              o o o                               o o o                               o o o                                 o o o                           o o o                             o o o                             o o o                           ",
+    "                  ?                     o o       L           o o           G                 o o                       V                       o o         1                     o o         o o L                       o o     ?                   o o             1         ",
+    "                              ====                                ====                                ====                                  ====                            ====                              ====                              ====                            ",
+    "                                  o o                 o o                 o o                       o o                         o o                     o o         o o                             o o         o o                 o o                         o o             ",
+    "  P                     E             C                   E           X       E                             C       E       X                       E                   C                   E           X             E                 X                 B                 M   ",
+    "############################################    ########################################   #########################################    ########################################   #########################################    ################################################",
+    "############################################    ########################################   #########################################    ########################################   #########################################    ################################################",
+    "############################################    ########################################   #########################################    ########################################   #########################################    ################################################"
+  ]
+}

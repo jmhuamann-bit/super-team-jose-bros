@@ -200,6 +200,10 @@ const FICHAS = [
   { sprite: "carrete", nombre: "El Carrete Suelto", texto: "Jura que el hilo se vende solo, cuando siempre se va con la aguja." },
   { sprite: "tijera", nombre: "La Tijera del Signo", texto: "Corta el menos de la elasticidad y convierte complementarios en sustitutos." },
   { sprite: "jalador", nombre: "El Jalador de Gamarra", texto: "Jefe de La Victoria: te mete a cualquier galería sin saber si esa tienda le compite o le complementa." },
+  { sprite: "percha", nombre: "La Percha sin Excedente", texto: "Cree que lo que ganó en la compra es lo que pagó, y no lo que se ahorró." },
+  { sprite: "caja", nombre: "La Caja de la Cantidad de Más", texto: "Insiste en vender una unidad después de la cantidad transada, donde ya nadie gana." },
+  { sprite: "etiqueta", nombre: "La Etiqueta al Revés", texto: "Confunde la máxima disposición a pagar con la mínima disposición para vender." },
+  { sprite: "regateador", nombre: "El Regateador del Ajuste", texto: "Jefe del Cercado: ve que falta producto y baja el precio, justo al revés de lo que pide el ajuste." },
 ];
 
 export function galeriaPersonajes(contenedor) {

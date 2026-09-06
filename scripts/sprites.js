@@ -1283,6 +1283,74 @@ const META = [      // arco de meta (16 × 16)
   "rwr..........rwr",
 ];
 
+const PERCHA = [   // la percha de la galería: cree que lo que ganó es lo que pagó (14 × 12)
+  "..............",
+  "......kk......",
+  ".....k..k.....",
+  "......kk......",
+  ".kkkkkkkkkkkk.",
+  "rrrr......rrrr",
+  "rrrrrrrrrrrrrr",
+  ".rrrrrrrrrrrr.",
+  ".rrrrrrrrrrrr.",
+  ".rrrrrrrrrrrr.",
+  ".rrrr....rrrr.",
+  "..............",
+];
+const P_PERCHA = { k: "#8a8a90", r: "#c2264a" };
+
+const CAJA = [   // la caja de más de Mesa Redonda: la unidad que ya nadie quiere (13 × 12)
+  ".............",
+  ".............",
+  "..mmmmmmmmm..",
+  ".mmmmmmmmmmm.",
+  ".mmmwwwwwmmm.",
+  ".mmmwwwwwmmm.",
+  ".mmmmmmmmmmm.",
+  ".mmmmkkkmmmm.",
+  ".mmmmmmmmmmm.",
+  "..mmmmmmmmm..",
+  ".............",
+  ".............",
+];
+const P_CAJA = { m: "#c9945c", w: "#e8c99c", k: "#7a5c3a" };
+
+const ETIQUETA = [   // la etiqueta de precio: confunde la máxima con la mínima (13 × 12)
+  ".............",
+  "....kk.......",
+  "...kyyk......",
+  "..kyyyyk.....",
+  ".kyywyyyk....",
+  ".kyyyyyyyk...",
+  ".kyyyyyyyyk..",
+  ".kyyyyyyyyyk.",
+  "..kyyyyyyyk..",
+  "...kkkkkkk...",
+  ".............",
+  ".............",
+];
+const P_ETIQUETA = { k: "#8a6a2c", y: "#e8c15a", w: "#f2ead8" };
+
+const REGATEADOR = [  // jefe del Cercado: el que baja el precio justo cuando falta producto (20 × 16)
+  "......kkkkkk........",
+  ".....kkkkkkkk.......",
+  ".....cccccccc.......",
+  ".....cckkcckkc......",
+  ".....cccccccc.......",
+  "......cmmmmc........",
+  ".....rrrrrrrr.......",
+  "....rrrrrrrrrr..ww..",
+  "...rrrrrrrrrrr..ww..",
+  "...rrrrrrrrrrr..ww..",
+  "...rrrrrrrrrrr..ww..",
+  "...nnnnnnnnnn.......",
+  "...nnnn..nnnn.......",
+  "...nnnn..nnnn.......",
+  "..kkkkk..kkkkk......",
+  "....................",
+];
+const P_REGATEADOR = { k: "#241a2e", c: "#d9a679", m: "#5c4632", r: "#3f8f9d", n: "#3b3550", w: "#f2ead8" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1362,6 +1430,10 @@ const DEFINICIONES = {
   carrete:      [CARRETE, P_CARRETE],
   tijera:       [TIJERA, P_TIJERA],
   jalador:      [JALADOR, P_JALADOR],
+  percha:       [PERCHA, P_PERCHA],
+  caja:         [CAJA, P_CAJA],
+  etiqueta:     [ETIQUETA, P_ETIQUETA],
+  regateador:   [REGATEADOR, P_REGATEADOR],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

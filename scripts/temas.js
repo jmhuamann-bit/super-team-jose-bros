@@ -1215,6 +1215,107 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     CERCADO DE LIMA — media mañana entre Mesa Redonda y Polvos
+     Azules. Galerías de tres pisos apretadas una contra otra,
+     letreros encendidos, cajas apiladas hasta el techo y el
+     «¿cuánto es lo menos, casero?» de fondo. Es el mercado más
+     libre de Lima: acá el precio no lo pone nadie, se negocia.
+     ========================================================= */
+  galeria: {
+    nombre: "Cercado de Lima",
+    cielo: [[0, "#4a86c4"], [0.42, "#8fb8d8"], [0.78, "#d0d8d4"], [1, "#e8dcc0"]],
+    suelo: { cara: "#8f8a80", borde: "#bab4a8", tierra: "#544f47", plataforma: "#7a2f6b", plataformaBorde: "#ffd166" },
+    acento: "#e8b13c",
+
+    bichos: ["percha", "caja", "etiqueta"],
+    nombresBichos: ["La Percha sin Excedente", "La Caja de la Cantidad de Más", "La Etiqueta al Revés"],
+    jefe: "regateador",
+    nombreJefe: "El Regateador del Ajuste",
+
+    fondo(ctx, cam, t) {
+      // el sol tapado a medias por las galerías
+      ctx.fillStyle = "rgba(255,246,214,.20)";
+      ctx.beginPath(); ctx.arc(220, 62, 54, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,250,230,.9)";
+      ctx.beginPath(); ctx.arc(220, 62, 24, 0, Math.PI * 2); ctx.fill();
+
+      // las galerías del fondo, apiladas piso sobre piso hasta arriba
+      repetir(ctx, cam, 178, 0.26, (x, i) => {
+        const bx = x + 12, pisos = 4 + (i % 3), alto = pisos * 28, base = 300;
+        ctx.fillStyle = ["#c0b8a8", "#b4aca0", "#c8bcac"][i % 3];
+        ctx.fillRect(bx, base - alto, 132, alto);
+        for (let p = 0; p < pisos; p++) {
+          const py = base - alto + 8 + p * 28;
+          ctx.fillStyle = "rgba(70,80,95,.5)";
+          for (let fx = bx + 10; fx < bx + 122; fx += 26) ctx.fillRect(fx, py, 16, 15);
+        }
+        // el letrero grande de la galería en la fachada
+        ctx.fillStyle = ["#c2264a", "#2f6b8f", "#e8b13c", "#3f8f55"][i % 4];
+        ctx.fillRect(bx + 8, base - alto - 16, 116, 14);
+        ctx.fillStyle = "rgba(255,255,255,.65)";
+        for (let k = 0; k < 6; k++) ctx.fillRect(bx + 16 + k * 18, base - alto - 12, 10, 6);
+      });
+
+      // la cuadra de puestos de la vereda, con sus toldos y sus focos
+      repetir(ctx, cam, 146, 0.5, (x, i) => {
+        const bx = x + 10, base = 336;
+        ctx.fillStyle = ["#e8dcc4", "#dfe4e8", "#f0e0d0", "#dce8dc"][i % 4];
+        ctx.fillRect(bx, base - 66, 120, 66);
+        // el toldo a rayas del puesto
+        for (let k = 0; k < 6; k++) {
+          ctx.fillStyle = k % 2 ? "#c2264a" : "#f2f6ff";
+          ctx.fillRect(bx - 4 + k * 21, base - 74, 21, 13);
+        }
+        // el escaparate iluminado, con las perchas colgadas
+        ctx.fillStyle = "rgba(255,236,180,.8)";
+        ctx.fillRect(bx + 12, base - 52, 96, 38);
+        ctx.fillStyle = "#8a7a6a";
+        for (let k = 0; k < 4; k++) ctx.fillRect(bx + 22 + k * 22, base - 48, 5, 26);
+        // el foco pelado colgando del toldo
+        const brillo = 0.6 + 0.3 * Math.abs(Math.sin(t / 30 + i));
+        ctx.fillStyle = `rgba(255,226,150,${brillo.toFixed(2)})`;
+        ctx.beginPath(); ctx.arc(bx + 60, base - 58, 4, 0, Math.PI * 2); ctx.fill();
+      });
+
+      // las guirnaldas de ropa y las cajas apiladas, ya en la vereda
+      repetir(ctx, cam, 112, 0.76, (x, i) => {
+        const bx = x + 8, base = 356;
+        if (i % 2 === 0) {
+          // la torre de cajas de cartón
+          const pisos = 3 + (i % 3);
+          for (let k = 0; k < pisos; k++) {
+            ctx.fillStyle = k % 2 ? "#c9945c" : "#bd8a52";
+            ctx.fillRect(bx, base - (k + 1) * 15, 46, 14);
+            ctx.fillStyle = "rgba(0,0,0,.20)";
+            ctx.fillRect(bx, base - (k + 1) * 15 + 11, 46, 3);
+          }
+        } else {
+          // el burro de ropa colgada
+          ctx.fillStyle = "#8a8a90";
+          ctx.fillRect(bx + 4, base - 44, 3, 44);
+          ctx.fillRect(bx + 62, base - 44, 3, 44);
+          ctx.fillRect(bx + 4, base - 46, 61, 4);
+          const cols = ["#c2264a", "#2f6b8f", "#e8b13c", "#3f8f55", "#a45cff"];
+          for (let k = 0; k < 5; k++) {
+            ctx.fillStyle = cols[(i + k) % 5];
+            ctx.fillRect(bx + 8 + k * 12, base - 42, 9, 24);
+          }
+        }
+      });
+    },
+
+    clima(ctx, t) {
+      // el polvillo de tela y cartón flotando bajo los focos
+      for (let i = 0; i < 22; i++) {
+        const x = (i * 143 - t * 0.9) % 880 - 20;
+        const y = 120 + ((i * 73) % 220) + Math.sin(t / 34 + i) * 8;
+        ctx.fillStyle = `rgba(244,238,222,${(0.12 + 0.16 * Math.abs(Math.sin(t / 28 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 3, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */
