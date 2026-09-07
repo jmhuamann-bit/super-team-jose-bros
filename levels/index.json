@@ -205,12 +205,26 @@
       "titulo": "La galería del regateo",
       "icono": "🛍",
       "seccion": "PC2",
-      "seccionNota": "Bienestar social y mercado sin intervención",
+      "seccionNota": "Bienestar, mercado libre e impuestos",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
       "mapa": "levels/level15.json",
       "preguntas": "questions/level15_questions.json"
+    },
+    {
+      "id": "level16",
+      "clase": "Clase 02",
+      "distrito": "Puente Piedra",
+      "titulo": "El peaje de la incidencia",
+      "icono": "🛣",
+      "seccion": "PC2",
+      "seccionNota": "Bienestar, mercado libre e impuestos",
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level16.json",
+      "preguntas": "questions/level16_questions.json"
     }
   ]
 }

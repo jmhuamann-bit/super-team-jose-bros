@@ -1,0 +1,42 @@
+{
+  "id": "level16",
+  "distrito": "Puente Piedra",
+  "clase": "Clase 02 · PC2",
+  "titulo": "El peaje de la incidencia",
+  "tema": "peaje",
+  "musica": "peaje",
+  "vehiculo": "bus",
+  "intro": "En el peaje de Puente Piedra el cobro se le hace al que maneja. Pero cualquiera que haya tomado ese bus sabe que el pasaje también sube, así que la pregunta de verdad es otra: una cosa es a quién SE LE PONE el impuesto y otra muy distinta quién TERMINA PAGÁNDOLO. De eso trata esta clase, y el que decide el reparto no es el gobierno: es la elasticidad.",
+  "repaso": [
+    "Después del impuesto el mercado se parte en dos precios: el que PAGA el consumidor (Pc, arriba) y el que RECIBE el vendedor (Pv, abajo). La diferencia entre los dos es exactamente el impuesto, y esa franja se la queda el Estado.",
+    "La CANTIDAD TRANSADA (Qt) es donde termina el rectángulo del impuesto, y siempre queda por debajo de la cantidad de equilibrio.",
+    "Entre la Qt y la Qe original queda SIEMPRE el triángulo de la PÉRDIDA DE EFICIENCIA SOCIAL (PES).",
+    "Recaudación del Estado = T · Qt (el rectángulo). PES = T · (Qe − Qt) / 2 (el triángulo).",
+    "Los excedentes se achican por tres vías: cae la cantidad transada, se separan el Pc y el Pv, y quedan fuera las unidades cuya máxima disposición a pagar ya no llega a la mínima disposición para vender.",
+    "IMPUESTO AL DEMANDANTE: contrae la demanda. El intercepto en P de la DEMANDA BAJA en el valor del impuesto y la pendiente NO se toca.",
+    "Después: la Qt sale de igualar la OFERTA ORIGINAL con la DEMANDA GRAVADA. El Pventa se halla reemplazando esa Qt en la OFERTA inicial, y el Pcompra en la DEMANDA inicial (o simplemente Pventa + T).",
+    "IMPUESTO AL OFERTANTE: contrae la oferta. El intercepto en P de la OFERTA SUBE en el valor del impuesto, y la pendiente tampoco se toca.",
+    "Después: la Qt sale de igualar la DEMANDA ORIGINAL con la OFERTA GRAVADA. El Pcompra se halla en la DEMANDA inicial y el Pventa en la OFERTA inicial (o Pcompra − T).",
+    "Ojo con el paso 1 de las dos recetas: hay que pasar ambas curvas a su forma INVERSA, que es la que te muestra los interceptos en P.",
+    "IMPOSICIÓN es a quién se le pone el impuesto. INCIDENCIA es quién termina pagándolo. NO son lo mismo, y el discurso de «solo le cobraremos a las empresas, el pueblo no paga nada» se cae justo ahí.",
+    "Tres casos: si la oferta y la demanda tienen la misma elasticidad, el impuesto se parte por igual. Si la oferta es la más inelástica, carga el productor. Si la demanda es la más inelástica —el caso peruano—, carga el consumidor.",
+    "RESUMEN DE ORO: no importa a quién se lo graves, el MÁS INELÁSTICO es el que termina pagando más."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                        ",
+    "                              o o o                                 o o o                               o o o                                   o o o                             o o o                             o o o                               o o o                           ",
+    "                    ?                     o o       L           o o           G                 o o                         V                       o o         1                       o o         o o L                       o o     ?                     o o             1         ",
+    "                              ====                                  ====                                ====                                    ====                              ====                              ====                                ====                            ",
+    "                                  o o                   o o                 o o                       o o                           o o                       o o       o o                               o o         o o                 o o                           o o             ",
+    "  P                       E           C                     E         X         E                             C         E       X                       E                   C                     E           X             E                 X                   B                 M   ",
+    "##############################################   #########################################    ##########################################   #########################################    ##########################################   ###################################################",
+    "##############################################   #########################################    ##########################################   #########################################    ##########################################   ###################################################",
+    "##############################################   #########################################    ##########################################   #########################################    ##########################################   ###################################################"
+  ]
+}

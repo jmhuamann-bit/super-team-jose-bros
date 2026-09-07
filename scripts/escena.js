@@ -204,6 +204,10 @@ const FICHAS = [
   { sprite: "caja", nombre: "La Caja de la Cantidad de Más", texto: "Insiste en vender una unidad después de la cantidad transada, donde ya nadie gana." },
   { sprite: "etiqueta", nombre: "La Etiqueta al Revés", texto: "Confunde la máxima disposición a pagar con la mínima disposición para vender." },
   { sprite: "regateador", nombre: "El Regateador del Ajuste", texto: "Jefe del Cercado: ve que falta producto y baja el precio, justo al revés de lo que pide el ajuste." },
+  { sprite: "garita", nombre: "La Garita de la Imposición", texto: "Cree que el impuesto lo paga aquel a quien se lo cobran, y ahí se queda." },
+  { sprite: "barrera", nombre: "La Barrera Torcida", texto: "Al gravar una curva le tuerce la pendiente, cuando lo único que se mueve es el intercepto." },
+  { sprite: "ticket", nombre: "El Ticket al Revés", texto: "Anota el precio de compra abajo y el de venta arriba, justo al revés." },
+  { sprite: "cobrador", nombre: "El Cobrador sin Elasticidad", texto: "Jefe de Puente Piedra: jura que el impuesto siempre se parte mitad y mitad." },
 ];
 
 export function galeriaPersonajes(contenedor) {

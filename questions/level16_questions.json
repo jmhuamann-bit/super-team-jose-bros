@@ -1,0 +1,138 @@
+{
+  "nivel": "level16",
+  "clase": "Clase 02 · PC2 — Impuestos: del gráfico a la incidencia",
+  "fuente": "Apuntes de la 2da clase de la PC2 — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b16-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Un candidato promete: «con el fin de apoyar al pueblo, impondremos más IMPUESTO solo a las EMPRESAS, así el pueblo no pagará nada».\n\n¿Tiene razón?",
+      "opciones": [
+        "Sí: si el impuesto se le cobra a la empresa, el consumidor no paga nada",
+        "No: una cosa es la IMPOSICIÓN (a quién se le pone) y otra la INCIDENCIA (quién termina pagándolo)",
+        "No, porque en realidad los impuestos siempre los paga entero el consumidor",
+        "Depende de si el impuesto es un monto fijo o un porcentaje"
+      ],
+      "correcta": 1,
+      "explicacion": "El gobierno decide a quién le cobra, pero no decide quién carga con el costo: eso lo reparte el mercado. Por eso hay que separar los dos conceptos antes de responder cualquier comente sobre impuestos."
+    },
+    {
+      "id": "b16-q2",
+      "nivel": "comprension",
+      "enunciado": "Entonces, si no lo decide el gobierno,\n\n¿de qué depende cómo se reparte el impuesto entre comprador y vendedor?",
+      "opciones": [
+        "De a quién se lo grave el gobierno",
+        "Se reparte siempre mitad y mitad",
+        "Del MÁS INELÁSTICO: no importa a quién se lo graves, el más inelástico es el que termina pagando más",
+        "Del tamaño del impuesto: mientras más grande, más paga la empresa"
+      ],
+      "correcta": 2,
+      "explicacion": "Es el resumen de oro de la clase. El que no puede escaparse del mercado —el que tiene la curva más parada— es el que absorbe la mayor parte. En el Perú eso suele ser el consumidor, porque su demanda es la más inelástica."
+    },
+    {
+      "id": "b16-q3",
+      "nivel": "comprension",
+      "enunciado": "Después del impuesto aparecen dos precios distintos.\n\n¿Cuál queda arriba y por qué?",
+      "opciones": [
+        "El precio de VENTA arriba, porque el productor termina cobrando más",
+        "Los dos quedan al mismo nivel: solo cambia la cantidad",
+        "El Pc arriba, pero solo cuando el impuesto se le grava a la oferta",
+        "El precio de COMPRA arriba y el de VENTA abajo: la diferencia entre los dos es exactamente el impuesto, que se lo queda el Estado"
+      ],
+      "correcta": 3,
+      "explicacion": "El comprador desembolsa más de lo que recibe el vendedor, y ese hueco entre los dos precios es el impuesto. Multiplicado por la cantidad transada te da el rectángulo de la recaudación."
+    },
+    {
+      "id": "b16-q4",
+      "nivel": "aplicacion",
+      "enunciado": "La demanda inversa de un mercado es P = 40 − 4Q y el Estado le grava 6 soles al DEMANDANTE.\n\n¿Cuál es la demanda gravada?",
+      "opciones": [
+        "P = 34 − 4Q: se le resta el impuesto al intercepto y la pendiente no se toca",
+        "P = 40 − 10Q: se le suma el impuesto a la pendiente",
+        "P = 46 − 4Q: se le suma el impuesto al intercepto",
+        "P = 34 − 10Q: se le toca el intercepto y la pendiente"
+      ],
+      "correcta": 0,
+      "explicacion": "Gravar al demandante CONTRAE la demanda: el intercepto en P baja en el mismo valor del impuesto y la pendiente queda igual, porque la curva solo se corrió. Si el impuesto fuera a la oferta sería al revés, su intercepto SUBE en T."
+    },
+    {
+      "id": "b16-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Tamales: oferta Q = ½P − 5 y demanda Q = 10 − ¼P. El Estado le pone 6 soles de impuesto a la DEMANDA.\n\n¿Cuáles son la cantidad transada y los dos precios?",
+      "opciones": [
+        "Qt = 4, Pventa = 18 y Pcompra = 24",
+        "Qt = 5, Pventa = 20 y Pcompra = 26",
+        "Qt = 4, Pventa = 24 y Pcompra = 18",
+        "Qt = 3, Pventa = 16 y Pcompra = 22"
+      ],
+      "correcta": 0,
+      "explicacion": "En inversas: oferta P = 2Q + 10 y demanda P = 40 − 4Q, con equilibrio en Q = 5 y P = 20. La demanda gravada queda P = 34 − 4Q. La igualas con la OFERTA ORIGINAL: 2Q + 10 = 34 − 4Q, o sea Qt = 4. El Pventa sale de la oferta inicial (18) y el Pcompra de la demanda inicial (24), que también es 18 + 6."
+    },
+    {
+      "id": "b16-q6",
+      "nivel": "aplicacion",
+      "enunciado": "En ese mismo mercado de tamales la cantidad de equilibrio era 5, la transada quedó en 4 y el impuesto es de 6.\n\n¿Cuánto recauda el Estado y cuánto es la PES?",
+      "opciones": [
+        "Recaudación 30 y PES 6",
+        "Recaudación 24 y PES 3",
+        "Recaudación 24 y PES 6",
+        "Recaudación 20 y PES 5"
+      ],
+      "correcta": 1,
+      "explicacion": "La recaudación es el rectángulo, T por la cantidad transada: 6(4) = 24. La PES es el triangulito entre la Qt y la Qe: 6(5 − 4)/2 = 3. Se comprueba solo: el excedente total pasó de 75 a 72, o sea cayó exactamente esos 3."
+    },
+    {
+      "id": "b16-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Azúcar: demanda inversa P = 34 − 4Q y oferta Q = 0,5P − 2. Ahora el impuesto de 6 se le grava a los PRODUCTORES.\n\n¿Cuáles son la cantidad transada y los dos precios?",
+      "opciones": [
+        "Qt = 4, Pcompra = 18 y Pventa = 12",
+        "Qt = 5, Pcompra = 14 y Pventa = 8",
+        "Qt = 4, Pcompra = 12 y Pventa = 18",
+        "Qt = 4, Pcompra = 20 y Pventa = 14"
+      ],
+      "correcta": 0,
+      "explicacion": "La oferta inversa es P = 2Q + 4 y el equilibrio Q = 5, P = 14. Al gravar al ofertante el intercepto SUBE 6, así que la oferta gravada es P = 2Q + 10. La igualas con la DEMANDA ORIGINAL: 2Q + 10 = 34 − 4Q, o sea Qt = 4. El Pcompra sale de la demanda inicial (18) y el Pventa de la oferta inicial (12), que también es 18 − 6."
+    },
+    {
+      "id": "b16-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. En ese mercado del azúcar el precio de equilibrio era 14, y ahora el consumidor paga 18 mientras el productor recibe 12.\n\n¿Cómo se repartieron los 6 soles del impuesto?",
+      "opciones": [
+        "Mitad y mitad: 3 y 3",
+        "Todo lo pone el productor, porque a él se lo gravaron",
+        "El consumidor pone 4 y el productor 2: la demanda es la más inelástica y por eso carga con más",
+        "El consumidor pone 2 y el productor 4"
+      ],
+      "correcta": 2,
+      "explicacion": "Se lo gravaron al productor, pero el consumidor terminó pagando 4 de los 6. Y cuadra con la regla: en el equilibrio la demanda tiene elasticidad 0,7 y la oferta 1,4, así que la demanda es la más inelástica. Imposición al vendedor, incidencia sobre todo en el comprador."
+    },
+    {
+      "id": "b16-q9",
+      "nivel": "comprension",
+      "enunciado": "JEFE 2/3. En el gráfico con impuesto,\n\n¿dónde se ubican la cantidad transada y la pérdida de eficiencia social?",
+      "opciones": [
+        "La Qt es la cantidad de equilibrio de siempre, y la PES queda a la izquierda de ella",
+        "La Qt está donde EMPIEZA el rectángulo, y la PES queda a la derecha del equilibrio",
+        "La PES es todo el rectángulo de la recaudación",
+        "La Qt está donde TERMINA el rectángulo del impuesto, y la PES es el triangulito que queda entre la Qt y la Q de equilibrio"
+      ],
+      "correcta": 3,
+      "explicacion": "Dibujas el rectángulo entre la oferta y la demanda con la altura del impuesto: donde termina, ahí está la cantidad transada. Y entre esa Qt y la Qe original queda siempre el triángulo de la pérdida de eficiencia social."
+    },
+    {
+      "id": "b16-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. En el Perú la demanda de varios bienes es más inelástica que la oferta.\n\n¿Qué implica eso cuando el gobierno grava a las empresas?",
+      "opciones": [
+        "Que las empresas absorben todo el impuesto y el consumidor no siente nada",
+        "Que el impuesto se reparte por igual entre los dos lados",
+        "Que no se puede saber sin conocer primero el monto del impuesto",
+        "Que el grueso del impuesto lo termina pagando el CONSUMIDOR, aunque la imposición haya sido sobre la empresa"
+      ],
+      "correcta": 3,
+      "explicacion": "Es el tercer caso de la clase, y el que más se parece al Perú. El gobierno puede anunciar que solo grava a las empresas, pero como el consumidor no puede dejar de comprar, es él quien termina cargando con la mayor parte."
+    }
+  ]
+}

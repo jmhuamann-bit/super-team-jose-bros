@@ -1316,6 +1316,124 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     PUENTE PIEDRA — amanecer en la Panamericana Norte. Las casetas
+     del peaje con sus techos rojos, las tranqueras a rayas, la cola
+     de buses y camiones esperando su turno y los cerros áridos del
+     norte al fondo. Acá el cobro se le hace al que maneja, pero la
+     pregunta de siempre es otra: ¿quién termina pagándolo?
+     ========================================================= */
+  peaje: {
+    nombre: "Puente Piedra",
+    cielo: [[0, "#2e4a78"], [0.4, "#6a86ae"], [0.74, "#e0a476"], [1, "#f2cea0"]],
+    suelo: { cara: "#6f6f77", borde: "#a3a3ac", tierra: "#45454c", plataforma: "#b5601c", plataformaBorde: "#ffd166" },
+    acento: "#ff8c1a",
+
+    bichos: ["garita", "barrera", "ticket"],
+    nombresBichos: ["La Garita de la Imposición", "La Barrera Torcida", "El Ticket al Revés"],
+    jefe: "cobrador",
+    nombreJefe: "El Cobrador sin Elasticidad",
+
+    fondo(ctx, cam, t) {
+      // el sol saliendo por el este, todavía bajo
+      ctx.fillStyle = "rgba(255,214,150,.22)";
+      ctx.beginPath(); ctx.arc(650, 208, 78, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,200,124,.92)";
+      ctx.beginPath(); ctx.arc(650, 208, 34, 0, Math.PI * 2); ctx.fill();
+
+      // los cerros áridos del norte, en dos capas
+      repetir(ctx, cam, 500, 0.13, (x) => {
+        ctx.fillStyle = "#5c5a68";
+        ctx.beginPath();
+        ctx.moveTo(x - 90, 282);
+        ctx.quadraticCurveTo(x + 120, 176, x + 330, 282);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 360, 0.24, (x) => {
+        ctx.fillStyle = "#77707c";
+        ctx.beginPath();
+        ctx.moveTo(x - 60, 294);
+        ctx.quadraticCurveTo(x + 100, 214, x + 260, 294);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // los carteles verdes de la vía, colgados de sus pórticos
+      repetir(ctx, cam, 460, 0.34, (x) => {
+        const bx = x + 120, base = 296;
+        ctx.fillStyle = "#6b6b73";
+        ctx.fillRect(bx, base - 66, 5, 66);
+        ctx.fillRect(bx + 140, base - 66, 5, 66);
+        ctx.fillRect(bx, base - 70, 145, 6);
+        ctx.fillStyle = "#2f7d4a";
+        ctx.fillRect(bx + 26, base - 62, 96, 30);
+        ctx.fillStyle = "rgba(255,255,255,.75)";
+        for (let k = 0; k < 3; k++) ctx.fillRect(bx + 34 + k * 26, base - 54, 18, 5);
+        ctx.fillRect(bx + 34, base - 44, 60, 5);
+      });
+
+      // LAS CASETAS DEL PEAJE, con su techo rojo y su tranquera a rayas
+      repetir(ctx, cam, 168, 0.5, (x, i) => {
+        const bx = x + 16, base = 330;
+        // la caseta
+        ctx.fillStyle = "#e0d4bc";
+        ctx.fillRect(bx, base - 46, 44, 46);
+        ctx.fillStyle = "#c2264a";
+        ctx.fillRect(bx - 5, base - 54, 54, 9);
+        ctx.fillStyle = "rgba(127,176,204,.85)";
+        ctx.fillRect(bx + 8, base - 38, 28, 20);
+        // el semáforo del carril
+        ctx.fillStyle = "#5c5c66";
+        ctx.fillRect(bx + 52, base - 40, 3, 40);
+        ctx.fillStyle = i % 2 ? "#3f8f55" : "#c2264a";
+        ctx.fillRect(bx + 49, base - 46, 9, 8);
+        // la tranquera, levantada o bajada según el carril
+        ctx.save();
+        ctx.translate(bx + 56, base - 22);
+        ctx.rotate(i % 2 ? -0.9 : 0);
+        for (let k = 0; k < 6; k++) {
+          ctx.fillStyle = k % 2 ? "#c2264a" : "#f2f6ff";
+          ctx.fillRect(k * 14, -3, 14, 6);
+        }
+        ctx.restore();
+      });
+
+      // la cola de buses y camiones esperando su turno
+      repetir(ctx, cam, 196, 0.72, (x, i) => {
+        const bx = x + 10, base = 358;
+        const cols = ["#e8823c", "#2f6b8f", "#c2264a", "#3f8f55"];
+        if (i % 2 === 0) {
+          ctx.fillStyle = "#e8e2d2";                       // el bus
+          ctx.fillRect(bx, base - 40, 128, 40);
+          ctx.fillStyle = cols[i % 4];
+          ctx.fillRect(bx, base - 26, 128, 8);
+          ctx.fillStyle = "rgba(120,160,190,.55)";
+          for (let k = 0; k < 5; k++) ctx.fillRect(bx + 9 + k * 23, base - 37, 16, 10);
+        } else {
+          ctx.fillStyle = "#8a7460";                       // el camión con su tolva
+          ctx.fillRect(bx, base - 34, 84, 34);
+          ctx.fillStyle = cols[(i + 1) % 4];
+          ctx.fillRect(bx + 84, base - 28, 30, 28);
+          ctx.fillStyle = "rgba(189,232,255,.5)";
+          ctx.fillRect(bx + 90, base - 24, 17, 11);
+        }
+        ctx.fillStyle = "#1c1c26";
+        for (const lx of [bx + 22, bx + 96]) {
+          ctx.beginPath(); ctx.arc(lx, base, 8, 0, Math.PI * 2); ctx.fill();
+        }
+      });
+    },
+
+    clima(ctx, t) {
+      // el polvo de la carretera levantado por la cola de la mañana
+      for (let i = 0; i < 22; i++) {
+        const x = (i * 151 - t * 2.6) % 880 - 20;
+        const y = 170 + ((i * 63) % 190) + Math.sin(t / 22 + i) * 8;
+        ctx.fillStyle = `rgba(228,214,190,${(0.10 + 0.16 * Math.abs(Math.sin(t / 28 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 8, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

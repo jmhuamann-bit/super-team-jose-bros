@@ -1351,6 +1351,74 @@ const REGATEADOR = [  // jefe del Cercado: el que baja el precio justo cuando fa
 ];
 const P_REGATEADOR = { k: "#241a2e", c: "#d9a679", m: "#5c4632", r: "#3f8f9d", n: "#3b3550", w: "#f2ead8" };
 
+const GARITA = [   // la caseta del peaje: cree que paga aquel a quien se lo cobran (13 × 12)
+  ".............",
+  "..rrrrrrrrr..",
+  ".rrrrrrrrrrr.",
+  "..mmmmmmmmm..",
+  "..mwwwwwwwm..",
+  "..mwwwwwwwm..",
+  "..mwwwwwwwm..",
+  "..mmmmmmmmm..",
+  "..mmmmmmmmm..",
+  "..mmmmmmmmm..",
+  "..kkkkkkkkk..",
+  ".............",
+];
+const P_GARITA = { r: "#c2264a", m: "#e0d4bc", w: "#7fb0cc", k: "#5c5c66" };
+
+const BARRERA = [   // la tranquera del peaje: al gravar le tuerce la pendiente (14 × 12)
+  "..............",
+  "..............",
+  "rrwwrrwwrrwwrr",
+  "rrwwrrwwrrwwrr",
+  "......kk......",
+  "......kk......",
+  "......kk......",
+  "......kk......",
+  "......kk......",
+  ".....kkkk.....",
+  ".....kkkk.....",
+  "..............",
+];
+const P_BARRERA = { r: "#c2264a", w: "#f2f6ff", k: "#5c5c66" };
+
+const TICKET = [   // el ticket del peaje: pone el precio de compra abajo (13 × 12)
+  ".............",
+  ".............",
+  ".wwwwwwwwwww.",
+  ".wkkkkkkkkkw.",
+  ".wwwwwwwwwww.",
+  ".wkkkkkkrrrw.",
+  ".wwwwwwwwwww.",
+  ".wkkkkkwwwww.",
+  ".wwwwwwwwwww.",
+  ".w.w.w.w.w.w.",
+  ".............",
+  ".............",
+];
+const P_TICKET = { w: "#f2ead8", k: "#5c5c66", r: "#c2264a" };
+
+const COBRADOR = [  // jefe de Puente Piedra: jura que el impuesto se parte mitad y mitad (20 × 16)
+  "......kkkkkk........",
+  ".....kkkkkkkk.......",
+  ".....cccccccc.......",
+  ".....cckkcckkc......",
+  ".....cccccccc.......",
+  "......cmmmmc........",
+  ".....nnnnnnnn.......",
+  "....nnaaaaaann..cc..",
+  "...nnnaaaaaannn.cc..",
+  "...nnnaaaaaannn.cc..",
+  "...nnnaaaaaannn.....",
+  "...nnnnnnnnnnn......",
+  "...nnnn..nnnn.......",
+  "...nnnn..nnnn.......",
+  "..kkkkk..kkkkk......",
+  "....................",
+];
+const P_COBRADOR = { k: "#241a2e", c: "#d9a679", m: "#5c4632", n: "#3b4a5e", a: "#ff8c1a" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1434,6 +1502,10 @@ const DEFINICIONES = {
   caja:         [CAJA, P_CAJA],
   etiqueta:     [ETIQUETA, P_ETIQUETA],
   regateador:   [REGATEADOR, P_REGATEADOR],
+  garita:       [GARITA, P_GARITA],
+  barrera:      [BARRERA, P_BARRERA],
+  ticket:       [TICKET, P_TICKET],
+  cobrador:     [COBRADOR, P_COBRADOR],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
