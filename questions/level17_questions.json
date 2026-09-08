@@ -1,0 +1,138 @@
+{
+  "nivel": "level17",
+  "clase": "Clase 04 · PC2 — Subsidios: del gráfico a la incidencia",
+  "fuente": "Apuntes de la 4ta clase de la PC2 — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b17-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Con un SUBSIDIO también aparecen dos precios distintos.\n\n¿Cuál queda arriba?",
+      "opciones": [
+        "El precio de COMPRA arriba, igual que con el impuesto",
+        "Los dos quedan al mismo nivel: solo cambia la cantidad",
+        "El precio de VENTA arriba y el de COMPRA abajo: al revés que con el impuesto, porque acá el Estado PONE la diferencia",
+        "Depende de a quién se le haya dado el subsidio"
+      ],
+      "correcta": 2,
+      "explicacion": "Con impuesto el consumidor paga más de lo que recibe el vendedor; con subsidio es al revés: el vendedor recibe más de lo que el comprador paga, y esa diferencia la pone el Estado. Siempre Pv = Pc + S."
+    },
+    {
+      "id": "b17-q2",
+      "nivel": "comprension",
+      "enunciado": "¿Y la cantidad transada con subsidio?\n\n¿Queda por encima o por debajo de la cantidad de equilibrio?",
+      "opciones": [
+        "Por debajo, igual que con el impuesto",
+        "POR ENCIMA: el subsidio empuja a transar de más, y por eso su rectángulo es más grande y se pasa de la Qe",
+        "Exactamente igual a la de equilibrio",
+        "Depende del tamaño del subsidio: si es chico queda por debajo"
+      ],
+      "correcta": 1,
+      "explicacion": "El impuesto encoge el mercado y el subsidio lo estira. Por eso el rectángulo del gasto del gobierno es más grande que el de una recaudación y se extiende más allá de la cantidad de equilibrio."
+    },
+    {
+      "id": "b17-q3",
+      "nivel": "comprension",
+      "enunciado": "Si el Estado está regalando plata y todos transan más,\n\n¿por qué igual aparece una pérdida de eficiencia social?",
+      "opciones": [
+        "No aparece: con subsidio el bienestar solo puede subir",
+        "Porque el Estado se queda con una parte del subsidio en el camino",
+        "Porque parte del subsidio siempre se pierde en trámites",
+        "Por una MALA ASIGNACIÓN DE RECURSOS: se produce y se consume de más en este mercado, y esa plata deja de estar disponible para otros"
+      ],
+      "correcta": 3,
+      "explicacion": "Pasada la cantidad de equilibrio, cada unidad extra le cuesta al productor más de lo que el consumidor la valora. La diferencia la tapa el Estado, pero es plata quemada, y encima sale de otros mercados."
+    },
+    {
+      "id": "b17-q4",
+      "nivel": "aplicacion",
+      "enunciado": "La demanda inversa de un mercado es P = 50 − Q/100 y el gobierno le da un subsidio de 10 al DEMANDANTE.\n\n¿Cuál es la demanda subsidiada?",
+      "opciones": [
+        "P = 60 − Q/100: se le SUMA el subsidio al intercepto y la pendiente no se toca",
+        "P = 40 − Q/100: se le resta el subsidio al intercepto",
+        "P = 50 − Q/110: se le suma el subsidio a la pendiente",
+        "P = 60 − Q/110: se tocan el intercepto y la pendiente"
+      ],
+      "correcta": 0,
+      "explicacion": "El subsidio EXPANDE la curva. Si va al demandante, el intercepto de la demanda SUBE en S; si va al ofertante, el intercepto de la oferta BAJA en S. Con impuestos era exactamente al revés."
+    },
+    {
+      "id": "b17-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Energía renovable en Alemania: Qd = 5 000 − 100P y Qo = 150P. El gobierno da un subsidio de 10 euros a las FAMILIAS.\n\n¿Cuáles son la cantidad transada y los dos precios?",
+      "opciones": [
+        "Qt = 3 600, Pventa = 24 y Pcompra = 14",
+        "Qt = 3 000, Pventa = 20 y Pcompra = 10",
+        "Qt = 3 600, Pventa = 14 y Pcompra = 24",
+        "Qt = 4 000, Pventa = 26 y Pcompra = 16"
+      ],
+      "correcta": 0,
+      "explicacion": "Sin subsidio el equilibrio es Q = 3 000 y P = 20. La demanda subsidiada es P = 60 − Q/100; la igualas con la oferta original P = Q/150 y sale Qt = 3 600. El Pventa lo sacas de la oferta original (24) y el Pcompra de la demanda original (14), que también es 24 − 10."
+    },
+    {
+      "id": "b17-q6",
+      "nivel": "aplicacion",
+      "enunciado": "En ese mismo mercado alemán la cantidad de equilibrio era 3 000, la transada quedó en 3 600 y el subsidio es de 10.\n\n¿Cuánto gasta el gobierno y cuánto es la PES?",
+      "opciones": [
+        "Gasto 30 000 y PES 6 000",
+        "Gasto 36 000 y PES 3 000",
+        "Gasto 36 000 y PES 6 000",
+        "Gasto 36 000 y PES 0, porque el subsidio no genera pérdida"
+      ],
+      "correcta": 1,
+      "explicacion": "El gasto es el rectángulo: S por la cantidad transada, 10(3 600) = 36 000. La PES es el triángulo entre la Qe y la Qt: 10(3 600 − 3 000)/2 = 3 000. Se comprueba solo: los excedentes subieron 33 000 en total, o sea 3 000 menos de lo que el Estado puso."
+    },
+    {
+      "id": "b17-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Seguimos en Alemania: el precio de equilibrio era 20 y ahora el consumidor paga 14 mientras el productor recibe 24.\n\n¿Cómo se repartieron los 10 euros del subsidio?",
+      "opciones": [
+        "Mitad y mitad: 5 y 5",
+        "El consumidor recibe 4 y el productor 6",
+        "Todo el consumidor, porque a él se le dio el subsidio",
+        "El consumidor recibe 6 y el productor 4: la demanda es la más inelástica y por eso se queda con más"
+      ],
+      "correcta": 3,
+      "explicacion": "Le dieron el vale a las familias y ellas se quedaron con 6 de los 10, pero no por eso: en el equilibrio la demanda tiene elasticidad 0,67 y la oferta 1, así que la demanda es la más inelástica. La regla es la misma que en impuestos, con el signo cambiado."
+    },
+    {
+      "id": "b17-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Pescado fresco: Qd = 150 − 4P y Qo = 2P, con un subsidio de S/ 10 y sin decir a quién se le da. El equilibrio es P = 25 y Q = 50.\n\n¿Quién recibe más?",
+      "opciones": [
+        "El consumidor, porque el pescado es de primera necesidad",
+        "Se reparte por igual: 5 y 5",
+        "EL PRODUCTOR: se queda con 6,67 de los 10, porque su oferta (elasticidad 1) es más inelástica que la demanda (elasticidad 2)",
+        "No se puede saber si el enunciado no dice a quién se lo dan"
+      ],
+      "correcta": 2,
+      "explicacion": "Justamente por eso el enunciado no lo dice: no hace falta. En el equilibrio Ed = −2 y Es = 1, así que la oferta es la más inelástica y se queda con la mayor parte. El productor recibe 6,67 y el consumidor 3,33, con una Qt de 63,33."
+    },
+    {
+      "id": "b17-q9",
+      "nivel": "comprension",
+      "enunciado": "JEFE 2/3. Un ministro propone subsidiar a los VENDEDORES de insulina y asegura que subirán mucho tanto el excedente del productor como el del consumidor. La demanda de insulina es perfectamente INELÁSTICA.\n\n¿Está bien el argumento?",
+      "opciones": [
+        "No: como la demanda no se mueve, la cantidad se queda igual, el excedente del PRODUCTOR no cambia y todo el subsidio se lo lleva el consumidor",
+        "Sí: los dos excedentes suben de forma significativa",
+        "No: con demanda perfectamente inelástica el subsidio no le llega a nadie",
+        "Sí, pero solamente si el subsidio es lo bastante grande"
+      ],
+      "correcta": 0,
+      "explicacion": "Con la demanda vertical la cantidad transada no se mueve: el precio que recibe el vendedor se queda igual y el que paga el consumidor baja el subsidio entero. El productor no gana nada y, como la cantidad no cambió, tampoco hay PES: es una transferencia pura del Estado al consumidor."
+    },
+    {
+      "id": "b17-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. Un candidato promete: «daremos el subsidio SOLO a los ciudadanos, así las empresas no se benefician».\n\n¿Tiene razón?",
+      "opciones": [
+        "Sí: el que recibe el vale es el que se beneficia",
+        "Sí, siempre que el subsidio se entregue de forma directa",
+        "No, porque el subsidio siempre se lo terminan llevando las empresas",
+        "No: una cosa es a quién SE LE DA y otra quién TERMINA RECIBIÉNDOLO. No importa a quién subsidies, el MÁS INELÁSTICO se queda con más"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la misma pareja imposición-incidencia de los impuestos, con el signo cambiado. En el caso de los libros, por ejemplo, le dieron el subsidio a los lectores pero la oferta era poco flexible, así que el grueso se lo llevaron los productores."
+    }
+  ]
+}

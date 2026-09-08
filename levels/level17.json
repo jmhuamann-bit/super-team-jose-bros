@@ -1,0 +1,42 @@
+{
+  "id": "level17",
+  "distrito": "Comas",
+  "clase": "Clase 04 · PC2",
+  "titulo": "La olla común del subsidio",
+  "tema": "olla",
+  "musica": "olla",
+  "vehiculo": "combi",
+  "intro": "En La Balanza, con los murales del FITECA pintados en las fachadas, la olla común hierve en la vereda: alguien pone plata para que el plato cueste menos. Eso es un subsidio. Y así como en el peaje preguntábamos quién PAGA el impuesto, acá la pregunta es quién RECIBE el subsidio — porque no siempre es el que tiene el vale en la mano.",
+  "repaso": [
+    "El subsidio es el espejo del impuesto, pero cuidado: acá el precio de VENTA queda ARRIBA y el de COMPRA ABAJO. El vendedor recibe más de lo que el comprador paga, y esa diferencia la pone el Estado: Pv = Pc + S.",
+    "Y la cantidad transada queda POR ENCIMA de la de equilibrio, no por debajo. Por eso el rectángulo del gasto del gobierno es más grande que el de una recaudación y se pasa de la Qe.",
+    "La Qt se encuentra donde termina el rectángulo, y entre la Qe y la Qt queda SIEMPRE la pérdida de eficiencia social.",
+    "Gasto del gobierno = S · Qt (el rectángulo). PES = S · (Qt − Qe) / 2 (el triángulo).",
+    "¿POR QUÉ HAY PES SI EL ESTADO ESTÁ REGALANDO PLATA? Por una MALA ASIGNACIÓN DE RECURSOS: se produce y se consume de más en este mercado, y esa plata deja de estar disponible para otros.",
+    "SUBSIDIO AL DEMANDANTE: EXPANDE la demanda. El intercepto en P de la DEMANDA SUBE en el valor del subsidio y la pendiente no se toca.",
+    "Después: la Qt sale de igualar la OFERTA ORIGINAL con la DEMANDA SUBSIDIADA. El Pventa se halla reemplazando esa Qt en la OFERTA inicial y el Pcompra en la DEMANDA inicial (o simplemente Pventa − S).",
+    "SUBSIDIO AL OFERTANTE: EXPANDE la oferta. El intercepto en P de la OFERTA BAJA en el valor del subsidio.",
+    "Después: la Qt sale de igualar la DEMANDA ORIGINAL con la OFERTA SUBSIDIADA. El Pcompra se halla en la DEMANDA inicial y el Pventa es Pcompra + S.",
+    "Comparado con impuestos: allá el intercepto de la demanda BAJA y el de la oferta SUBE; acá es exactamente al revés. Es el único cambio de la receta.",
+    "IMPOSICIÓN es a quién se le da el subsidio. INCIDENCIA es quién termina recibiéndolo. Y el discurso de «se lo damos solo a los ciudadanos, así las empresas no ganan» se cae justo ahí.",
+    "REGLA DE ORO: no importa a quién subsidies, el MÁS INELÁSTICO es el que termina RECIBIENDO más. Es la misma regla de los impuestos, con el signo cambiado.",
+    "CASO EXTREMO: si la demanda es perfectamente inelástica, la cantidad no se mueve, el excedente del productor no cambia, el consumidor se queda con TODO el subsidio y no hay PES: es una transferencia pura."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                                ",
+    "                                                                                                                                                                                                                                                                                                ",
+    "                              o o o                                 o o o                                 o o o                                   o o o                               o o o                             o o o                                 o o o                             ",
+    "                    ?                     o o         L           o o           G                 o o                           V                       o o         1                       o o         o o L                       o o       ?                     o o               1         ",
+    "                              ====                                  ====                                  ====                                    ====                                ====                              ====                                  ====                              ",
+    "                                  o o                     o o                 o o                       o o                           o o                         o o     o o                                 o o           o o                 o o                             o o             ",
+    "  P                       E           C                       E         X         E                             C           E     X                         E                   C                     E           X             E                   X                   B                   M   ",
+    "##############################################    ##########################################   ###########################################    ##########################################   ###########################################    ######################################################",
+    "##############################################    ##########################################   ###########################################    ##########################################   ###########################################    ######################################################",
+    "##############################################    ##########################################   ###########################################    ##########################################   ###########################################    ######################################################"
+  ]
+}

@@ -205,7 +205,7 @@
       "titulo": "La galería del regateo",
       "icono": "🛍",
       "seccion": "PC2",
-      "seccionNota": "Bienestar, mercado libre e impuestos",
+      "seccionNota": "Bienestar, impuestos y subsidios",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
@@ -219,12 +219,26 @@
       "titulo": "El peaje de la incidencia",
       "icono": "🛣",
       "seccion": "PC2",
-      "seccionNota": "Bienestar, mercado libre e impuestos",
+      "seccionNota": "Bienestar, impuestos y subsidios",
       "retos": 8,
       "duracion": "3 min",
       "abierto": true,
       "mapa": "levels/level16.json",
       "preguntas": "questions/level16_questions.json"
+    },
+    {
+      "id": "level17",
+      "clase": "Clase 04",
+      "distrito": "Comas",
+      "titulo": "La olla común del subsidio",
+      "icono": "🍲",
+      "seccion": "PC2",
+      "seccionNota": "Bienestar, impuestos y subsidios",
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level17.json",
+      "preguntas": "questions/level17_questions.json"
     }
   ]
 }

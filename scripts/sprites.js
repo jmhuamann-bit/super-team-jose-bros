@@ -1419,6 +1419,74 @@ const COBRADOR = [  // jefe de Puente Piedra: jura que el impuesto se parte mita
 ];
 const P_COBRADOR = { k: "#241a2e", c: "#d9a679", m: "#5c4632", n: "#3b4a5e", a: "#ff8c1a" };
 
+const VALE = [   // el vale del subsidio: cree que el beneficiado es el del papelito (13 × 12)
+  ".............",
+  ".............",
+  ".wwwwwwwwwww.",
+  ".wgggggggggw.",
+  ".wgwwwwwwwgw.",
+  ".wgwwrrrwwgw.",
+  ".wgwwrrrwwgw.",
+  ".wgwwwwwwwgw.",
+  ".wgggggggggw.",
+  ".wwwwwwwwwww.",
+  ".w.w.w.w.w.w.",
+  ".............",
+];
+const P_VALE = { w: "#f2ead8", g: "#3f8f55", r: "#c2264a" };
+
+const CUCHARON = [   // el cucharón de la olla común: sirve los precios al revés (14 × 12)
+  "..............",
+  "..............",
+  "..........kk..",
+  ".........kk...",
+  "........kk....",
+  ".......kk.....",
+  "..www.kk......",
+  ".wwwwwk.......",
+  "wwwwwww.......",
+  ".wwwww........",
+  "..www.........",
+  "..............",
+];
+const P_CUCHARON = { k: "#3b2a1a", w: "#8f959c" };
+
+const PLATO = [   // el plato servido: jura que si el Estado regala, no se pierde nada (13 × 12)
+  ".............",
+  "...v..v..v...",
+  "..v..v..v....",
+  ".............",
+  "..rrrrrrrrr..",
+  ".krrrrrrrrrk.",
+  "kkwwwwwwwwwkk",
+  "kwwwwwwwwwwwk",
+  ".kwwwwwwwwwk.",
+  "..kwwwwwwwk..",
+  "...kkkkkkk...",
+  ".............",
+];
+const P_PLATO = { w: "#e8e2d2", r: "#c96a1c", v: "#c4d4dc", k: "#5c5c66" };
+
+const COCINERA = [  // jefa de Comas: reparte el subsidio mitad y mitad sin mirar elasticidades (20 × 16)
+  "......ppppp.........",
+  ".....ppppppp........",
+  ".....cccccccc.......",
+  ".....cckkcckkc......",
+  ".....cccccccc.......",
+  "......cmmmmc........",
+  ".....vvvvvvvv.......",
+  "....vvvvvvvvvv......",
+  "...vvvwwwwwwvvv.....",
+  "...vvvwwwwwwvvv.....",
+  "...vvvwwwwwwvvv.....",
+  "...vvvvvvvvvvvv.....",
+  "...vvvv..vvvv.......",
+  "...vvvv..vvvv.......",
+  "..kkkkk..kkkkk......",
+  "....................",
+];
+const P_COCINERA = { p: "#c2264a", c: "#d9a679", k: "#241a2e", m: "#5c4632", v: "#3f8f9d", w: "#f2ead8" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1506,6 +1574,10 @@ const DEFINICIONES = {
   barrera:      [BARRERA, P_BARRERA],
   ticket:       [TICKET, P_TICKET],
   cobrador:     [COBRADOR, P_COBRADOR],
+  vale:         [VALE, P_VALE],
+  cucharon:     [CUCHARON, P_CUCHARON],
+  plato:        [PLATO, P_PLATO],
+  cocinera:     [COCINERA, P_COCINERA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

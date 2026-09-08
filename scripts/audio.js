@@ -127,6 +127,14 @@ const TEMAS_MUSICA = {
               "A4",2,"G4",1,"A4",1,"D5",4],
     bajo:    ["D3",4,"A2",4,"F2",4,"C3",4,"G2",4,"D3",4,"A2",4,"D3",4],
   },
+  olla: { // Comas: mediodía en La Balanza, huayno-cumbia de barrio, alegre y comunitaria
+    tempo: 0.13, onda: "triangle",
+    melodia: ["G4",1,"A4",1,"C5",2,"D5",1,"C5",1,"A4",2,
+              "C5",1,"D5",1,"E5",2,"D5",1,"C5",1,"A4",2,
+              "G4",1,"C5",1,"E5",2,"D5",1,"C5",1,"D5",2,
+              "C5",2,"A4",1,"G4",1,"C5",4],
+    bajo:    ["C3",4,"G2",4,"A2",4,"F2",4,"C3",4,"E3",4,"G2",4,"C3",4],
+  },
 };
 
 function arrancarCtx() {

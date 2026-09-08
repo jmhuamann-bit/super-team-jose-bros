@@ -208,6 +208,10 @@ const FICHAS = [
   { sprite: "barrera", nombre: "La Barrera Torcida", texto: "Al gravar una curva le tuerce la pendiente, cuando lo único que se mueve es el intercepto." },
   { sprite: "ticket", nombre: "El Ticket al Revés", texto: "Anota el precio de compra abajo y el de venta arriba, justo al revés." },
   { sprite: "cobrador", nombre: "El Cobrador sin Elasticidad", texto: "Jefe de Puente Piedra: jura que el impuesto siempre se parte mitad y mitad." },
+  { sprite: "vale", nombre: "El Vale del Que Recibe", texto: "Cree que el beneficiado por el subsidio es el que tiene el papelito en la mano." },
+  { sprite: "cucharon", nombre: "El Cucharón al Revés", texto: "Sirve el precio de compra arriba y el de venta abajo, como si fuera un impuesto." },
+  { sprite: "plato", nombre: "El Plato sin Pérdida", texto: "Como el Estado está regalando plata, jura que acá no puede haber pérdida de eficiencia." },
+  { sprite: "cocinera", nombre: "La Cocinera del Reparto", texto: "Jefa de Comas: reparte el subsidio mitad y mitad sin mirar quién es el más inelástico." },
 ];
 
 export function galeriaPersonajes(contenedor) {

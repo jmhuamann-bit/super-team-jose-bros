@@ -1434,6 +1434,126 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     COMAS — mediodía en La Balanza, con las fachadas pintadas de
+     murales por el FITECA y los banderines cruzando de techo a
+     techo. En la vereda hierve la olla común, con su fila y sus
+     mesas largas: acá alguien pone plata para que el plato cueste
+     menos, y la pregunta de siempre es quién se lleva el beneficio.
+     ========================================================= */
+  olla: {
+    nombre: "Comas",
+    cielo: [[0, "#3f95d4"], [0.44, "#8cc6e6"], [0.8, "#d8e6de"], [1, "#f0e0c4"]],
+    suelo: { cara: "#a89878", borde: "#cdbd9a", tierra: "#6b6047", plataforma: "#7a3f8f", plataformaBorde: "#ffd166" },
+    acento: "#e8823c",
+
+    bichos: ["vale", "cucharon", "plato"],
+    nombresBichos: ["El Vale del Que Recibe", "El Cucharón al Revés", "El Plato sin Pérdida"],
+    jefe: "cocinera",
+    nombreJefe: "La Cocinera del Reparto",
+
+    fondo(ctx, cam, t) {
+      // sol de mediodía, alto y franco
+      ctx.fillStyle = "rgba(255,246,204,.22)";
+      ctx.beginPath(); ctx.arc(596, 62, 58, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,252,224,.96)";
+      ctx.beginPath(); ctx.arc(596, 62, 26, 0, Math.PI * 2); ctx.fill();
+
+      // los cerros del norte, apenas insinuados detrás del barrio
+      repetir(ctx, cam, 540, 0.12, (x) => {
+        ctx.fillStyle = "#a89a92";
+        ctx.beginPath();
+        ctx.moveTo(x - 90, 286);
+        ctx.quadraticCurveTo(x + 130, 186, x + 340, 286);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // las casas del barrio, de dos y tres pisos, con sus MURALES del FITECA
+      repetir(ctx, cam, 164, 0.42, (x, i) => {
+        const bx = x + 10, base = 330, alto = 92 + ((i * 37) % 34);
+        const fach = ["#e8c15a", "#e0562f", "#4fb0a8", "#d0486a", "#8a6ac4"];
+        ctx.fillStyle = fach[i % 5];
+        ctx.fillRect(bx, base - alto, 128, alto);
+        ctx.fillStyle = "rgba(255,255,255,.28)";
+        ctx.fillRect(bx, base - alto, 128, 6);
+        // el mural: unas formas grandes y simples pintadas en la fachada
+        ctx.fillStyle = ["#f2ead8", "#2b3550", "#ffd166"][i % 3];
+        ctx.beginPath(); ctx.arc(bx + 40, base - alto + 44, 20, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = ["#2b3550", "#ffd166", "#f2ead8"][i % 3];
+        ctx.beginPath();
+        ctx.moveTo(bx + 74, base - alto + 62);
+        ctx.lineTo(bx + 100, base - alto + 22);
+        ctx.lineTo(bx + 118, base - alto + 62);
+        ctx.closePath(); ctx.fill();
+        // las ventanas y la puerta
+        ctx.fillStyle = "rgba(60,80,100,.5)";
+        ctx.fillRect(bx + 16, base - 52, 22, 20);
+        ctx.fillRect(bx + 90, base - 52, 22, 20);
+        ctx.fillStyle = "#5c4632";
+        ctx.fillRect(bx + 52, base - 34, 26, 34);
+      });
+
+      // los banderines del FITECA cruzando la calle de techo a techo
+      repetir(ctx, cam, 172, 0.6, (x) => {
+        ctx.strokeStyle = "rgba(90,90,100,.45)"; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(x, 214); ctx.quadraticCurveTo(x + 86, 246, x + 172, 214); ctx.stroke();
+        const cols = ["#e0562f", "#e8c15a", "#4fb0a8", "#d0486a", "#8a6ac4", "#3f8f55"];
+        for (let k = 1; k < 8; k++) {
+          const p = k / 8, px = x + 172 * p, py = 214 + Math.sin(p * Math.PI) * 30;
+          ctx.fillStyle = cols[k % 6];
+          ctx.beginPath();
+          ctx.moveTo(px - 6, py); ctx.lineTo(px + 6, py); ctx.lineTo(px, py + 14);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+
+      // LA OLLA COMÚN en la vereda, con su fogón y su humo, y las mesas largas
+      repetir(ctx, cam, 208, 0.78, (x, i) => {
+        const bx = x + 16, base = 356;
+        if (i % 2 === 0) {
+          // el fogón de ladrillos y la olla encima, humeando
+          ctx.fillStyle = "#a8623c";
+          ctx.fillRect(bx, base - 20, 46, 20);
+          ctx.fillStyle = "#e8823c";
+          ctx.fillRect(bx + 6, base - 14, 34, 8);
+          ctx.fillStyle = "#8f959c";                       // la olla
+          ctx.beginPath();
+          ctx.moveTo(bx - 2, base - 22);
+          ctx.lineTo(bx + 48, base - 22);
+          ctx.lineTo(bx + 42, base - 52);
+          ctx.lineTo(bx + 4, base - 52);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "#b8bcc4";
+          ctx.fillRect(bx + 2, base - 56, 42, 5);
+          for (let k = 0; k < 3; k++) {                    // el humo
+            const hy = base - 62 - k * 12 + Math.sin(t / 18 + k + i) * 3;
+            ctx.fillStyle = `rgba(236,240,244,${(0.34 - k * 0.09).toFixed(2)})`;
+            ctx.beginPath(); ctx.arc(bx + 22 + Math.sin(t / 22 + k) * 6, hy, 7 + k * 3, 0, Math.PI * 2); ctx.fill();
+          }
+        } else {
+          // la mesa larga con sus bancas y sus platos servidos
+          ctx.fillStyle = "#a8763f";
+          ctx.fillRect(bx, base - 26, 104, 6);
+          ctx.fillStyle = "#7a5c3a";
+          ctx.fillRect(bx + 8, base - 20, 4, 20); ctx.fillRect(bx + 92, base - 20, 4, 20);
+          ctx.fillRect(bx - 6, base - 12, 116, 4);
+          ctx.fillStyle = "#e8e2d2";
+          for (let k = 0; k < 4; k++) ctx.fillRect(bx + 10 + k * 24, base - 31, 16, 5);
+        }
+      });
+    },
+
+    clima(ctx, t) {
+      // el vaho tibio del mediodía sobre las ollas
+      for (let i = 0; i < 18; i++) {
+        const x = (i * 163 - t * 1.1) % 880 - 20;
+        const y = 150 + ((i * 67) % 200) + Math.sin(t / 30 + i) * 10;
+        ctx.fillStyle = `rgba(255,244,214,${(0.09 + 0.14 * Math.abs(Math.sin(t / 26 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 4, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */
