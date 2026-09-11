@@ -1487,6 +1487,74 @@ const COCINERA = [  // jefa de Comas: reparte el subsidio mitad y mitad sin mira
 ];
 const P_COCINERA = { p: "#c2264a", c: "#d9a679", k: "#241a2e", m: "#5c4632", v: "#3f8f9d", w: "#f2ead8" };
 
+const MANTA = [   // la manta del vendedor de la cachina: cree que poner el precio bajo trae producto (14 × 12)
+  "..............",
+  "..............",
+  "...rr...cc....",
+  "..rrrr.cccc...",
+  "..rrrr.cccc...",
+  ".wwwwwwwwwwww.",
+  "wwwwwwwwwwwwww",
+  "wwkkwwkkwwkkww",
+  "wwwwwwwwwwwwww",
+  ".wwwwwwwwwwww.",
+  "..............",
+  "..............",
+];
+const P_MANTA = { w: "#c2264a", k: "#8a1c38", r: "#e8c15a", c: "#3f8f9d" };
+
+const ESTANTE = [   // el estante vacío: cuenta lo que la gente quería, no lo que hay (13 × 12)
+  ".............",
+  "..mmmmmmmmm..",
+  "..mkkkkkkkm..",
+  "..mmmmmmmmm..",
+  "..mkkkkkkkm..",
+  "..mkkkkkkkm..",
+  "..mmmmmmmmm..",
+  "..mkkkkkkkm..",
+  "..mkkkkkkkm..",
+  "..mmmmmmmmm..",
+  "..m.......m..",
+  ".............",
+];
+const P_ESTANTE = { m: "#a8763f", k: "#3b2a1a" };
+
+const CARTEL = [   // el cartel del tope: pone un máximo por encima del equilibrio (14 × 12)
+  "..............",
+  ".wwwwwwwwwwww.",
+  ".wkkkkkkkkkkw.",
+  ".wkwwwwwwwwkw.",
+  ".wkwrrwrrwrkw.",
+  ".wkwrrwrrwrkw.",
+  ".wkwwwwwwwwkw.",
+  ".wkkkkkkkkkkw.",
+  ".wwwwwwwwwwww.",
+  "......mm......",
+  "......mm......",
+  "..............",
+];
+const P_CARTEL = { w: "#f2ead8", k: "#2e3238", r: "#c2264a", m: "#8a7460" };
+
+const REVENDEDOR = [  // jefe del Rímac: el que revende al precio del mercado negro (20 × 16)
+  "......kkkkkkk.......",
+  ".....kkkkkkkkk......",
+  ".....cccccccc.......",
+  ".....cckkcckkc......",
+  ".....cccccccc.......",
+  "......cmmmmc........",
+  ".....nnnnnnnn.......",
+  "....nnnnnnnnnn.gg...",
+  "...nnnnnnnnnnn.gg...",
+  "...nnnnnnnnnnn.gg...",
+  "...nnnnnnnnnnn......",
+  "...nnnnnnnnnnn......",
+  "...nnnn..nnnn.......",
+  "...nnnn..nnnn.......",
+  "..kkkkk..kkkkk......",
+  "....................",
+];
+const P_REVENDEDOR = { k: "#241a2e", c: "#c9945c", m: "#3b2a1a", n: "#5c3d6b", g: "#3f8f55" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1578,6 +1646,10 @@ const DEFINICIONES = {
   cucharon:     [CUCHARON, P_CUCHARON],
   plato:        [PLATO, P_PLATO],
   cocinera:     [COCINERA, P_COCINERA],
+  manta:        [MANTA, P_MANTA],
+  estante:      [ESTANTE, P_ESTANTE],
+  cartel:       [CARTEL, P_CARTEL],
+  revendedor:   [REVENDEDOR, P_REVENDEDOR],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

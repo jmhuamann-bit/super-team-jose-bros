@@ -135,6 +135,13 @@ const TEMAS_MUSICA = {
               "C5",2,"A4",1,"G4",1,"C5",4],
     bajo:    ["C3",4,"G2",4,"A2",4,"F2",4,"C3",4,"E3",4,"G2",4,"C3",4],
   },
+  bajopuente: { // Rímac: tarde bajo el puente, vals criollo apurado de cachina
+    tempo: 0.15, onda: "square",
+    melodia: ["E4",2,"A4",1,"C5",1,"B4",2,"A4",2,"E4",2,
+              "F4",2,"A4",1,"D5",1,"C5",2,"B4",2,"A4",2,
+              "C5",1,"B4",1,"A4",2,"G4",1,"A4",1,"E4",4],
+    bajo:    ["A2",4,"E3",4,"F2",4,"C3",4,"D3",4,"A2",4,"E3",4,"A2",4],
+  },
 };
 
 function arrancarCtx() {

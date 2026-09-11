@@ -1,0 +1,42 @@
+{
+  "id": "level18",
+  "distrito": "Rímac",
+  "clase": "Clase 05 · PC2",
+  "titulo": "El mercado de bajo el puente",
+  "tema": "bajopuente",
+  "musica": "bajopuente",
+  "vehiculo": "mototaxi",
+  "intro": "Cuando el gobierno dice «de acá no pasa el precio», lo que suele pasar es que el producto desaparece de la tienda y reaparece abajo del puente, al doble o al triple. Eso es el PRECIO MÁXIMO: suena a que ayuda al consumidor y termina cobrándole más caro. Hoy vas a aprender a dibujarlo, a calcular la escasez y a sacarle el precio al mercado negro.",
+  "repaso": [
+    "PRECIO MÁXIMO = precio techo = precio tope. Es un límite: de acá para arriba no se puede cobrar.",
+    "El tope SOLO tiene efecto si queda POR DEBAJO del precio de equilibrio. Si el arroz se paga 5 y el tope es 200 —o incluso 5—, la ley se cumple sola y no pasa nada.",
+    "Cuando sí muerde, a ese precio los productores ofrecen poco y los consumidores quieren mucho: aparece la ESCASEZ.",
+    "La CANTIDAD TRANSADA es la menor de las dos, y con un precio máximo esa es la OFRECIDA. Nadie compra lo que no existe.",
+    "Si el gobierno NO tiene capacidad de supervisión —que es lo que pasa en la realidad—, esa poquita cantidad se la queda quien más pague: nace el MERCADO NEGRO, a un precio MÁS ALTO que el de equilibrio original.",
+    "Si el gobierno SÍ puede supervisar —el caso teórico, el de los mil militares por tienda—, el precio se queda en el tope, pero la escasez y la pérdida de eficiencia siguen ahí.",
+    "RECETITA DEL PRECIO DEL MERCADO NEGRO. PASO 1: pasar la oferta y la demanda a su forma inversa y calcular todo el equilibrio sin intervención.",
+    "PASO 2: reemplazar el precio máximo en la oferta y en la demanda para sacar la cantidad ofrecida y la demandada. La resta es la escasez.",
+    "PASO 3: meter la CANTIDAD TRANSADA en la DEMANDA. Eso da el precio del mercado negro (si no hay supervisión); si la hay, el precio se queda en el tope.",
+    "PASO 4: calcular las áreas y compararlas con el mercado sin intervención.",
+    "La PES es el triángulo entre la demanda y la oferta, desde la cantidad transada hasta la de equilibrio. Son todos los intercambios que convenían a los dos lados y que el tope impidió.",
+    "CASOS ATÍPICOS (que casi siempre se preguntan con gobierno capaz de supervisar): si la OFERTA es perfectamente INELÁSTICA, la cantidad no cae, la escasez es menor que en el caso típico y la PES es CERO. El tope solo traslada excedente del productor al consumidor.",
+    "MERCADO DE PRÉSTAMOS: un tope a la tasa de interés es un precio máximo como cualquier otro. Si la tasa tope queda por debajo del equilibrio, las familias ofrecen menos ahorro, las empresas quieren más crédito y falta financiamiento."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                                        ",
+    "                                                                                                                                                                                                                                                                                                        ",
+    "                                o o o                                 o o o                                 o o o                                     o o o                                 o o o                             o o o                                   o o o                             ",
+    "                      ?                     o o         L           o o           G                 o o                             V                       o o         1                         o o         o o L                       o o       ?                       o o               1         ",
+    "                                ====                                  ====                                  ====                                      ====                                  ====                              ====                                    ====                              ",
+    "                                    o o                     o o                 o o                       o o                             o o                         o o     o o                                   o o           o o                 o o                               o o             ",
+    "  P                         E           C                       E         X         E                               C           E     X                         E                   C                       E           X             E                   X                   B                     M   ",
+    "################################################   ###########################################    ############################################   ###########################################    ############################################   #########################################################",
+    "################################################   ###########################################    ############################################   ###########################################    ############################################   #########################################################",
+    "################################################   ###########################################    ############################################   ###########################################    ############################################   #########################################################"
+  ]
+}

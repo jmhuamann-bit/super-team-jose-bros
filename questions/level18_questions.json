@@ -1,0 +1,138 @@
+{
+  "nivel": "level18",
+  "clase": "Clase 05 · PC2 — Precio máximo, escasez y mercado negro",
+  "fuente": "Apuntes de la 5ta clase de la PC2, parte 1 — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b18-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Un candidato promete: «el kilo de arroz cuesta 5 soles; en mi gobierno solo pagarán 10 céntimos, basta de abusos».\n\n¿Qué pasa en ese mercado?",
+      "opciones": [
+        "Los consumidores compran barato y todos salen ganando",
+        "Se genera ESCASEZ: a 10 céntimos casi nadie quiere producir y todo el mundo quiere comprar, y el consumidor termina perjudicado",
+        "Se genera abundancia de arroz en las tiendas",
+        "No pasa nada: el precio lo termina fijando el mercado igual"
+      ],
+      "correcta": 1,
+      "explicacion": "A ese precio el productor no cubre ni sus costos, así que la cantidad ofrecida se desploma mientras la demandada se dispara. Lo que el consumidor gana en precio lo pierde en que no hay producto, y de ahí nace el mercado negro."
+    },
+    {
+      "id": "b18-q2",
+      "nivel": "comprension",
+      "enunciado": "El arroz se paga 5 soles y el gobierno anuncia que a partir de mañana el precio máximo será de 200 soles.\n\n¿Se incumple la ley? ¿Cambia algo?",
+      "opciones": [
+        "Sí se incumple, porque 5 es menor que 200",
+        "Sí se incumple, y además se genera escasez",
+        "NO se incumple, y además el tope no tiene ningún efecto: un precio máximo solo muerde si queda POR DEBAJO del precio de equilibrio",
+        "No se puede saber sin conocer las ecuaciones del mercado"
+      ],
+      "correcta": 2,
+      "explicacion": "Nadie va a pagar 200 si el mercado cobra 5, así que la ley se cumple sola y no cambia nada. Lo mismo pasa si el tope es exactamente 5. El tope solo hace daño cuando queda por debajo del equilibrio."
+    },
+    {
+      "id": "b18-q3",
+      "nivel": "comprension",
+      "enunciado": "Con un precio máximo que sí muerde, la cantidad demandada queda en 9 y la ofrecida en 2.\n\n¿Cuánto se transa realmente?",
+      "opciones": [
+        "9, porque es lo que la gente quiere llevarse",
+        "2: se transa lo que hay, o sea lo OFRECIDO, que es el lado corto del mercado. La escasez es 9 − 2 = 7",
+        "11, sumando las dos cantidades",
+        "5,5, el promedio de las dos"
+      ],
+      "correcta": 1,
+      "explicacion": "Nadie puede comprar lo que no existe: la cantidad transada es siempre la MENOR de las dos, y con un precio máximo esa es la ofrecida. La diferencia entre lo que se quería y lo que hay es exactamente la escasez."
+    },
+    {
+      "id": "b18-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Pollo fresco: QD = 10 − ½P y QO = 3P − 4. El gobierno pone un precio máximo de S/ 2 por kilo.\n\n¿Cuál era el equilibrio y cuánta escasez aparece?",
+      "opciones": [
+        "Equilibrio en P = 4 y Q = 8; con el tope hay una escasez de 7",
+        "Equilibrio en P = 8 y Q = 4; escasez de 7",
+        "Equilibrio en P = 4 y Q = 8; escasez de 2",
+        "Equilibrio en P = 4 y Q = 8; no hay escasez, solo baja el precio"
+      ],
+      "correcta": 0,
+      "explicacion": "Igualas 10 − 0,5P = 3P − 4 y sale P = 4 con Q = 8. Con el tope en 2, la cantidad ofrecida cae a 3(2) − 4 = 2 y la demandada sube a 10 − 1 = 9. La escasez son esos 7 de diferencia."
+    },
+    {
+      "id": "b18-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Con esos mismos datos (demanda inversa P = 20 − 2Q) y un gobierno SIN capacidad de supervisión,\n\n¿a qué precio termina vendiéndose el pollo?",
+      "opciones": [
+        "A 16 soles: metes la cantidad transada (2) en la DEMANDA y sale el precio del mercado negro",
+        "A 2 soles, que es el precio máximo que puso el gobierno",
+        "A 4 soles, el precio de equilibrio original",
+        "A 20 soles, que es el intercepto de la demanda"
+      ],
+      "correcta": 0,
+      "explicacion": "Ese es el paso 3 de la recetita. Como solo hay 2 unidades y mucha gente peleándoselas, el que más valora el pollo está dispuesto a pagar 16. El tope de 2 se vuelve papel mojado: el consumidor termina pagando cuatro veces más que antes de la ley."
+    },
+    {
+      "id": "b18-q6",
+      "nivel": "aplicacion",
+      "enunciado": "En ese mercado del pollo el excedente total era 74,67 antes del tope y queda en 32,67 después.\n\n¿Cuánto es la pérdida de eficiencia social y de dónde sale?",
+      "opciones": [
+        "42: es el triángulo entre la demanda y la oferta, desde la cantidad transada (2) hasta la de equilibrio (8)",
+        "32,67, que es el excedente que quedó en pie",
+        "14, que es la diferencia entre los dos precios",
+        "7, que es el tamaño de la escasez"
+      ],
+      "correcta": 0,
+      "explicacion": "Se dejaron de transar 6 mil kilos que sí convenía intercambiar. En Q = 2 el consumidor valoraba el pollo en 16 y al productor le costaba 2: ese hueco de 14 se va cerrando hasta Q = 8, y el triángulo 14 × 6 / 2 da 42."
+    },
+    {
+      "id": "b18-q7",
+      "nivel": "comprension",
+      "enunciado": "En ese mismo mercado, ¿es socialmente eficiente que se intercambie el kilogramo 6 000 de pollo, o sea el que está en Q = 6?",
+      "opciones": [
+        "No, porque está por encima de la cantidad que se llega a transar",
+        "No, porque el gobierno lo prohibió con el tope",
+        "Da igual: el bienestar no depende de una sola unidad",
+        "SÍ: el consumidor lo valora en 8 y al productor le cuesta 3,33, así que hay una ganancia de 4,67 que el tope está impidiendo"
+      ],
+      "correcta": 3,
+      "explicacion": "Cada unidad entre la cantidad transada y la de equilibrio deja una ganancia sin realizar, y la suma de todas esas ganancias ES la pérdida de eficiencia social. Por eso el tope no solo encarece: destruye intercambios que convenían a los dos lados."
+    },
+    {
+      "id": "b18-q8",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. En un mercado de préstamos las familias ofrecen ahorro con P = Q + 5 y las empresas lo demandan con P = −2Q + 20, donde P es la tasa de interés. El congreso fija un tope del 8 %.\n\n¿Hay escasez o sobreproducción, y de cuánto?",
+      "opciones": [
+        "Sobreproducción de 3: sobra crédito en el mercado",
+        "No pasa nada: el tope queda por encima del equilibrio",
+        "ESCASEZ de 3: al 8 % las familias solo ofrecen 3 de ahorro y las empresas quieren 6",
+        "Escasez de 6"
+      ],
+      "correcta": 2,
+      "explicacion": "El equilibrio estaba en 10 %, así que el tope de 8 % sí muerde. Reemplazas: la oferta da Q = 3 y la demanda Q = 6. Faltan 3, y es el mismo cuento de siempre: al ponerle techo a la tasa, los que ahorran dejan de prestar."
+    },
+    {
+      "id": "b18-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. Con esos mismos datos y sin supervisión del gobierno,\n\n¿a qué tasa se termina prestando y cuánto es la PES?",
+      "opciones": [
+        "Al 8 %, que es el tope, y la PES es cero",
+        "Al 10 %, el equilibrio original, con una PES de 3",
+        "Al 20 %, con una PES de 6",
+        "Al 14 %: metes la cantidad transada (3) en la demanda. Y la PES es 6"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin supervisión, el crédito escaso se va al que pague más: la demanda evaluada en Q = 3 da 14 %. La ley pensada para abaratar el crédito terminó encareciéndolo del 10 % al 14 %, y de paso se perdieron 6 de excedente total."
+    },
+    {
+      "id": "b18-q10",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. Agua de manantial: la OFERTA es perfectamente INELÁSTICA y la demanda típica. Con gobierno capaz de supervisar, se pone un techo por debajo del equilibrio. Jake dice que habrá menor cantidad transada, la misma escasez y la misma PES que en el caso típico.\n\n¿Tiene razón?",
+      "opciones": [
+        "Sí, en los tres puntos",
+        "Solo en el primero: la cantidad transada sí cae",
+        "Solo en el tercero: la PES sí es la misma",
+        "En NINGUNO: con la oferta vertical la cantidad transada NO cae, la escasez es MENOR que en el típico y la PES es CERO"
+      ],
+      "correcta": 3,
+      "explicacion": "Una oferta perfectamente inelástica ofrece lo mismo a cualquier precio, así que el techo no reduce la cantidad: solo traslada excedente del productor al consumidor. Y sin caída de cantidad no hay intercambios perdidos, por eso la PES desaparece."
+    }
+  ]
+}

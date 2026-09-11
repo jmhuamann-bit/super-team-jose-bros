@@ -212,6 +212,10 @@ const FICHAS = [
   { sprite: "cucharon", nombre: "El Cucharón al Revés", texto: "Sirve el precio de compra arriba y el de venta abajo, como si fuera un impuesto." },
   { sprite: "plato", nombre: "El Plato sin Pérdida", texto: "Como el Estado está regalando plata, jura que acá no puede haber pérdida de eficiencia." },
   { sprite: "cocinera", nombre: "La Cocinera del Reparto", texto: "Jefa de Comas: reparte el subsidio mitad y mitad sin mirar quién es el más inelástico." },
+  { sprite: "manta", nombre: "La Manta del Precio Fijo", texto: "Cree que con poner el precio bajo ya va a haber producto en la manta." },
+  { sprite: "estante", nombre: "El Estante Vacío", texto: "Cuenta como transado lo que la gente quería llevarse, no lo poquito que quedó en el estante." },
+  { sprite: "cartel", nombre: "El Cartel de los 200 Soles", texto: "Pone un tope por encima del precio de equilibrio y jura que cambió algo." },
+  { sprite: "revendedor", nombre: "El Revendedor de Bajo el Puente", texto: "Jefe del Rímac: compra al precio tope y revende al del mercado negro, que sale carísimo." },
 ];
 
 export function galeriaPersonajes(contenedor) {

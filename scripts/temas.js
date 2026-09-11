@@ -1554,6 +1554,125 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     RÍMAC — media tarde bajo el Puente de Piedra. Los arcos
+     coloniales cruzando el río, las casonas de balcón al fondo y,
+     debajo, la cachina: mantas en el piso, toldos improvisados y
+     la cola de gente esperando lo que ya no se consigue en la
+     tienda. Cuando el precio no puede subir, el mercado se muda
+     abajo del puente.
+     ========================================================= */
+  bajopuente: {
+    nombre: "Rímac",
+    cielo: [[0, "#4a7ab0"], [0.42, "#8fb0cc"], [0.78, "#dcc8a8"], [1, "#eed8b0"]],
+    suelo: { cara: "#9a9082", borde: "#c2b8a6", tierra: "#5e564a", plataforma: "#7a3f2e", plataformaBorde: "#ffd166" },
+    acento: "#c2264a",
+
+    bichos: ["manta", "estante", "cartel"],
+    nombresBichos: ["La Manta del Precio Fijo", "El Estante Vacío", "El Cartel de los 200 Soles"],
+    jefe: "revendedor",
+    nombreJefe: "El Revendedor de Bajo el Puente",
+
+    fondo(ctx, cam, t) {
+      // el sol de la tarde, ya tibio
+      ctx.fillStyle = "rgba(255,236,184,.20)";
+      ctx.beginPath(); ctx.arc(196, 84, 58, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,240,200,.9)";
+      ctx.beginPath(); ctx.arc(196, 84, 26, 0, Math.PI * 2); ctx.fill();
+
+      // las casonas del Rímac al otro lado del río, con sus balcones
+      repetir(ctx, cam, 152, 0.22, (x, i) => {
+        const bx = x + 10, base = 262, alto = 62 + ((i * 31) % 28);
+        ctx.fillStyle = ["#d8c8a8", "#c9b894", "#e0d0b0", "#cbbfa0"][i % 4];
+        ctx.fillRect(bx, base - alto, 118, alto);
+        ctx.fillStyle = "rgba(255,255,255,.22)";
+        ctx.fillRect(bx, base - alto, 118, 4);
+        ctx.fillStyle = "#6b4a30";                          // el balcón de cajón
+        ctx.fillRect(bx + 20, base - alto + 20, 78, 26);
+        ctx.fillStyle = "rgba(232,177,60,.45)";
+        for (let k = 0; k < 6; k++) ctx.fillRect(bx + 25 + k * 13, base - alto + 25, 6, 16);
+      });
+
+      // el río Rímac, corriendo entre las piedras
+      ctx.fillStyle = "#6b7a6a";
+      ctx.fillRect(0, 262, CFG.ANCHO_VISTA, 26);
+      for (let i = 0; i < 30; i++) {
+        const x = (i * 57 - (cam * 0.26)) % 880 - 30;
+        ctx.fillStyle = "rgba(236,240,232,.35)";
+        ctx.fillRect(x, 266 + ((i * 13) % 18), 14, 2);
+      }
+      ctx.fillStyle = "#8a8a80";
+      for (let i = 0; i < 16; i++) {
+        const x = (i * 101 - (cam * 0.26)) % 880 - 30;
+        ctx.fillRect(x, 276 + ((i * 7) % 8), 10, 5);
+      }
+
+      // EL PUENTE DE PIEDRA: los arcos coloniales cruzando todo el nivel
+      const yTab = 244;
+      repetir(ctx, cam, 132, 0.4, (x) => {
+        ctx.fillStyle = "#b0a894";                          // el pilar entre arco y arco
+        ctx.fillRect(x, yTab, 30, 52);
+        ctx.fillStyle = "#9a9282";                          // el arco de medio punto
+        ctx.beginPath();
+        ctx.moveTo(x + 30, yTab + 52);
+        ctx.lineTo(x + 30, yTab + 26);
+        ctx.arc(x + 81, yTab + 26, 51, Math.PI, 0);
+        ctx.lineTo(x + 132, yTab + 52);
+        ctx.lineTo(x + 120, yTab + 52);
+        ctx.lineTo(x + 120, yTab + 26);
+        ctx.arc(x + 81, yTab + 26, 39, 0, Math.PI, true);
+        ctx.lineTo(x + 42, yTab + 52);
+        ctx.closePath(); ctx.fill();
+      });
+      ctx.fillStyle = "#c2baa6";                            // el tablero del puente
+      ctx.fillRect(0, yTab - 16, CFG.ANCHO_VISTA, 18);
+      ctx.fillStyle = "#d8d0bc";
+      ctx.fillRect(0, yTab - 16, CFG.ANCHO_VISTA, 4);
+      repetir(ctx, cam, 44, 0.4, (x) => {                   // la baranda de piedra
+        ctx.fillStyle = "#b0a894";
+        ctx.fillRect(x + 6, yTab - 30, 7, 14);
+        ctx.fillStyle = "#c2baa6";
+        ctx.fillRect(x, yTab - 34, 44, 5);
+      });
+
+      // LA CACHINA: los toldos improvisados y las mantas en el piso
+      repetir(ctx, cam, 126, 0.74, (x, i) => {
+        const bx = x + 10, base = 356;
+        // el toldo atado con sogas
+        const cols = ["#c2264a", "#3f8f9d", "#e8c15a", "#5c3d6b"];
+        ctx.fillStyle = "#8a8a90";
+        ctx.fillRect(bx + 2, base - 42, 3, 42);
+        ctx.fillRect(bx + 82, base - 42, 3, 42);
+        ctx.fillStyle = cols[i % 4];
+        ctx.beginPath();
+        ctx.moveTo(bx, base - 46);
+        ctx.lineTo(bx + 88, base - 46);
+        ctx.lineTo(bx + 82, base - 34);
+        ctx.lineTo(bx + 6, base - 34);
+        ctx.closePath(); ctx.fill();
+        // la manta en el piso, con las cosas encima
+        ctx.fillStyle = cols[(i + 2) % 4];
+        ctx.fillRect(bx + 4, base - 8, 80, 8);
+        ctx.fillStyle = "rgba(0,0,0,.22)";
+        ctx.fillRect(bx + 4, base - 3, 80, 3);
+        for (let k = 0; k < 4; k++) {
+          ctx.fillStyle = ["#e8dcc4", "#8a6a48", "#cfd6dc", "#e8823c"][(i + k) % 4];
+          ctx.fillRect(bx + 10 + k * 18, base - 16, 12, 8);
+        }
+      });
+    },
+
+    clima(ctx, t) {
+      // el polvo de la tarde bajo los arcos
+      for (let i = 0; i < 20; i++) {
+        const x = (i * 157 - t * 1.4) % 880 - 20;
+        const y = 140 + ((i * 69) % 190) + Math.sin(t / 28 + i) * 9;
+        ctx.fillStyle = `rgba(240,226,196,${(0.10 + 0.15 * Math.abs(Math.sin(t / 32 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 4, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */
