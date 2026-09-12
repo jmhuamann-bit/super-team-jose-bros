@@ -216,6 +216,10 @@ const FICHAS = [
   { sprite: "estante", nombre: "El Estante Vacío", texto: "Cuenta como transado lo que la gente quería llevarse, no lo poquito que quedó en el estante." },
   { sprite: "cartel", nombre: "El Cartel de los 200 Soles", texto: "Pone un tope por encima del precio de equilibrio y jura que cambió algo." },
   { sprite: "revendedor", nombre: "El Revendedor de Bajo el Puente", texto: "Jefe del Rímac: compra al precio tope y revende al del mercado negro, que sale carísimo." },
+  { sprite: "reloj", nombre: "El Reloj Marcador de Vitarte", texto: "Marca un sueldo más alto y da por hecho que la planta va a contratar a más gente." },
+  { sprite: "telar", nombre: "El Telar de una Sola Trama", texto: "Teje la misma conclusión para toda política: jura que todas bajan la cantidad transada." },
+  { sprite: "planilla", nombre: "La Planilla de un Solo Objetivo", texto: "Firma la medida que cumple un objetivo y ni mira los otros dos que le encargaron." },
+  { sprite: "ministro", nombre: "El Ministro de las Dos Medidas", texto: "Jefe de Ate: trae dos políticas, recomienda una sin dudarlo y nunca compara sus pérdidas." },
 ];
 
 export function galeriaPersonajes(contenedor) {

@@ -1,0 +1,138 @@
+{
+  "nivel": "level19",
+  "clase": "Clase 07 · PC2 — Comparación de políticas",
+  "fuente": "Apuntes de la 7ma clase de la PC2, full preguntas de exámenes — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b19-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "El Estado tiene cuatro herramientas sobre la mesa: impuesto, subsidio, precio máximo y precio mínimo.\n\n¿Cuál es la ÚNICA que AUMENTA la cantidad transada?",
+      "opciones": [
+        "El impuesto, porque el Estado mete plata al mercado",
+        "El precio máximo, porque al estar más barato la gente se lleva más",
+        "El SUBSIDIO: es la única que expande una curva; las otras tres terminan achicando la cantidad transada",
+        "El precio mínimo, porque los productores se animan a producir más"
+      ],
+      "correcta": 2,
+      "explicacion": "El impuesto contrae una curva y los dos topes dejan al mercado atrapado en el lado corto. Solo el subsidio expande la curva y hace que se transe MÁS que en el equilibrio libre."
+    },
+    {
+      "id": "b19-q2",
+      "nivel": "comprension",
+      "enunciado": "Alimentos con alto contenido de azúcar. El gobierno quiere TRES cosas a la vez: que se transe menos, que el consumidor quede mejor y recaudar. Compara un impuesto a los productores contra un precio máximo fijado justo en el precio que los productores recibirían después de ese impuesto.\n\n¿Qué le recomiendas?",
+      "opciones": [
+        "El impuesto, porque cumple los tres objetivos de golpe",
+        "NINGUNA cumple los tres: las dos dejan la misma cantidad transada y la misma PES, pero el impuesto cumple el 1 y el 3, y el techo cumple el 1 y el 2",
+        "El precio máximo, porque abarata, reduce el consumo y de paso ordena el mercado",
+        "Son idénticas en todo, así que se puede elegir cualquiera"
+      ],
+      "correcta": 1,
+      "explicacion": "Al poner el techo justo en el precio que recibiría el productor, la oferta entrega exactamente la misma cantidad que con el impuesto. Lo que cambia es el reparto: con el techo el consumidor paga menos, pero el fisco no recauda nada."
+    },
+    {
+      "id": "b19-q3",
+      "nivel": "aplicacion",
+      "enunciado": "Mercado de cigarros: demanda inversa P = 10 − 2Q y oferta inversa P = 1 + Q, con Q en millones de cajas. El gobierno fija un PRECIO MÍNIMO de S/ 5,5.\n\n¿Cuánta sobreproducción aparece y cuánto se transa?",
+      "opciones": [
+        "Sobreproducción de 2,25 y se transan 2,25: sale Qd = 2,25 y Qs = 4,5, y manda el lado corto, que acá es la demanda",
+        "Sobreproducción de 2,25, pero se transan 4,5, que es lo que los productores llevan al mercado",
+        "No hay sobreproducción: un precio mínimo de 5,5 no tiene efecto en este mercado",
+        "Sobreproducción de 1,5 y se transan 3, la cantidad de equilibrio"
+      ],
+      "correcta": 0,
+      "explicacion": "Reemplazas 5,5 en cada curva: la demanda da Qd = 2,25 y la oferta Qs = 4,5. Esa diferencia de 2,25 es el exceso de oferta, y como a nadie se le puede obligar a comprar, se transa lo que la demanda acepta."
+    },
+    {
+      "id": "b19-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Mismos cigarros (P = 10 − 2Q y P = 1 + Q), con equilibrio libre en Q = 3 y P = 4. El gobierno duda entre un IMPUESTO de S/ 1,5 a la demanda y el PRECIO MÍNIMO de S/ 5,5.\n\nSi el objetivo es reducir lo más posible el consumo, ¿cuál implementa?",
+      "opciones": [
+        "El impuesto, porque deja Qt = 2,5, menos que los 2,25 del precio mínimo",
+        "El PRECIO MÍNIMO: deja Qt = 2,25 frente a los 2,5 del impuesto, así que recorta más el consumo",
+        "Da igual: las dos dejan la misma cantidad transada",
+        "El impuesto, porque además de reducir el consumo recauda 3,75"
+      ],
+      "correcta": 1,
+      "explicacion": "Con el impuesto la demanda gravada queda P = 8,5 − 2Q y cortada con la oferta da Qt = 2,5. Con el precio mínimo la demanda solo acepta 2,25. Para ESTE objetivo gana la que deje menos cantidad, no la que recaude."
+    },
+    {
+      "id": "b19-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Mismo mercado (P = 10 − 2Q, P = 1 + Q, equilibrio en Q = 3). El impuesto de 1,5 deja Qt = 2,5 y el precio mínimo de 5,5 deja Qt = 2,25.\n\nSi ahora el criterio es la MENOR pérdida de eficiencia social, ¿cuál eliges?",
+      "opciones": [
+        "El precio mínimo, con una PES de 0,84375",
+        "El impuesto, con una PES de 3,75, que es lo que recauda el Estado",
+        "Las dos tienen la misma PES, así que el criterio no sirve para decidir",
+        "El IMPUESTO: su PES es 0,375 contra los 0,84375 del precio mínimo"
+      ],
+      "correcta": 3,
+      "explicacion": "La PES es la brecha entre demanda y oferta en la cantidad transada, por las unidades perdidas, partido en dos. Impuesto: 1,5 × 0,5 / 2 = 0,375. Precio mínimo: en Q = 2,25 la brecha es 5,5 − 3,25 = 2,25, y 2,25 × 0,75 / 2 = 0,84375."
+    },
+    {
+      "id": "b19-q6",
+      "nivel": "comprension",
+      "enunciado": "Te piden calcular el excedente del consumidor DESPUÉS de un precio máximo, con un Estado que sí fiscaliza y donde nadie transa por encima del tope.\n\n¿Qué supuesto tienes que declarar antes de medir esa área?",
+      "opciones": [
+        "Que el gobierno reparte el bien por sorteo entre todos los interesados",
+        "Que la oferta es perfectamente elástica",
+        "El RACIONAMIENTO EFICIENTE: las poquitas unidades que quedan se las llevan quienes más valoran el bien",
+        "Que en este mercado no hay pérdida de eficiencia social"
+      ],
+      "correcta": 2,
+      "explicacion": "Solo si el bien termina en manos de quien más lo valora se puede leer el excedente pegado a la parte alta de la demanda. Si se repartiera al azar, el área sería menor y el triángulo de siempre ya no serviría."
+    },
+    {
+      "id": "b19-q7",
+      "nivel": "comprension",
+      "enunciado": "Medicamentos retrovirales: la dosis es fija, diaria e ininterrumpida, o el tratamiento no funciona.\n\n¿Cómo hay que dibujar la demanda de ese mercado?",
+      "opciones": [
+        "Perfectamente INELÁSTICA, o sea vertical: el paciente necesita la misma dosis cueste lo que cueste",
+        "Perfectamente elástica, horizontal: los pacientes se van al laboratorio que cobre menos",
+        "Con pendiente negativa normal, como la de cualquier otra medicina",
+        "Vertical, y justamente por eso un precio máximo no puede generar escasez"
+      ],
+      "correcta": 0,
+      "explicacion": "Si la cantidad no responde al precio, la curva es una recta vertical. Cuidado con la última: la demanda no se mueve, pero la OFERTA sí cae con el tope, y por ahí aparece la escasez."
+    },
+    {
+      "id": "b19-q8",
+      "nivel": "comprension",
+      "enunciado": "JEFE 1/3. Mismo mercado de retrovirales, con esa demanda vertical. El MINSA pone un precio máximo por debajo del equilibrio y sí puede fiscalizar. El gremio de laboratorios propone en cambio un SUBSIDIO a los productores calibrado para que el paciente pague exactamente ese mismo precio.\n\n¿Cuál conviene en eficiencia y en acceso?",
+      "opciones": [
+        "El precio máximo, porque no le cuesta un sol al Estado",
+        "Da igual cuál: el paciente termina pagando lo mismo en las dos",
+        "El subsidio, pero solo porque le deja más excedente al laboratorio",
+        "El SUBSIDIO: con demanda vertical la cantidad no se mueve, así que no hay escasez y la PES es CERO, mientras que el techo hunde la oferta y deja pacientes sin tratamiento"
+      ],
+      "correcta": 3,
+      "explicacion": "Las dos dejan al paciente pagando lo mismo, pero con el techo la medicina solo alcanza para unos cuantos. El subsidio mantiene atendida a toda la cola y no destruye ningún intercambio: por eso su PES es cero."
+    },
+    {
+      "id": "b19-q9",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. Mercado laboral: la demanda de trabajadores es p = 1000 − q y la oferta es p = q, con p el salario por trabajador en soles. El equilibrio está en q = 500 y p = 500. El Estado fija un SALARIO MÍNIMO de S/ 850 y tiene cómo hacerlo cumplir.\n\n¿Qué pasa con el empleo?",
+      "opciones": [
+        "El empleo CAE a 150 y el desempleo es de 700: las empresas solo contratan 150 y se ofrecen 850, o sea 350 despedidos más 350 que recién salen a buscar",
+        "El empleo sube a 850, porque con un salario más alto se ofrecen más trabajadores",
+        "El empleo se queda en 500 y lo único que cambia es el salario",
+        "El empleo cae a 150 y el desempleo es de 350"
+      ],
+      "correcta": 0,
+      "explicacion": "El salario mínimo es un precio mínimo y la cantidad la manda el lado corto, que acá es la demanda de las empresas. De los 500 que trabajaban, 350 se quedan sin puesto, y otros 350 salen a buscar en vano."
+    },
+    {
+      "id": "b19-q10",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 3/3. Mismo mercado laboral (p = 1000 − q y p = q). La otra opción es un SUBSIDIO de S/ 700 por trabajador contratado. El Estado busca más empleo Y mejor salario.\n\n¿Lo logra el subsidio, y le conviene a la sociedad?",
+      "opciones": [
+        "Sí logra las dos cosas, y además mejora a la sociedad porque todos ganan excedente",
+        "No logra nada: el subsidio se lo queda enterito la empresa",
+        "Logra subir el empleo a 850, pero el salario del trabajador se cae a 150",
+        "Logra las DOS: se contratan 850 y el trabajador recibe 850 mientras la empresa paga de su bolsillo solo 150. Pero la sociedad pierde: la PES es 122 500, la misma que deja el salario mínimo"
+      ],
+      "correcta": 3,
+      "explicacion": "La demanda subsidiada es p = 1700 − q y contra la oferta da q = 850. El Estado gasta 595 000 para empujar el mercado más allá de su equilibrio, y ese exceso deja exactamente la misma PES que el salario mínimo."
+    }
+  ]
+}

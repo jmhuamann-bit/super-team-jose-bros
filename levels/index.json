@@ -253,6 +253,20 @@
       "abierto": true,
       "mapa": "levels/level18.json",
       "preguntas": "questions/level18_questions.json"
+    },
+    {
+      "id": "level19",
+      "clase": "Clase 07",
+      "distrito": "Ate",
+      "titulo": "La fábrica de las dos medidas",
+      "icono": "🏭",
+      "seccion": "PC2",
+      "seccionNota": "Bienestar, impuestos, subsidios y controles de precio",
+      "retos": 8,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level19.json",
+      "preguntas": "questions/level19_questions.json"
     }
   ]
 }

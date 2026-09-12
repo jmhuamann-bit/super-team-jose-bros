@@ -1673,6 +1673,146 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     ATE — Vitarte a primera hora. Los cerros secos encima, las
+     naves de ladrillo con la chimenea ya humeando, la Carretera
+     Central levantando polvo con los camiones de carga y, al pie
+     del portón, la cola de obreros esperando que abran el turno.
+     En este distrito se peleó el horario de ocho horas: acá se
+     comparan las políticas mirando a quién dejan adentro.
+     ========================================================= */
+  fabrica: {
+    nombre: "Ate",
+    cielo: [[0, "#6f9bc4"], [0.4, "#a9c0d2"], [0.75, "#d8ccb4"], [1, "#e8dcc2"]],
+    suelo: { cara: "#8a8f86", borde: "#b6bbb0", tierra: "#4a4a44", plataforma: "#2f3a48", plataformaBorde: "#ffd166" },
+    acento: "#d8541f",
+
+    bichos: ["reloj", "telar", "planilla"],
+    nombresBichos: ["El Reloj Marcador de Vitarte", "El Telar de una Sola Trama", "La Planilla de un Solo Objetivo"],
+    jefe: "ministro",
+    nombreJefe: "El Ministro de las Dos Medidas",
+
+    fondo(ctx, cam, t) {
+      // el sol tempranero, tibio y todavía bajo
+      ctx.fillStyle = "rgba(248,214,150,.18)";
+      ctx.beginPath(); ctx.arc(168, 78, 64, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(252,228,170,.40)";
+      ctx.beginPath(); ctx.arc(168, 78, 40, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,240,198,.92)";
+      ctx.beginPath(); ctx.arc(168, 78, 24, 0, Math.PI * 2); ctx.fill();
+
+      // los cerros secos que encajonan la Carretera Central
+      repetir(ctx, cam, 540, 0.13, (x) => {
+        ctx.fillStyle = "#9a8770";
+        ctx.beginPath();
+        ctx.moveTo(x - 70, 306);
+        ctx.lineTo(x + 150, 168);
+        ctx.lineTo(x + 350, 306);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 400, 0.22, (x) => {
+        ctx.fillStyle = "#b09a80";
+        ctx.beginPath();
+        ctx.moveTo(x - 50, 312);
+        ctx.lineTo(x + 110, 212);
+        ctx.lineTo(x + 270, 312);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // las chimeneas de las fábricas, humeando desde temprano
+      repetir(ctx, cam, 296, 0.34, (x, i) => {
+        const bx = x + 52, base = 322, alto = 132 + ((i * 37) % 30);
+        ctx.fillStyle = "#8e3b2a";                          // el fuste de ladrillo
+        ctx.fillRect(bx, base - alto, 20, alto);
+        ctx.fillStyle = "#a8543c";                          // los anillos claros
+        for (let k = 1; k <= 4; k++) ctx.fillRect(bx, base - alto + k * 24, 20, 5);
+        ctx.fillStyle = "#6e2c20";                          // la boca
+        ctx.fillRect(bx - 3, base - alto - 6, 26, 8);
+        // el humo saliendo, tres bocanadas que suben y se abren
+        for (let k = 0; k < 3; k++) {
+          const sube = ((t / 2.2 + k * 34 + i * 11) % 102);
+          const r = 9 + sube * 0.17;
+          ctx.fillStyle = `rgba(216,210,198,${(0.34 - sube / 340).toFixed(2)})`;
+          ctx.beginPath();
+          ctx.arc(bx + 10 + Math.sin((sube + k * 30) / 22) * 16, base - alto - 12 - sube, r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+
+      // las naves de ladrillo, con techo de dos aguas y el ventanal del turno
+      repetir(ctx, cam, 202, 0.54, (x, i) => {
+        const bx = x + 16, base = 352, alto = 66 + ((i * 31) % 22);
+        ctx.fillStyle = ["#9e4632", "#8e3b2a", "#a8543c", "#93402c"][i % 4];
+        ctx.fillRect(bx, base - alto, 128, alto);
+        ctx.fillStyle = "#6e2c20";                          // el zócalo oscuro
+        ctx.fillRect(bx, base - 16, 128, 16);
+        ctx.fillStyle = "#7f858c";                          // el techo de calamina a dos aguas
+        ctx.beginPath();
+        ctx.moveTo(bx - 6, base - alto);
+        ctx.lineTo(bx + 64, base - alto - 20);
+        ctx.lineTo(bx + 134, base - alto);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(200,222,236,.62)";            // el ventanal corrido
+        for (let k = 0; k < 5; k++) ctx.fillRect(bx + 12 + k * 24, base - alto + 16, 16, 20);
+        ctx.fillStyle = "#4f7a5a";                          // el portón de carga
+        ctx.fillRect(bx + 42, base - 44, 44, 28);
+        ctx.fillStyle = "rgba(255,255,255,.14)";
+        for (let k = 0; k < 5; k++) ctx.fillRect(bx + 45 + k * 9, base - 42, 3, 26);
+      });
+
+      // LA COLA DEL TURNO: los obreros al otro lado de la pista, esperando que abran
+      repetir(ctx, cam, 236, 0.5, (x, i) => {
+        const base = 356;
+        for (let k = 0; k < 6; k++) {
+          const ox = x + 18 + k * 13, alto = 17 + ((i + k) % 3) * 2;
+          ctx.fillStyle = ["#3f5f7d", "#5c4b6b", "#2f4f4a", "#6b4a30", "#4a5a6b"][(i + k) % 5];
+          ctx.fillRect(ox, base - alto, 7, alto);
+          ctx.fillStyle = "#c9945c";                        // la cabeza
+          ctx.fillRect(ox + 1, base - alto - 5, 5, 5);
+          ctx.fillStyle = "#e8c15a";                        // el casco
+          ctx.fillRect(ox, base - alto - 7, 7, 3);
+        }
+      });
+      // LA CARRETERA CENTRAL: la pista con los camiones bajando a Lima
+      ctx.fillStyle = "#5e5c58";
+      ctx.fillRect(0, 356, CFG.ANCHO_VISTA, 26);
+      ctx.fillStyle = "#6e6c66";
+      ctx.fillRect(0, 356, CFG.ANCHO_VISTA, 3);
+      for (let i = 0; i < 24; i++) {                        // la línea discontinua del centro
+        const x = (i * 58 - (cam * 0.66)) % 900 - 40;
+        ctx.fillStyle = "rgba(240,232,200,.50)";
+        ctx.fillRect(x, 370, 24, 3);
+      }
+      repetir(ctx, cam, 268, 0.66, (x, i) => {
+        const bx = x + 20, base = 380;
+        ctx.fillStyle = ["#3f6f9d", "#c94f2e", "#e8a13c", "#3f8f6d"][i % 4];
+        ctx.fillRect(bx, base - 26, 62, 22);                // la tolva
+        ctx.fillStyle = "rgba(0,0,0,.20)";
+        ctx.fillRect(bx, base - 10, 62, 6);
+        ctx.fillStyle = "#d8d2c4";                          // la cabina
+        ctx.fillRect(bx + 62, base - 30, 24, 26);
+        ctx.fillStyle = "#2e3238";
+        ctx.fillRect(bx + 68, base - 26, 14, 10);
+        ctx.fillStyle = "#24242a";                          // las llantas
+        ctx.fillRect(bx + 8, base - 6, 12, 8);
+        ctx.fillRect(bx + 38, base - 6, 12, 8);
+        ctx.fillRect(bx + 68, base - 6, 12, 8);
+      });
+      ctx.fillStyle = "#a49c8c";                            // la berma de tierra apisonada
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 6);
+
+    },
+
+    clima(ctx, t) {
+      // el polvo que levanta la Carretera Central, cruzando de costado
+      for (let i = 0; i < 24; i++) {
+        const x = (i * 151 - t * 2.6) % 880 - 20;
+        const y = 132 + ((i * 67) % 214) + Math.sin(t / 21 + i) * 8;
+        ctx.fillStyle = `rgba(226,214,190,${(0.12 + 0.18 * Math.abs(Math.sin(t / 29 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 8, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

@@ -1555,6 +1555,76 @@ const REVENDEDOR = [  // jefe del Rímac: el que revende al precio del mercado n
 ];
 const P_REVENDEDOR = { k: "#241a2e", c: "#c9945c", m: "#3b2a1a", n: "#5c3d6b", g: "#3f8f55" };
 
+const RELOJ = [   // el reloj marcador de Vitarte: cree que un sueldo más alto llena la planta (14 × 14)
+  "..............",
+  "...kkkkkkkk...",
+  "..kkkkkkkkkk..",
+  "..kkwwwwwwkk..",
+  "..kwwwwwwwwk..",
+  "..kwwwwdwwwk..",
+  "..kwwwddwwwk..",
+  "..kwwwdrrrwk..",
+  "..kwwwwwwwwk..",
+  "..kwwwwwwwwk..",
+  "..kkwwwwwwkk..",
+  "..kkkkkkkkkk..",
+  "...kyyyyyyk...",
+  "....yyyyyy....",
+];
+const P_RELOJ = { k: "#3a4450", w: "#f2ead8", d: "#2e3238", r: "#c2264a", y: "#e8c15a" };
+
+const TELAR = [   // el telar de Tejidos Vitarte: teje la misma trama para toda política (14 × 12)
+  "..............",
+  ".mmmmmmmmmmmm.",
+  ".mkkkkkkkkkkm.",
+  ".mtktktktktkm.",
+  ".mtktktktktkm.",
+  ".mrrrrrrrrrrm.",
+  ".mrrrrrrrrrrm.",
+  ".mtktktktktkm.",
+  ".mkkkkkkkkkkm.",
+  ".mmmmmmmmmmmm.",
+  "..m........m..",
+  "..m........m..",
+];
+const P_TELAR = { m: "#a8763f", k: "#3b2a1a", t: "#f2ead8", r: "#c2264a" };
+
+const PLANILLA = [   // la planilla de un solo objetivo: firma la política que cumple uno y se olvida del resto (13 × 12)
+  ".............",
+  "....ggggg....",
+  "..mmmmmmmmm..",
+  "..mwwwwwwwm..",
+  "..mwkkkkwwm..",
+  "..mwkkwwwwm..",
+  "..mwkkkkkwm..",
+  "..mwwwwwwwm..",
+  "..mwkkkwwwm..",
+  "..mwkkkkkwm..",
+  "..mwrrrrwwm..",
+  "..mmmmmmmmm..",
+];
+const P_PLANILLA = { m: "#a8763f", g: "#8a9099", w: "#f2ead8", k: "#2e3238", r: "#c2264a" };
+
+const MINISTRO = [  // jefe de Ate: trae dos medidas en la mano y recomienda una sin compararlas (20 × 16)
+  ".....kkkkkkk........",
+  "....kkkkkkkkk.......",
+  "....ckkkkkkkc.......",
+  "....cckkcckkc.......",
+  "....cccccccc........",
+  ".....cwwwwc.........",
+  "....nnwwwwnn........",
+  ".yynnnnwwnnnngg.....",
+  ".yynnnnrnnnnngg.....",
+  ".yynnnnrnnnnngg.....",
+  "...nnnnrnnnnn.......",
+  "....nnnnnnnnn.......",
+  "....nnnn.nnnn.......",
+  "....nnnn.nnnn.......",
+  "...kkkkk.kkkkk......",
+  "....................",
+];
+const P_MINISTRO = { k: "#241a2e", c: "#c9945c", n: "#2e3a52", w: "#f2ead8", r: "#c2264a", y: "#e8c15a", g: "#cfd6dc" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1650,6 +1720,10 @@ const DEFINICIONES = {
   estante:      [ESTANTE, P_ESTANTE],
   cartel:       [CARTEL, P_CARTEL],
   revendedor:   [REVENDEDOR, P_REVENDEDOR],
+  reloj:        [RELOJ, P_RELOJ],
+  telar:        [TELAR, P_TELAR],
+  planilla:     [PLANILLA, P_PLANILLA],
+  ministro:     [MINISTRO, P_MINISTRO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
