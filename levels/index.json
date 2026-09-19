@@ -267,6 +267,20 @@
       "abierto": true,
       "mapa": "levels/level19.json",
       "preguntas": "questions/level19_questions.json"
+    },
+    {
+      "id": "level20",
+      "clase": "Clase 01",
+      "distrito": "Tacna",
+      "titulo": "La frontera donde el precio manda",
+      "icono": "⛲",
+      "seccion": "Parcial",
+      "seccionNota": "Repaso de elasticidades e intervención del Estado",
+      "retos": 13,
+      "duracion": "5 min",
+      "abierto": true,
+      "mapa": "levels/level20.json",
+      "preguntas": "questions/level20_questions.json"
     }
   ]
 }

@@ -1,0 +1,203 @@
+{
+  "nivel": "level20",
+  "clase": "Clase 01 · Parcial — Elasticidades e intervención del Estado",
+  "fuente": "Apuntes de la 1ra clase del Parcial — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b20-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "El precio de un bien aumenta en 40% y la cantidad demandada disminuye en 20%.\n\n¿Cuánto es la elasticidad precio y qué tipo de bien es?",
+      "opciones": [
+        "Ep = 2 en valor absoluto: elástica, porque el precio cambió más",
+        "Ep = 0,5 en valor absoluto: INELÁSTICA, porque la cantidad se movió MENOS de lo que se movió el precio",
+        "Ep = 20, que es lo que cayó la cantidad",
+        "Ep = 60, sumando los dos cambios"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la primera fórmula: el cambio de la cantidad entre el cambio del precio, o sea 20 entre 40. Como sale menos que 1, la cantidad es POCO sensible al precio."
+    },
+    {
+      "id": "b20-q2",
+      "nivel": "comprension",
+      "enunciado": "La elasticidad precio de la demanda de un bien es 4 en valor absoluto.\n\n¿Cuál de estas afirmaciones es verdadera?",
+      "opciones": [
+        "Un aumento del precio de 4% disminuye la cantidad demandada en 1%",
+        "Un aumento del precio de 1% reduce la DEMANDA en 4%",
+        "Una reducción del precio de 1% aumenta la CANTIDAD DEMANDADA en 4%",
+        "No se puede saber, faltan datos"
+      ],
+      "correcta": 2,
+      "explicacion": "La elasticidad se lee del precio hacia la cantidad, no al revés. Y ojo con el lenguaje: lo que se mueve es la CANTIDAD DEMANDADA, no la demanda; la demanda entera solo se desplaza con los otros factores."
+    },
+    {
+      "id": "b20-q3",
+      "nivel": "aplicacion",
+      "enunciado": "La elasticidad precio de un bien es 1,4 en valor absoluto y el precio sube 15%.\n\n¿Cuánto se reduce la cantidad demandada?",
+      "opciones": [
+        "15%, lo mismo que subió el precio",
+        "21%: se multiplica 1,4 por el 15% de subida",
+        "25%",
+        "8%"
+      ],
+      "correcta": 1,
+      "explicacion": "La elasticidad es el multiplicador entre los dos cambios porcentuales. Como es mayor que 1, la cantidad tiene que caer MÁS de lo que subió el precio, y 21 es justamente más que 15."
+    },
+    {
+      "id": "b20-q4",
+      "nivel": "aplicacion",
+      "enunciado": "La ecuación de la demanda es P = −3Q + 20 y sabes que el equilibrio está en Q = 1 y P = 17.\n\nCalcula la elasticidad precio en ese punto con la tercera fórmula.",
+      "opciones": [
+        "Ep = −5,67: despejas Q = (20 − P)/3, así que la derivada es −1/3, y eso por 17/1 da −5,67. Es ELÁSTICA",
+        "Ep = −3, que es la pendiente de la ecuación",
+        "Ep = −17, que es el precio de equilibrio",
+        "Ep = −0,18, invirtiendo el resultado"
+      ],
+      "correcta": 0,
+      "explicacion": "Ojo con la trampa clásica: la elasticidad NO es la pendiente. Hay que despejar la cantidad, derivar respecto del precio y recién multiplicar por el precio sobre la cantidad de ese punto."
+    },
+    {
+      "id": "b20-q5",
+      "nivel": "comprension",
+      "enunciado": "La demanda es una recta con pendiente negativa.\n\n¿Cuál de estas afirmaciones es verdadera?",
+      "opciones": [
+        "La elasticidad precio será igual que la pendiente de la demanda, en valor absoluto",
+        "La elasticidad precio será constante a lo largo de toda la demanda",
+        "El ingreso por ventas será el mismo en todos los puntos de la demanda",
+        "NINGUNA de las anteriores: en una recta la pendiente es constante pero la elasticidad NO, y el ingreso por ventas cambia punto por punto"
+      ],
+      "correcta": 3,
+      "explicacion": "Sobre una misma recta la elasticidad va de infinito en el eje del precio hasta cero en el eje de la cantidad, pasando por unitaria justo en el medio. Por eso el ingreso por ventas sube, llega a su máximo y baja."
+    },
+    {
+      "id": "b20-q6",
+      "nivel": "aplicacion",
+      "enunciado": "El precio de un bien baja de S/ 4 a S/ 2 y la cantidad demandada sube de 10 a 20 unidades.\n\nCalcula la elasticidad precio con el MÉTODO ARCO.",
+      "opciones": [
+        "2,5",
+        "2",
+        "1: arriba va 10 entre el promedio 15 y abajo −2 entre el promedio 3, y el cociente da −1. Es UNITARIA",
+        "0,5"
+      ],
+      "correcta": 2,
+      "explicacion": "El método arco usa el punto medio en los dos denominadores, justamente para que dé lo mismo se mueva el precio para arriba o para abajo. Que salga exactamente 1 significa que el ingreso por ventas no cambió."
+    },
+    {
+      "id": "b20-q7",
+      "nivel": "comprension",
+      "enunciado": "Te contrata una empresa que quiere aumentar su ingreso por ventas.\n\n¿En cuál de estos casos le recomiendas SUBIR el precio?",
+      "opciones": [
+        "Si el bien es INELÁSTICO por el lado de la demanda",
+        "Si el bien es elástico por el lado de la demanda",
+        "Si el bien tiene elasticidad ingreso igual a cero",
+        "Si el bien es normal"
+      ],
+      "correcta": 0,
+      "explicacion": "Con un bien inelástico la gente casi no deja de comprarlo, así que lo que sube el precio compensa de sobra lo poquito que cae la cantidad. Con uno elástico pasa lo contrario: para ganar más hay que BAJAR el precio."
+    },
+    {
+      "id": "b20-q8",
+      "nivel": "comprension",
+      "enunciado": "Suben los costos de producción de un bien, o sea se contrae la oferta. Como resultado, el GASTO que los consumidores hacen en ese bien termina aumentando.\n\n¿Qué se deduce?",
+      "opciones": [
+        "Que el bien es normal",
+        "Que el bien es inferior",
+        "Que la elasticidad precio de la demanda es unitaria",
+        "Que el mercado viene operando en el tramo INELÁSTICO de la demanda"
+      ],
+      "correcta": 3,
+      "explicacion": "Al contraerse la oferta sube el precio y cae la cantidad. Que el gasto igual aumente solo puede pasar si la cantidad cayó poquito, y eso es el tramo inelástico. Por eso es FALSO que una contracción de la oferta SIEMPRE suba el ingreso por ventas."
+    },
+    {
+      "id": "b20-q9",
+      "nivel": "aplicacion",
+      "enunciado": "El ingreso de un consumidor sube 30% y como resultado su cantidad demandada de manzanas sube 10%. En otro mercado, el precio del bien A sube 3% y la cantidad demandada del bien B cae 0,3%.\n\n¿Qué se concluye de cada caso?",
+      "opciones": [
+        "Las manzanas son un bien INFERIOR y A y B son sustitutos",
+        "Las manzanas son un bien NORMAL (Ei = 0,33, positiva) y A y B son COMPLEMENTARIOS (Ec = −0,1, negativa)",
+        "Las manzanas son un bien normal y A y B no están relacionados",
+        "No se puede concluir nada: falta la elasticidad precio de cada uno"
+      ],
+      "correcta": 1,
+      "explicacion": "Las dos salen con la primera fórmula y lo único que importa es el SIGNO. En la de ingreso, positiva es normal y negativa inferior. En la cruzada, positiva son sustitutos y negativa complementarios."
+    },
+    {
+      "id": "b20-q10",
+      "nivel": "comprension",
+      "enunciado": "Sobre el EXCEDENTE DEL CONSUMIDOR, ¿cuál afirmación es verdadera?",
+      "opciones": [
+        "Se mide por el área sobre la oferta y bajo la demanda",
+        "Mide la diferencia entre el precio que el consumidor paga y el precio mínimo que estaba dispuesto a pagar",
+        "Mide la diferencia entre el PRECIO MÁXIMO que estaba dispuesto a pagar y el precio que realmente paga",
+        "Siempre es igual que la pérdida de eficiencia social"
+      ],
+      "correcta": 2,
+      "explicacion": "A la demanda se le llama la curva de las MÁXIMAS disposiciones a pagar, y el excedente es lo que te ahorraste respecto de eso. Cuidado con la primera opción: esa área es el excedente TOTAL, no el del consumidor."
+    },
+    {
+      "id": "b20-q11",
+      "nivel": "aplicacion",
+      "enunciado": "La demanda de yucas es P = 24 − 3Qd y la oferta es Qs = P − 4, con el precio en soles y la cantidad en kilogramos.\n\n¿Cuánto es el excedente del consumidor?",
+      "opciones": [
+        "37,5: el equilibrio está en Q = 5 y P = 9, así que el triángulo es (24 − 9) por 5, partido en dos",
+        "40",
+        "15,5",
+        "10"
+      ],
+      "correcta": 0,
+      "explicacion": "Primero hay que poner la oferta como P = Q + 4 para igualarla con la demanda. El intercepto 24 es la máxima disposición a pagar, y desde ahí hasta el precio de 9 va el excedente."
+    },
+    {
+      "id": "b20-q12",
+      "nivel": "comprension",
+      "enunciado": "Un TV cuesta S/ 30 y la máxima disposición a pagar de Jon Nieves por ese TV es S/ 45.\n\n¿Qué es verdadero?",
+      "opciones": [
+        "Jon Nieves no comprará el TV",
+        "Su excedente del consumidor será S/ 45",
+        "MÁS DE UNA es verdadera: sí comprará el TV Y su excedente será S/ 15",
+        "Su excedente del consumidor será S/ 15"
+      ],
+      "correcta": 2,
+      "explicacion": "Compra porque lo valora más de lo que cuesta, y el excedente es justo esa diferencia de 15. En este tipo de preguntas hay que revisar TODAS las alternativas antes de marcar la primera que parece correcta."
+    },
+    {
+      "id": "b20-q13",
+      "nivel": "comprension",
+      "enunciado": "JEFE 1/3. La demanda es MÁS INELÁSTICA que la oferta y el Estado aplica un impuesto A LOS PRODUCTORES.\n\n¿Quiénes terminan asumiendo la mayor parte?",
+      "opciones": [
+        "Los productores, porque a ellos se les cobra",
+        "Los CONSUMIDORES: la mayor carga la asume siempre el lado MÁS INELÁSTICO, sin importar a quién se le cobre el impuesto",
+        "Ambos en igual magnitud, porque el impuesto se reparte mitad y mitad",
+        "Los impuestos son un gasto para el Estado, así que no los asume nadie del mercado"
+      ],
+      "correcta": 1,
+      "explicacion": "A quién se le cobra es solo un trámite: el reparto lo deciden las elasticidades. El lado más inelástico es el que menos puede escapar cambiando de cantidad, así que se come la mayor parte."
+    },
+    {
+      "id": "b20-q14",
+      "nivel": "comprension",
+      "enunciado": "JEFE 2/3. Cuatro afirmaciones sobre la intervención del Estado.\n\n¿Cuál es la ÚNICA verdadera?",
+      "opciones": [
+        "Si la demanda tiene elasticidad precio igual a cero y se pone un impuesto al productor, el impuesto lo asume completamente el productor",
+        "Un subsidio genera una ganancia de eficiencia social",
+        "Un impuesto recae más sobre el consumidor solo si la cantidad demandada responde MÁS al precio que la ofertada",
+        "NINGUNA de las anteriores es verdadera"
+      ],
+      "correcta": 3,
+      "explicacion": "Con elasticidad cero lo paga todo el CONSUMIDOR, no el productor. El subsidio genera PÉRDIDA de eficiencia, no ganancia. Y el impuesto recae más sobre el consumidor cuando su cantidad responde MENOS, no más."
+    },
+    {
+      "id": "b20-q15",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. El gobierno fija un precio máximo EXACTAMENTE en el nivel de equilibrio del mercado.\n\n¿Qué ocurre?",
+      "opciones": [
+        "NADA: un precio máximo solo tiene efecto si queda POR DEBAJO del equilibrio; puesto justo ahí, o por encima, la ley se cumple sola",
+        "Disminuye el excedente del consumidor",
+        "Las curvas de demanda y oferta se desplazan hacia la izquierda",
+        "Se genera escasez y aparece un mercado negro"
+      ],
+      "correcta": 0,
+      "explicacion": "Un tope es un límite hacia arriba, no una obligación. Recién cuando se pone por debajo del equilibrio aparece la escasez y, con ella, el mercado negro. Lo mismo al revés con el salario mínimo: solo muerde si queda por ENCIMA."
+    }
+  ]
+}

@@ -1625,6 +1625,77 @@ const MINISTRO = [  // jefe de Ate: trae dos medidas en la mano y recomienda una
 ];
 const P_MINISTRO = { k: "#241a2e", c: "#c9945c", n: "#2e3a52", w: "#f2ead8", r: "#c2264a", y: "#e8c15a", g: "#cfd6dc" };
 
+const HITO = [   // el hito fronterizo: no sabe que la elasticidad 1 es la frontera entre elástico e inelástico (13 × 14)
+  ".............",
+  "....kkkkk....",
+  "...kwwwwwk...",
+  "...kwwwwwk...",
+  "...krrrrrk...",
+  "...kwwwwwk...",
+  "...kwwwwwk...",
+  "..kwwwwwwwk..",
+  "..kwwwwwwwk..",
+  "..kwwwwwwwk..",
+  "..kwwwwwwwk..",
+  ".kkkkkkkkkkk.",
+  ".kkkkkkkkkkk.",
+  ".............",
+];
+const P_HITO = { k: "#3a4450", w: "#f2f4f2", r: "#c2264a" };
+
+const VAGON = [   // el vagón del tren a Arica: lleva los mismos pasajeros pase lo que pase con el precio (18 × 12)
+  "..................",
+  "..mmmmmmmmmmmmmm..",
+  ".mmmmmmmmmmmmmmmm.",
+  ".mrrrrrrrrrrrrrrm.",
+  ".mrwwrwwrwwrwwrrm.",
+  ".mrwwrwwrwwrwwrrm.",
+  ".mrrrrrrrrrrrrrrm.",
+  ".mggggggggggggggm.",
+  ".mmmmmmmmmmmmmmmm.",
+  "..k..kk....kk..k..",
+  "..kkkkkk..kkkkkk..",
+  "..kkkkkk..kkkkkk..",
+];
+const P_VAGON = { m: "#7a6e58", r: "#8e3b2a", w: "#cfe0e8", g: "#e8c15a", k: "#2e2620" };
+
+const ACEITUNA = [   // la aceituna de Tacna: se queda con el signo menos y compara las elasticidades mal (12 × 13)
+  "............",
+  "....vvv.....",
+  "...vv.......",
+  "..oooooo....",
+  ".oooooooo...",
+  "oooooooooo..",
+  "ooookkooooo.",
+  "ooookkooooo.",
+  "oooooooooo..",
+  ".oooooooo...",
+  "..oooooo....",
+  "............",
+  "............",
+];
+const P_ACEITUNA = { o: "#4a5a2e", k: "#2a3018", v: "#6b8f3c" };
+
+const ADUANERO = [  // jefe de Tacna: reparte la carga mitad y mitad sin mirar quién es más inelástico (20 × 16)
+  ".....ggggggg........",
+  "....ggggggggg.......",
+  "....gggggggggg......",
+  "....ccccccccc.......",
+  "....cckkcckkc.......",
+  ".....ccrrcc.........",
+  "....nnnnnnnn........",
+  "..ccnnnwwnnncc......",
+  "..ccnnnwwnnncc.mm...",
+  "..ccnnnnnnnncc.mm...",
+  "...nnnnnnnnnn..mm...",
+  "....nnnnnnnn........",
+  "....nnnn.nnnn.......",
+  "....nnnn.nnnn.......",
+  "...kkkkk.kkkkk......",
+  "....................",
+];
+const P_ADUANERO = { g: "#3f5f4a", c: "#c9945c", k: "#241a2e", r: "#c2264a", n: "#2f4a5e", w: "#e8c15a", m: "#b0a898" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1724,6 +1795,10 @@ const DEFINICIONES = {
   telar:        [TELAR, P_TELAR],
   planilla:     [PLANILLA, P_PLANILLA],
   ministro:     [MINISTRO, P_MINISTRO],
+  hito:         [HITO, P_HITO],
+  vagon:        [VAGON, P_VAGON],
+  aceituna:     [ACEITUNA, P_ACEITUNA],
+  aduanero:     [ADUANERO, P_ADUANERO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

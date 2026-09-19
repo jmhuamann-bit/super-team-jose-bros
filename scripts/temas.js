@@ -1813,6 +1813,134 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     TACNA — la ciudad heroica a media mañana, con ese sol seco
+     del desierto. Los cerros pelados encajonando el valle, el
+     Arco Parabólico en el Paseo Cívico, las palmeras de la
+     Alameda Bolognesi y, al fondo de la avenida, la fila de
+     colectivos a la frontera: acá basta que el precio se mueva
+     un poquito para que todo el mundo cambie de decisión. Eso
+     es elasticidad en vivo.
+     ========================================================= */
+  frontera: {
+    nombre: "Tacna",
+    cielo: [[0, "#3f86c4"], [0.4, "#8fb8d4"], [0.74, "#d8d0b8"], [1, "#e8ddc2"]],
+    suelo: { cara: "#c2b494", borde: "#ded2b0", tierra: "#7a6e54", plataforma: "#3f5f4a", plataformaBorde: "#ffd166" },
+    acento: "#c2264a",
+
+    bichos: ["hito", "vagon", "aceituna"],
+    nombresBichos: ["El Hito del Uno", "El Vagón de la Cantidad Fija", "La Aceituna sin Valor Absoluto"],
+    jefe: "aduanero",
+    nombreJefe: "El Aduanero de la Intervención",
+
+    fondo(ctx, cam, t) {
+      // el sol del desierto, blanco y sin una nube que lo tape
+      ctx.fillStyle = "rgba(255,250,222,.24)";
+      ctx.beginPath(); ctx.arc(186, 66, 58, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,253,238,.96)";
+      ctx.beginPath(); ctx.arc(186, 66, 26, 0, Math.PI * 2); ctx.fill();
+
+      // los cerros pelados que encajonan el valle de Tacna
+      repetir(ctx, cam, 500, 0.12, (x) => {
+        ctx.fillStyle = "#a08d74";
+        ctx.beginPath();
+        ctx.moveTo(x - 90, 296);
+        ctx.lineTo(x + 130, 178);
+        ctx.lineTo(x + 340, 296);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 360, 0.22, (x) => {
+        ctx.fillStyle = "#b8a68a";
+        ctx.beginPath();
+        ctx.moveTo(x - 60, 306);
+        ctx.lineTo(x + 100, 224);
+        ctx.lineTo(x + 260, 306);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // LOS HITOS de la línea de frontera, marchando por el desierto
+      repetir(ctx, cam, 118, 0.3, (x) => {
+        const bx = x + 20, base = 312;
+        ctx.fillStyle = "#cfc4ac";
+        ctx.fillRect(bx, base - 16, 7, 16);
+        ctx.fillStyle = "#e8ddc2";
+        ctx.fillRect(bx, base - 16, 7, 4);
+      });
+
+      // EL ARCO PARABÓLICO del Paseo Cívico, el monumento de la ciudad
+      repetir(ctx, cam, 430, 0.4, (x) => {
+        const bx = x + 110, base = 338, alto = 108, medio = 40;
+        ctx.fillStyle = "#c9bca0";
+        ctx.beginPath();
+        ctx.moveTo(bx, base);                                 // pata izquierda
+        ctx.lineTo(bx + 13, base);
+        ctx.quadraticCurveTo(bx + 13, base - alto + 24, bx + medio, base - alto + 10);
+        ctx.quadraticCurveTo(bx + 2 * medio - 13, base - alto + 24, bx + 2 * medio - 13, base);
+        ctx.lineTo(bx + 2 * medio, base);                     // pata derecha
+        ctx.quadraticCurveTo(bx + 2 * medio, base - alto, bx + medio, base - alto - 6);
+        ctx.quadraticCurveTo(bx, base - alto, bx, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(255,255,255,.28)";              // el filo iluminado
+        ctx.fillRect(bx, base - 40, 5, 40);
+        ctx.fillRect(bx + 2 * medio - 5, base - 40, 5, 40);
+      });
+
+      // LAS PALMERAS de la Alameda Bolognesi
+      repetir(ctx, cam, 104, 0.55, (x, i) => {
+        const bx = x + 16, base = 348, alto = 52 + ((i * 17) % 18);
+        ctx.fillStyle = "#8a6a48";
+        ctx.fillRect(bx, base - alto, 6, alto);
+        ctx.fillStyle = ["#3f8f5a", "#4a9a62", "#367048"][i % 3];
+        for (let k = 0; k < 6; k++) {
+          const ang = Math.PI + (k * Math.PI) / 5;
+          ctx.beginPath();
+          ctx.moveTo(bx + 3, base - alto);
+          ctx.quadraticCurveTo(bx + 3 + Math.cos(ang) * 18, base - alto - 12, bx + 3 + Math.cos(ang) * 30, base - alto + 4 + Math.abs(Math.sin(ang)) * 7);
+          ctx.lineTo(bx + 3, base - alto + 4);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+
+      // LA AVENIDA con la fila de colectivos esperando pasajeros para la frontera
+      ctx.fillStyle = "#6e675c";
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 30);
+      ctx.fillStyle = "#7e776a";
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 3);
+      for (let i = 0; i < 26; i++) {
+        const x = (i * 57 - (cam * 0.62)) % 900 - 40;
+        ctx.fillStyle = "rgba(240,232,200,.42)";
+        ctx.fillRect(x, 368, 22, 3);
+      }
+      repetir(ctx, cam, 146, 0.72, (x, i) => {
+        const bx = x + 18, base = 372;
+        const col = ["#e8c15a", "#d8d2c4", "#e8823c", "#9fc4d8"][i % 4];
+        ctx.fillStyle = col;                                  // la carrocería
+        ctx.fillRect(bx, base - 18, 64, 14);
+        ctx.fillStyle = col;
+        ctx.fillRect(bx + 12, base - 27, 38, 10);             // la cabina
+        ctx.fillStyle = "rgba(120,170,200,.70)";              // las lunas
+        ctx.fillRect(bx + 16, base - 25, 14, 7);
+        ctx.fillRect(bx + 33, base - 25, 14, 7);
+        ctx.fillStyle = "#24242a";                            // las llantas
+        ctx.fillRect(bx + 8, base - 6, 12, 7);
+        ctx.fillRect(bx + 44, base - 6, 12, 7);
+        ctx.fillStyle = "#c2264a";                            // el cartelito de destino
+        ctx.fillRect(bx + 24, base - 31, 16, 5);
+      });
+      ctx.fillStyle = "#a89a7c";                              // la berma de tierra
+      ctx.fillRect(0, 378, CFG.ANCHO_VISTA, 6);
+    },
+
+    clima(ctx, t) {
+      // el calor del desierto, temblando sobre el asfalto
+      for (let i = 0; i < 22; i++) {
+        const x = (i * 151 - t * 1.9) % 880 - 20;
+        const y = 120 + ((i * 71) % 200) + Math.sin(t / 20 + i) * 9;
+        ctx.fillStyle = `rgba(250,238,204,${(0.10 + 0.14 * Math.abs(Math.sin(t / 28 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 9, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

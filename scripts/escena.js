@@ -220,6 +220,10 @@ const FICHAS = [
   { sprite: "telar", nombre: "El Telar de una Sola Trama", texto: "Teje la misma conclusión para toda política: jura que todas bajan la cantidad transada." },
   { sprite: "planilla", nombre: "La Planilla de un Solo Objetivo", texto: "Firma la medida que cumple un objetivo y ni mira los otros dos que le encargaron." },
   { sprite: "ministro", nombre: "El Ministro de las Dos Medidas", texto: "Jefe de Ate: trae dos políticas, recomienda una sin dudarlo y nunca compara sus pérdidas." },
+  { sprite: "hito", nombre: "El Hito del Uno", texto: "No sabe que la elasticidad 1 es la frontera, y le dice elástico a todo lo que pase de cero." },
+  { sprite: "vagon", nombre: "El Vagón de la Cantidad Fija", texto: "Sale con los mismos pasajeros pase lo que pase con el precio: para él toda demanda es inelástica." },
+  { sprite: "aceituna", nombre: "La Aceituna sin Valor Absoluto", texto: "Se queda con el signo menos de la elasticidad precio y termina comparando al revés." },
+  { sprite: "aduanero", nombre: "El Aduanero de la Intervención", texto: "Jefe de Tacna: reparte la carga de cada política mitad y mitad sin mirar quién es más inelástico." },
 ];
 
 export function galeriaPersonajes(contenedor) {
