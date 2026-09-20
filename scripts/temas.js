@@ -1941,6 +1941,146 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     AREQUIPA — la Ciudad Blanca a media mañana, con ese cielo
+     azul que no se ve en ningún otro lado. El Misti nevado al
+     fondo, los arcos de sillar de la plaza, los campanarios de
+     la Catedral y, más acá, la picantería con sus ollas de barro
+     humeando bajo la parra. Te sientas con lo que tienes en el
+     bolsillo y eliges: eso es todo este capítulo.
+     ========================================================= */
+  sillar: {
+    nombre: "Arequipa",
+    cielo: [[0, "#1560b0"], [0.38, "#5b9ad8"], [0.74, "#b8d4e4"], [1, "#e4e2d4"]],
+    suelo: { cara: "#cfc8b8", borde: "#ece6d8", tierra: "#6e6858", plataforma: "#8a5a2e", plataformaBorde: "#ffd166" },
+    acento: "#c2264a",
+
+    bichos: ["rocoto", "sillar", "camaron"],
+    nombresBichos: ["El Rocoto que No se Sacia", "El Sillar Torcido", "El Camarón de la Pendiente"],
+    jefe: "picantera",
+    nombreJefe: "La Picantera de las Dos Canastas",
+
+    fondo(ctx, cam, t) {
+      // el sol de la sierra, chiquito y duro
+      ctx.fillStyle = "rgba(255,250,226,.22)";
+      ctx.beginPath(); ctx.arc(628, 58, 54, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,253,240,.97)";
+      ctx.beginPath(); ctx.arc(628, 58, 24, 0, Math.PI * 2); ctx.fill();
+
+      // EL MISTI y sus hermanos, nevados al fondo
+      repetir(ctx, cam, 600, 0.1, (x, i) => {
+        const bx = x + 70, base = 288, alto = 160 + ((i * 47) % 30);
+        ctx.fillStyle = "#7d7f92";
+        ctx.beginPath();
+        ctx.moveTo(bx - 150, base);
+        ctx.lineTo(bx, base - alto);
+        ctx.lineTo(bx + 160, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#f4f6fa";                            // la nieve de la cumbre
+        ctx.beginPath();
+        ctx.moveTo(bx - 30, base - alto + 32);
+        ctx.lineTo(bx, base - alto);
+        ctx.lineTo(bx + 32, base - alto + 32);
+        ctx.lineTo(bx + 12, base - alto + 24);
+        ctx.lineTo(bx, base - alto + 36);
+        ctx.lineTo(bx - 12, base - alto + 22);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // LA CATEDRAL: los dos campanarios sobre el perfil de la ciudad
+      repetir(ctx, cam, 470, 0.26, (x) => {
+        const bx = x + 90, base = 318;
+        ctx.fillStyle = "#e4dcc8";                            // el cuerpo
+        ctx.fillRect(bx, base - 58, 168, 58);
+        ctx.fillStyle = "#d4ccb4";
+        ctx.fillRect(bx, base - 58, 168, 5);
+        for (const tx of [bx - 6, bx + 150]) {                // los dos campanarios
+          ctx.fillStyle = "#eee6d2";
+          ctx.fillRect(tx, base - 96, 24, 96);
+          ctx.fillStyle = "#cfc4a8";
+          ctx.beginPath();
+          ctx.moveTo(tx - 4, base - 96);
+          ctx.lineTo(tx + 12, base - 112);
+          ctx.lineTo(tx + 28, base - 96);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "rgba(90,80,60,.40)";
+          ctx.fillRect(tx + 8, base - 88, 8, 12);
+        }
+        ctx.fillStyle = "rgba(90,80,60,.35)";                 // las ventanas del frontis
+        for (let k = 0; k < 5; k++) ctx.fillRect(bx + 22 + k * 28, base - 44, 12, 18);
+      });
+
+      // LOS ARCOS DE SILLAR de los portales de la plaza
+      repetir(ctx, cam, 104, 0.46, (x) => {
+        const bx = x + 6, base = 356, alto = 48;
+        ctx.fillStyle = "#e8e0cc";
+        ctx.fillRect(bx, base - alto, 92, alto);
+        ctx.fillStyle = "#d8cfb8";
+        ctx.fillRect(bx, base - alto, 92, 5);
+        ctx.fillStyle = "#b6ab90";                            // el arco de medio punto
+        ctx.beginPath();
+        ctx.moveTo(bx + 18, base);
+        ctx.lineTo(bx + 18, base - 20);
+        ctx.arc(bx + 46, base - 20, 28, Math.PI, 0);
+        ctx.lineTo(bx + 74, base);
+        ctx.lineTo(bx + 64, base);
+        ctx.lineTo(bx + 64, base - 20);
+        ctx.arc(bx + 46, base - 20, 18, 0, Math.PI, true);
+        ctx.lineTo(bx + 28, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(255,255,255,.30)";              // el sillar iluminado
+        ctx.fillRect(bx, base - alto + 6, 92, 3);
+      });
+
+      // LA PICANTERÍA: la parra, las ollas de barro y las mesas largas
+      ctx.fillStyle = "#d6cdb6";                              // el patio empedrado
+      ctx.fillRect(0, 356, CFG.ANCHO_VISTA, 28);
+      for (let i = 0; i < 30; i++) {
+        const x = (i * 53 - (cam * 0.6)) % 900 - 40;
+        ctx.fillStyle = "rgba(150,140,118,.35)";
+        ctx.fillRect(x, 362 + ((i * 11) % 14), 9, 4);
+      }
+      repetir(ctx, cam, 168, 0.7, (x, i) => {
+        const bx = x + 12, base = 378;
+        // la parra sobre el patio, con sus racimos
+        ctx.fillStyle = "#6b4a30";
+        ctx.fillRect(bx + 4, base - 34, 4, 34);
+        ctx.fillRect(bx + 104, base - 34, 4, 34);
+        ctx.fillStyle = "#3f7a4a";
+        ctx.fillRect(bx, base - 38, 112, 7);
+        for (let k = 0; k < 6; k++) {
+          ctx.fillStyle = k % 2 ? "#5c3d6b" : "#3f8f5a";
+          ctx.fillRect(bx + 10 + k * 18, base - 31, 7, 8);
+        }
+        // las ollas de barro humeando
+        for (let k = 0; k < 2; k++) {
+          const ox = bx + 22 + k * 52;
+          ctx.fillStyle = "#8a5a3c";
+          ctx.beginPath(); ctx.arc(ox + 10, base - 8, 11, Math.PI, 0); ctx.fill();
+          ctx.fillRect(ox - 1, base - 8, 22, 8);
+          ctx.fillStyle = "#6e4630";
+          ctx.fillRect(ox - 3, base - 10, 26, 4);
+          const sube = ((t / 2.8 + k * 26 + i * 7) % 54);
+          ctx.fillStyle = `rgba(228,226,214,${(0.30 - sube / 200).toFixed(2)})`;
+          ctx.beginPath();
+          ctx.arc(ox + 10 + Math.sin((sube + k * 18) / 13) * 6, base - 22 - sube, 4 + sube * 0.11, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+      ctx.fillStyle = "#b6ab90";                              // el sardinel del patio
+      ctx.fillRect(0, 378, CFG.ANCHO_VISTA, 6);
+    },
+
+    clima(ctx, t) {
+      // el aire seco y transparente de los 2 300 metros
+      for (let i = 0; i < 18; i++) {
+        const x = (i * 163 - t * 1.1) % 880 - 20;
+        const y = 100 + ((i * 73) % 210) + Math.sin(t / 26 + i) * 7;
+        ctx.fillStyle = `rgba(252,246,226,${(0.08 + 0.11 * Math.abs(Math.sin(t / 30 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 6, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

@@ -275,12 +275,26 @@
       "titulo": "La frontera donde el precio manda",
       "icono": "⛲",
       "seccion": "Parcial",
-      "seccionNota": "Repaso de elasticidades e intervención del Estado",
+      "seccionNota": "Repaso de elasticidades, intervención y teoría del consumidor",
       "retos": 13,
       "duracion": "5 min",
       "abierto": true,
       "mapa": "levels/level20.json",
       "preguntas": "questions/level20_questions.json"
+    },
+    {
+      "id": "level21",
+      "clase": "Clase 02",
+      "distrito": "Arequipa",
+      "titulo": "La picantería de lo que quiero y lo que puedo",
+      "icono": "🌋",
+      "seccion": "Parcial",
+      "seccionNota": "Repaso de elasticidades, intervención y teoría del consumidor",
+      "retos": 13,
+      "duracion": "5 min",
+      "abierto": true,
+      "mapa": "levels/level21.json",
+      "preguntas": "questions/level21_questions.json"
     }
   ]
 }

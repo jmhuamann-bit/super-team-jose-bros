@@ -1696,6 +1696,76 @@ const ADUANERO = [  // jefe de Tacna: reparte la carga mitad y mitad sin mirar q
 ];
 const P_ADUANERO = { g: "#3f5f4a", c: "#c9945c", k: "#241a2e", r: "#c2264a", n: "#2f4a5e", w: "#e8c15a", m: "#b0a898" };
 
+const ROCOTO = [   // el rocoto relleno: sigue comiendo después de saciarse y cree que la UT sigue subiendo (13 × 14)
+  ".............",
+  "......vv.....",
+  ".....vvv.....",
+  "....vvvvv....",
+  "...rrrrrrr...",
+  "..rrrrrrrrr..",
+  ".rrrrrrrrrrr.",
+  ".rrrrrrrrrrr.",
+  ".rrrrrrrrrrr.",
+  ".rrrrrrrrrrr.",
+  "..rrrrrrrrr..",
+  "...rrrrrrr...",
+  "....rrrrr....",
+  ".............",
+];
+const P_ROCOTO = { r: "#c2264a", v: "#3f8f5a" };
+
+const SILLAR = [   // el sillar torcido: dibuja la curva de indiferencia al revés y deja que se crucen (16 × 12)
+  "................",
+  ".kkkkkkkkkkkkkk.",
+  ".kwwwwwwwwwwwwk.",
+  ".kwwwwwwwwwwwwk.",
+  ".kkkkkkkkkkkkkk.",
+  ".kwwwwwwwwwwwwk.",
+  ".kwwwwwwwwwwwwk.",
+  ".kkkkkkkkkkkkkk.",
+  ".kwwwwwwwwwwwwk.",
+  ".kwwwwwwwwwwwwk.",
+  ".kkkkkkkkkkkkkk.",
+  "................",
+];
+const P_SILLAR = { k: "#7a7264", w: "#f4f0e4" };
+
+const CAMARON = [   // el camarón del Majes: confunde la pendiente de la restricción con la de la curva (16 × 12)
+  "................",
+  "..............nn",
+  "...........nnn..",
+  "....ccccccccc...",
+  "...ccccccccccc..",
+  "..cckcccccccc...",
+  "..ccccccccc.....",
+  "...cccccccc.....",
+  "....ccccccc.....",
+  ".....pp.pp.pp...",
+  "....pp.pp.pp....",
+  "................",
+];
+const P_CAMARON = { c: "#e8823c", k: "#2e2620", n: "#c2703c", p: "#c2703c" };
+
+const PICANTERA = [  // jefa de Arequipa: te ofrece dos canastas y no sabe decidir cuál prefiere (20 × 16)
+  ".....kkkkkkk........",
+  "....kkkkkkkkk.......",
+  "....ckkkkkkkc.......",
+  "....cckkcckkc.......",
+  "....cccccccc........",
+  ".....ccrrcc.........",
+  "....wwwwwwww........",
+  "..ccwwwwwwwwcc......",
+  ".gccwwwwwwwwccg.....",
+  ".gccwwwwwwwwccg.....",
+  "...wwwwwwwwww.......",
+  "....wwwwwwww........",
+  "....mmmm.mmmm.......",
+  "....mmmm.mmmm.......",
+  "...kkkkk.kkkkk......",
+  "....................",
+];
+const P_PICANTERA = { k: "#241a2e", c: "#c9945c", r: "#c2264a", w: "#f2ead8", g: "#8a5a2e", m: "#3f6f5a" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1799,6 +1869,10 @@ const DEFINICIONES = {
   vagon:        [VAGON, P_VAGON],
   aceituna:     [ACEITUNA, P_ACEITUNA],
   aduanero:     [ADUANERO, P_ADUANERO],
+  rocoto:       [ROCOTO, P_ROCOTO],
+  sillar:       [SILLAR, P_SILLAR],
+  camaron:      [CAMARON, P_CAMARON],
+  picantera:    [PICANTERA, P_PICANTERA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

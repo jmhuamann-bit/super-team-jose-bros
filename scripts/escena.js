@@ -224,6 +224,10 @@ const FICHAS = [
   { sprite: "vagon", nombre: "El Vagón de la Cantidad Fija", texto: "Sale con los mismos pasajeros pase lo que pase con el precio: para él toda demanda es inelástica." },
   { sprite: "aceituna", nombre: "La Aceituna sin Valor Absoluto", texto: "Se queda con el signo menos de la elasticidad precio y termina comparando al revés." },
   { sprite: "aduanero", nombre: "El Aduanero de la Intervención", texto: "Jefe de Tacna: reparte la carga de cada política mitad y mitad sin mirar quién es más inelástico." },
+  { sprite: "rocoto", nombre: "El Rocoto que No se Sacia", texto: "Sigue comiendo después de llenarse y jura que su utilidad total sigue subiendo." },
+  { sprite: "sillar", nombre: "El Sillar Torcido", texto: "Dibuja la curva de indiferencia cóncava y encima deja que se crucen entre ellas." },
+  { sprite: "camaron", nombre: "El Camarón de la Pendiente", texto: "Confunde la pendiente de la restricción presupuestaria con la de la curva de indiferencia." },
+  { sprite: "picantera", nombre: "La Picantera de las Dos Canastas", texto: "Jefa de Arequipa: le pones dos canastas al frente y no es capaz de decir cuál prefiere." },
 ];
 
 export function galeriaPersonajes(contenedor) {

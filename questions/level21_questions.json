@@ -1,0 +1,203 @@
+{
+  "nivel": "level21",
+  "clase": "Clase 02 · Parcial — Teoría del consumidor",
+  "fuente": "Apuntes de la 2da clase del Parcial — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b21-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "En el enfoque CARDINAL la felicidad se mide en útiles.\n\n¿Qué diferencia hay entre utilidad total y utilidad marginal?",
+      "opciones": [
+        "La UT es la felicidad ACUMULADA y la UMg es la felicidad ADICIONAL que te da una unidad más",
+        "La UT es la felicidad de hoy y la UMg la de mañana",
+        "Son lo mismo, solo cambia el nombre",
+        "La UT se mide en soles y la UMg en útiles"
+      ],
+      "correcta": 0,
+      "explicacion": "La palabra «marginal» en todo el curso significa lo mismo: una unidad adicional. La UMg es cuánto sube la felicidad cuando comes la siguiente pieza de pollo, no cuánta felicidad llevas acumulada."
+    },
+    {
+      "id": "b21-q2",
+      "nivel": "aplicacion",
+      "enunciado": "Piezas de pollo y utilidad total:\n0 → 0 · 1 → 100 · 2 → 175 · 3 → 225 · 4 → 250 · 5 → 250 · 6 → 225\n\n¿Cuál es la utilidad marginal de la 3ra y de la 6ta pieza?",
+      "opciones": [
+        "225 y 225, que son las utilidades totales",
+        "50 y −25: la UMg es la diferencia entre una UT y la anterior, y la sexta pieza ya te QUITA felicidad",
+        "50 y 25, porque la UMg nunca puede ser negativa",
+        "75 y 0"
+      ],
+      "correcta": 1,
+      "explicacion": "La UMg va bajando de 25 en 25: 100, 75, 50, 25, 0, −25. Esa caída constante es la ley de utilidad marginal decreciente, y el número negativo significa que ya te empalagaste."
+    },
+    {
+      "id": "b21-q3",
+      "nivel": "comprension",
+      "enunciado": "PREGUNTA DE EXAMEN. Si la utilidad marginal DISMINUYE, ¿la utilidad total también disminuye?",
+      "opciones": [
+        "Sí, siempre: si la marginal cae, la total cae",
+        "Sí, pero solo a partir de la primera unidad",
+        "No se puede saber sin conocer el precio del bien",
+        "NO: mientras la UMg siga siendo POSITIVA la UT sigue SUBIENDO, solo que más despacio. Recién cae cuando la UMg se vuelve negativa"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la confusión más repetida del tema. Que cada pieza te dé menos alegría que la anterior no significa que estés peor: sigues sumando felicidad hasta que una pieza te empiece a restar."
+    },
+    {
+      "id": "b21-q4",
+      "nivel": "comprension",
+      "enunciado": "Con esa misma tabla del pollo, ¿en qué pieza te saciaste completamente y cuánto vale ahí la UMg?",
+      "opciones": [
+        "En la séptima, donde la UT es 175",
+        "En la primera, porque es la que más UMg da",
+        "En la QUINTA: ahí la UMg llega a 0 y la UT toca su MÁXIMO de 250",
+        "En la sexta, donde la UMg ya es −25"
+      ],
+      "correcta": 2,
+      "explicacion": "El punto de saciedad es exactamente donde la utilidad marginal se hace cero: la última pieza no te suma ni te resta. Por eso ahí la utilidad total está en su punto más alto."
+    },
+    {
+      "id": "b21-q5",
+      "nivel": "reconocimiento",
+      "enunciado": "El enfoque ORDINAL parte de cuatro supuestos.\n\n¿Cuál de estos NO es uno de ellos?",
+      "opciones": [
+        "Un consumidor y dos bienes",
+        "Que la felicidad se pueda MEDIR en útiles",
+        "Transitividad: si A es mejor que B y B mejor que C, entonces A es mejor que C",
+        "No saturación: más es siempre mejor que menos"
+      ],
+      "correcta": 1,
+      "explicacion": "Medir la felicidad es justamente lo del enfoque CARDINAL. En el ordinal solo se ORDENA: basta con saber que prefieres una canasta a la otra, sin decir en cuántos útiles."
+    },
+    {
+      "id": "b21-q6",
+      "nivel": "comprension",
+      "enunciado": "¿Por qué la curva de indiferencia se llama así, y qué pasa si dos curvas de indiferencia se cruzan?",
+      "opciones": [
+        "Se llama así porque une canastas que dan la MISMA felicidad, y si dos se cruzaran ese punto tendría dos niveles de utilidad distintos: se rompe la transitividad",
+        "Se llama así porque al consumidor no le importa el precio, y cruzarse es normal",
+        "Se llama así porque une canastas de igual precio, y cruzarse indica un cambio de ingreso",
+        "Se llama así porque une canastas indiferentes, y cruzarse solo significa que el consumidor cambió de gustos"
+      ],
+      "correcta": 0,
+      "explicacion": "Dentro de una misma curva al consumidor le da exactamente igual qué canasta elegir. Por eso dos curvas no pueden tocarse nunca: un mismo punto no puede hacerte «igual de feliz» en dos niveles distintos."
+    },
+    {
+      "id": "b21-q7",
+      "nivel": "comprension",
+      "enunciado": "EXAMEN: ¿la curva de indiferencia es cóncava?",
+      "opciones": [
+        "Sí, cóncava al origen",
+        "Es una recta, porque los bienes son sustitutos perfectos",
+        "NO: es CONVEXA al origen, y esa forma sale justo de que la TMgS va disminuyendo",
+        "Depende del ingreso del consumidor"
+      ],
+      "correcta": 2,
+      "explicacion": "La convexidad no es un capricho de dibujo: es el reflejo de que cada vez cedes menos de Y por una unidad más de X, porque lo que te va quedando escaso lo valoras más."
+    },
+    {
+      "id": "b21-q8",
+      "nivel": "comprension",
+      "enunciado": "Tienes una TMgS igual a 2 entre galletas (Y) y gaseosas (X).\n\n¿Cómo se lee?",
+      "opciones": [
+        "Que las gaseosas cuestan el doble que las galletas",
+        "Que consumes 2 galletas por cada gaseosa",
+        "Que estoy dispuesto a ceder 2 GALLETAS para obtener 1 gaseosa adicional, y así quedarme en la misma curva de indiferencia",
+        "Que mi utilidad total es 2"
+      ],
+      "correcta": 2,
+      "explicacion": "La TMgS no habla de precios ni de cuánto consumes: habla de lo que estás dispuesto a SOLTAR de un bien para ganar una unidad del otro sin cambiar tu nivel de felicidad."
+    },
+    {
+      "id": "b21-q9",
+      "nivel": "comprension",
+      "enunciado": "Tienes un millón de galletas y quieres cambiarlas por una gaseosa; después te quedan solo 2 galletas y quieres lo mismo.\n\n¿Qué pasa con tu TMgS y por qué?",
+      "opciones": [
+        "Se mantiene igual: la TMgS es constante a lo largo de la curva",
+        "Aumenta al avanzar a la derecha, porque tienes más de X",
+        "No se puede saber sin conocer la utilidad total",
+        "DISMINUYE conforme avanzas a la derecha: mientras menos galletas te quedan, más las valoras y menos estás dispuesto a soltar"
+      ],
+      "correcta": 3,
+      "explicacion": "Con un millón sueltas montones sin pestañear; con dos no sueltas casi nada. Esa TMgS que se va achicando es exactamente lo que le da a la curva de indiferencia su forma convexa."
+    },
+    {
+      "id": "b21-q10",
+      "nivel": "aplicacion",
+      "enunciado": "Tienes un ingreso M = 200, con Px = 50 y Py = 10.\n\n¿Cuáles son los interceptos de tu restricción presupuestaria y cuánto vale su pendiente?",
+      "opciones": [
+        "20 unidades de Y como máximo, 4 de X como máximo, y la pendiente es −Px/Py = −5",
+        "4 unidades de Y y 20 de X, con pendiente −0,2",
+        "200 de cada bien, porque ese es el ingreso",
+        "50 de Y y 10 de X, que son los precios"
+      ],
+      "correcta": 0,
+      "explicacion": "Cada intercepto sale de gastar TODO el ingreso en un solo bien: 200/10 = 20 de Y y 200/50 = 4 de X. Y despejando Y de M = Px·X + Py·Y queda la pendiente como la relación de precios."
+    },
+    {
+      "id": "b21-q11",
+      "nivel": "comprension",
+      "enunciado": "Sube el ingreso M y los dos precios se mantienen iguales.\n\n¿Qué le pasa a la restricción presupuestaria?",
+      "opciones": [
+        "Rota desde el eje Y, porque cambia la relación de precios",
+        "Se desplaza PARALELA hacia afuera: los dos interceptos crecen y la pendiente −Px/Py no cambia",
+        "No se mueve, porque la pendiente es la misma",
+        "Se desplaza paralela hacia adentro"
+      ],
+      "correcta": 1,
+      "explicacion": "La pendiente solo depende de los precios, así que si estos no se tocan la inclinación queda idéntica. Lo único que cambia es que ahora alcanza para más de los dos bienes."
+    },
+    {
+      "id": "b21-q12",
+      "nivel": "aplicacion",
+      "enunciado": "La restricción presupuestaria es M = 100, Py = 1 y el bien X lo REGALAN (Px = 0).\n\n¿Cómo queda el gráfico?",
+      "opciones": [
+        "Una recta con pendiente −1, como siempre",
+        "Un punto, porque no se puede comprar nada",
+        "Una recta vertical en X = 100",
+        "Una recta HORIZONTAL en Y = 100, con pendiente CERO: puedes llevar todo el X que quieras sin gastar un sol, y el ingreso completo se va en Y"
+      ],
+      "correcta": 3,
+      "explicacion": "Como la pendiente es −Px/Py y el Px vale cero, la recta queda plana. Este es uno de los casos especiales de restricción PARTIDA que le gusta preguntar al profe."
+    },
+    {
+      "id": "b21-q13",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Tienes M = 100. Las primeras 5 unidades de X las REGALAN y a partir de ahí Px = 2 y Py = 1.\n\n¿Cómo queda tu restricción presupuestaria?",
+      "opciones": [
+        "PARTIDA: mientras X es menor que 5 va HORIZONTAL en Y = 100, y desde X = 5 aparece la pendiente −2 con la ecuación Y = 110 − 2X",
+        "Una sola recta con pendiente −2 desde el origen",
+        "Una sola recta con pendiente −0,5",
+        "Horizontal en Y = 100 en todo su recorrido, porque el X siempre es gratis"
+      ],
+      "correcta": 0,
+      "explicacion": "Antes del quinto X no gastas nada, así que el ingreso completo sigue disponible para Y. Control: en X = 5 la segunda ecuación da Y = 100, o sea empalma justo con el tramo plano."
+    },
+    {
+      "id": "b21-q14",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. El precio de X, el precio de Y y el ingreso M suben TODOS en la misma proporción, digamos un 50%.\n\n¿Qué le pasa a la restricción presupuestaria?",
+      "opciones": [
+        "Se desplaza paralela hacia afuera, porque subió el ingreso",
+        "Se desplaza paralela hacia adentro, porque subieron los precios",
+        "NO SE MUEVE: los interceptos M/Px y M/Py quedan iguales y la pendiente −Px/Py también, porque la proporción se cancela arriba y abajo",
+        "Rota desde el eje X"
+      ],
+      "correcta": 2,
+      "explicacion": "Con M = 200, Px = 50 y Py = 10 los interceptos son 4 y 20; multiplicando todo por 1,5 quedan 300, 75 y 15, y los interceptos siguen siendo 4 y 20. El poder de compra real no cambió."
+    },
+    {
+      "id": "b21-q15",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. Cierras la clase juntando las dos mitades del capítulo.\n\n¿Quién representa LO QUE QUIERO y quién LO QUE PUEDO?",
+      "opciones": [
+        "La curva de indiferencia representa lo que puedo y la restricción lo que quiero",
+        "La CURVA DE INDIFERENCIA es lo que quiero (las preferencias) y la RESTRICCIÓN PRESUPUESTARIA es lo que puedo (el dinero)",
+        "Las dos representan lo mismo desde ángulos distintos",
+        "La utilidad marginal es lo que quiero y la utilidad total lo que puedo"
+      ],
+      "correcta": 1,
+      "explicacion": "La curva sale de tus gustos y no sabe nada de plata; la recta sale de tu bolsillo y no sabe nada de gustos. Juntarlas para sacar la canasta óptima es justo lo que viene en la próxima clase."
+    }
+  ]
+}
