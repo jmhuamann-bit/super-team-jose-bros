@@ -228,6 +228,10 @@ const FICHAS = [
   { sprite: "sillar", nombre: "El Sillar Torcido", texto: "Dibuja la curva de indiferencia cóncava y encima deja que se crucen entre ellas." },
   { sprite: "camaron", nombre: "El Camarón de la Pendiente", texto: "Confunde la pendiente de la restricción presupuestaria con la de la curva de indiferencia." },
   { sprite: "picantera", nombre: "La Picantera de las Dos Canastas", texto: "Jefa de Arequipa: le pones dos canastas al frente y no es capaz de decir cuál prefiere." },
+  { sprite: "siku", nombre: "El Siku que Toca Dos Veces", texto: "Zampoña de dos filas: hace que la curva de indiferencia toque la recta en dos puntos, cuando la óptima la toca una sola vez." },
+  { sprite: "diablo", nombre: "El Diablo de los Cuernos Disparejos", texto: "Bailarín de la Candelaria: iguala la tasa marginal de sustitución con cualquier cosa menos con el ratio de precios." },
+  { sprite: "chullo", nombre: "El Chullo del Sol Gastado", texto: "Ve que su canasta no es la óptima pero no sabe de cuál de los dos bienes comprar más." },
+  { sprite: "tejedor", nombre: "El Tejedor de Taquile", texto: "Jefe de Puno: teje su canasta sin igualar nunca la felicidad que le da cada sol gastado." },
 ];
 
 export function galeriaPersonajes(contenedor) {

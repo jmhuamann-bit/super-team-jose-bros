@@ -2081,6 +2081,133 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     PUNO — el Titicaca a media mañana, a 3 800 metros, con ese
+     azul que parece pintado. Los cerros del altiplano al fondo,
+     las islas flotantes de los Uros amarradas sobre el agua, las
+     balsas de totora con su cabeza de puma y los totorales
+     meciéndose en la orilla. Una isla de totora flota JUSTO en
+     el punto donde el junco toca el agua: ni un dedo más arriba
+     ni más abajo. La canasta óptima es igualita.
+     ========================================================= */
+  totora: {
+    nombre: "Puno",
+    cielo: [[0, "#0f5ba8"], [0.38, "#4f92cc"], [0.72, "#b0cfe0"], [1, "#dce4d8"]],
+    suelo: { cara: "#c2a85c", borde: "#e0c878", tierra: "#7a6430", plataforma: "#8a5a2e", plataformaBorde: "#f0c341" },
+    acento: "#c2264a",
+
+    bichos: ["siku", "diablo", "chullo"],
+    nombresBichos: ["El Siku que Toca Dos Veces", "El Diablo de los Cuernos Disparejos", "El Chullo del Sol Gastado"],
+    jefe: "tejedor",
+    nombreJefe: "El Tejedor de Taquile",
+
+    fondo(ctx, cam, t) {
+      // el sol del altiplano, chiquito y blanquísimo
+      ctx.fillStyle = "rgba(255,252,236,.20)";
+      ctx.beginPath(); ctx.arc(612, 60, 52, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,254,246,.98)";
+      ctx.beginPath(); ctx.arc(612, 60, 22, 0, Math.PI * 2); ctx.fill();
+
+      // LOS CERROS DEL ALTIPLANO, secos y redondeados
+      repetir(ctx, cam, 540, 0.11, (x, i) => {
+        const bx = x + 60, base = 268, alto = 84 + ((i * 41) % 34);
+        ctx.fillStyle = "#8a8f7e";
+        ctx.beginPath();
+        ctx.moveTo(bx - 160, base);
+        ctx.quadraticCurveTo(bx, base - alto, bx + 170, base);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 380, 0.2, (x, i) => {
+        const bx = x + 40, base = 278, alto = 52 + ((i * 29) % 24);
+        ctx.fillStyle = "#9a9c86";
+        ctx.beginPath();
+        ctx.moveTo(bx - 120, base);
+        ctx.quadraticCurveTo(bx, base - alto, bx + 130, base);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // EL LAGO TITICACA, azul profundo hasta el horizonte
+      ctx.fillStyle = "#15619e";
+      ctx.fillRect(0, 276, CFG.ANCHO_VISTA, 84);
+      ctx.fillStyle = "#1f74b6";
+      ctx.fillRect(0, 276, CFG.ANCHO_VISTA, 14);
+      for (let i = 0; i < 36; i++) {                          // el brillo sobre el agua
+        const x = (i * 49 - (cam * 0.18)) % 900 - 40;
+        const y = 292 + ((i * 31) % 60);
+        ctx.fillStyle = "rgba(226,240,248,.32)";
+        ctx.fillRect(x, y + Math.sin(t / 24 + i) * 2, 15, 2);
+      }
+
+      // LAS ISLAS FLOTANTES DE LOS UROS, con sus casitas de totora
+      repetir(ctx, cam, 232, 0.34, (x, i) => {
+        const bx = x + 20, base = 318;
+        ctx.fillStyle = "#c9a94e";                            // la plataforma de totora
+        ctx.fillRect(bx, base - 9, 118, 12);
+        ctx.fillStyle = "#e0c878";
+        ctx.fillRect(bx, base - 9, 118, 3);
+        ctx.fillStyle = "rgba(20,70,120,.35)";                // el reflejo en el lago
+        ctx.fillRect(bx + 6, base + 3, 106, 3);
+        for (let k = 0; k < 2; k++) {                         // las casitas cónicas
+          const cx = bx + 22 + k * 52;
+          ctx.fillStyle = "#b69434";
+          ctx.beginPath();
+          ctx.moveTo(cx - 14, base - 9);
+          ctx.lineTo(cx, base - 34);
+          ctx.lineTo(cx + 14, base - 9);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "rgba(60,40,15,.45)";
+          ctx.fillRect(cx - 4, base - 20, 8, 11);
+        }
+      });
+
+      // LAS BALSAS DE TOTORA navegando, con su cabeza de puma
+      repetir(ctx, cam, 306, 0.48, (x, i) => {
+        const bx = x + 40, base = 346;
+        ctx.fillStyle = "#d8b45c";
+        ctx.beginPath();
+        ctx.moveTo(bx, base);
+        ctx.quadraticCurveTo(bx + 34, base - 14, bx + 70, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#c9a94e";                            // la proa levantada
+        ctx.beginPath();
+        ctx.moveTo(bx + 62, base - 4);
+        ctx.lineTo(bx + 78, base - 26);
+        ctx.lineTo(bx + 70, base - 4);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#3b2a1a";                            // el ojito del puma
+        ctx.fillRect(bx + 72, base - 22, 3, 3);
+        ctx.fillStyle = "rgba(20,70,120,.30)";
+        ctx.fillRect(bx + 6, base + 2, 60, 3);
+      });
+
+      // LA ORILLA: el totoral meciéndose y el camino de junco seco
+      ctx.fillStyle = "#c2a85c";
+      ctx.fillRect(0, 358, CFG.ANCHO_VISTA, 26);
+      ctx.fillStyle = "#e0c878";
+      ctx.fillRect(0, 358, CFG.ANCHO_VISTA, 4);
+      repetir(ctx, cam, 112, 0.72, (x, i) => {
+        const bx = x + 10, base = 366;
+        for (let k = 0; k < 5; k++) {                          // los juncos del totoral
+          const jx = bx + k * 9, alto = 12 + ((i + k) % 4) * 4;
+          ctx.fillStyle = ["#6f7a2c", "#84812f", "#5e6a26"][(i + k) % 3];
+          ctx.fillRect(jx, base - alto, 3, alto);
+          ctx.fillRect(jx - 1 + Math.round(Math.sin(t / 30 + k) * 1), base - alto - 5, 3, 6);
+        }
+      });
+      ctx.fillStyle = "#a8903e";
+      ctx.fillRect(0, 378, CFG.ANCHO_VISTA, 6);
+    },
+
+    clima(ctx, t) {
+      // el aire finito del altiplano, que brilla a contraluz
+      for (let i = 0; i < 20; i++) {
+        const x = (i * 149 - t * 1.4) % 880 - 20;
+        const y = 90 + ((i * 67) % 200) + Math.sin(t / 25 + i) * 8;
+        ctx.fillStyle = `rgba(240,248,252,${(0.09 + 0.12 * Math.abs(Math.sin(t / 31 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 5, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

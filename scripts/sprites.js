@@ -1766,6 +1766,80 @@ const PICANTERA = [  // jefa de Arequipa: te ofrece dos canastas y no sabe decid
 ];
 const P_PICANTERA = { k: "#241a2e", c: "#c9945c", r: "#c2264a", w: "#f2ead8", g: "#8a5a2e", m: "#3f6f5a" };
 
+const SIKU = [     // el siku de dos filas: hace que la curva TOQUE la recta dos veces (16 × 14)
+  "................",
+  "................",
+  ".cc.cc.cc.cc.cc.",
+  ".kk.kk.kk.kk.kk.",
+  ".rrrrrrrrrrrrrr.",
+  ".kk.kk.kk.kk.kk.",
+  ".kk.kk.kk.kk.kk.",
+  ".wwwwwwwwwwwwww.",
+  ".kk.kk.kk.kk.kk.",
+  ".kk.kk.kk.kk....",
+  ".kk.kk.kk.......",
+  ".kk.kk..........",
+  ".kk.............",
+  "................",
+];
+const P_SIKU = { k: "#2e2438", c: "#f0c341", r: "#d8303c", w: "#f7efe0" };
+
+const DIABLO = [   // el Diablo de la Candelaria, con los cuernos DISPAREJOS: iguala la TMgS con cualquier cosa (16 × 15)
+  "..g.............",
+  "..g.........g...",
+  "..gg........g...",
+  "...gg......gg...",
+  "...pppppppppp...",
+  "..pppppppppppp..",
+  "..prrpppppprrp..",
+  "..prrpppppprrp..",
+  "..pppppppppppp..",
+  "..pppkkkkkkppp..",
+  "..pwkwkwkwkwkp..",
+  "..pppppppppppp..",
+  "...pppppppppp...",
+  "....kkkkkkkk....",
+  "................",
+];
+const P_DIABLO = { p: "#6b2f9e", g: "#f0c341", r: "#d8303c", w: "#f7efe0", k: "#1e1428" };
+
+const CHULLO = [   // el chullo puneño: no sabe de cuál comprar más cuando la canasta no es óptima (14 × 13)
+  "..............",
+  "......rr......",
+  ".....rrrr.....",
+  "....rrrrrr....",
+  "...rrwwwwrr...",
+  "..rrrwwwwrrr..",
+  "..rcccccccr...",
+  "..rrrrrrrrrr..",
+  "..rwwrrrrwwr..",
+  "..rrrrrrrrrr..",
+  ".rr..rrrr..rr.",
+  ".rr..rrrr..rr.",
+  "..............",
+];
+const P_CHULLO = { r: "#c2264a", w: "#f2ead8", c: "#1f7ac4" };
+
+const TEJEDOR = [  // jefe de Puno: teje la canasta sin igualar nunca la felicidad por sol gastado (20 × 16)
+  ".....rrrrrr.........",
+  "....rrwwwwrr.rr.....",
+  "....rrrrrrrr..rr....",
+  "....rccccccr...ww...",
+  "....rckccckr........",
+  "....rcckkccr........",
+  ".....wwwwww.........",
+  "...kkwwwwwwkk.......",
+  "..ckkwwwwwwkkc.yy...",
+  "..ckkwwwwwwkkc.yy...",
+  "...yryryryryr.......",
+  "...kkkkkkkkkk.......",
+  "...kkkk..kkkk.......",
+  "...kkkk..kkkk.......",
+  "...nnnn..nnnn.......",
+  "....................",
+];
+const P_TEJEDOR = { r: "#c2264a", w: "#f7efe0", c: "#c9945c", k: "#1f1a24", y: "#f0c341", n: "#6b4a24" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1873,6 +1947,10 @@ const DEFINICIONES = {
   sillar:       [SILLAR, P_SILLAR],
   camaron:      [CAMARON, P_CAMARON],
   picantera:    [PICANTERA, P_PICANTERA],
+  siku:         [SIKU, P_SIKU],
+  diablo:       [DIABLO, P_DIABLO],
+  chullo:       [CHULLO, P_CHULLO],
+  tejedor:      [TEJEDOR, P_TEJEDOR],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

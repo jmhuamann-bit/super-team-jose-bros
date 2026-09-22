@@ -1,0 +1,203 @@
+{
+  "nivel": "level22",
+  "clase": "Clase 03 · Parcial — Ejercicios de teoría del consumidor",
+  "fuente": "Apuntes de la 3era clase del Parcial — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b22-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Pregunta de examen sobre la LEY DE UTILIDAD MARGINAL DECRECIENTE.\n\n¿Qué es exactamente lo que dice esa ley?",
+      "opciones": [
+        "Que la utilidad TOTAL disminuye conforme aumenta el consumo del bien",
+        "Que la utilidad ADICIONAL por unidad consumida DISMINUYE conforme aumenta el consumo del bien",
+        "Que la utilidad marginal es negativa desde la primera unidad",
+        "Que el consumidor deja de consumir el bien cuando su precio sube"
+      ],
+      "correcta": 1,
+      "explicacion": "La ley habla de la utilidad ADICIONAL, no de la total. Cada unidad extra da menos felicidad que la anterior, pero la UT sigue subiendo mientras la UMg sea positiva."
+    },
+    {
+      "id": "b22-q2",
+      "nivel": "comprension",
+      "enunciado": "Hay una regla que ordena todo el capítulo: «todo marginal es la pendiente de su curva total».\n\n¿De qué curva es pendiente la utilidad marginal, y de qué curva es pendiente la TMgS?",
+      "opciones": [
+        "La UMg es la pendiente de la curva de utilidad TOTAL, y la TMgS la de la curva de INDIFERENCIA",
+        "Las dos son pendientes de la restricción presupuestaria",
+        "La UMg es la pendiente de la curva de indiferencia, y la TMgS la de la utilidad total",
+        "La UMg sí es una pendiente, pero la TMgS no es pendiente de ninguna curva"
+      ],
+      "correcta": 0,
+      "explicacion": "La UMg mide cuánto sube la UT por una unidad más: su pendiente. La TMgS mide cuánto Y cedes por una unidad más de X sobre la misma curva: la pendiente de la curva de indiferencia."
+    },
+    {
+      "id": "b22-q3",
+      "nivel": "aplicacion",
+      "enunciado": "Un comensal come trucha del Titicaca. Su utilidad marginal por plato es: 1er plato 12 útiles, 2do 8, 3ro 4, 4to 0 y 5to −3.\n\n¿En qué plato alcanza su utilidad TOTAL máxima?",
+      "opciones": [
+        "En el 1er plato, porque ahí la UMg es la más alta de todas",
+        "En el 3er plato, porque es el último con UMg positiva",
+        "En el 4to plato, porque ahí la UMg es CERO",
+        "En el 5to plato, porque comió más que en todos los anteriores"
+      ],
+      "correcta": 2,
+      "explicacion": "La UT crece mientras la UMg sea positiva y cae cuando se vuelve negativa, así que el máximo está justo donde la UMg = 0: el 4to plato, con UT = 12+8+4+0 = 24 útiles."
+    },
+    {
+      "id": "b22-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Pregunta de examen. Las utilidades marginales de las gaseosas de un consumidor son: 1ra = 10 útiles, 2da = 7 útiles y 3ra = 4 útiles.\n\n¿Cuál es su utilidad TOTAL al consumir 3 gaseosas?",
+      "opciones": [
+        "4 útiles, que es la utilidad de la última gaseosa",
+        "7 útiles, que es el promedio de las tres",
+        "40 útiles, multiplicando 10 × 4",
+        "21 útiles, porque la UT se obtiene SUMANDO las utilidades marginales de cada unidad"
+      ],
+      "correcta": 3,
+      "explicacion": "La UT acumulada es la suma de las UMg: 10 + 7 + 4 = 21 útiles. Es el camino inverso del cuadro: de UT a UMg se resta, y de UMg a UT se suma."
+    },
+    {
+      "id": "b22-q5",
+      "nivel": "comprension",
+      "enunciado": "Supuesto de TRANSITIVIDAD. Chaska prefiere el plátano a la papaya, prefiere la papaya a la mandarina, prefiere el mango a la piña, y le da igual comer mandarina o mango.\n\n¿Cuál es la fruta que MENOS le gusta?",
+      "opciones": [
+        "La piña",
+        "La mandarina",
+        "El mango",
+        "La papaya"
+      ],
+      "correcta": 0,
+      "explicacion": "Encadenando todo: plátano > papaya > mandarina = mango > piña. Como mandarina y mango empatan, la piña queda debajo de las dos y por lo tanto debajo de todas."
+    },
+    {
+      "id": "b22-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Sofía consume quinua (X) y habas (Y). En su canasta actual la UMg de la quinua es 8 útiles y la UMg de las habas es 2 útiles.\n\n¿Cuánto vale su TMgS y cómo se lee?",
+      "opciones": [
+        "TMgS = 0,25: cede 0,25 de habas para obtener 1 quinua adicional",
+        "TMgS = 4: está dispuesta a ceder 4 de habas para obtener 1 quinua adicional y mantenerse en la misma curva de indiferencia",
+        "TMgS = 16: se multiplican las dos utilidades marginales",
+        "TMgS = 6: se restan las dos utilidades marginales"
+      ],
+      "correcta": 1,
+      "explicacion": "TMgS = UMgX / UMgY = 8/2 = 4. Como la quinua le da cuatro veces más felicidad por unidad, acepta perder 4 habas por 1 quinua sin salir de su curva."
+    },
+    {
+      "id": "b22-q7",
+      "nivel": "comprension",
+      "enunciado": "Pregunta de examen sobre la RESTRICCIÓN PRESUPUESTARIA.\n\n¿Cuál de estas afirmaciones es la CORRECTA?",
+      "opciones": [
+        "Su pendiente es la tasa marginal de sustitución del consumidor",
+        "Muestra las cantidades MÍNIMAS que el consumidor debe comprar",
+        "En todos sus puntos se gasta el ingreso completo, y muestra las cantidades MÁXIMAS que se pueden comprar",
+        "Indica lo que el consumidor QUIERE comprar, no lo que puede comprar"
+      ],
+      "correcta": 2,
+      "explicacion": "La recta es lo que el consumidor PUEDE comprar: sobre ella el gasto iguala al ingreso y marca los máximos. Su pendiente es el ratio de precios, nunca la TMgS."
+    },
+    {
+      "id": "b22-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Un consumidor tiene M = 500 soles, Px = 10 y Py = 20. Su ingreso sube 40% y AMBOS precios suben 20%.\n\n¿Qué le pasa a su restricción presupuestaria?",
+      "opciones": [
+        "Se desplaza a la DERECHA en paralelo: los interceptos se multiplican por 1,4/1,2 = 1,167 y la pendiente no cambia",
+        "Se desplaza a la izquierda en paralelo, porque los precios subieron",
+        "No se mueve, porque tanto el ingreso como los precios subieron",
+        "Se vuelve más empinada, porque el ingreso subió más que los precios"
+      ],
+      "correcta": 0,
+      "explicacion": "Interceptos: 500/20 = 25 pasa a 700/24 = 29,2 y 500/10 = 50 pasa a 700/12 = 58,3; todo por 1,167. La pendiente es Px/Py y 12/24 = 10/20, así que no se mueve."
+    },
+    {
+      "id": "b22-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Al mismo consumidor (M = 500, Px = 10, Py = 20) ahora le TRIPLICAN el ingreso y los DOS precios a la vez.\n\n¿Qué ocurre con su restricción presupuestaria?",
+      "opciones": [
+        "Se triplica: se va tres veces más a la derecha",
+        "Se reduce a la tercera parte",
+        "NO SE MUEVE: los interceptos se multiplican por 3/3 = 1 y la pendiente tampoco cambia",
+        "Se vuelve más plana, aunque los interceptos queden iguales"
+      ],
+      "correcta": 2,
+      "explicacion": "Los interceptos son M/Py y M/Px: si numerador y denominador se multiplican por 3, el resultado es idéntico. Y la pendiente Px/Py también queda igual: la recta se queda donde estaba."
+    },
+    {
+      "id": "b22-q10",
+      "nivel": "comprension",
+      "enunciado": "TEMA NUEVO: LA CANASTA ÓPTIMA, la mejor canasta de todas las que el consumidor puede comprar.\n\n¿Qué DOS condiciones tiene que cumplir al mismo tiempo?",
+      "opciones": [
+        "Que la TMgS sea cero y que le sobre algo de ingreso",
+        "Que compre la misma cantidad de los dos bienes y que los precios sean iguales",
+        "Que se cumpla la condición de maximización TMgS = Px/Py y que se gaste TODO el ingreso",
+        "Que la UMg de los dos bienes sea igual y que ahorre una parte"
+      ],
+      "correcta": 2,
+      "explicacion": "Son las dos juntas: la de maximización, TMgS = Px/Py (lo mismo que UMgX/Px = UMgY/Py), y la del presupuesto, Px·X + Py·Y = M, con cero ahorro."
+    },
+    {
+      "id": "b22-q11",
+      "nivel": "aplicacion",
+      "enunciado": "Javier consume X e Y con la función U = X^0,25 · Y^0,75, de donde su TMgS = (1/3)·(Y/X). Su ingreso es M = 200, con Px = 2 y Py = 3.\n\n¿Cuál es su canasta óptima?",
+      "opciones": [
+        "X = 50, Y = 33,3",
+        "X = 40, Y = 40",
+        "X = 100, Y = 0",
+        "X = 25, Y = 50"
+      ],
+      "correcta": 3,
+      "explicacion": "Paso 1: (1/3)(Y/X) = 2/3, o sea Y = 2X. Paso 2: 200 = 2X + 3(2X) = 8X, entonces X = 25. Paso 3: Y = 50. Control: 2(25) + 3(50) = 200 ✓."
+    },
+    {
+      "id": "b22-q12",
+      "nivel": "aplicacion",
+      "enunciado": "Un consumidor gasta todo su ingreso y en su canasta actual tiene UMgX = 20, UMgY = 30, Px = 2 y Py = 5.\n\n¿Su canasta es la óptima? Y si no lo es, ¿qué debería hacer?",
+      "opciones": [
+        "Sí es óptima, porque ya gasta todo su ingreso",
+        "No lo es: como 20/2 = 10 es mayor que 30/5 = 6, debe comprar MÁS de X y MENOS de Y",
+        "No lo es: como 20/2 = 10 es mayor que 30/5 = 6, debe comprar más de Y y menos de X",
+        "No lo es: debe comprar más de los dos bienes al mismo tiempo"
+      ],
+      "correcta": 1,
+      "explicacion": "UMgX/Px = 10 y UMgY/Py = 6: no son iguales, así que no es óptima. X da más felicidad por cada sol, conviene subir X y bajar Y. Gastar todo el ingreso no basta."
+    },
+    {
+      "id": "b22-q13",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Chiara compra salchichas (X) y panes (Y), y su TMgS = (3/2)·(Y/X). Cuenta con M = 40 soles, el precio de la salchicha es 3 y el del pan es 1.\n\n¿Cuál es su canasta óptima?",
+      "opciones": [
+        "X = 8 salchichas, Y = 16 panes",
+        "X = 10 salchichas, Y = 10 panes",
+        "X = 4 salchichas, Y = 28 panes",
+        "X = 13,3 salchichas, Y = 0 panes"
+      ],
+      "correcta": 0,
+      "explicacion": "Paso 1: (3/2)(Y/X) = 3/1, entonces Y = 2X. Paso 2: 40 = 3X + 1(2X) = 5X, así que X = 8. Paso 3: Y = 16. Control: 3(8) + 1(16) = 40 ✓."
+    },
+    {
+      "id": "b22-q14",
+      "nivel": "comprension",
+      "enunciado": "JEFE 2/3. Ya en su canasta óptima, la TMgS de Chiara vale 3, igual que el ratio de precios Px/Py = 3/1.\n\n¿Qué significa económicamente que esas dos cosas sean iguales?",
+      "opciones": [
+        "Que la utilidad marginal de los dos bienes se volvió cero",
+        "Que gastó de más y tiene que devolver una parte de lo comprado",
+        "Que los dos bienes cuestan exactamente lo mismo",
+        "Que lo que ella está dispuesta a ceder coincide con lo que el mercado le exige ceder, así que ya no le conviene moverse"
+      ],
+      "correcta": 3,
+      "explicacion": "La TMgS es su valoración interna y Px/Py es el precio relativo del mercado. Cuando se igualan, ningún intercambio adicional le sube la utilidad: está en su mejor canasta."
+    },
+    {
+      "id": "b22-q15",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. Un alumno dibuja una curva de indiferencia que CORTA la recta presupuestaria en DOS puntos distintos.\n\n¿Qué se puede afirmar de esas dos canastas?",
+      "opciones": [
+        "Las dos son óptimas, porque están sobre la recta y gastan todo el ingreso",
+        "Ninguna es la óptima: todavía se puede llegar a una curva más alejada del origen, y la óptima TOCA la recta en un solo punto",
+        "Son inalcanzables, porque quedan fuera del presupuesto",
+        "Son óptimas solo si los dos precios son iguales"
+      ],
+      "correcta": 1,
+      "explicacion": "Si la curva cruza la recta, entre esos dos cortes queda espacio para una curva más alta que sí es alcanzable. La óptima es la tangente: la toca en un único punto."
+    }
+  ]
+}

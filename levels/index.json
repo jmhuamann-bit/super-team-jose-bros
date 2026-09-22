@@ -295,6 +295,20 @@
       "abierto": true,
       "mapa": "levels/level21.json",
       "preguntas": "questions/level21_questions.json"
+    },
+    {
+      "id": "level22",
+      "clase": "Clase 03",
+      "distrito": "Puno",
+      "titulo": "La isla que flota justo en el punto",
+      "icono": "🏞",
+      "seccion": "Parcial",
+      "seccionNota": "Repaso de elasticidades, intervención y teoría del consumidor",
+      "retos": 13,
+      "duracion": "5 min",
+      "abierto": true,
+      "mapa": "levels/level22.json",
+      "preguntas": "questions/level22_questions.json"
     }
   ]
 }
