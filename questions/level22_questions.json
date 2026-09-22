@@ -175,16 +175,16 @@
     },
     {
       "id": "b22-q14",
-      "nivel": "comprension",
-      "enunciado": "JEFE 2/3. Ya en su canasta óptima, la TMgS de Chiara vale 3, igual que el ratio de precios Px/Py = 3/1.\n\n¿Qué significa económicamente que esas dos cosas sean iguales?",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 2/3. Para graficar el caso de Chiara hay que dibujar primero su restricción presupuestaria: M = 40 soles, Px = 3 (las salchichas van en el eje X) y Py = 1 (los panes en el eje Y).\n\n¿Cuáles son sus interceptos y cuál es su pendiente?",
       "opciones": [
-        "Que la utilidad marginal de los dos bienes se volvió cero",
-        "Que gastó de más y tiene que devolver una parte de lo comprado",
-        "Que los dos bienes cuestan exactamente lo mismo",
-        "Que lo que ella está dispuesta a ceder coincide con lo que el mercado le exige ceder, así que ya no le conviene moverse"
+        "Intercepto en Y = 3 e intercepto en X = 1; pendiente −40",
+        "Intercepto en Y = 13,3 e intercepto en X = 40; pendiente −1/3",
+        "Intercepto en Y = 40 e intercepto en X = 40; pendiente −1",
+        "Intercepto en Y = 40 e intercepto en X = 13,3; pendiente −3"
       ],
       "correcta": 3,
-      "explicacion": "La TMgS es su valoración interna y Px/Py es el precio relativo del mercado. Cuando se igualan, ningún intercambio adicional le sube la utilidad: está en su mejor canasta."
+      "explicacion": "El intercepto en Y es M/Py = 40/1 = 40 y el de X es M/Px = 40/3 = 13,3. La pendiente es −Px/Py = −3/1 = −3: el ratio de precios con el signo menos."
     },
     {
       "id": "b22-q15",
