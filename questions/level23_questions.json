@@ -1,0 +1,203 @@
+{
+  "nivel": "level23",
+  "clase": "Clase 04 · Parcial — Casos atípicos de la teoría del consumidor",
+  "fuente": "Apuntes de la 4ta clase del Parcial — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b23-q1",
+      "nivel": "comprension",
+      "enunciado": "Los zapatos son el ejemplo de cabecera de los bienes PERFECTAMENTE COMPLEMENTARIOS. Cada PAR completo da 1 útil.\n\n¿Cuánta utilidad dan 1 zapato izquierdo y 10 derechos?",
+      "opciones": [
+        "11 útiles, sumando todos los zapatos",
+        "1 útil, porque solo se arma un par y los 9 derechos de más no aportan nada",
+        "10 útiles, que es el bien que más tienes",
+        "5,5 útiles, que es el promedio de los dos"
+      ],
+      "correcta": 1,
+      "explicacion": "En complementarios perfectos manda el que escasea. Con 1 izquierdo solo armas 1 par, así que 1 con 10 da lo mismo que 1 con 1, y 100 izquierdos con 1 derecho también."
+    },
+    {
+      "id": "b23-q2",
+      "nivel": "comprension",
+      "enunciado": "Un consumidor de zapatos pasa de la canasta (2 izquierdos, 2 derechos) a la canasta (20 izquierdos, 3 derechos).\n\n¿Qué le pasó a su utilidad?",
+      "opciones": [
+        "Subió de 2 a 3 y ahí se quedó: en complementarios la utilidad solo crece añadiendo A LOS DOS bienes, y los 17 izquierdos de más no lo movieron de curva",
+        "Subió a 20, porque ahora tiene muchos más zapatos",
+        "Subió a 23, sumando los dos bienes",
+        "Bajó, porque se desbalanceó la canasta"
+      ],
+      "correcta": 0,
+      "explicacion": "Pasar de 2 y 2 a 3 y 3 sí lo sube a 3 útiles. Pero de ahí en adelante, echarle izquierdos sin derechos es plata tirada: se queda pegado en la misma curva."
+    },
+    {
+      "id": "b23-q3",
+      "nivel": "comprension",
+      "enunciado": "La curva de indiferencia de dos bienes perfectamente complementarios tiene forma de L.\n\n¿Cuánto vale la TMgS en cada uno de sus dos tramos?",
+      "opciones": [
+        "Cero en los dos tramos, porque la curva no sube",
+        "Uno en los dos tramos, porque los bienes van en proporción fija",
+        "CERO en el tramo horizontal e INFINITO en el tramo vertical",
+        "Infinito en el horizontal y cero en el vertical"
+      ],
+      "correcta": 2,
+      "explicacion": "La TMgS es la pendiente de la curva. Un tramo plano tiene pendiente cero y uno parado tiene pendiente que tiende a infinito. Y en la esquina no hay pendiente definida."
+    },
+    {
+      "id": "b23-q4",
+      "nivel": "comprension",
+      "enunciado": "En los capítulos anteriores la canasta óptima salía igualando la TMgS con el ratio de precios.\n\n¿Funciona eso con bienes perfectamente complementarios?",
+      "opciones": [
+        "Sí, siempre funciona: es la condición de maximización de todo el curso",
+        "Sí, pero solo si los precios son iguales",
+        "Sí, usando la TMgS del tramo horizontal",
+        "NO: la curva es una esquina, así que no hay tangencia. El óptimo sale de la relación de complementariedad más la restricción"
+      ],
+      "correcta": 3,
+      "explicacion": "La tangencia necesita una curva suave. Acá la curva quiebra en la esquina y no hay una sola pendiente, así que la condición de maximización de siempre no aplica."
+    },
+    {
+      "id": "b23-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Para hacer una ensalada de frutas siempre se necesitan 4 manzanas (X) y 8 plátanos (Y), ni una más ni una menos.\n\n¿Cuál es la RELACIÓN DE COMPLEMENTARIEDAD entre los dos bienes?",
+      "opciones": [
+        "Y = 2X, porque por cada manzana van dos plátanos",
+        "Y = X, porque los dos se necesitan por igual",
+        "X = 2Y, porque la manzana es el bien que va primero",
+        "Y = 32X, multiplicando 4 por 8"
+      ],
+      "correcta": 0,
+      "explicacion": "La receta fija la proporción: 4 manzanas por 8 plátanos es lo mismo que 1 por 2. Esa relación es la que después se reemplaza en la restricción presupuestaria."
+    },
+    {
+      "id": "b23-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Con esa misma receta (4 manzanas X y 8 plátanos Y, o sea Y = 2X), el consumidor tiene M = 200 soles, Px = 20 y Py = 10.\n\n¿Cuál es su canasta óptima?",
+      "opciones": [
+        "(10, 5), porque la manzana cuesta el doble",
+        "(5, 10), porque al reemplazar Y = 2X queda 200 = 20X + 10(2X) = 40X",
+        "(4, 8), que es la receta tal cual",
+        "(10, 10), repartiendo el ingreso mitad y mitad"
+      ],
+      "correcta": 1,
+      "explicacion": "De 40X = 200 sale X = 5, y con Y = 2X sale Y = 10. Control: 20(5) + 10(10) = 100 + 100 = 200, o sea que gasta todo el ingreso ✓."
+    },
+    {
+      "id": "b23-q7",
+      "nivel": "aplicacion",
+      "enunciado": "La función de utilidad de un consumidor es U = mín(4X, 8Y). El precio de X es 2 soles, el de Y es 4 soles y su ingreso es 24 soles.\n\n¿Cuál es la canasta que maximiza su utilidad?",
+      "opciones": [
+        "(3, 3), repartiendo parejo",
+        "(2, 4), porque Y cuesta el doble",
+        "(6, 3), porque 4X = 8Y da X = 2Y, y al reemplazar queda 24 = 2(2Y) + 4Y = 8Y",
+        "(6, 6), porque los dos bienes van en la misma cantidad"
+      ],
+      "correcta": 2,
+      "explicacion": "Se iguala lo de adentro del mínimo: 4X = 8Y, o sea X = 2Y. De 8Y = 24 sale Y = 3 y X = 6. Control: 2(6) + 4(3) = 12 + 12 = 24 ✓."
+    },
+    {
+      "id": "b23-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Gonzalo tiene un ingreso de 140, con Px = 2 y Py = 4. Dice: «no me sirve tener solo uno de los bienes, y mi combinación ideal siempre considera TRES unidades de X por cada DOS de Y».\n\n¿Cuál es su canasta óptima?",
+      "opciones": [
+        "(20, 30), invirtiendo la proporción",
+        "(40, 30), porque hay que gastar más en el bien barato",
+        "(25, 40), repartiendo el ingreso por precios",
+        "(30, 20), porque la relación es Y = (2/3)X y al reemplazarla queda 140 = 2X + 4(2/3)X"
+      ],
+      "correcta": 3,
+      "explicacion": "«Tres de X por cada dos de Y» da Y = (2/3)X. Reemplazando: 2X + (8/3)X = (14/3)X = 140, entonces X = 30 e Y = 20. Control: 2(30) + 4(20) = 140 ✓."
+    },
+    {
+      "id": "b23-q9",
+      "nivel": "comprension",
+      "enunciado": "Ahora el segundo caso: bienes PERFECTAMENTE SUSTITUTOS, que hacen exactamente lo mismo.\n\n¿Cómo es su curva de indiferencia y cómo es su TMgS?",
+      "opciones": [
+        "Es una RECTA de pendiente CONSTANTE, y la TMgS es una constante, no una expresión en variables",
+        "Es una L con una esquina, igual que en los complementarios",
+        "Es una curva convexa normal, y la TMgS disminuye conforme bajas por ella",
+        "Es una recta vertical, y la TMgS tiende a infinito"
+      ],
+      "correcta": 0,
+      "explicacion": "Si dos bienes se reemplazan siempre en la misma proporción, la disposición a cambiar uno por otro nunca cambia. Por eso la curva es recta y la TMgS es un número fijo."
+    },
+    {
+      "id": "b23-q10",
+      "nivel": "aplicacion",
+      "enunciado": "Te dicen: «para mí es lo mismo comprar 3 unidades de X que 4 unidades de Y», y no te dan las utilidades marginales.\n\nAplicando la PROPIEDAD DEL INFIEL, ¿cuánto valen UMgX y UMgY?",
+      "opciones": [
+        "UMgX = 3 y UMgY = 4, tal como aparecen en el enunciado",
+        "UMgX = 4 y UMgY = 3, porque los números se CRUZAN",
+        "UMgX = 12 y UMgY = 12, multiplicando ambos",
+        "UMgX = 0,75 y UMgY = 1,33, dividiendo uno entre el otro"
+      ],
+      "correcta": 1,
+      "explicacion": "Se comprueba solo: si 3 de X valen lo mismo que 4 de Y, entonces 3·UMgX = 4·UMgY, y con 4 y 3 se cumple porque 3(4) = 4(3) = 12. Por eso los números se cruzan."
+    },
+    {
+      "id": "b23-q11",
+      "nivel": "aplicacion",
+      "enunciado": "Dos bienes son perfectamente sustitutos, con UMgX = 3, UMgY = 5, Px = 7 soles y Py = 8 soles.\n\n¿Cuál conviene comprar?",
+      "opciones": [
+        "X, porque es el bien más barato",
+        "Los dos en partes iguales, porque son sustitutos",
+        "Y, porque 5/8 = 0,63 le gana a 3/7 = 0,43: da más felicidad por sol gastado",
+        "Ninguno: con sustitutos da exactamente lo mismo qué compres"
+      ],
+      "correcta": 2,
+      "explicacion": "El versus se hace con la utilidad por sol, UMgX/Px contra UMgY/Py. Y que X sea el más barato no decide nada: lo que manda es cuánto rinde cada sol."
+    },
+    {
+      "id": "b23-q12",
+      "nivel": "aplicacion",
+      "enunciado": "«Es lo mismo comprar 3 de X que 4 de Y». El precio de X es 1 sol, el de Y es 2 soles y el ingreso es 120.\n\n¿Qué bien compra y cuánto?",
+      "opciones": [
+        "Compra solo X: 120 unidades, porque 4/1 = 4 le gana a 3/2 = 1,5",
+        "Compra solo Y: 60 unidades, porque Y tiene mayor utilidad marginal",
+        "Compra 60 de X y 30 de Y, repartiendo el ingreso",
+        "Le da lo mismo: cualquier punto de la restricción lo deja igual"
+      ],
+      "correcta": 0,
+      "explicacion": "Con la propiedad del infiel UMgX = 4 y UMgY = 3. El versus lo gana X, y en sustitutos se compra TODO de un solo bien: 120 soles entre 1 sol son 120 unidades."
+    },
+    {
+      "id": "b23-q13",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Juan tiene 200 soles para chocolates (eje X) y caramelos (eje Y), que para él son sustitutos perfectos con TMgS constante igual a 3/5. Un chocolate cuesta 6 soles y un caramelo 4 soles.\n\n¿Qué canasta elige?",
+      "opciones": [
+        "(50, 30), comprando de los dos",
+        "(0, 50), porque la TMgS de 0,6 es MENOR que el ratio de precios 6/4 = 1,5, así que gana Y: 200 entre 4",
+        "(50, 0), porque el chocolate da más utilidad",
+        "(0, 33,3), dividiendo 200 entre 6"
+      ],
+      "correcta": 1,
+      "explicacion": "TMgS menor que el ratio de precios significa que el mercado te cobra por X más de lo que X te da: conviene irse todo a Y. Y 200/4 = 50 caramelos."
+    },
+    {
+      "id": "b23-q14",
+      "nivel": "comprension",
+      "enunciado": "JEFE 2/3. Las curvas de indiferencia de un consumidor son perfectamente HORIZONTALES (X va en el eje horizontal e Y en el vertical).\n\n¿Cuál afirmación es verdadera?",
+      "opciones": [
+        "La maximización de la utilidad ocurrirá en el eje X",
+        "La TMgS disminuye conforme bajamos por la curva de indiferencia",
+        "La TMgS es CERO, y como solo Y le da felicidad, maximiza gastando todo en Y",
+        "La maximización ocurre en cualquier punto de la curva de indiferencia"
+      ],
+      "correcta": 2,
+      "explicacion": "Si te mueves horizontalmente cambia X y la utilidad no se mueve: X es neutral. Entonces solo Y da utilidad, la pendiente es cero y todo el ingreso se va a Y."
+    },
+    {
+      "id": "b23-q15",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. Ahora las curvas de indiferencia son perfectamente VERTICALES (X en el eje horizontal, Y en el vertical).\n\n¿Cuál afirmación es verdadera?",
+      "opciones": [
+        "La tasa marginal de sustitución es cero",
+        "X es un bien inferior",
+        "El consumidor maximiza consumiendo solo el bien del eje horizontal, y nada más que eso",
+        "MÁS DE UNA es verdadera: maximiza consumiendo solo el bien del eje horizontal Y además su TMgS tiende a infinito"
+      ],
+      "correcta": 3,
+      "explicacion": "Con curvas verticales solo X da utilidad: por eso gasta todo en X y la TMgS, que es UMgX sobre una UMgY de cero, tiende a infinito. Las dos cosas son ciertas a la vez."
+    }
+  ]
+}

@@ -309,6 +309,20 @@
       "abierto": true,
       "mapa": "levels/level22.json",
       "preguntas": "questions/level22_questions.json"
+    },
+    {
+      "id": "level23",
+      "clase": "Clase 04",
+      "distrito": "Ayacucho",
+      "titulo": "La tijera que sola no suena",
+      "icono": "✂",
+      "seccion": "Parcial",
+      "seccionNota": "Repaso de elasticidades, intervención y teoría del consumidor",
+      "retos": 13,
+      "duracion": "5 min",
+      "abierto": true,
+      "mapa": "levels/level23.json",
+      "preguntas": "questions/level23_questions.json"
     }
   ]
 }

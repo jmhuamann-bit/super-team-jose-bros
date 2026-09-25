@@ -2208,6 +2208,139 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     AYACUCHO — la Plaza de Armas a media mañana, con los cerros
+     secos de Huamanga al fondo, los portales de arquería blanca,
+     los campanarios de las iglesias de cal y los techos de teja.
+     Acá se baila la danza de tijeras, que es el calce del nivel:
+     UNA hoja sola no suena. Recién suena con las DOS.
+     OJO: el fondo lleva arquerías y campanarios, pero NINGÚN
+     retablo, arpa ni cirio sueltos, que esos son los bichos.
+     ========================================================= */
+  tijeras: {
+    nombre: "Ayacucho",
+    cielo: [[0, "#2f7ec4"], [0.4, "#7db0d8"], [0.76, "#c4cfd2"], [1, "#ddd6c4"]],
+    suelo: { cara: "#9a8a74", borde: "#b8a992", tierra: "#5f5346", plataforma: "#7a4a30", plataformaBorde: "#e8c15a" },
+    acento: "#c2264a",
+
+    bichos: ["arpa", "retablo", "huamanga", "arco", "cirio"],
+    nombresBichos: [
+      "El Arpa sin su Violín",
+      "El Retablo que Busca la Tangencia",
+      "La Piedra de Huamanga que No Cruza",
+      "El Arco del Bien Más Barato",
+      "El Cirio del Eje Cambiado",
+    ],
+    andares: ["veloz", "guardia", "salta", "patrulla", "vuela"],
+    jefe: "danzante",
+    nombreJefe: "El Danzante de Tijeras",
+
+    fondo(ctx, cam, t) {
+      // el sol serrano, chiquito y muy blanco
+      ctx.fillStyle = "rgba(255,250,232,.20)";
+      ctx.beginPath(); ctx.arc(196, 58, 54, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,253,244,.96)";
+      ctx.beginPath(); ctx.arc(196, 58, 23, 0, Math.PI * 2); ctx.fill();
+
+      // LOS CERROS SECOS DE HUAMANGA, dos capas
+      repetir(ctx, cam, 520, 0.10, (x, i) => {
+        const bx = x + 40, base = 256, alto = 80 + ((i * 43) % 32);
+        ctx.fillStyle = "#8f8a6e";
+        ctx.beginPath();
+        ctx.moveTo(bx - 160, base);
+        ctx.quadraticCurveTo(bx - 20, base - alto, bx + 80, base - alto + 26);
+        ctx.quadraticCurveTo(bx + 140, base - 6, bx + 180, base);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 370, 0.19, (x, i) => {
+        const bx = x + 30, base = 274, alto = 44 + ((i * 29) % 20);
+        ctx.fillStyle = "#9d9679";
+        ctx.beginPath();
+        ctx.moveTo(bx - 120, base);
+        ctx.quadraticCurveTo(bx, base - alto, bx + 130, base);
+        ctx.closePath(); ctx.fill();
+      });
+      ctx.fillStyle = "#a89e84";
+      ctx.fillRect(0, 270, CFG.ANCHO_VISTA, 22);
+
+      // LAS IGLESIAS DE CAL, con sus dos campanarios y la teja
+      repetir(ctx, cam, 430, 0.30, (x, i) => {
+        const bx = x + 40, base = 330, alto = 46 + ((i * 31) % 16);
+        ctx.fillStyle = "#ece4d4";                              // el cuerpo encalado
+        ctx.fillRect(bx, base - alto, 150, alto);
+        for (let k = 0; k < 2; k++) {                           // los campanarios
+          const tx = bx + (k ? 118 : 4);
+          ctx.fillStyle = "#ece4d4";
+          ctx.fillRect(tx, base - alto - 34, 28, 34);
+          ctx.fillStyle = "#b5462c";                            // la teja de la torre
+          ctx.beginPath();
+          ctx.moveTo(tx - 5, base - alto - 34);
+          ctx.lineTo(tx + 14, base - alto - 50);
+          ctx.lineTo(tx + 33, base - alto - 34);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "rgba(70,60,44,.42)";                 // el vano de la campana
+          ctx.fillRect(tx + 9, base - alto - 26, 10, 14);
+        }
+        ctx.fillStyle = "#b5462c";                              // la teja del cuerpo
+        ctx.fillRect(bx - 4, base - alto - 9, 158, 9);
+        ctx.fillStyle = "rgba(70,60,44,.34)";                   // la portada y sus ventanas
+        ctx.fillRect(bx + 63, base - 26, 24, 26);
+        ctx.fillRect(bx + 26, base - alto + 14, 14, 16);
+        ctx.fillRect(bx + 110, base - alto + 14, 14, 16);
+      });
+
+      // LOS PORTALES DE LA PLAZA: la arquería blanca corrida
+      repetir(ctx, cam, 244, 0.50, (x, i) => {
+        const bx = x, base = 362, alto = 44;
+        ctx.fillStyle = "#e4dbc9";
+        ctx.fillRect(bx, base - alto, 228, alto);
+        ctx.fillStyle = "#b5462c";
+        ctx.fillRect(bx - 4, base - alto - 8, 236, 8);
+        for (let k = 0; k < 6; k++) {                           // los arcos
+          const ax = bx + 12 + k * 36;
+          ctx.fillStyle = "rgba(84,70,52,.40)";
+          ctx.beginPath();
+          ctx.moveTo(ax, base);
+          ctx.lineTo(ax, base - 20);
+          ctx.quadraticCurveTo(ax + 11, base - 36, ax + 22, base - 20);
+          ctx.lineTo(ax + 22, base);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+
+      // LA VEREDA DE PIEDRA y las tunas de la orilla
+      ctx.fillStyle = "#b3a68e";
+      ctx.fillRect(0, 362, CFG.ANCHO_VISTA, 22);
+      ctx.fillStyle = "#c6baa2";
+      ctx.fillRect(0, 362, CFG.ANCHO_VISTA, 4);
+      repetir(ctx, cam, 118, 0.74, (x, i) => {
+        const bx = x + 14, base = 380;
+        if (i % 2 === 0) {
+          ctx.fillStyle = "#4f7340";                            // la tuna
+          ctx.beginPath(); ctx.ellipse(bx + 5, base - 12, 7, 11, 0, 0, Math.PI * 2); ctx.fill();
+          ctx.beginPath(); ctx.ellipse(bx - 4, base - 20, 5, 8, 0.5, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = "#c2264a";
+          ctx.fillRect(bx + 3, base - 24, 4, 4);
+        } else {
+          ctx.fillStyle = ["#8f8471", "#7d7362", "#9a8f79"][i % 3];   // los cantos rodados
+          ctx.fillRect(bx, base - 5, 12, 5);
+          ctx.fillRect(bx + 3, base - 8, 6, 3);
+        }
+      });
+      ctx.fillStyle = "#a2957d";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // el aire seco de la sierra, con polvillo que brilla a contraluz
+      for (let i = 0; i < 22; i++) {
+        const x = (i * 131 - t * 1.1) % 880 - 20;
+        const y = 110 + ((i * 59) % 230) + Math.sin(t / 26 + i) * 7;
+        ctx.fillStyle = `rgba(250,244,224,${(0.06 + 0.11 * Math.abs(Math.sin(t / 29 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 6, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

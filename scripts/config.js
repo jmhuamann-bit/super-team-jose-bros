@@ -37,6 +37,18 @@ export const CFG = {
   // --- enemigos ---
   VEL_BICHO: 0.75,
   RADIO_PATRULLA: 72,  // píxeles a cada lado de su punto de origen
+  // cada bicho puede tener su propio "andar" (ver `andares` en temas.js):
+  //   patrulla · camina y se voltea en bordes y paredes  (el de toda la vida)
+  //   veloz    · lo mismo, pero corriendo
+  //   salta    · patrulla dando brincos
+  //   vuela    · no pisa el suelo: va y viene en el aire, subiendo y bajando
+  //   guardia  · no se mueve del sitio, solo voltea a mirar
+  VEL_BICHO_VELOZ: 2.1,   // multiplicador del "veloz"
+  SALTO_BICHO: 46,        // altura del brinco del "salta", en píxeles
+  VUELO_BICHO: 26,        // amplitud del vaivén del "vuela"
+
+  // --- resortes ---
+  FUERZA_RESORTE: -17.2,  // mucho más que el salto normal (-11.8)
 };
 
 /** Símbolos que se usan en el arreglo "mapa" de cada nivel JSON. */
@@ -56,4 +68,6 @@ export const SIMBOLOS = {
   CHECKPOINT: "C",
   META: "M",
   INICIO: "P",
+  RESORTE: "T",       // trampolín: si caes encima, salís disparado
+  BLOQUE_AZAR: "A",   // bloque del azar: el premio se sortea al golpearlo
 };

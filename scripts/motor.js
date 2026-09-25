@@ -15,6 +15,11 @@ export function crearJuego(lienzo, nivel, eventos) {
   const ctx = lienzo.getContext("2d");
   const tema = TEMAS[nivel.tema] || TEMAS.puerto;
 
+  // el tema decide cómo se mueve cada tipo de bicho; sin `andares`, todos patrullan
+  for (const b of nivel.bichos) {
+    b.andar = tema.andares ? tema.andares[b.tipo % tema.andares.length] : "patrulla";
+  }
+
   /* ---------------- estado ---------------- */
   const est = {
     vidas: CFG.VIDAS, monedas: 0, xp: 0,
@@ -201,26 +206,36 @@ export function crearJuego(lienzo, nivel, eventos) {
         Audio.bloque();
         chispas(b.x + 12, b.y - 2, "#ffd166", 16);
 
-        if (b.premio === "vida") {
+        // EL BLOQUE DEL AZAR: un experimento aleatorio de verdad dentro del juego.
+        // La bolsa tiene 6 papelitos: 2 de monedas y 1 de cada uno del resto, así que
+        // P(monedas) = 2/6 y P(vida) = 1/6. Es la definición clásica en vivo.
+        let premio = b.premio;
+        if (premio === "azar") {
+          const bolsa = ["monedas", "monedas", "pista", "turbo", "estrella", "vida"];
+          premio = bolsa[Math.floor(Math.random() * bolsa.length)];
+          flotar(b.x - 30, b.y - 54, "AZAR (1 de 6): " + premio.toUpperCase(), "#9affa0");
+        }
+
+        if (premio === "vida") {
           est.vidas++;
           premios.push({ x: b.x + 2, y: b.y - 24, vy: -4.2, gravedad: 0.11, sprite: "item_ceviche", vida: 78, gira: false });
           flotar(b.x - 16, b.y - 34, "CEVICHE: +1 VIDA", "#ff5470");
           eventos.onLatido?.("vidas");
           Audio.victoria();
-        } else if (b.premio === "turbo") {
+        } else if (premio === "turbo") {
           est.turbo = CFG.DURA_TURBO;
           premios.push({ x: b.x + 2, y: b.y - 24, vy: -4.6, gravedad: 0.12, sprite: "item_rayo", vida: 70, gira: false });
           flotar(b.x - 22, b.y - 34, "CHICHA ENERGÉTICA: ¡VELOCIDAD!", "#ffd166");
           chispas(jug.x + 10, jug.y + 14, "#38bdf8", 20);
           eventos.onLatido?.("turbo");
           Audio.victoria();
-        } else if (b.premio === "pista") {
+        } else if (premio === "pista") {
           est.pistas++;
           premios.push({ x: b.x + 2, y: b.y - 24, vy: -4.4, gravedad: 0.12, sprite: "item_foco", vida: 74, gira: false });
           flotar(b.x - 18, b.y - 34, "PISTA GUARDADA", "#38bdf8");
           eventos.onLatido?.("pistas");
           Audio.victoria();
-        } else if (b.premio === "estrella") {
+        } else if (premio === "estrella") {
           est.grande = true;
           premios.push({ x: b.x + 2, y: b.y - 24, vy: -4.2, gravedad: 0.11, sprite: "item_estrella", vida: 78, gira: false });
           flotar(b.x - 14, b.y - 34, "CRECISTE", "#ffd166");
@@ -234,6 +249,22 @@ export function crearJuego(lienzo, nivel, eventos) {
           Audio.moneda();
         }
         refrescar();
+      }
+    }
+
+    // resortes: si le caes encima, salís disparado mucho más alto que con un salto
+    for (const r of nivel.resortes) {
+      if (r.comprime > 0) { r.comprime--; continue; }  // todavía hundido, no re-dispara
+      if (jug.vy < 0) continue;                        // solo al bajar, no al subir
+      const pies = jug.y + CFG.ALTO_JUGADOR;
+      if (pies < r.y - 2 || pies > r.y + 22) continue; // hay que pisarlo, no rozarlo de lado
+      if (chocan(caja, { x: r.x + 3, y: r.y, ancho: CFG.TILE - 6, alto: 16 })) {
+        jug.vy = CFG.FUERZA_RESORTE;
+        jug.enSuelo = false;
+        jug.saltando = false;
+        r.comprime = 13;
+        Audio.salto();
+        chispas(r.x + 16, r.y + 6, "#9affa0", 12);
       }
     }
 
@@ -256,20 +287,37 @@ export function crearJuego(lienzo, nivel, eventos) {
     // caída al vacío
     if (jug.y > nivel.alto * CFG.TILE + 60) perderVida("Te caíste. Vuelves al último checkpoint.");
 
-    // bichos
+    // bichos: cada tipo se mueve a su manera (ver `andares` en el tema)
     for (const b of nivel.bichos) {
       if (!b.vivo) continue;
-      // patrulla sencilla: camina y se voltea en bordes y paredes
-      b.x += b.dir * CFG.VEL_BICHO;
-      const colFrente = Math.floor((b.x + (b.dir > 0 ? 30 : -2)) / CFG.TILE);
-      const filaPie = Math.floor((b.y + 30) / CFG.TILE);
-      if (Math.abs(b.x - b.origen) > CFG.RADIO_PATRULLA ||
-          esSolido(nivel, colFrente, filaPie - 1) ||
-          !esSolido(nivel, colFrente, filaPie)) {
-        b.dir *= -1;
-        b.x += b.dir * 2;
+      b.reloj++;
+
+      if (b.andar === "guardia") {
+        // planta su puesto y no lo suelta: solo voltea a mirar de rato en rato
+        if (b.reloj % 96 === 0) b.dir *= -1;
+      } else if (b.andar === "vuela") {
+        // no pisa el suelo, así que no le importan los bordes ni los huecos
+        b.x += b.dir * CFG.VEL_BICHO * 1.4;
+        if (Math.abs(b.x - b.origen) > CFG.RADIO_PATRULLA * 1.7) { b.dir *= -1; b.x += b.dir * 2; }
+        b.alto = Math.sin(b.reloj / 26) * CFG.VUELO_BICHO - CFG.VUELO_BICHO - 8;
+      } else {
+        // a pie: patrulla y se voltea en bordes y paredes; el "veloz" corre
+        b.x += b.dir * CFG.VEL_BICHO * (b.andar === "veloz" ? CFG.VEL_BICHO_VELOZ : 1);
+        const colFrente = Math.floor((b.x + (b.dir > 0 ? 30 : -2)) / CFG.TILE);
+        const filaPie = Math.floor((b.y + 30) / CFG.TILE);
+        if (Math.abs(b.x - b.origen) > CFG.RADIO_PATRULLA ||
+            esSolido(nivel, colFrente, filaPie - 1) ||
+            !esSolido(nivel, colFrente, filaPie)) {
+          b.dir *= -1;
+          b.x += b.dir * 2;
+        }
+        if (b.andar === "salta") {
+          const ciclo = b.reloj % 78;
+          b.alto = ciclo < 32 ? -Math.sin((ciclo / 32) * Math.PI) * CFG.SALTO_BICHO : 0;
+        }
       }
-      if (chocan(caja, { x: b.x, y: b.y, ancho: 28, alto: 24 })) preguntar(b, false);
+
+      if (chocan(caja, { x: b.x, y: b.y + b.alto, ancho: 28, alto: 24 })) preguntar(b, false);
     }
 
     // jefe
@@ -524,11 +572,18 @@ export function crearJuego(lienzo, nivel, eventos) {
       pintar(ctx, "pua", px + 4, p.y);
     }
 
+    // --- resortes ---
+    for (const r of nivel.resortes) {
+      const px = r.x - cam; if (px < -40 || px > 840) continue;
+      const hundido = r.comprime > 0 ? 6 : 0;
+      pintar(ctx, "resorte", px + 3, r.y + hundido);
+    }
+
     // --- bichos ---
     for (const b of nivel.bichos) {
       if (!b.vivo) continue;
       const px = b.x - cam; if (px < -60 || px > 860) continue;
-      const flota = Math.sin((reloj + b.fase * 9) / 16) * 2;
+      const flota = b.alto + Math.sin((reloj + b.fase * 9) / 16) * 2;
       pintar(ctx, tema.bichos[b.tipo % tema.bichos.length], px, b.y + flota, b.dir > 0);
       // globito de pregunta
       ctx.fillStyle = "rgba(18,16,42,.85)";

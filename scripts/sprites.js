@@ -1840,6 +1840,136 @@ const TEJEDOR = [  // jefe de Puno: teje la canasta sin igualar nunca la felicid
 ];
 const P_TEJEDOR = { r: "#c2264a", w: "#f7efe0", c: "#c9945c", k: "#1f1a24", y: "#f0c341", n: "#6b4a24" };
 
+
+const RESORTE = [  // trampolín: se pisa y sale disparado mucho más alto (14 × 9)
+  "..............",
+  "..pppppppppp..",
+  "..pppppppppp..",
+  "..kkkkkkkkkk..",
+  "...mmmmmmmm...",
+  "....mmmmmm....",
+  "...mmmmmmmm...",
+  ".kkkkkkkkkkkk.",
+  "..............",
+];
+const P_RESORTE = { p: "#e8504f", k: "#2a2438", m: "#cdd3da" };
+
+/* =========================================================
+   AYACUCHO — la danza de tijeras, los retablos y las iglesias
+   blancas. El fondo es cal blanca, teja y piedra clara, así que
+   acá todo va oscuro o muy saturado.
+   ========================================================= */
+const ARPA = [     // el arpa ayacuchana: sola no hace la danza, le falta el violín (16 × 15)
+  "................",
+  "............aaa.",
+  "...........aaaa.",
+  ".........aaaaaa.",
+  ".......aaa..waa.",
+  ".....aaa...wwaa.",
+  "...aaa....wwwaa.",
+  "..aa.....wwwwaa.",
+  "..aa....wwwwwaa.",
+  "..aa...wwwwwwaa.",
+  "..aa..wwwwwwwaa.",
+  "..aaaaaaaaaaaaa.",
+  "..aaaaarraaaaaa.",
+  "...aa.......aa..",
+  "................",
+];
+const P_ARPA = { a: "#4a2e1c", w: "#f2ead8", r: "#c2264a" };
+
+const RETABLO = [  // el retablo abierto: busca la tangencia donde la curva es una esquina (16 × 14)
+  "................",
+  "..bbbbbbbbbbbb..",
+  "..bwwwbbbbwwwb..",
+  "..bwyywbbwyywb..",
+  "..bwwwwbbwwwwb..",
+  "..bwrrwbbwrrwb..",
+  "..bwwwwbbwwwwb..",
+  "..bwyywbbwyywb..",
+  "..bwwwwbbwwwwb..",
+  "..bwrrwbbwrrwb..",
+  "..bwwwwbbwwwwb..",
+  "..bbbbbbbbbbbb..",
+  "...bb......bb...",
+  "................",
+];
+const P_RETABLO = { b: "#2f4f9e", w: "#f2ead8", y: "#e8c15a", r: "#d8303c" };
+
+const HUAMANGA = [   // la piedra de Huamanga tallada: no cruza los números de la propiedad del infiel (14 × 12)
+  "..............",
+  "....pppppp....",
+  "...pppppppp...",
+  "..ppkppppkpp..",
+  "..pppppppppp..",
+  "..ppkkkkkkpp..",
+  "..pppppppppp..",
+  "...pppppppp...",
+  "...pkkkkkkp...",
+  "...pppppppp...",
+  "....pppppp....",
+  "..............",
+];
+const P_HUAMANGA = { p: "#d3808f", k: "#4a2a34" };
+
+const ARCO = [     // el arco de piedra: en sustitutos se va por el más barato y no por el que rinde más (18 × 13)
+  "..................",
+  ".....aaaaaaaa.....",
+  "...aaaaaaaaaaaa...",
+  "..aaaayyyyaaaaaa..",
+  "..aaaa......aaaa..",
+  "..aaa........aaa..",
+  "..aaa........aaa..",
+  "..aaa........aaa..",
+  "..aaa........aaa..",
+  "..aaa........aaa..",
+  ".aaaa........aaaa.",
+  ".aaaa........aaaa.",
+  "..................",
+];
+const P_ARCO = { a: "#5a4a3a", y: "#e8c15a" };
+
+const CIRIO = [    // el cirio morado de la procesión: con curvas horizontales jura que se maximiza en el eje X (12 × 16)
+  "............",
+  ".....ff.....",
+  "....ffff....",
+  ".....ff.....",
+  "......f.....",
+  "....wwww....",
+  "....mmmm....",
+  "....mmmm....",
+  "....mmmm....",
+  "....mwwm....",
+  "....mmmm....",
+  "....mmmm....",
+  "....mmmm....",
+  "...kkkkkk...",
+  "...kkkkkk...",
+  "............",
+];
+const P_CIRIO = { f: "#f0a02c", w: "#f7efe0", m: "#6b2f9e", k: "#3b2a1a" };
+
+const DANZANTE = [ // jefe de Ayacucho: baila con LAS DOS hojas, que es lo que hace que la tijera suene (20 × 17)
+  "......mmmmmm........",
+  ".....mmmmmmmm.......",
+  ".....myyyyyym.......",
+  "......ssssss........",
+  "......skssks........",
+  "......ssssss........",
+  ".......srrs.........",
+  "....rrrrrrrrrr..hh..",
+  "...ryyrrrrrryyr.hh..",
+  "...rrrrrrrrrrrrhh...",
+  "...ryyrrrrrryyrh....",
+  "....rrrrrrrrrr......",
+  "....yyyyyyyyyy......",
+  "....rrrr..rrrr......",
+  "....rrrr..rrrr......",
+  "...kkkkk..kkkkk.....",
+  "....................",
+];
+const P_DANZANTE = { m: "#2f4f9e", y: "#e8c15a", s: "#c9945c", k: "#241a2e", r: "#c2264a", h: "#8a94a4" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1860,6 +1990,13 @@ const DEFINICIONES = {
   moneda_b:     [MONEDA_B, P_OBJ],
   bloque:       [BLOQUE, P_OBJ],
   bloque_usado: [BLOQUE_USADO, P_OBJ],
+  resorte:      [RESORTE, P_RESORTE],
+  arpa:         [ARPA, P_ARPA],
+  retablo:      [RETABLO, P_RETABLO],
+  huamanga:     [HUAMANGA, P_HUAMANGA],
+  arco:         [ARCO, P_ARCO],
+  cirio:        [CIRIO, P_CIRIO],
+  danzante:     [DANZANTE, P_DANZANTE],
   pua:          [PUA, P_OBJ],
   bandera:      [BANDERA, P_OBJ],
   meta:         [META, P_OBJ],

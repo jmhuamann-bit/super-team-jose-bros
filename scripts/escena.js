@@ -232,6 +232,12 @@ const FICHAS = [
   { sprite: "diablo", nombre: "El Diablo de los Cuernos Disparejos", texto: "Bailarín de la Candelaria: iguala la tasa marginal de sustitución con cualquier cosa menos con el ratio de precios." },
   { sprite: "chullo", nombre: "El Chullo del Sol Gastado", texto: "Ve que su canasta no es la óptima pero no sabe de cuál de los dos bienes comprar más." },
   { sprite: "tejedor", nombre: "El Tejedor de Taquile", texto: "Jefe de Puno: teje su canasta sin igualar nunca la felicidad que le da cada sol gastado." },
+  { sprite: "arpa", nombre: "El Arpa sin su Violín", texto: "Ayacucho: el arpa sola no hace la danza, y él igual jura que su utilidad sube comprando más de un solo bien." },
+  { sprite: "retablo", nombre: "El Retablo que Busca la Tangencia", texto: "En complementarios perfectos se pone a igualar la TMgS con el ratio de precios, donde la curva es una esquina y no hay tangencia." },
+  { sprite: "huamanga", nombre: "La Piedra de Huamanga que No Cruza", texto: "Le dicen «es lo mismo 3 de X que 4 de Y» y se queda con los números donde estaban, sin cruzarlos." },
+  { sprite: "arco", nombre: "El Arco del Bien Más Barato", texto: "En sustitutos perfectos se va por el que cuesta menos, en vez del que da más felicidad por sol." },
+  { sprite: "cirio", nombre: "El Cirio del Eje Cambiado", texto: "Con las curvas de indiferencia horizontales jura que la utilidad se maximiza en el eje X." },
+  { sprite: "danzante", nombre: "El Danzante de Tijeras", texto: "Jefe de Ayacucho: baila con las dos hojas, que es lo único que hace sonar la tijera, y aun así se equivoca al elegir la canasta." },
 ];
 
 export function galeriaPersonajes(contenedor) {

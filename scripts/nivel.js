@@ -32,7 +32,7 @@ function construir(definicion, mapa, banco) {
   const ancho = Math.max(...filas.map((f) => f.length));
 
   const tiles = new Uint8Array(alto * ancho);
-  const monedas = [], bloques = [], bichos = [], peligros = [], checkpoints = [];
+  const monedas = [], bloques = [], bichos = [], peligros = [], checkpoints = [], resortes = [];
   let inicio = { x: 2 * CFG.TILE, y: 8 * CFG.TILE };
   let meta = { x: (ancho - 4) * CFG.TILE, y: 9 * CFG.TILE };
   let jefe = null;
@@ -69,7 +69,15 @@ function construir(definicion, mapa, banco) {
           bloques.push({ x: px(c) + 4, y: px(f) + 4, usado: false, rebote: 0, premio: "pista" });
           break;
         case S.BICHO:
-          bichos.push({ col: c, x: px(c), y: px(f) + 8, origen: px(c), dir: c % 2 ? 1 : -1, vivo: true, fase: c });
+          // `alto` es el desvío vertical que le da su andar (brinco o vuelo); `reloj` lo lleva
+          bichos.push({ col: c, x: px(c), y: px(f) + 8, origen: px(c), dir: c % 2 ? 1 : -1,
+                        vivo: true, fase: c, alto: 0, reloj: c * 7 });
+          break;
+        case S.RESORTE:
+          resortes.push({ x: px(c), y: px(f) + CFG.TILE - 18, comprime: 0 });
+          break;
+        case S.BLOQUE_AZAR:
+          bloques.push({ x: px(c) + 4, y: px(f) + 4, usado: false, rebote: 0, premio: "azar" });
           break;
         case S.JEFE:
           jefe = { x: px(c), y: px(f) + 4, vivo: true, fase: c, golpes: 0 };
@@ -99,7 +107,9 @@ function construir(definicion, mapa, banco) {
 
   bichos.forEach((b, i) => {
     b.pregunta = normales[i % normales.length];
-    b.tipo = i % 3;                    // qué sprite del tema le toca
+    // el índice crudo: el motor le saca el módulo contra los bichos que tenga el tema,
+    // así un distrito puede tener 3 bichos distintos o 5 sin tocar nada más
+    b.tipo = i;
     b.resuelto = false;
   });
   if (jefe) {
@@ -119,7 +129,7 @@ function construir(definicion, mapa, banco) {
     // el vehículo que lo lleva al siguiente distrito: mototaxi, bus o limosina
     vehiculo: mapa.vehiculo || "bus",
     ancho, alto, tiles,
-    inicio, meta, monedas, bloques, bichos, peligros, checkpoints, jefe,
+    inicio, meta, monedas, bloques, bichos, peligros, checkpoints, resortes, jefe,
     totalRetos: bichos.length + (jefe ? 1 : 0),
   };
 }
