@@ -161,6 +161,14 @@ const TEMAS_MUSICA = {
               "B4",2,"A4",1,"G4",1,"E4",2,"D4",2,"E4",4],
     bajo:    ["A2",4,"E3",4,"C3",4,"G2",4,"A2",4,"D3",4,"E3",4,"A2",4],
   },
+  mantaro: { // Huancayo: huaylarsh de la feria, alegre y con paso de zapateo
+    tempo: 0.12, onda: "square",
+    melodia: ["D5",1,"C5",1,"A4",2,"G4",1,"A4",1,"C5",2,
+              "D5",1,"E5",1,"D5",1,"C5",1,"A4",2,"G4",2,
+              "A4",1,"C5",1,"D5",2,"E5",1,"G5",1,"E5",2,
+              "D5",1,"C5",1,"A4",2,"G4",4],
+    bajo:    ["G2",4,"D3",4,"C3",4,"G2",4,"A2",4,"E3",4,"D3",4,"G2",4],
+  },
   tijeras: { // Ayacucho: arpa y violín de la danza de tijeras, seco y en desafío
     tempo: 0.11, onda: "triangle",
     melodia: ["A4",1,"A4",1,"C5",1,"A4",1,"E4",2,"A4",2,

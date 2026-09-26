@@ -1970,6 +1970,115 @@ const DANZANTE = [ // jefe de Ayacucho: baila con LAS DOS hojas, que es lo que h
 ];
 const P_DANZANTE = { m: "#2f4f9e", y: "#e8c15a", s: "#c9945c", k: "#241a2e", r: "#c2264a", h: "#8a94a4" };
 
+/* =========================================================
+   HUANCAYO — la Feria Dominical de la Calle Real y el valle
+   del Mantaro. El fondo son chacras verdes y ocres, eucaliptos
+   y tejado, así que acá todo va oscuro o muy saturado.
+   ========================================================= */
+const MATE = [     // el mate burilado a medio grabar: no termina de identificar qué preferencia tiene el consumidor (14 × 14)
+  "..............",
+  ".....kkkk.....",
+  ".....kkkk.....",
+  "....mmmmmm....",
+  "..mmmmmmmmmm..",
+  ".mmmmmmmmmmmm.",
+  ".mwwmwwmwwmwm.",
+  ".mmmmmmmmmmmm.",
+  ".mwmwwmwwmwwm.",
+  ".mmmmmmmmmmmm.",
+  ".mmmmmmmmmmmm.",
+  "..mmmmmmmmmm..",
+  "....mmmmmm....",
+  "..............",
+];
+const P_MATE = { m: "#5a3a1c", w: "#f2e2c4", k: "#3b2a14" };
+
+const PAPA = [     // la papa nativa: le aplica al caso típico la recetita de los atípicos, y al revés (14 × 11)
+  "..............",
+  "...pppppp.....",
+  "..pppppppppp..",
+  ".pppyppppyppp.",
+  ".pppppppppppp.",
+  "pppppppppppppp",
+  "pppyppppppyppp",
+  ".pppppppppppp.",
+  "..pppppppppp..",
+  "...pppppp.....",
+  "..............",
+];
+const P_PAPA = { p: "#5a2f5e", y: "#e0b23c" };
+
+const TREN = [     // el Tren Macho: ve que la TMgS no calza con el ratio y no sabe para qué lado moverse (20 × 12)
+  "....................",
+  "...kk...............",
+  "...kk...............",
+  "..kkkk..............",
+  "..gggggggggggggg....",
+  "..gwwgggwwgggggg....",
+  "..gggggggggggggg....",
+  ".rrrrrrrrrrrrrrrr...",
+  ".rrrrrrrrrrrrrrrr...",
+  "..kk..kk..kk..kk....",
+  "..kk..kk..kk..kk....",
+  "....................",
+];
+const P_TREN = { g: "#1f5a3a", w: "#f2ead8", r: "#b0202c", k: "#241a2e" };
+
+const TORRE = [    // la torre de arcilla de Torre Torre: jura que dos canastas con distinta utilidad están en la misma curva (12 × 16)
+  "............",
+  "....tttt....",
+  "....tttt....",
+  "...tttttt...",
+  "...dddddd...",
+  "...tttttt...",
+  "..tttttttt..",
+  "..tttttttt..",
+  "..dddddddd..",
+  "..tttttttt..",
+  ".tttttttttt.",
+  ".tttttttttt.",
+  ".dddddddddd.",
+  "tttttttttttt",
+  "tttttttttttt",
+  "............",
+];
+const P_TORRE = { t: "#c4562e", d: "#8f3a20" };
+
+const TRUCHA = [   // la trucha del Mantaro: cuando la TMgS empata con el ratio, jura que hay una sola canasta óptima (18 × 10)
+  "..................",
+  ".....ffffff.......",
+  "...ffffffffff...t.",
+  "..fflfffffffff.tt.",
+  ".ffrrrrrrrrrffffft",
+  ".fffffffffffffffft",
+  "..ffffffffffff.tt.",
+  "...ffffffffff...t.",
+  ".....ffffff.......",
+  "..................",
+];
+const P_TRUCHA = { f: "#6b8a9e", l: "#f7efe0", r: "#e0607a", t: "#4f6b7a" };
+
+const CASERITA = [ // jefa de Huancayo: te arma la canasta a ojo y recién al final revisa si era la que más te convenía (18 × 17)
+  "....kkkkkkkk......",
+  "..kkkkkkkkkkkk....",
+  "....ssssssss......",
+  "...nsksssksn......",
+  "...nssmmmmssn.....",
+  "...nssssssssn.....",
+  "....wwwwwwww......",
+  "..mmwwwwwwwwmm....",
+  "..mmmmmmmmmmmm....",
+  "..mmyymmmmyymm....",
+  "..mmmmmmmmmmmm....",
+  "...wwwwwwwwww.....",
+  "..pppppppppppp....",
+  ".pppppppppppppp...",
+  ".pppppppppppppp...",
+  "...kkkk..kkkk.....",
+  "..................",
+];
+const P_CASERITA = { k: "#241a2e", s: "#c9945c", n: "#3b2416", m: "#c2265e", y: "#e8c15a", w: "#f7efe0", p: "#2f3a5e" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -1997,6 +2106,12 @@ const DEFINICIONES = {
   arco:         [ARCO, P_ARCO],
   cirio:        [CIRIO, P_CIRIO],
   danzante:     [DANZANTE, P_DANZANTE],
+  mate:         [MATE, P_MATE],
+  papa:         [PAPA, P_PAPA],
+  tren:         [TREN, P_TREN],
+  torre:        [TORRE, P_TORRE],
+  trucha:       [TRUCHA, P_TRUCHA],
+  caserita:     [CASERITA, P_CASERITA],
   pua:          [PUA, P_OBJ],
   bandera:      [BANDERA, P_OBJ],
   meta:         [META, P_OBJ],

@@ -2341,6 +2341,133 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     HUANCAYO — el valle del Mantaro un domingo por la mañana,
+     con las chacras acolchadas de verde y ocre trepando el
+     cerro, los eucaliptos, el tejado colonial y la Feria
+     Dominical de la Calle Real, que se estira por kilómetros.
+     El calce del nivel: acá hay de todo y hay que saber elegir.
+     OJO: nada de mates, papas, trenes, torres de arcilla ni
+     truchas en el fondo — esos son los bichos. Y los toldos van
+     apagados a propósito, porque los colores vivos son de ellos.
+     ========================================================= */
+  mantaro: {
+    nombre: "Huancayo",
+    cielo: [[0, "#2a72b8"], [0.42, "#79aad4"], [0.78, "#bcd0cc"], [1, "#d8d6be"]],
+    suelo: { cara: "#9c8a5e", borde: "#bda878", tierra: "#5e4e34", plataforma: "#4a6b3a", plataformaBorde: "#e8c15a" },
+    acento: "#c2265e",
+
+    bichos: ["mate", "papa", "tren", "torre", "trucha"],
+    nombresBichos: [
+      "El Mate a Medio Grabar",
+      "La Papa de la Recetita Cambiada",
+      "El Tren Macho sin Rumbo",
+      "La Torre de las Dos Utilidades",
+      "La Trucha del Empate",
+    ],
+    andares: ["guardia", "patrulla", "veloz", "salta", "vuela"],
+    jefe: "caserita",
+    nombreJefe: "La Caserita de la Calle Real",
+
+    fondo(ctx, cam, t) {
+      // el sol del valle, alto y limpio
+      ctx.fillStyle = "rgba(255,250,230,.20)";
+      ctx.beginPath(); ctx.arc(618, 56, 56, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,253,242,.96)";
+      ctx.beginPath(); ctx.arc(618, 56, 24, 0, Math.PI * 2); ctx.fill();
+
+      // LOS CERROS DEL VALLE, dos capas
+      repetir(ctx, cam, 540, 0.09, (x, i) => {
+        const bx = x + 40, base = 250, alto = 86 + ((i * 41) % 34);
+        ctx.fillStyle = "#6f7d62";
+        ctx.beginPath();
+        ctx.moveTo(bx - 170, base);
+        ctx.quadraticCurveTo(bx - 30, base - alto, bx + 70, base - alto + 22);
+        ctx.quadraticCurveTo(bx + 140, base - 8, bx + 190, base);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 380, 0.17, (x, i) => {
+        const bx = x + 30, base = 268, alto = 48 + ((i * 29) % 22);
+        ctx.fillStyle = "#7f8c6c";
+        ctx.beginPath();
+        ctx.moveTo(bx - 130, base);
+        ctx.quadraticCurveTo(bx, base - alto, bx + 140, base);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // LAS CHACRAS: el acolchado de parcelas del Mantaro, trepando el cerro
+      repetir(ctx, cam, 92, 0.26, (x, i) => {
+        const bx = x, base = 296;
+        const tonos = ["#7d9448", "#9aa85a", "#6e8a42", "#b0a860", "#86994c"];
+        for (let k = 0; k < 3; k++) {
+          ctx.fillStyle = tonos[(i + k * 2) % tonos.length];
+          ctx.fillRect(bx, base - 34 + k * 12, 94, 12);
+        }
+        ctx.strokeStyle = "rgba(80,74,48,.28)"; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(bx, base - 34); ctx.lineTo(bx, base + 2); ctx.stroke();
+      });
+      // el llano del valle, que baja sin cortes hasta la calle: si queda un hueco
+      // acá, se asoma el cielo y el fondo parece tener un lago
+      ctx.fillStyle = "#8d9a56";
+      ctx.fillRect(0, 296, CFG.ANCHO_VISTA, 22);
+      ctx.fillStyle = "#96975a";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 26);
+      ctx.fillStyle = "#a09159";
+      ctx.fillRect(0, 344, CFG.ANCHO_VISTA, 38);
+
+      // EL TEJADO COLONIAL de la Calle Real
+      repetir(ctx, cam, 262, 0.40, (x, i) => {
+        const bx = x + 20, base = 348, alto = 50 + ((i * 33) % 18);
+        ctx.fillStyle = "#e0d6c0";
+        ctx.fillRect(bx, base - alto, 160, alto);
+        ctx.fillStyle = "#a8462c";                              // la teja
+        ctx.fillRect(bx - 6, base - alto - 10, 172, 10);
+        ctx.fillStyle = "rgba(70,58,40,.34)";                   // balcones y ventanas
+        for (let k = 0; k < 3; k++) ctx.fillRect(bx + 16 + k * 48, base - alto + 14, 26, 18);
+        ctx.fillStyle = "#6b4a2e";
+        ctx.fillRect(bx + 12, base - alto + 38, 136, 5);
+      });
+
+      // LOS PUESTOS DE LA FERIA, con sus toldos apagados y sus cajones
+      repetir(ctx, cam, 132, 0.66, (x, i) => {
+        const bx = x + 12, base = 376;
+        ctx.fillStyle = ["#6f5a3a", "#4f6155", "#7a5540"][i % 3];   // toldos a propósito apagados
+        ctx.fillRect(bx, base - 28, 60, 8);
+        ctx.fillStyle = "rgba(0,0,0,.20)";
+        ctx.fillRect(bx, base - 21, 60, 3);
+        ctx.fillStyle = "#5a4630";
+        ctx.fillRect(bx + 2, base - 20, 4, 20);
+        ctx.fillRect(bx + 54, base - 20, 4, 20);
+        ctx.fillStyle = "#4a3a26";                              // la mesa del puesto
+        ctx.fillRect(bx + 8, base - 13, 44, 6);
+        ctx.fillStyle = "rgba(200,180,130,.30)";
+        ctx.fillRect(bx + 8, base - 13, 44, 2);
+      });
+
+      // LOS EUCALIPTOS de la orilla del camino
+      repetir(ctx, cam, 178, 0.80, (x, i) => {
+        const bx = x + 30, base = 382;
+        ctx.fillStyle = "#6b5a44";
+        ctx.fillRect(bx, base - 44, 5, 44);
+        ctx.fillStyle = ["#4f7340", "#5c8049", "#456a38"][i % 3];
+        ctx.beginPath(); ctx.ellipse(bx + 2, base - 52, 13, 20, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(bx - 8, base - 40, 8, 13, 0.4, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(bx + 12, base - 42, 8, 14, -0.4, 0, Math.PI * 2); ctx.fill();
+      });
+      ctx.fillStyle = "#a5935f";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // el sol del domingo entrando entre los eucaliptos
+      for (let i = 0; i < 20; i++) {
+        const x = (i * 143 - t * 0.9) % 880 - 20;
+        const y = 120 + ((i * 63) % 220) + Math.sin(t / 28 + i) * 8;
+        ctx.fillStyle = `rgba(252,246,222,${(0.05 + 0.10 * Math.abs(Math.sin(t / 31 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 7, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

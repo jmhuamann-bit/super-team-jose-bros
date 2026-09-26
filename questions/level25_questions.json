@@ -1,0 +1,203 @@
+{
+  "nivel": "level25",
+  "clase": "Clase 06 · Parcial — Repaso y ejercicios del consumidor",
+  "fuente": "Apuntes de la 6ta clase del Parcial — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b25-q1",
+      "nivel": "comprension",
+      "enunciado": "Milena dice: «siempre requiero combinar dos unidades del bien X con una del bien Y». Rosa dice: «consumo 5 unidades de X y me es indiferente consumir 15 de Y».\n\n¿Qué tipo de preferencia tiene cada una?",
+      "opciones": [
+        "Las dos tienen preferencias típicas, solo que con distintos números",
+        "Milena sustitutos perfectos y Rosa complementarios perfectos",
+        "Milena complementarios perfectos, porque los necesita juntos en proporción fija; y Rosa sustitutos perfectos, porque le da lo mismo uno u otro",
+        "Milena tiene un bien neutral y Rosa preferencias típicas"
+      ],
+      "correcta": 2,
+      "explicacion": "Son las dos frases clave del capítulo: «los necesito juntos y en proporción fija» es complementarios, y «me es indiferente uno u otro» es sustitutos. Reconocerlo es el paso 0."
+    },
+    {
+      "id": "b25-q2",
+      "nivel": "comprension",
+      "enunciado": "Pregunta de examen. Dos canastas de consumo dan utilidades totales DISTINTAS.\n\n¿Pueden estar sobre la misma curva de indiferencia?",
+      "opciones": [
+        "No: una curva de indiferencia es justamente el conjunto de canastas que dan la MISMA utilidad",
+        "Sí, si las dos están sobre la restricción presupuestaria",
+        "Sí, siempre que los dos bienes sean sustitutos perfectos",
+        "Sí, si la diferencia de utilidad es pequeña"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la definición misma: indiferente quiere decir que te da igual, o sea misma utilidad. Si la utilidad cambia, ya estás en otra curva, más cerca o más lejos del origen."
+    },
+    {
+      "id": "b25-q3",
+      "nivel": "aplicacion",
+      "enunciado": "Verónica gana 50% más que Gonzalo, que gana 140 soles. Ella dice que NO necesita ambos bienes. Consumir una unidad más de X siempre le da 4 de utilidad adicional y una más de Y siempre le da 5. El precio de X es 2 y el de Y es 4.\n\n¿Cuál es su canasta óptima?",
+      "opciones": [
+        "(0, 52,5), porque Y tiene mayor utilidad marginal",
+        "(105, 0), porque 4/2 = 2 le gana a 5/4 = 1,25 y mete los 210 soles en X",
+        "(70, 17,5), repartiendo el ingreso entre los dos",
+        "(105, 52,5), comprando el máximo de cada uno"
+      ],
+      "correcta": 1,
+      "explicacion": "«No necesito ambos bienes» con utilidades marginales constantes es sustitutos perfectos. Su ingreso es 140 × 1,5 = 210, gana X en el versus y se va toda a X: 210 entre 2."
+    },
+    {
+      "id": "b25-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Beto compra gaseosas (X) a 2 soles y jugos (Y) a 4, con 40 soles que gasta completos. Su canasta actual es (4, 8), sus curvas son típicas y su TMgS = 4Y/X.\n\n¿Está maximizando su utilidad?",
+      "opciones": [
+        "Sí, porque gasta todo su ingreso, que es la condición que importa",
+        "No se puede saber sin conocer su función de utilidad",
+        "Sí, porque su TMgS de 8 es mayor que el ratio de precios",
+        "NO: su TMgS ahí vale 8 y el ratio de precios es 0,5, así que le conviene comprar más gaseosas y menos jugos"
+      ],
+      "correcta": 3,
+      "explicacion": "Gastar todo el ingreso es solo una de las dos condiciones. La otra, TMgS = Px/Py, no se cumple: 4(8)/4 = 8 está muy por encima de 2/4 = 0,5."
+    },
+    {
+      "id": "b25-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Mismo Beto: gaseosas (X) a 2, jugos (Y) a 4, ingreso 40, TMgS = 4Y/X.\n\n¿Cuál es la canasta que SÍ maximiza su utilidad?",
+      "opciones": [
+        "(16, 2), porque de 4Y/X = 0,5 sale X = 8Y, y al reemplazar queda 20Y = 40",
+        "(4, 8), la que ya tenía",
+        "(10, 5), repartiendo el gasto mitad y mitad",
+        "(20, 0), gastando todo en gaseosas"
+      ],
+      "correcta": 0,
+      "explicacion": "Se iguala la TMgS al ratio y se reemplaza en la restricción. Control doble: 2(16) + 4(2) = 40 ✓ y la TMgS ahí es 4(2)/16 = 0,5, que es exactamente el ratio ✓."
+    },
+    {
+      "id": "b25-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Antonio consume pan y salchicha siempre en la misma proporción: un pan con tres salchichas. La salchicha (X) cuesta 3 soles y el pan (Y) 1 sol. Su ingreso semanal es 20 soles.\n\n¿Cuál es su canasta óptima?",
+      "opciones": [
+        "(3, 1), que es la proporción tal cual",
+        "(5, 5), repartiendo el ingreso",
+        "(6, 2), porque la relación es X = 3Y y al reemplazar queda 3(3Y) + Y = 10Y = 20",
+        "(2, 6), porque el pan es más barato"
+      ],
+      "correcta": 2,
+      "explicacion": "En complementarios no hay tangencia: manda la proporción fija. De 10Y = 20 sale Y = 2 panes y X = 6 salchichas. Control: 3(6) + 1(2) = 20 ✓."
+    },
+    {
+      "id": "b25-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Chiara compra en el mismo sitio (salchicha X a 3 soles, pan Y a 1 sol) con un ingreso de 40 soles. Sus curvas son típicas con TMgS = (3/2)(Y/X), y actualmente consume 5 salchichas y 25 panes.\n\n¿Qué debería hacer?",
+      "opciones": [
+        "Nada: su canasta ya es óptima porque gasta los 40 soles completos",
+        "Comprar MÁS salchichas y MENOS panes, porque su TMgS ahí vale 7,5 y el ratio de precios es 3",
+        "Comprar más panes y menos salchichas, porque el pan es más barato",
+        "Comprar más de los dos bienes a la vez"
+      ],
+      "correcta": 1,
+      "explicacion": "TMgS = (3/2)(25/5) = 7,5, muy por encima del ratio de 3. Le sobran panes. Moviéndose llega a (8, 16), donde la TMgS baja justo a 3."
+    },
+    {
+      "id": "b25-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Milena siempre requiere combinar DOS unidades de turrón (X) con UNA de mandarina (Y). El turrón cuesta 12 soles, la mandarina 6, y su ingreso es 600 soles.\n\n¿Cuál es su canasta óptima?",
+      "opciones": [
+        "(40, 20), porque la relación es X = 2Y y al reemplazar queda 12(2Y) + 6Y = 30Y = 600",
+        "(20, 40), invirtiendo la proporción",
+        "(50, 0), gastando todo en turrón",
+        "(2, 1), que es la proporción tal cual"
+      ],
+      "correcta": 0,
+      "explicacion": "De 30Y = 600 sale Y = 20 mandarinas y X = 40 turrones, que respeta el dos por uno. Control: 12(40) + 6(20) = 480 + 120 = 600 ✓."
+    },
+    {
+      "id": "b25-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Rosa consume 5 turrones (X) y sabe que eso le es indiferente a consumir 15 mandarinas (Y). El turrón cuesta 12 soles, la mandarina 6, y su ingreso es 300 soles.\n\n¿Cuál es su canasta óptima?",
+      "opciones": [
+        "(0, 50), porque la mandarina es más barata",
+        "(12,5, 25), repartiendo el ingreso entre los dos",
+        "(5, 15), que es la equivalencia que ella menciona",
+        "(25, 0), porque su TMgS de 3 supera al ratio de precios de 2, así que mete los 300 soles en turrón"
+      ],
+      "correcta": 3,
+      "explicacion": "Son sustitutos: la propiedad del infiel cruza los números y da UMgX = 15, UMgY = 5, o sea TMgS = 3. Como 3 > 12/6 = 2, todo va a X: 300 entre 12 son 25."
+    },
+    {
+      "id": "b25-q10",
+      "nivel": "aplicacion",
+      "enunciado": "César puede consumir 2 berenjenas (Y) o 4 zanahorias (X) o cualquier combinación, y le da igual. La zanahoria cuesta 5 soles, la berenjena 10, y tiene 1 000 soles. Él afirma: «solo tengo UNA opción para lograr mi mayor utilidad, que es consumir solo berenjenas».\n\n¿Tiene razón?",
+      "opciones": [
+        "Sí, porque la berenjena es el bien que más utilidad marginal le da",
+        "No: en realidad le conviene comprar solo zanahorias",
+        "NO: hay un EMPATE, porque 2/5 = 0,4 es igual a 4/10 = 0,4. Consumir solo berenjenas sí es óptimo, pero también lo es cualquier otra canasta de la restricción",
+        "No se puede saber sin conocer su función de utilidad exacta"
+      ],
+      "correcta": 2,
+      "explicacion": "Con el infiel salen UMgX = 2 y UMgY = 4. Al empatar la utilidad por sol, todas las canastas de la recta dan 400 de utilidad: solo berenjenas, solo zanahorias o cualquier mezcla."
+    },
+    {
+      "id": "b25-q11",
+      "nivel": "aplicacion",
+      "enunciado": "Carlos tiene preferencias típicas sobre zanahorias (X) y berenjenas (Y), que cuestan 5 y 10 soles. Ahora que compró muchas zanahorias, está dispuesto a entregar 10 zanahorias a cambio de 2 berenjenas. Él cree que ya está maximizando.\n\n¿Qué le dirías?",
+      "opciones": [
+        "Que sí está maximizando, porque gasta todo su ingreso",
+        "Que NO: su TMgS es 2/10 = 0,2 y el ratio de precios es 0,5, así que le conviene comprar menos zanahorias y más berenjenas",
+        "Que no, y que debe comprar más zanahorias todavía",
+        "Que no se puede evaluar sin saber su ingreso exacto"
+      ],
+      "correcta": 1,
+      "explicacion": "La TMgS es cuánto Y cede por una X más: 2 entre 10 son 0,2. Al estar por debajo del ratio, la zanahoria le rinde poco por sol. Y calza con la intuición: tiene demasiadas."
+    },
+    {
+      "id": "b25-q12",
+      "nivel": "aplicacion",
+      "enunciado": "Nerviosín compra Calmín (X) a 10 soles y Tranquilín (Y), que cuesta el doble, con 100 soles. Sus preferencias son tales que TODAS las canastas de su restricción lo maximizan. Ahora el precio del Calmín se DUPLICA.\n\n¿Qué pasa con su canasta óptima?",
+      "opciones": [
+        "Se rompe el empate: su TMgS de 0,5 queda por debajo del nuevo ratio de 1, así que ahora le conviene comprar solo Tranquilín, o sea (0, 5)",
+        "No cambia nada: sigue siendo indiferente entre todas las canastas",
+        "Ahora le conviene comprar solo Calmín: (5, 0)",
+        "Ahora tiene que comprar exactamente la mitad de cada uno"
+      ],
+      "correcta": 0,
+      "explicacion": "El empate existía porque 10/20 = 0,5 igualaba a su TMgS. Con el Calmín a 20 el ratio sube a 1, la TMgS se queda en 0,5 y gana Y: 100 entre 20 son 5 Tranquilines."
+    },
+    {
+      "id": "b25-q13",
+      "nivel": "aplicacion",
+      "enunciado": "JEFE 1/3. Sami y Luna tienen 480 soles cada uno. El chocolate (X) cuesta 5 y la fresa (Y) 2. Sami siempre cambia 1 chocolate por 2 fresas manteniendo su satisfacción. Luna solo obtiene utilidad si acompaña cada fresa con DOS chocolates.\n\n¿Cuáles son sus canastas óptimas?",
+      "opciones": [
+        "Sami (96, 0) y Luna (40, 80)",
+        "Sami (0, 240) y Luna (80, 40)",
+        "Sami (80, 40) y Luna (0, 240)",
+        "Los dos terminan en (48, 120)"
+      ],
+      "correcta": 1,
+      "explicacion": "Sami es sustitutos con TMgS = 2, por debajo del ratio 5/2 = 2,5, así que se va toda a fresas: 480/2. Luna es complementarios con X = 2Y, y de 12Y = 480 sale (80, 40)."
+    },
+    {
+      "id": "b25-q14",
+      "nivel": "comprension",
+      "enunciado": "JEFE 2/3. La canasta óptima de Luna es (80, 40). Sin mirar el presupuesto, considera dos canastas de su mapa de preferencias: (80, 50) y (90, 40).\n\n¿Cuánto vale la TMgS en cada una?",
+      "opciones": [
+        "Vale 2 en las dos, porque esa es su proporción fija",
+        "Vale cero en las dos, porque la utilidad no cambió",
+        "En (80, 50) tiende a INFINITO, porque cae en el tramo VERTICAL de la L; y en (90, 40) vale CERO, porque cae en el tramo HORIZONTAL",
+        "No se puede calcular en ninguna de las dos"
+      ],
+      "correcta": 2,
+      "explicacion": "En los dos casos la utilidad se queda en 40, porque el bien que sobra no aporta. Pero la pendiente sí cambia: el brazo parado tiene pendiente infinita y el echado, cero."
+    },
+    {
+      "id": "b25-q15",
+      "nivel": "comprension",
+      "enunciado": "JEFE 3/3. Piero dibuja tres canastas indiferentes entre sí: A(3, 7), B(4, 5) y C(5, 4). Melissa dice que X debe ser un bien neutral; Piero dice que los dos bienes deben ser perfectamente complementarios.\n\n¿Quién tiene razón?",
+      "opciones": [
+        "Melissa, porque X crece sin que la utilidad cambie",
+        "Piero, porque las tres canastas dan la misma utilidad",
+        "Los dos a la vez, porque neutrales y complementarios son compatibles",
+        "NINGUNO: son preferencias TÍPICAS, y se nota porque la TMgS cae de 2 entre A y B a 1 entre B y C"
+      ],
+      "correcta": 3,
+      "explicacion": "Si X fuera neutral, Y sería el mismo en las tres, y no lo es (7, 5, 4). Si fueran complementarios, la L exigiría que uno de los dos bienes no se moviera. Acá los dos cambian y la TMgS decrece."
+    }
+  ]
+}

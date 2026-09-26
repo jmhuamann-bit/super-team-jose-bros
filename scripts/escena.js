@@ -238,6 +238,12 @@ const FICHAS = [
   { sprite: "arco", nombre: "El Arco del Bien Más Barato", texto: "En sustitutos perfectos se va por el que cuesta menos, en vez del que da más felicidad por sol." },
   { sprite: "cirio", nombre: "El Cirio del Eje Cambiado", texto: "Con las curvas de indiferencia horizontales jura que la utilidad se maximiza en el eje X." },
   { sprite: "danzante", nombre: "El Danzante de Tijeras", texto: "Jefe de Ayacucho: baila con las dos hojas, que es lo único que hace sonar la tijera, y aun así se equivoca al elegir la canasta." },
+  { sprite: "mate", nombre: "El Mate a Medio Grabar", texto: "Huancayo: se lanza a resolver sin terminar de grabar qué tipo de preferencia tiene el consumidor." },
+  { sprite: "papa", nombre: "La Papa de la Recetita Cambiada", texto: "Le aplica la tangencia a los casos atípicos y el versus a los típicos: siempre la receta del otro." },
+  { sprite: "tren", nombre: "El Tren Macho sin Rumbo", texto: "Ve que la TMgS no calza con el ratio de precios y se queda parado sin saber de qué bien comprar más." },
+  { sprite: "torre", nombre: "La Torre de las Dos Utilidades", texto: "Jura que dos canastas con distinta utilidad total pueden estar sobre la misma curva de indiferencia." },
+  { sprite: "trucha", nombre: "La Trucha del Empate", texto: "Cuando la TMgS empata con el ratio de precios, insiste en que hay una sola canasta óptima." },
+  { sprite: "caserita", nombre: "La Caserita de la Calle Real", texto: "Jefa de Huancayo: te arma la canasta a ojo y recién al final revisa si era la que más te convenía." },
 ];
 
 export function galeriaPersonajes(contenedor) {

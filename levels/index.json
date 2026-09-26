@@ -323,6 +323,30 @@
       "abierto": true,
       "mapa": "levels/level23.json",
       "preguntas": "questions/level23_questions.json"
+    },
+    {
+      "id": "level24",
+      "clase": "Clase 05",
+      "distrito": "Por definir",
+      "titulo": "Reservado para la Clase 05: cómo hallar la demanda",
+      "icono": "🚧",
+      "seccion": "Parcial",
+      "seccionNota": "Repaso de elasticidades, intervención y teoría del consumidor",
+      "abierto": false
+    },
+    {
+      "id": "level25",
+      "clase": "Clase 06",
+      "distrito": "Huancayo",
+      "titulo": "La feria donde hay que saber elegir",
+      "icono": "🚂",
+      "seccion": "Parcial",
+      "seccionNota": "Repaso de elasticidades, intervención y teoría del consumidor",
+      "retos": 13,
+      "duracion": "5 min",
+      "abierto": true,
+      "mapa": "levels/level25.json",
+      "preguntas": "questions/level25_questions.json"
     }
   ]
 }
