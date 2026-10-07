@@ -2079,6 +2079,131 @@ const CASERITA = [ // jefa de Huancayo: te arma la canasta a ojo y recién al fi
 ];
 const P_CASERITA = { k: "#241a2e", s: "#c9945c", n: "#3b2416", m: "#c2265e", y: "#e8c15a", w: "#f7efe0", p: "#2f3a5e" };
 
+/* =========================================================
+   PARÍS — la boulangerie del barrio, los techos de zinc y el
+   Sena. El fondo es piedra clara, zinc gris y toldo, así que
+   acá todo va oscuro o muy saturado.
+   ========================================================= */
+const HARINA = [   // el saco de harina: cree que los ingredientes son insumos, cuando son productos intermedios (14 × 14)
+  "..............",
+  ".....kkkk.....",
+  "....kjjjjk....",
+  "...kjjjjjjk...",
+  "..kjjjjjjjjk..",
+  ".kjjjjjjjjjjk.",
+  ".kjrrrrrrrrjk.",
+  ".kjrwwwwwwrjk.",
+  ".kjrrrrrrrrjk.",
+  ".kjjjjjjjjjjk.",
+  ".kjjjjjjjjjjk.",
+  ".kjjjjjjjjjjk.",
+  "..kkjjjjjjkk..",
+  "...kkkkkkkk...",
+];
+const P_HARINA = { j: "#cdae76", k: "#4a3a1e", r: "#c2264a", w: "#f2e8d2" };
+
+const COFRE = [    // el cofre de monedas: cree que el capital es el dinero y no las máquinas (16 × 12)
+  "................",
+  "...mmmmmmmmmm...",
+  "..mmmmmmmmmmmm..",
+  "..mmyyyyyyyymm..",
+  "..mmmmmmmmmmmm..",
+  ".mmmmmmmmmmmmmm.",
+  ".mmyymmmmmmyymm.",
+  ".mmmmmmkkmmmmmm.",
+  ".mmmmmmkkmmmmmm.",
+  ".mmyymmmmmmyymm.",
+  ".mmmmmmmmmmmmmm.",
+  "................",
+];
+const P_COFRE = { m: "#7a4a24", y: "#e8c15a", k: "#2a1a10" };
+
+const BOINA = [    // la boina del «más capacitado»: los insumos son homogéneos, no hay obrero mejor que otro (16 × 10)
+  "................",
+  "......rr........",
+  ".....rrrr.......",
+  "...rrrrrrrr.....",
+  "..rrrrrrrrrrr...",
+  ".rrrrrrrrrrrrr..",
+  ".rrrrrrrrrrrrr..",
+  "..kkkkkkkkkkk...",
+  "................",
+  "................",
+];
+const P_BOINA = { r: "#2f3f7a", k: "#1a2042" };
+
+const CROISSANT = [ // el croissant del primer tramo: sigue produciendo con el horno a medio usar (18 × 12)
+  "..................",
+  ".....ccccccc......",
+  "...ccccccccccc....",
+  "..cccwwcccwwccc...",
+  ".ccccccccccccccc..",
+  "ccccccccccccccccc.",
+  "cccc.........cccc.",
+  "ccc...........ccc.",
+  ".cc............cc.",
+  "..c............c..",
+  "..................",
+  "..................",
+];
+const P_CROISSANT = { c: "#d9933c", w: "#f6e2bc" };
+
+const GARGOLA = [  // la gárgola de la catedral: jura que siempre hay que producir en el Qmáx (18 × 13)
+  "..................",
+  "...dd........dd...",
+  "..dggd......dggd..",
+  "..dgggd....dgggd..",
+  "...dggggggggggd...",
+  "...dggyggggyggd...",
+  "...dggggggggggd...",
+  "....dgkkkkkkgd....",
+  "....dggggggggd....",
+  ".....dggggggd.....",
+  "....dd......dd....",
+  "...dd........dd...",
+  "..................",
+];
+const P_GARGOLA = { g: "#9a9382", d: "#5f5a4c", y: "#f0a81e", k: "#2e2a23" };
+
+const CHEF = [     // jefe de París: mete más panaderos de los que caben y la producción le empieza a bajar (18 × 17)
+  ".....owwwwwwo.....",
+  "....owwwwwwwwo....",
+  "....owwwwwwwwo....",
+  "....oowwwwwwoo....",
+  "......ssssss......",
+  "......sksskss.....",
+  "......ssmmss......",
+  ".......ssss.......",
+  "....owwwwwwwwo....",
+  "...owwwwwwwwwwo...",
+  "..oswwwwwwwwwwso..",
+  "..oswwwwkkwwwwso..",
+  "...owwwwkkwwwwo...",
+  "....owwwwwwwwo....",
+  "....orrrrrrrro....",
+  "....jjjj..jjjj....",
+  "...kkkkk..kkkkk...",
+];
+const P_CHEF = { w: "#f4f1e8", s: "#d9a273", k: "#241a2e", m: "#8a3a2e", r: "#c2264a", j: "#3b3630", o: "#3a3028" };
+
+const METRO = [    // el vagón del Métro de París, con su librea verde y su rótulo esmaltado (32 × 14)
+  "...gggggggggggggggggggggggggg...",
+  "..gggggggggggggggggggggggggggg..",
+  ".gggwwwwwwwwwwwwwwwwwwwwwwwwggg.",
+  ".ggwbbbbwwwbbbbwwwbbbbwwwbbbbgg.",
+  ".ggwbbbbwwwbbbbwwwbbbbwwwbbbbgg.",
+  ".ggwbbbbwwwbbbbwwwbbbbwwwbbbbgg.",
+  ".ggwwwwwwwwwwwwwwwwwwwwwwwwwwgg.",
+  ".gggggggggggggggggggggggggggggg.",
+  ".ggggyyyyyggggggggggggyyyyygggg.",
+  ".gggggggggggggggggggggggggggggg.",
+  "..kkkkkkkkkkkkkkkkkkkkkkkkkkkk..",
+  "...kkkkkkkkkkkkkkkkkkkkkkkkkk...",
+  "....kk..kk............kk..kk....",
+  "................................",
+];
+const P_METRO = { g: "#2f6b4a", w: "#f2efe4", b: "#44586a", y: "#e8c15a", k: "#2a2620" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -2112,6 +2237,12 @@ const DEFINICIONES = {
   torre:        [TORRE, P_TORRE],
   trucha:       [TRUCHA, P_TRUCHA],
   caserita:     [CASERITA, P_CASERITA],
+  harina:       [HARINA, P_HARINA],
+  cofre:        [COFRE, P_COFRE],
+  boina:        [BOINA, P_BOINA],
+  croissant:    [CROISSANT, P_CROISSANT],
+  gargola:      [GARGOLA, P_GARGOLA],
+  chef:         [CHEF, P_CHEF],
   pua:          [PUA, P_OBJ],
   bandera:      [BANDERA, P_OBJ],
   meta:         [META, P_OBJ],
@@ -2124,6 +2255,7 @@ const DEFINICIONES = {
   mototaxi:     [MOTOTAXI, P_MOTO],
   limosina:     [LIMOSINA, P_LIMO],
   taxi:         [TAXI, P_TAXI],
+  metro:        [METRO, P_METRO],
   cuy:          [CUY, P_CUY],
   farol:        [FAROL, P_FAROL],
   torito:       [TORITO, P_TORITO],

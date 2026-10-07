@@ -2468,6 +2468,169 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     PARÍS — la primera parada fuera del Perú. Un muelle del Sena a
+     media mañana: la Torre Eiffel asomando por encima de los techos
+     de zinc, la hilera haussmaniana de piedra clara, el río con su
+     puente de arcos, los plátanos podados en cuadro y la
+     boulangerie de la esquina con su toldo. Acá el horno no crece:
+     por más panaderos que metas, siguen siendo los mismos hornos.
+     OJO 1: el fondo no lleva sacos de harina, cofres, boinas,
+     croissants ni gárgolas sueltas — esos son los bichos.
+     OJO 2: el plano del suelo baja SIN CORTES desde los edificios
+     hasta la vereda. Si queda un hueco, se asoma el cielo y el
+     fondo parece tener un lago.
+     OJO 3: de la torre se ve del primer piso para arriba, que es lo
+     que se ve de verdad desde cualquier vereda. Si los edificios
+     suben, hay que subir también los pisos de la torre o queda
+     pareciendo el campanario de una iglesia.
+     ========================================================= */
+  sena: {
+    nombre: "París",
+    cielo: [[0, "#6d9bc9"], [0.4, "#a6bfd2"], [0.76, "#ccd0cb"], [1, "#e0d9c8"]],
+    suelo: { cara: "#a89e8c", borde: "#c4bba8", tierra: "#574f44", plataforma: "#5a6b74", plataformaBorde: "#e8c15a" },
+    acento: "#c2264a",
+
+    bichos: ["harina", "cofre", "boina", "croissant", "gargola"],
+    nombresBichos: [
+      "El Saco de Harina Confundido",
+      "El Cofre que se Cree Capital",
+      "La Boina del Más Capacitado",
+      "El Croissant del Primer Tramo",
+      "La Gárgola del Qmáx",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "chef",
+    nombreJefe: "El Chef del Horno Lleno",
+
+    fondo(ctx, cam, t) {
+      // el sol pálido del norte, tibio y detrás de una nube fina
+      ctx.fillStyle = "rgba(255,244,214,.26)";
+      ctx.beginPath(); ctx.arc(642, 56, 58, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,249,228,.92)";
+      ctx.beginPath(); ctx.arc(642, 56, 25, 0, Math.PI * 2); ctx.fill();
+
+      // LA TORRE EIFFEL, lejísimos, del primer piso para arriba
+      repetir(ctx, cam, 1100, 0.07, (x, i) => {
+        const bx = x + 240, base = 252;
+        ctx.fillStyle = "#6f7682";
+        ctx.beginPath();
+        ctx.moveTo(bx - 56, base);                                  // pata izquierda, por fuera
+        ctx.quadraticCurveTo(bx - 34, base - 34, bx - 24, base - 58);
+        ctx.lineTo(bx - 12, base - 112);
+        ctx.lineTo(bx - 5, base - 166);
+        ctx.lineTo(bx - 3, base - 204);                             // la aguja
+        ctx.lineTo(bx + 3, base - 204);
+        ctx.lineTo(bx + 5, base - 166);
+        ctx.lineTo(bx + 12, base - 112);
+        ctx.lineTo(bx + 24, base - 58);
+        ctx.quadraticCurveTo(bx + 34, base - 34, bx + 56, base);
+        ctx.lineTo(bx + 36, base);                                  // el hueco del arco de abajo
+        ctx.quadraticCurveTo(bx + 20, base - 30, bx + 13, base - 58);
+        ctx.lineTo(bx - 13, base - 58);
+        ctx.quadraticCurveTo(bx - 20, base - 30, bx - 36, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillRect(bx - 52, base - 62, 104, 6);                   // primer piso
+        ctx.fillRect(bx - 28, base - 116, 56, 5);                   // segundo piso
+        ctx.fillRect(bx - 13, base - 170, 26, 4);                   // la cima
+      });
+
+      // LA HILERA HAUSSMANIANA: piedra clara, techo de zinc y buhardillas
+      repetir(ctx, cam, 232, 0.22, (x, i) => {
+        const bx = x + 10, base = 306, alto = 64 + ((i * 29) % 24);
+        ctx.fillStyle = ["#ddd5c1", "#d2c9b3", "#e4dcc8"][i % 3];
+        ctx.fillRect(bx, base - alto, 206, alto);
+        ctx.fillStyle = "#79818a";                                  // el techo de zinc
+        ctx.beginPath();
+        ctx.moveTo(bx - 6, base - alto);
+        ctx.lineTo(bx + 30, base - alto - 26);
+        ctx.lineTo(bx + 176, base - alto - 26);
+        ctx.lineTo(bx + 212, base - alto);
+        ctx.closePath(); ctx.fill();
+        for (let k = 0; k < 3; k++) {                               // las buhardillas
+          ctx.fillStyle = "#4e565d";
+          ctx.fillRect(bx + 44 + k * 56, base - alto - 21, 16, 14);
+          ctx.fillStyle = "rgba(246,243,232,.55)";
+          ctx.fillRect(bx + 47 + k * 56, base - alto - 18, 10, 8);
+        }
+        ctx.fillStyle = "rgba(58,54,44,.38)";                       // las ventanas altas
+        for (let k = 0; k < 5; k++) ctx.fillRect(bx + 14 + k * 38, base - alto + 15, 18, 28);
+        ctx.fillStyle = "#464640";                                  // el balcón corrido de fierro
+        ctx.fillRect(bx + 8, base - alto + 46, 190, 4);
+      });
+
+      // EL PLANO DEL SUELO, de los edificios a la vereda y SIN CORTES:
+      // el muelle de enfrente, el río y el muelle de este lado
+      ctx.fillStyle = "#9e9484";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 10);
+      ctx.fillStyle = "#54675f";                                    // EL SENA, verde grisáceo
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 30);
+      ctx.fillStyle = "#677d72";
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 5);
+      for (let i = 0; i < 34; i++) {
+        const x = (i * 57 - cam * 0.22) % 960 - 40;
+        ctx.fillStyle = "rgba(228,238,228,.28)";
+        ctx.fillRect(x, 324 + ((i * 23) % 18), 15, 2);
+      }
+      ctx.fillStyle = "#a1978a";                                    // el muelle de este lado
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 36);
+      ctx.fillStyle = "#b8ae9c";                                    // el pretil del muelle
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 4);
+
+      // EL PUENTE DE ARCOS, que es lo que termina de contar que eso es un río
+      repetir(ctx, cam, 430, 0.30, (x, i) => {
+        const bx = x + 40, cubierta = 314;
+        ctx.fillStyle = "#b3a894";
+        ctx.fillRect(bx, cubierta, 184, 9);                         // la cubierta
+        ctx.fillStyle = "rgba(250,247,236,.45)";                    // el pretil
+        ctx.fillRect(bx, cubierta, 184, 3);
+        ctx.fillStyle = "#9c907c";
+        for (let k = 0; k < 4; k++) {                               // las pilas entre arco y arco
+          ctx.fillRect(bx + 2 + k * 60, cubierta + 9, 14, 23);
+        }
+        ctx.fillStyle = "#8d826f";
+        ctx.fillRect(bx + 172, cubierta + 9, 12, 23);
+      });
+
+      // LA BOULANGERIE DE LA ESQUINA, con su toldo y su vitrina prendida
+      repetir(ctx, cam, 286, 0.54, (x, i) => {
+        const bx = x + 26, base = 382, alto = 34;
+        ctx.fillStyle = "#a84a30";                                  // la fachada pintada
+        ctx.fillRect(bx, base - alto, 120, alto);
+        ctx.fillStyle = "#e8c15a";                                  // el letrero dorado
+        ctx.fillRect(bx + 8, base - alto + 4, 104, 8);
+        ctx.fillStyle = "rgba(250,242,216,.85)";                    // la vitrina iluminada
+        ctx.fillRect(bx + 12, base - alto + 16, 44, 16);
+        ctx.fillRect(bx + 64, base - alto + 16, 44, 16);
+        ctx.fillStyle = "#38443e";                                  // el toldo
+        ctx.fillRect(bx - 6, base - alto - 8, 132, 8);
+        ctx.fillStyle = "rgba(0,0,0,.22)";
+        ctx.fillRect(bx - 6, base - alto - 1, 132, 2);
+      });
+
+      // LOS PLÁTANOS DE SOMBRA, podados en cuadro como en los muelles
+      repetir(ctx, cam, 142, 0.78, (x, i) => {
+        const bx = x + 20, base = 382;
+        ctx.fillStyle = "#6b5c46";
+        ctx.fillRect(bx, base - 26, 5, 26);
+        ctx.fillStyle = ["#55713d", "#628046", "#4a6636"][i % 3];
+        ctx.fillRect(bx - 14, base - 44, 33, 19);
+        ctx.fillRect(bx - 9, base - 50, 23, 8);
+      });
+      ctx.fillStyle = "#968c7a";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // la luz tamizada que entra entre los plátanos del muelle
+      for (let i = 0; i < 18; i++) {
+        const x = (i * 147 - t * 0.8) % 880 - 20;
+        const y = 110 + ((i * 67) % 220) + Math.sin(t / 30 + i) * 7;
+        ctx.fillStyle = `rgba(252,248,230,${(0.04 + 0.07 * Math.abs(Math.sin(t / 32 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 7, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

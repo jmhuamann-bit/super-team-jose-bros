@@ -1,6 +1,6 @@
 {
-  "titulo": "Lima",
-  "descripcion": "Cada distrito es una clase de Economía General I, agrupados por la práctica que les toca. Todos están abiertos para practicar en cualquier orden.",
+  "titulo": "Lima, el Perú y el mundo",
+  "descripcion": "Cada lugar es una clase de Economía General I, y están agrupados por la práctica que les toca. Todos están abiertos para practicar en cualquier orden.",
   "niveles": [
     {
       "id": "level1",
@@ -347,6 +347,20 @@
       "abierto": true,
       "mapa": "levels/level25.json",
       "preguntas": "questions/level25_questions.json"
+    },
+    {
+      "id": "level26",
+      "clase": "Clase 01",
+      "distrito": "París",
+      "titulo": "La panadería donde el horno no crece",
+      "icono": "🥖",
+      "seccion": "PC3",
+      "seccionNota": "Teoría del productor y costos — y ahora visitando el mundo",
+      "retos": 13,
+      "duracion": "5 min",
+      "abierto": true,
+      "mapa": "levels/level26.json",
+      "preguntas": "questions/level26_questions.json"
     }
   ]
 }

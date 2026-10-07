@@ -1,0 +1,203 @@
+{
+  "nivel": "level26",
+  "clase": "Clase 01 · PC3 — Teoría del productor a corto plazo",
+  "fuente": "Apuntes de la 1ra clase de la PC3 — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b26-q1",
+      "nivel": "comprension",
+      "enunciado": "Homero quiere abrir su pastelería y anota todo lo que va a necesitar: chantilly, harina, horno, huevos, el personal de atención, plátanos, local de ventas, canela y chocolate.\n\n¿Cuáles de esas nueve cosas son INSUMOS (factores productivos) y cuáles son productos intermedios?",
+      "opciones": [
+        "Todas son insumos: sin cualquiera de ellas la pastelería no funciona",
+        "Son insumos la harina, los huevos, los plátanos, la canela, el chocolate y el chantilly, porque son lo que hay que comprar para poder producir",
+        "Son insumos solo el horno, el personal de atención y el local de ventas; los seis ingredientes son productos intermedios, porque se transforman en el proceso productivo",
+        "Son insumos el horno y el local de ventas; el personal de atención es un producto intermedio, porque se gasta atendiendo durante el proceso"
+      ],
+      "correcta": 2,
+      "explicacion": "El corte es si la cosa SE TRANSFORMA o no: los seis ingredientes se transforman, así que son productos intermedios. El horno y el local son capital (K) y el personal es trabajo (L)."
+    },
+    {
+      "id": "b26-q2",
+      "nivel": "comprension",
+      "enunciado": "En el apunte, Homero consigue una «hamaca» que lo clona para tener trabajadores, y de ahí sale la pregunta de examen: «¿hay un trabajador más capacitado que otro?». Aparte, un compañero afirma que el capital (K) de la pastelería es la plata que Homero juntó.\n\n¿Qué hay de cierto en esas dos cosas?",
+      "opciones": [
+        "Ninguna de las dos: el capital NO es dinero sino las MÁQUINAS, y como los insumos son homogéneos ningún trabajador está más capacitado que otro",
+        "Las dos son ciertas: el capital es el dinero invertido y los clones sí se diferencian por la experiencia que va juntando cada uno",
+        "El capital sí es el dinero, pero es cierto que todos los trabajadores son iguales",
+        "El capital son las máquinas, pero sí hay trabajadores más capacitados que otros: por eso en la vida real se les paga distinto"
+      ],
+      "correcta": 0,
+      "explicacion": "Dos acuerdos del modelo: K son MÁQUINAS, no plata; y los insumos son homogéneos, todas las máquinas iguales y todos los trabajadores iguales. Los clones de Homero son el dibujo exacto de eso."
+    },
+    {
+      "id": "b26-q3",
+      "nivel": "comprension",
+      "enunciado": "La pastelería de Homero funciona con 2 hornos que le donó su padre y con la cantidad de panaderos que él decida contratar. Durante toda la clase los hornos se quedan en 2.\n\n¿Por qué eso es un análisis de CORTO plazo y no de largo plazo?",
+      "opciones": [
+        "Porque el análisis dura pocos meses: el corto plazo es un asunto de tiempo en el calendario",
+        "Porque en el corto plazo al menos un insumo es FIJO: acá el capital (los 2 hornos) está fijo y solo el trabajo es variable",
+        "Porque solo hay dos hornos: con tres o más máquinas el análisis ya pasaría a ser de largo plazo",
+        "Porque todavía no se conocen los costos; cuando se conozcan el análisis pasa a ser de largo plazo"
+      ],
+      "correcta": 1,
+      "explicacion": "El corto y el largo plazo no se miden en meses: lo que define el corto plazo es que haya por lo menos un insumo fijo. En el largo plazo TODOS los insumos son variables."
+    },
+    {
+      "id": "b26-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Homero tiene K = 2 hornos fijos y esta producción de pasteles (Q) según el número de panaderos (L):\n\nQ según L: 0→0 · 1→5 · 2→15 · 3→30 · 4→50 · 5→65 · 6→75 · 7→80 · 8→80 · 9→75 · 10→65\n\nCon PMgL = ΔQ/ΔL, ¿en qué número de panaderos el PMgL llega a su MÁXIMO, y cómo se llama ese punto en el gráfico de la función de producción?",
+      "opciones": [
+        "En L = 7, con PMgL = 5: es el punto donde la producción se vuelve máxima",
+        "En L = 8, con PMgL = 0: ese es el punto de inflexión de la curva",
+        "En L = 3, con PMgL = 15: es el punto E, donde el PMgL corta al PMeL",
+        "En L = 4, con PMgL = 20: ese es el PUNTO DE INFLEXIÓN de la función de producción"
+      ],
+      "correcta": 3,
+      "explicacion": "Los PMgL salen 5, 10, 15, 20, 15, 10, 5, 0, −5, −10: el techo es 20 en L = 4. Ahí está el punto de inflexión: antes la curva es convexa y desde ahí se vuelve cóncava."
+    },
+    {
+      "id": "b26-q5",
+      "nivel": "aplicacion",
+      "enunciado": "La tía venenos tiene K = 2 cocinas fijas y vende salchipapas:\n\nQ según L: 0→0 · 1→5 · 2→18 · 3→36 · 4→55 · 5→75 · 6→90 · 7→98 · 8→104 · 9→108 · 10→110 · 11→110 · 12→108 · 13→104\n\nCon PMgL = ΔQ/ΔL y PMeL = Q/L, ¿en qué número de trabajadores está el punto E, donde el PMgL iguala al PMeL?",
+      "opciones": [
+        "En L = 5, porque ahí el PMgL llega a su máximo de 20",
+        "En L = 6, donde PMgL = 90 − 75 = 15 y PMeL = 90/6 = 15: ahí el PMeL toca su máximo y arranca el segundo tramo",
+        "En L = 11, donde el PMgL se hace 0 y la producción llega a su máximo de 110",
+        "En L = 4, donde PMeL = 55/4 = 13,75 y el PMgL ya viene cayendo"
+      ],
+      "correcta": 1,
+      "explicacion": "En L = 6 el PMgL (90 − 75 = 15) iguala al PMeL (90/6 = 15). El punto E es a la vez el máximo del PMeL y el arranque del segundo tramo, el único donde conviene producir."
+    },
+    {
+      "id": "b26-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Seguimos con la tabla de la tía venenos (K = 2 cocinas fijas):\n\nQ según L: 0→0 · 1→5 · 2→18 · 3→36 · 4→55 · 5→75 · 6→90 · 7→98 · 8→104 · 9→108 · 10→110 · 11→110 · 12→108 · 13→104\n\n¿En qué número de trabajadores está el punto B, donde termina el segundo tramo, y qué pasa de ahí en adelante?",
+      "opciones": [
+        "En L = 10, con Q = 110: ahí el PMeL ya bajó a 11 y de ahí en adelante sigue cayendo",
+        "En L = 9, con PMgL = 4: ahí el aporte de cada trabajador ya es tan chico que conviene parar",
+        "En L = 11, donde el PMgL llega a 0 y la producción toca su máximo de 110; desde L = 12 el PMgL es negativo y la producción TOTAL empieza a caer",
+        "En L = 13, donde la producción vuelve a 104: el tercer tramo arranca solo cuando Q baja al nivel que tenía en el punto E"
+      ],
+      "correcta": 2,
+      "explicacion": "El punto B es donde PMgL = 0, que es justo el máximo de Q: acá en L = 11 con Q = 110. En L = 12 el PMgL ya es −2 y la producción total bajó a 108."
+    },
+    {
+      "id": "b26-q7",
+      "nivel": "comprension",
+      "enunciado": "Ya tienes los tres tramos de la función de producción a corto plazo: el primero va de 0 al punto E, el segundo de E a B, y el tercero de B en adelante.\n\n¿En qué tramo conviene producir, y se puede decir en qué punto exacto?",
+      "opciones": [
+        "En el SEGUNDO tramo, porque ahí la producción es eficiente; pero el punto exacto no se puede saber todavía, porque eso depende de los COSTOS",
+        "En el segundo tramo, y el punto exacto es siempre el B, porque ahí la producción llega a su máximo",
+        "En el primer tramo, porque es el único donde el producto marginal todavía está creciendo",
+        "En el tercer tramo, porque es el que tiene más trabajadores y por eso también más producción"
+      ],
+      "correcta": 0,
+      "explicacion": "La respuesta completa son dos partes: el tramo es el segundo (de E a B), pero el punto exacto dentro de él depende de los costos, que todavía no entran en este capítulo."
+    },
+    {
+      "id": "b26-q8",
+      "nivel": "comprension",
+      "enunciado": "Un compañero dice que si en el primer tramo el producto marginal todavía está por encima del producto medio, entonces ahí hay que quedarse: mientras el PMgL siga alto, mejor.\n\n¿Por qué el apunte dice que en el primer tramo NO conviene producir?",
+      "opciones": [
+        "Porque en el primer tramo la producción total ya está cayendo",
+        "Porque en el primer tramo el PMgL es negativo, así que cada trabajador adicional le resta producción a la empresa",
+        "Porque en el primer tramo el PMeL va por encima del PMgL y entonces los sueldos salen demasiado caros",
+        "Por dos motivos: como el PMgL todavía es mayor que el PMeL, aún hay incentivos para seguir contratando; y porque se está SUBUTILIZANDO el capital, o sea los hornos no trabajan a su máxima capacidad"
+      ],
+      "correcta": 3,
+      "explicacion": "Los dos motivos del apunte: PMgL > PMeL significa que todavía conviene crecer, y las máquinas están a medio uso. Quedarse ahí es dejar los hornos prendidos a media carga."
+    },
+    {
+      "id": "b26-q9",
+      "nivel": "comprension",
+      "enunciado": "Daenerys sostiene que la ley de los rendimientos marginales decrecientes aparece porque, al aumentar L, cambia la «calidad» del trabajo: primero se contrata al trabajador más calificado, después al segundo más calificado, y así hasta llegar al menos calificado.\n\n¿Es correcto ese sustento?",
+      "opciones": [
+        "Sí: justamente por eso el PMgL va cayendo, porque cada trabajador nuevo rinde menos que el anterior",
+        "No: los insumos son HOMOGÉNEOS, así que todos los trabajadores son igual de capacitados. El PMgL cae porque el capital está FIJO y a cada trabajador nuevo le toca menos máquina",
+        "No, porque la ley de rendimientos decrecientes solo se cumple en el largo plazo, cuando ya se pueden cambiar las máquinas",
+        "Sí en el fondo, aunque el orden está al revés: en la práctica se contrata primero al menos calificado"
+      ],
+      "correcta": 1,
+      "explicacion": "El supuesto de homogeneidad mata el argumento: no hay trabajador mejor que otro. Lo que satura la producción es el factor FIJO, los 2 hornos repartidos entre cada vez más gente."
+    },
+    {
+      "id": "b26-q10",
+      "nivel": "aplicacion",
+      "enunciado": "Unos agricultores de Harvard cosechan plantas casi extintas. Tienen 10 agricultores especializados con contrato a 10 años, y cada uno con su tractor, así que ese número no se puede mover; lo que van cambiando es el número de picos:\n\nHectáreas (Q) según picos (K): 0→0 · 1→50 · 2→150 · 3→300 · 4→500 · 5→650 · 6→750 · 7→800 · 8→800 · 9→750 · 10→650\n\n¿Qué se calcula acá, y cuánto vale el producto medio con 5 picos?",
+      "opciones": [
+        "PMgL y PMeL, porque el trabajo siempre es el factor variable; el PMeL con 5 picos es 650/10 = 65",
+        "PMgK y PMeK, pero el medio se divide entre los agricultores: PMeK = 650/10 = 65",
+        "PMgK y PMeK, porque acá el factor FIJO es el trabajo y el variable es el capital; el PMeK con 5 picos es 650/5 = 130",
+        "No se puede calcular nada: para hallar productos marginales y medios el factor variable tiene que ser el trabajo"
+      ],
+      "correcta": 2,
+      "explicacion": "El marginal y el medio se calculan SIEMPRE sobre el factor variable, que acá es el capital. PMeK = Q/K = 650/5 = 130, y encima es el máximo del PMeK de toda la tabla."
+    },
+    {
+      "id": "b26-q11",
+      "nivel": "aplicacion",
+      "enunciado": "Una tablita de examen no arranca en cero: empieza en el trabajador 245, con K = 1.\n\nQ según L: 245→30 · 246→40 · 247→60 · 248→90 · 249→130\n\n¿Qué casilleros van con guión y por qué?",
+      "opciones": [
+        "Solo el primer casillero del PMgL, porque no hay un Q anterior con el que restar; el PMeL sí se puede calcular desde el arranque: 30/245 = 0,122",
+        "El primer casillero del PMgL y también el del PMeL, porque en los dos falta el dato de la fila anterior",
+        "Ninguno: como ya te dan que L = 245, se puede calcular todo, incluso el PMgL de la primera fila",
+        "Todos los casilleros del PMeL, porque dividir 30 entre 245 no da un número redondo y el apunte pide números exactos"
+      ],
+      "correcta": 0,
+      "explicacion": "El PMgL es una RESTA entre dos filas, así que la primera nunca tiene con qué restar. El PMeL es una división dentro de la misma fila: solo falla si L = 0."
+    },
+    {
+      "id": "b26-q12",
+      "nivel": "comprension",
+      "enunciado": "Estás en el corto plazo, con los 2 hornos de Homero, y de la nada el problema te cuenta que le donaron hornos nuevos de mejor calidad.\n\n¿Qué pasa con la función de producción de corto plazo y con las curvas de PMeL y PMgL?",
+      "opciones": [
+        "La función de producción se desplaza hacia arriba, pero el PMeL y el PMgL no se mueven: siguen dependiendo solo de L",
+        "No se mueve nada: con hornos nuevos el análisis ya sería de largo plazo, así que hay que descartarlo",
+        "La función de producción se desplaza hacia arriba, y el PMeL y el PMgL se desplazan hacia ABAJO, porque ahora hace falta menos trabajo",
+        "Las tres se desplazan hacia ARRIBA: la función de producción de corto plazo, el PMeL y el PMgL"
+      ],
+      "correcta": 3,
+      "explicacion": "Más o mejor capital levanta la FP de corto plazo, y con ella el PMeL y el PMgL. Si las máquinas se estropean o quedan atrasadas, las tres se desplazan hacia abajo."
+    },
+    {
+      "id": "b26-q13",
+      "nivel": "aplicacion",
+      "enunciado": "Ulam SAC exporta paltas. Jorge Luis quiere llevar la producción promedio por trabajador a su máximo para garantizar la producción máxima; Richard dice que hay que fijar el nivel de trabajadores donde el producto marginal iguale al producto medio. Hoy la empresa está en Q = 24 y L = 301:\n\nProducción en miles (Q) según trabajadores (L): 300→22 · 301→24 · 302→26 · 303→30\n\n¿En qué etapa de producción está la empresa, y conviene algún nivel de la tabla?",
+      "opciones": [
+        "Está en el segundo tramo, porque el PMgL (2) ya viene cayendo; conviene quedarse justo en L = 301",
+        "Está en el PRIMER tramo: PMgL = 24 − 22 = 2 es mayor que PMeL = 24/301 ≈ 0,08. No conviene ningún nivel de la tabla y hay que analizar más allá de 303 trabajadores",
+        "Está en el tercer tramo, porque con 301 trabajadores para tan poca palta el PMgL ya tiene que ser negativo",
+        "Está exactamente en el punto E, porque es ahí donde el PMgL y el PMeL se cruzan; conviene producir justo en L = 301"
+      ],
+      "correcta": 1,
+      "explicacion": "La etapa se lee comparando PMgL con PMeL: 2 > 0,08, primer tramo. Y los dos gerentes se equivocan: el máximo del PMeL es el punto E y el máximo de Q es el punto B."
+    },
+    {
+      "id": "b26-q14",
+      "nivel": "aplicacion",
+      "enunciado": "En su última entrevista, el que sería su jefe le deja a Annie elegir el sueldo: puede ganar lo equivalente al producto marginal de su trabajo, o lo equivalente a su producto medio. La empresa tiene una función de producción típica de corto plazo y, como toda empresa bien manejada, produce en el tramo que le conviene.\n\n¿Qué le conviene pedir a Annie?",
+      "opciones": [
+        "El producto MEDIO, porque la empresa produce en el segundo tramo y ahí el PMeL va siempre por encima del PMgL",
+        "El producto marginal, porque el marginal mide lo que ella aporta de verdad y siempre es mayor que el medio",
+        "Le da lo mismo: en una función típica el PMgL y el PMeL son iguales en todo el segundo tramo",
+        "El producto marginal, porque el medio se reparte entre todos los trabajadores y a ella le tocaría solo una fracción"
+      ],
+      "correcta": 0,
+      "explicacion": "Entre E y B el PMeL está siempre encima del PMgL, y además el PMgL va cayendo hacia 0. Pidiendo el medio, Annie cobra más en cualquier punto de ese tramo."
+    },
+    {
+      "id": "b26-q15",
+      "nivel": "comprension",
+      "enunciado": "Eduardo dice: «no entiendo por qué antes del punto de inflexión la curva de producción tiene forma convexa; si miro el producto marginal del factor variable, antes del punto de inflexión debería ser cóncava». Rafael le responde: «has entendido mal la teoría: la convexidad significa que la producción crece a una tasa decreciente, por eso el producto marginal decrece antes del punto de inflexión».\n\n¿Quién tiene la razón?",
+      "opciones": [
+        "Rafael, porque la convexidad es justamente crecer a una tasa decreciente",
+        "Eduardo, porque antes del punto de inflexión el PMgL ya está cayendo y eso dibuja una curva cóncava",
+        "NINGUNO de los dos: antes del punto de inflexión la curva es convexa porque la producción crece a tasa CRECIENTE, con el PMgL subiendo; recién después del punto de inflexión se vuelve cóncava y el PMgL empieza a caer",
+        "Los dos a medias: la forma la acierta Eduardo y la definición de convexidad la acierta Rafael"
+      ],
+      "correcta": 2,
+      "explicacion": "Convexa = crece a tasa creciente, con el PMgL en subida. El punto de inflexión es el máximo del PMgL: recién desde ahí arrancan los rendimientos decrecientes, con la curva cóncava."
+    }
+  ]
+}

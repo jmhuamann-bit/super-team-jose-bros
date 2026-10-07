@@ -244,6 +244,12 @@ const FICHAS = [
   { sprite: "torre", nombre: "La Torre de las Dos Utilidades", texto: "Jura que dos canastas con distinta utilidad total pueden estar sobre la misma curva de indiferencia." },
   { sprite: "trucha", nombre: "La Trucha del Empate", texto: "Cuando la TMgS empata con el ratio de precios, insiste en que hay una sola canasta óptima." },
   { sprite: "caserita", nombre: "La Caserita de la Calle Real", texto: "Jefa de Huancayo: te arma la canasta a ojo y recién al final revisa si era la que más te convenía." },
+  { sprite: "harina", nombre: "El Saco de Harina Confundido", texto: "París: cree que los ingredientes son insumos, cuando en realidad son productos intermedios — se transforman en el proceso." },
+  { sprite: "cofre", nombre: "El Cofre que se Cree Capital", texto: "Jura que el capital es el dinero, cuando en teoría del productor el capital son las MÁQUINAS." },
+  { sprite: "boina", nombre: "La Boina del Más Capacitado", texto: "Anda buscando al trabajador más calificado, sin aceptar que los insumos son homogéneos: todos rinden igual." },
+  { sprite: "croissant", nombre: "El Croissant del Primer Tramo", texto: "Se queda produciendo en el primer tramo, con el horno a medio usar y el producto marginal todavía por encima del medio." },
+  { sprite: "gargola", nombre: "La Gárgola del Qmáx", texto: "Desde lo alto jura que siempre hay que producir en el máximo, como si los costos no existieran." },
+  { sprite: "chef", nombre: "El Chef del Horno Lleno", texto: "Jefe de París: mete más panaderos de los que caben y no entiende por qué la producción le empieza a bajar." },
 ];
 
 export function galeriaPersonajes(contenedor) {
