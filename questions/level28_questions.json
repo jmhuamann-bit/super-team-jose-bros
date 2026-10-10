@@ -1,0 +1,125 @@
+{
+  "nivel": "level28",
+  "clase": "Clase 03 · PC3 — Teoría del productor a largo plazo",
+  "fuente": "Apuntes de la 3ra clase de la PC3 (1ra y 2da parte) — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b28-q1",
+      "nivel": "comprension",
+      "enunciado": "La función típica de largo plazo es la COBB-DOUGLAS, Q = A·K^α·L^β, que el apunte llama «la madre de Eco 1 y Eco 2». Te dan Q = 20·K^0,6·L^0,1.\n\n¿Qué significan esos números?",
+      "opciones": [
+        "El exponente de cada factor es su PARTICIPACIÓN en la producción (en %) y a la vez su ELASTICIDAD (en decimales): K aporta 60% con elasticidad 0,6 y L aporta 10% con elasticidad 0,1. El 20 es la tecnología A",
+        "El 20 es la producción máxima, y los exponentes son los precios relativos de cada factor",
+        "Los exponentes son la cantidad de unidades de cada factor, y el 20 es el costo total",
+        "Los exponentes son la productividad marginal de cada factor, y el 20 es el número de trabajadores"
+      ],
+      "correcta": 0,
+      "explicacion": "El exponente dice dos cosas a la vez: el porcentaje con que ese factor participa en la producción y su elasticidad. Si te piden armar una donde L participe 60% y K 40% con tecnología 5, sale Q = 5·K^0,4·L^0,6."
+    },
+    {
+      "id": "b28-q2",
+      "nivel": "aplicacion",
+      "enunciado": "Los RETORNOS A ESCALA responden qué pasa con la producción si aumentas K y L a la vez. En una Cobb-Douglas se leen SUMANDO los exponentes.\n\nTe dan tres funciones: Q = 2·K^0,5·L^0,9 · Q = 3·K^0,6·L^0,4 · Q = 4·K^0,3·L^0,2. ¿Qué retorno tiene cada una?",
+      "opciones": [
+        "Las tres tienen retornos constantes: el tipo lo define la tecnología A, que es distinta en cada una",
+        "Decreciente la primera, creciente la segunda y constante la tercera, mirando el exponente más grande de cada una",
+        "Suma 1,4 → CRECIENTE: si subes K y L 100%, Q sube MÁS de 100%. Suma 1 → CONSTANTE: Q sube exactamente 100%. Suma 0,5 → DECRECIENTE: Q sube MENOS de 100%",
+        "No se puede saber sin conocer los valores concretos de K y L"
+      ],
+      "correcta": 2,
+      "explicacion": "Se suman los exponentes y se compara contra 1. Para la primera, duplicar los dos factores multiplica la producción por 2^1,4, o sea un 163,9% más. Para la tercera, por 2^0,5: solo 41,4% más."
+    },
+    {
+      "id": "b28-q3",
+      "nivel": "comprension",
+      "enunciado": "En el largo plazo el productor repite la historia del consumidor, pero con otros nombres. Lo que el consumidor tenía como curva de indiferencia, el productor lo tiene como ISOCUANTA, y la pendiente de esa curva es la TTS (tasa técnica de sustitución), que vale PMgL/PMgK.\n\nSi te dicen que la TTS es 3/2, ¿cómo se lee?",
+      "opciones": [
+        "Estoy dispuesto a ceder 3/2 de producción para contratar una unidad más de trabajo",
+        "Estoy dispuesto a DEJAR 3/2 de capital para CONTRATAR una unidad adicional de trabajo, y así quedarme sobre la misma isocuanta",
+        "Por cada sol que gasto en trabajo obtengo 3/2 soles de capital",
+        "El precio del capital es 3/2 veces el precio del trabajo"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la misma frase de la TMgS del consumidor, cambiando «ceder Y para obtener X» por «dejar K para contratar L». Y lo de quedarse sobre la misma isocuanta es la parte que no hay que olvidar."
+    },
+    {
+      "id": "b28-q4",
+      "nivel": "comprension",
+      "enunciado": "Y lo que el consumidor tenía como restricción presupuestaria, el productor lo tiene como ISOCOSTO.\n\n¿Cuál es su ecuación y cuál es su pendiente?",
+      "opciones": [
+        "Q = A·K^α·L^β, y su pendiente es la TTS",
+        "CT = K + L, y su pendiente es 1, porque los dos factores cuestan lo mismo",
+        "M = Px·X + Py·Y, y su pendiente es el ratio Px/Py",
+        "CT = w·L + r·K, donde w es el salario y r el precio del capital; y su pendiente es el ratio de precios de los factores, w/r"
+      ],
+      "correcta": 3,
+      "explicacion": "El isocosto es el presupuesto del productor: todo lo que puede comprar de los dos factores con su costo total. Como la restricción del consumidor, es una recta, y su pendiente es el ratio de precios."
+    },
+    {
+      "id": "b28-q5",
+      "nivel": "aplicacion",
+      "enunciado": "La condición de optimización une lo que QUIERO con lo que PUEDO: TTS = ratio de precios, que se usa más en la forma PMgL/w = PMgK/r.\n\nUna empresa tiene PMgL = 3, PMgK = 3, w = 1 y r = 2. ¿Está optimizando, y qué debería hacer?",
+      "opciones": [
+        "No está optimizando: PMgL/w = 3 y PMgK/r = 1,5, así que conviene contratar MÁS trabajo y menos capital, porque el trabajo da más productividad por sol gastado",
+        "Sí está optimizando, porque las dos productividades marginales son iguales (3 y 3)",
+        "No está optimizando: como el capital es más caro, hay que alquilar más capital para aprovecharlo mejor",
+        "No se puede saber: falta el costo total de la empresa"
+      ],
+      "correcta": 0,
+      "explicacion": "No se comparan las productividades marginales a secas, sino la productividad POR SOL GASTADO. Y siempre se sube un factor y se baja el otro, para quedarse sobre la misma isocuanta."
+    },
+    {
+      "id": "b28-q6",
+      "nivel": "comprension",
+      "enunciado": "El apunte ordena todo en TRES modelos de problema. Los dos primeros pasos son iguales en los tres: hallar la TTS en variables y despejar K.\n\n¿En qué se diferencian el 2do modelo (maximizar producción) y el 3ro (minimizar costos)?",
+      "opciones": [
+        "En que el 2do usa la TTS y el 3ro usa el ratio de precios al revés",
+        "En nada: son el mismo problema con distinto nombre",
+        "En DÓNDE se reemplaza la relación despejada. Si te dan el COSTO TOTAL y pides maximizar producción, se reemplaza en el ISOCOSTO. Si te dan la PRODUCCIÓN y pides minimizar costos, se reemplaza en la ISOCUANTA",
+        "En que para minimizar costos hay que usar el producto medio en vez del marginal"
+      ],
+      "correcta": 2,
+      "explicacion": "Es el dato que decide todo el ejercicio: mira qué te DAN. Costo total → reemplazas en el isocosto. Producción → reemplazas en la isocuanta. El 1er modelo es distinto: solo verificar una combinación y sugerir hacia dónde moverse."
+    },
+    {
+      "id": "b28-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Stevie SAC produce motos con Q = K^0,2·L^0,8, donde PMgL = 0,8·(K/L)^0,2 y PMgK = 0,2·(L/K)^0,8. El salario es 4, el precio del capital es 6 y el presupuesto es 150.\n\nAl dividir las productividades marginales sale TTS = 4K/L. ¿Cuáles son el K y el L óptimos?",
+      "opciones": [
+        "K = 25 y L = 25, repartiendo el presupuesto mitad y mitad entre los dos factores",
+        "K = 5 y L = 30. De 4K/L = 4/6 sale L = 6K, y reemplazando en el isocosto: 150 = 4(6K) + 6K = 30K",
+        "K = 30 y L = 5, porque el capital es más caro y hay que usarlo más",
+        "K = 15 y L = 15, dividiendo el presupuesto entre la suma de los precios"
+      ],
+      "correcta": 1,
+      "explicacion": "Primero la condición TTS = w/r, que da la relación entre los factores; recién después se reemplaza en el isocosto. Y con esos valores la producción sale Q = 5^0,2 × 30^0,8 ≈ 20,97."
+    },
+    {
+      "id": "b28-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Diego confecciona jeans con Q = 10·K^(1/5)·L^(3/5), donde PMgL = 6·K^(1/5)·L^(−2/5) y PMgK = 2·K^(−4/5)·L^(3/5). El alquiler de la máquina es 2 soles la hora, el salario 6 soles la hora, y el presupuesto 1 000 soles.\n\nAl dividir las productividades marginales sale TTS = 3K/L. ¿Cuánto contrata de cada factor y cuánto produce?",
+      "opciones": [
+        "K = 500 y L = 500, porque con 1 000 soles alcanza para 500 de cada uno",
+        "K = 250 y L = 125, porque el capital es tres veces más barato que el trabajo",
+        "K = 125 y L = 375, usando directamente la proporción de los exponentes 1/5 y 3/5",
+        "K = 125 y L = 125, con Q ≈ 475,91. De 3K/L = 6/2 = 3 sale K = L, y el isocosto queda 1 000 = 6L + 2L = 8L"
+      ],
+      "correcta": 3,
+      "explicacion": "Ojo con la trampa: que los exponentes sean 1/5 y 3/5 no significa que los factores se repartan en esa proporción. La condición de optimización mezcla los exponentes con los precios, y acá da K = L."
+    },
+    {
+      "id": "b28-q9",
+      "nivel": "comprension",
+      "enunciado": "Claudia le dice a Malena: «cuando la TTS de capital por trabajo supera al ratio de precios w/r, el productor solo puede maximizar producción si usa MÁS capital y MENOS trabajo». Y en otro examen, un gerente ve que PMgL/PMgK es mayor que w/r y concluye exactamente lo mismo.\n\n¿Qué hay de cierto?",
+      "opciones": [
+        "Los dos se equivocan, y por el mismo motivo: si la TTS supera al ratio de precios, entonces PMgL/w > PMgK/r, o sea que el TRABAJO está dando más productividad por sol gastado. Lo que corresponde es contratar más trabajo y menos capital",
+        "Los dos tienen razón: cuando la TTS es alta, el capital se vuelve el factor más rentable",
+        "Claudia tiene razón y el gerente no, porque ella habla de la TTS y él del ratio de productividades marginales",
+        "No se puede opinar sin conocer la función de producción exacta ni el presupuesto"
+      ],
+      "correcta": 0,
+      "explicacion": "La estrategia está invertida en los dos casos. Pasa lo mismo con el problema de Tito EIRL: si lo que aporta un trabajador por sol es el DOBLE de lo que aporta el capital por sol, hay que contratar más trabajadores, no menos."
+    }
+  ]
+}

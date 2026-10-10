@@ -161,6 +161,13 @@ const TEMAS_MUSICA = {
               "B4",2,"A4",1,"G4",1,"E4",2,"D4",2,"E4",4],
     bajo:    ["A2",4,"E3",4,"C3",4,"G2",4,"A2",4,"D3",4,"E3",4,"A2",4],
   },
+  china: { // China: pentatónica de guzheng, redonda y con el paso del remo
+    tempo: 0.17, onda: "triangle",
+    melodia: ["C4",2,"D4",2,"F4",2,"G4",4,"A4",2,"G4",2,"F4",4,
+              "D4",2,"F4",2,"G4",2,"A4",4,"C5",2,"A4",2,"G4",4,
+              "F4",2,"D4",2,"C4",4,"D4",2,"F4",2,"G4",4,"C4",4],
+    bajo:    ["C2",8,"G2",8,"C2",8,"F2",4,"G2",4,"C2",8],
+  },
   japon: { // Japón: escala pentatónica de koto, abierta y con mucho aire
     tempo: 0.19, onda: "triangle",
     melodia: ["D4",2,"F4",2,"G4",2,"A4",4,"C5",2,"A4",2,"G4",4,

@@ -375,6 +375,20 @@
       "abierto": true,
       "mapa": "levels/level27.json",
       "preguntas": "questions/level27_questions.json"
+    },
+    {
+      "id": "level28",
+      "clase": "Clase 03",
+      "distrito": "China",
+      "titulo": "El ejército que se hizo con moldes y manos",
+      "icono": "🐉",
+      "seccion": "PC3",
+      "seccionNota": "Teoría del productor y costos — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level28.json",
+      "preguntas": "questions/level28_questions.json"
     }
   ]
 }

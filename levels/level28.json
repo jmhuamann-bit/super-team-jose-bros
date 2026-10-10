@@ -1,0 +1,42 @@
+{
+  "id": "level28",
+  "distrito": "China",
+  "clase": "Clase 03 · PC3",
+  "titulo": "El ejército que se hizo con moldes y manos",
+  "tema": "china",
+  "musica": "china",
+  "vehiculo": "junco",
+  "intro": "Tercera clase de la PC3, y otro país: China. Acá, hace más de dos mil doscientos años, se fundió el ejército de terracota — unos ocho mil guerreros enterrados junto al primer emperador, y ninguno con la misma cara. ¿Cómo se hace algo así? Con MOLDES y con MANOS: los cuerpos salían de moldes estandarizados, los artesanos hacían a mano los rasgos, y cada pieza iba marcada con el sello de su taller para poder reclamar si salía mal. Esa es exactamente la clase de hoy. Hasta ahora el capital estaba clavado y solo podías mover el trabajo. En el LARGO plazo puedes mover los dos: más moldes y menos manos, o más manos y menos moldes, y llegar a la misma cantidad de guerreros — eso es la ISOCUANTA. Y si duplicas los dos a la vez, lo que le pasa a la producción se llama RETORNOS A ESCALA, que en este país es prácticamente la historia económica entera.",
+  "repaso": [
+    "EL CAMBIO DE PLAZO, que es de lo que va todo: en el corto plazo el capital estaba fijo y solo se movía L. En el LARGO plazo se pueden mover los DOS factores, así que ahora hay que elegir la combinación de K y L.",
+    "LA COBB-DOUGLAS, «la madre de Eco 1 y Eco 2»: Q = A·K^α·L^β. Se reconoce porque los factores van multiplicándose y cada uno con su exponente. A es la tecnología.",
+    "QUÉ SIGNIFICAN LOS EXPONENTES, dos cosas a la vez: (1) la PARTICIPACIÓN de ese factor en la producción, expresada en porcentaje; y (2) su ELASTICIDAD, expresada en decimales. En Q = 20·K^0,6·L^0,1, el capital participa con 60% (elasticidad 0,6), el trabajo con 10% (elasticidad 0,1) y la tecnología es 20. El RETO al revés: si L debe participar 60% y K 40% con tecnología 5, la función es Q = 5·K^0,4·L^0,6.",
+    "EL EXPONENTE TAMBIÉN DICE LA LEY DE RENDIMIENTOS MARGINALES de ese factor por separado, igual que en la clase pasada: mayor que 1 crecientes, entre 0 y 1 decrecientes, menor que 0 negativos, igual a 1 constantes.",
+    "RETORNOS A ESCALA: qué le pasa a Q si subes K y L a la vez. En una Cobb-Douglas se leen SUMANDO los exponentes. Si la suma es mayor que 1 → CRECIENTE: al subir los dos factores 100%, Q sube MÁS de 100%. Si es igual a 1 → CONSTANTE: sube exactamente 100%. Si es menor que 1 → DECRECIENTE: sube MENOS de 100%. Ejemplos: 0,5 + 0,9 = 1,4 creciente; 0,6 + 0,4 = 1 constante; 0,3 + 0,2 = 0,5 decreciente.",
+    "LO QUE QUIERO: la ISOCUANTA es la curva de indiferencia del productor — todas las combinaciones de K y L que dan la MISMA producción. Su pendiente es la TTS (tasa técnica de sustitución) y vale PMgL/PMgK.",
+    "CÓMO SE INTERPRETA LA TTS: si TTS = 3/2, «estoy dispuesto a DEJAR 3/2 de capital para CONTRATAR una unidad adicional de trabajo, y así mantenerme sobre la misma isocuanta». Es la misma frase de la TMgS del consumidor, con otros nombres.",
+    "LO QUE PUEDO: el ISOCOSTO es la restricción presupuestaria del productor. Ecuación: CT = w·L + r·K, donde w es el salario y r el precio del capital. Es una recta y su pendiente es el ratio de precios de los factores, w/r.",
+    "LA CONDICIÓN DE OPTIMIZACIÓN, que une lo que quiero con lo que puedo: TTS = ratio de precios. La forma que más se usa es PMgL/w = PMgK/r. Y la 2da condición es que se gaste todo: CT = w·L + r·K.",
+    "HACIA DÓNDE MOVERSE si no se cumple: si PMgL/w > PMgK/r, se sugiere contratar MÁS trabajo y menos capital, porque el trabajo da más productividad por sol gastado. Si PMgL/w < PMgK/r, al revés: más capital y menos trabajo. Siempre se sube uno y se baja el otro, para quedarse sobre la misma isocuanta.",
+    "EL ERROR QUE MÁS CAE (Claudia 2016 II y el gerente de la metalmecánica 2023 0): los dos ven que la TTS supera al ratio de precios y concluyen que hay que usar MÁS capital. Está al revés. Si la TTS es mayor que w/r, entonces PMgL/w > PMgK/r y lo que corresponde es contratar MÁS TRABAJO. Lo mismo en Tito EIRL (2024 I): si lo que aporta un trabajador por sol es el doble de lo que aporta el capital por sol, se contratan más trabajadores, y además con ese dato ya alcanza para decidir.",
+    "LOS TRES MODELOS DE PROBLEMA. Los dos primeros pasos son iguales en los tres: hallar la TTS en variables y despejar K. Lo que cambia es dónde reemplazas. (1) VERIFICAR si una combinación es óptima, y sugerir hacia dónde moverse. (2) MAXIMIZAR PRODUCCIÓN: te dan el COSTO TOTAL, w, r y las PMg → se reemplaza en el ISOCOSTO. (3) MINIMIZAR COSTOS: te dan la PRODUCCIÓN, w, r y las PMg → se reemplaza en la ISOCUANTA. Y para graficar: primero el isocosto, después la isocuanta.",
+    "EJERCICIOS RESUELTOS. STEVIE SAC: Q = K^0,2·L^0,8, w = 4, r = 6, CT = 150 → TTS = 4K/L, de donde L = 6K; el isocosto da 150 = 30K, o sea K = 5, L = 30 y Q ≈ 20,97. DIEGO Y LOS JEANS: Q = 10·K^(1/5)·L^(3/5), w = 6, r = 2, CT = 1 000 → TTS = 3K/L, de donde K = L; el isocosto da 1 000 = 8L, o sea K = L = 125 y Q ≈ 475,91. OTROS DOS: con Q = 2√K√L, w = 10, r = 15 y CT = 200 salen L = 10, K = 6,67 y Q ≈ 16,33; y con Q = √K√L, w = 5, r = 10 y CT = 250 salen L = 25, K = 12,5 y Q ≈ 17,68."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                ",
+    "                                                                                                                                                                                ",
+    "                                                                                                                                                                                ",
+    "                                                       A                                                   A                                                                    ",
+    "                                                     o o o                                               o o o                                                                  ",
+    "                                                     ======                                              ======                                                                 ",
+    "                                                                                                                                                                                ",
+    "                        o o o                               o o o                           o o o                           o o o                     o o o                     ",
+    "                ?           o o         L                           V               G         o o                   G               o o           1     L                       ",
+    "                        ====                                ====                            ====                            ====                      ====                      ",
+    "                        o o                     o o                                             o o                     o o                     o o                             ",
+    "  P                 E         C             E   T       X       E                 C     E         X T     E             X       E           C                 B             M   ",
+    "##################################   ###################################    ####################################   #############################################################",
+    "##################################   ###################################    ####################################   #############################################################",
+    "##################################   ###################################    ####################################   #############################################################"
+  ]
+}

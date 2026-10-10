@@ -2338,6 +2338,146 @@ const SHINKANSEN = [   // el tren bala, que es la salida del distrito (32 × 12)
 ];
 const P_SHINKANSEN = { w: "#eef0f2", b: "#2b3f7a", a: "#2f6bb8", k: "#2a2e36" };
 
+/* =========================================================
+   CHINA — los picos de Guilin, la Gran Muralla, los arrozales en
+   terraza y el río Li. El fondo es bruma azul-verde, terraza verde y
+   teja gris con rojo, así que acá los bichos van en TERRACOTA, laca
+   negra y bronce. Ninguno puede ser verde terraza ni gris teja.
+   ========================================================= */
+const ABACO = [        // el suanpan: no sabe que el exponente es la participación y la elasticidad (18 × 14)
+  "..................",
+  ".mmmmmmmmmmmmmmmm.",
+  ".mkkkkkkkkkkkkkkm.",
+  ".mkbbkbbkbbkbbkkm.",
+  ".mkkkkkkkkkkkkkkm.",
+  ".mkkkkkkkkkkkkkkm.",
+  ".mmmmmmmmmmmmmmmm.",
+  ".mkkbkkbkkbkkbkkm.",
+  ".mkkbkkbkkbkkbkkm.",
+  ".mkbbkbbkbbkbbkkm.",
+  ".mkkkkkkkkkkkkkkm.",
+  ".mkbbkbbkbbkbbkkm.",
+  ".mmmmmmmmmmmmmmmm.",
+  "..................",
+];
+const P_ABACO = { m: "#5a3a22", k: "#2a1c12", b: "#c9821f" };
+
+const BALANZA = [      // la balanza del mercado: no suma los exponentes para sacar el retorno a escala (18 × 14)
+  "..................",
+  "........kk........",
+  "........kk........",
+  "..kkkkkkkkkkkkkk..",
+  "..k.....kk.....k..",
+  ".bbb....kk....bbb.",
+  "bbbbb...kk...bbbbb",
+  ".bbb....kk....bbb.",
+  "........kk........",
+  "........kk........",
+  "......kkkkkk......",
+  ".....kkkkkkkk.....",
+  "....kkkkkkkkkk....",
+  "..................",
+];
+const P_BALANZA = { k: "#2a2420", b: "#c9821f" };
+
+const GUERRERO = [     // el guerrero de terracota: no sabe leer la isocuanta ni interpretar la TTS (16 × 17)
+  ".....tttttt.....",
+  "....tttttttt....",
+  "....ttttttttt...",
+  "......tttt......",
+  ".....tktktt.....",
+  ".....ttmmtt.....",
+  "......tttt......",
+  "....tttttttt....",
+  "...tttttttttt...",
+  "..ttttttttttttt.",
+  "..tttkkkkkttttt.",
+  "...tttttttttt...",
+  "....tttttttt....",
+  "....tttt.tttt...",
+  "....tttt.tttt...",
+  "...kkkkk.kkkkk..",
+  "................",
+];
+const P_GUERRERO = { t: "#b5693f", k: "#3a2418", m: "#7a3326" };
+
+const MOLDE = [        // el molde del taller: confunde el isocosto con la isocuanta (18 × 12)
+  "..................",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kaaaaaaaaaaaaaak.",
+  ".kaakkaakkaakkaak.",
+  ".kaakkaakkaakkaak.",
+  ".kaaaaaaaaaaaaaak.",
+  ".kaakkaakkaakkaak.",
+  ".kaakkaakkaakkaak.",
+  ".kaaaaaaaaaaaaaak.",
+  ".kkkkkkkkkkkkkkkk.",
+  "..kk..........kk..",
+  "..................",
+];
+const P_MOLDE = { k: "#2a2420", a: "#8a8f7a" };
+
+const SELLO = [        // el sello del artesano, puesto al revés: aplica la condición de optimización invertida (14 × 16)
+  "..............",
+  "....kkkkkk....",
+  "....kkkkkk....",
+  "...kkkkkkkk...",
+  "..kkkkkkkkkk..",
+  "..kkkkkkkkkk..",
+  "..rrrrrrrrrr..",
+  "..rrkkrrkkrr..",
+  "..rrkkrrkkrr..",
+  "..rrrrrrrrrr..",
+  "..rrkkrrkkrr..",
+  "..rrkkrrkkrr..",
+  "..rrrrrrrrrr..",
+  "..kkkkkkkkkk..",
+  "..............",
+  "..............",
+];
+const P_SELLO = { k: "#2a1c18", r: "#b5243a" };
+
+const MAESTRO = [      // jefe: el maestro de los mil guerreros, que no sabe cuál de los tres modelos le toca (18 × 17)
+  ".....kkkkkkkk.....",
+  "....kkkkkkkkkk....",
+  "......ssssss......",
+  "......sksskss.....",
+  "......ssmmss......",
+  ".......ssss.......",
+  "....nnnnnnnnnn....",
+  "...nnnnnnnnnnnn...",
+  "..snnnoooooonns...",
+  "..snnoorrrroonns..",
+  "...nnoooooooonn...",
+  "....nnnnnnnnnn....",
+  "....nnnnnnnnnn....",
+  "....nnnn..nnnn....",
+  "....jjjj..jjjj....",
+  "...kkkkk..kkkkk...",
+  "..................",
+];
+const P_MAESTRO = { k: "#1c1a16", s: "#d9a273", n: "#2a2a3e", o: "#c9821f", r: "#b5243a", m: "#7a3326", j: "#2a2620" };
+
+const JUNCO = [        // el junco de vela, que es la salida del distrito (32 × 16)
+  "..............k.................",
+  "............kkrrrrrr............",
+  "...........kkkrrrrrrrr..........",
+  "..........kkkkrrrrrrrrr.........",
+  ".........kkkkkrrrrrrrrrr........",
+  "..........kkkkrrrrrrrrr.........",
+  "...........kkkrrrrrrrr..........",
+  "............kkrrrrrr............",
+  "..............k.................",
+  "..............k.................",
+  "...mmmmmmmmmmmmmmmmmmmmmmmm.....",
+  "..mmmmmmmmmmmmmmmmmmmmmmmmmm....",
+  "...mmmmmmmmmmmmmmmmmmmmmmmm.....",
+  "....mmmmmmmmmmmmmmmmmmmmmm......",
+  ".....wwwwwwwwwwwwwwwwwwww.......",
+  "................................",
+];
+const P_JUNCO = { k: "#3a2a1c", r: "#b5243a", m: "#6b4a30", w: "#3f6f7e" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -2476,6 +2616,13 @@ const DEFINICIONES = {
   robot:        [ROBOT, P_ROBOT],
   grabador:     [GRABADOR, P_GRABADOR],
   shinkansen:   [SHINKANSEN, P_SHINKANSEN],
+  abaco:        [ABACO, P_ABACO],
+  balanza:      [BALANZA, P_BALANZA],
+  guerrero:     [GUERRERO, P_GUERRERO],
+  molde:        [MOLDE, P_MOLDE],
+  sello:        [SELLO, P_SELLO],
+  maestro:      [MAESTRO, P_MAESTRO],
+  junco:        [JUNCO, P_JUNCO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

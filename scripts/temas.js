@@ -2814,6 +2814,231 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     CHINA — otra vez el PAÍS entero, como pidió José: los picos de
+     Guilin asomando en la bruma, la Gran Muralla corriendo por la
+     cresta con sus torres de vigía, los arrozales en terraza bajando
+     la ladera, el río Li con sus balsas de bambú y el puente de
+     piedra en arco. Acá se fundió el ejército de terracota: ocho mil
+     guerreros hechos con moldes y artesanos, que es justo combinar
+     capital y trabajo.
+     OJO 1: el fondo no lleva ábacos, balanzas, moldes, sellos ni
+     guerreros sueltos — esos son los bichos.
+     OJO 2: el plano del suelo baja SIN CORTES desde la ladera hasta
+     la vereda. Si queda un hueco, se asoma el cielo y el fondo
+     parece tener una laguna.
+     OJO 3: la paleta es BRUMA AZUL-VERDE, terraza verde y teja gris,
+     distinta del Japón rosado y bermellón. Los bichos van en
+     terracota, laca negra y bronce; ninguno puede ser verde terraza.
+     ========================================================= */
+  china: {
+    nombre: "China",
+    cielo: [[0, "#4f7ea6"], [0.4, "#9ab6bc"], [0.74, "#cfd6c4"], [1, "#e4e0c8"]],
+    suelo: { cara: "#8e9476", borde: "#abb08e", tierra: "#45432e", plataforma: "#6b4a30", plataformaBorde: "#c9821f" },
+    acento: "#b5243a",
+
+    bichos: ["abaco", "balanza", "guerrero", "molde", "sello"],
+    nombresBichos: [
+      "El Ábaco que No Lee Exponentes",
+      "La Balanza que No Suma",
+      "El Guerrero de la Isocuanta",
+      "El Molde del Isocosto",
+      "El Sello al Revés",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "maestro",
+    nombreJefe: "El Maestro de los Mil Guerreros",
+
+    fondo(ctx, cam, t) {
+      // el sol entre la bruma, chiquito y lechoso
+      ctx.fillStyle = "rgba(248,244,220,.24)";
+      ctx.beginPath(); ctx.arc(618, 72, 56, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(252,250,232,.88)";
+      ctx.beginPath(); ctx.arc(618, 72, 22, 0, Math.PI * 2); ctx.fill();
+
+      // LOS PICOS DE GUILIN: torres de caliza angostas y abombadas, encimadas
+      // unas con otras. Son LA silueta del país, así que van altas y en dos
+      // capas, para que se vea el fondo entre ellas.
+      repetir(ctx, cam, 150, 0.05, (x, i) => {
+        const bx = x + 20, base = 306, alto = 170 + ((i * 71) % 70);
+        ctx.fillStyle = "#8fa3ac";
+        ctx.beginPath();
+        ctx.moveTo(bx - 34, base);
+        ctx.quadraticCurveTo(bx - 40, base - alto * 0.55, bx - 13, base - alto * 0.92);
+        ctx.quadraticCurveTo(bx, base - alto, bx + 13, base - alto * 0.92);
+        ctx.quadraticCurveTo(bx + 40, base - alto * 0.55, bx + 34, base);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 128, 0.09, (x, i) => {
+        const bx = x + 60, base = 306, alto = 118 + ((i * 53) % 58);
+        ctx.fillStyle = "#6d8794";
+        ctx.beginPath();
+        ctx.moveTo(bx - 30, base);
+        ctx.quadraticCurveTo(bx - 36, base - alto * 0.55, bx - 11, base - alto * 0.92);
+        ctx.quadraticCurveTo(bx, base - alto, bx + 11, base - alto * 0.92);
+        ctx.quadraticCurveTo(bx + 36, base - alto * 0.55, bx + 30, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(228,238,238,.30)";                    // la bruma que los corta a media altura
+        ctx.fillRect(bx - 34, base - alto * 0.48, 68, 11);
+      });
+
+      // LA GRAN MURALLA, a ras de las terrazas y en piedra OSCURA, con las
+      // torres ancladas sobre la propia cinta. Si la cinta va fina y pálida, y
+      // las torres flotando por encima, se lee como cajitas sueltas.
+      repetir(ctx, cam, 230, 0.15, (x, i) => {
+        const bx = x, base = 262 + ((i * 37) % 10);
+        // el borde de arriba de la cinta, que manda sobre todo lo demás
+        const borde = [[0, 18], [76, -12], [156, -6], [230, 16]];
+        const alturaEn = (px) => {
+          for (let k = 0; k < 3; k++) {
+            const [x0, y0] = borde[k], [x1, y1] = borde[k + 1];
+            if (px >= x0 && px <= x1) return y0 + ((y1 - y0) * (px - x0)) / (x1 - x0);
+          }
+          return borde[3][1];
+        };
+        const GRUESO = 22;
+
+        ctx.fillStyle = "#7a7b6c";                                  // el cuerpo de la cinta
+        ctx.beginPath();
+        ctx.moveTo(bx + borde[0][0], base + borde[0][1]);
+        for (let k = 1; k < 4; k++) ctx.lineTo(bx + borde[k][0], base + borde[k][1]);
+        for (let k = 3; k >= 0; k--) ctx.lineTo(bx + borde[k][0], base + borde[k][1] + GRUESO);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#5d5e52";                                  // la sombra del paramento
+        ctx.beginPath();
+        ctx.moveTo(bx + borde[0][0], base + borde[0][1] + GRUESO - 7);
+        for (let k = 1; k < 4; k++) ctx.lineTo(bx + borde[k][0], base + borde[k][1] + GRUESO - 7);
+        for (let k = 3; k >= 0; k--) ctx.lineTo(bx + borde[k][0], base + borde[k][1] + GRUESO);
+        ctx.closePath(); ctx.fill();
+
+        ctx.fillStyle = "#9c9d8a";                                  // las almenas, apoyadas en el borde
+        for (let px = 8; px < 226; px += 17) {
+          ctx.fillRect(bx + px, base + alturaEn(px) - 7, 8, 8);
+        }
+
+        for (const tx of [70, 152]) {                               // las dos torres de vigía, ANCLADAS
+          const ty = base + alturaEn(tx);
+          ctx.fillStyle = "#6b6c5e";
+          ctx.fillRect(bx + tx - 14, ty - 26, 28, 26 + GRUESO);
+          ctx.fillStyle = "#4e4f44";
+          ctx.fillRect(bx + tx - 18, ty - 33, 36, 8);
+          ctx.fillStyle = "rgba(30,28,22,.38)";
+          ctx.fillRect(bx + tx - 6, ty - 18, 12, 12);
+        }
+      });
+
+      // LOS ARROZALES EN TERRAZA: cada escalón entra bastante más que el de
+      // arriba y lleva su muro de contención, que es lo que hace que se lean
+      // como terrazas talladas y no como un prado liso.
+      repetir(ctx, cam, 188, 0.24, (x, i) => {
+        const bx = x, base = 306;
+        const paleta = ["#6f8a4a", "#7d9654", "#5f7c3f", "#88a05c", "#718f4e"];
+        for (let k = 0; k < 6; k++) {
+          const dentro = k * 13;
+          const ancho = 192 - dentro * 2;
+          if (ancho <= 0) break;
+          const y = base - 54 + k * 9;
+          ctx.fillStyle = paleta[(i + k) % paleta.length];
+          ctx.fillRect(bx + dentro, y, ancho, 9);
+          ctx.fillStyle = "rgba(222,234,212,.40)";                  // el agua encharcada del borde
+          ctx.fillRect(bx + dentro, y, ancho, 2);
+          ctx.fillStyle = "rgba(52,58,38,.34)";                     // el muro de contención
+          ctx.fillRect(bx + dentro, y + 7, ancho, 2);
+        }
+      });
+
+      // EL PLANO DEL SUELO, de la ladera a la vereda y SIN CORTES:
+      // la orilla de enfrente, el río Li y la orilla de este lado
+      ctx.fillStyle = "#8d9272";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 10);
+      ctx.fillStyle = "#3f6f6a";                                    // EL RÍO LI, verde jade
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 30);
+      ctx.fillStyle = "#56897e";
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 5);
+      for (let i = 0; i < 34; i++) {
+        const x = (i * 57 - cam * 0.2) % 960 - 40;
+        ctx.fillStyle = "rgba(226,240,230,.26)";
+        ctx.fillRect(x, 324 + ((i * 23) % 18), 16, 2);
+      }
+      ctx.fillStyle = "#9a9a7e";                                    // la orilla de este lado
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 36);
+      ctx.fillStyle = "#b4b394";
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 4);
+
+      // LAS BALSAS DE BAMBÚ del río
+      repetir(ctx, cam, 260, 0.28, (x, i) => {
+        const bx = x + 50, linea = 334;
+        ctx.fillStyle = "#b99a56";
+        ctx.fillRect(bx, linea, 54, 5);
+        ctx.fillStyle = "#8a7238";
+        for (let k = 0; k < 6; k++) ctx.fillRect(bx + k * 9, linea, 2, 5);
+        ctx.fillStyle = "#3a2a1c";                                  // el barquero con su pértiga
+        ctx.fillRect(bx + 34, linea - 13, 4, 13);
+        ctx.fillRect(bx + 40, linea - 19, 2, 20);
+      });
+
+      // EL PUENTE DE PIEDRA EN ARCO
+      repetir(ctx, cam, 460, 0.32, (x, i) => {
+        const bx = x + 60, cubierta = 314;
+        ctx.fillStyle = "#9a9a84";
+        ctx.fillRect(bx, cubierta, 170, 8);
+        ctx.fillStyle = "rgba(244,244,226,.40)";
+        ctx.fillRect(bx, cubierta, 170, 3);
+        ctx.fillStyle = "#86866f";                                  // el arco
+        ctx.beginPath();
+        ctx.moveTo(bx + 46, cubierta + 8);
+        ctx.quadraticCurveTo(bx + 85, cubierta + 46, bx + 124, cubierta + 8);
+        ctx.lineTo(bx + 140, cubierta + 8);
+        ctx.lineTo(bx + 140, cubierta + 30);
+        ctx.lineTo(bx + 30, cubierta + 30);
+        ctx.lineTo(bx + 30, cubierta + 8);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // EL TALLER DE ALFARERÍA, con su toldo y sus tinajas
+      repetir(ctx, cam, 294, 0.54, (x, i) => {
+        const bx = x + 30, base = 382, alto = 32;
+        ctx.fillStyle = "#6e5542";
+        ctx.fillRect(bx, base - alto, 124, alto);
+        ctx.fillStyle = "#b5243a";                                  // el letrero laqueado
+        ctx.fillRect(bx + 8, base - alto + 4, 108, 8);
+        ctx.fillStyle = "rgba(246,238,212,.84)";
+        ctx.fillRect(bx + 12, base - alto + 18, 44, 14);
+        ctx.fillRect(bx + 68, base - alto + 18, 44, 14);
+        ctx.fillStyle = "#4a4b44";                                  // el alero de teja gris, curvado
+        ctx.beginPath();
+        ctx.moveTo(bx - 12, base - alto);
+        ctx.quadraticCurveTo(bx + 62, base - alto - 14, bx + 136, base - alto);
+        ctx.lineTo(bx + 136, base - alto - 6);
+        ctx.quadraticCurveTo(bx + 62, base - alto - 20, bx - 12, base - alto - 6);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // LOS SAUCES de la orilla
+      repetir(ctx, cam, 154, 0.78, (x, i) => {
+        const bx = x + 26, base = 382;
+        ctx.fillStyle = "#5a4a34";
+        ctx.fillRect(bx, base - 30, 5, 30);
+        ctx.fillStyle = ["#6f8a4a", "#7d9654", "#5f7c3f"][i % 3];
+        ctx.beginPath(); ctx.ellipse(bx + 2, base - 42, 18, 12, 0, 0, Math.PI * 2); ctx.fill();
+        for (let k = 0; k < 5; k++) {                               // las ramas colgantes
+          ctx.fillRect(bx - 14 + k * 8, base - 38, 2, 12 + ((k * 5) % 9));
+        }
+      });
+      ctx.fillStyle = "#86866c";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // la bruma del río, en bandas que van pasando
+      for (let i = 0; i < 14; i++) {
+        const x = (i * 187 - t * 0.5) % 980 - 60;
+        const y = 150 + ((i * 59) % 150) + Math.sin(t / 40 + i) * 5;
+        ctx.fillStyle = `rgba(232,240,236,${(0.05 + 0.06 * Math.abs(Math.sin(t / 36 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 54, 4);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */
