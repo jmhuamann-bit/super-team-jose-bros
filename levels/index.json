@@ -361,6 +361,20 @@
       "abierto": true,
       "mapa": "levels/level26.json",
       "preguntas": "questions/level26_questions.json"
+    },
+    {
+      "id": "level27",
+      "clase": "Clase 02",
+      "distrito": "Japón",
+      "titulo": "La montaña que se ve distinta desde cada lado",
+      "icono": "🗻",
+      "seccion": "PC3",
+      "seccionNota": "Teoría del productor y costos — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level27.json",
+      "preguntas": "questions/level27_questions.json"
     }
   ]
 }

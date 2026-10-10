@@ -2631,6 +2631,189 @@ export const TEMAS = {
       }
     },
   },
+  /* =========================================================
+     JAPÓN — acá José pidió el PAÍS, no un barrio, así que el fondo
+     junta lo más reconocible de todo Japón: el monte Fuji nevado al
+     fondo, la pagoda de cinco pisos en la ladera, la bahía con el
+     torii bermellón parado en el agua, los puestos con sus farolillos
+     y los cerezos en flor de la orilla. Hokusai hizo treinta y seis
+     vistas del Fuji y en todas es el mismo monte: eso es justo lo que
+     enseña el nivel — cada tablita es un pedazo de la misma curva.
+     OJO 1: el fondo no lleva darumas, abanicos, linternas sueltas ni
+     carpas de viento — esos son los bichos.
+     OJO 2: el plano del suelo baja SIN CORTES desde la ladera hasta
+     la vereda. Si queda un hueco, se asoma el cielo y el fondo
+     parece tener una laguna.
+     OJO 3: la paleta es CIELO ROSADO, nieve y bermellón, bien
+     distinta del París pálido, del Lyon ocre y de la Basilea de
+     arenisca. Los bichos van en índigo, tinta y oro viejo; ninguno
+     puede ser bermellón ni rosa.
+     ========================================================= */
+  japon: {
+    nombre: "Japón",
+    cielo: [[0, "#5a7fb8"], [0.38, "#a8b6cc"], [0.7, "#e8c0c4"], [1, "#f4dcc8"]],
+    suelo: { cara: "#8f9480", borde: "#adb296", tierra: "#45453a", plataforma: "#8a3a2e", plataformaBorde: "#e0b24a" },
+    acento: "#d94f3d",
+
+    bichos: ["koinobori", "abanico", "daruma", "linterna", "robot"],
+    nombresBichos: [
+      "La Carpa de los Dos Plazos",
+      "El Abanico del Exponente",
+      "El Daruma de un Solo Ojo",
+      "La Linterna del Caso Raro",
+      "El Robot que Solo Ve K y L",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "grabador",
+    nombreJefe: "El Grabador de las Treinta y Seis Vistas",
+
+    fondo(ctx, cam, t) {
+      // el sol bajo del amanecer, que es la bandera del país
+      ctx.fillStyle = "rgba(255,210,200,.26)";
+      ctx.beginPath(); ctx.arc(600, 96, 62, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,236,226,.90)";
+      ctx.beginPath(); ctx.arc(600, 96, 26, 0, Math.PI * 2); ctx.fill();
+
+      // EL MONTE FUJI, ancho y simétrico, con su nieve
+      repetir(ctx, cam, 1200, 0.07, (x, i) => {
+        const bx = x + 230, base = 306;
+        ctx.fillStyle = "#6e7a92";
+        ctx.beginPath();
+        ctx.moveTo(bx - 250, base);
+        ctx.lineTo(bx - 52, base - 150);
+        ctx.quadraticCurveTo(bx, base - 166, bx + 52, base - 150);
+        ctx.lineTo(bx + 250, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#eef1f4";                                  // la nieve de la cumbre
+        ctx.beginPath();
+        ctx.moveTo(bx - 56, base - 146);
+        ctx.lineTo(bx - 40, base - 140); ctx.lineTo(bx - 28, base - 148);
+        ctx.lineTo(bx - 14, base - 141); ctx.lineTo(bx - 52, base - 150);
+        ctx.quadraticCurveTo(bx, base - 166, bx + 52, base - 150);
+        ctx.lineTo(bx + 16, base - 141); ctx.lineTo(bx + 30, base - 148);
+        ctx.lineTo(bx + 42, base - 140); ctx.lineTo(bx + 56, base - 146);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(255,255,255,.55)";                    // el cráter
+        ctx.fillRect(bx - 14, base - 162, 28, 5);
+      });
+
+      // LA PAGODA DE CINCO PISOS en la ladera
+      repetir(ctx, cam, 560, 0.16, (x, i) => {
+        const bx = x + 120, base = 306;
+        ctx.fillStyle = "#8a3a2e";
+        ctx.fillRect(bx - 3, base - 136, 6, 20);                    // la aguja
+        for (let k = 0; k < 5; k++) {                               // los cinco techos
+          const y = base - 116 + k * 22, w = 26 + k * 9;
+          ctx.fillStyle = "#d94f3d";
+          ctx.fillRect(bx - w, y, w * 2, 8);
+          ctx.fillStyle = "#b03a2c";
+          ctx.fillRect(bx - w - 4, y + 6, w * 2 + 8, 4);
+          ctx.fillStyle = "#e8e2cc";                                // el cuerpo del piso
+          ctx.fillRect(bx - w + 9, y + 10, w * 2 - 18, 12);
+        }
+      });
+
+      // LAS CASAS DE TEJA, con sus aleros levantados
+      repetir(ctx, cam, 218, 0.24, (x, i) => {
+        const bx = x + 12, base = 306, alto = 52 + ((i * 29) % 18);
+        ctx.fillStyle = ["#e4ddc8", "#d8d0ba", "#eee7d2"][i % 3];
+        ctx.fillRect(bx, base - alto, 176, alto);
+        ctx.fillStyle = "#4e5a62";                                  // la teja gris
+        ctx.beginPath();
+        ctx.moveTo(bx - 16, base - alto);
+        ctx.lineTo(bx + 34, base - alto - 24);
+        ctx.lineTo(bx + 142, base - alto - 24);
+        ctx.lineTo(bx + 192, base - alto);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#3c4650";
+        ctx.fillRect(bx - 16, base - alto - 3, 208, 4);
+        ctx.fillStyle = "rgba(58,50,40,.34)";                       // los shoji
+        for (let k = 0; k < 4; k++) ctx.fillRect(bx + 16 + k * 40, base - alto + 14, 26, 24);
+        ctx.fillStyle = "#6b5a46";
+        ctx.fillRect(bx, base - 12, 176, 12);
+      });
+
+      // EL PLANO DEL SUELO, de la ladera a la vereda y SIN CORTES:
+      // la orilla de enfrente, la bahía y la orilla de este lado
+      ctx.fillStyle = "#93977f";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 10);
+      ctx.fillStyle = "#3f6f84";                                    // LA BAHÍA
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 30);
+      ctx.fillStyle = "#56869a";
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 5);
+      for (let i = 0; i < 34; i++) {
+        const x = (i * 57 - cam * 0.2) % 960 - 40;
+        ctx.fillStyle = "rgba(240,228,230,.28)";
+        ctx.fillRect(x, 324 + ((i * 23) % 18), 16, 2);
+      }
+      ctx.fillStyle = "#9a9a82";                                    // la orilla de este lado
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 36);
+      ctx.fillStyle = "#b4b399";
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 4);
+
+      // EL TORII BERMELLÓN, parado en el agua
+      repetir(ctx, cam, 470, 0.30, (x, i) => {
+        const bx = x + 90, pie = 344;
+        ctx.fillStyle = "#d94f3d";
+        ctx.fillRect(bx - 34, pie - 46, 9, 46);                     // los dos pilares
+        ctx.fillRect(bx + 25, pie - 46, 9, 46);
+        ctx.fillRect(bx - 30, pie - 34, 60, 6);                     // el travesaño
+        ctx.fillStyle = "#b03a2c";
+        ctx.beginPath();                                            // el dintel curvo
+        ctx.moveTo(bx - 50, pie - 44);
+        ctx.quadraticCurveTo(bx, pie - 54, bx + 50, pie - 44);
+        ctx.lineTo(bx + 50, pie - 38);
+        ctx.quadraticCurveTo(bx, pie - 48, bx - 50, pie - 38);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(217,79,61,.26)";                      // el reflejo en el agua
+        ctx.fillRect(bx - 34, pie, 9, 8);
+        ctx.fillRect(bx + 25, pie, 9, 8);
+      });
+
+      // LOS PUESTOS DEL FESTIVAL, con sus farolillos
+      repetir(ctx, cam, 288, 0.54, (x, i) => {
+        const bx = x + 30, base = 382, alto = 32;
+        ctx.fillStyle = "#4a3f36";
+        ctx.fillRect(bx, base - alto, 124, alto);
+        ctx.fillStyle = "#e8e2cc";                                  // el noren
+        ctx.fillRect(bx + 6, base - alto + 4, 112, 12);
+        ctx.fillStyle = "#8a3a2e";
+        for (let k = 0; k < 5; k++) ctx.fillRect(bx + 14 + k * 22, base - alto + 6, 5, 8);
+        ctx.fillStyle = "rgba(246,236,206,.86)";
+        ctx.fillRect(bx + 12, base - alto + 20, 44, 12);
+        ctx.fillRect(bx + 68, base - alto + 20, 44, 12);
+        for (let k = 0; k < 4; k++) {                               // los farolillos colgados
+          ctx.fillStyle = "#d94f3d";                                  // bermellon, NO crema:
+          ctx.fillRect(bx + 10 + k * 34, base - alto - 14, 11, 13);    // el crema repetiria al bicho
+          ctx.fillStyle = "#8a3a2e";
+          ctx.fillRect(bx + 10 + k * 34, base - alto - 11, 11, 3);
+        }
+      });
+
+      // LOS CEREZOS EN FLOR de la orilla
+      repetir(ctx, cam, 146, 0.78, (x, i) => {
+        const bx = x + 24, base = 382;
+        ctx.fillStyle = "#5a4636";
+        ctx.fillRect(bx, base - 30, 5, 30);
+        ctx.fillStyle = ["#f0bcc8", "#e8a8ba", "#f6cdd6"][i % 3];
+        ctx.beginPath(); ctx.ellipse(bx + 2, base - 44, 18, 14, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(bx - 11, base - 34, 9, 8, 0.4, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(bx + 15, base - 36, 9, 8, -0.4, 0, Math.PI * 2); ctx.fill();
+      });
+      ctx.fillStyle = "#8a8a72";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // los pétalos de cerezo cayendo
+      for (let i = 0; i < 26; i++) {
+        const x = (i * 131 + Math.sin(t / 24 + i) * 22 - t * 0.5) % 880 - 20;
+        const y = (i * 61 + t * 0.9) % 420;
+        ctx.fillStyle = `rgba(246,205,214,${(0.26 + 0.2 * Math.abs(Math.sin(t / 26 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 4, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

@@ -1,0 +1,41 @@
+{
+  "id": "level27",
+  "distrito": "Japón",
+  "clase": "Clase 02 · PC3",
+  "titulo": "La montaña que se ve distinta desde cada lado",
+  "tema": "japon",
+  "musica": "japon",
+  "vehiculo": "shinkansen",
+  "intro": "Segunda clase de la PC3, y cambiamos de país entero: Japón. Entre 1830 y 1832, Hokusai publicó las «Treinta y seis vistas del monte Fuji», y después le agregó diez láminas más porque se vendieron solísimas. En cada una el Fuji se ve distinto: enorme detrás de una ola, chiquito entre los tejados, azul al amanecer, rojo al atardecer. Pero es el mismo monte — lo único que cambia es desde dónde lo miras. Esta clase es exactamente eso: te van a dar tablitas donde la producción solo sube, o solo baja, o sube siempre igual, y vas a jurar que la ley de rendimientos no se cumple. No es que no se cumpla. Es que solo te están mostrando un pedazo de la curva. Y de paso estás en el país que convirtió la producción en un arte: el del justo a tiempo y el kaizen, que sabe mejor que nadie cuántas manos le caben a una máquina.",
+  "repaso": [
+    "LO PRIMERO, QUE ES LA IDEA DE TODA LA CLASE: el caso típico presenta los tres comportamientos del producto marginal (creciente, decreciente y negativo). Pero hay tablitas que muestran UNO SOLO. ¿Por qué? Porque solo estás viendo una PARTECITA de la curva. No es que la ley falle: es el recorte.",
+    "CORTO PLAZO vs LARGO PLAZO, el truco rápido. Si en la función se pueden mover K y L, es LARGO plazo. Apenas el problema te clava el capital en un número, el único variable es L y pasa a ser CORTO plazo. Ejemplo: Q = K·L^1,5 es de largo plazo; con K = 3 queda Q = 3·L^1,5 y es de corto plazo.",
+    "DATO DE ORO: EL EXPONENTE DE L DEFINE SU PRODUCTIVIDAD MARGINAL, y se comprueba tabulando. Mayor que 1 (por ejemplo L²) → rendimientos marginales CRECIENTES, carita feliz, caso TÍPICO. Entre 0 y 1 (L^0,5) → DECRECIENTES, carita triste, TÍPICO. Menor que 0 (L^−2) → NEGATIVOS, carita enojada, TÍPICO. Igual a 1 (L¹ = L) → CONSTANTES, carita seria, y ese es el caso ATÍPICO o raro.",
+    "LOS CUATRO CASOS CON SUS TABLAS, todos con L de 10 a 16. CRECIENTES (K = 3): Q = 50, 55, 65, 80, 100, 125, 155 → PMgL 5, 10, 15, 20, 25, 30. DECRECIENTES (K = 9): Q = 500, 600, 690, 770, 840, 900, 950 → PMgL 100, 90, 80, 70, 60, 50. NEGATIVOS (K = 7): Q = 300, 290, 270, 240, 200, 150, 90 → PMgL −10, −20, −30, −40, −50, −60. CONSTANTES (K = 2, el atípico): Q = 2000, 2050, …, 2300 → PMgL siempre 50.",
+    "OJO AL LEER LA TABLA: el PMgL es la RESTA entre filas, no la producción total. Que la producción total suba no significa que el marginal suba — en el caso decreciente la producción sube y el marginal baja.",
+    "LA PRODUCCIÓN NO DEPENDE SOLO DE K Y L. También influyen: A (tecnología), H (capital humano), RN o N (recursos naturales) y T (tierra). Por eso una función puede traerte más letras de las dos de siempre.",
+    "QUÉ MUEVE LAS CURVAS. Las EXPANDEN (función de producción, PMgL y PMeL, las tres juntas): una mejora en la tecnología (A) o que te obsequien máquinas. Las CONTRAEN: una caída de la tecnología o que se malogren las máquinas. Contratar más trabajadores NO mueve la curva: te mueve SOBRE la curva.",
+    "«ÚLTIMO TRABAJADOR CONTRATADO» significa el TOTAL de trabajadores que se planea contratar. Si el último contratado es el 40, la empresa planea contratar 40. Lo importante es que ese número caiga DENTRO del segundo tramo, que es donde conviene producir.",
+    "PROBLEMA 2022 II RESUELTO — las tres empresas, todas con K = 50 fijo y L de 100 a 106. Empresa 1: PMgL 18, 20, 22, 24, 26, 28 → crecientes. Empresa 2: 30, 24, 18, 12, 6, 0 → decrecientes. Empresa 3: 20 siempre → constantes.",
+    "Y QUIÉN TIENE RAZÓN EN ESE PROBLEMA: ninguno de los dos. Coco se equivoca porque sí son casos vistos en clase, cada uno mirado en una partecita de la curva. Y Tito se equivoca en el NOMBRE: los RETORNOS A ESCALA son de LARGO plazo, donde se mueven K y L a la vez; con el capital clavado en 50 lo que se mide son rendimientos MARGINALES.",
+    "PROBLEMA 2025 I RESUELTO — el robo que se lleva el 20% del capital fijo. Las TRES curvas (producto total, producto medio y producto marginal) se desplazan hacia ABAJO, igual que cuando te regalan máquinas pero al revés. Y la etapa II termina con MENOS trabajadores: con menos máquinas el factor fijo se satura antes.",
+    "LAS 7 PREGUNTAS DEL RETO, que son el repaso de la clase anterior: de dónde a dónde va cada tramo, en cuál conviene producir, cuáles son los tres puntos máximos, qué más es el punto E además de un máximo, cómo se analizan el PMeL y el PMgL por tramos, la parte matemática (convexidad, concavidad e inflexión) y las leyes. Y el recordatorio de siempre: «decreciente» NO es lo mismo que «negativo»."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                ",
+    "                                                                                                                                                                                ",
+    "                                                                                                                                                                                ",
+    "                                                       A                                                   A                                                                    ",
+    "                                                     o o o                                               o o o                                                                  ",
+    "                                                     ======                                              ======                                                                 ",
+    "                                                                                                                                                                                ",
+    "                        o o o                               o o o                           o o o                           o o o                     o o o                     ",
+    "                ?           o o         L                           V               G         o o                   G               o o           1     L                       ",
+    "                        ====                                ====                            ====                            ====                      ====                      ",
+    "                        o o                     o o                                             o o                     o o                     o o                             ",
+    "  P                 E         C             E   T       X       E                 C     E         X T     E             X       E           C                 B             M   ",
+    "##################################   ###################################    ####################################   #############################################################",
+    "##################################   ###################################    ####################################   #############################################################",
+    "##################################   ###################################    ####################################   #############################################################"
+  ]
+}

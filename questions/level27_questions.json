@@ -1,0 +1,125 @@
+{
+  "nivel": "level27",
+  "clase": "Clase 02 · PC3 — Ejercicios del productor a corto plazo",
+  "fuente": "Apuntes de la 2da clase de la PC3 — Economía General I",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b27-q1",
+      "nivel": "comprension",
+      "enunciado": "Te dan la función de producción Q = K·L^1,5, donde se pueden mover tanto el capital como el trabajo. Después el problema agrega un dato: el capital está en K = 3, así que la función queda Q = 3·L^1,5.\n\n¿De qué plazo es cada una?",
+      "opciones": [
+        "La primera es de LARGO plazo, porque K y L se pueden mover los dos; y apenas te fijan K = 3 pasa a ser de CORTO plazo, porque ya solo se puede mover L",
+        "Las dos son de corto plazo: el corto plazo lo define el exponente, no los factores",
+        "La primera es de corto plazo y la segunda de largo plazo, porque poner un número concreto amplía el horizonte del análisis",
+        "Las dos son de largo plazo: una función deja de serlo recién cuando se fijan los DOS factores"
+      ],
+      "correcta": 0,
+      "explicacion": "Lo que define el plazo es cuántos insumos se pueden mover. Con K y L libres es largo plazo; cuando te clavan el capital en un número, el único variable es L y pasa a ser corto plazo."
+    },
+    {
+      "id": "b27-q2",
+      "nivel": "aplicacion",
+      "enunciado": "Dato de oro de esta clase: el EXPONENTE de L define qué tipo de productividad marginal tiene la función. Te dan cuatro funciones ya en corto plazo:\n\nQ = 3·L^1,5 · Q = 9·L^0,5 · Q = 7·L^(−0,5) · Q = 2·L\n\n¿Qué rendimiento marginal le toca a cada una, y cuál es el caso ATÍPICO?",
+      "opciones": [
+        "Todas tienen rendimientos decrecientes, porque esa es la ley general; ninguna es atípica",
+        "Crecientes la de exponente 0,5, decrecientes la de 1,5, negativos la de 1 y constantes la negativa",
+        "Exponente mayor que 1 → CRECIENTES. Entre 0 y 1 → DECRECIENTES. Menor que 0 → NEGATIVOS. Esos tres son casos típicos. Y exponente igual a 1 (Q = 2·L) → CONSTANTES, que es el caso ATÍPICO",
+        "El exponente solo cambia la escala de la producción, no el tipo de rendimiento; el atípico se reconoce por el valor de K"
+      ],
+      "correcta": 2,
+      "explicacion": "Las caritas del apunte: feliz para el creciente, triste para el decreciente, enojada para el negativo y seria para el constante. Y la seria es la rara: hace falta que el exponente sea exactamente 1."
+    },
+    {
+      "id": "b27-q3",
+      "nivel": "aplicacion",
+      "enunciado": "Una empresa trabaja con K = 3 máquinas fijas y esta es su producción:\n\nQ según L: 10→50 · 11→55 · 12→65 · 13→80 · 14→100 · 15→125 · 16→155\n\n¿Qué comportamiento tiene el producto marginal?",
+      "opciones": [
+        "Decreciente, porque la producción total se va acercando a su techo",
+        "CRECIENTE: los PMgL salen 5, 10, 15, 20, 25 y 30, o sea que cada trabajador aporta más que el anterior",
+        "Negativo, porque los saltos de producción son cada vez más grandes y eso agota el capital",
+        "Constante, porque la producción sube en todos los tramos"
+      ],
+      "correcta": 1,
+      "explicacion": "El PMgL es la RESTA entre filas, no la producción total. Acá las restas van 5, 10, 15, 20, 25, 30: el marginal sube, así que son rendimientos marginales crecientes."
+    },
+    {
+      "id": "b27-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Ahora dos empresas distintas, cada una con su capital fijo:\n\nEmpresa A (K = 7) · Q según L: 10→300 · 11→290 · 12→270 · 13→240 · 14→200 · 15→150 · 16→90\nEmpresa B (K = 2) · Q según L: 10→2000 · 11→2050 · 12→2100 · 13→2150 · 14→2200 · 15→2250 · 16→2300\n\n¿Qué le pasa a cada una, y cuál de los dos casos es el atípico?",
+      "opciones": [
+        "A tiene rendimientos decrecientes y B crecientes; el atípico es el de A, porque la producción cae",
+        "Las dos tienen rendimientos decrecientes, solo que a distinta escala; ninguna es atípica",
+        "A es la atípica, porque ninguna empresa real produce menos al contratar más gente",
+        "A tiene rendimientos marginales NEGATIVOS (−10, −20, −30, −40, −50, −60) y su producción total cae desde el primer dato; B tiene rendimientos CONSTANTES (siempre +50), y ese es el caso ATÍPICO"
+      ],
+      "correcta": 3,
+      "explicacion": "Ojo con la diferencia: en A el marginal es negativo, que es un caso típico (la tercera etapa). En B es constante, y ese sí es el raro, porque pide que el exponente de L sea exactamente 1."
+    },
+    {
+      "id": "b27-q5",
+      "nivel": "comprension",
+      "enunciado": "Un compañero ve esas tablitas y se queja: «una empresa solo crece, otra solo cae, otra va siempre igual — entonces la ley de rendimientos marginales decrecientes no se cumple».\n\n¿Por qué pasa eso en realidad?",
+      "opciones": [
+        "Porque solo estás viendo una PARTECITA de la curva. La función completa sí tiene los tres comportamientos; lo que te muestran es un tramo, y en ese tramo se ve un solo comportamiento",
+        "Porque la ley de rendimientos decrecientes solo se cumple cuando el capital también se puede mover",
+        "Porque esas tablas están mal hechas: en toda tabla real tienen que aparecer los tres tramos",
+        "Porque la ley solo aplica a empresas grandes, y esas son tablas de empresas chicas"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la idea central de la clase: el caso típico presenta los tres comportamientos, pero si te asoman solo un pedazo de la curva vas a ver uno solo. No es que la ley falle, es el recorte."
+    },
+    {
+      "id": "b27-q6",
+      "nivel": "comprension",
+      "enunciado": "Hasta ahora toda la producción se escribió en función de K y L.\n\n¿La producción depende SOLO de esos dos factores?",
+      "opciones": [
+        "Sí: cualquier otra cosa que influya ya está contenida dentro de K o dentro de L",
+        "Sí, pero solo en el corto plazo; en el largo plazo entran más factores",
+        "No. También influyen la tecnología (A), el capital humano (H), los recursos naturales (RN o N) y la tierra (T)",
+        "No, pero esos otros factores recién se estudian en teoría de costos y no afectan la función de producción"
+      ],
+      "correcta": 2,
+      "explicacion": "Los cuatro que agrega el apunte: A de tecnología, H de capital humano, RN de recursos naturales y T de tierra. Por eso una función puede traer más letras que K y L."
+    },
+    {
+      "id": "b27-q7",
+      "nivel": "comprension",
+      "enunciado": "Te muestran tres empresas, todas con el MISMO capital fijo K = 50, y L de 100 a 106. Los PMgL salen así: empresa 1 crecientes (18, 20, 22, 24, 26, 28), empresa 2 decrecientes (30, 24, 18, 12, 6, 0) y empresa 3 constantes (20 siempre).\n\nCoco dice que esto no se ajusta a nada visto en clase y que algo anda mal. Tito dice que son los tres tipos de RETORNOS A ESCALA en el corto plazo. ¿Quién tiene razón?",
+      "opciones": [
+        "Tito: los retornos a escala explican exactamente los tres casos, y por eso cada empresa tiene uno distinto",
+        "NINGUNO. Coco se equivoca porque sí son casos vistos: son rendimientos marginales crecientes, decrecientes y constantes, cada uno visto en una partecita de la curva. Y Tito se equivoca porque los RETORNOS A ESCALA son de LARGO plazo, donde se mueven K y L a la vez; acá el capital está clavado en 50",
+        "Coco: con el capital fijo en 50 ninguna de las tres tablas puede corresponder a una función de producción",
+        "Los dos a medias: Coco acierta en que algo anda mal y Tito acierta en el nombre de los tres tipos"
+      ],
+      "correcta": 1,
+      "explicacion": "La trampa es el nombre. Con K FIJO se habla de rendimientos MARGINALES; los retornos a escala son de largo plazo y exigen mover los dos factores a la vez."
+    },
+    {
+      "id": "b27-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Una empresa opera en el corto plazo con función típica, donde L es el único factor variable. Una noche le roban parte de las máquinas y su capital fijo se reduce en 20%.\n\n¿Qué pasa con las curvas de producto total, medio y marginal, y la etapa II termina con más o con menos trabajadores?",
+      "opciones": [
+        "Las tres curvas se desplazan hacia arriba, porque con menos máquinas cada trabajador se esfuerza más",
+        "Solo baja la curva de producto total; el PMeL y el PMgL no cambian, porque dependen de L y no de K",
+        "Las tres no se mueven: el robo es un hecho puntual y la función de producción es de largo plazo",
+        "Las tres curvas (producto total, medio y marginal) se desplazan hacia ABAJO. Y la etapa II termina con MENOS trabajadores: con menos máquinas el factor fijo se satura antes"
+      ],
+      "correcta": 3,
+      "explicacion": "Menos capital contrae la función y arrastra al PMeL y al PMgL con ella — es el mismo mecanismo que cuando te regalan máquinas, pero al revés. Y al saturarse antes, el punto B llega con menos gente."
+    },
+    {
+      "id": "b27-q9",
+      "nivel": "comprension",
+      "enunciado": "Dos cosas que se pulen de la clase pasada: qué mueve las curvas, y qué significa exactamente «el último trabajador contratado».\n\n¿Cuál de estas afirmaciones es correcta?",
+      "opciones": [
+        "Expanden la función de producción, el PMgL y el PMeL una mejora en la tecnología (A) o que te obsequien máquinas; las contraen una caída de la tecnología o que se malogren las máquinas. Y «el último trabajador contratado» es el TOTAL que se planea contratar, que tiene que caer dentro del segundo tramo",
+        "Las curvas se mueven cuando cambia el salario, y «el último trabajador contratado» es el que menos produce de todos",
+        "Solo la tecnología mueve las curvas; las máquinas no, porque en el corto plazo el capital es fijo por definición",
+        "«El último trabajador contratado» es el que cierra el primer tramo, y las curvas se expanden cuando aumenta el número de trabajadores"
+      ],
+      "correcta": 0,
+      "explicacion": "Son dos cosas distintas: lo que DESPLAZA la curva es la tecnología o el capital, nunca el número de trabajadores (eso te mueve sobre la curva). Y el último contratado es el total planeado, que debe caer en el 2do tramo."
+    }
+  ]
+}

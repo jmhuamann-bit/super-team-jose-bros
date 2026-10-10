@@ -2204,6 +2204,140 @@ const METRO = [    // el vagón del Métro de París, con su librea verde y su r
 ];
 const P_METRO = { g: "#2f6b4a", w: "#f2efe4", b: "#44586a", y: "#e8c15a", k: "#2a2620" };
 
+/* =========================================================
+   JAPÓN — el Fuji, el torii en el agua, la pagoda y los cerezos.
+   El fondo es cielo rosado, nieve blanca, bermellón y sakura, así
+   que acá los bichos van en ÍNDIGO, tinta negra y oro viejo. Ningún
+   bicho puede ser bermellón ni rosa, que se perderían.
+   ========================================================= */
+const KOINOBORI = [    // la carpa de viento: no sabe cuándo la función pasa de largo a corto plazo (18 × 12)
+  "..................",
+  "....iiiiiiiiii....",
+  "..iiiiiiiiiiiiii..",
+  ".iikiiiiiiiiiiiii.",
+  "iiokiiiiiiiiiiiiii",
+  "iiiiiiiiiiiiiiiiii",
+  "iiokiiiiiiiiiiiiii",
+  ".iikiiiiiiiiiiiii.",
+  "..iiiiiiiiiiiiii..",
+  "....iiiiiiiiii....",
+  "..................",
+  "..................",
+];
+const P_KOINOBORI = { i: "#2b3f7a", k: "#141a2e", o: "#e0b24a" };
+
+const ABANICO = [      // el abanico del exponente: no sabe qué rendimiento le toca a cada potencia de L (18 × 13)
+  "..................",
+  ".....oooooooo.....",
+  "...oooooooooooo...",
+  "..oookoookoookoo..",
+  ".oookoookoookoooo.",
+  "ooookoookoookooooo",
+  "ooookoookoookooooo",
+  ".oookoookoookoooo.",
+  "..oookoookoookoo..",
+  "...oooooooooooo...",
+  ".....kkkkkkkk.....",
+  ".......kkkk.......",
+  "..................",
+];
+const P_ABANICO = { o: "#d9a93c", k: "#3a2a1c" };
+
+const DARUMA = [       // el daruma de un solo ojo: solo ve una partecita de la curva y cree que es toda (14 × 15)
+  "..............",
+  "....iiiiii....",
+  "..iiiiiiiiii..",
+  ".iiiiiiiiiiii.",
+  ".iiwwiiiiwwii.",
+  ".iwwkwiiwwwwi.",
+  ".iiwwiiiiwwii.",
+  ".iiiiikkiiiii.",
+  ".iiiikkkkiiii.",
+  "iiiiiiiiiiiiii",
+  "iiiiiiiiiiiiii",
+  ".iiiiiiiiiiii.",
+  "..iiiiiiiiii..",
+  "....iiiiii....",
+  "..............",
+];
+const P_DARUMA = { i: "#2b3f7a", w: "#f2efe4", k: "#141a2e" };
+
+const LINTERNA = [     // el farol de piedra: cree que el rendimiento constante es un caso normal (14 x 15)
+  "..............",
+  "....kkkkkk....",
+  "...kkkkkkkk...",
+  "..kkkkkkkkkk..",
+  ".kkkkkkkkkkkk.",
+  "....kkkkkk....",
+  "...kggggggk...",
+  "..kkgyyyygkk..",
+  "..kkgyyyygkk..",
+  "...kggggggk...",
+  "....kkkkkk....",
+  "...kkkkkkkk...",
+  "..kkkkkkkkkk..",
+  ".kkkkkkkkkkkk.",
+  "..............",
+];
+const P_LINTERNA = { k: "#4a4e48", g: "#2a2e2a", y: "#f0d08a" };
+
+const ROBOT = [        // el robot de la fábrica: cree que la producción solo depende de K y L (16 × 16)
+  "................",
+  "......kkkk......",
+  ".....kkkkkk.....",
+  "....kkkkkkkk....",
+  "....kooookoo....",
+  "....kkkkkkkk....",
+  "...kkkkkkkkkk...",
+  "..kkkkkkkkkkkk..",
+  "..kkkoookkkkkk..",
+  "..kkkoookkkkkk..",
+  "..kkkkkkkkkkkk..",
+  "...kkkkkkkkkk...",
+  "....kkk..kkk....",
+  "....kkk..kkk....",
+  "...kkkk..kkkk...",
+  "................",
+];
+const P_ROBOT = { k: "#38424e", o: "#e0b24a" };
+
+const GRABADOR = [     // jefe: tiene 36 láminas del mismo monte y cree que son montañas distintas (18 × 17)
+  "......kkkkkk......",
+  ".....kkkkkkkk.....",
+  "......ssssss......",
+  "......sksskss.....",
+  "......ssmmss......",
+  ".......ssss.......",
+  "....iiiiiiiiii....",
+  "...iiiiiiiiiiii...",
+  "..siiiiiiiiiiiis..",
+  "..siiwwwwwwiiiis..",
+  "...iiwwwwwwiiii...",
+  "....iiwwwwiiii....",
+  "....iiiiiiiiii....",
+  "....iiii..iiii....",
+  "....jjjj..jjjj....",
+  "...kkkkk..kkkkk...",
+  "..................",
+];
+const P_GRABADOR = { k: "#141a2e", s: "#d9a273", i: "#2b3f7a", w: "#e8e2cc", m: "#8a3a2e", j: "#2a2d33" };
+
+const SHINKANSEN = [   // el tren bala, que es la salida del distrito (32 × 12)
+  "................................",
+  "......wwwwwwwwwwwwwwwwwwwwwww...",
+  "....wwwwwwwwwwwwwwwwwwwwwwwwww..",
+  "..wwwwwwwwwwwwwwwwwwwwwwwwwwwww.",
+  ".wwwbbbbwwwwbbbbwwwwbbbbwwwwwwww",
+  "wwwwbbbbwwwwbbbbwwwwbbbbwwwwwwww",
+  "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+  "wwwaaaaaaaaaaaaaaaaaaaaaaaaaawww",
+  "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.",
+  "...kk..kk............kk..kk.....",
+  "................................",
+];
+const P_SHINKANSEN = { w: "#eef0f2", b: "#2b3f7a", a: "#2f6bb8", k: "#2a2e36" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -2335,6 +2469,13 @@ const DEFINICIONES = {
   diablo:       [DIABLO, P_DIABLO],
   chullo:       [CHULLO, P_CHULLO],
   tejedor:      [TEJEDOR, P_TEJEDOR],
+  koinobori:    [KOINOBORI, P_KOINOBORI],
+  abanico:      [ABANICO, P_ABANICO],
+  daruma:       [DARUMA, P_DARUMA],
+  linterna:     [LINTERNA, P_LINTERNA],
+  robot:        [ROBOT, P_ROBOT],
+  grabador:     [GRABADOR, P_GRABADOR],
+  shinkansen:   [SHINKANSEN, P_SHINKANSEN],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
