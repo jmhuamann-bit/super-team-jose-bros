@@ -1,0 +1,125 @@
+{
+  "nivel": "level29",
+  "clase": "Clase 04 · PC3 — Casos atípicos del productor a largo plazo",
+  "fuente": "Apuntes de la Clase 04 — Perfectamente complementarios y perfectamente sustitutos (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e29-q1",
+      "nivel": "comprension",
+      "enunciado": "Te llegan tres encargos de fábricas distintas:\n\nI. «Para producir una unidad SIEMPRE combino 2 de L CON 6 de K»\nII. «Para producir una unidad SIEMPRE combino 4 de L O 2 de K»\nIII. «Q = K^0,5 · L^1,1»\n\n¿Qué caso es cada uno?",
+      "opciones": [
+        "I es perfectamente sustitutos, II perfectamente complementarios y III típico: el orden lo marca cuántos factores pide cada receta",
+        "I es típico, II perfectamente complementarios y III perfectamente sustitutos, porque una Cobb-Douglas con exponentes siempre es atípica",
+        "I es perfectamente complementarios, II perfectamente sustitutos y III típico: manda el «CON» contra el «O»",
+        "Los tres son atípicos, porque los tres dicen exactamente cómo se combinan los dos factores para sacar una unidad de producto"
+      ],
+      "correcta": 2,
+      "explicacion": "El atípico arranca con «SIEMPRE». De ahí: «L CON K» en proporción fija es complementarios (Q = min), «L O K» es sustitutos (Q = suma, exponentes 1). El típico es la Cobb-Douglas, con TTS que cambia en cada canasta."
+    },
+    {
+      "id": "e29-q2",
+      "nivel": "aplicacion",
+      "enunciado": "En la subasta de Aalsmeer, para armar 6 cajas de tulipanes en UNA hora siempre se juntan 10 clasificadoras (L) con 4 carros (K). La jornada es de 5 horas.\n\n¿Cuál es la función de producción de cajas por jornada?",
+      "opciones": [
+        "Q = min(3L; 7,5K), porque en las 5 horas salen 30 cajas con 10 clasificadoras y 4 carros",
+        "Q = min(L/3; 2K/15), dividiendo las 30 cajas de la jornada entre las clasificadoras y los carros",
+        "Q = min(0,6L; 1,5K), que son las 6 cajas de UNA hora repartidas entre los dos factores",
+        "Q = min(L/10; K/4), poniendo abajo lo que pide cada factor, sin convertir a cajas por jornada"
+      ],
+      "correcta": 0,
+      "explicacion": "Son los dos aspectos nuevos del largo plazo: unidad y TIEMPO de producción. En la jornada salen 6 × 5 = 30 cajas con 10 L y 4 K, así que cada caja pide 10/30 de L y 4/30 de K, y eso invertido da 3L y 7,5K. Control: Q(10; 4) = 30."
+    },
+    {
+      "id": "e29-q3",
+      "nivel": "aplicacion",
+      "enunciado": "En un vivero de Lisse, para armar UN ramo siempre se juntan 2 tulipanes (L) con 1 jarrón de Delft (K). El tulipán cuesta 1,5 y el jarrón 3, y hay 300 de presupuesto.\n\n¿Cuánto compra para producir lo máximo posible?",
+      "opciones": [
+        "L = 40 y K = 80, con Q = 20 ramos: por cada tulipán entran dos jarrones en la receta del vivero",
+        "L = 200 y K = 0, con Q = 100 ramos, gastando todo en el tulipán, que es el insumo más barato",
+        "L = 100 y K = 50, con Q = 50 ramos: de L = 2K sale 6K = 300 al meterlo en la isocosto",
+        "Falta la TTS del vivero, que es la que ubica el punto óptimo sobre cualquier isocuanta"
+      ],
+      "correcta": 2,
+      "explicacion": "Para MAXIMIZAR se despeja K en la relación de complementariedad y se mete en la isocosto: 1,5(2K) + 3K = 6K = 300. Comprar solo el barato da Q = min(100; 0) = 0, porque acá los factores no se reemplazan: van juntos o no sirven."
+    },
+    {
+      "id": "e29-q4",
+      "nivel": "aplicacion",
+      "enunciado": "En una fábrica de zuecos, por cada 3 talladores (L) y 1 torno (K) salen 2 pares por hora. El tallador cobra 10 por hora y el torno se alquila en 5. El pedido es de 10 pares por hora.\n\n¿Cuánto contrata y cuánto le cuesta?",
+      "opciones": [
+        "L = 5 y K = 15, con CT = 125, porque el torno es el factor barato y conviene cargar el pedido ahí",
+        "L = 15 y K = 5, pero CT = 150, contando solo a los talladores, que son el único gasto en planilla",
+        "No se puede resolver: sin el presupuesto no hay isocosto, y sin isocosto no hay punto óptimo",
+        "L = 15 y K = 5, con CT = 175: la triple igualdad 10 = 2L/3 = 2K fija los dos sin despejar nada"
+      ],
+      "correcta": 3,
+      "explicacion": "Para MINIMIZAR costos va la TRIPLE IGUALDAD: Q = L/A = K/B, sin despejar nada. La meta sola ya fija L y K; el presupuesto no hace falta. Los precios entran recién en el PLUS, al meter esos valores en la isocosto: 10(15) + 5(5) = 175."
+    },
+    {
+      "id": "e29-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Dos encargos que parecen iguales y no lo son:\n\nI. «Para despachar UN carro siempre uso 4 clasificadoras (L) o 2 cintas (K)»\nII. «La clasificadora tiene PMgL = 4 y la cinta PMgK = 2»\n\n¿Cuáles son las dos funciones de producción?",
+      "opciones": [
+        "I: Q = 4L + 2K · II: Q = L/4 + K/2, porque la que trae los PMg es la que hay que dar vuelta",
+        "I: Q = L/4 + K/2 · II: Q = 4L + 2K, porque en I se cruza y en II los PMg ya vienen de frente",
+        "I: Q = min(L/4; K/2) · II: Q = 4L + 2K, porque el «o» de I obliga a usar los dos a la vez",
+        "I: Q = 4L + 2K · II: Q = 4L + 2K, porque en los dos se reemplaza el dato tal como viene"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa es la PROPIEDAD DEL INFIEL: se aplica cuando NO te dan los PMg de frente, y entonces se cruza (4 clasificadoras por carro ⇒ PMgL = 1/4). Si los PMg ya vienen dados, NO se invierte nada: se reemplaza y listo. Control: con 4 L solas, Q = 1."
+    },
+    {
+      "id": "e29-q6",
+      "nivel": "aplicacion",
+      "enunciado": "En los campos de Lisse siempre se puede cambiar 1 cosechadora (K) por 5 cortadores a mano (L) sin que caiga la producción. El cortador cuesta 5, la cosechadora 10, y hay 100 de presupuesto.\n\n¿Qué conviene comprar?",
+      "opciones": [
+        "Solo cosechadoras: K = 10 y Q = 50. Rinde 0,5 por sol contra 0,2 del cortador",
+        "Solo cortadores: L = 20 y Q = 20, porque el cortador cuesta la mitad y alcanza para el doble",
+        "Mitad y mitad: L = 10 y K = 5, con Q = 35, que es como se reparte en el caso típico",
+        "Da lo mismo: al ser sustitutos perfectos, cualquier mezcla que gaste los 100 produce igual"
+      ],
+      "correcta": 0,
+      "explicacion": "Con sustitutos se compra UNO SOLO: el que da más producto por sol, PMg/precio. Acá 1 cosechadora vale por 5 cortadores, así que Q = L + 5K, y 5/10 le gana a 1/5. Ojo: el barato no siempre gana, y repartir es lo del caso típico."
+    },
+    {
+      "id": "e29-q7",
+      "nivel": "aplicacion",
+      "enunciado": "En una quesería de Gouda, un trabajador más suma SIEMPRE 50 quesos al día y una máquina más suma SIEMPRE 100. El trabajador cuesta 40 al día y la máquina 50. Hay que entregar 800 quesos diarios.\n\n¿Cuál es el plan más barato?",
+      "opciones": [
+        "Solo trabajadores: L = 16 y CT = 640, porque el trabajador cuesta 40 y la máquina 50",
+        "No se optimiza: la TTS vale 0,5 y la ratio w/r vale 0,8, y nunca se van a poder igualar",
+        "Solo máquinas: K = 8 y CT = 400. Cada queso sale a 0,5 por máquina y a 0,8 por trabajador",
+        "Mitad y mitad: L = 8 y K = 4, con CT = 520, repartiendo la meta entre los dos factores"
+      ],
+      "correcta": 2,
+      "explicacion": "Para MINIMIZAR se mira el costo por unidad producida, precio/PMg: 50/100 = 0,5 contra 40/50 = 0,8. Se compra solo el barato POR QUESO, y el cuánto sale de la ISOCUANTA: 100K = 800. El CT es el PLUS, metiendo K en la isocosto."
+    },
+    {
+      "id": "e29-q8",
+      "nivel": "comprension",
+      "enunciado": "Dos molinos del mismo waterschap, cada uno con 100 de presupuesto:\n\nI. PMgL = 5 y PMgK = 5, con w = 5 y r = 5\nII. PMgL = 10 y PMgK = 0, con w = 10 y r = 50\n\n¿Qué hace cada uno para maximizar?",
+      "opciones": [
+        "En I compra solo K, que rinde más por sol; en II mezcla los dos y llega a 100 igual",
+        "En I reparte mitad y mitad por simetría; en II compra una máquina y lo que sobre en L",
+        "En los dos hay que igualar la TTS con la ratio w/r, y de esa igualdad sale cuánto comprar",
+        "En I le da lo mismo cómo reparta y saca 100; en II compra solo L y también saca 100"
+      ],
+      "correcta": 3,
+      "explicacion": "I es el caso INDIFERENTE: 5/5 = 5/5, así que la isocuanta se monta sobre la isocosto y cualquier mezcla da 100. II son factores NEUTROS: el capital no produce nada, la isocuanta queda 100% parada y se gasta todo en L."
+    },
+    {
+      "id": "e29-q9",
+      "nivel": "comprension",
+      "enunciado": "Claudia le dice a Malena: «cuando la TTS de capital por trabajo supera a la ratio w/r, el productor solo puede minimizar costos usando exclusivamente CAPITAL».\n\nEn la fábrica que miran, la TTS es constante e igual a 2, con w = 4 y r = 5. ¿Tiene razón?",
+      "opciones": [
+        "Sí: con TTS = 2 por encima de w/r = 0,8, el capital es el factor que rinde más por sol",
+        "No: con TTS = 2 mayor que w/r = 0,8 conviene usar solo TRABAJO, que es justo lo contrario",
+        "No, pero porque con una TTS constante nunca se minimiza y hay que mezclar los dos",
+        "Depende: habría que saber antes cuánto produce la fábrica para poder comparar las ratios"
+      ],
+      "correcta": 1,
+      "explicacion": "La TTS es PMgL/PMgK. Si supera a w/r, el trabajo rinde más por sol y se va a la esquina del TRABAJO; si queda por debajo, a la del capital. Claudia invirtió la esquina. Y una TTS constante sí optimiza: en los sustitutos se optimiza en los extremos."
+    }
+  ]
+}

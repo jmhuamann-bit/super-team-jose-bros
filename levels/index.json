@@ -389,6 +389,20 @@
       "abierto": true,
       "mapa": "levels/level28.json",
       "preguntas": "questions/level28_questions.json"
+    },
+    {
+      "id": "level29",
+      "clase": "Clase 04",
+      "distrito": "Holanda",
+      "titulo": "Molino con molinero, o una bomba de vapor",
+      "icono": "🌷",
+      "seccion": "PC3",
+      "seccionNota": "Teoría del productor y costos — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level29.json",
+      "preguntas": "questions/level29_questions.json"
     }
   ]
 }

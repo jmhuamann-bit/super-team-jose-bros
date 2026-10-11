@@ -3039,6 +3039,273 @@ export const TEMAS = {
       }
     },
   },
+
+  polder: {
+    nombre: "Holanda",
+    cielo: [[0, "#6f9ec4"], [0.4, "#a6c4d6"], [0.72, "#d4e0e2"], [1, "#eaece0"]],
+    suelo: { cara: "#7f9660", borde: "#9db47c", tierra: "#3a3326", plataforma: "#8c5a3c", plataformaBorde: "#e2d6b4" },
+    acento: "#e07b1f",
+
+    bichos: ["aspa", "balde", "zueco", "esclusa", "subasta", "bomba"],
+    nombresBichos: [
+      "El Aspa que No Lee la Señal",
+      "El Balde de Aalsmeer",
+      "El Zueco Desparejado",
+      "La Esclusa que Despeja de Más",
+      "El Reloj de la Subasta",
+      "La Bomba que Mira Solo el Precio",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "molinero",
+    nombreJefe: "El Molinero Mayor de Kinderdijk",
+
+    fondo(ctx, cam, t) {
+      // el sol holandés: bajo, grande y sin fuerza, que es la luz de los cuadros
+      ctx.fillStyle = "rgba(252,246,222,.22)";
+      ctx.beginPath(); ctx.arc(188, 96, 62, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(254,250,236,.80)";
+      ctx.beginPath(); ctx.arc(188, 96, 24, 0, Math.PI * 2); ctx.fill();
+
+      // LAS NUBES ALTAS, en bandas largas y planas. Acá el cielo es más de la
+      // mitad del cuadro, así que sin nubes se ve como una pared de color.
+      repetir(ctx, cam, 320, 0.03, (x, i) => {
+        const bx = x, by = 44 + ((i * 53) % 86);
+        ctx.fillStyle = "rgba(252,252,246,.62)";
+        ctx.fillRect(bx, by, 150, 13);
+        ctx.fillRect(bx + 26, by - 8, 96, 10);
+        ctx.fillStyle = "rgba(188,206,216,.44)";
+        ctx.fillRect(bx, by + 11, 150, 4);
+      });
+
+      // LOS MOLINOS DE KINDERDIJK, que son LA silueta del país: diecinueve
+      // puestos en fila sobre el mismo canal. Van altos y espaciados, para que
+      // las plataformas del nivel (que pasan por encima del horizonte) se sigan
+      // leyendo entre torre y torre.
+      repetir(ctx, cam, 196, 0.07, (x, i) => {
+        const bx = x + 40, base = 306, alto = 124 + ((i * 47) % 36);
+        const cima = base - alto;
+        ctx.fillStyle = "#6c7a74";                                  // la torre, que se va angostando
+        ctx.beginPath();
+        ctx.moveTo(bx - 23, base);
+        ctx.lineTo(bx - 11, cima + 16);
+        ctx.lineTo(bx + 11, cima + 16);
+        ctx.lineTo(bx + 23, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(34,40,38,.26)";                       // la sombra del lado
+        ctx.beginPath();
+        ctx.moveTo(bx + 6, base);
+        ctx.lineTo(bx + 4, cima + 16);
+        ctx.lineTo(bx + 11, cima + 16);
+        ctx.lineTo(bx + 23, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#4e463a";                                  // la caperuza de paja
+        ctx.beginPath();
+        ctx.moveTo(bx - 14, cima + 17);
+        ctx.quadraticCurveTo(bx, cima - 9, bx + 14, cima + 17);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(232,236,228,.70)";                    // la puerta y las ventanitas
+        ctx.fillRect(bx - 5, base - 22, 10, 22);
+        ctx.fillRect(bx - 4, cima + 44, 8, 10);
+
+        // LAS CUATRO ASPAS, en cruz y con el enrejado marcado. El giro es
+        // lentísimo a propósito: un molino que gira rápido se lee como hélice.
+        const ejeY = cima + 12, a = Math.sin(t / 360 + i) * 0.9 + i;
+        for (let k = 0; k < 4; k++) {
+          const ang = a + (k * Math.PI) / 2;
+          const px = Math.cos(ang), py = Math.sin(ang);
+          ctx.strokeStyle = "#3b3a32";
+          ctx.lineWidth = 3;
+          ctx.beginPath();
+          ctx.moveTo(bx, ejeY);
+          ctx.lineTo(bx + px * 56, ejeY + py * 56);
+          ctx.stroke();
+          ctx.fillStyle = "rgba(238,232,208,.86)";                  // la lona, a un solo lado del palo
+          ctx.beginPath();
+          ctx.moveTo(bx + px * 20, ejeY + py * 20);
+          ctx.lineTo(bx + px * 54, ejeY + py * 54);
+          ctx.lineTo(bx + px * 54 - py * 11, ejeY + py * 54 + px * 11);
+          ctx.lineTo(bx + px * 20 - py * 9, ejeY + py * 20 + px * 9);
+          ctx.closePath(); ctx.fill();
+        }
+        ctx.fillStyle = "#2c2a24";
+        ctx.fillRect(bx - 3, ejeY - 3, 6, 6);
+      });
+
+      // EL DIQUE, con la estación de bombeo de ladrillo encima: es la que en
+      // 1868 pasó a hacer el trabajo de los molinos, o sea el otro caso de la
+      // clase. Va como loma larga, que es lo que separa el agua de la tierra.
+      repetir(ctx, cam, 268, 0.15, (x, i) => {
+        const bx = x, base = 306;
+        ctx.fillStyle = "#6f8a52";
+        ctx.beginPath();
+        ctx.moveTo(bx - 10, base);
+        ctx.quadraticCurveTo(bx + 60, base - 44, bx + 134, base - 40);
+        ctx.quadraticCurveTo(bx + 210, base - 36, bx + 278, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(224,236,196,.34)";                    // el pasto del coronamiento
+        ctx.beginPath();
+        ctx.moveTo(bx + 30, base - 30);
+        ctx.quadraticCurveTo(bx + 134, base - 46, bx + 238, base - 28);
+        ctx.lineTo(bx + 238, base - 22);
+        ctx.quadraticCurveTo(bx + 134, base - 40, bx + 30, base - 24);
+        ctx.closePath(); ctx.fill();
+
+        if (i % 2 === 0) {                                          // la casa de bombas
+          const cx = bx + 150, cb = base - 34;
+          ctx.fillStyle = "#8e5340";
+          ctx.fillRect(cx, cb - 26, 54, 26);
+          ctx.fillStyle = "#5d3b2e";
+          ctx.fillRect(cx - 4, cb - 32, 62, 7);
+          ctx.fillStyle = "#8e5340";                                // la chimenea
+          ctx.fillRect(cx + 42, cb - 58, 10, 30);
+          ctx.fillStyle = "rgba(236,238,232,.72)";
+          ctx.fillRect(cx + 8, cb - 19, 11, 12);
+          ctx.fillRect(cx + 26, cb - 19, 11, 12);
+          ctx.fillStyle = "rgba(206,214,212,.50)";                  // el humo, que se va con el viento
+          for (let k = 0; k < 3; k++) {
+            ctx.fillRect(cx + 44 - k * 9, cb - 66 - k * 7, 13, 6);
+          }
+        }
+      });
+
+      // LOS CAMPOS DE TULIPANES en franjas de color. Van BAJOS, cortos y con
+      // pasto verde entre campo y campo: de lado a lado y a todo color se leían
+      // como una bandera y se comían el dique y el canal, que son lo que cuenta
+      // la clase.
+      repetir(ctx, cam, 232, 0.24, (x, i) => {
+        const bx = x + 16, base = 306;
+        const paleta = ["#bb4a48", "#c99a3c", "#cfc6ac", "#c1718c", "#a85a42"];
+        for (let k = 0; k < 4; k++) {
+          const y = base - 20 + k * 4;
+          ctx.fillStyle = paleta[(i * 2 + k) % paleta.length];
+          ctx.fillRect(bx, y, 146, 4);
+          ctx.fillStyle = "rgba(58,62,44,.18)";
+          ctx.fillRect(bx, y + 3, 146, 1);
+        }
+        ctx.fillStyle = "#7b9359";                                  // la acequia de pasto del borde
+        ctx.fillRect(bx - 16, base - 4, 178, 4);
+      });
+
+      // EL PLANO DEL SUELO DEL POLDER, del pie del dique hasta la vereda y sin
+      // un solo corte: si queda un hueco se ve el cielo por detrás y el fondo
+      // parece tener una laguna colgada en el aire.
+      ctx.fillStyle = "#8a9a6a";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 10);
+      ctx.fillStyle = "#3c5f6b";                                    // EL CANAL del boezem, de agua quieta
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 30);
+      ctx.fillStyle = "#527683";
+      ctx.fillRect(0, 316, CFG.ANCHO_VISTA, 5);
+      for (let i = 0; i < 30; i++) {                                // el reflejo de los molinos, en tiras
+        const x = (i * 63 - cam * 0.07) % 1040 - 60;
+        ctx.fillStyle = "rgba(226,232,212,.16)";
+        ctx.fillRect(x, 320 + ((i * 19) % 20), 9, 13);
+      }
+      ctx.fillStyle = "#88976a";                                    // la orilla de este lado
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 36);
+      ctx.fillStyle = "#a3b282";
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 4);
+
+      // LAS BARCAZAS CHATAS del canal, con su vela parda
+      repetir(ctx, cam, 286, 0.28, (x, i) => {
+        const bx = x + 46, linea = 332;
+        ctx.fillStyle = "#4a3a28";
+        ctx.fillRect(bx, linea, 58, 6);
+        ctx.fillRect(bx + 4, linea - 3, 50, 3);
+        ctx.fillStyle = "#3b3a32";                                  // el palo
+        ctx.fillRect(bx + 22, linea - 30, 3, 30);
+        ctx.fillStyle = "rgba(142,100,62,.88)";                     // la vela
+        ctx.beginPath();
+        ctx.moveTo(bx + 25, linea - 29);
+        ctx.quadraticCurveTo(bx + 48, linea - 20, bx + 25, linea - 3);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // EL PUENTE LEVADIZO (la wipbrug): el bastidor en A con su contrapeso es
+      // lo que lo distingue de cualquier otro puente, así que va completo.
+      repetir(ctx, cam, 492, 0.32, (x, i) => {
+        const bx = x + 70, cubierta = 314;
+        ctx.fillStyle = "#e6e2d2";
+        ctx.fillRect(bx, cubierta, 150, 7);
+        ctx.fillStyle = "rgba(120,112,92,.42)";
+        ctx.fillRect(bx, cubierta + 5, 150, 3);
+        ctx.fillStyle = "#cfc8b2";                                  // los pilotes
+        for (const px of [14, 62, 110]) ctx.fillRect(bx + px, cubierta + 7, 7, 30);
+        ctx.fillStyle = "#e6e2d2";                                  // el bastidor en A
+        ctx.fillRect(bx + 36, cubierta - 52, 6, 52);
+        ctx.fillRect(bx + 86, cubierta - 52, 6, 52);
+        ctx.fillRect(bx + 36, cubierta - 58, 56, 7);
+        ctx.fillStyle = "#3b3a32";                                  // los tirantes al tablero
+        ctx.fillRect(bx + 40, cubierta - 46, 48, 2);
+        ctx.fillRect(bx + 26, cubierta - 40, 3, 40);
+        ctx.fillStyle = "#e07b1f";                                  // el contrapeso, pintado
+        ctx.fillRect(bx + 94, cubierta - 50, 16, 11);
+      });
+
+      // LA CASA DE CANAL con su hastial escalonado y la viga de izar arriba:
+      // el perfil en escalera es lo que hace que se lea holandesa y no genérica.
+      repetir(ctx, cam, 408, 0.54, (x, i) => {
+        const bx = x + 34, base = 382, alto = 30;
+        const techo = base - alto;
+        ctx.fillStyle = ["#8e5340", "#7c4c3c", "#9a6042"][i % 3];
+        ctx.fillRect(bx, techo, 70, alto);
+        ctx.fillStyle = "rgba(30,26,20,.24)";
+        for (let y = techo + 3; y < base; y += 5) ctx.fillRect(bx, y, 70, 1);
+        for (let k = 0; k < 3; k++) {                               // el hastial, de escalón en escalón
+          const w = 70 - k * 16, h = 6;
+          ctx.fillStyle = ["#8e5340", "#7c4c3c", "#9a6042"][i % 3];
+          ctx.fillRect(bx + k * 8, techo - (k + 1) * h, w, h);
+          ctx.fillStyle = "rgba(240,238,226,.52)";
+          ctx.fillRect(bx + k * 8, techo - (k + 1) * h, w, 2);
+        }
+        ctx.fillStyle = "#3b3a32";                                  // la viga de izar del remate
+        ctx.fillRect(bx + 26, techo - 28, 14, 3);
+        ctx.fillStyle = "rgba(242,240,226,.86)";                    // las ventanas altas y angostas
+        for (const px of [8, 28, 48]) {
+          ctx.fillRect(bx + px, techo + 8, 13, 17);
+          ctx.fillStyle = "rgba(60,58,48,.34)";
+          ctx.fillRect(bx + px + 6, techo + 8, 1, 17);
+          ctx.fillStyle = "rgba(242,240,226,.86)";
+        }
+        ctx.fillStyle = "#e07b1f";                                  // la puerta
+        ctx.fillRect(bx + 30, base - 15, 11, 15);
+      });
+
+      // LA FILA DE CHOPOS del camino: flacos, altos y todos a la misma altura,
+      // que es la marca del paisaje de pólder
+      repetir(ctx, cam, 128, 0.78, (x, i) => {
+        const bx = x + 22, base = 382;
+        ctx.fillStyle = "#4e4132";
+        ctx.fillRect(bx, base - 34, 4, 34);
+        ctx.fillStyle = ["#5f7c3f", "#6f8a4a", "#54713a"][i % 3];
+        ctx.beginPath();
+        ctx.moveTo(bx + 2, base - 72);
+        ctx.quadraticCurveTo(bx + 13, base - 44, bx + 2, base - 26);
+        ctx.quadraticCurveTo(bx - 9, base - 44, bx + 2, base - 72);
+        ctx.closePath(); ctx.fill();
+      });
+      ctx.fillStyle = "#7d8a60";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // las gaviotas del canal y el viento del Mar del Norte, que no para nunca
+      for (let i = 0; i < 7; i++) {
+        const x = (i * 221 + t * 0.9) % 1020 - 60;
+        const y = 70 + ((i * 41) % 86) + Math.sin(t / 26 + i) * 7;
+        const ala = Math.sin(t / 9 + i * 1.7) * 4;
+        ctx.fillStyle = "rgba(250,250,244,.80)";
+        ctx.fillRect(x, y, 5, 2);
+        ctx.fillRect(x - 5, y - ala, 5, 2);
+        ctx.fillRect(x + 5, y - ala, 5, 2);
+      }
+      for (let i = 0; i < 16; i++) {
+        const x = (i * 171 + t * 2.2) % 1000 - 60;
+        const y = 132 + ((i * 67) % 164);
+        ctx.fillStyle = `rgba(244,248,246,${(0.04 + 0.05 * Math.abs(Math.sin(t / 30 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 46, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

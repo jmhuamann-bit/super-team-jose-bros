@@ -161,6 +161,14 @@ const TEMAS_MUSICA = {
               "B4",2,"A4",1,"G4",1,"E4",2,"D4",2,"E4",4],
     bajo:    ["A2",4,"E3",4,"C3",4,"G2",4,"A2",4,"D3",4,"E3",4,"A2",4],
   },
+  polder: { // Holanda: carrillón de pueblo, ancho y con el paso lento del aspa
+    tempo: 0.23, onda: "triangle",
+    melodia: ["D4",4,"F4",2,"A4",2,"D5",4,"C5",2,"A4",2,
+              "B4",4,"A4",2,"G4",2,"F4",4,"D4",4,
+              "G4",2,"A4",2,"B4",4,"D5",2,"C5",2,"A4",4,
+              "F4",2,"G4",2,"A4",4,"D4",4],
+    bajo:    ["D2",8,"B1",8,"G2",8,"A2",4,"D2",4,"D2",8],
+  },
   china: { // China: pentatónica de guzheng, redonda y con el paso del remo
     tempo: 0.17, onda: "triangle",
     melodia: ["C4",2,"D4",2,"F4",2,"G4",4,"A4",2,"G4",2,"F4",4,

@@ -1,0 +1,42 @@
+{
+  "id": "level29",
+  "distrito": "Holanda",
+  "clase": "Clase 04 · PC3",
+  "titulo": "Molino con molinero, o una bomba de vapor",
+  "tema": "polder",
+  "musica": "polder",
+  "vehiculo": "bicicleta",
+  "intro": "Cuarta clase de la PC3, y otro país: Holanda. Acá hay diecinueve molinos parados en fila en Kinderdijk desde 1740, levantados para sacarle el agua a un polder que queda por debajo del nivel del mar — como un cuarto del país. Y tienen un detalle que es exactamente la clase de hoy: un molino SIN MOLINERO no muele nada, y el oficio es tan específico que la UNESCO lo declaró patrimonio inmaterial en 2017. Molino y molinero van SIEMPRE juntos y en proporción fija: ese es el caso PERFECTAMENTE COMPLEMENTARIO. Pero en 1868 se levantó ahí mismo una estación de bombeo a vapor, y pasó la otra cosa: una sola máquina sacaba el agua que sacaban los diecinueve molinos, o sea que un factor REEMPLAZABA al otro sin cambiar el resultado. Ese es el caso PERFECTAMENTE SUSTITUTO. Los dos rompen la receta de la clase pasada, porque acá ya no se optimiza igualando la TTS con w/r: en cada caso la condición cambia, y de eso se trata este nivel.",
+  "repaso": [
+    "DE DÓNDE VENIMOS: en la clase pasada la isocuanta era TÍPICA (Cobb-Douglas) y el óptimo salía de igualar la TTS con w/r. Hoy entran los dos casos ATÍPICOS, donde esa igualdad ya no sirve. Acuérdate de esta frase del apunte: en CADA UNO las condiciones de optimización CAMBIAN.",
+    "CÓMO RECONOCER EL CASO, que es lo primero y lo que más puntos cuesta. El atípico arranca con la palabra «SIEMPRE». De ahí: «L CON K» en proporción fija es PERFECTAMENTE COMPLEMENTARIOS, con Q = min(L/A; K/B). «L O K» es PERFECTAMENTE SUSTITUTOS, con Q = aL + bK, o sea una SUMA y con los exponentes de L y K en 1.",
+    "Y ES TÍPICO cuando te dan una Cobb-Douglas (Q = K^0,5·L^1,1) o una TTS en letras (TTS = 2K/3L), porque ahí la TTS CAMBIA en cada canasta y no es única. La Cobb-Douglas sola es solo una pista: para estar 100% seguro hay que mirar la TTS.",
+    "LA TTS ES LA PENDIENTE DE LA ISOCUANTA, el espejo exacto de la TMgS del consumidor, y se lee así: TTS = 0 (tramo horizontal) es «estoy dispuesto a dejar 0 de K para contratar una unidad más de L y seguir en la misma isocuanta»; TTS = ∞ (tramo vertical) es lo mismo al revés. Esos dos tramos son justo la L de los complementarios.",
+    "LA ISOCOSTO es el espejo de la restricción presupuestaria: CT = wL + rK, con pendiente w/r, igual que la RP era M = PxX + PyY con pendiente Px/Py. Y al graficar va SIEMPRE PRIMERO la isocosto y después la isocuanta: como una L en complementarios, como una recta en sustitutos.",
+    "COMPLEMENTARIOS — LA FUNCIÓN: Q = min(L/A; K/B), donde A y B son lo que pide UNA unidad. Ojo con los dos aspectos nuevos, UNIDAD y TIEMPO de producción: «6 cajas en 1 hora con 10 L y 4 K, jornada de 5 horas» son 30 cajas con 10 y 4, así que Q = min(3L; 7,5K). Invertir ese cociente es el error más común.",
+    "COMPLEMENTARIOS — MAXIMIZAR PRODUCCIÓN: se DESPEJA K en la relación de complementariedad y se mete en la ISOCOSTO; de ahí sale cuánto comprar. El PLUS es meter K y L en la función para saber cuánto se produce. Ejemplo: 2 L con 1 K por ramo, w = 1,5, r = 3 y CT = 300 → L = 2K → 6K = 300 → K = 50, L = 100 y Q = 50.",
+    "COMPLEMENTARIOS — MINIMIZAR COSTOS: acá va LA TRIPLE IGUALDAD, Q = L/A = K/B, y SIN DESPEJAR NADA. La meta sola ya fija L y K, así que NO hace falta el presupuesto; los precios entran recién en el PLUS obligado, que es hallar el CT con la isocosto. Zapatería: 10 = 2L/3 = 2K → L = 15, K = 5 y CT = 10(15) + 5(5) = 175.",
+    "SUSTITUTOS — LA FUNCIÓN Y LA PROPIEDAD DEL INFIEL: «una unidad con 4 L o 2 K» se CRUZA, y queda Q = L/4 + K/2. Pero si ya te dan PMgL = 4 y PMgK = 2, NO se cruza nada: Q = 4L + 2K y listo. Aplicar el infiel cuando los PMg vienen de frente es el error que el apunte marca expresamente.",
+    "SUSTITUTOS — MAXIMIZAR PRODUCCIÓN: se compra UNO SOLO, el que da más producto POR SOL (PMg/precio), y se gasta todo ahí con apoyo de la isocosto. El insumo más BARATO no siempre gana. Lisse: 1 cosechadora vale por 5 cortadores, así que Q = L + 5K, y 5/10 le gana a 1/5 → K = 10 y Q = 50.",
+    "SUSTITUTOS — MINIMIZAR COSTOS: ahora se mira el costo POR UNIDAD PRODUCIDA (precio/PMg) y el cuánto sale de la ISOCUANTA, no de la isocosto. Gouda: 50/100 = 0,5 contra 40/50 = 0,8 → solo máquinas, 100K = 800 → K = 8, y el PLUS da CT = 400.",
+    "LA REGLA DE LA ESQUINA, que resume los TRES CASOS: si la TTS (PMgL/PMgK) es MAYOR que w/r conviene SOLO TRABAJO; si es MENOR, SOLO CAPITAL; y si es IGUAL es INDIFERENTE, porque la isocuanta se monta sobre la isocosto y cualquier mezcla produce lo mismo. Invertir esta esquina es la trampa de la pregunta de Claudia (2016 I).",
+    "LOS FACTORES NEUTROS (el caso raro) y UN RESUELTO. Neutros: si un insumo tiene PMg = 0, solo el otro produce, la isocuanta queda 100% parada o 100% echada y se gasta todo en el que sí produce — con PMgL = 10, PMgK = 0, w = 10 y CT = 100 sale L = 10 y Q = 100. Y ARITA (2019 I): Q = min(L/10; T/50) con r = 3 000, w = 800 y meta de 2 toneladas → 2 = L/10 = T/50 → L = 20, T = 100 y CT = 316 000, sin haber usado los precios para hallar las cantidades."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                ",
+    "                                                                                                                                                                                ",
+    "                                                                                                                                                                                ",
+    "                                                       A                                                   A                                                                    ",
+    "                                                     o o o                                               o o o                                                                  ",
+    "                                                     ======                                              ======                                                                 ",
+    "                                                                                                                                                                                ",
+    "                        o o o                               o o o                           o o o                           o o o                     o o o                     ",
+    "                ?           o o         L                           V               G         o o                   G               o o           1     L                       ",
+    "                        ====                                ====                            ====                            ====                      ====                      ",
+    "                        o o                     o o                                             o o                     o o                     o o                             ",
+    "  P                 E         C             E   T       X       E                 C     E         X T     E             X       E           C                 B             M   ",
+    "##################################   ###################################    ####################################   #############################################################",
+    "##################################   ###################################    ####################################   #############################################################",
+    "##################################   ###################################    ####################################   #############################################################"
+  ]
+}

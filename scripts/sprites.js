@@ -2478,6 +2478,155 @@ const JUNCO = [        // el junco de vela, que es la salida del distrito (32 ×
 ];
 const P_JUNCO = { k: "#3a2a1c", r: "#b5243a", m: "#6b4a30", w: "#3f6f7e" };
 
+const ASPA = [      // el aspa que no lee la señal: no distingue el «SIEMPRE» del caso típico (18 × 14)
+  ".kcc..........cck.",
+  "..cc..........cc..",
+  "....cc......cc....",
+  "....cc......cc....",
+  "......cc..cc......",
+  "......ckkkkc......",
+  ".......kook.......",
+  ".......kook.......",
+  "......ckkkkc......",
+  "......cc..cc......",
+  "....cc......cc....",
+  "....cc......cc....",
+  "..cc..........cc..",
+  ".kcc..........cck.",
+];
+const P_ASPA = { k: "#241c14", c: "#e8dfc4", o: "#e07b1f" };
+
+const BALDE = [     // el balde de Aalsmeer: confunde la unidad y el tiempo de producción (18 × 14)
+  "..................",
+  "....rr..rr..rr....",
+  "...rrrrrrrrrrrr...",
+  "....gg..gg..gg....",
+  "....gg..gg..gg....",
+  "..kkkkkkkkkkkkkk..",
+  "..kcccccccccccck..",
+  "...kcccccccccck...",
+  "...kcccccccccck...",
+  "...kkkkkkkkkkkk...",
+  "...kcccccccccck...",
+  "....kcccccccck....",
+  "....kcccccccck....",
+  "....kkkkkkkkkk....",
+];
+const P_BALDE = { k: "#241e18", c: "#cfc6a8", r: "#d8323f", g: "#4e7a3a" };
+
+const ZUECO = [     // el zueco desparejado: mete la relación de complementariedad al revés (18 × 14)
+  "..................",
+  ".kkkk.............",
+  ".kyyk.............",
+  ".kyyk.............",
+  ".kkkkkkkkkkkkkkk..",
+  ".kyyyyooyyyyyyyk..",
+  ".kyyyooooyyyyyyk..",
+  ".kyyyooooyyyyyyk..",
+  ".kyyyyyyyyyyyyyk..",
+  ".kyyyyyyyyyyyyyk..",
+  ".kyyyyyyyyyyyyyk..",
+  ".kkkkkkkkkkkkkkk..",
+  "..bbbbbbbbbbbbbb..",
+  "..................",
+];
+const P_ZUECO = { k: "#2e2114", y: "#e2b765", b: "#4a3620", o: "#d8323f" };
+
+const ESCLUSA = [   // la esclusa que despeja de más: despeja en la triple igualdad cuando no se debe (18 × 14)
+  ".......kkkk.......",
+  ".......kook.......",
+  ".kkkk..kkkk..kkkk.",
+  ".ksskkkkkkkkkkssk.",
+  ".ksskkiiiiiikkssk.",
+  ".ksskkiiiiiikkssk.",
+  ".ksskkkkkkkkkkssk.",
+  ".ksskkiiiiiikkssk.",
+  ".ksskkiiiiiikkssk.",
+  ".ksskkkkkkkkkkssk.",
+  ".ksskkkkkkkkkkssk.",
+  ".ksskaaaaaaaakssk.",
+  ".kkkkaaaaaaaakkkk.",
+  "..................",
+];
+const P_ESCLUSA = { k: "#241f18", s: "#cdc3a4", i: "#93a3a8", a: "#2f4a44", o: "#e07b1f" };
+
+const SUBASTA = [   // el reloj de la subasta: aplica la propiedad del infiel cuando no toca (18 × 14)
+  "..................",
+  "......kkkkkk......",
+  "....kcccccccck....",
+  "...kcooccccccck...",
+  "..kccoocccccccck..",
+  "..kccccoccccccck..",
+  "..kccccckkccccck..",
+  "..kccccckkccccck..",
+  "..kcccccccccccck..",
+  "...kcccccccccck...",
+  "....kcccccccck....",
+  "......kkkkkk......",
+  "........kk........",
+  "......kkkkkk......",
+];
+const P_SUBASTA = { k: "#241f18", c: "#ece4c8", o: "#e07b1f" };
+
+const BOMBA = [     // la bomba que mira solo el precio: elige el insumo por su precio y no por su rendimiento (18 × 14)
+  "...........hhhh...",
+  "...........kkkk...",
+  "...........kmmk...",
+  "...kkkkk...kmmk...",
+  ".kk.....kk.kmmk...",
+  ".kk.....kkkkkkkkkk",
+  "kk..mmm..kmmmmmmmk",
+  "kk..mmm..kvvvvvvvk",
+  ".kk.....kkmmmmmmmk",
+  ".kk.....kkmmmmmmmk",
+  "...kkkkk.kkkkkkkkk",
+  "..kkkkkkkkkkkkkkkk",
+  "..kkkkkkkkkkkkkkkk",
+  "..................",
+];
+const P_BOMBA = { k: "#241f18", m: "#a85c36", v: "#e8c868", h: "#b9c3c0" };
+
+const MOLINERO = [  // jefe: el molinero mayor de Kinderdijk, que firma sin mirar si el caso es típico o atípico (18 × 17)
+  ".....kkkkkkkk.....",
+  "....kkkkkkkkkk....",
+  ".....kkkkkkkk.....",
+  ".....kpkppkpk.....",
+  ".....kppppppk.....",
+  ".....kpkkkkpk.....",
+  ".....kkkkkkkk.....",
+  "...kkkkkkkkkkkk...",
+  "...kzzzzzzzzzzk...",
+  "...kzoooooooozk...",
+  "...kzzzmmmmzzzk...",
+  "...kzzzmmmmzzzk...",
+  "...kkkkkkkkkkkk...",
+  "...kkkkkkkkkkkk...",
+  "....kkk....kkk....",
+  "....kkk....kkk....",
+  "...kkkkk..kkkkk...",
+];
+const P_MOLINERO = { k: "#241f18", p: "#d9a273", z: "#ece4c8", o: "#e07b1f", m: "#9a7a44" };
+
+const BICICLETA = [ // la bicicleta, que es la salida del distrito (32 × 16)
+  ".kkkkkkkk.......................",
+  ".kcrrccck.......................",
+  ".kccccrck.......................",
+  ".kkkkkkkk........kkkkkk.........",
+  "........kkkkkkkk................",
+  "............ffffffff............",
+  "............ff....ff............",
+  "....kkkkk...ff....ff...kkkkk....",
+  "..kk.....kk.ff....ff.kk.....kk..",
+  "..kk.....kk.ff....ff.kk.....kk..",
+  ".kk..cffffffffffffffffffff...kk.",
+  ".kk..cc...kk........kk..cc...kk.",
+  "..kk.....kk..........kk.....kk..",
+  "..kk.....kk..........kk.....kk..",
+  "....kkkkk..............kkkkk....",
+  "................................",
+];
+const P_BICICLETA = { k: "#241f18", f: "#3a4a52", c: "#cfc6a8", r: "#d8323f" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -2623,6 +2772,14 @@ const DEFINICIONES = {
   sello:        [SELLO, P_SELLO],
   maestro:      [MAESTRO, P_MAESTRO],
   junco:        [JUNCO, P_JUNCO],
+  aspa:         [ASPA, P_ASPA],
+  balde:        [BALDE, P_BALDE],
+  zueco:        [ZUECO, P_ZUECO],
+  esclusa:      [ESCLUSA, P_ESCLUSA],
+  subasta:      [SUBASTA, P_SUBASTA],
+  bomba:        [BOMBA, P_BOMBA],
+  molinero:     [MOLINERO, P_MOLINERO],
+  bicicleta:    [BICICLETA, P_BICICLETA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
