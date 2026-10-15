@@ -2627,6 +2627,155 @@ const BICICLETA = [ // la bicicleta, que es la salida del distrito (32 × 16)
 ];
 const P_BICICLETA = { k: "#241f18", f: "#3a4a52", c: "#cfc6a8", r: "#d8323f" };
 
+const LLAVE = [     // la llave equivocada: aplica la recetita del caso típico cuando el enunciado era atípico (18 × 14)
+  "..................",
+  "..................",
+  "..................",
+  ".kkkkkkk..........",
+  ".kbbbbbk..........",
+  ".kbkkkbk..........",
+  ".kbk.kbkkkkkkkkkk.",
+  ".kbk.kbkbbbbbbbkk.",
+  ".kbk.kbkkkkkkkkkk.",
+  ".kbkkkbk....kk.kk.",
+  ".kbbbbbk....kk.kk.",
+  ".kkkkkkk....kk.kk.",
+  "..................",
+  "..................",
+];
+const P_LLAVE = { k: "#1e1a14", b: "#c9962c" };
+
+const PESA = [      // la pesa del zoco: compara PMgL contra PMgK a secas, sin dividir cada uno entre su precio (18 × 14)
+  ".......kkkk.......",
+  ".......k..k.......",
+  ".......k..k.......",
+  ".....kkkkkkkk.....",
+  ".....kkbbbbkk.....",
+  ".....kbbbbbbk.....",
+  ".....kbbbbbbk.....",
+  "....kbbbbbbbbk....",
+  "....kkkkkkkkkk....",
+  "...kbbbbbbbbbbk...",
+  "..kbbbbbbbbbbbbk..",
+  "..kbbbbbbbbbbbbk..",
+  "..kbbbbbbbbbbbbk..",
+  "...kkkkkkkkkkkk...",
+];
+const P_PESA = { k: "#1e1a14", b: "#c9962c" };
+
+const ALFORJA = [   // la alforja del burro: olvida que al ajustar la canasta se sube un factor y se BAJA el otro (18 × 14)
+  "..................",
+  ".......kkkk.......",
+  ".......krrk.......",
+  ".......krrk.......",
+  "kkkkkkkkkkkkkkkkkk",
+  "krrrrrrk..krrrrrrk",
+  "krrrrrrk..krrrrrrk",
+  "kuuuuuuk..kuuuuuuk",
+  "kuvvvvuk..kuvvvvuk",
+  "kuvvvvuk..kuvvvvuk",
+  "kuuuuuuk..kuuuuuuk",
+  "kuuuuuuk..kuuuuuuk",
+  "kkkkkkkk..kkkkkkkk",
+  "..................",
+];
+const P_ALFORJA = { k: "#1e1a14", u: "#9a6a3a", r: "#c0452c", v: "#3f7a6a" };
+
+const BABUCHA = [   // la babucha al revés: invierte el sentido del ajuste y se corre hacia el factor que rinde menos (18 × 14)
+  "..................",
+  "..................",
+  "kkkk..............",
+  "kyyk..............",
+  "kkkk..............",
+  "kyy...............",
+  "kkkkkkkkkkkkkkkk..",
+  "kkyyyyyyyykyyyyk..",
+  ".kyyrrrrryyyyyyk..",
+  ".kyyrrrrryyyyyyk..",
+  ".kyyyyryyyyyyyyk..",
+  ".kyyyyyyyyyyyyyk..",
+  ".kkkkkkkkkkkkkkk..",
+  "..mmmmmmmmmmmmmm..",
+];
+const P_BABUCHA = { k: "#1e1a14", y: "#d8b24a", r: "#c0452c", m: "#6b4a28" };
+
+const TETERA = [    // la tetera que sirve en el vaso equivocado: reemplaza en la isocosto cuando iba en la isocuanta (18 × 14)
+  "........kk........",
+  "........kk........",
+  ".....kkkkkkkk.....",
+  "....kppppppppk....",
+  "kk.kkkkkkkkkkkk...",
+  "kppkppppppppppkkkk",
+  "kkkkppppppppppkkkk",
+  "...kprrrrrrrrrk..k",
+  "...kppppppppppk..k",
+  "...kppppppppppkkkk",
+  "...kppppppppppkkkk",
+  "...kppppppppppk...",
+  "...kkkkkkkkkkkk...",
+  ".....kkkkkkkk.....",
+];
+const P_TETERA = { k: "#1e1a14", p: "#a9b2b6", r: "#3f7a6a" };
+
+const FEZ = [       // el fez que no cierra la cuenta: despeja mal y no llega al valor que pide el problema (18 × 14)
+  "..................",
+  "........knnnnnnn..",
+  "........knnnnnnn..",
+  ".....krrkkrrk..n..",
+  ".....krrrrrrk..n..",
+  ".....krrrrrrk..n..",
+  "....krrrrrrrrk.n..",
+  "....krrrrrrrrk.n..",
+  "...krrrrrrrrrrkn..",
+  "...krrrrrrrrrrnnn.",
+  "..krrrrrrrrrrrnnn.",
+  "..krrrrrrrrrrrnnn.",
+  ".krrrrrrrrrrrrnnn.",
+  "....kkkkkkkkkk....",
+];
+const P_FEZ = { k: "#1e1a14", r: "#b5332a", n: "#2a2a2a" };
+
+const CURTIDOR = [  // jefe: el curtidor de Chouara, que mete la piel en la cuba que no era y después no entiende el color (18 × 17)
+  ".....kkkkkkkk.....",
+  "....kcccccccck....",
+  ".....kkkkkkkk.....",
+  ".....kpkppkpk.....",
+  ".....kppppppk.....",
+  ".....kpkkkkpk.....",
+  ".....kkkkkkkk.....",
+  "...kkkkkkkkkkkk...",
+  "...kuccccccccuk...",
+  "...kuccccccccuk...",
+  "...krrrrruuuuuk...",
+  "...krrrrruuuuuk...",
+  "...kkkkkkkkkkkk...",
+  "...kkkkkkkkkkkk...",
+  "....kkk....kkk....",
+  "....kkk....kkk....",
+  "...vvvvv..vvvvv...",
+];
+const P_CURTIDOR = { k: "#1e1a14", p: "#d9a273", u: "#9a6a3a", c: "#e0d8c0", r: "#b5332a", v: "#3f7a6a" };
+
+const BURRO = [     // el burro de la medina, que es la salida del distrito (32 × 16)
+  ".....kk.........................",
+  "..kk.kk.........................",
+  "..kk.kk.........................",
+  "..kkkkkkk.......................",
+  "..kgggggk.......................",
+  "..kgkgkgk..kkkkkkkkkkkkkkkkk....",
+  "..kggggggggkgmmmmmmmmmmmmgkk....",
+  "..kggggggggkgmrrrrrrrrrrmgkk....",
+  "..kkkkkggggkggggggggggggggkkk...",
+  "..kkkk.ggggkggggggggggggggkkk...",
+  "...........kggggggggggggggkkk...",
+  "...........kkkkkkkkkkkkkkkkkk...",
+  ".............kk..kk..kk.kk.kk...",
+  ".............kk..kk..kk.kk......",
+  ".............kk..kk..kk.kk......",
+  ".............mm..mm..mm.mm......",
+];
+const P_BURRO = { k: "#1e1a14", g: "#9a9088", m: "#6b4a28", r: "#c0452c" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -2780,6 +2929,14 @@ const DEFINICIONES = {
   bomba:        [BOMBA, P_BOMBA],
   molinero:     [MOLINERO, P_MOLINERO],
   bicicleta:    [BICICLETA, P_BICICLETA],
+  llave:        [LLAVE, P_LLAVE],
+  pesa:         [PESA, P_PESA],
+  alforja:      [ALFORJA, P_ALFORJA],
+  babucha:      [BABUCHA, P_BABUCHA],
+  tetera:       [TETERA, P_TETERA],
+  fez:          [FEZ, P_FEZ],
+  curtidor:     [CURTIDOR, P_CURTIDOR],
+  burro:        [BURRO, P_BURRO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

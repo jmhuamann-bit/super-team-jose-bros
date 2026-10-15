@@ -1,0 +1,42 @@
+{
+  "id": "level30",
+  "distrito": "Marruecos",
+  "clase": "Clase 05 · PC3",
+  "titulo": "Primero el barrio, después el camino",
+  "tema": "medina",
+  "musica": "medina",
+  "vehiculo": "burro",
+  "intro": "Quinta clase de la PC3, y otro país: Marruecos. La medina de Fez tiene unos nueve mil callejones y es la zona urbana sin autos más grande del mundo — no entra un carro, así que todo lo mueven burros. Y está ordenada por OFICIOS: el zoco de los curtidores, el de los caldereros, el de los tintoreros, cada uno en su barrio. Por eso lo primero que tiene que saber cualquiera que entra no es cómo llegar, sino A QUÉ BARRIO VA: si te equivocás de barrio, el camino perfecto no te sirve de nada. Esta clase es exactamente eso. Las tres recetitas ya las tenés: la del caso TÍPICO, la de COMPLEMENTARIOS y la de SUSTITUTOS. Lo que se practica hoy es lo de antes de la recetita — leer el enunciado y DIAGNOSTICAR cuál de los tres te tocó. Aplicar la receta correcta en el caso equivocado te deja igual de perdido que en un callejón de Fez.",
+  "repaso": [
+    "DE QUÉ VA ESTA CLASE: no hay teoría nueva, hay ENTRENAMIENTO. Y el músculo que se entrena es el de antes de la cuenta: mirar el enunciado y decidir cuál de los tres casos te tocó. El error más caro de la PC3 no es equivocarse en una división, es resolver un atípico con la receta del típico.",
+    "CÓMO SE DIAGNOSTICA, en una línea: Cobb-Douglas o una TTS en letras → TÍPICO. «SIEMPRE … CON» en proporción fija → COMPLEMENTARIOS. «SIEMPRE … O» → SUSTITUTOS. Y de ahí sale qué condición usar: TTS = w/r en el típico, la relación de complementariedad en los complementarios, y comparar el producto por sol en los sustitutos.",
+    "EL CASO TÍPICO Y SUS DOS PIEZAS: la TTS, que es PMgL/PMgK y es la pendiente de la ISOCUANTA, y la ratio w/r, que es la pendiente de la ISOCOSTO. La condición de optimización es que se igualen, que es lo mismo que decir PMgL/w = PMgK/r: el último sol gastado rinde lo mismo vaya a donde vaya.",
+    "EL PRIMER TIPO DE PROBLEMA, que es el nuevo de esta clase: VERIFICAR SI UNA CANASTA YA ES LA ÓPTIMA. Paso 1, identificar la TTS (los dos PMg) y la ratio de precios. Paso 2, reemplazar y ver si se cumple la igualdad. Paso 3, si no se cumple, sugerir el ajuste.",
+    "CÓMO SE DECIDE EL AJUSTE: se divide cada producto marginal entre su precio y gana el más alto. Si PMgL/w es mayor, se contrata más L; si es mayor PMgK/r, se alquila más K. Y SIEMPRE se sube uno y se baja el otro, porque el movimiento es sobre la MISMA isocuanta.",
+    "LA MISMA REGLA, DICHA CON LA TTS: si la TTS queda POR ENCIMA de w/r hay que correrse hacia el TRABAJO; si queda POR DEBAJO, hacia el CAPITAL. Invertir ese sentido es el error que la clase persigue, y aparece en casi todos los comentados: el gerente de Chochestore, Claudia con Malena y el caso del doble.",
+    "EL SEGUNDO TIPO — MAXIMIZAR PRODUCCIÓN: te dan el COSTO TOTAL (presupuesto), w, r y los PMg. Recetita: hallar la TTS en variables, igualarla a w/r, DESPEJAR K y reemplazar en la ISOCOSTO. El PLUS es meter esos K y L en la función de producción para saber cuánto sale.",
+    "EL TERCER TIPO — MINIMIZAR COSTOS: te dan una META DE PRODUCCIÓN en vez del presupuesto. Arranca igual —TTS = w/r y despejar K— pero el reemplazo va en la ISOCUANTA, y el PLUS es meter los valores en la isocosto para hallar el CT. Lo único que cambia entre las dos recetitas es DÓNDE reemplazás, y lo decide el dato que te dieron.",
+    "EJERCICIO RESUELTO DEL TÍPICO: con Q = K^0,5·L^0,5 la TTS vale K/L. Si w = 2, r = 8 y el presupuesto es 160, la condición da K/L = 0,25, o sea K = 0,25L; metido en 2L + 8K = 160 queda 4L = 160, así que L = 40, K = 10 y Q = 20. Control que vale para cualquier Cobb-Douglas de exponentes iguales: el gasto se parte por la mitad, 80 y 80.",
+    "LOS ATÍPICOS, QUE NO USAN LA IGUALDAD. En COMPLEMENTARIOS se despeja la relación de complementariedad y se mete en la isocosto si es maximizar, o se usa la TRIPLE IGUALDAD Q = L/A = K/B si es minimizar, donde ni siquiera hacen falta los precios para hallar L y K.",
+    "EN SUSTITUTOS se compra UNO SOLO: el de mayor PMg/precio si es maximizar, el de menor precio/PMg si es minimizar. Y está el caso especial: si los dos empatan, es INDIFERENTE y cualquier mezcla que gaste el presupuesto da lo mismo.",
+    "EJERCICIO RESUELTO DE ATÍPICO: la mazamorra de Carmen, 2 de maíz (M) CON 1 guindón (G) por porción, con precios 1,5 y 3 y un presupuesto de 300. De M = 2G sale 1,5(2G) + 3G = 6G = 300, así que G = 50, M = 100 y Q = 50 porciones. Y si gastara todo en el maíz tendría 200 de maíz y CERO porciones, porque sin guindón no hay mazamorra.",
+    "LA TRAMPA QUE CIERRA TODO: en los atípicos NO se iguala la TTS con w/r. En complementarios la isocuanta es una esquina y no tiene una pendiente que igualar; en sustitutos la pendiente es constante y casi nunca coincide con w/r, así que la solución está en el extremo. Por eso el diagnóstico va PRIMERO."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                      AA                                                                                                                                            ",
+    "                                     o o                   o o                                        o o                                                                           ",
+    "                                                                                                                                                                                    ",
+    "               o  o  o              ======           o o  =====  o o           o     o          o o  =====             o     o     o                                                ",
+    "                               ?                   V                              E            G              o    L oo oo oo oo oo oo    o      o           1  L                   ",
+    "              ==========                            =====       =====        ===== =====       =====        oo oo                                                         o o o     ",
+    "                                                                                                                                         ###    ###                                 ",
+    "  P               E              T           E    E                    CC                                    E        X     X     X      ### E  ###       C           B         M   ",
+    "###########################################################################              ###########################################################################################",
+    "###########################################################################              ###########################################################################################",
+    "###########################################################################              ###########################################################################################"
+  ]
+}

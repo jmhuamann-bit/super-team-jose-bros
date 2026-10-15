@@ -1,0 +1,125 @@
+{
+  "nivel": "level30",
+  "clase": "Clase 05 · PC3 — Ejercicios típicos y atípicos del productor a largo plazo",
+  "fuente": "Apuntes de la Clase 05 — Ejercicios típicos y atípicos (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b30-q1",
+      "nivel": "comprension",
+      "enunciado": "Te caen tres encargos seguidos:\n\nI. «Q = K^0,4 · L^0,6»\nII. «Para una unidad SIEMPRE combino 3 de L CON 2 de K»\nIII. «Para una unidad SIEMPRE combino 6 de L O 2 de K»\n\n¿Qué condición de optimización le toca a cada uno?",
+      "opciones": [
+        "A los tres la misma, TTS = w/r, porque es la condición general de cualquier productor",
+        "I con TTS = w/r · II con la relación de complementariedad · III comparando el PMg por sol",
+        "I comparando PMg por sol · II con TTS = w/r · III con la relación de complementariedad",
+        "A ninguno: sin saber el presupuesto no se puede elegir todavía qué condición aplicar"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo primero de la clase es DIAGNOSTICAR. La Cobb-Douglas es el caso típico y se optimiza igualando TTS con w/r. El «CON» en proporción fija son complementarios y se usa la relación de complementariedad. El «O» son sustitutos y se compara el producto por sol de cada factor."
+    },
+    {
+      "id": "b30-q2",
+      "nivel": "aplicacion",
+      "enunciado": "Una empresa está parada en una canasta con PMgL = 20 y PMgK = 30. Los precios son w = 4 y r = 10.\n\n¿Está optimizada?",
+      "opciones": [
+        "Sí: la TTS vale 0,67 y ya es mayor que cero, que es lo que pide la condición",
+        "Sí, porque el capital rinde 30 y el trabajo solo 20, y ella usa los dos a la vez",
+        "No se puede decir sin conocer la función de producción completa de la empresa",
+        "No: la TTS vale 0,67 y w/r vale 0,4, así que todavía no cumple la igualdad"
+      ],
+      "correcta": 3,
+      "explicacion": "El primer tipo de problema de la clase es verificar la canasta: se calcula la TTS (PMgL/PMgK = 20/30 = 0,67) y la ratio de precios (w/r = 4/10 = 0,4). Si no son iguales, la canasta todavía no es la óptima. Y ojo con comparar PMgL contra PMgK a secas: hay que dividir cada uno entre su precio."
+    },
+    {
+      "id": "b30-q3",
+      "nivel": "aplicacion",
+      "enunciado": "Con esos mismos datos (PMgL = 20, PMgK = 30, w = 4, r = 10), te piden sugerir el ajuste.\n\n¿Qué hay que hacer y por qué?",
+      "opciones": [
+        "Contratar más L y alquilar menos K, porque el trabajo da 5 por sol y el capital solo 3",
+        "Alquilar más K y contratar menos L, porque el capital tiene el producto marginal más alto",
+        "Aumentar los dos factores a la vez, que es la única forma de subir la producción total",
+        "Contratar más L y dejar el capital igual, así la producción sube sin tocar nada más"
+      ],
+      "correcta": 0,
+      "explicacion": "Se divide cada producto marginal entre su precio: 20/4 = 5 contra 30/10 = 3. Gana el trabajo, así que se contrata más L. Y SIEMPRE se sube uno y se baja el otro, porque la idea es moverse sobre la MISMA isocuanta hasta el punto donde se cumple la condición."
+    },
+    {
+      "id": "b30-q4",
+      "nivel": "aplicacion",
+      "enunciado": "El gerente de una empresa revisa su plan: encuentra que la ratio PMgL/PMgK es MENOR que la ratio w/r, y concluye que para optimizar hay que usar más trabajo y menos capital.\n\n¿Tiene razón?",
+      "opciones": [
+        "Sí, porque cuando la TTS queda por debajo de w/r el trabajo sale relativamente barato",
+        "Sí, y además da igual el sentido: cualquier cambio acerca a la empresa a su óptimo",
+        "No: con la TTS por debajo de w/r conviene ir al revés, más capital y menos trabajo",
+        "No, pero el error es otro: con una TTS distinta de w/r no se puede optimizar nunca"
+      ],
+      "correcta": 2,
+      "explicacion": "Si TTS < w/r, el capital es el que rinde más por sol y hay que correrse hacia él. El gerente invirtió el sentido, que es el error que esta clase persigue. Acordate de que todo esto vale para el caso TÍPICO: en los atípicos ni siquiera se usa esta igualdad."
+    },
+    {
+      "id": "b30-q5",
+      "nivel": "comprension",
+      "enunciado": "Las dos recetitas del caso típico arrancan igual: hallar la TTS, igualarla a w/r y despejar K.\n\n¿En qué se diferencian al final?",
+      "opciones": [
+        "En nada: las dos terminan reemplazando en la isocosto y después se compara el resultado",
+        "Maximizar reemplaza en la ISOCOSTO y minimizar reemplaza en la ISOCUANTA, según el dato",
+        "Maximizar reemplaza en la ISOCUANTA; minimizar reemplaza en la isocosto, que trae el gasto",
+        "Minimizar no necesita la condición: alcanza con comprar lo más barato de los dos factores"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo único que cambia es DÓNDE se reemplaza, y eso lo decide el dato que te dan. Si te dan presupuesto, va a la isocosto y es maximizar. Si te dan una meta de producción, va a la isocuanta y es minimizar. El PLUS también se invierte: en una hallás Q y en la otra el CT."
+    },
+    {
+      "id": "b30-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Una empresa tiene Q = K^0,5 · L^0,5, con una TTS que vale K/L. El salario es 2, el alquiler 8 y el presupuesto 160.\n\n¿Cuánto compra de cada factor y cuánto produce?",
+      "opciones": [
+        "L = 40 y K = 10, con Q = 20: de K/L = 2/8 sale K = 0,25L y eso entra en la isocosto",
+        "L = 10 y K = 40, con Q = 20, poniendo más del factor que tiene el precio más alto",
+        "L = 80 y K = 0, con Q = 0, gastando todo el presupuesto en el factor más barato",
+        "L = 20 y K = 20, con Q = 20, repartiendo el presupuesto en partes iguales de unidades"
+      ],
+      "correcta": 0,
+      "explicacion": "Se iguala la TTS a w/r: K/L = 2/8 = 0,25, o sea K = 0,25L. Metido en 2L + 8K = 160 queda 4L = 160, así que L = 40 y K = 10. El PLUS: Q = raíz de 10 × 40 = 20. Control: el gasto se parte 80 y 80, que es lo que pasa siempre cuando los exponentes son iguales."
+    },
+    {
+      "id": "b30-q7",
+      "nivel": "comprension",
+      "enunciado": "Claudia le dice a Malena: «cuando la tasa técnica de sustitución de capital por trabajo supera a la ratio de precios w/r, el productor solo puede optimizar si usa MÁS CAPITAL y menos trabajo». La función es típica.\n\n¿Tiene razón?",
+      "opciones": [
+        "Sí: una TTS por encima de w/r significa que el capital rinde más por cada sol gastado",
+        "No, pero porque con funciones típicas la TTS nunca puede superar a la ratio de precios",
+        "No: con la TTS por encima de w/r hay que correrse hacia el TRABAJO, que es justo al revés",
+        "Depende del presupuesto: con poca plata conviene el capital y con mucha, el trabajo"
+      ],
+      "correcta": 2,
+      "explicacion": "La TTS es PMgL/PMgK. Si supera a w/r es porque PMgL/w es mayor que PMgK/r, o sea que el TRABAJO rinde más por sol. Claudia invirtió la esquina. Y la pregunta tiene cola: en sustitutos perfectos la conclusión sería la misma, pero ahí se va directo a la esquina y no se iguala nada."
+    },
+    {
+      "id": "b30-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Dato: para la canasta actual, lo que produce de más un trabajador por cada sol gastado en contratarlo es el DOBLE de lo que produce de más el capital por cada sol de alquiler. El gerente dice que hay que usar menos trabajadores y más máquinas. El dueño dice que faltan datos.\n\n¿Quién acierta?",
+      "opciones": [
+        "El gerente, porque al rendir el doble el trabajo ya está sobreutilizado en esa canasta",
+        "El dueño: con un solo dato relativo no alcanza para saber hacia qué lado moverse",
+        "Los dos: el gerente acierta el sentido y el dueño tiene razón en pedir los precios",
+        "Ninguno: el dato basta y dice lo contrario del gerente, hay que ir hacia el TRABAJO"
+      ],
+      "correcta": 3,
+      "explicacion": "El dato ES la comparación que hace falta: PMgL/w = 2 × PMgK/r. Como el trabajo rinde el doble por sol, se contrata más trabajo y menos capital. El gerente invirtió el sentido y el dueño pide datos que no necesita: para saber hacia DÓNDE moverse alcanza con la comparación relativa."
+    },
+    {
+      "id": "b30-q9",
+      "nivel": "aplicacion",
+      "enunciado": "En la tanda cae este: «Para una porción de mazamorra SIEMPRE uso 2 de maíz morado (M) CON 1 guindón (G)». El maíz cuesta 1,5, el guindón 3 y hay 300 de presupuesto.\n\n¿Cuánto compra y cuánto produce?",
+      "opciones": [
+        "M = 200 y G = 0, con Q = 100, gastando todo en el maíz, que es el insumo más barato",
+        "Falta la TTS: sin ella no se puede plantear la condición de optimización del productor",
+        "M = 100 y G = 50, con Q = 50: el «CON» dice que M = 2G, y eso metido en la isocosto",
+        "M = 60 y G = 70, con Q = 30, repartiendo el presupuesto entre los dos insumos por igual"
+      ],
+      "correcta": 2,
+      "explicacion": "Acá no se iguala ninguna TTS: el «SIEMPRE … CON» avisa que son complementarios, y la receta es meter M = 2G en la isocosto, 1,5(2G) + 3G = 6G = 300. Comprar solo el barato daría Q = min(100; 0) = 0, porque sin guindón no hay mazamorra."
+    }
+  ]
+}

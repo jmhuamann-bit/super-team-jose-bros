@@ -403,6 +403,20 @@
       "abierto": true,
       "mapa": "levels/level29.json",
       "preguntas": "questions/level29_questions.json"
+    },
+    {
+      "id": "level30",
+      "clase": "Clase 05",
+      "distrito": "Marruecos",
+      "titulo": "Primero el barrio, después el camino",
+      "icono": "🫖",
+      "seccion": "PC3",
+      "seccionNota": "Teoría del productor y costos — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level30.json",
+      "preguntas": "questions/level30_questions.json"
     }
   ]
 }

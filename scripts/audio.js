@@ -183,6 +183,14 @@ const TEMAS_MUSICA = {
               "G4",2,"F4",2,"D4",4,"F4",2,"G4",2,"A4",4,"D4",4],
     bajo:    ["D2",8,"A2",8,"D2",8,"G2",4,"A2",4,"D2",8],
   },
+  medina: { // Marruecos: aire de gnawa, con el bordón grave y el paso arrastrado
+    tempo: 0.19, onda: "triangle",
+    melodia: ["D4",2,"Eb4",2,"F4",2,"D4",2,"C4",2,"D4",4,
+              "F4",2,"G4",2,"Ab4",2,"G4",2,"F4",2,"Eb4",4,
+              "D4",2,"F4",2,"G4",4,"F4",2,"Eb4",2,"D4",4,
+              "C4",2,"D4",2,"Eb4",2,"D4",6],
+    bajo:    ["D2",8,"D2",8,"Bb1",8,"C2",4,"D2",4],
+  },
   sena: { // París: valsecito de acordeón, ligero y con aire de vereda
     tempo: 0.15, onda: "triangle",
     melodia: ["A4",2,"C5",1,"E5",1,"D5",2,"C5",2,"B4",2,

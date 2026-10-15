@@ -3306,6 +3306,205 @@ export const TEMAS = {
       }
     },
   },
+
+  medina: {
+    nombre: "Marruecos",
+    cielo: [[0, "#4a86b8"], [0.4, "#9ec0d4"], [0.7, "#e6d8b8"], [0.8, "#43372a"], [1, "#1e1812"]],
+    suelo: { cara: "#b39a6e", borde: "#cdb183", tierra: "#4a3a22", plataforma: "#8a5a3a", plataformaBorde: "#d8b43c" },
+    acento: "#3f7a6a",
+
+    bichos: ["llave", "pesa", "alforja", "babucha", "tetera", "fez"],
+    nombresBichos: [
+      "La Llave Equivocada",
+      "La Pesa del Zoco",
+      "La Alforja del Burro",
+      "La Babucha al Revés",
+      "La Tetera que Sirve en el Vaso Equivocado",
+      "El Fez que No Cierra la Cuenta",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "curtidor",
+    nombreJefe: "El Curtidor de Chouara",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol del Magreb, blanco y plantado alto
+      ctx.fillStyle = "rgba(252,242,206,.22)";
+      ctx.beginPath(); ctx.arc(588, 74, 60, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,250,228,.88)";
+      ctx.beginPath(); ctx.arc(588, 74, 23, 0, Math.PI * 2); ctx.fill();
+
+      // LAS LOMAS DEL MEDIO ATLAS: tierra seca con matorral, sin un árbol
+      repetir(ctx, cam, 196, 0.05, (x, i) => {
+        const bx = x, base = 306, alto = 62 + ((i * 43) % 44);
+        ctx.fillStyle = "#a88c5e";
+        ctx.beginPath();
+        ctx.moveTo(bx - 22, base);
+        ctx.quadraticCurveTo(bx + 56, base - alto, bx + 134, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(92,78,44,.24)";
+        for (let k = 0; k < 9; k++) {
+          const px = bx + 2 + k * 15;
+          ctx.fillRect(px, base - alto * 0.34 - ((k * 11) % 18), 7, 4);
+        }
+      });
+
+      // EL ALMINAR DE LA QARAWIYYIN, cuadrado y con su remate de teja verde,
+      // y alrededor las casas de azotea plana trepando la ladera
+      repetir(ctx, cam, 568, 0.12, (x, i) => {
+        const bx = x + 56, base = 306, cima = base - 152;
+        ctx.fillStyle = "#d8c49a";
+        ctx.fillRect(bx, cima + 22, 40, 152 - 22);
+        ctx.fillStyle = "rgba(96,78,48,.26)";                      // los paños calados
+        for (let py = cima + 40; py < base - 16; py += 16) {
+          ctx.fillRect(bx + 7, py, 11, 10);
+          ctx.fillRect(bx + 23, py, 11, 10);
+        }
+        ctx.fillStyle = "#3f7a6a";                                 // EL TEJADO VERDE
+        ctx.beginPath();
+        ctx.moveTo(bx - 7, cima + 22);
+        ctx.lineTo(bx + 20, cima - 6);
+        ctx.lineTo(bx + 47, cima + 22);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#2f5e52";
+        ctx.fillRect(bx + 17, cima - 14, 6, 10);
+
+        for (let k = 0; k < 5; k++) {                              // las casas de alrededor
+          const px = bx + 58 + k * 36, alto = 44 + ((i * 13 + k * 21) % 34);
+          ctx.fillStyle = elige(["#cdb98e", "#dcc79c", "#c2ad82"], i + k);
+          ctx.fillRect(px, base - alto, 32, alto);
+          ctx.fillStyle = "rgba(90,74,44,.30)";
+          ctx.fillRect(px, base - alto, 32, 4);
+          ctx.fillRect(px + 11, base - alto + 12, 9, 12);
+        }
+      });
+
+      // LAS AZOTEAS DEL ZOCO con las PIELES puestas a secar, que es lo que se
+      // ve de verdad desde arriba de la medina
+      repetir(ctx, cam, 134, 0.22, (x, i) => {
+        const bx = x, base = 306;
+        const alto = 26 + ((i * 29) % 20);
+        ctx.fillStyle = elige(["#e0cb9e", "#d2bd90", "#ecd8ab"], i);
+        ctx.fillRect(bx, base - alto, 58, alto);
+        ctx.fillStyle = "rgba(88,70,42,.26)";
+        ctx.fillRect(bx, base - alto, 58, 3);
+        ctx.fillStyle = "#3a332a";                                 // la cuerda
+        ctx.fillRect(bx + 5, base - alto - 9, 48, 1);
+        for (let k = 0; k < 4; k++) {                              // las pieles colgadas
+          ctx.fillStyle = elige(["#c9a06a", "#b5833f", "#d8b98a", "#a86f3c"], i + k);
+          ctx.fillRect(bx + 7 + k * 12, base - alto - 9, 9, 11);
+        }
+      });
+
+      // EL PLANO DEL SUELO DE LA MEDINA, del pie de las casas al callejón y sin
+      // cortes: acá en lugar de un río va LA TENERÍA, el panal de cubas de tinte
+      ctx.fillStyle = "#9d8755";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 12);
+      ctx.fillStyle = "#8a7448";                                   // el piso de la tenería
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 32);
+      const tintes = ["#e8e0c8", "#d8b43c", "#b5542c", "#7a5a2c", "#c9922c", "#9a6a3a"];
+      for (let i = 0; i < 46; i++) {                               // LAS CUBAS, en panal
+        const fila = i % 2;
+        const x = (i * 36 - cam * 0.16) % 1040 - 60;
+        const y = 324 + fila * 13;
+        ctx.fillStyle = "#6e5a34";
+        ctx.fillRect(x - 1, y - 1, 24, 14);
+        ctx.fillStyle = tintes[(i * 3 + fila) % tintes.length];
+        ctx.fillRect(x, y, 22, 12);
+        ctx.fillStyle = "rgba(255,250,230,.18)";
+        ctx.fillRect(x + 2, y + 1, 9, 3);
+      }
+      ctx.fillStyle = "#b39a6e";                                   // el callejón
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#c8b183";
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 4);
+
+      // LAS PILAS DE PIELES al borde de las cubas
+      repetir(ctx, cam, 152, 0.28, (x, i) => {
+        const bx = x + 18, base = 350;
+        for (let k = 0; k < 4; k++) {
+          ctx.fillStyle = elige(["#c9a06a", "#a86f3c", "#d8b98a"], i + k);
+          ctx.fillRect(bx - k, base - 5 - k * 4, 26 + k * 2, 5);
+        }
+        ctx.fillStyle = "rgba(70,56,32,.28)";
+        ctx.fillRect(bx - 3, base - 2, 32, 3);
+      });
+
+      // (acá iba una fila de arcos de herradura: se sacó porque tapaba entera
+      // la tenería, que es LA imagen de Fez y lo único con color del cuadro.
+      // El arco se conserva en el puesto del zoco, que va más adelante.)
+
+      // EL PUESTO DEL ZOCO: el vano con su arco, las alfombras enrolladas y
+      // los tejidos colgando del dintel
+      repetir(ctx, cam, 306, 0.54, (x, i) => {
+        const bx = x + 36, base = 382, alto = 54;
+        const techo = base - alto;
+        ctx.fillStyle = elige(["#e4d2a6", "#d8c598", "#eedcb0"], i);
+        ctx.fillRect(bx, techo, 98, alto);
+        ctx.fillStyle = "#6e5a34";
+        ctx.fillRect(bx - 6, techo - 7, 110, 8);
+        ctx.fillStyle = "#3f2f1e";                                 // el vano, en sombra
+        ctx.beginPath();
+        ctx.arc(bx + 49, techo + 26, 26, Math.PI, 0);
+        ctx.fill();
+        ctx.fillRect(bx + 23, techo + 26, 52, alto - 26);
+        ctx.fillStyle = "#3f7a6a";                                 // el zócalo de zellige
+        ctx.fillRect(bx, base - 11, 98, 11);
+        ctx.fillStyle = "rgba(240,236,214,.40)";
+        for (let px = bx + 3; px < bx + 96; px += 9) ctx.fillRect(px, base - 8, 4, 5);
+        const telas = ["#b5332a", "#c9962c", "#3f7a6a", "#7a4a8a"];
+        for (let k = 0; k < 5; k++) {                              // los tejidos del dintel
+          ctx.fillStyle = elige(telas, i + k);
+          ctx.fillRect(bx + 6 + k * 18, techo + 1, 13, 16);
+        }
+        for (let k = 0; k < 3; k++) {                              // las alfombras enrolladas
+          ctx.fillStyle = elige(telas, i + k + 2);
+          ctx.fillRect(bx + 80, base - 13 - k * 8, 16, 7);
+          ctx.fillStyle = "rgba(40,30,18,.34)";
+          ctx.fillRect(bx + 80, base - 13 - k * 8, 16, 2);
+        }
+      });
+
+      // LOS CONOS DE ESPECIAS del suelo, que es puro color contra la tierra
+      repetir(ctx, cam, 92, 0.78, (x, i) => {
+        const bx = x + 16, base = 382;
+        const colores = ["#c9622c", "#d8b43c", "#8a4a2c", "#6e8a3a"];
+        for (let k = 0; k < 2; k++) {
+          const px = bx + k * 15;
+          ctx.fillStyle = "#6e5a34";
+          ctx.fillRect(px - 1, base - 6, 13, 6);
+          ctx.fillStyle = elige(colores, i + k);
+          ctx.beginPath();
+          ctx.moveTo(px, base - 6);
+          ctx.lineTo(px + 5, base - 17);
+          ctx.lineTo(px + 11, base - 6);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+      ctx.fillStyle = "#a89066";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // el polvo de la medina suspendido en la luz
+      for (let i = 0; i < 24; i++) {
+        const x = (i * 139 + t * 0.4) % 1000 - 40;
+        const y = 120 + ((i * 67) % 210) + Math.sin(t / 34 + i) * 8;
+        ctx.fillStyle = `rgba(250,240,208,${(0.05 + 0.06 * Math.abs(Math.sin(t / 30 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 3, 3);
+      }
+      // y los vencejos que anidan en las azoteas
+      for (let i = 0; i < 5; i++) {
+        const x = (i * 253 + t * 2.4) % 1050 - 60;
+        const y = 70 + ((i * 47) % 62) + Math.sin(t / 13 + i) * 8;
+        ctx.fillStyle = "rgba(44,38,28,.70)";
+        ctx.fillRect(x, y, 6, 2);
+        ctx.fillRect(x - 3, y - 2, 4, 2);
+        ctx.fillRect(x + 5, y - 2, 4, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */
