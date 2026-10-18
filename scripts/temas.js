@@ -3505,6 +3505,254 @@ export const TEMAS = {
       }
     },
   },
+
+  giza: {
+    nombre: "Egipto",
+    cielo: [[0, "#4f93c4"], [0.4, "#9fc0cc"], [0.7, "#e8d8a8"], [0.8, "#3a3026"], [1, "#1c1710"]],
+    suelo: { cara: "#d8bc82", borde: "#eed9a4", tierra: "#6b5330", plataforma: "#b08a4e", plataformaBorde: "#e0c070" },
+    acento: "#3f6f9a",
+
+    bichos: ["esfinge", "momia", "papiro", "ojo", "escarabajo", "camello"],
+    nombresBichos: [
+      "La Esfinge que Manda a Optimizar",
+      "La Momia del Insumo que No Se Mueve",
+      "El Papiro que Confunde Marginal con Medio",
+      "El Ojo que No Ve la Diferencia",
+      "El Escarabajo que Empuja al Infinito",
+      "El Camello del Alquiler que No Se Paga",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "faraon",
+    nombreJefe: "El Faraón de la Pirámide para Ayer",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol de Ra, blanco de tan fuerte
+      ctx.fillStyle = "rgba(255,246,206,.26)";
+      ctx.beginPath(); ctx.arc(188, 64, 66, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,252,236,.86)";
+      ctx.beginPath(); ctx.arc(188, 64, 25, 0, Math.PI * 2); ctx.fill();
+
+      // LAS TRES PIRÁMIDES, lejos y en la bruma del calor
+      repetir(ctx, cam, 436, 0.04, (x, i) => {
+        const base = 306;
+        const tres = [[0, 118], [112, 96], [206, 64]];
+        for (const [dx, alto] of tres) {
+          const bx = x + dx;
+          ctx.fillStyle = "rgba(206,178,124,.72)";
+          ctx.beginPath();
+          ctx.moveTo(bx - alto * 0.78, base);
+          ctx.lineTo(bx, base - alto);
+          ctx.lineTo(bx + alto * 0.78, base);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "rgba(176,144,94,.66)";       // la cara en sombra
+          ctx.beginPath();
+          ctx.moveTo(bx, base - alto);
+          ctx.lineTo(bx + alto * 0.78, base);
+          ctx.lineTo(bx, base);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "rgba(246,232,196,.40)";      // lo que queda del revestimiento
+          ctx.beginPath();
+          ctx.moveTo(bx, base - alto);
+          ctx.lineTo(bx + 9, base - alto + 26);
+          ctx.lineTo(bx - 9, base - alto + 26);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+
+      // LAS DUNAS, que es lo único que hay detrás de todo
+      repetir(ctx, cam, 232, 0.06, (x, i) => {
+        const base = 306, alto = 32 + ((i * 29) % 26);
+        ctx.fillStyle = elige(["#d9bc84", "#cfae76", "#e2c792"], i);
+        ctx.beginPath();
+        ctx.moveTo(x - 30, base);
+        ctx.quadraticCurveTo(x + 60, base - alto, x + 170, base);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // EL TEMPLO: el pilono en talud y sus dos obeliscos al frente
+      repetir(ctx, cam, 512, 0.12, (x, i) => {
+        const bx = x + 70, base = 306;
+        ctx.fillStyle = "#d4b47c";
+        ctx.beginPath();                                // el pilono, más ancho abajo
+        ctx.moveTo(bx - 8, base);
+        ctx.lineTo(bx + 4, base - 92);
+        ctx.lineTo(bx + 52, base - 92);
+        ctx.lineTo(bx + 64, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(122,94,54,.30)";
+        for (let py = base - 84; py < base - 6; py += 13) ctx.fillRect(bx - 4, py, 64, 2);
+        ctx.fillStyle = "#3f3222";                      // el portón del medio
+        ctx.fillRect(bx + 22, base - 46, 16, 46);
+        ctx.fillStyle = "#c2a06a";                      // la cornisa de gola
+        ctx.fillRect(bx + 2, base - 100, 52, 9);
+        for (const d of [-26, 82]) {                    // los dos obeliscos
+          ctx.fillStyle = "#a4714a";                  // granito rojo de Asuán
+          ctx.beginPath();
+          ctx.moveTo(bx + d, base);
+          ctx.lineTo(bx + d + 2, base - 112);
+          ctx.lineTo(bx + d + 12, base - 112);
+          ctx.lineTo(bx + d + 14, base);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "#e6c87a";                    // la punta dorada
+          ctx.beginPath();
+          ctx.moveTo(bx + d + 2, base - 112);
+          ctx.lineTo(bx + d + 7, base - 126);
+          ctx.lineTo(bx + d + 12, base - 112);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+
+      // EL POBLADO DE LOS OBREROS: adobe, techos planos y palmeras entre casa y casa
+      repetir(ctx, cam, 124, 0.22, (x, i) => {
+        const bx = x, base = 306;
+        const alto = 34 + ((i * 17) % 16);
+        ctx.fillStyle = elige(["#c69a62", "#b88a54", "#d0a76e"], i);
+        ctx.fillRect(bx, base - alto, 46, alto);
+        ctx.fillStyle = "#8a6a3e";                      // las vigas que asoman del techo
+        ctx.fillRect(bx - 3, base - alto - 4, 52, 5);
+        for (let px = bx - 1; px < bx + 48; px += 9) ctx.fillRect(px, base - alto - 7, 3, 4);
+        ctx.fillStyle = "rgba(58,44,26,.52)";           // los ventanucos chicos
+        for (let px = bx + 7; px < bx + 40; px += 14) ctx.fillRect(px, base - alto + 12, 7, 8);
+        ctx.fillStyle = "#3f3222";
+        ctx.fillRect(bx + 18, base - 17, 11, 17);       // la puerta
+        if (i % 2 === 0) {                              // una palmera entre las casas
+          const px = bx + 56;
+          ctx.fillStyle = "#8a6a3e";
+          ctx.fillRect(px, base - 44, 4, 44);
+          ctx.fillStyle = "#4a7a3a";
+          for (const [dx, dy] of [[-13, -4], [-9, -11], [9, -11], [13, -4], [0, -14]]) {
+            ctx.beginPath();
+            ctx.ellipse(px + 2 + dx, base - 46 + dy, 9, 4, dx * 0.06, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+      });
+
+      // EL PLANO DEL SUELO: del pie del poblado al arenal, sin cortes. En el
+      // medio va EL NILO, que es de donde vive todo esto
+      ctx.fillStyle = "#4a7a3a";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 12);
+      ctx.fillStyle = "#3f7f96";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#58a0ad";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 5);
+      for (let i = 0; i < 34; i++) {                    // los reflejos sobre el agua
+        const x = (i * 52 - cam * 0.17) % 1060 - 60;
+        ctx.fillStyle = "rgba(226,240,236,.30)";
+        ctx.fillRect(x, 326 + ((i * 9) % 16), 24, 2);
+        ctx.fillStyle = "rgba(28,62,74,.24)";
+        ctx.fillRect(x + 12, 334 + ((i * 7) % 12), 18, 2);
+      }
+      for (let i = 0; i < 20; i++) {                    // los juncos de la orilla
+        const x = (i * 88 - cam * 0.17) % 1040 - 40;
+        ctx.fillStyle = "#3f6b32";
+        for (let k = 0; k < 4; k++) ctx.fillRect(x + k * 3, 344 - k % 2 * 4, 2, 10);
+      }
+      ctx.fillStyle = "#d8bc82";                        // el arenal de la obra
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#e8d2a0";
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 40; i++) {
+        const x = (i * 41 - cam * 0.5) % 980 - 40;
+        ctx.fillStyle = "rgba(120,96,54,.16)";
+        ctx.fillRect(x, 358 + ((i * 11) % 18), 14, 3);
+      }
+
+      // LA RAMPA DE LA OBRA con los bloques subiendo: el insumo fijo, a la vista
+      repetir(ctx, cam, 392, 0.28, (x, i) => {
+        const bx = x + 30, base = 350;
+        ctx.fillStyle = "#c2a06a";                      // el terraplén
+        ctx.beginPath();
+        ctx.moveTo(bx, base);
+        ctx.lineTo(bx + 104, base - 44);
+        ctx.lineTo(bx + 128, base - 44);
+        ctx.lineTo(bx + 128, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(110,84,46,.34)";          // los travesaños de madera
+        for (let k = 0; k < 9; k++) {
+          ctx.fillRect(bx + 8 + k * 11, base - 4 - k * 4.6, 9, 3);
+        }
+        ctx.fillStyle = "#cfbb90";                      // los bloques que van subiendo
+        for (const k of [2, 5]) {
+          ctx.fillRect(bx + 14 + k * 13, base - 16 - k * 5.4, 16, 12);
+          ctx.fillStyle = "rgba(96,74,40,.34)";
+          ctx.fillRect(bx + 14 + k * 13, base - 16 - k * 5.4, 16, 3);
+          ctx.fillStyle = "#cfbb90";
+        }
+      });
+
+      // LA CANTERA: los sillares apilados y el cigoñal del agua
+      repetir(ctx, cam, 286, 0.54, (x, i) => {
+        const bx = x + 40, base = 382;
+        for (let fila = 0; fila < 3; fila++) {          // la pila de sillares
+          const ancho = 3 - fila;
+          for (let k = 0; k < ancho; k++) {
+            const px = bx + k * 22 + fila * 11, py = base - 14 - fila * 13;
+            ctx.fillStyle = elige(["#c0a876", "#b49c68", "#cab684"], i + k + fila);
+            ctx.fillRect(px, py, 21, 13);
+            ctx.fillStyle = "rgba(96,74,40,.30)";
+            ctx.fillRect(px, py, 21, 3);
+            ctx.fillRect(px, py, 2, 13);
+          }
+        }
+        const sx = bx + 96;                             // el cigoñal, para sacar agua
+        ctx.fillStyle = "#8a6a3e";
+        ctx.fillRect(sx, base - 40, 4, 40);
+        ctx.save();
+        ctx.translate(sx + 2, base - 40);
+        ctx.rotate(-0.42);
+        ctx.fillRect(-28, -2, 56, 4);
+        ctx.restore();
+        ctx.fillStyle = "#6b5330";
+        ctx.fillRect(sx + 24, base - 34, 9, 8);         // el balde colgado
+      });
+
+      // LAS TINAJAS de agua y los haces de caña de la vereda
+      repetir(ctx, cam, 102, 0.78, (x, i) => {
+        const bx = x + 22, base = 382;
+        ctx.fillStyle = "#b5733c";
+        ctx.beginPath(); ctx.ellipse(bx + 6, base - 7, 7, 8, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillRect(bx + 4, base - 15, 5, 5);          // el cuello de la tinaja
+        ctx.fillStyle = "#8a5228";
+        ctx.fillRect(bx + 2, base - 16, 9, 3);
+        if (i % 2 === 1) {                              // el haz de cañas atado
+          ctx.fillStyle = "#b8a35c";
+          for (let k = 0; k < 5; k++) ctx.fillRect(bx + 22 + k * 3, base - 20 + (k % 2) * 2, 2, 20);
+          ctx.fillStyle = "#7a6a30";
+          ctx.fillRect(bx + 21, base - 11, 16, 3);
+        }
+      });
+      ctx.fillStyle = "#c2a97a";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // el aire que tiembla sobre la arena, que acá no para nunca
+      for (let i = 0; i < 20; i++) {
+        const x = (i * 53 + Math.sin(t / 22 + i) * 9) % 1000 - 40;
+        ctx.fillStyle = "rgba(255,246,206,.12)";
+        ctx.fillRect(x, 352 + ((i * 7) % 28), 30, 2);
+      }
+      // la arena fina que corre a ras del suelo
+      for (let i = 0; i < 26; i++) {
+        const x = (i * 71 + t * 2.6) % 1040 - 40;
+        ctx.fillStyle = "rgba(236,218,170,.34)";
+        ctx.fillRect(x, 362 + ((i * 13) % 18), 7, 1);
+      }
+      // y los milanos dando vueltas, que es lo único que se mueve arriba
+      for (let i = 0; i < 3; i++) {
+        const x = 120 + i * 260 + Math.cos(t / 46 + i * 2) * 92;
+        const y = 70 + ((i * 41) % 44) + Math.sin(t / 38 + i) * 13;
+        const ala = Math.sin(t / 15 + i * 1.3) * 3;
+        ctx.fillStyle = "rgba(58,44,30,.62)";
+        ctx.fillRect(x, y, 4, 2);
+        ctx.fillRect(x - 7, y - ala, 7, 2);
+        ctx.fillRect(x + 4, y - ala, 7, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

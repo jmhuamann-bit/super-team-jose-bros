@@ -1,0 +1,42 @@
+{
+  "id": "level31",
+  "distrito": "Egipto",
+  "clase": "Clase 07 · PC3",
+  "titulo": "El país donde el insumo fijo era la rampa",
+  "tema": "giza",
+  "musica": "giza",
+  "vehiculo": "faluca",
+  "intro": "Séptima clase, y toca Egipto — porque la Gran Pirámide es un problema de factor fijo del tamaño de una montaña. Heródoto escribió que la levantaron 100 000 hombres por turnos, pero lo escribió dos mil años después y de oídas; la arqueología moderna, excavando el pueblo de los obreros al pie de Giza, calcula más bien 20 000 o 30 000, con una cuadrilla permanente y un refuerzo estacional que aparecía cuando el Nilo inundaba los campos y no había nada que sembrar. Y acá está lo de hoy: por más gente que juntes, las rampas son las que son y los trineos son los que son. Esa es la diferencia entre el largo plazo, donde todo se puede cambiar, y el CORTO PLAZO, donde algo quedó clavado. Lo que vamos a hacer es agarrar una función de largo plazo, meterle adentro el insumo fijo, y ver en qué se convierte.",
+  "repaso": [
+    "LA DIFERENCIA NO ES EL CALENDARIO. En el LARGO PLAZO todos los insumos se pueden mover. En el CORTO PLAZO al menos uno queda FIJO — normalmente el capital K. Que sean seis meses o tres años no decide nada: lo que decide es si podés o no cambiar el insumo.",
+    "EL DATO DE ORO DE LA CLASE: si a una función de largo plazo le reemplazás adentro el K fijo, se convierte en una FUNCIÓN DE CORTO PLAZO. El capital no desaparece, queda ahí convertido en un número, y Q pasa a depender de un solo insumo.",
+    "PRIMER MODELO — EL DATO FALTANTE, que es el más fácil. Te dan Q y uno de los insumos; reemplazás y despejás el otro. No hay que optimizar nada: optimizar es otra clase. Y con todo en la mano después te pueden pedir el costo total.",
+    "EL COSTO TOTAL ES SIEMPRE CT = wL + rK. Lo que más se olvida es la segunda parte: el insumo FIJO se paga completo, se use o no se use. Por eso se llama fijo.",
+    "SEGUNDO MODELO — EL ANÁLISIS COMPLETO, que son tres pasos. (1) Hallar la función de producción de corto plazo metiendo el K fijo. (2) Hallar el PMgL. (3) Hallar el PMeL. Y después graficar lo que pidan.",
+    "EL PRODUCTO MARGINAL DEL TRABAJO (PMgL) es cuánto sube la producción cuando entra UN trabajador más: es la PENDIENTE de la función de producción de corto plazo. Si la función es lineal, el número que acompaña a L ya es el PMgL, sin hacer nada más.",
+    "EL PRODUCTO MEDIO DEL TRABAJO (PMeL) es otra cosa: es Q dividido entre L, o sea cuánto produce cada trabajador en promedio. Es un REPARTO, no una pendiente. Confundirlos es el error más común de la clase.",
+    "ATÍPICO NO QUIERE DECIR RARO, QUIERE DECIR PMgL CONSTANTE. Pasa cuando la función de corto plazo sale lineal en L: cada trabajador nuevo aporta exactamente lo mismo que el anterior. TÍPICO es todo lo demás — el PMgL sube, baja o se hace negativo.",
+    "DE DÓNDE SALE EL CASO ATÍPICO: de una Cobb-Douglas donde L tiene EXPONENTE 1 (por ejemplo Q = 2·L·√K, que con K = 9 queda Q = 6L y PMgL = 6), o de unos perfectamente sustitutos (Q = 4L + 2K, que con K = 10 queda Q = 4L + 20 y PMgL = 4).",
+    "EN EL CASO ATÍPICO, EL GRÁFICO SON DOS LÍNEAS: el PMgL es una recta horizontal, y el PMeL cae desde arriba y se le va arrimando sin tocarlo. Con Q = 4L + 20, el PMeL es 4 + 20/L: en L = 5 vale 8, en L = 20 vale 5, y nunca baja de 4.",
+    "SI NO HAY TÉRMINO SUELTO, LAS DOS SE SUPERPONEN. Con Q = 6L el PMgL vale 6 y el PMeL también vale 6, porque no hay nada que repartir entre los trabajadores. Las dos rectas quedan una encima de la otra.",
+    "MUCHO RESPETO CON LOS PERFECTAMENTE COMPLEMENTARIOS. Con un K fijo, la producción NO crece para siempre: hay un TOPE. Con Q = mín(L/4; K) y K = 25, el máximo es 25, y el punto de corte es L = 100. Del obrero 101 en adelante el PMgL es cero.",
+    "LA RECETA NO CAMBIA AUNQUE LA FUNCIÓN SEA EXTRAÑA. Con Q = 3·L^(1/3)·K^(2/3) y K = 27, el bloque 3 × 27^(2/3) da 27, así que Q = 27·L^(1/3). Para producir 81 hay que despejar: L^(1/3) = 3, o sea L = 27. Reemplazar y despejar, siempre."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                              AA                                    ",
+    "                                         o o                  o o                                                                            o o                                    ",
+    "                                                                                                                                                                                    ",
+    "                                   o o  =====  o o      o o  =====             o     o     o                           o  o  o              ======                                  ",
+    "             ?  o      o         V                     G              o    L oo oo oo oo oo oo                                                               1  L                   ",
+    "                                  =====       =====    =====        oo oo                            o     o          ==========                                          o o o     ",
+    "               ###    ###                                                                                                                                                           ",
+    "  P            ### E  ###       E                                    E   C    X E   X     X   C    ===== =====            E              T           E    C           B         M   ",
+    "#################################################################################################              #####################################################################",
+    "#################################################################################################              #####################################################################",
+    "#################################################################################################              #####################################################################"
+  ]
+}

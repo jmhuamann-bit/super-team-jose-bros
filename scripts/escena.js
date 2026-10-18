@@ -276,6 +276,13 @@ const FICHAS = [
   { sprite: "croissant", nombre: "El Croissant del Primer Tramo", texto: "Se queda produciendo en el primer tramo, con el horno a medio usar y el producto marginal todavía por encima del medio." },
   { sprite: "gargola", nombre: "La Gárgola del Qmáx", texto: "Desde lo alto jura que siempre hay que producir en el máximo, como si los costos no existieran." },
   { sprite: "chef", nombre: "El Chef del Horno Lleno", texto: "Jefe de París: mete más panaderos de los que caben y no entiende por qué la producción le empieza a bajar." },
+  { sprite: "esfinge", nombre: "La Esfinge que Manda a Optimizar", texto: "Egipto: para hallar el dato que falta te manda a optimizar, cuando basta con reemplazar el insumo fijo y despejar el otro." },
+  { sprite: "momia", nombre: "La Momia del Insumo que No Se Mueve", texto: "Se olvida de lo que define al corto plazo: que hay al menos un insumo clavado, y que meterlo adentro vuelve la función de una sola variable." },
+  { sprite: "papiro", nombre: "El Papiro que Confunde Marginal con Medio", texto: "Mezcla el PMgL, que es la PENDIENTE —cuánto suma el trabajador siguiente—, con el PMeL, que es un REPARTO: Q dividido entre L." },
+  { sprite: "ojo", nombre: "El Ojo que No Ve la Diferencia", texto: "Cree que «atípico» quiere decir raro. Atípico es que el PMgL sea CONSTANTE; típico es que suba, baje o se haga negativo." },
+  { sprite: "escarabajo", nombre: "El Escarabajo que Empuja al Infinito", texto: "Con perfectamente complementarios y un capital fijo hay un TOPE: pasado el punto de corte, el trabajador que entra aporta cero." },
+  { sprite: "camello", nombre: "El Camello del Alquiler que No Se Paga", texto: "Arma el costo total con los jornales nomás. El insumo fijo se paga ENTERO, se use o no se use: por eso se llama fijo." },
+  { sprite: "faraon", nombre: "El Faraón de la Pirámide para Ayer", texto: "Jefe de Egipto: quiere la pirámide terminada ya y sigue mandando obreros a la misma rampa, sin fijarse en que las rampas son las que son." },
 ];
 
 export function galeriaPersonajes(contenedor) {

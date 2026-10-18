@@ -1,0 +1,125 @@
+{
+  "nivel": "level31",
+  "clase": "Clase 07 · PC3 — Transición del largo plazo al corto plazo atípico",
+  "fuente": "Apuntes de la 7ma clase — Transición del largo plazo a corto plazo atípico (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b31-q1",
+      "nivel": "comprension",
+      "enunciado": "En el corto plazo la obra ya no puede conseguir más trineos: los que hay son los que hay.\n\n¿Qué distingue al corto plazo del largo plazo, y qué le pasa a la función de producción cuando se fija el capital?",
+      "opciones": [
+        "La diferencia la marca el calendario: corto plazo es menos de un año, largo es más de un año",
+        "En el corto plazo al menos un insumo queda FIJO, y al reemplazarlo la función queda solo en L",
+        "En el corto plazo se produce menos que en el largo, pero la función de producción es la misma",
+        "En el corto plazo el capital desaparece de la cuenta y la función pasa a depender del salario"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo que define al corto plazo no es el tiempo en meses: es que al menos un insumo no se puede mover. Y ese es el DATO DE ORO de la clase: si a una función de largo plazo le metés adentro el K fijo, se convierte en una función de CORTO PLAZO, con Q dependiendo de un solo insumo. El capital no desaparece: queda adentro, convertido en un número."
+    },
+    {
+      "id": "b31-q2",
+      "nivel": "aplicacion",
+      "enunciado": "En la cantera, en el largo plazo la función era de perfectamente sustitutos: Q = 4L + 2K.\n\nEn el corto plazo hay 10 trineos y nada más, y el faraón encarga 100 bloques. ¿Cuántos obreros hacen falta?",
+      "opciones": [
+        "25, que es 100 entre 4: lo que aportan los trineos no se descuenta antes de dividir",
+        "40, porque habiendo dos insumos la producción se reparte en partes iguales entre ambos",
+        "20: se reemplaza el K = 10, la función queda Q = 4L + 20, y de 100 = 4L + 20 se despeja",
+        "No alcanzan los datos: para resolverlo hacen falta el salario y el alquiler del trineo"
+      ],
+      "correcta": 2,
+      "explicacion": "Este es el primer modelo de la clase, el del «dato faltante», y es el más fácil de todos: solo hay que REEMPLAZAR. Con K = 10 la función de corto plazo queda Q = 4L + 20, y despejando 100 = 4L + 20 sale L = 20. Nada de optimizar: acá no te preguntan la mezcla más barata, te preguntan el dato que falta."
+    },
+    {
+      "id": "b31-q3",
+      "nivel": "comprension",
+      "enunciado": "Dos obras. En una, la función de corto plazo quedó Q = 4L + 20. En la otra, quedó Q = 12·√L.\n\n¿Cuál de las dos es la ATÍPICA, y por qué?",
+      "opciones": [
+        "La primera, porque su PMgL vale 4 siempre: atípico es justamente que el PMgL no se mueva",
+        "La segunda, porque la raíz la vuelve rara; lo típico es que la función de corto plazo sea lineal",
+        "Las dos: toda función de corto plazo es atípica, porque siempre tiene algún insumo fijo",
+        "La primera, pero por otra razón: porque tiene un término suelto que no depende del trabajo"
+      ],
+      "correcta": 0,
+      "explicacion": "El nombre engaña: ATÍPICO no quiere decir raro, quiere decir PMgL CONSTANTE. Pasa cuando la función de corto plazo sale lineal en L, y ahí cada obrero nuevo aporta exactamente lo mismo que el anterior. TÍPICO es todo lo demás: el PMgL sube, baja o se hace negativo. Q = 12·√L es típica, porque su PMgL es 6/√L y se va achicando."
+    },
+    {
+      "id": "b31-q4",
+      "nivel": "aplicacion",
+      "enunciado": "La obra atípica tiene Q = 4L + 20 y hoy trabajan 5 obreros.\n\n¿Cuánto valen el producto marginal y el producto medio del trabajo?",
+      "opciones": [
+        "PMgL = 40 y PMeL = 5, que son la producción conseguida y los obreros que la hicieron",
+        "Los dos valen 4: en una función lineal el marginal y el medio coinciden siempre",
+        "PMgL = 8 y PMeL = 4, o sea al revés: el medio siempre queda por debajo del marginal",
+        "PMgL = 4 y PMeL = 8: el marginal es la pendiente y el medio es Q repartido entre los L"
+      ],
+      "correcta": 3,
+      "explicacion": "Son dos cosas distintas y conviene no mezclarlas. El PMgL es la PENDIENTE: cuánto suma el obrero siguiente, acá 4 fijo. El PMeL es un REPARTO: Q/L = (4·5 + 20)/5 = 40/5 = 8. Coinciden solo si la función pasa por el origen; acá el término 20 —que lo ponen los trineos— se reparte entre los obreros y levanta el promedio."
+    },
+    {
+      "id": "b31-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Otra obra: cada bloque colocado pide 4 obreros y 1 trineo, sin sustitución posible, o sea Q = mín(L/4; K). Hay 25 trineos y no habrá más.\n\n¿Hasta dónde se puede producir?",
+      "opciones": [
+        "Hasta el infinito: mientras se sigan sumando obreros, la producción va a seguir subiendo",
+        "Hasta 25 bloques, con 100 obreros. Del obrero 101 en adelante el PMgL ya es cero",
+        "No hay tope, porque el mínimo se queda siempre con el más chico de los dos valores",
+        "Hasta 25 bloques, pero con 25 obreros: uno por cada trineo que hay en la obra"
+      ],
+      "correcta": 1,
+      "explicacion": "Acá está el «mucho respeto» que marca el apunte. Con perfectamente complementarios y un K fijo, la producción crece hasta un TOPE y después se queda plana para siempre: Q máximo = 25, que es el K. El punto de corte es el L que justo alcanza ese tope: L/4 = 25, o sea 100 obreros. El 101 no coloca nada, porque no le queda trineo."
+    },
+    {
+      "id": "b31-q6",
+      "nivel": "aplicacion",
+      "enunciado": "La cantera entrega los 100 bloques con 20 obreros y sus 10 trineos. El jornal es 5 y el alquiler de cada trineo, 20.\n\n¿Cuál es el costo total?",
+      "opciones": [
+        "300: CT = wL + rK = 5(20) + 20(10), y el fijo se paga entero aunque sobre algo",
+        "100, que es lo único que se desembolsa: en el corto plazo el capital ya estaba pagado",
+        "3, que es lo que termina costando cada uno de los 100 bloques que salieron de la obra",
+        "250, descontándole al alquiler la parte de los trineos que quedó sin usar ese día"
+      ],
+      "correcta": 0,
+      "explicacion": "El costo total es siempre CT = wL + rK, y las dos partes se suman: 5 × 20 = 100 de jornales más 20 × 10 = 200 de trineos, o sea 300. Lo que más se olvida es la segunda parte: el insumo FIJO se paga completo, se use o no se use. Por eso se llama fijo. Dividir 300 entre 100 da el costo por bloque, que es otra pregunta."
+    },
+    {
+      "id": "b31-q7",
+      "nivel": "comprension",
+      "enunciado": "En el largo plazo la obra tenía una Cobb-Douglas: Q = 2·L·√K. En el corto plazo las 9 grúas de madera están fijas.\n\n¿Qué tiene de especial esta Cobb-Douglas?",
+      "opciones": [
+        "Que los dos exponentes suman más de 1, y por eso los rendimientos a escala salen crecientes",
+        "Que el L tiene exponente 1: queda Q = 6L, recta, y el PMgL se planta en 6 y no se mueve más",
+        "Que el exponente de K es un medio, y una raíz en el capital deja el aporte de cada obrero parejo",
+        "Nada especial: toda Cobb-Douglas da rendimientos decrecientes, que es el caso típico de siempre"
+      ],
+      "correcta": 1,
+      "explicacion": "La Cobb-Douglas suele dar el caso típico, pero hay una excepción que cae seguido: cuando L tiene EXPONENTE 1. Ahí el K fijo se convierte en un número que multiplica, la función de corto plazo sale lineal y el PMgL queda constante. Con K = 9: Q = 2·L·3 = 6L, PMgL = 6. Y como no hay término suelto, el PMeL también da 6: las dos rectas se superponen."
+    },
+    {
+      "id": "b31-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Un taller tiene una función de las que el apunte llama extrañas: Q = 3·L^(1/3)·K^(2/3). En el corto plazo cuenta con 27 tornos y le piden 81 piezas.\n\n¿Cuántos obreros necesita?",
+      "opciones": [
+        "3, que es la raíz cúbica de 27 y es lo que pide ese exponente de un tercio del trabajo",
+        "81, el mismo número de la producción, porque los dos exponentes suman exactamente 1",
+        "27: con K = 27 queda Q = 27·L^(1/3), y de 81 = 27·L^(1/3) sale que L vale 3 al cubo",
+        "No se puede resolver: una función así no admite que se le reemplace un insumo fijo"
+      ],
+      "correcta": 2,
+      "explicacion": "Que la función sea rara no cambia la receta: se reemplaza y se despeja. Con K = 27, el bloque 3 × 27^(2/3) = 3 × 9 = 27, así que Q = 27·L^(1/3). De 81 = 27·L^(1/3) sale L^(1/3) = 3 y L = 27. Y de paso es TÍPICA: su PMgL se va achicando, porque el exponente del trabajo es menor que 1."
+    },
+    {
+      "id": "b31-q9",
+      "nivel": "comprension",
+      "enunciado": "Vuelta a la obra atípica, Q = 4L + 20. Piden dibujar el PMgL y el PMeL en un mismo plano.\n\n¿Cómo quedan las dos curvas?",
+      "opciones": [
+        "Las dos bajan juntas, porque el capital fijo le va quitando rendimiento a cada obrero nuevo",
+        "El PMeL arranca subiendo y el PMgL bajando, y se cruzan justo en el máximo del PMeL",
+        "Las dos son rectas horizontales, una en 4 y la otra en 20, y no llegan a cruzarse nunca",
+        "El PMgL es una horizontal en 4, y el PMeL cae desde arriba y se le arrima sin tocarlo"
+      ],
+      "correcta": 3,
+      "explicacion": "El PMgL es constante, así que su gráfico es una recta horizontal a la altura 4. El PMeL es 4 + 20/L: siempre queda por encima del marginal, y a medida que entran más obreros el pedazo 20/L se achica y la curva se le va arrimando a la horizontal sin llegar a tocarla. Esa pinza entre una horizontal y una curva que baja es la firma del caso atípico."
+    }
+  ]
+}

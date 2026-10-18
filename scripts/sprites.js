@@ -2776,6 +2776,154 @@ const BURRO = [     // el burro de la medina, que es la salida del distrito (32 
 ];
 const P_BURRO = { k: "#1e1a14", g: "#9a9088", m: "#6b4a28", r: "#c0452c" };
 
+const ESFINGE = [    // la esfinge que pide optimizar: para el dato faltante solo hay que reemplazar y despejar (18 × 14)
+  ".kononononk.......",
+  ".kononononk.......",
+  ".konpppppnk.......",
+  ".konpppppnk.......",
+  ".konpkpkpnk.......",
+  ".konpppppnk.......",
+  ".konpkkkpnk...kkk.",
+  ".konpppppnkkkkaaak",
+  "..knpppppnaaaaaaak",
+  "kkknonnnonaaaaaaak",
+  "aaanonnnonaaaaaaak",
+  "aaaaannnaaaaaaaaak",
+  "aaaaaaaaaaaaaakkk.",
+  "kkkkkkkkkkkkkk....",
+];
+const P_ESFINGE = { k: "#3a2a18", a: "#cf9238", n: "#2f5f8a", p: "#c98a4e", o: "#f0d878" };
+
+const MOMIA = [    // la momia: se olvida de que en el corto plazo hay un insumo que no se mueve (18 × 14)
+  ".....kvvvvvvk.....",
+  ".....kssssssk.....",
+  ".....kvbkkbvk.....",
+  ".....kssssssk.....",
+  "....kvvvvvvvvk....",
+  "...kksssssssskk...",
+  "..kvvvvvvvvvvvvk..",
+  "..kssssssssssssk..",
+  "..kvvvvvvvvvvvvk..",
+  "..kssssssssssssk..",
+  "..kvvvvvvvvvvvvk..",
+  "...kksssssssskk...",
+  "....kvvvvvvvvk....",
+  "....kssssssssk....",
+];
+const P_MOMIA = { k: "#2e2418", v: "#ece4cc", s: "#c4b79a", b: "#8a3a2a" };
+
+const PAPIRO = [    // el papiro: confunde el producto marginal, que es la pendiente, con el medio, que es el reparto (18 × 14)
+  "..................",
+  ".kkk..........kkk.",
+  "krrrkkkkkkkkkkrrrk",
+  "krrrhhhhhhhhhhrrrk",
+  "krrrhhhhhhhhhhrrrk",
+  "krorhhtttttthhrork",
+  "krorhhhhhhhhhhrork",
+  "krorhhtttttthhrork",
+  "krorhhhhhhhhhhrork",
+  "krorhhtttttthhrork",
+  "krrrhhhhhhhhhhrrrk",
+  "krrrhhhhhhhhhhrrrk",
+  "krrrkkkkkkkkkkrrrk",
+  ".kkk..........kkk.",
+];
+const P_PAPIRO = { k: "#4a3a1e", h: "#f6eed6", t: "#5f4420", r: "#9a7536", o: "#8a6c2e" };
+
+const OJO = [    // el ojo de Horus: mira la función y no distingue el caso atípico del típico (18 × 14)
+  "..................",
+  "..................",
+  "..kkkkkkkkkkkkk...",
+  "..kkkkkkkkkkkkkk..",
+  "....kkkkbkkkk.kk..",
+  "..kkbbbbkbbbbkk...",
+  ".kbbbbbkkkbbbbbk..",
+  ".kbbbbkkkkkbbbbk..",
+  ".kbbbbbkkkbbbbbk..",
+  "..kkbbbbkbbbbkk...",
+  "....kkkkkkkkk.k...",
+  ".......kk..kkkk...",
+  ".......kk..kkkk...",
+  ".......kk.........",
+];
+const P_OJO = { k: "#1e2a3a", b: "#f2ead6" };
+
+const ESCARABAJO = [    // el escarabajo que empuja para siempre: con K fijo y complementarios hay un tope (18 × 14)
+  "......kk..kk......",
+  ".....kookkook.....",
+  ".....keeeeeek.....",
+  ".....keeeeeek.....",
+  ".k...keeeeeek...k.",
+  "..kk.keeddeek.kk..",
+  "....keeeddeeek....",
+  ".k..keeeddeeek..k.",
+  "..kkkeeeddeeekkk..",
+  "....keeeddeeek....",
+  ".k..keeeddeeek..k.",
+  "..kk.keeddeek.kk..",
+  "....kkeeddeekk....",
+  "......kkddkk......",
+];
+const P_ESCARABAJO = { k: "#1e2a1e", e: "#3f8a74", d: "#27543f", o: "#c9a23c" };
+
+const CAMELLO = [    // el camello: se olvida de que el insumo fijo se paga entero aunque sobre (18 × 14)
+  "............k.....",
+  "...........kckkk..",
+  "..........kccccck.",
+  ".....kkkkkkkcckck.",
+  "....kccccccccccck.",
+  "...kcccccccccckk..",
+  "..kkcccccccccck...",
+  ".koccccccccccck...",
+  ".koccccccccccck...",
+  ".kocccccccccck....",
+  ".kocccccccccck....",
+  "..kkckckkckck.....",
+  "...kckckkckck.....",
+  "...kokokkokok.....",
+];
+const P_CAMELLO = { k: "#3a2a18", c: "#b5833f", o: "#8a6a3a" };
+
+const FARAON = [    // jefe: el faraón que quiere la pirámide para ayer y sigue mandando obreros a la misma rampa (18 × 16)
+  "....kononononk....",
+  "...knononononok...",
+  "...knoppppppnok...",
+  "...knoppppppnok...",
+  "...knopkppkpnok...",
+  "...knoppppppnok...",
+  "...knopkkkkpnok...",
+  "..kknoppppppnokk..",
+  ".koonokknnkknoook.",
+  ".koonooooooonoook.",
+  ".kooppwwwwwwppook.",
+  ".kooppwwwwwwppook.",
+  ".kookkwwwwwwkkook.",
+  "..kk.kwwwwwwk.kk..",
+  ".....kwwwwwwk.....",
+  ".....kwwwwwwk.....",
+];
+const P_FARAON = { k: "#2e2214", n: "#3f6f9a", p: "#c98a4e", o: "#d8b24a", w: "#f0e8d4" };
+
+const FALUCA = [    // la faluca del Nilo, que es el vehículo de salida del distrito (32 × 16)
+  "..............kk................",
+  ".............kmvk...............",
+  ".............kmvvkk.............",
+  ".............kmvvvvk............",
+  ".............kmvvvvvk...........",
+  "............kvmvvvvvvkk.........",
+  "..........kkvvmvvvvvvvvk........",
+  ".........kvvvvmvvvvvvvvvkk......",
+  ".......kkvvvvvmvvvvvvvvvvvk.....",
+  "......kvvvvvvvmvvvvvvvvvvvvk....",
+  "....kkvvvccccccccccccccvvvvvkk..",
+  "..kkccccccccccccccccccccccccvvk.",
+  ".kcoooooooooooooooooooooooooock.",
+  ".kcccccccccccccccccccccccccccck.",
+  "..kkkkkkkkkkkkkkkkkkkkkkkkkkkk..",
+  "................................",
+];
+const P_FALUCA = { k: "#3a2a18", v: "#f4eee2", m: "#6b4a2a", c: "#8a5a34", o: "#c9a23c" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -2937,6 +3085,14 @@ const DEFINICIONES = {
   fez:          [FEZ, P_FEZ],
   curtidor:     [CURTIDOR, P_CURTIDOR],
   burro:        [BURRO, P_BURRO],
+  esfinge:      [ESFINGE, P_ESFINGE],
+  momia:        [MOMIA, P_MOMIA],
+  papiro:       [PAPIRO, P_PAPIRO],
+  ojo:          [OJO, P_OJO],
+  escarabajo:   [ESCARABAJO, P_ESCARABAJO],
+  camello:      [CAMELLO, P_CAMELLO],
+  faraon:       [FARAON, P_FARAON],
+  faluca:       [FALUCA, P_FALUCA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

@@ -417,6 +417,32 @@
       "abierto": true,
       "mapa": "levels/level30.json",
       "preguntas": "questions/level30_questions.json"
+    },
+    {
+      "id": "level31r6",
+      "clase": "Clase 06",
+      "distrito": "Por definir",
+      "titulo": "Próximamente",
+      "icono": "🚧",
+      "seccion": "PC3",
+      "seccionNota": "Teoría del productor y costos — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true
+    },
+    {
+      "id": "level31",
+      "clase": "Clase 07",
+      "distrito": "Egipto",
+      "titulo": "El país donde el insumo fijo era la rampa",
+      "icono": "☀️",
+      "seccion": "PC3",
+      "seccionNota": "Teoría del productor y costos — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level31.json",
+      "preguntas": "questions/level31_questions.json"
     }
   ]
 }
