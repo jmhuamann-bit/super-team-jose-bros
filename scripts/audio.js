@@ -215,6 +215,14 @@ const TEMAS_MUSICA = {
               "E5",1,"D5",1,"C5",1,"B4",1,"A4",4],
     bajo:    ["A2",4,"E3",4,"A2",4,"D3",4,"C3",4,"G2",4,"E3",4,"A2",4],
   },
+  mexico: { // México: son jarocho de plaza, saltarín y con el bajo marcando el zapateo
+    tempo: 0.20, onda: "triangle",
+    melodia: ["G4",2,"B4",2,"D5",2,"B4",2,"G4",2,"A4",2,"B4",4,
+              "C5",2,"B4",2,"A4",2,"G4",2,"A4",2,"F#4",2,"G4",4,
+              "D5",2,"D5",2,"C5",2,"B4",2,"A4",2,"B4",2,"C5",4,
+              "B4",2,"A4",2,"G4",2,"F#4",2,"G4",4,"G4",4],
+    bajo:    ["G2",4,"D2",4,"G2",4,"C3",4,"G2",4,"D2",4,"D2",4,"G2",4],
+  },
   giza: { // Egipto: escala frigia sobre un bordón, con el redoble seco del desierto
     tempo: 0.23, onda: "square",
     melodia: ["D4",2,"Eb4",2,"F4",2,"D4",2,"Eb4",2,"D4",2,"C4",4,

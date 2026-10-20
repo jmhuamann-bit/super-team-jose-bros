@@ -283,6 +283,13 @@ const FICHAS = [
   { sprite: "escarabajo", nombre: "El Escarabajo que Empuja al Infinito", texto: "Con perfectamente complementarios y un capital fijo hay un TOPE: pasado el punto de corte, el trabajador que entra aporta cero." },
   { sprite: "camello", nombre: "El Camello del Alquiler que No Se Paga", texto: "Arma el costo total con los jornales nomás. El insumo fijo se paga ENTERO, se use o no se use: por eso se llama fijo." },
   { sprite: "faraon", nombre: "El Faraón de la Pirámide para Ayer", texto: "Jefe de Egipto: quiere la pirámide terminada ya y sigue mandando obreros a la misma rampa, sin fijarse en que las rampas son las que son." },
+  { sprite: "sombrero", nombre: "El Sombrero del Costo que No Se Mueve", texto: "México: cree que el costo fijo sube al producir más. No se mueve: es una recta horizontal. Lo que baja es el costo fijo MEDIO." },
+  { sprite: "taco", nombre: "El Taco que No Suma las Dos Capas", texto: "Arma el costo total con una sola capa. Son dos y se suman: CT = CF + CV, y la distancia entre las dos curvas es siempre el fijo." },
+  { sprite: "pinata", nombre: "La Piñata que No Se Reparte", texto: "No ve que el costo medio es un REPARTO: el total dividido entre las unidades. Y que también sale sumando el fijo medio con el variable medio." },
+  { sprite: "chile", nombre: "El Chile del Fijo Medio que No Baja", texto: "Cree que el costo fijo medio se queda quieto. Cae y cae —100, 50, 20, 10— acercándose al eje sin llegar nunca a cero." },
+  { sprite: "maraca", nombre: "La Maraca que No Ve el Espejo", texto: "No se da cuenta de que la teoría de costos es la de producción en el espejo: CMg = w/PMgL y CVMe = w/PMeL, inversos los dos." },
+  { sprite: "mascara", nombre: "La Máscara que No Sabe Dónde Cruza", texto: "El costo marginal corta al CVMe y al CMe justo en sus MÍNIMOS, y en ese orden. Mientras el marginal va por debajo, tira el promedio para abajo." },
+  { sprite: "catrina", nombre: "La Catrina de la Tabla Completa", texto: "Jefe de México: tiene las siete columnas de la tabla y se le mezclan. El control es que el costo medio dé lo mismo por los dos caminos." },
 ];
 
 export function galeriaPersonajes(contenedor) {

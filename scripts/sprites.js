@@ -2924,6 +2924,154 @@ const FALUCA = [    // la faluca del Nilo, que es el vehículo de salida del dis
 ];
 const P_FALUCA = { k: "#3a2a18", v: "#f4eee2", m: "#6b4a2a", c: "#8a5a34", o: "#c9a23c" };
 
+const SOMBRERO = [    // el sombrero: cree que el costo fijo sube cuando se produce más (18 × 14)
+  "..................",
+  "......kkkkkk......",
+  ".....kssssssk.....",
+  ".....kssssssk.....",
+  "....kssssssssk....",
+  "....kssssssssk....",
+  "....kssssssssk....",
+  "...kksssssssskk...",
+  ".kkssbbbbbbbbsskk.",
+  "kssssbbbbbbbbssssk",
+  "kssssssssssssssssk",
+  "ksossossossossossk",
+  ".kksssssssssssskk.",
+  "...kkkkkkkkkkkk...",
+];
+const P_SOMBRERO = { k: "#3a2410", s: "#d9a23c", b: "#9a3a2a", o: "#f0d878" };
+
+const TACO = [    // el taco: no arma el costo total sumando el fijo y el variable (18 × 14)
+  "..................",
+  "..................",
+  "...kkkkkkkkkkkk...",
+  "..kvvvvvvvvvvvvk..",
+  ".krrorrorrorrorrk.",
+  ".krrrrrrrrrrrrrrk.",
+  ".krrrrrrrrrrrrrrk.",
+  "..kkkkkttttkkkkk..",
+  "....kttttttttk....",
+  "...kttttttttttk...",
+  "...kttttttttttk...",
+  "..kttttttttttttk..",
+  ".kttttttttttttttk.",
+  "..kkkkkkkkkkkkkk..",
+];
+const P_TACO = { k: "#3a2410", t: "#e0c070", r: "#9a4a2a", v: "#4a8a3a", o: "#f4eede" };
+
+const PINATA = [    // la piñata: no ve que el costo medio es un reparto, CT entre Q (18 × 14)
+  ".......kpk........",
+  ".......kpk........",
+  ".......kppk.......",
+  ".....kkrrrrkk.....",
+  "....kpvvvvvvpk....",
+  "..kkpaaaaaaaapkk..",
+  "kkppprrrrrrrrpppkk",
+  "ppppvvvvvvvvvvpppp",
+  "kkpppaaaaaaaapppkk",
+  "..kkprrrrrrrrpkk..",
+  "....kpvvvvvvpk....",
+  ".....kkaaaakk.....",
+  ".......kpkk.......",
+  ".......kpk........",
+];
+const P_PINATA = { k: "#2e2014", a: "#e8c45a", r: "#c0392b", v: "#3f8a5a", p: "#3f6f9a" };
+
+const CHILE = [    // el chile: cree que el costo fijo medio se queda quieto, cuando cae y cae (18 × 14)
+  ".......kkvvvvk....",
+  "......kvvvvvvk....",
+  ".....kkvvvkkkk....",
+  "....krrvvvrrrrk...",
+  ".....kbrrrrrrk....",
+  ".....kbrrrrrrrk...",
+  ".....kbrrrrrrrk...",
+  ".....kbkkrrrrrk...",
+  ".....kbkkrrrrrk...",
+  "......k.krrrrrk...",
+  "........krrrrrk...",
+  ".........krrrk....",
+  ".........krrrk....",
+  "..........kkk.....",
+];
+const P_CHILE = { k: "#3a1410", r: "#c0392b", v: "#4a8a3a", b: "#e8705a" };
+
+const MARACA = [    // la maraca: no ve que el costo marginal es el espejo del producto marginal (18 × 14)
+  ".......kkkkk......",
+  "......kmmoomk.....",
+  ".....kmmmmmmmk....",
+  "....kmoommmoomk...",
+  "....kmmmmmmmmmk...",
+  "....kmmmmmmmmmk...",
+  "....kmmmoommook...",
+  ".....kmmmmmmmk....",
+  "......kmmmmmk.....",
+  "......kpppppk.....",
+  ".......kpppk......",
+  ".......kpppk......",
+  ".......kpppk......",
+  ".......kpppk......",
+];
+const P_MARACA = { k: "#3a2410", m: "#d9742c", p: "#8a5a2a", o: "#f4eede" };
+
+const MASCARA = [    // la máscara: no sabe que el costo marginal corta a los medios en sus mínimos (18 × 14)
+  ".......kkkk.......",
+  ".....kkmoomkk.....",
+  "...kkmmmoommmkk...",
+  "..kokmmmoommmkok..",
+  "...kmbbmoombbmk...",
+  "..kobbbboobbbbok..",
+  "..kmbbbboobbbbmk..",
+  "..kombbmoombbmok..",
+  "..kmmmmmoommmmmk..",
+  "...kmmmmoommmmk...",
+  "...kmmbboobbmmk...",
+  "....kmbboobbmk....",
+  "....kmmmoommmk....",
+  ".....kkmoomkk.....",
+];
+const P_MASCARA = { k: "#201018", m: "#c0392b", b: "#f4eede", o: "#e8c45a" };
+
+const CATRINA = [    // jefe: la catrina, que tiene la tabla entera y se le mezclan las columnas (18 × 16)
+  "...kkhhhhhhhhkkk..",
+  ".kkffhffhhhffhffk.",
+  "khhffhffhhhffhffhk",
+  "khhhhhhhhhhhhhhhhk",
+  "khhhhhhhhhhhhhhhhk",
+  ".kkkhhcccccchhkkk.",
+  "....kkcccccckk....",
+  "....kckkkkkkck....",
+  "....kckkkkkkck....",
+  "....kcccckccck....",
+  ".....kkckckck.....",
+  ".....kkkkkkkk.....",
+  "....kffffffffk....",
+  ".....kvvvvvvk.....",
+  ".....kvvvvvvk.....",
+  ".....kvvvvvvk.....",
+];
+const P_CATRINA = { k: "#1e1420", h: "#8a4a8a", c: "#f2ece0", f: "#e8c45a", v: "#4a3a6a" };
+
+const TRAJINERA = [    // la trajinera de Xochimilco, que es el vehículo de salida del distrito (32 × 16)
+  "................................",
+  "................................",
+  "......kk.kk.kk.kk.kk.kk.kk......",
+  ".....kffkffkffkffkffkffkffk.....",
+  "....kaaaaaaaaaaaaaaaaaaaaaak....",
+  "....kaaaaaaaaaaaaaaaaaaaaaak....",
+  "....kaaaaaaaaaaaaaaaaaaaaaak....",
+  "....kffffffffffffffffffffffk....",
+  ".....kaakkkkkkkkkkkkkkkkkaak....",
+  ".....kaabbbbbbbbbbbbbbbbkaak....",
+  "..kkkcaabbbbbbbbbbbbbbbbcaakkk..",
+  ".kccccaacccccccccccccccccaaccck.",
+  ".kcccccccccccccccccccccccccccck.",
+  ".kcccccccccccccccccccccccccccck.",
+  "..kkkkkkkkkkkkkkkkkkkkkkkkkkkk..",
+  "................................",
+];
+const P_TRAJINERA = { k: "#2e2014", c: "#3f8a9a", a: "#e8c45a", f: "#c0392b", b: "#8a5a2a" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -3093,6 +3241,14 @@ const DEFINICIONES = {
   camello:      [CAMELLO, P_CAMELLO],
   faraon:       [FARAON, P_FARAON],
   faluca:       [FALUCA, P_FALUCA],
+  sombrero:     [SOMBRERO, P_SOMBRERO],
+  taco:         [TACO, P_TACO],
+  pinata:       [PINATA, P_PINATA],
+  chile:        [CHILE, P_CHILE],
+  maraca:       [MARACA, P_MARACA],
+  mascara:      [MASCARA, P_MASCARA],
+  catrina:      [CATRINA, P_CATRINA],
+  trajinera:    [TRAJINERA, P_TRAJINERA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

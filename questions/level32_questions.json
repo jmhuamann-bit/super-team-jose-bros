@@ -1,0 +1,125 @@
+{
+  "nivel": "level32",
+  "clase": "Clase 08 · PC3 — Teoría de costos a corto plazo (típico)",
+  "fuente": "Apuntes de la Clase 08 — Teoría de costos, corto plazo, típico (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b32-q1",
+      "nivel": "comprension",
+      "enunciado": "La taquería paga 100 al mes por el local, produzca lo que produzca.\n\n¿Depende el costo fijo de cuánto se produce, y cómo se dibuja?",
+      "opciones": [
+        "Sí depende, pero poquito: sube despacio porque el local se desgasta con el uso",
+        "No depende: es el mismo número para cualquier Q, así que es una recta HORIZONTAL",
+        "No depende, y por eso ni se dibuja: en el corto plazo el costo fijo no entra al gráfico",
+        "Depende al revés: cuanto más se produce, menos costo fijo hay que pagar cada mes"
+      ],
+      "correcta": 1,
+      "explicacion": "El costo fijo es fijo en el sentido literal: no se mueve con Q. En el gráfico es una recta horizontal a la altura 100, de punta a punta. Ojo con la confusión más común: lo que SÍ baja al producir más es el costo fijo MEDIO (CF/Q), que es otra cosa."
+    },
+    {
+      "id": "b32-q2",
+      "nivel": "comprension",
+      "enunciado": "La misma taquería tiene además el costo de la carne, la masa y los jornales, que sí crecen con cada taco.\n\n¿Cómo se arma el costo total y cómo se ve su gráfico?",
+      "opciones": [
+        "CT = CF × CV, y el gráfico sale más empinado que cualquiera de los dos solos",
+        "CT = CV − CF, porque al costo que crece hay que descontarle lo que ya estaba pagado",
+        "CT = CF + CV: la misma forma que el CV, pero levantada 100 por el costo fijo",
+        "CT = CV, porque el costo fijo ya se pagó antes y no forma parte de lo que cuesta producir"
+      ],
+      "correcta": 2,
+      "explicacion": "El costo total es la suma, nada más: CT = CF + CV. Y eso se ve clarito en el gráfico: la curva del CT es exactamente la del CV pero corrida hacia arriba, y la distancia entre las dos es siempre la misma — el costo fijo. En Q = 0 el CV vale cero y el CT ya vale 100."
+    },
+    {
+      "id": "b32-q3",
+      "nivel": "aplicacion",
+      "enunciado": "Homero produjo 50 tortas y gastó 1000 soles en total.\n\n¿Cuánto le costó en promedio cada torta, y de qué otra forma se puede llegar al mismo número?",
+      "opciones": [
+        "20, que es CT/Q; y también sale sumando el costo fijo medio con el variable medio",
+        "1000, porque el costo medio es el total: lo que se divide es el costo marginal",
+        "50, que son las tortas; el costo medio se lee en el eje horizontal del gráfico",
+        "No se puede: para el costo medio hacen falta por separado el costo fijo y el variable"
+      ],
+      "correcta": 0,
+      "explicacion": "El costo medio es un REPARTO: CMe = CT/Q = 1000/50 = 20 soles por torta. Y hay un segundo camino que conviene tener a mano, porque es el que piden en los gráficos: CMe = CFMe + CVMe. Repartir el total de una vez o repartir cada pedazo por separado y después sumar da exactamente lo mismo."
+    },
+    {
+      "id": "b32-q4",
+      "nivel": "aplicacion",
+      "enunciado": "El local de la taquería cuesta 100 al mes.\n\n¿Qué le pasa al costo fijo MEDIO a medida que se producen más tacos?",
+      "opciones": [
+        "Se queda en 100: el costo fijo no cambia, y por eso su promedio tampoco cambia",
+        "Sube, porque el mismo local tiene que aguantar cada vez más producción encima",
+        "Baja hasta cero exacto, y a partir de ahí el local deja de pesar en la cuenta",
+        "Baja siempre: 100 con un taco, 50 con dos, 20 con cinco; nunca llega a cero"
+      ],
+      "correcta": 3,
+      "explicacion": "El CFMe es CF/Q, o sea los mismos 100 repartidos entre cada vez más tacos. Su gráfico es una curva que cae y cae, acercándose al eje sin tocarlo nunca: por más que produzcas, el local siempre pesa algo. A esto se le dice «diluir el costo fijo», y es la razón de que producir más abarate el promedio."
+    },
+    {
+      "id": "b32-q5",
+      "nivel": "comprension",
+      "enunciado": "En la clase pasada vimos el producto marginal del trabajo. Ahora el costo marginal: CMg = ΔCT/ΔQ.\n\n¿Qué relación hay entre los dos?",
+      "opciones": [
+        "Ninguna: el PMgL vive en la teoría del productor y el CMg en la de costos, por separado",
+        "Son la misma curva con otro nombre: el CMg es el PMgL dibujado con el eje al revés",
+        "Son INVERSOS: CMg = w/PMgL, así que si el trabajador rinde más, el costo marginal baja",
+        "Son directos: cuando el PMgL sube, el CMg sube también, porque hay que pagar más jornales"
+      ],
+      "correcta": 2,
+      "explicacion": "La teoría de costos es la de producción mirada en el espejo. Si un trabajador cuesta w y agrega PMgL unidades, cada unidad extra sale w/PMgL: ese es el CMg. Con w = 10 y PMgL = 5 el CMg es 2; si el PMgL cae a 2, el CMg salta a 5. Lo mismo pasa con el par CVMe y PMeL: CVMe = w/PMeL."
+    },
+    {
+      "id": "b32-q6",
+      "nivel": "comprension",
+      "enunciado": "En el gráfico típico aparecen juntas la curva del CMg, la del CVMe y la del CMe, las tres con forma de U.\n\n¿Por dónde pasa el costo marginal?",
+      "opciones": [
+        "Por debajo de las otras dos todo el tiempo, sin llegar a cruzarlas en ningún punto",
+        "Las corta a las dos justo en sus puntos MÍNIMOS, primero al CVMe y después al CMe",
+        "Las corta a las dos en sus máximos, que es donde la producción ya no da para más",
+        "Las corta donde las dos se juntan, porque el CVMe y el CMe terminan pegándose al final"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la propiedad que más cae del gráfico, y tiene una lógica de promedios: mientras el marginal está por DEBAJO del promedio, lo tira para abajo; cuando lo pasa, lo empuja para arriba. Por eso lo cruza justo en el fondo de la U. Y lo cruza primero al CVMe y después al CMe, nunca al revés."
+    },
+    {
+      "id": "b32-q7",
+      "nivel": "aplicacion",
+      "enunciado": "La fábrica tiene CF = 100 y CV = Q³ − 6Q² + 20Q.\n\nCon Q = 5, ¿cuánto valen el costo total y el costo medio?",
+      "opciones": [
+        "CT = 275 y CMe = 55, sumándole al variable los 100 fijos de cada una de las unidades",
+        "CT = 75 y CMe = 15, que es el costo variable repartido entre las cinco unidades",
+        "CT = 175 y CMe = 20, que es el costo fijo medio con los 100 repartidos entre 5",
+        "CT = 175 y CMe = 35: el CV da 75, se le suman los 100 fijos y todo se reparte entre 5"
+      ],
+      "correcta": 3,
+      "explicacion": "Se reemplaza y se suma: CV(5) = 125 − 150 + 100 = 75, así que CT = 75 + 100 = 175. Y el medio es el reparto: CMe = 175/5 = 35. De control por el otro camino: CFMe = 100/5 = 20 y CVMe = 75/5 = 15, que suman los mismos 35."
+    },
+    {
+      "id": "b32-q8",
+      "nivel": "aplicacion",
+      "enunciado": "En esa misma fábrica, el CVMe toca su mínimo en Q = 3 y el CMe lo toca en Q = 5.\n\n¿Por qué el del CMe queda siempre más a la derecha?",
+      "opciones": [
+        "Porque al CMe se le suma el CFMe, que sigue cayendo y le estira la bajada un rato más",
+        "Porque el CMe se calcula con el costo total, que siempre es un número más grande",
+        "Es casualidad de estos números: con otra función el mínimo del CMe puede caer antes",
+        "Porque el costo marginal corta primero al CMe y recién después al CVMe"
+      ],
+      "correcta": 0,
+      "explicacion": "El CMe es CVMe + CFMe. En Q = 3 el CVMe ya tocó fondo y empieza a subir, pero el CFMe sigue cayendo, y esa caída le gana por un rato: el CMe sigue bajando. Recién cuando la subida del CVMe le gana a la caída del CFMe, el CMe toca su mínimo — acá en Q = 5, donde vale 35 y el CMg vale exactamente lo mismo."
+    },
+    {
+      "id": "b32-q9",
+      "nivel": "comprension",
+      "enunciado": "Te piden dibujar, en un mismo plano, el CFMe, el CVMe y el CMe.\n\n¿Qué forma tiene cada uno y cómo quedan entre sí?",
+      "opciones": [
+        "Las tres en U, y las tres tocan su mínimo en el mismo Q, que es donde conviene producir",
+        "Las tres caen sin parar, porque producir más siempre abarata el promedio de todo",
+        "El CFMe cae siempre; el CVMe y el CMe van en U, con el CMe arriba y a la derecha",
+        "El CFMe en U y los otros dos cayendo, porque el costo fijo es el único que tiene mínimo"
+      ],
+      "correcta": 2,
+      "explicacion": "Son tres formas distintas. El CFMe es una curva que solo cae. El CVMe y el CMe tienen forma de U, con el del CMe más a la derecha y más arriba. Y la distancia entre el CMe y el CVMe es justamente el CFMe: como ese pedazo se va achicando, las dos curvas se van juntando hacia la derecha sin llegar a tocarse."
+    }
+  ]
+}

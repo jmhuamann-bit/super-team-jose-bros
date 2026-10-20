@@ -443,6 +443,20 @@
       "abierto": true,
       "mapa": "levels/level31.json",
       "preguntas": "questions/level31_questions.json"
+    },
+    {
+      "id": "level32",
+      "clase": "Clase 08",
+      "distrito": "México",
+      "titulo": "El país donde todo cuesta lo mismo hasta que lo repartes",
+      "icono": "🌵",
+      "seccion": "PC3",
+      "seccionNota": "Teoría del productor y costos — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level32.json",
+      "preguntas": "questions/level32_questions.json"
     }
   ]
 }

@@ -1,0 +1,42 @@
+{
+  "id": "level32",
+  "distrito": "México",
+  "clase": "Clase 08 · PC3",
+  "titulo": "El país donde todo cuesta lo mismo hasta que lo repartes",
+  "tema": "mexico",
+  "musica": "mexico",
+  "vehiculo": "trajinera",
+  "intro": "Octava clase, y seguimos donde quedamos. La clase pasada miramos la producción: cuánto sale de una obra cuando un insumo está clavado. Hoy damos vuelta el mismo gráfico y miramos lo que CUESTA. Y es literalmente el mismo gráfico en el espejo: donde el producto marginal sube, el costo marginal baja, porque si el trabajador rinde más, cada unidad sale más barata. Toca México, y el ejemplo lo pone la taquería de la esquina: el local se paga igual vendas diez tacos o trescientos —ese es el costo fijo— pero la carne y la masa suben con cada taco —ese es el variable—. Y lo que al cliente le importa, lo que sale CADA taco, es el reparto de los dos entre cuántos hiciste. Ahí está el truco de toda la clase: el costo fijo no se mueve, pero el costo fijo MEDIO cae y cae.",
+  "repaso": [
+    "EL COSTO FIJO (CF) no depende de Q: es el mismo número produzcas lo que produzcas. En el gráfico es una RECTA HORIZONTAL de punta a punta. El alquiler del local, la máquina que ya compraste.",
+    "EL COSTO VARIABLE (CV) sí crece con Q: la materia prima, los jornales. Y es el espejo de la función de producción que vimos la clase pasada.",
+    "EL COSTO TOTAL ES LA SUMA: CT = CF + CV. En el gráfico, la curva del CT es la misma del CV pero levantada por el CF, y la distancia entre las dos es siempre la misma. En Q = 0 el CV vale cero y el CT ya vale el fijo.",
+    "EL COSTO MARGINAL (CMg) es cuánto sube el costo total al producir UNA unidad más: CMg = ΔCT/ΔQ, o la derivada. Y como el fijo no se mueve, da lo mismo derivar el CT o el CV.",
+    "LOS TRES MEDIOS SON REPARTOS: CMe = CT/Q, CFMe = CF/Q y CVMe = CV/Q. Y se cumple siempre que CMe = CFMe + CVMe: repartir el total de una vez o repartir cada pedazo y sumar da lo mismo.",
+    "EL CFMe SOLO CAE, nunca sube y nunca llega a cero. Con un fijo de 100: 100 con una unidad, 50 con dos, 20 con cinco, 10 con diez. Es la curva que se acerca al eje sin tocarlo, y se le dice «diluir el costo fijo».",
+    "EL ESPEJO CON LA PRODUCCIÓN, que es lo que une las dos clases: CMg = w/PMgL y CVMe = w/PMeL. Son INVERSOS. Si el trabajador rinde el doble, cada unidad sale la mitad.",
+    "POR ESO LAS CURVAS TIENEN FORMA DE U: mientras el PMgL sube, el CMg baja; cuando el PMgL empieza a caer, el CMg empieza a subir. El mínimo del CMg cae justo donde el PMgL tocó su máximo.",
+    "EL CMg CORTA AL CVMe Y AL CMe EN SUS MÍNIMOS, y esa es la propiedad que más cae. La lógica es de promedios: mientras el marginal va por DEBAJO del promedio, lo tira para abajo; cuando lo pasa, lo empuja para arriba.",
+    "Y LOS CORTA EN ESE ORDEN: primero al CVMe y después al CMe, nunca al revés. El mínimo del CMe queda siempre más a la derecha, porque el CFMe sigue cayendo y le estira la bajada un rato más.",
+    "EL EJEMPLO PARA TENER EN LA CABEZA: CF = 100 y CV = Q³ − 6Q² + 20Q. De ahí sale CMg = 3Q² − 12Q + 20, CVMe = Q² − 6Q + 20 y CMe = CVMe + 100/Q.",
+    "CON ESOS NÚMEROS, LOS DOS CRUCES SALEN REDONDOS: el CVMe toca su mínimo en Q = 3, donde vale 11, y el CMg en Q = 3 también vale 11. El CMe toca el suyo en Q = 5, donde vale 35, y el CMg en Q = 5 vale 35.",
+    "Y LA TABLA, PARA CONTROLAR: en Q = 5 el CV da 75, el CT da 175, el CFMe da 20, el CVMe da 15 y el CMe da 35. Si los dos caminos del CMe no te dan lo mismo, hay un error en alguna columna."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                AA                                                                                                                  ",
+    "                     o o                                       o o                                                                            o o                                   ",
+    "                                                                                                                                                                                    ",
+    "               o o  =====  o o                                ======                               o  o  o             o     o     o    o o  =====                                  ",
+    "             ?                                           V                   G  o      o                           L oo oo oo oo oo oo                o      1  L                   ",
+    "              =====       =====          o     o                                                  ==========                           =====        oo oo                 o o o     ",
+    "                                            E                                  ###    ###                                                                                           ",
+    "  P         E                     C    ===== =====         T               C   ### E  ###             E               X E   X     X                  E    C           B         M   ",
+    "#####################################              #################################################################################################################################",
+    "#####################################              #################################################################################################################################",
+    "#####################################              #################################################################################################################################"
+  ]
+}
