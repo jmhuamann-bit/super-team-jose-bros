@@ -1,0 +1,42 @@
+{
+  "id": "level33",
+  "distrito": "Brasil",
+  "clase": "Clase 09 · PC3",
+  "titulo": "El país donde la cuenta sale en línea recta",
+  "tema": "rio",
+  "musica": "rio",
+  "vehiculo": "bondinho",
+  "intro": "Novena clase, y es la más mecánica de todas: acá no hay que entender nada nuevo, hay que seguir una receta de cinco pasos sin saltearse ninguno. Te dan una función de producción, el salario, el alquiler y el capital fijo, y tenés que terminar con la función de costos escrita en Q. Toca Brasil, que viene al pelo para el caso de hoy: el ATÍPICO es el que sale en línea recta, el costo marginal no se mueve, y las curvas en U de la clase pasada desaparecen. Ojo con dos trampas que el apunte marca con diez céntimos de cuidado: cuando los factores son independientes la función sale PARTIDA en dos tramos y el costo fijo NO es el intercepto; y cuando son perfectamente complementarios la función de costos tiene TOPE, porque las máquinas no dan para más.",
+  "repaso": [
+    "LA RECETA SON CINCO PASOS Y NO SE SALTEA NINGUNO. (1) Isocuanta e isocosto. (2) Despejar L y meterlo en la isocosto. (3) El costo marginal. (4) Los medios. (5) El gráfico.",
+    "PASO 1 — LA ISOCUANTA es la función de producción con el K fijo ya metido adentro, o sea Q en función de L nomás. Y LA ISOCOSTO es siempre la misma: CT = wL + rK.",
+    "PASO 2 — SE DESPEJA L de la isocuanta y se lo mete en la isocosto. Lo que queda es el costo total expresado SOLO en Q, que es la función de costos que te están pidiendo.",
+    "CÓMO SE LEE ESA FUNCIÓN: el COSTO VARIABLE es el término que lleva Q (siempre tiene por lo menos una), y el COSTO FIJO es el término independiente, el que no tiene ninguna. En CT = 2Q + 45, el CV es 2Q y el CF es 45.",
+    "PASO 3 — EL COSTO MARGINAL. Si la función de costos salió LINEAL, el CMg es la pendiente, o sea el número que acompaña a Q, y se lee de mirarla. Si NO es lineal —cuadrática, cúbica, lo que sea— el problema te lo tiene que DAR, porque sacarlo pide derivadas y en el curso no se usan.",
+    "HAY TRES FORMAS DE QUE TE DEN EL CMg: en la propia función de costos; por definición («si la producción sube una unidad, el costo total sube 10»); o por el espejo con la producción, CMg = w/PMgL.",
+    "PASO 4 — LOS MEDIOS SON REPARTOS: CTMe = CT/Q, CVMe = CV/Q y CFMe = CF/Q. Y siempre se cumple CTMe = CVMe + CFMe.",
+    "TÍPICA CONTRA ATÍPICA, que es el corte de la clase. TÍPICA: el CMg sube o baja. ATÍPICA: el CMg es CONSTANTE, que es lo que pasa cuando el PMgL es constante, y ahí la función de costos sale LINEAL, de la forma CT = aQ + b.",
+    "EN EL CASO ATÍPICO NO HAY FORMA DE U, y esa es la gran diferencia con la clase pasada. El CVMe da el mismo número que el CMg, así que las dos son la MISMA recta horizontal. Y el CTMe solo cae, acercándose a esa recta por arriba sin tocarla.",
+    "EL EJEMPLO PARA TENER A MANO: Q = 2·L·√K con w = 12, r = 5 y K = 9. La isocuanta queda Q = 6L, o sea L = Q/6, y la función de costos CT = 12(Q/6) + 5(9) = 2Q + 45. CMg = 2, CVMe = 2, CFMe = 45/Q y CTMe = 2 + 45/Q, que vale 11 en Q = 5, 5 en Q = 15 y 3 en Q = 45.",
+    "PRIMERA TRAMPA — FACTORES INDEPENDIENTES. Si en la función de producción el K y el L se SUMAN (sustitutos, o cualquiera que sume), cada uno produce solo, y la función de costos se dibuja PARTIDA en dos tramos: el primero es lo que cuesta el factor fijo produciendo solo, y el segundo lo que agrega el variable.",
+    "Y EN ESE CASO EL COSTO FIJO NO ES EL INTERCEPTO. Con Q = 2L + 4K, w = 2, r = 1 y K = 4: las máquinas solas hacen 16 unidades y cuestan 4. El segundo tramo queda CT = Q − 12, pero el costo fijo es 4, no −12. El intercepto es solo el resultado de haber despejado.",
+    "SEGUNDA TRAMPA — PERFECTAMENTE COMPLEMENTARIOS. La función de costos NO va hasta el infinito: tiene un TOPE que ponen las máquinas. Con Q = mín(L/2; K/3) y K = 30, el máximo es Q = 10, hacen falta 20 obreros y el costo total ahí es 380. Pasado ese punto no hay función, porque no hay con qué producir."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                      AA                                                                            ",
+    "                    o o                                                                              o o                   o o                                                      ",
+    "                                                                                                                                                                                    ",
+    "              o o  =====             o     o     o                                                  ======           o o  =====  o o       o  o  o                                  ",
+    "             ?              o    V oo oo oo oo oo oo                       G  o      o         L                                                             1  L                   ",
+    "             =====        oo oo                            o     o                                                  =====       =====     ==========                      o o o     ",
+    "                                                              E              ###    ###                                                                                             ",
+    "  P                        E        X E   X     X   C    ===== =====     C   ###    ###          T           E    E                           E           C           B         M   ",
+    "#######################################################              ###############################################################################################################",
+    "#######################################################              ###############################################################################################################",
+    "#######################################################              ###############################################################################################################"
+  ]
+}

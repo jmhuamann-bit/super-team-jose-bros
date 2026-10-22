@@ -3966,6 +3966,190 @@ export const TEMAS = {
       }
     },
   },
+
+  rio: {
+    nombre: "Brasil",
+    cielo: [[0, "#2f86c8"], [0.4, "#7fb6d8"], [0.7, "#f2dcb0"], [0.8, "#2e3028"], [1, "#161a12"]],
+    suelo: { cara: "#e0cc9a", borde: "#f0e0b8", tierra: "#6b5a38", plataforma: "#a07a44", plataformaBorde: "#e8c45a" },
+    acento: "#2f8a5a",
+
+    bichos: ["balon", "tucan", "tamborim", "chancleta", "pluma", "capivara"],
+    nombresBichos: [
+      "El Balón que Se Saltea la Receta",
+      "El Tucán que No Separa Fijo de Variable",
+      "El Tamborim que Quiere Derivar",
+      "La Chancleta que Cree que Atípico Es Raro",
+      "La Pluma que Dibuja Us de Más",
+      "La Capivara del Intercepto Engañoso",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "momo",
+    nombreJefe: "El Rei Momo del Tope Ignorado",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol de la tarde, bien alto
+      ctx.fillStyle = "rgba(255,246,210,.24)";
+      ctx.beginPath(); ctx.arc(236, 70, 62, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,252,232,.84)";
+      ctx.beginPath(); ctx.arc(236, 70, 24, 0, Math.PI * 2); ctx.fill();
+
+      // LAS NUBES de calor, gordas y despacio
+      repetir(ctx, cam, 318, 0.03, (x, i) => {
+        const by = 38 + ((i * 49) % 56);
+        ctx.fillStyle = "rgba(252,250,246,.50)";
+        ctx.fillRect(x, by, 124, 12);
+        ctx.fillRect(x + 20, by - 8, 80, 9);
+      });
+
+      // LOS MORROS DE GRANITO, que es la silueta que no tiene ningún otro lado:
+      // paredones redondeados que caen derecho al agua
+      repetir(ctx, cam, 352, 0.05, (x, i) => {
+        const base = 318;
+        for (const [dx, ancho, alto] of [[0, 78, 128], [96, 56, 92], [168, 104, 162]]) {
+          const bx = x + dx;
+          ctx.fillStyle = elige(["rgba(108,118,112,.80)", "rgba(96,106,100,.80)"], i + dx);
+          ctx.beginPath();
+          ctx.moveTo(bx, base);
+          ctx.quadraticCurveTo(bx + ancho * 0.12, base - alto * 0.94, bx + ancho * 0.5, base - alto);
+          ctx.quadraticCurveTo(bx + ancho * 0.88, base - alto * 0.94, bx + ancho, base);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "rgba(58,104,62,.56)";        // la selva trepando el morro
+          ctx.beginPath();
+          ctx.moveTo(bx, base);
+          ctx.quadraticCurveTo(bx + ancho * 0.3, base - alto * 0.44, bx + ancho * 0.56, base - alto * 0.36);
+          ctx.quadraticCurveTo(bx + ancho * 0.8, base - alto * 0.3, bx + ancho, base);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+
+      // EL CASARÍO COLONIAL, cada casa de un color y con su balconcito
+      repetir(ctx, cam, 108, 0.2, (x, i) => {
+        const bx = x, base = 318;
+        const alto = 46 + ((i * 21) % 20);
+        ctx.fillStyle = elige(["#e0632c", "#3f8a9a", "#e8b43c", "#c04a7a", "#5f9a4a", "#5f7fc0"], i);
+        ctx.fillRect(bx, base - alto, 44, alto);
+        ctx.fillStyle = "#f4eede";                      // la cornisa
+        ctx.fillRect(bx - 3, base - alto - 5, 50, 6);
+        ctx.fillStyle = "rgba(246,240,226,.72)";        // las ventanas altas
+        for (let py = base - alto + 9; py < base - 24; py += 17) {
+          for (const px of [7, 26]) {
+            ctx.fillRect(bx + px, py, 11, 13);
+            ctx.fillStyle = "rgba(60,46,36,.40)";
+            ctx.fillRect(bx + px, py + 6, 11, 1);
+            ctx.fillStyle = "rgba(246,240,226,.72)";
+          }
+        }
+        ctx.fillStyle = "#6b4a2a";
+        ctx.fillRect(bx + 16, base - 22, 13, 22);       // la puerta
+        if (i % 3 === 0) {                              // una palmera entre las casas
+          const px = bx + 52;
+          ctx.fillStyle = "#8a6a3e";
+          ctx.fillRect(px, base - 56, 5, 56);
+          ctx.fillStyle = "#2f7a3a";
+          for (const [dx, dy] of [[-16, -3], [-11, -11], [11, -11], [16, -3], [0, -15]]) {
+            ctx.beginPath();
+            ctx.ellipse(px + 2 + dx, base - 58 + dy, 11, 4, dx * 0.05, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+      });
+
+      // EL SUELO: del pie del casarío al paseo, sin cortes. En el medio va EL
+      // MAR, y abajo LA VEREDA DE OLAS, que es la postal de la playa
+      ctx.fillStyle = "#3f7a4a";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 12);
+      ctx.fillStyle = "#2f7f9a";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#46a0b4";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 6);
+      for (let i = 0; i < 30; i++) {                    // la espuma de las olas
+        const x = (i * 58 - cam * 0.17) % 1060 - 60;
+        ctx.fillStyle = "rgba(238,248,246,.44)";
+        ctx.fillRect(x, 328 + ((i * 11) % 14), 26, 2);
+        ctx.fillStyle = "rgba(22,66,80,.26)";
+        ctx.fillRect(x + 14, 338 + ((i * 7) % 8), 20, 2);
+      }
+      ctx.fillStyle = "#f0e4c4";                        // la arena del borde
+      ctx.fillRect(0, 346, CFG.ANCHO_VISTA, 6);
+      ctx.fillStyle = "#e6dabe";                        // el paseo
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 32);
+      for (let i = 0; i < 26; i++) {                    // LAS OLAS DEL MOSAICO
+        const x = (i * 44 - cam * 0.5) % 1060 - 60;
+        ctx.fillStyle = "rgba(104,94,78,.46)";          // la ola, apagada a propósito
+        ctx.beginPath();
+        ctx.moveTo(x, 356);
+        ctx.quadraticCurveTo(x + 11, 348, x + 22, 356);
+        ctx.quadraticCurveTo(x + 33, 364, x + 44, 356);
+        ctx.lineTo(x + 44, 362);
+        ctx.quadraticCurveTo(x + 33, 370, x + 22, 362);
+        ctx.quadraticCurveTo(x + 11, 354, x, 362);
+        ctx.closePath(); ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(x, 370);
+        ctx.quadraticCurveTo(x + 11, 362, x + 22, 370);
+        ctx.quadraticCurveTo(x + 33, 378, x + 44, 370);
+        ctx.lineTo(x + 44, 376);
+        ctx.quadraticCurveTo(x + 33, 384, x + 22, 376);
+        ctx.quadraticCurveTo(x + 11, 368, x, 376);
+        ctx.closePath(); ctx.fill();
+      }
+
+      // LA BARRACA DE LA PLAYA, con su techo de paja y la sombrilla al lado
+      repetir(ctx, cam, 296, 0.54, (x, i) => {
+        const bx = x + 40, base = 382;
+        ctx.fillStyle = "#c2a060";                      // el mostrador
+        ctx.fillRect(bx, base - 26, 74, 26);
+        ctx.fillStyle = "#8a6a3a";
+        ctx.fillRect(bx, base - 26, 74, 4);
+        ctx.fillStyle = elige(["#c0392b", "#2f8a5a", "#e8902c"], i);
+        ctx.fillRect(bx + 6, base - 18, 62, 8);         // la franja pintada
+        ctx.fillStyle = "#b5934a";                      // el techo de paja
+        ctx.beginPath();
+        ctx.moveTo(bx - 10, base - 26);
+        ctx.lineTo(bx + 37, base - 50);
+        ctx.lineTo(bx + 84, base - 26);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(110,86,42,.34)";
+        for (let k = 0; k < 6; k++) ctx.fillRect(bx - 4 + k * 14, base - 32, 10, 3);
+        const sx = bx + 98;                             // la sombrilla
+        ctx.fillStyle = "#8a6a3a";
+        ctx.fillRect(sx, base - 34, 3, 34);
+        ctx.fillStyle = elige(["#e8c45a", "#3f7fc0"], i);
+        ctx.beginPath(); ctx.ellipse(sx + 1, base - 34, 20, 7, 0, Math.PI, 0); ctx.fill();
+      });
+
+      // LOS COCOS en el borde del paseo
+      repetir(ctx, cam, 94, 0.78, (x, i) => {
+        const bx = x + 20, base = 382;
+        ctx.fillStyle = "#6b4a2a";
+        for (let k = 0; k < 3; k++) {
+          ctx.beginPath(); ctx.arc(bx + k * 8, base - 5, 5, 0, Math.PI * 2); ctx.fill();
+        }
+        ctx.fillStyle = "#8a6a3a";
+        ctx.fillRect(bx - 3, base - 1, 24, 2);
+      });
+      ctx.fillStyle = "#c2b89a";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // el calor que tiembla sobre el mosaico
+      for (let i = 0; i < 16; i++) {
+        const x = (i * 59 + Math.sin(t / 23 + i) * 8) % 1000 - 40;
+        ctx.fillStyle = "rgba(255,246,210,.10)";
+        ctx.fillRect(x, 350 + ((i * 9) % 28), 28, 2);
+      }
+      // y las flores del ipê, que caen todo el tiempo
+      for (let i = 0; i < 22; i++) {
+        const x = (i * 83 + t * 0.7 + Math.sin(t / 17 + i) * 14) % 1040 - 40;
+        const y = (i * 61 + t * 1.5) % 420;
+        ctx.fillStyle = i % 3 ? "rgba(238,186,56,.60)" : "rgba(226,146,196,.52)";
+        ctx.fillRect(x, y, 3, 3);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

@@ -457,6 +457,20 @@
       "abierto": true,
       "mapa": "levels/level32.json",
       "preguntas": "questions/level32_questions.json"
+    },
+    {
+      "id": "level33",
+      "clase": "Clase 09",
+      "distrito": "Brasil",
+      "titulo": "El país donde la cuenta sale en línea recta",
+      "icono": "🥥",
+      "seccion": "PC3",
+      "seccionNota": "Teoría del productor y costos — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level33.json",
+      "preguntas": "questions/level33_questions.json"
     }
   ]
 }

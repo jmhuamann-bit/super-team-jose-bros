@@ -1,0 +1,125 @@
+{
+  "nivel": "level33",
+  "clase": "Clase 09 · PC3 — Teoría de costos atípica (análisis matemático)",
+  "fuente": "Apuntes de la 9na clase — Teoría de costos atípica, matemática (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b33-q1",
+      "nivel": "comprension",
+      "enunciado": "Te dan una función de producción, el salario w, el alquiler r y el capital fijo K, y te piden la función de costos en términos de Q.\n\n¿Cuáles son los dos primeros pasos de la receta?",
+      "opciones": [
+        "Armar la isocuanta con el K fijo, y después despejar L de ahí y meterlo en la isocosto",
+        "Derivar la función de producción, que es de donde sale directo el costo marginal",
+        "Armar la isocosto, igualarla a cero y despejar el Q que deja el costo más chico de todos",
+        "Dividir el costo total entre Q, que es lo que deja todo expresado por unidad producida"
+      ],
+      "correcta": 0,
+      "explicacion": "Son los dos pasos de oro y van en ese orden. Primero la ISOCUANTA, que es la función de producción con el K fijo ya puesto adentro. Segundo, se despeja L de esa isocuanta y se lo mete en la ISOCOSTO (CT = wL + rK). Lo que queda es el costo total expresado solo en Q, y de ahí salen el variable y el fijo."
+    },
+    {
+      "id": "b33-q2",
+      "nivel": "comprension",
+      "enunciado": "Después de aplicar la receta te queda la función de costos CT = 2Q + 45.\n\n¿Cuál es el costo variable y cuál el costo fijo?",
+      "opciones": [
+        "El 2 es el variable y el 45 el fijo: se miran los coeficientes, no los términos",
+        "2Q es el variable y 45 el fijo: el que lleva Q varía, el término solo no",
+        "45Q sería el variable y 2 el fijo; están al revés por cómo se escribe la función",
+        "Los dos son variables: los dos forman parte de lo que cuesta producir"
+      ],
+      "correcta": 1,
+      "explicacion": "La regla es de lectura y no falla: el COSTO VARIABLE siempre lleva por lo menos una Q adentro, y el COSTO FIJO es el término independiente, el que no tiene ninguna Q. Acá CV = 2Q y CF = 45. Con Q = 0 el variable se hace cero y el costo total ya vale los 45 del fijo."
+    },
+    {
+      "id": "b33-q3",
+      "nivel": "aplicacion",
+      "enunciado": "La fábrica tiene Q = 2·L·√K, con w = 12, r = 5 y K = 9 máquinas fijas.\n\n¿Cuál es su función de costos y cuánto vale el costo marginal?",
+      "opciones": [
+        "CT = 12Q + 45, y el CMg es 12, que es el salario que se le paga a cada obrero",
+        "CT = 6Q + 45, y el CMg es 6, que es lo que produce cada trabajador con esas máquinas",
+        "No se puede: para el costo marginal hace falta derivar, y eso no se usa en el curso",
+        "CT = 2Q + 45, y el CMg es 2: si sale lineal, el CMg acompaña a la Q"
+      ],
+      "correcta": 3,
+      "explicacion": "Con K = 9 la isocuanta queda Q = 6L, así que L = Q/6. Metiéndolo en CT = wL + rK: CT = 12(Q/6) + 5(9) = 2Q + 45. Y como la función salió LINEAL, el costo marginal es la pendiente: 2. No hace falta derivar nada. Control por el otro camino: CMg = w/PMgL = 12/6 = 2."
+    },
+    {
+      "id": "b33-q4",
+      "nivel": "comprension",
+      "enunciado": "En el curso las derivadas están prohibidas, pero el costo marginal igual hay que sacarlo.\n\n¿Qué pasa si la función de costos NO es lineal, por ejemplo cúbica?",
+      "opciones": [
+        "Se usa el término de mayor grado, que es el que manda si no es recta",
+        "Se saca igual la pendiente entre los dos extremos de la función, que da el mismo número",
+        "El problema te lo tiene que DAR: si no es lineal, el CMg pide derivadas",
+        "Se divide el costo total entre Q, porque ahí el marginal y el medio terminan siendo iguales"
+      ],
+      "correcta": 2,
+      "explicacion": "La regla del curso es clara: si la función de costos es lineal, el CMg es el número que acompaña a Q y sale de mirarla. Si es cuadrática, cúbica o cualquier otra cosa, el enunciado te tiene que dar el costo marginal, porque sacarlo pide derivadas. Si no te lo dieron y no es lineal, volvé a leer: el dato está en alguna parte."
+    },
+    {
+      "id": "b33-q5",
+      "nivel": "comprension",
+      "enunciado": "¿Cuál es la diferencia entre una función de costos de corto plazo TÍPICA y una ATÍPICA?",
+      "opciones": [
+        "La típica es lineal y la atípica es curva: atípica quiere decir que no sale una recta",
+        "La típica tiene costo fijo y la atípica no, porque todos sus costos varían con la producción",
+        "La típica se saca con la receta y la atípica hay que resolverla con tablas, caso por caso",
+        "La típica tiene CMg creciente o decreciente; la atípica lo tiene CONSTANTE, y sale lineal"
+      ],
+      "correcta": 3,
+      "explicacion": "Es el mismo corte que en producción, visto del otro lado. TÍPICA: el costo marginal sube o baja, porque sigue la ley de rendimientos marginales crecientes o decrecientes. ATÍPICA: el costo marginal es CONSTANTE, que es lo que pasa cuando el PMgL es constante. Y ahí la función de costos sale lineal, de la forma CT = aQ + b."
+    },
+    {
+      "id": "b33-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Volvemos a CT = 2Q + 45, que es atípica.\n\n¿Qué forma tienen el CTMe, el CVMe y el CMg cuando se los dibuja juntos?",
+      "opciones": [
+        "Los tres en U, que es la forma de siempre de las curvas de costos medios y marginal",
+        "El CMg y el CVMe son la MISMA horizontal en 2; y el CTMe cae y se les arrima por arriba",
+        "El CMg es horizontal y el CVMe sube, porque cada unidad extra va costando un poco más",
+        "El CTMe sube desde el origen y corta al CMg justo en el punto donde el CVMe toca su mínimo"
+      ],
+      "correcta": 1,
+      "explicacion": "Acá NO hay forma de U, y esa es la gran diferencia con la clase pasada. El CVMe es 2Q/Q = 2, el mismo número que el CMg: las dos son la misma recta horizontal, una encima de la otra. Y el CTMe es 2 + 45/Q, que solo cae: en Q = 5 vale 11, en Q = 15 vale 5, en Q = 45 vale 3, y se va acercando al 2 sin llegar nunca."
+    },
+    {
+      "id": "b33-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Un taller tiene factores INDEPENDIENTES: Q = 2L + 4K, con w = 2, r = 1 y K = 4 máquinas.\n\n¿Qué tiene de especial su función de costos?",
+      "opciones": [
+        "Sale PARTIDA en dos tramos: hasta Q = 16 cuesta 4 fijo, y recién de ahí sube",
+        "Que no tiene costo fijo, porque las máquinas y los obreros se suman en vez de necesitarse",
+        "Que sale igual que cualquier otra: la receta no cambia por cómo se combinen los insumos",
+        "Que el costo fijo es 12, que es el número que queda suelto al armar la función de costos"
+      ],
+      "correcta": 0,
+      "explicacion": "Cuando K y L se SUMAN en la función de producción, cada uno puede producir solo, y la función de costos se dibuja partida. Las 4 máquinas solas ya hacen 4(4) = 16 unidades y cuestan r·K = 4: ese es el primer tramo, plano. Recién pasadas las 16 hacen falta obreros, y ahí el costo empieza a subir con pendiente 1."
+    },
+    {
+      "id": "b33-q8",
+      "nivel": "aplicacion",
+      "enunciado": "En ese mismo taller, el segundo tramo de la función de costos queda CT = Q − 12.\n\n¿Cuál es el costo fijo?",
+      "opciones": [
+        "−12, que es el intercepto de la función, aunque dé negativo por cómo quedó despejada",
+        "12, el mismo número del intercepto pero en positivo, porque un costo no puede ser negativo",
+        "4: lo que cuestan las máquinas, que se paga igual aunque no se produzca nada",
+        "No hay costo fijo: si el intercepto es negativo, significa que no hay nada que pagar sin producir"
+      ],
+      "correcta": 2,
+      "explicacion": "Es la trampa que el apunte marca con diez céntimos de cuidado: en los factores independientes el costo fijo NO es el intercepto de la función de costos. El −12 es solo el resultado algebraico de haber despejado. El costo fijo es lo que pagás con Q = 0, o sea las máquinas: r·K = 1(4) = 4."
+    },
+    {
+      "id": "b33-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Una fábrica tiene Q = mín(L/2; K/3), con w = 4, r = 10 y K = 30 máquinas fijas.\n\n¿Hasta dónde llega su función de costos y cuánto cuesta ese tope?",
+      "opciones": [
+        "Llega hasta Q = 10 y ahí cuesta 380, pero es el tope: con esas máquinas no se produce más",
+        "No tiene tope: la función de costos sigue subiendo mientras se sigan contratando obreros",
+        "Llega hasta Q = 30, que son las máquinas, y en ese punto el costo total es de 540 soles",
+        "Llega hasta Q = 15, que es la mitad de las máquinas por el 2 que divide a los trabajadores"
+      ],
+      "correcta": 0,
+      "explicacion": "Con perfectamente complementarios la función de costos NO va hasta el infinito: el tope lo ponen las máquinas. Con K = 30 y la receta de 3 por unidad, el máximo es Q = 30/3 = 10. Para llegar ahí hacen falta L = 2(10) = 20 obreros, y el costo es CT = 4(20) + 10(30) = 380. De ahí para arriba no hay función, porque no hay con qué producir."
+    }
+  ]
+}

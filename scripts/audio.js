@@ -215,6 +215,14 @@ const TEMAS_MUSICA = {
               "E5",1,"D5",1,"C5",1,"B4",1,"A4",4],
     bajo:    ["A2",4,"E3",4,"A2",4,"D3",4,"C3",4,"G2",4,"E3",4,"A2",4],
   },
+  rio: { // Brasil: samba de rueda, con el bajo sincopado y la melodía arriba del tiempo
+    tempo: 0.18, onda: "triangle",
+    melodia: ["E4",2,"G4",1,"A4",1,"B4",2,"A4",1,"G4",1,"E4",2,"D4",2,
+              "E4",2,"G4",1,"B4",1,"D5",2,"B4",1,"A4",1,"G4",4,
+              "A4",2,"B4",1,"C5",1,"B4",2,"A4",1,"G4",1,"E4",4,
+              "D4",2,"E4",1,"G4",1,"A4",2,"G4",1,"E4",1,"E4",4],
+    bajo:    ["E2",4,"B2",4,"A2",4,"E2",4,"C3",4,"B2",4,"E2",8],
+  },
   mexico: { // México: son jarocho de plaza, saltarín y con el bajo marcando el zapateo
     tempo: 0.20, onda: "triangle",
     melodia: ["G4",2,"B4",2,"D5",2,"B4",2,"G4",2,"A4",2,"B4",4,

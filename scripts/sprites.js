@@ -3072,6 +3072,155 @@ const TRAJINERA = [    // la trajinera de Xochimilco, que es el vehículo de sal
 ];
 const P_TRAJINERA = { k: "#2e2014", c: "#3f8a9a", a: "#e8c45a", f: "#c0392b", b: "#8a5a2a" };
 
+const BALON = [    // el balón: se saltea la receta y no despeja la L antes de meterla en la isocosto (18 × 14)
+  "......kkkkkk......",
+  "..kkkkbbbbbbkkkk..",
+  ".knnnbbbbbbbbnnnk.",
+  ".knnnbbbbbbbbnnnk.",
+  ".knnnbbbbbbbbnnnk.",
+  ".kbbbbbnnnnbbbbbk.",
+  ".kbbbbbnnnnbbbbbk.",
+  ".kbbbbbnnnnbbbbbk.",
+  ".kbbbbbbbbbbbbbbk.",
+  "knnnbbbbbbbbbbnnnk",
+  "knnnbbbbbbbbbbnnnk",
+  "knnnbbbbnnbbbbnnnk",
+  ".kkkbbbnnnnbbbkkk.",
+  "....kkbbnnbbkk....",
+];
+const P_BALON = { k: "#1a1a1a", b: "#f4f1e8", n: "#2a2a2e" };
+
+const TUCAN = [    // el tucán: no distingue cuál término de la función de costos es el fijo y cuál el variable (18 × 14)
+  "..................",
+  ".........kkkkk....",
+  ".kkkkkkkknnnnnk...",
+  "koooopppppnwwnnk..",
+  "koooopppppnnnnnk..",
+  "kpppppppppnnnnnnk.",
+  "kprrrrrrrpnnnnnnk.",
+  ".kkkkkknnnnnnnnnk.",
+  ".......knnnnnnnk..",
+  ".......knnnnnnnnk.",
+  "........knnnnnnnk.",
+  "........knnnnnnnk.",
+  "........knnnooonk.",
+  "........knnnooonk.",
+];
+const P_TUCAN = { k: "#15150f", n: "#2a2a2e", p: "#e8a02c", o: "#f0d24a", r: "#c0392b", w: "#f4f1e8" };
+
+const TAMBORIM = [    // el tamborim: quiere derivar cuando la función es lineal, o se traba cuando no lo es (18 × 14)
+  "......kkkk...kkkk.",
+  "....kkaaaakkkmmmmk",
+  "...kaaaoaaaakmmmmk",
+  "..koaappppaaokmmk.",
+  ".kaappppppppaammk.",
+  ".kappppppppppammk.",
+  "kaappppppppppammk.",
+  "kaoppppppppppommk.",
+  "kaappppppppppammk.",
+  ".kappppppppppammk.",
+  ".kaappppppppaakk..",
+  "..koaappppaaok....",
+  "...kaaaaaaaak.....",
+  "....kkaaoakk......",
+];
+const P_TAMBORIM = { k: "#2a1a10", a: "#c0392b", p: "#f0e8d4", o: "#e8c45a", m: "#a0703a" };
+
+const CHANCLETA = [    // la chancleta: cree que atípico quiere decir raro, y quiere decir costo marginal constante (18 × 14)
+  ".....kkkkkkkkk....",
+  "....ksssssssssk...",
+  "....kaaaaaaaaak...",
+  "....kaaaaaaaaak...",
+  ".....kssaaassk....",
+  "....ksssaassssk...",
+  "....ksssaassssk...",
+  "....ksssssssssk...",
+  "....ksssssssssk...",
+  "....ksssssssssk...",
+  "....ksssssssssk...",
+  "....kbbbbbbbbk....",
+  "....kbbbbbbbbk....",
+  ".....kksssssk.....",
+];
+const P_CHANCLETA = { k: "#2a1a18", s: "#f0e8d4", a: "#2f6f4a", b: "#e8c45a" };
+
+const PLUMA = [    // la pluma: dibuja las curvas en U cuando en el caso atípico no hay ninguna U (18 × 14)
+  "........kvk.......",
+  ".....k.kvvk.k.....",
+  "..k.kokkvvkkak..k.",
+  ".krkoookvvkaak.kpk",
+  "krkkkookvvkaakkpk.",
+  ".krrkkokvvkakkppk.",
+  "..krkkokvvaakkpk..",
+  "...krkoovvaakpk...",
+  "...krrkovvakppk...",
+  "....krrovaappk....",
+  ".....krovappk.....",
+  "......kmmmmk......",
+  "......kmmmmk......",
+  "......kmmmmk......",
+];
+const P_PLUMA = { k: "#2a1a28", r: "#c0392b", o: "#e8902c", v: "#3f9a5a", a: "#3f7fc0", p: "#c04a9a", m: "#8a5a2a" };
+
+const CAPIVARA = [    // la capivara: con factores independientes se cree que el costo fijo es el intercepto (18 × 14)
+  "..................",
+  "..........kk.kk...",
+  ".........kcckcck..",
+  ".........kcckcck..",
+  ".........kcccccck.",
+  ".kkkkkkkkkcccccck.",
+  "kccccccccccckcccck",
+  "ooccccccccccccccnk",
+  "ooccccccccccccccck",
+  "oocccccccccccccck.",
+  "kccccccccccckkkk..",
+  "kccccccccccck.....",
+  ".kookookookook....",
+  ".kookookookook....",
+];
+const P_CAPIVARA = { k: "#2e2014", c: "#a87446", n: "#3a2a1e", o: "#8a5a34" };
+
+const MOMO = [    // jefe: el Rei Momo, que manda producir sin fijarse en el tope que ponen las máquinas (18 × 17)
+  "...kooooooooook...",
+  "...koooooooooook..",
+  "....kppppppppkk...",
+  "....kppppppppk....",
+  "....kppkppkppk....",
+  "....kppppppppk....",
+  "....kppkkkkppk....",
+  "....kpnnnnnnpk....",
+  "...kkkwwwwwwkkk...",
+  "..kpvvwwwwwwpppk..",
+  "..kppvvwwwwwpppk..",
+  "..kpppvvwwwwpppk..",
+  "..kpppwvvwwwpppk..",
+  "..kwwwwwvvwwwwwk..",
+  "..kwwwwwwvvwwwwk..",
+  "...kwnnnwwnnnwk...",
+  "....knnnwwnnnk....",
+];
+const P_MOMO = { k: "#2a1a24", o: "#e8c45a", p: "#c98a4e", n: "#3a2a28", w: "#f0e8d4", v: "#2f8a5a" };
+
+const BONDINHO = [    // el bondinho del Pan de Azúcar, que es el vehículo de salida del distrito (32 × 16)
+  "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+  "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+  "kkkkkkkkkkkkkkmmmmkkkkkkkkkkkkkk",
+  "...........kmmmmmmmmk...........",
+  ".....kkkkkkkmmmmmmmmkkkkkkk.....",
+  "....kooooooooooooooooooooook....",
+  "....kooooooooooooooooooooook....",
+  "...kcccccccccccccccccccccccck...",
+  "...kccccvvvvvvccvvvvvvcccccck...",
+  "...kccccvvvvvvccvvvvvvcccccck...",
+  "...kccccvvvvvvccvvvvvvcccccck...",
+  "...kccccvvvvvvccvvvvvvcccccck...",
+  "...kcccccccccccccccccccccccck...",
+  "....kooooooooooooooooooooook....",
+  "....kooooooooooooooooooooook....",
+  ".....kkkkkkkkkkkkkkkkkkkkkk.....",
+];
+const P_BONDINHO = { k: "#2a1a18", m: "#6b6358", c: "#d9542c", o: "#f0e8d4", v: "#9fc2cc" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -3249,6 +3398,14 @@ const DEFINICIONES = {
   mascara:      [MASCARA, P_MASCARA],
   catrina:      [CATRINA, P_CATRINA],
   trajinera:    [TRAJINERA, P_TRAJINERA],
+  balon:        [BALON, P_BALON],
+  tucan:        [TUCAN, P_TUCAN],
+  tamborim:     [TAMBORIM, P_TAMBORIM],
+  chancleta:    [CHANCLETA, P_CHANCLETA],
+  pluma:        [PLUMA, P_PLUMA],
+  capivara:     [CAPIVARA, P_CAPIVARA],
+  momo:         [MOMO, P_MOMO],
+  bondinho:     [BONDINHO, P_BONDINHO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

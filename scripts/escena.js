@@ -290,6 +290,13 @@ const FICHAS = [
   { sprite: "maraca", nombre: "La Maraca que No Ve el Espejo", texto: "No se da cuenta de que la teoría de costos es la de producción en el espejo: CMg = w/PMgL y CVMe = w/PMeL, inversos los dos." },
   { sprite: "mascara", nombre: "La Máscara que No Sabe Dónde Cruza", texto: "El costo marginal corta al CVMe y al CMe justo en sus MÍNIMOS, y en ese orden. Mientras el marginal va por debajo, tira el promedio para abajo." },
   { sprite: "catrina", nombre: "La Catrina de la Tabla Completa", texto: "Jefe de México: tiene las siete columnas de la tabla y se le mezclan. El control es que el costo medio dé lo mismo por los dos caminos." },
+  { sprite: "balon", nombre: "El Balón que Se Saltea la Receta", texto: "Brasil: quiere la función de costos sin pasar por los dos pasos de oro — armar la isocuanta con el K fijo, y recién ahí despejar la L y meterla en la isocosto." },
+  { sprite: "tucan", nombre: "El Tucán que No Separa Fijo de Variable", texto: "Lee mal la función. El costo VARIABLE es el término que lleva Q; el FIJO es el que no tiene ninguna. En CT = 2Q + 45 son 2Q y 45." },
+  { sprite: "tamborim", nombre: "El Tamborim que Quiere Derivar", texto: "Si la función es lineal, el costo marginal es el número que acompaña a Q y se lee de mirarla. Si no es lineal, el problema te lo tiene que dar." },
+  { sprite: "chancleta", nombre: "La Chancleta que Cree que Atípico Es Raro", texto: "Atípico no quiere decir raro: quiere decir costo marginal CONSTANTE, que es lo que pasa cuando el producto marginal también lo es." },
+  { sprite: "pluma", nombre: "La Pluma que Dibuja Us de Más", texto: "En el caso atípico no hay forma de U: el CMg y el CVMe son la misma recta horizontal, y el CTMe solo cae acercándose a ella por arriba." },
+  { sprite: "capivara", nombre: "La Capivara del Intercepto Engañoso", texto: "Con factores independientes la función sale partida en dos tramos, y el costo fijo NO es el intercepto: es lo que se paga con Q = 0." },
+  { sprite: "momo", nombre: "El Rei Momo del Tope Ignorado", texto: "Jefe de Brasil: manda producir cada vez más sin mirar que con perfectamente complementarios la función de costos tiene un tope, el que ponen las máquinas." },
 ];
 
 export function galeriaPersonajes(contenedor) {
