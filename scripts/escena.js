@@ -297,6 +297,13 @@ const FICHAS = [
   { sprite: "pluma", nombre: "La Pluma que Dibuja Us de Más", texto: "En el caso atípico no hay forma de U: el CMg y el CVMe son la misma recta horizontal, y el CTMe solo cae acercándose a ella por arriba." },
   { sprite: "capivara", nombre: "La Capivara del Intercepto Engañoso", texto: "Con factores independientes la función sale partida en dos tramos, y el costo fijo NO es el intercepto: es lo que se paga con Q = 0." },
   { sprite: "momo", nombre: "El Rei Momo del Tope Ignorado", texto: "Jefe de Brasil: manda producir cada vez más sin mirar que con perfectamente complementarios la función de costos tiene un tope, el que ponen las máquinas." },
+  { sprite: "columna", nombre: "La Columna que Afirma sin Demostrar", texto: "Grecia: dice que el costo variable medio tiene que ver con el producto medio, pero no lo demuestra. Son tres pasos: wL, dividido entre Q, y dar vuelta la fracción." },
+  { sprite: "lechuza", nombre: "La Lechuza que Cree lo que Lee", texto: "Se come lo que encuentra sin pedir sustento. Que el PMgL y el CMg van al revés es CIERTO, y se prueba en un renglón: CMg = w/PMgL." },
+  { sprite: "anfora", nombre: "El Ánfora del Fijo Medio al Revés", texto: "Jura que el PMeK y el costo fijo medio van en el mismo sentido. Van al revés: CFMe = rK/Q = r/PMeK, así que si el PMeK sube, el CFMe baja." },
+  { sprite: "corintio", nombre: "El Casco de la Etapa Equivocada", texto: "Se pierde en las etapas. En la II —del máximo del PMeL hasta PMgL = 0— el PMgL va por debajo del PMeL, o sea que el CMg va por ENCIMA del CVMe." },
+  { sprite: "rayo", nombre: "El Rayo de la Relación Directa", texto: "Cree que si la pendiente de la función de producción sube, el costo marginal sube con ella. Es al revés: CMg = w/PMgL, así que cuando el PMgL sube, el CMg baja." },
+  { sprite: "olivo", nombre: "El Olivo del Costo Total que Baja", texto: "Dice que al producir más bajan los costos TOTALES. Nunca bajan: el que baja primero y después sube es el MEDIO, porque el fijo se va diluyendo." },
+  { sprite: "oraculo", nombre: "El Oráculo que Responde sin Demostrar", texto: "Jefe de Grecia: contesta cualquier comente con una frase ambigua. Acá no alcanza con decirlo: hay que mostrar de dónde sale." },
 ];
 
 export function galeriaPersonajes(contenedor) {

@@ -471,6 +471,20 @@
       "abierto": true,
       "mapa": "levels/level33.json",
       "preguntas": "questions/level33_questions.json"
+    },
+    {
+      "id": "level34",
+      "clase": "Clase 10",
+      "distrito": "Grecia",
+      "titulo": "El país donde no alcanza con decirlo: hay que demostrarlo",
+      "icono": "🧿",
+      "seccion": "PC3",
+      "seccionNota": "Teoría del productor y costos — y ahora visitando el mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level34.json",
+      "preguntas": "questions/level34_questions.json"
     }
   ]
 }

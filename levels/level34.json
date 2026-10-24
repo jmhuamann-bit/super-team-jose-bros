@@ -1,0 +1,42 @@
+{
+  "id": "level34",
+  "distrito": "Grecia",
+  "clase": "Clase 10 · PC3",
+  "titulo": "El país donde no alcanza con decirlo: hay que demostrarlo",
+  "tema": "egeo",
+  "musica": "egeo",
+  "vehiculo": "trirreme",
+  "intro": "Décima clase, y es la que junta las dos anteriores. En la 08 vimos las curvas de costos y en la 09 la receta para sacarlas; hoy toca lo que de verdad cae en la PC: los COMENTES. Alguien afirma algo, alguien lo contradice, y vos tenés que decir quién tiene razón — y sustentarlo con una demostración, no con una opinión. Por eso toca Grecia, que es de donde viene la costumbre de no creerse nada sin demostración. Y las tres demostraciones de hoy son cortitas y siempre las mismas: el costo variable es el salario por los trabajadores, así que dividiendo y dando vuelta la fracción salen solas. Al final te quedan tres espejos: CVMe = w/PMeL, CMg = w/PMgL y CFMe = r/PMeK. Con esos tres en la mano, cualquier comente de la clase se contesta en dos renglones.",
+  "repaso": [
+    "LA IDEA DE TODA LA CLASE: la teoría de costos es la de producción puesta al revés. Cada curva de costos tiene su espejo del lado de la producción, y los espejos son INVERSOS: cuando uno sube, el otro baja.",
+    "PRIMER ESPEJO — CVMe = w/PMeL. La demostración son tres pasos: el costo variable es wL; dividido entre Q queda wL/Q; y como Q/L es el PMeL, al dar vuelta la fracción queda w/PMeL.",
+    "SEGUNDO ESPEJO — CMg = w/PMgL. Igual de corto: el CMg es ΔCV/ΔQ; como CV = wL, arriba queda w·ΔL; y ΔQ/ΔL es el PMgL. Entonces CMg = w/PMgL. Vale en todas las etapas, no solo en una.",
+    "TERCER ESPEJO — CFMe = r/PMeK. El costo fijo es rK; repartido entre Q queda rK/Q; y Q/K es el PMeK. Así que la relación entre el PMeK y el CFMe es INVERSA, no directa: es el comente que más se contesta mal.",
+    "LOS MÍNIMOS CAEN DONDE ESTÁN LOS MÁXIMOS. Como son inversos, el CMg toca su mínimo justo donde el PMgL toca su máximo, y el CVMe toca el suyo donde el PMeL es máximo. No hay que calcularlos aparte: se leen del gráfico de producción.",
+    "Y EN EL MÁXIMO DEL PMeL SE CRUZAN. Ahí el PMgL vale lo mismo que el PMeL, así que el CMg vale lo mismo que el CVMe. Es el mismo punto mirado de los dos lados.",
+    "LAS TRES ETAPAS, EN CLAVE DE COSTOS. ETAPA I: el PMgL va por encima del PMeL, así que el CMg va por DEBAJO del CVMe. ETAPA II: desde el máximo del PMeL hasta PMgL = 0; ahí PMgL < PMeL, o sea CMg > CVMe. ETAPA III: el PMgL se hace negativo y no se produce ahí ni loco.",
+    "EL COMENTE DE LA RELACIÓN DIRECTA, que cae todos los ciclos: «el costo marginal sube cuando la pendiente de la función de producción es creciente». La pendiente SÍ es el PMgL, pero la relación es INVERSA: mientras el PMgL sube, el CMg baja.",
+    "EL COMENTE DEL COSTO TOTAL: producir más NUNCA hace bajar el costo total — sube, o en el mejor caso se queda igual. El que baja primero y después sube es el costo MEDIO, porque el fijo se va diluyendo entre más unidades.",
+    "EL COMENTE DEL CVMe: no sube «porque hay rendimientos decrecientes» a secas, ni «cuando el PMg es mayor al PMe». El CVMe sube cuando el PMgL queda POR DEBAJO del PMeL, que es lo que hace caer al promedio.",
+    "LA REGLA DE PROMEDIOS QUE EXPLICA TODO ESO: mientras el marginal va por debajo del promedio, lo tira para abajo; cuando lo pasa, lo empuja para arriba. Sirve igual para el PMgL con el PMeL que para el CMg con el CVMe.",
+    "EL EJEMPLO PARA TENER A MANO: Q = 6L² − L³ con w = 18. El PMgL es máximo en L = 2 (vale 12) y el PMeL en L = 3 (vale 9). Entonces el CMg es mínimo en L = 2 (18/12 = 1,5) y el CVMe en L = 3 (18/9 = 2), y ahí los dos valen 2.",
+    "Y LOS NÚMEROS DEL REPARTO: con 3 trabajadores salen 27 unidades. El costo variable es 18 × 3 = 54, así que el CVMe es 54/27 = 2. Con un costo fijo de 40, el CFMe es 40/27 = 1,48. Los medios se reparten entre las UNIDADES, nunca entre los trabajadores."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                            AA                                                                                                                                                      ",
+    "                           o o                     o o                                                                                                                              ",
+    "                                                    E                                                                                                                               ",
+    "                          ======            o o   ======                                           o                 o  o  o  o                o     o     o                        ",
+    "                                    ?                                                            oo oo                  G                    oo oo oo oo oo oo       o              ",
+    "                                           ======                          o     o                                  ==============                                 oo ooo o o       ",
+    "                                                                           E                                                                                                        ",
+    "  P         C          T           E                        C       C    ===== =====         C           E                E                   X E   X     X  1        B         M   ",
+    "################# #####################################################              #############  ################################################################################",
+    "################# #####################################################              #############  ################################################################################",
+    "################# #####################################################              #############  ################################################################################"
+  ]
+}

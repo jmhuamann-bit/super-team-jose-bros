@@ -4150,6 +4150,205 @@ export const TEMAS = {
       }
     },
   },
+
+  egeo: {
+    nombre: "Grecia",
+    cielo: [[0, "#1f7ac4"], [0.4, "#6fb0d8"], [0.7, "#e4e6dc"], [0.8, "#2e3230"], [1, "#141a18"]],
+    suelo: { cara: "#e6e0d2", borde: "#f6f2e8", tierra: "#8a7f68", plataforma: "#c2b89c", plataformaBorde: "#3f7fb5" },
+    acento: "#2f7fb5",
+
+    bichos: ["columna", "lechuza", "anfora", "corintio", "rayo", "olivo"],
+    nombresBichos: [
+      "La Columna que Afirma sin Demostrar",
+      "La Lechuza que Cree lo que Lee",
+      "El Ánfora del Fijo Medio al Revés",
+      "El Casco de la Etapa Equivocada",
+      "El Rayo de la Relación Directa",
+      "El Olivo del Costo Total que Baja",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "oraculo",
+    nombreJefe: "El Oráculo que Responde sin Demostrar",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol del Egeo, que no perdona
+      ctx.fillStyle = "rgba(255,250,222,.24)";
+      ctx.beginPath(); ctx.arc(642, 62, 58, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,253,240,.90)";
+      ctx.beginPath(); ctx.arc(642, 62, 23, 0, Math.PI * 2); ctx.fill();
+
+      // alguna nube suelta, pocas y finitas
+      repetir(ctx, cam, 388, 0.03, (x, i) => {
+        const by = 44 + ((i * 57) % 44);
+        ctx.fillStyle = "rgba(252,252,248,.40)";
+        ctx.fillRect(x, by, 104, 7);
+        ctx.fillRect(x + 22, by - 5, 58, 5);
+      });
+
+      // LAS OTRAS ISLAS en el horizonte, achatadas por la distancia
+      repetir(ctx, cam, 296, 0.04, (x, i) => {
+        const base = 318, alto = 30 + ((i * 37) % 26);
+        ctx.fillStyle = "rgba(126,142,150,.46)";
+        ctx.beginPath();
+        ctx.moveTo(x - 40, base);
+        ctx.quadraticCurveTo(x + 58, base - alto, x + 158, base);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // EL PUEBLO BLANCO trepado al acantilado, con sus cúpulas azules
+      repetir(ctx, cam, 238, 0.12, (x, i) => {
+        const bx = x + 20, base = 306;
+        /* la roca del acantilado sobre la que se apoya todo */
+        ctx.fillStyle = "rgba(150,136,112,.70)";
+        ctx.beginPath();
+        ctx.moveTo(bx - 30, base);
+        ctx.lineTo(bx + 10, base - 56);
+        ctx.lineTo(bx + 120, base - 48);
+        ctx.lineTo(bx + 170, base);
+        ctx.closePath(); ctx.fill();
+        /* las casitas cúbicas, apiladas en escalones */
+        for (let k = 0; k < 7; k++) {
+          const px = bx + k * 22 - 10;
+          const alto = 24 + ((k * 13 + i * 7) % 16);
+          const py = base - 30 - ((k * 11 + i * 5) % 22);
+          ctx.fillStyle = elige(["#ece5d4", "#e4dccb", "#f2ebdd"], k + i);
+          ctx.fillRect(px, py, 26, alto);
+          ctx.fillStyle = "rgba(140,128,106,.26)";
+          ctx.fillRect(px, py, 26, 2);
+          ctx.fillStyle = "#2f7fb5";                   // la puerta o la ventana, azul
+          ctx.fillRect(px + 9, py + alto - 11, 8, 11);
+          if ((k + i) % 3 === 0) {                     // y cada tanto, LA CÚPULA
+            ctx.fillStyle = "#2f7fb5";
+            ctx.beginPath();
+            ctx.moveTo(px + 1, py);
+            ctx.quadraticCurveTo(px + 13, py - 26, px + 25, py);
+            ctx.closePath(); ctx.fill();
+            ctx.fillStyle = "#f6f2e8";
+            ctx.fillRect(px + 12, py - 24, 3, 7);      // la crucecita
+            ctx.fillRect(px + 10, py - 22, 7, 3);
+          }
+        }
+      });
+
+      // EL MOLINO DE LAS CÍCLADAS, blanco y con su techo de paja
+      repetir(ctx, cam, 412, 0.2, (x, i) => {
+        const bx = x + 150, base = 306;
+        ctx.fillStyle = "#f6f2e8";
+        ctx.fillRect(bx, base - 44, 30, 44);
+        ctx.fillStyle = "#8a7246";                      // el techo cónico
+        ctx.beginPath();
+        ctx.moveTo(bx - 5, base - 44);
+        ctx.lineTo(bx + 15, base - 64);
+        ctx.lineTo(bx + 35, base - 44);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(140,128,106,.30)";
+        ctx.fillRect(bx + 11, base - 30, 8, 10);
+        ctx.strokeStyle = "rgba(90,80,62,.72)";         // las aspas
+        ctx.lineWidth = 2;
+        const giro = t / 90;
+        for (let k = 0; k < 6; k++) {
+          const ang = giro + (k / 6) * Math.PI * 2;
+          ctx.beginPath();
+          ctx.moveTo(bx + 15, base - 54);
+          ctx.lineTo(bx + 15 + Math.cos(ang) * 19, base - 54 + Math.sin(ang) * 19);
+          ctx.stroke();
+        }
+        ctx.lineWidth = 1;
+      });
+
+      // EL SUELO: del pie del pueblo al sendero, sin cortes. En el medio va EL
+      // MAR EGEO, que es de ese azul y de ningún otro
+      ctx.fillStyle = "#9a8f74";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 12);
+      ctx.fillStyle = "#1f6fa8";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#2f8ec0";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 7);
+      for (let i = 0; i < 32; i++) {                    // las crestas blancas
+        const x = (i * 56 - cam * 0.17) % 1060 - 60;
+        ctx.fillStyle = "rgba(244,250,250,.46)";
+        ctx.fillRect(x, 327 + ((i * 11) % 13), 22, 2);
+        ctx.fillStyle = "rgba(14,52,80,.26)";
+        ctx.fillRect(x + 12, 337 + ((i * 7) % 9), 16, 2);
+      }
+      ctx.fillStyle = "#d9d2c0";                        // el sendero encalado
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#e8e2d2";
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 30; i++) {                    // las juntas pintadas de blanco
+        const x = (i * 38 - cam * 0.5) % 1000 - 40;
+        ctx.strokeStyle = "rgba(252,250,244,.90)";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(x, 356);
+        ctx.quadraticCurveTo(x + 10, 364, x + 20, 356);
+        ctx.quadraticCurveTo(x + 30, 348, x + 38, 358);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x + 4, 372);
+        ctx.quadraticCurveTo(x + 14, 378, x + 24, 372);
+        ctx.stroke();
+        ctx.lineWidth = 1;
+      }
+
+      // LA TERRAZA DEL CAFÉ: mesas y sillas azules bajo la pérgola
+      repetir(ctx, cam, 288, 0.54, (x, i) => {
+        const bx = x + 40, base = 382;
+        ctx.fillStyle = "#f6f2e8";                      // el muro bajo del fondo
+        ctx.fillRect(bx, base - 30, 92, 30);
+        ctx.fillStyle = "#2f7fb5";
+        ctx.fillRect(bx, base - 30, 92, 3);
+        ctx.fillStyle = "#8a7246";                      // la pérgola de cañas
+        ctx.fillRect(bx - 4, base - 46, 100, 4);
+        for (let k = 0; k < 7; k++) ctx.fillRect(bx + 2 + k * 14, base - 46, 3, 8);
+        ctx.fillStyle = "#6b5a3a";
+        ctx.fillRect(bx - 2, base - 46, 4, 46); ctx.fillRect(bx + 92, base - 46, 4, 46);
+        for (const px of [14, 56]) {                    // la mesita y sus dos sillas
+          ctx.fillStyle = "#2f7fb5";
+          ctx.fillRect(bx + px, base - 16, 18, 3);
+          ctx.fillRect(bx + px + 8, base - 13, 3, 13);
+          ctx.fillRect(bx + px - 7, base - 14, 5, 14);
+          ctx.fillRect(bx + px + 20, base - 14, 5, 14);
+        }
+      });
+
+      // LAS BUGANVILLAS, que es lo único que le pone color a tanto blanco
+      repetir(ctx, cam, 92, 0.78, (x, i) => {
+        const bx = x + 18, base = 382;
+        ctx.fillStyle = "#f2ece0";
+        ctx.fillRect(bx, base - 10, 14, 10);
+        ctx.fillStyle = "#2f7fb5";
+        ctx.fillRect(bx - 1, base - 12, 16, 3);
+        ctx.fillStyle = "#4a7a3a";
+        ctx.fillRect(bx + 3, base - 16, 9, 5);
+        ctx.fillStyle = elige(["#c0397a", "#d44a8a", "#b02f6a"], i);
+        for (let k = 0; k < 4; k++) {
+          ctx.beginPath();
+          ctx.arc(bx + 2 + k * 4, base - 19 - ((k * 5) % 7), 3, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+      ctx.fillStyle = "#cfc8b4";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // el meltemi, que sopla de costado y levanta polvo del sendero
+      for (let i = 0; i < 24; i++) {
+        const x = (i * 77 + t * 3.1) % 1040 - 40;
+        ctx.fillStyle = "rgba(246,242,232,.30)";
+        ctx.fillRect(x, 356 + ((i * 13) % 22), 9, 1);
+      }
+      // y el brillo del sol picando sobre el agua
+      for (let i = 0; i < 18; i++) {
+        const x = (i * 59 + Math.sin(t / 15 + i) * 11) % 1020 - 40;
+        ctx.fillStyle = "rgba(255,253,236,.40)";
+        ctx.fillRect(x, 322 + ((i * 7) % 24), 4, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */
