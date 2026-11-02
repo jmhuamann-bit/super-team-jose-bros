@@ -1,0 +1,41 @@
+{
+  "id": "level35",
+  "distrito": "Inglaterra",
+  "clase": "Clase 01 · PC4",
+  "titulo": "El país donde la fábrica creció hasta que ya no le convino",
+  "tema": "londres",
+  "musica": "londres",
+  "vehiculo": "dospisos",
+  "intro": "Arranca la PC4 con la TEORÍA DE COSTOS A LARGO PLAZO. Toca Inglaterra porque fue ahí, con la Revolución Industrial, donde las fábricas aprendieron que crecer abarata… hasta cierto punto. En el largo plazo no hay nada fijo: se pueden cambiar las máquinas (K) y los trabajadores (L), así que no hay costo fijo y CT = CV. Al principio la empresa se organiza mejor al crecer y el costo medio BAJA (economías a escala, retornos crecientes); en la mitad puede quedarse plano (retornos constantes); y cuando ya es enorme se desorganiza y el costo medio SUBE (deseconomías a escala). Y la idea grande de la clase: el costo de largo plazo es la ENVOLVENTE de todos los costos de corto plazo, porque para cada cantidad elige la planta más barata.",
+  "repaso": [
+    "CORTO PLAZO VS LARGO PLAZO: en el corto plazo el capital K está fijo y CT = wL + rK = CV + CF. En el largo plazo K y L son variables, NO HAY COSTO FIJO: CT = CV y CMe = CVMe.",
+    "LA FORMA DEL CT DE CORTO PLAZO la da la ley de rendimientos marginales: primero el PMgL sube y el CT crece más lento, después el PMgL baja y el CT crece más rápido. Solo cambia un factor (L).",
+    "LA FORMA DEL CT DE LARGO PLAZO la dan los RETORNOS A ESCALA, porque cambian los dos factores: si K y L suben 100% y Q sube más (500%), hay retornos crecientes; si Q sube menos (5%), decrecientes.",
+    "ECONOMÍAS A ESCALA: retornos crecientes, la empresa pequeña se organiza mejor al crecer y el CMe BAJA (CMe > CMg). DESECONOMÍAS A ESCALA: retornos decrecientes, la empresa grande se desorganiza y el CMe SUBE (CMe < CMg). En el mínimo del CMe, CMe = CMg.",
+    "VERSIÓN COMPLETA (MAES): entre las dos puede haber un tramo de RETORNOS CONSTANTES, donde el CMe y el CMg son iguales y planos (economías a escala constantes). Con retornos constantes en todo el rango, CMeLP = CMgLP es una línea horizontal.",
+    "COMENTE: con retornos crecientes el CMg NO siempre baja: cae hasta su mínimo y empieza a subir antes del mínimo del CMe.",
+    "COMENTE: en economías a escala el COSTO TOTAL nunca cae. Crece más lento; lo que baja es el costo MEDIO.",
+    "LA ENVOLVENTE: el CMe de largo plazo envuelve a los CMe de corto plazo (y el CTLP a los CTCP), tocándolos en sus puntos de TANGENCIA o eficiencia: para cada cantidad usa la planta (el K) más barata.",
+    "TANGENCIA NO ES MÍNIMO: el punto de tangencia solo coincide con el mínimo del CMe de corto plazo en el tramo de retornos CONSTANTES. Con retornos crecientes la tangencia cae a la izquierda del mínimo; con decrecientes, a la derecha.",
+    "EL CMg DE LARGO PLAZO NO ENVUELVE a los CMg de corto plazo. La envolvente es la del costo medio (y la del costo total).",
+    "DESPLAZAMIENTOS: en el corto plazo, si sube w se mueven CMg, CVMe y CMe; si sube r (el del capital fijo) solo se mueven CF, CFMe y CMe, el CMg = w/PMgL no cambia. En el largo plazo, si sube w o r se mueve TODO: CMg, CVMe y CMe.",
+    "CUÁNTAS MÁQUINAS: para cada cantidad se elige el K cuyo CMe de corto plazo es más bajo ahí. Donde dos curvas se cortan da igual cualquiera de las dos. Reto: si con K = 2 el CT es 10 y con K = 3 es 15 para el mismo Q = 2, en el largo plazo CT = 10 con K = 2."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                    V                                                                 G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      oo?oo          oooo               oo                                      ooooooooooo               oo              ooooo                     1   L    oooooooo               ",
+    "                    ======              ======                                                     oooo   ======                   oooooo                   ==========              ",
+    "                                ooooo                          =====                                                                                                                ",
+    "  P           C             E                       E     C T               E     X   E X       C                   E       X             C   E                         B       M   ",
+    "################################## #################################################################  ##############################    ############################################",
+    "################################## #################################################################  ##############################    ############################################",
+    "################################## #################################################################  ##############################    ############################################"
+  ]
+}

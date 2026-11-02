@@ -304,6 +304,13 @@ const FICHAS = [
   { sprite: "rayo", nombre: "El Rayo de la Relación Directa", texto: "Cree que si la pendiente de la función de producción sube, el costo marginal sube con ella. Es al revés: CMg = w/PMgL, así que cuando el PMgL sube, el CMg baja." },
   { sprite: "olivo", nombre: "El Olivo del Costo Total que Baja", texto: "Dice que al producir más bajan los costos TOTALES. Nunca bajan: el que baja primero y después sube es el MEDIO, porque el fijo se va diluyendo." },
   { sprite: "oraculo", nombre: "El Oráculo que Responde sin Demostrar", texto: "Jefe de Grecia: contesta cualquier comente con una frase ambigua. Acá no alcanza con decirlo: hay que mostrar de dónde sale." },
+  { sprite: "paraguas", nombre: "El Paraguas que Ve Costos Fijos en el Largo Plazo", texto: "Inglaterra: se protege de un costo fijo que ya no existe. En el largo plazo K y L son variables: CT = CV y CMe = CVMe." },
+  { sprite: "teterauk", nombre: "La Tetera que Cree que el CMg Nunca Sube", texto: "Con retornos crecientes el CMe baja, pero el CMg cae hasta su mínimo y sube antes de cruzar al CMe en su mínimo." },
+  { sprite: "cabina", nombre: "La Cabina que Cree que el Costo Total Baja", texto: "En economías a escala el CT nunca cae: crece más lento que la producción. Lo que baja es el costo medio." },
+  { sprite: "buzon", nombre: "El Buzón que Confunde Tangencia con Mínimo", texto: "La envolvente solo toca el mínimo de un CMe de corto plazo en el tramo de retornos constantes. En los demás, A no es B." },
+  { sprite: "taxinegro", nombre: "El Taxi que Cree que el CMg También Envuelve", texto: "El CMe de largo plazo envuelve a los de corto, y el CT también. El CMg de largo plazo no envuelve a nadie." },
+  { sprite: "guardia", nombre: "El Guardia que Mueve Todas las Curvas", texto: "En el corto plazo, si sube r solo se mueven el CF, el CFMe y el CMe. El CMg = w/PMgL se queda quieto." },
+  { sprite: "relojtorre", nombre: "El Reloj que Cuenta las Máquinas", texto: "Jefe de Inglaterra: pregunta cuántas máquinas conviene tener. La respuesta es siempre la planta más barata para esa cantidad." },
 ];
 
 export function galeriaPersonajes(contenedor) {

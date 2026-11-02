@@ -4349,6 +4349,224 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     INGLATERRA — Londres en una mañana de llovizna: la torre del
+     reloj, el puente de dos torres, la rueda, el Támesis y las casas
+     de ladrillo. Va de gris porque los bichos casi todos son rojos.
+     ========================================================= */
+  londres: {
+    nombre: "Inglaterra",
+    cielo: [[0, "#4e5a70"], [0.38, "#8792a4"], [0.64, "#c4c8cc"], [0.8, "#34343a"], [1, "#1c1c20"]],
+    suelo: { cara: "#5e6068", borde: "#8a8c94", tierra: "#3a3638", plataforma: "#8a4a3a", plataformaBorde: "#d4ccbc" },
+    acento: "#c8262a",
+
+    bichos: ["paraguas", "teterauk", "cabina", "buzon", "taxinegro", "guardia"],
+    nombresBichos: [
+      "El Paraguas que Ve Costos Fijos en el Largo Plazo",
+      "La Tetera que Cree que el CMg Nunca Sube",
+      "La Cabina que Cree que el Costo Total Baja",
+      "El Buzón que Confunde Tangencia con Mínimo",
+      "El Taxi que Cree que el CMg También Envuelve",
+      "El Guardia que Mueve Todas las Curvas",
+    ],
+    andares: ["vuela", "salta", "guardia", "salta", "veloz", "patrulla"],
+    jefe: "relojtorre",
+    nombreJefe: "El Reloj que Cuenta las Máquinas",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol, que apenas se adivina detrás de las nubes
+      ctx.fillStyle = "rgba(240,236,224,.20)";
+      ctx.beginPath(); ctx.arc(590, 92, 54, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(246,242,232,.55)";
+      ctx.beginPath(); ctx.arc(590, 92, 18, 0, Math.PI * 2); ctx.fill();
+
+      // las nubes bajas, en bandas largas y grises
+      repetir(ctx, cam, 300, 0.04, (x, i) => {
+        const by = 38 + ((i * 47) % 70);
+        ctx.fillStyle = "rgba(222,226,232,.34)";
+        ctx.fillRect(x, by, 150, 12);
+        ctx.fillRect(x + 26, by - 9, 92, 10);
+        ctx.fillStyle = "rgba(90,98,114,.20)";
+        ctx.fillRect(x + 10, by + 12, 130, 4);
+      });
+
+      // LA RUEDA a lo lejos, con sus cabinas colgando
+      repetir(ctx, cam, 980, 0.07, (x) => {
+        const cx = x + 760, cy = 226, rr = 66;
+        ctx.strokeStyle = "rgba(200,206,216,.70)";
+        ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.arc(cx, cy, rr, 0, Math.PI * 2); ctx.stroke();
+        ctx.lineWidth = 1;
+        for (let k = 0; k < 12; k++) {
+          const a = (k / 12) * Math.PI * 2 + t / 900;
+          ctx.beginPath(); ctx.moveTo(cx, cy);
+          ctx.lineTo(cx + Math.cos(a) * rr, cy + Math.sin(a) * rr); ctx.stroke();
+          ctx.fillStyle = "rgba(214,220,228,.85)";
+          ctx.fillRect(cx + Math.cos(a) * rr - 3, cy + Math.sin(a) * rr - 2, 7, 5);
+        }
+        ctx.fillStyle = "rgba(160,166,178,.80)";               // las patas
+        ctx.beginPath();
+        ctx.moveTo(cx - 34, 306); ctx.lineTo(cx, cy); ctx.lineTo(cx + 6, cy);
+        ctx.lineTo(cx - 24, 306); ctx.closePath(); ctx.fill();
+      });
+
+      // EL PARLAMENTO y LA TORRE DEL RELOJ: la fachada gótica larga con
+      // sus agujas, y la torre con la esfera, que es la que da el nombre
+      repetir(ctx, cam, 640, 0.11, (x) => {
+        const bx = x + 40, base = 306;
+        ctx.fillStyle = "#8f8a7c";                              // la fachada larga
+        ctx.fillRect(bx, base - 52, 250, 52);
+        ctx.fillStyle = "rgba(70,66,60,.30)";                   // las ventanas en hilera
+        for (let px = bx + 8; px < bx + 244; px += 12) ctx.fillRect(px, base - 42, 4, 16);
+        ctx.fillStyle = "#8f8a7c";                              // las agujitas del techo
+        for (let px = bx + 4; px < bx + 250; px += 22) {
+          ctx.beginPath();
+          ctx.moveTo(px, base - 52); ctx.lineTo(px + 4, base - 66); ctx.lineTo(px + 8, base - 52);
+          ctx.closePath(); ctx.fill();
+        }
+        ctx.fillStyle = "#9a9484";                              // la torre grande del otro lado
+        ctx.fillRect(bx + 200, base - 104, 40, 104);
+        const tx = bx + 262;                                    // LA TORRE DEL RELOJ
+        ctx.fillStyle = "#a39c8a";
+        ctx.fillRect(tx, base - 150, 26, 150);
+        ctx.fillStyle = "rgba(70,66,60,.26)";
+        for (let py = base - 130; py < base - 10; py += 14) ctx.fillRect(tx + 5, py, 16, 6);
+        ctx.fillStyle = "#b0a894";                              // el cuerpo de la esfera
+        ctx.fillRect(tx - 3, base - 190, 32, 40);
+        ctx.fillStyle = "#efe6cc";                              // la esfera
+        ctx.beginPath(); ctx.arc(tx + 13, base - 170, 12, 0, Math.PI * 2); ctx.fill();
+        ctx.strokeStyle = "#3a342c"; ctx.lineWidth = 2;         // las dos agujas cruzadas
+        ctx.beginPath();
+        ctx.moveTo(tx + 6, base - 177); ctx.lineTo(tx + 20, base - 163);
+        ctx.moveTo(tx + 6, base - 163); ctx.lineTo(tx + 20, base - 177);
+        ctx.stroke(); ctx.lineWidth = 1;
+        ctx.fillStyle = "#6a6458";                              // el chapitel
+        ctx.beginPath();
+        ctx.moveTo(tx - 3, base - 190); ctx.lineTo(tx + 13, base - 232); ctx.lineTo(tx + 29, base - 190);
+        ctx.closePath(); ctx.fill();
+        ctx.fillRect(tx + 12, base - 244, 2, 12);
+      });
+
+      // EL PUENTE DE DOS TORRES, con la pasarela de arriba
+      repetir(ctx, cam, 760, 0.17, (x) => {
+        const bx = x + 470, base = 312;
+        ctx.fillStyle = "#6a7488";                              // el tablero
+        ctx.fillRect(bx - 40, base - 20, 260, 8);
+        for (const d of [0, 140]) {
+          ctx.fillStyle = "#8a8f9c";                            // las dos torres
+          ctx.fillRect(bx + d, base - 92, 40, 92);
+          ctx.fillStyle = "rgba(60,64,76,.36)";
+          ctx.fillRect(bx + d + 14, base - 64, 12, 34);
+          ctx.fillStyle = "#6a7488";
+          for (const e of [0, 30]) {                            // los torreoncitos
+            ctx.fillRect(bx + d + e, base - 106, 10, 14);
+            ctx.beginPath();
+            ctx.moveTo(bx + d + e - 1, base - 106); ctx.lineTo(bx + d + e + 5, base - 118);
+            ctx.lineTo(bx + d + e + 11, base - 106); ctx.closePath(); ctx.fill();
+          }
+        }
+        ctx.fillStyle = "#5a7aa0";                              // la pasarela alta, celeste
+        ctx.fillRect(bx + 40, base - 84, 100, 8);
+        ctx.strokeStyle = "rgba(90,122,160,.80)";               // y las cadenas a la orilla
+        ctx.beginPath();
+        ctx.moveTo(bx - 40, base - 20); ctx.quadraticCurveTo(bx - 14, base - 30, bx, base - 70);
+        ctx.moveTo(bx + 180, base - 70); ctx.quadraticCurveTo(bx + 194, base - 30, bx + 220, base - 20);
+        ctx.stroke();
+      });
+
+      // EL TÁMESIS, gris y con los reflejos cortados por la llovizna
+      ctx.fillStyle = "#4a5a6a";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 34);
+      ctx.fillStyle = "#5c6e80";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 28; i++) {
+        const x = (i * 61 - cam * 0.14) % 1060 - 60;
+        ctx.fillStyle = "rgba(220,226,234,.24)";
+        ctx.fillRect(x, 314 + ((i * 9) % 20), 24, 2);
+      }
+
+      // LAS CASAS DE LADRILLO en hilera, con ventanas blancas y chimeneas
+      repetir(ctx, cam, 132, 0.30, (x, i) => {
+        const alto = 54 + ((i * 31) % 20), base = 344;
+        ctx.fillStyle = elige(["#7a4a3e", "#8a5446", "#6e4238", "#94604e"], i);
+        ctx.fillRect(x, base - alto, 60, alto);
+        ctx.fillStyle = "rgba(40,24,20,.22)";                   // las hiladas del ladrillo
+        for (let py = base - alto + 4; py < base; py += 6) ctx.fillRect(x, py, 60, 1);
+        ctx.fillStyle = "#e8e2d4";                              // las ventanas de guillotina
+        for (const d of [8, 36]) {
+          ctx.fillRect(x + d, base - alto + 10, 14, 16);
+          ctx.fillStyle = "rgba(60,70,84,.55)";
+          ctx.fillRect(x + d + 2, base - alto + 12, 10, 5);
+          ctx.fillRect(x + d + 2, base - alto + 19, 10, 5);
+          ctx.fillStyle = "#e8e2d4";
+        }
+        ctx.fillStyle = elige(["#1e2a3a", "#2a3a2a", "#4a1e22"], i);  // la puerta de color
+        ctx.fillRect(x + 24, base - 22, 12, 22);
+        ctx.fillStyle = "#5a3a32";                              // las chimeneas
+        ctx.fillRect(x + 10, base - alto - 12, 10, 12);
+        ctx.fillRect(x + 42, base - alto - 9, 8, 9);
+        ctx.fillStyle = "#b85a3a";
+        ctx.fillRect(x + 11, base - alto - 15, 3, 3); ctx.fillRect(x + 15, base - alto - 15, 3, 3);
+      });
+
+      // LA VEREDA y LA PISTA, que es donde se pelea
+      ctx.fillStyle = "#8a8c90";
+      ctx.fillRect(0, 344, CFG.ANCHO_VISTA, 6);
+      ctx.fillStyle = "#4a4c52";
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 32);
+      for (let i = 0; i < 24; i++) {                            // la línea discontinua del centro
+        const x = (i * 52 - cam * 0.5) % 1040 - 40;
+        ctx.fillStyle = "rgba(240,236,224,.55)";
+        ctx.fillRect(x, 365, 26, 2);
+      }
+
+      // LOS FAROLES de hierro y las bancas del malecón, al frente
+      repetir(ctx, cam, 210, 0.62, (x, i) => {
+        const bx = x + 60, base = 382;
+        ctx.fillStyle = "#24262c";
+        ctx.fillRect(bx, base - 60, 4, 60);
+        ctx.fillRect(bx - 4, base - 4, 12, 4);
+        ctx.fillRect(bx - 6, base - 66, 16, 6);
+        ctx.fillStyle = "rgba(255,226,150,.80)";                // la luz que sigue prendida
+        ctx.fillRect(bx - 3, base - 72, 10, 6);
+        ctx.fillStyle = "rgba(255,226,150,.12)";
+        ctx.beginPath(); ctx.arc(bx + 2, base - 69, 14, 0, Math.PI * 2); ctx.fill();
+        if (i % 2 === 0) {                                      // una banca de por medio
+          ctx.fillStyle = "#3a2e26";
+          ctx.fillRect(bx + 40, base - 14, 46, 4);
+          ctx.fillRect(bx + 40, base - 24, 46, 3);
+          ctx.fillStyle = "#24262c";
+          ctx.fillRect(bx + 42, base - 14, 3, 14); ctx.fillRect(bx + 81, base - 14, 3, 14);
+        }
+      });
+      ctx.fillStyle = "#34363c";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // la llovizna fina, que cae inclinada y no para nunca
+      ctx.fillStyle = "rgba(220,228,240,.30)";
+      for (let i = 0; i < 70; i++) {
+        const x = (i * 53 + t * 1.2) % 860 - 30;
+        const y = (i * 97 + t * 6) % 420;
+        ctx.fillRect(x, y, 1, 7);
+        ctx.fillRect(x - 1, y + 7, 1, 3);
+      }
+      // y las palomas que cruzan bajo, entre la torre y el puente
+      for (let i = 0; i < 4; i++) {
+        const x = (i * 263 + t * 1.4) % 1060 - 60;
+        const y = 120 + ((i * 47) % 70) + Math.sin(t / 17 + i) * 6;
+        const ala = Math.sin(t / 6 + i * 1.7) * 3;
+        ctx.fillStyle = "rgba(70,74,86,.80)";
+        ctx.fillRect(x, y, 6, 3);
+        ctx.fillRect(x - 5, y - ala, 5, 2);
+        ctx.fillRect(x + 6, y - ala, 5, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

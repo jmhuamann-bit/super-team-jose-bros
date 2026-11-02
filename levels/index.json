@@ -485,6 +485,20 @@
       "abierto": true,
       "mapa": "levels/level34.json",
       "preguntas": "questions/level34_questions.json"
+    },
+    {
+      "id": "level35",
+      "clase": "Clase 01",
+      "distrito": "Inglaterra",
+      "titulo": "El país donde la fábrica creció hasta que ya no le convino",
+      "icono": "🏭",
+      "seccion": "PC4",
+      "seccionNota": "Costos a largo plazo — y seguimos dando la vuelta al mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level35.json",
+      "preguntas": "questions/level35_questions.json"
     }
   ]
 }

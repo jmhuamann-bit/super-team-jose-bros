@@ -231,6 +231,14 @@ const TEMAS_MUSICA = {
               "D4",2,"E4",1,"G4",1,"A4",2,"G4",1,"E4",1,"E4",4],
     bajo:    ["E2",4,"B2",4,"A2",4,"E2",4,"C3",4,"B2",4,"E2",8],
   },
+  londres: { // Reino Unido: aire de hornpipe en mixolidio sobre G, con el bajo de marcha
+    tempo: 0.18, onda: "square",
+    melodia: ["G4",2,"B4",2,"D5",2,"B4",2,"C5",2,"A4",2,"B4",4,
+              "D4",2,"G4",2,"A4",2,"B4",2,"A4",2,"G4",2,"F4",4,
+              "G4",2,"B4",2,"D5",2,"E5",2,"D5",2,"C5",2,"B4",4,
+              "C5",2,"B4",2,"A4",2,"G4",2,"F4",2,"A4",2,"G4",4],
+    bajo:    ["G2",8,"C3",8,"G2",8,"F2",8,"G2",8,"C3",8,"F2",8,"G2",8],
+  },
   mexico: { // México: son jarocho de plaza, saltarín y con el bajo marcando el zapateo
     tempo: 0.20, onda: "triangle",
     melodia: ["G4",2,"B4",2,"D5",2,"B4",2,"G4",2,"A4",2,"B4",4,

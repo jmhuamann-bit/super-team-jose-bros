@@ -1,0 +1,125 @@
+{
+  "nivel": "level35",
+  "clase": "Clase 01 · PC4 — Teoría de costos a largo plazo",
+  "fuente": "Apuntes de la 1era clase de la PC4 — Costos a largo plazo (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e35-q1",
+      "nivel": "comprension",
+      "enunciado": "Una fábrica puede cambiar tanto sus máquinas (K) como sus trabajadores (L).\n\nEn ese largo plazo, ¿qué pasa con el costo fijo?",
+      "opciones": [
+        "Sigue existiendo, porque las máquinas siempre son un costo fijo",
+        "Se vuelve más grande, porque la empresa compra más máquinas al crecer",
+        "Desaparece: K y L son variables, así que CT = CV y el CMe es igual al CVMe",
+        "Se reparte entre más unidades, pero nunca llega a ser cero"
+      ],
+      "correcta": 2,
+      "explicacion": "En el corto plazo el capital está fijo y CT = wL + rK = CV + CF. En el largo plazo los DOS factores son variables, así que todo el costo es variable: CF = 0, CT = CV, y al dividir entre Q el CFMe desaparece y queda CMe = CVMe."
+    },
+    {
+      "id": "e35-q2",
+      "nivel": "comprension",
+      "enunciado": "Comente: «Cuando hay retornos a escala CRECIENTES, el costo marginal siempre es decreciente».",
+      "opciones": [
+        "Falso: el CMg cae hasta su mínimo y empieza a subir antes del mínimo del CMe, todavía con retornos crecientes",
+        "Verdadero: mientras el CMe baja, el CMg tiene que estar bajando también",
+        "Verdadero: los retornos crecientes hacen que cada unidad extra salga más barata siempre",
+        "Falso: con retornos crecientes el CMg siempre sube y el CMe es el que baja"
+      ],
+      "correcta": 0,
+      "explicacion": "Con retornos crecientes el CMe baja, y eso pide que el CMg esté POR DEBAJO del CMe, no que esté bajando. En el gráfico el CMg cae hasta su mínimo (A) y luego sube, cruzando al CMe en su mínimo (E). Entre A y E hay retornos crecientes con el CMg subiendo."
+    },
+    {
+      "id": "e35-q3",
+      "nivel": "comprension",
+      "enunciado": "Comente: «En economías a escala, los costos totales se reducen».",
+      "opciones": [
+        "Verdadero: crecer abarata la producción, así que el costo total baja",
+        "Verdadero: por eso se llaman economías, porque la empresa gasta menos en total",
+        "Falso: en economías a escala el costo total sube más rápido que la producción",
+        "Falso: el costo total nunca cae; crece más LENTO que la producción, y lo que baja es el costo medio"
+      ],
+      "correcta": 3,
+      "explicacion": "Producir más siempre cuesta más: el CT nunca baja. En economías a escala crece más lento que Q, así que el costo por unidad (CMe = CT/Q) cae. Cuando el CT empieza a crecer más rápido, el CMe sube: son las deseconomías a escala."
+    },
+    {
+      "id": "e35-q4",
+      "nivel": "comprension",
+      "enunciado": "Comente: «Todos los puntos de tangencia entre el CMe de largo plazo y los CMe de corto plazo son el mínimo de cada CMe de corto plazo».",
+      "opciones": [
+        "Verdadero: la envolvente toca a cada curva de corto plazo en su punto más bajo",
+        "Falso: solo coinciden en el tramo de retornos constantes; con crecientes la tangencia queda a la izquierda del mínimo y con decrecientes, a la derecha",
+        "Falso: la tangencia nunca coincide con el mínimo, en ningún tramo",
+        "Verdadero, pero solo cuando la empresa tiene retornos a escala crecientes"
+      ],
+      "correcta": 1,
+      "explicacion": "La envolvente toca a cada CMe de corto plazo donde ambas tienen la misma pendiente. Si la envolvente baja (retornos crecientes), la tangencia está en la parte que baja del CMeCP, antes de su mínimo; si sube (decrecientes), después. Solo donde la envolvente es plana (retornos constantes) la tangencia es el mínimo: A = B."
+    },
+    {
+      "id": "e35-q5",
+      "nivel": "comprension",
+      "enunciado": "Comente: «El costo marginal de largo plazo envuelve a los costos marginales de corto plazo».",
+      "opciones": [
+        "Verdadero: igual que con el costo medio, el de largo plazo envuelve a todos los de corto",
+        "Verdadero: el CMg de largo plazo siempre queda por debajo de los de corto plazo",
+        "Falso: lo que envuelve es el CMe de largo plazo a los CMe de corto (y el CTLP a los CTCP); el CMg de largo plazo no envuelve",
+        "Falso: son los CMg de corto plazo los que envuelven al de largo plazo"
+      ],
+      "correcta": 2,
+      "explicacion": "La envolvente nace de elegir, para cada cantidad, la planta más barata: eso se ve en el costo MEDIO y en el costo TOTAL. El CMg de largo plazo no queda tocando por debajo a los CMg de corto plazo como una envolvente; por eso en el examen la respuesta es falso."
+    },
+    {
+      "id": "e35-q6",
+      "nivel": "aplicacion",
+      "enunciado": "En el CORTO plazo (con K fijo) sube r, el precio del capital, y el salario w se queda igual.\n\n¿Qué curvas se mueven?",
+      "opciones": [
+        "Todas: el CMg, el CVMe y el CMe suben juntos",
+        "Solo el CF, el CFMe y el CMe; el CMg y el CVMe no cambian, porque CMg = w/PMgL",
+        "Solo el CMg, porque el capital es más caro en el margen",
+        "Ninguna, porque en el corto plazo el capital no se puede cambiar"
+      ],
+      "correcta": 1,
+      "explicacion": "En el corto plazo rK es el costo FIJO: si r sube, sube el CF, el CFMe y con él el CMe. El CMg = w/PMgL y el CVMe dependen de w, no de r, así que no se mueven. En el largo plazo es distinto: no hay costo fijo y si sube w o r se mueve TODO."
+    },
+    {
+      "id": "e35-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Primera pregunta del reloj. Las curvas de costo medio de corto plazo con K = 4 y con K = 6 se cortan justo en q = 60.\n\nSi quieres producir 60 unidades, ¿cuántas máquinas te conviene tener?",
+      "opciones": [
+        "K = 4 o K = 6: en el corte las dos plantas dan el mismo costo medio",
+        "K = 5, porque es el punto medio entre las dos curvas",
+        "Solo K = 6, porque más máquinas siempre bajan el costo",
+        "Solo K = 4, porque menos máquinas siempre cuestan menos"
+      ],
+      "correcta": 0,
+      "explicacion": "En el largo plazo se elige la planta con el CMe más bajo para esa cantidad. Justo donde dos curvas de corto plazo se cortan, las dos dan el mismo costo medio, así que es indiferente: K = 4 o K = 6. A la izquierda del corte conviene la más chica; a la derecha, la más grande."
+    },
+    {
+      "id": "e35-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Segunda pregunta. Para producir Q = 2 en el corto plazo hay dos opciones:\nK = 2, con CT de corto plazo = 10\nK = 3, con CT de corto plazo = 15\n\nEn el largo plazo, si Q = 2, ¿cuál es el CT y cuántas máquinas se usan?",
+      "opciones": [
+        "CT = 25 con K = 5, sumando las dos opciones",
+        "CT = 15 con K = 3, porque más capital es mejor en el largo plazo",
+        "CT = 12,5 con K = 2,5, promediando las dos plantas",
+        "CT = 10 con K = 2: el largo plazo se queda con la opción más barata"
+      ],
+      "correcta": 3,
+      "explicacion": "El costo de largo plazo es la ENVOLVENTE: para cada cantidad toma el punto más eficiente de los costos de corto plazo, o sea el más barato. Las dos opciones producen Q = 2; la de K = 2 cuesta 10 y la de K = 3 cuesta 15. Entonces CTLP = 10 con K = 2."
+    },
+    {
+      "id": "e35-q9",
+      "nivel": "comprension",
+      "enunciado": "Tercera pregunta. Una empresa que ya es enorme sube sus máquinas y sus trabajadores en 100% cada uno, y la producción solo sube 5%.\n\n¿Qué retornos tiene y en qué etapa está?",
+      "opciones": [
+        "Retornos crecientes: está en economías a escala y su CMe baja",
+        "Retornos constantes: su CMe se queda plano",
+        "Retornos decrecientes: está en deseconomías a escala, se desorganiza y su CMe sube",
+        "Ninguno: los retornos a escala solo se miden en el corto plazo"
+      ],
+      "correcta": 2,
+      "explicacion": "Si K y L suben 100% y Q sube menos de 100%, los retornos a escala son DECRECIENTES. Pasa en las empresas muy grandes, que tienen problemas para organizarse: cada unidad sale más cara en promedio, el CMe sube y el CMg está por encima del CMe. Esa etapa se llama deseconomías a escala."
+    }
+  ]
+}

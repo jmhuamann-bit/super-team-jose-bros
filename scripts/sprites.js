@@ -3370,6 +3370,155 @@ const TRIRREME = [    // el trirreme, que es el vehículo de salida del distrito
 ];
 const P_TRIRREME = { k: "#2a2014", m: "#8a6a3a", v: "#e8dcbc", r: "#a8302a", c: "#6b4a2a", o: "#c2a05a", b: "#e8dcbc" };
 
+const PARAGUAS = [    // el paraguas: ve costos fijos en el largo plazo, donde todo es variable (18 × 14)
+  "........kk........",
+  ".....kkknnkkk.....",
+  "...kknnnnnnnnkk...",
+  "..knnnnnnnnnnnnk..",
+  ".knnwwnnnnnnwwnnk.",
+  ".knnwknnnnnnwknnk.",
+  "knnnnnnkkkknnnnnnk",
+  "knnnnnnnnnnnnnnnnk",
+  "kkknnkkknnkkknnkkk",
+  "........kh........",
+  "........kh........",
+  "........kh........",
+  ".....kh.kh........",
+  "......khhk........",
+];
+const P_PARAGUAS = { k: "#14161e", n: "#3a4466", w: "#ffffff", h: "#9a6a3a" };
+
+const TETERAUK = [    // la tetera: cree que con retornos crecientes el CMg nunca deja de bajar (18 × 14)
+  "........kk........",
+  ".......kbbk.......",
+  ".....kkkkkkkk.....",
+  "....kwwwwwwwwk....",
+  "...kwwbbwwbbwwk...",
+  "...kwwkwwwwkwwkkk.",
+  "kk.kwwwwwwwwwwk.k.",
+  "kwkkwwwkkkkwwwk.k.",
+  ".kwwwwwwwwwwwwkk..",
+  "..kwbbwwbbwwbbk...",
+  "...kwwwwwwwwwk....",
+  "....kwwwwwwwk.....",
+  "....kkkkkkkkk.....",
+  ".....kbbbbbbk.....",
+];
+const P_TETERAUK = { k: "#1e2230", w: "#f2f0ea", b: "#3a6ab0" };
+
+const CABINA = [    // la cabina roja: cree que en economías a escala el costo TOTAL baja (18 × 14)
+  "......kkkkkk......",
+  ".....krrrrrrk.....",
+  "....krrrrrrrrk....",
+  "....kkkkkkkkkk....",
+  "....krwwwwwwrk....",
+  "....kkkkkkkkkk....",
+  "....krvvrrvvrk....",
+  "....krvkrrvkrk....",
+  "....krvvrrvvrk....",
+  "....krrrrrrrrk....",
+  "....krrkkkkrrk....",
+  "....krrrrrrrrk....",
+  "...kkkkkkkkkkkk...",
+  "...kddddddddddk...",
+];
+const P_CABINA = { k: "#1e1414", r: "#c8262a", w: "#f4efe4", v: "#bfe0f0", d: "#5a3a3a" };
+
+const BUZON = [    // el buzón: confunde el punto de tangencia con el mínimo del CMe de corto plazo (18 × 14)
+  "......kkkkkk......",
+  ".....kddddddk.....",
+  "....kddddddddk....",
+  "....kkkkkkkkkk....",
+  ".....krrrrrrk.....",
+  ".....kwkrrkwk.....",
+  ".....krrrrrrk.....",
+  ".....kkkkkkkk.....",
+  ".....krrrrrrk.....",
+  ".....kryyyyrk.....",
+  ".....krrrrrrk.....",
+  ".....krrrrrrk.....",
+  "....kkkkkkkkkk....",
+  "....kddddddddk....",
+];
+const P_BUZON = { k: "#1e1414", d: "#8a1a1e", r: "#d0302c", w: "#ffffff", y: "#e8b43c" };
+
+const TAXINEGRO = [    // el taxi negro: cree que el CMg de largo plazo envuelve a los de corto (18 × 14)
+  "..................",
+  "..................",
+  "..................",
+  "......kkkkkk......",
+  ".....knnyynnk.....",
+  "....knvvnnvvnk....",
+  "...knnvvnnvvnnk...",
+  ".kknnnnnnnnnnnnkk.",
+  "kfnnwknnnnnnwknnnk",
+  "knnnnnkkkknnnnnnrk",
+  "kgggnnnnnnnnnngggk",
+  ".knnk........knnk.",
+  ".kggk........kggk.",
+  "..kk..........kk..",
+];
+const P_TAXINEGRO = { k: "#0c0c10", n: "#2e2e3a", v: "#9fc4d8", y: "#f2d24a", f: "#fff2b0", w: "#ffffff", g: "#9a9a92", r: "#c0392b" };
+
+const GUARDIA = [    // el guardia: mueve todas las curvas cuando en el corto plazo solo sube r (18 × 14)
+  ".......kkkk.......",
+  "......knnnnk......",
+  ".....knnnnnnk.....",
+  ".....knnnnnnk.....",
+  ".....knnnnnnk.....",
+  ".....kppppppk.....",
+  ".....kpkppkpk.....",
+  ".....kppkkppk.....",
+  "....kkrrrrrrkk....",
+  "...krrryyyyrrrk...",
+  "...krrrryyrrrrk...",
+  "....kwwwwwwwwk....",
+  "....knnnkknnnk....",
+  "....kkkk..kkkk....",
+];
+const P_GUARDIA = { k: "#141418", n: "#2a2a36", p: "#e8b896", r: "#c8262a", y: "#e8b43c", w: "#f4f2ea" };
+
+const RELOJTORRE = [    // jefe: el reloj de la torre, que pregunta cuántas máquinas conviene tener (18 × 17)
+  "........kk........",
+  ".......kook.......",
+  "......kooook......",
+  ".....kssssssk.....",
+  "....kssssssssk....",
+  "...kkkkkkkkkkkk...",
+  "...kowwwwwwwwok...",
+  "..kowbwwwwwwrwok..",
+  "..kowwbwwwwrwwok..",
+  "..kowwwbwwrwwwok..",
+  "..kowwwwkkwwwwok..",
+  "..kowwwrwwbwwwok..",
+  "..kowwrwwwwbwwok..",
+  "...kowwwwwwwwok...",
+  "...kkkkkkkkkkkk...",
+  "...kssksssskssk...",
+  "..kssssssssssssk..",
+];
+const P_RELOJTORRE = { k: "#1a1612", o: "#d8a43c", s: "#b8a07a", w: "#f4ecd8", b: "#2f6ab8", r: "#c8262a" };
+
+const DOSPISOS = [    // el bus rojo de dos pisos, que es el vehículo de salida del distrito (32 × 16)
+  "................................",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.",
+  ".krrrrrrrrrrrrrrrrrrrrrrrrrrrrk.",
+  ".kvvvrvvvrvvvrvvvrvvvrvvvrvvvrk.",
+  ".kvvvrvvvrvvvrvvvrvvvrvvvrvvvrk.",
+  ".krrrrrrrrrrrrrrrrrrrrrrrrrrrrk.",
+  ".kyyyyyyyyyyyyyyyyyyyyyyyyyyyyk.",
+  ".krrrrrrrrrrrrrrrrrrrrrrrrrrrrk.",
+  ".kvvvrvvvrvvvrvvvrvvvrvvvrvvvrk.",
+  ".kvvvrvvvrvvvrvvvrvvvrvvvrvvvrk.",
+  ".kfrrrrrrrrrrrrrrrrrrrrrrrrrrrk.",
+  ".krrrrrrrrrrrrrrrrrrrrrrrrrrrrk.",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.",
+  "...knnnk...............knnnk....",
+  "...kngnk...............kngnk....",
+  "....kkk.................kkk.....",
+];
+const P_DOSPISOS = { k: "#1a1210", r: "#d02a26", v: "#bfe0f0", y: "#e8c84a", f: "#fff2b0", n: "#2a2620", g: "#9a9a92" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -3563,6 +3712,14 @@ const DEFINICIONES = {
   olivo:        [OLIVO, P_OLIVO],
   oraculo:      [ORACULO, P_ORACULO],
   trirreme:     [TRIRREME, P_TRIRREME],
+  paraguas:     [PARAGUAS, P_PARAGUAS],
+  teterauk:     [TETERAUK, P_TETERAUK],
+  cabina:       [CABINA, P_CABINA],
+  buzon:        [BUZON, P_BUZON],
+  taxinegro:    [TAXINEGRO, P_TAXINEGRO],
+  guardia:      [GUARDIA, P_GUARDIA],
+  relojtorre:   [RELOJTORRE, P_RELOJTORRE],
+  dospisos:     [DOSPISOS, P_DOSPISOS],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)
