@@ -499,6 +499,20 @@
       "abierto": true,
       "mapa": "levels/level35.json",
       "preguntas": "questions/level35_questions.json"
+    },
+    {
+      "id": "level36",
+      "clase": "Clase 02",
+      "distrito": "Estados Unidos",
+      "titulo": "El país de la línea de montaje, donde cada auto lleva lo mismo",
+      "icono": "🚗",
+      "seccion": "PC4",
+      "seccionNota": "Costos a largo plazo — y seguimos dando la vuelta al mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level36.json",
+      "preguntas": "questions/level36_questions.json"
     }
   ]
 }

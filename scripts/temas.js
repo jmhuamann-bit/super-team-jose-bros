@@ -4567,6 +4567,229 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     ESTADOS UNIDOS — Nueva York: los rascacielos, los taxis y la
+     línea de montaje. Se trae del nivel de Estados Unidos de Eco 2.
+     ========================================================= */
+  manhattan: {
+    nombre: "Estados Unidos",
+    cielo: [[0, "#2b6fae"], [0.4, "#7fa8c4"], [0.7, "#e8d8bc"], [0.8, "#2e2a26"], [1, "#141210"]],
+    suelo: { cara: "#6b6a66", borde: "#8a8884", tierra: "#3a3632", plataforma: "#8a6a3a", plataformaBorde: "#e8b41c" },
+    acento: "#c0392b",
+
+    bichos: ["hamburguesa", "carrito", "beisbol", "cohete", "dolar", "fichador"],
+    nombresBichos: [
+      "La Hamburguesa que No Suma los Exponentes",
+      "El Carrito que Arma Mal la Línea de Montaje",
+      "La Pelota que No Lee el Costo Medio",
+      "El Cohete que Saca la Raíz al Revés",
+      "El Dólar que Compra de los Dos",
+      "El Fichador que Cree que el Corto Nunca Gana",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "aguila",
+    nombreJefe: "El Águila que Arma el Costo de Largo Plazo",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol bajo del atardecer, metido entre las torres
+      ctx.fillStyle = "rgba(255,226,170,.26)";
+      ctx.beginPath(); ctx.arc(152, 120, 56, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,240,206,.82)";
+      ctx.beginPath(); ctx.arc(152, 120, 22, 0, Math.PI * 2); ctx.fill();
+
+      // las nubes largas del río
+      repetir(ctx, cam, 342, 0.03, (x, i) => {
+        const by = 34 + ((i * 53) % 52);
+        ctx.fillStyle = "rgba(246,242,236,.42)";
+        ctx.fillRect(x, by, 132, 8);
+        ctx.fillRect(x + 26, by - 6, 78, 6);
+      });
+
+      // LA ESTATUA en su isla, chiquita y lejos, que es como se la ve de verdad
+      repetir(ctx, cam, 846, 0.05, (x, i) => {
+        const bx = x + 120, base = 318;
+        ctx.fillStyle = "rgba(118,132,124,.72)";
+        ctx.fillRect(bx - 12, base - 26, 26, 26);          // el pedestal
+        ctx.fillRect(bx - 6, base - 44, 14, 18);
+        ctx.fillStyle = "rgba(136,176,158,.86)";           // el verdín de la estatua
+        ctx.fillRect(bx - 4, base - 70, 10, 26);           // el cuerpo
+        ctx.fillRect(bx - 7, base - 58, 4, 12);            // el brazo de la tabla
+        ctx.fillRect(bx + 5, base - 82, 3, 14);            // el brazo de la antorcha
+        ctx.fillRect(bx - 3, base - 78, 8, 8);             // la cabeza
+        for (let k = 0; k < 5; k++) {                      // la corona de puntas
+          ctx.fillRect(bx - 4 + k * 3, base - 82 - (k % 2 ? 3 : 2), 2, 3);
+        }
+        ctx.fillStyle = "rgba(255,226,140,.92)";
+        ctx.fillRect(bx + 4, base - 86, 5, 5);             // la llama
+      });
+
+      // LOS RASCACIELOS, con sus ventanas encendidas y el tanque de agua arriba
+      repetir(ctx, cam, 94, 0.12, (x, i) => {
+        const bx = x, base = 318;
+        const alto = 92 + ((i * 47) % 128);
+        ctx.fillStyle = elige(["#53585e", "#474c52", "#5d636a"], i);
+        ctx.fillRect(bx, base - alto, 40, alto);
+        ctx.fillStyle = "rgba(28,30,34,.40)";
+        ctx.fillRect(bx, base - alto, 40, 3);
+        for (let py = base - alto + 8; py < base - 8; py += 11) {   // las ventanas
+          for (let px = bx + 4; px < bx + 36; px += 9) {
+            ctx.fillStyle = ((px + py + i) % 5) < 2
+              ? "rgba(255,226,150,.82)" : "rgba(60,70,80,.52)";
+            ctx.fillRect(px, py, 5, 6);
+          }
+        }
+        if (i % 3 === 0) {                                 // EL TANQUE DE AGUA del techo
+          ctx.fillStyle = "#6b4a2a";
+          ctx.fillRect(bx + 12, base - alto - 15, 16, 12);
+          ctx.beginPath();
+          ctx.moveTo(bx + 10, base - alto - 15);
+          ctx.lineTo(bx + 20, base - alto - 23);
+          ctx.lineTo(bx + 30, base - alto - 15);
+          ctx.closePath(); ctx.fill();
+          ctx.fillStyle = "#4a3420";
+          for (const d of [13, 19, 25]) ctx.fillRect(bx + d, base - alto - 3, 2, 3);
+        }
+      });
+
+      // LAS CASAS DE PIEDRA ROJIZA, con su escalinata y la escalera de incendios
+      repetir(ctx, cam, 104, 0.22, (x, i) => {
+        const bx = x, base = 318;
+        const alto = 58 + ((i * 23) % 22);
+        ctx.fillStyle = elige(["#8a4e3c", "#7a4434", "#945847"], i);
+        ctx.fillRect(bx, base - alto, 44, alto);
+        ctx.fillStyle = "rgba(40,30,24,.34)";
+        ctx.fillRect(bx, base - alto, 44, 4);
+        ctx.fillStyle = "rgba(236,230,214,.60)";           // las ventanas altas
+        for (let py = base - alto + 11; py < base - 20; py += 17) {
+          ctx.fillRect(bx + 6, py, 11, 12);
+          ctx.fillRect(bx + 27, py, 11, 12);
+        }
+        ctx.strokeStyle = "rgba(34,32,30,.56)";            // LA ESCALERA DE INCENDIOS
+        ctx.lineWidth = 1;
+        for (let py = base - alto + 9; py < base - 14; py += 17) {
+          ctx.beginPath();
+          ctx.moveTo(bx + 3, py + 14); ctx.lineTo(bx + 41, py + 14); ctx.stroke();
+          for (let px = bx + 5; px < bx + 40; px += 6) {
+            ctx.beginPath(); ctx.moveTo(px, py + 14); ctx.lineTo(px, py + 9); ctx.stroke();
+          }
+        }
+        ctx.fillStyle = "#3a2e26";
+        ctx.fillRect(bx + 17, base - 19, 12, 19);          // la puerta
+        ctx.fillStyle = "#6b6a66";
+        for (let k = 0; k < 4; k++) ctx.fillRect(bx + 14 - k, base - 4 + k, 18 + k * 2, 2);   // la escalinata
+      });
+
+      // EL SUELO: del pie de las casas al asfalto, sin cortes. En el medio va
+      // EL RÍO con el puente colgante, que es la postal de la ciudad
+      ctx.fillStyle = "#3f6b42";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 12);
+      ctx.fillStyle = "#2f5a74";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#3f7290";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 5);
+      for (let i = 0; i < 28; i++) {
+        const x = (i * 62 - cam * 0.16) % 1060 - 60;
+        ctx.fillStyle = "rgba(226,238,244,.26)";
+        ctx.fillRect(x, 330 + ((i * 11) % 14), 20, 2);
+      }
+      /* el puente: dos torres de piedra y los cables entre ellas */
+      for (let i = 0; i < 4; i++) {
+        const bx = (i * 300 - cam * 0.16) % 1200 - 180;
+        ctx.strokeStyle = "rgba(226,222,210,.66)";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(bx, 330);
+        ctx.quadraticCurveTo(bx + 70, 348, bx + 140, 330);
+        ctx.stroke();
+        for (let k = 14; k < 130; k += 14) {
+          const t2 = k / 140;
+          const y = 330 + 36 * t2 * (1 - t2) * 2;
+          ctx.beginPath(); ctx.moveTo(bx + k, y); ctx.lineTo(bx + k, 344); ctx.stroke();
+        }
+        ctx.lineWidth = 1;
+        ctx.fillStyle = "rgba(188,166,140,.88)";           // las torres
+        for (const d of [0, 140]) {
+          ctx.fillRect(bx + d - 5, 318, 11, 28);
+          ctx.fillStyle = "rgba(60,54,46,.42)";
+          ctx.fillRect(bx + d - 3, 326, 3, 8); ctx.fillRect(bx + d + 1, 326, 3, 8);
+          ctx.fillStyle = "rgba(188,166,140,.88)";
+        }
+        ctx.fillStyle = "rgba(146,128,106,.80)";
+        ctx.fillRect(bx - 6, 344, 152, 3);                 // el tablero
+      }
+      ctx.fillStyle = "#4e4c48";                           // el asfalto
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#6b6a66";
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 24; i++) {                       // la línea discontinua
+        const x = (i * 46 - cam * 0.5) % 1020 - 40;
+        ctx.fillStyle = "rgba(240,224,140,.70)";
+        ctx.fillRect(x, 368, 22, 3);
+      }
+
+      // EL DINER de la esquina, con su neón y sus banquetas
+      repetir(ctx, cam, 300, 0.54, (x, i) => {
+        const bx = x + 40, base = 382, alto = 48;
+        const techo = base - alto;
+        ctx.fillStyle = "#cfd4d8";                         // el cuerpo de chapa
+        ctx.fillRect(bx, techo, 98, alto);
+        ctx.fillStyle = "#c0392b";
+        ctx.fillRect(bx, techo, 98, 7);                    // la franja roja
+        ctx.fillStyle = "#3f7fb5";
+        ctx.fillRect(bx, techo + 7, 98, 4);
+        ctx.fillStyle = "rgba(252,226,150,.86)";           // los ventanales encendidos
+        for (const px of [8, 40, 72]) ctx.fillRect(bx + px, techo + 18, 22, 20);
+        ctx.fillStyle = "rgba(48,44,40,.46)";
+        for (const px of [8, 40, 72]) ctx.fillRect(bx + px, techo + 27, 22, 2);
+        ctx.fillStyle = elige(["#e8542c", "#3f9ac0"], i);  // el cartel de neón
+        ctx.fillRect(bx + 24, techo - 16, 50, 13);
+        ctx.fillStyle = "rgba(252,248,236,.80)";
+        for (let px = bx + 28; px < bx + 70; px += 7) ctx.fillRect(px, techo - 12, 4, 5);
+        ctx.fillStyle = "#6b6a66";
+        ctx.fillRect(bx + 46, techo - 3, 6, 3);
+      });
+
+      // LOS HIDRANTES y la boca del subterráneo
+      repetir(ctx, cam, 98, 0.78, (x, i) => {
+        const bx = x + 18, base = 382;
+        ctx.fillStyle = "#c0392b";
+        ctx.fillRect(bx + 2, base - 13, 7, 13);            // el hidrante
+        ctx.fillRect(bx, base - 9, 11, 4);
+        ctx.fillRect(bx + 3, base - 16, 5, 3);
+        if (i % 3 === 0) {                                 // la escalera del subte
+          ctx.fillStyle = "#2e3a34";
+          ctx.fillRect(bx + 28, base - 22, 26, 22);
+          ctx.fillStyle = "#4a5a50";
+          ctx.fillRect(bx + 31, base - 19, 20, 19);
+          ctx.fillStyle = "#1e2a24";
+          ctx.fillRect(bx + 50, base - 34, 3, 16);         // el poste con el globo
+          ctx.fillStyle = "#5f9a4a";
+          ctx.beginPath(); ctx.arc(bx + 52, base - 36, 4, 0, Math.PI * 2); ctx.fill();
+        }
+      });
+      ctx.fillStyle = "#5a5854";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // el vapor que sale de las alcantarillas, que no para nunca
+      for (let i = 0; i < 10; i++) {
+        const x = (i * 163 - 40) % 1000;
+        const subida = (t * 0.9 + i * 37) % 70;
+        ctx.fillStyle = "rgba(228,228,226,." + (24 - Math.round(subida / 5)) + ")";
+        ctx.fillRect(x, 372 - subida, 14 + Math.round(subida / 5), 6);
+      }
+      // y el resplandor del atardecer colándose entre las torres
+      for (let i = 0; i < 12; i++) {
+        const x = (i * 71 + Math.sin(t / 28 + i) * 6) % 1000 - 40;
+        ctx.fillStyle = "rgba(255,226,170,.09)";
+        ctx.fillRect(x, 120 + ((i * 17) % 160), 3, 40);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

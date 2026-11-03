@@ -311,6 +311,13 @@ const FICHAS = [
   { sprite: "taxinegro", nombre: "El Taxi que Cree que el CMg También Envuelve", texto: "El CMe de largo plazo envuelve a los de corto, y el CT también. El CMg de largo plazo no envuelve a nadie." },
   { sprite: "guardia", nombre: "El Guardia que Mueve Todas las Curvas", texto: "En el corto plazo, si sube r solo se mueven el CF, el CFMe y el CMe. El CMg = w/PMgL se queda quieto." },
   { sprite: "relojtorre", nombre: "El Reloj que Cuenta las Máquinas", texto: "Jefe de Inglaterra: pregunta cuántas máquinas conviene tener. La respuesta es siempre la planta más barata para esa cantidad." },
+  { sprite: "hamburguesa", nombre: "La Hamburguesa que No Suma los Exponentes", texto: "Estados Unidos: en una Cobb-Douglas se suman los exponentes. K^0,9·L^0,8 suma 1,7: retornos crecientes, aunque cada exponente sea menor que 1." },
+  { sprite: "carrito", nombre: "El Carrito que Arma Mal la Línea de Montaje", texto: "Con complementarios perfectos se hace la triple igualdad: Q = L/2 = K da L = 2Q y K = Q, y recién ahí se mete en la isocosto." },
+  { sprite: "beisbol", nombre: "La Pelota que No Lee el Costo Medio", texto: "CMe = 10 es constante, CMe = 10Q sube (retornos decrecientes) y CMe = 10/Q baja (retornos crecientes)." },
+  { sprite: "cohete", nombre: "El Cohete que Saca la Raíz al Revés", texto: "Con q = [min(L; 2K)]^(1/2), Q = √L da L = Q². El costo queda 1,5Q² y el CMe sube." },
+  { sprite: "dolar", nombre: "El Dólar que Compra de los Dos", texto: "Con sustitutos perfectos se compra SOLO el insumo que da más producto por sol. El otro va en cero." },
+  { sprite: "fichador", nombre: "El Fichador que Cree que el Corto Nunca Gana", texto: "El CMg de largo plazo no envuelve a los de corto, y con retornos decrecientes el CMg de corto plazo queda por debajo." },
+  { sprite: "aguila", nombre: "El Águila que Arma el Costo de Largo Plazo", texto: "Jefe de Estados Unidos: pide el CT de largo plazo de una línea de impresoras, de un caso típico y de unos sustitutos." },
 ];
 
 export function galeriaPersonajes(contenedor) {

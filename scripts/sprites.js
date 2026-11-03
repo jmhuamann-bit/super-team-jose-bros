@@ -3519,6 +3519,156 @@ const DOSPISOS = [    // el bus rojo de dos pisos, que es el vehículo de salida
 ];
 const P_DOSPISOS = { k: "#1a1210", r: "#d02a26", v: "#bfe0f0", y: "#e8c84a", f: "#fff2b0", n: "#2a2620", g: "#9a9a92" };
 
+const HAMBURGUESA = [    // la hamburguesa: no suma los exponentes para leer los retornos a escala (18 × 14)
+  ".....kkkkkkkk.....",
+  "...kkppppspppkk...",
+  "..kppspppppppppk..",
+  ".kpppppsppppspppk.",
+  "kppppppppppppppppk",
+  "kppppppppppppppppk",
+  "kvvvvvvvvvvvvvvvvk",
+  "kvvvvvvvvvvvvvvvvk",
+  "kcccccccccccccccck",
+  "kcccccccccccccccck",
+  "kcccccccccccccccck",
+  ".kqqqqqqqqqqqqqqk.",
+  "kppppppppppppppppk",
+  "kppppppppppppppppk",
+];
+const P_HAMBURGUESA = { k: "#2e1a0e", p: "#d9a24a", s: "#f2e4c0", v: "#5f9a3a", c: "#7a4426", q: "#e8b43c" };
+
+const CARRITO = [    // el carrito: arma mal la línea de montaje y no iguala los insumos (18 × 14)
+  "rrrk..............",
+  "rrrk..............",
+  "krrkkkkkkkkkkkkk..",
+  ".kkrmmmmmmmmmmmmk.",
+  "..kmmmmmmmmmmmmmk.",
+  "..kmmmmmmmmmmmmmk.",
+  "..kmkkmkkmkkmkkmk.",
+  "..kmmmmmmmmmmmmmk.",
+  "..kmkkmkkmkkmkkmk.",
+  "..kmmmmmmmmmmmmmk.",
+  "...kmmmmmmmmmmmk..",
+  "...kmmmmmmmmmmmk..",
+  "....knnnkkkknnnk..",
+  "....knnnk..knnnk..",
+];
+const P_CARRITO = { k: "#1e2a34", m: "#c6d2dc", n: "#2e3a44", r: "#c0392b" };
+
+const BEISBOL = [    // la pelota: no sabe leer si el CMe es constante, creciente o decreciente (18 × 14)
+  ".......kkkk.......",
+  "...kkkkbbbbkkkk...",
+  "..krrbbbbbbbbrrk..",
+  "...krbbbbbbbbrk...",
+  "..kbbrrbbbbrrbbk..",
+  "..kbbbrbbbbrbbbk..",
+  ".kbbbbrrbbrrbbbbk.",
+  ".kbbbbrbbbbrbbbbk.",
+  ".kbbbbrrbbrrbbbbk.",
+  "..kbbbrbbbbrbbbk..",
+  "..kbbrrbbbbrrbbk..",
+  "...krbbbbbbbbrk...",
+  "..krrbbbbbbbbrrk..",
+  "...kkkkbbbbkkkk...",
+];
+const P_BEISBOL = { k: "#2a2420", b: "#f4f1e8", r: "#c0392b" };
+
+const COHETE = [    // el cohete: saca mal la raíz cuando la producción viene elevada (18 × 14)
+  "........kk........",
+  ".......krrk.......",
+  "......krrrrk......",
+  ".....krrrrrrk.....",
+  "....krwwaawwrk....",
+  ".....kwwaawwk.....",
+  ".....kaaaaaak.....",
+  ".....kaaaaaak.....",
+  ".....krwwwwrk.....",
+  "....krrwwwwrrk....",
+  "...krrrwwwwrrrk...",
+  "..krrrrnnnnrrrrk..",
+  ".krrrrrkffkrrrrrk.",
+  "..kkkkkffffkkkkk..",
+];
+const P_COHETE = { k: "#1e1a24", r: "#c0392b", w: "#f0ece0", a: "#3f7fc0", n: "#4a4a52", f: "#f0a83c" };
+
+const DOLAR = [    // el dólar: compra de los dos insumos cuando son sustitutos perfectos (18 × 14)
+  "..................",
+  "..................",
+  ".kkkkkkkkkkkkkkkk.",
+  "kggggggggggggggggk",
+  "kgddddddwwddddddgk",
+  "kgdgdwwwwwwwddgdgk",
+  "kgdddwddwwddddddgk",
+  "kgdddwwwwwwwddddgk",
+  "kgddddddwwdwddddgk",
+  "kgdgdwwwwwwwddgdgk",
+  "kgddddddwwddddddgk",
+  "kggggggggggggggggk",
+  ".kkkkkkkkkkkkkkkk.",
+  "..................",
+];
+const P_DOLAR = { k: "#1e2a1e", g: "#5f9a6a", d: "#2e5a3a", w: "#e2f0dc" };
+
+const FICHADOR = [    // el fichador: cree que el CMg de corto plazo nunca es menor que el de largo (18 × 14)
+  "..kkkkkkkkkkkkkk..",
+  ".kmmmmmmmmmmmmmmk.",
+  ".kmmmmooeeoommmmk.",
+  ".kmmmoeekeeeommmk.",
+  ".kmmmoeekeeeommmk.",
+  ".kmmmoeekkkkommmk.",
+  ".kmmmoeeeeeeommmk.",
+  ".kmmmoeeeeeeommmk.",
+  ".kmmmmooeeoommmmk.",
+  ".kmmmnnnnnnnnmmmk.",
+  ".kmmmnwwwwwwnmmmk.",
+  ".kmmmnnnnnnnnmmmk.",
+  ".kmmmmmmmmmmmmmmk.",
+  "..kkkkkkkkkkkkkk..",
+];
+const P_FICHADOR = { k: "#231a14", m: "#8a6a4a", e: "#f0ece0", o: "#c2a05a", n: "#3a2e24", w: "#e8e2d2" };
+
+const AGUILA = [    // jefe: el águila, que arma el costo de largo plazo desde la función de producción (18 × 17)
+  "..................",
+  "......kkkkkk......",
+  ".....kwwwwwwk.....",
+  ".....kwkwwkwk.....",
+  "kkkkkkwwwwwwkkkkkk",
+  "ndnndnwwoowwndnndn",
+  "dnndnnwoooowdnndnn",
+  "nndnndknoonknndnnd",
+  "kdnndnnnnnnnndnndk",
+  "knndnnnnnnnnnnndnk",
+  ".kkkknnnnnnnnkkkk.",
+  "....knnnnnnnnk....",
+  "....knnnnnnnnk....",
+  "....knnnnnnnnk....",
+  ".....knnnnnnk.....",
+  ".....koonnook.....",
+  ".....kookkook.....",
+];
+const P_AGUILA = { k: "#1a1612", n: "#5a4430", d: "#44321f", w: "#f2ece0", o: "#e8b43c" };
+
+const BUSAMARILLO = [    // el bus escolar amarillo, que es el vehículo de salida del distrito (32 × 16)
+  "................................",
+  "................................",
+  "...kkkkkkkkkkkkkkkkkkkkkkkkkk...",
+  "..kaaaaaaaaaaaaaaaaaaaaaaaaaak..",
+  "kkaaavvvvvavvvvvavvvvvavvvvvvvk.",
+  "rraaavvvvvavvvvvavvvvvavvvvvvvk.",
+  "rraaavvvvvavvvvvavvvvvavvvvvvvk.",
+  "kknnnnnnnnnnnnnnnnnnnnnnnnnnnnk.",
+  ".knnnnnnnnnnnnnnnnnnnnnnnnnnnnkk",
+  "kknnnnngnnnnnnnnnnnnnnnngnnnnnrr",
+  "aaaaagnnngaaaaaaaaaaaagnnngaaarr",
+  "aaaaannnnnaaaaaaaaaaaannnnnaaakk",
+  "aaaagnnnnngaaaaaaaaaagnnnnngaak.",
+  "kkkkknnnnnkkkkkkkkkkkknnnnnkkk..",
+  "....kgnnngk..........kgnnngk....",
+  ".....kkgkk............kkgkk.....",
+];
+const P_BUSAMARILLO = { k: "#1e1a10", a: "#e8b41c", n: "#2a2620", v: "#9fc2cc", r: "#c0392b", g: "#9a9aa2" };
+
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -3720,6 +3870,14 @@ const DEFINICIONES = {
   guardia:      [GUARDIA, P_GUARDIA],
   relojtorre:   [RELOJTORRE, P_RELOJTORRE],
   dospisos:     [DOSPISOS, P_DOSPISOS],
+  hamburguesa:  [HAMBURGUESA, P_HAMBURGUESA],
+  carrito:      [CARRITO, P_CARRITO],
+  beisbol:      [BEISBOL, P_BEISBOL],
+  cohete:       [COHETE, P_COHETE],
+  dolar:        [DOLAR, P_DOLAR],
+  fichador:     [FICHADOR, P_FICHADOR],
+  aguila:       [AGUILA, P_AGUILA],
+  busamarillo:  [BUSAMARILLO, P_BUSAMARILLO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

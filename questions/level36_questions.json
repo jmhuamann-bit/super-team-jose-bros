@@ -1,0 +1,125 @@
+{
+  "nivel": "level36",
+  "clase": "Clase 02 · PC4 — Ejercicios y comentes de costos a largo plazo",
+  "fuente": "Apuntes de la 2da clase de la PC4 — Comentes y ejercicios de teoría de costos a largo plazo (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e36-q1",
+      "nivel": "comprension",
+      "enunciado": "Una fábrica tiene la función de producción Cobb-Douglas Q = K^0,9 · L^0,8.\n\n¿Qué retornos a escala tiene y qué le pasa a su costo medio de largo plazo?",
+      "opciones": [
+        "Decrecientes, porque cada exponente es menor que 1, y el CMe sube",
+        "Crecientes, porque los exponentes suman 1,7, más que 1, y el CMe baja",
+        "Constantes, porque es una Cobb-Douglas, y el CMe se queda plano",
+        "Crecientes, pero el CMe sube porque el costo total aumenta"
+      ],
+      "correcta": 1,
+      "explicacion": "El truco de la Cobb-Douglas es sumar los exponentes: 0,9 + 0,8 = 1,7. Más que 1 son retornos CRECIENTES: economías a escala, el CMe baja y el CMe está por encima del CMg. Si sumaran 1 serían constantes (como K^0,1·L^0,9) y si sumaran menos, decrecientes (como K^0,2·L^0,3). No importa que cada exponente sea menor que 1."
+    },
+    {
+      "id": "e36-q2",
+      "nivel": "aplicacion",
+      "enunciado": "Para producir 1 unidad se necesitan siempre 2 trabajadores y 1 máquina. Además w = 10 y r = 5.\n\n¿Cuál es el costo total de largo plazo?",
+      "opciones": [
+        "CT = 15Q, sumando el salario y el alquiler de la máquina",
+        "CT = 10Q + 5, porque la máquina es un costo fijo",
+        "CT = 20Q, porque solo cuentan los trabajadores",
+        "CT = 25Q: con Q = min(L/2, K), la triple igualdad da L = 2Q y K = Q"
+      ],
+      "correcta": 3,
+      "explicacion": "Son complementarios perfectos: Q = min(L/2, K). La triple igualdad Q = L/2 = K da L = 2Q y K = Q. En la isocosto: CT = 10(2Q) + 5(Q) = 25Q. No hay costo fijo porque es largo plazo; el CMe = CMg = 25 es constante y hay retornos a escala constantes."
+    },
+    {
+      "id": "e36-q3",
+      "nivel": "comprension",
+      "enunciado": "Tres empresas terminan sus ejercicios con estos costos medios:\nA: CMe = 10\nB: CMe = 10Q\nC: CMe = 10/Q\n\n¿Qué retornos a escala tiene cada una?",
+      "opciones": [
+        "A constantes, B decrecientes (el CMe sube con Q) y C crecientes (el CMe baja con Q)",
+        "A constantes, B crecientes y C decrecientes, porque el CMe sigue a los retornos",
+        "Las tres tienen retornos constantes, porque todas empiezan en 10",
+        "A crecientes, B constantes y C decrecientes"
+      ],
+      "correcta": 0,
+      "explicacion": "Se mira cómo se mueve el CMe cuando sube Q. Un número fijo (10) es CMe constante: retornos constantes. Si Q está multiplicando (10Q), al subir Q el CMe SUBE: retornos decrecientes, deseconomías a escala. Si Q está dividiendo (10/Q), el CMe BAJA: retornos crecientes, economías a escala."
+    },
+    {
+      "id": "e36-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Una empresa produce con q = [min(L; 2K)]^(1/2) y los precios de los factores son w = r = 1.\n\n¿Cuál es su costo medio de largo plazo y qué retornos tiene?",
+      "opciones": [
+        "CMe = 1,5, constante: retornos constantes",
+        "CMe = 1,5/Q, decreciente: economías a escala",
+        "CMe = 1,5Q, creciente: retornos decrecientes, no hay economías a escala",
+        "CMe = 3Q, creciente: retornos crecientes"
+      ],
+      "correcta": 2,
+      "explicacion": "Se reparte la raíz: Q = min(√L, √(2K)). La triple igualdad Q = √L = √(2K) da L = Q² y K = Q²/2. En la isocosto: CT = 1·Q² + 1·Q²/2 = 1,5Q². Entonces CMe = 1,5Q, que SUBE con Q: retornos decrecientes. La función no exhibe economías de escala."
+    },
+    {
+      "id": "e36-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Cada hora de trabajo agrega siempre 1 unidad y cada unidad de capital agrega siempre 2. El salario es w = 100 y el costo del capital, r = 50.\n\n¿Qué compra la empresa y cuál es su CT de largo plazo?",
+      "opciones": [
+        "Compra los dos por igual: CT = 150Q",
+        "Compra solo capital, porque rinde 2/50 = 0,04 por sol contra 0,01 del trabajo: K = Q/2 y CT = 25Q",
+        "Compra solo trabajo, porque es el insumo más barato por hora: CT = 100Q",
+        "Compra solo capital, porque es más barato: CT = 50Q"
+      ],
+      "correcta": 1,
+      "explicacion": "Con PMg constantes son sustitutos perfectos: Q = L + 2K. Se compra el que da más producto por sol: PMgL/w = 1/100 = 0,01 contra PMgK/r = 2/50 = 0,04. Gana el capital y L = 0. En la isocuanta Q = 2K, K = Q/2, y en la isocosto CT = 50·Q/2 = 25Q. CMe = CMg = 25: retornos constantes."
+    },
+    {
+      "id": "e36-q6",
+      "nivel": "comprension",
+      "enunciado": "Comente: «El CMg de largo plazo es la envolvente de los CMg de corto plazo. Por lo tanto, el CMg de corto plazo nunca es menor que el de largo plazo».",
+      "opciones": [
+        "Verdadero: igual que el costo medio, el CMg de largo plazo envuelve a los de corto",
+        "Verdadero en la primera parte y falso en la segunda",
+        "Falso en la primera parte, pero es cierto que el CMg de corto plazo nunca es menor",
+        "Falso las dos: la envolvente es la del costo medio, y con retornos decrecientes el CMg de corto plazo queda por debajo del de largo"
+      ],
+      "correcta": 3,
+      "explicacion": "La envolvente es el CMe de largo plazo (y el CT de largo plazo), no el CMg. Y el contraejemplo de la segunda parte está en el tramo de retornos decrecientes: ahí el CMg de corto plazo queda por DEBAJO del CMg de largo plazo. Las dos afirmaciones son falsas."
+    },
+    {
+      "id": "e36-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Primera pregunta del águila. Para producir 200 productos al día una empresa necesita siempre 1 impresora 3D y 4 trabajadores. La impresora se alquila a 400 al día y el salario es 200.\n\n¿Cuál es el CT de largo plazo y cómo son el CMe y el CMg?",
+      "opciones": [
+        "CT = 6Q: con Q = min(50L, 200K) sale L = Q/50 y K = Q/200; CMe = CMg = 6, constantes",
+        "CT = 1200Q, sumando la impresora y los cuatro salarios",
+        "CT = 600Q + 400, porque la impresora es un costo fijo",
+        "CT = 6Q², y el CMe crece con la producción"
+      ],
+      "correcta": 0,
+      "explicacion": "1 impresora con 4 trabajadores da 200 unidades: Q = 200·min(L/4, K) = min(50L, 200K). La triple igualdad da L = Q/50 y K = Q/200. En la isocosto: CT = 200·Q/50 + 400·Q/200 = 4Q + 2Q = 6Q. Es una recta: CMg = CMe = 6, constantes, y retornos a escala constantes."
+    },
+    {
+      "id": "e36-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Segunda pregunta. La función de producción es q = √L + 3√K, con PMgL = ½L^(−1/2) y PMgK = (3/2)K^(−1/2). Los precios son w = 1 y r = 3.\n\n¿Cuál es el CT de largo plazo?",
+      "opciones": [
+        "CT = 4Q, porque los dos insumos se usan en la misma cantidad",
+        "CT = Q²/16, que es lo que sale al despejar L",
+        "CT = 0,25Q²: la TTS da K = L, la isocuanta da L = Q²/16 y CT = 4L",
+        "CT = 0,25Q, con costo medio constante"
+      ],
+      "correcta": 2,
+      "explicacion": "Caso típico. TTS = PMgL/PMgK = √K/(3√L), y se iguala a w/r = 1/3: √K = √L, o sea K = L. En la isocuanta Q = √L + 3√L = 4√L, así que L = Q²/16. En la isocosto CT = 1·L + 3·K = 4L = 4·Q²/16 = 0,25Q². El CMe = 0,25Q sube con Q: retornos decrecientes."
+    },
+    {
+      "id": "e36-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Tercera pregunta. El producto marginal del trabajo es siempre 4 y el del capital es siempre 5. Se sabe que w = 20 y r = 10.\n\n¿Cuál es el CT de largo plazo?",
+      "opciones": [
+        "CT = 5Q, comprando solo trabajo porque su PMg es 4",
+        "CT = 2Q: el capital rinde 5/10 = 0,5 por sol contra 4/20 = 0,2, así que K = Q/5",
+        "CT = 30Q, sumando los dos precios",
+        "CT = 2,5Q, comprando la mitad de cada insumo"
+      ],
+      "correcta": 1,
+      "explicacion": "Con PMg constantes son sustitutos: Q = 4L + 5K. Por sol, el trabajo da 4/20 = 0,2 y el capital 5/10 = 0,5. Gana el capital y L = 0: Q = 5K, K = Q/5. CT = 10·Q/5 = 2Q. CMe = CMg = 2, constante: retornos a escala constantes."
+    }
+  ]
+}

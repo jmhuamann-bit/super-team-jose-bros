@@ -1,0 +1,39 @@
+{
+  "id": "level36",
+  "distrito": "Estados Unidos",
+  "clase": "Clase 02 · PC4",
+  "titulo": "El país de la línea de montaje, donde cada auto lleva lo mismo",
+  "tema": "manhattan",
+  "musica": "manhattan",
+  "vehiculo": "busamarillo",
+  "intro": "Segunda clase de la PC4: ahora los costos de largo plazo se HALLAN con números, partiendo de la función de producción. Toca Estados Unidos por la línea de montaje: cada auto lleva siempre las mismas piezas en la misma proporción, que es justo el caso de los complementarios perfectos. Hay tres recetas. Si los insumos son COMPLEMENTARIOS, se hace la triple igualdad y se mete en la isocosto. Si son SUSTITUTOS, se compra solo el que da más producto por sol. Y si es el caso TÍPICO, se iguala la TTS al ratio de precios. Al final, el costo medio dice todo: si es un número fijo hay retornos constantes, si sube con Q son decrecientes y si baja con Q, crecientes.",
+  "repaso": [
+    "EN EL LARGO PLAZO no hay costo fijo: CT = wL + rK con K y L variables. La meta es dejar el CT solo en función de Q.",
+    "COMPLEMENTARIOS PERFECTOS (Q = min(L/a, K/b)): 1) se arma la función, 2) se hace la TRIPLE IGUALDAD, Q = L/a = K/b, y se despeja L = aQ y K = bQ, 3) se mete en la isocosto. Ejemplo: Q = min(L/2, K) con w = 10 y r = 5 da L = 2Q, K = Q y CT = 25Q.",
+    "CÓMO SE ARMA LA FUNCIÓN desde el enunciado: si 200 productos requieren 1 impresora y 4 trabajadores, Q = min(50L, 200K). Con la impresora a 400 y el salario a 200, CT = 200·Q/50 + 400·Q/200 = 6Q.",
+    "CUANDO LA PRODUCCIÓN VIENE CON RAÍZ: q = [min(L; 2K)]^(1/2) se reparte la raíz y se hace la triple igualdad: Q = √L = √(2K), así que L = Q² y K = Q²/2. Con w = r = 1, CT = 1,5Q².",
+    "SUSTITUTOS PERFECTOS (Q = PMgL·L + PMgK·K): se compara el producto por sol, PMgL/w contra PMgK/r, y se compra SOLO el ganador; el otro va en cero. Ejemplo: Q = L + 2K con w = 100 y r = 50: 0,01 < 0,04, todo a K, K = Q/2 y CT = 25Q.",
+    "CASO TÍPICO (la TTS queda con letras): 1) TTS = PMgL/PMgK, 2) se iguala al ratio de precios w/r, 3) se despeja un insumo en la isocuanta, 4) se mete en la isocosto. Ejemplo: q = √L + 3√K con w = 1 y r = 3 da K = L, L = Q²/16 y CT = 0,25Q².",
+    "CÓMO SE LEE EL RESULTADO: CMe = CT/Q. Si el CMe es un número (CMe = 25), es constante: retornos a escala CONSTANTES y el CT es una recta con CMg = CMe. Si el CMe sube con Q (CMe = 1,5Q), retornos DECRECIENTES. Si baja con Q (CMe = 10/Q), CRECIENTES.",
+    "TRUCO DE COBB-DOUGLAS: se suman los exponentes. Q = K^0,9·L^0,8 suma 1,7, más que 1: retornos crecientes. Q = K^0,1·L^0,9 suma 1: constantes. Q = K^0,2·L^0,3 suma 0,5: decrecientes.",
+    "COMENTE: el CMg de largo plazo NO es la envolvente de los CMg de corto plazo, y el CMg de corto plazo SÍ puede ser menor que el de largo. El contraejemplo está en el tramo de retornos decrecientes, donde el CMgCP queda por debajo del CMgLP.",
+    "LA ENVOLVENTE es la del costo medio y la del costo total: el CMeLP envuelve a los CMeCP y el CTLP a los CTCP, y en el largo plazo CT = CV y CMe = CVMe."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                  L                                                                   G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      oo?oo          oooo               oo                                      ooooooooooo               oo              ooooo                    V   1     oooooooo               ",
+    "                    ======            ======                                               oooo           ======               oooooo                       ==========              ",
+    "                                            ooooooo            =====                                                                                                                ",
+    "  P           C             E                         E   C T               E     X   E X         C                 E       X             C   E                         B       M   ",
+    "##############################################   ###########################################  ##################################    ################################################",
+    "##############################################   ###########################################  ##################################    ################################################",
+    "##############################################   ###########################################  ##################################    ################################################"
+  ]
+}
