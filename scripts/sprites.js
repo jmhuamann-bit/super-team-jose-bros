@@ -3668,6 +3668,156 @@ const BUSAMARILLO = [    // el bus escolar amarillo, que es el vehículo de sali
 ];
 const P_BUSAMARILLO = { k: "#1e1a10", a: "#e8b41c", n: "#2a2620", v: "#9fc2cc", r: "#c0392b", g: "#9a9aa2" };
 
+const AEROSTATO = [    // el aerostato: cree que con beneficio económico cero no se gana nada (18 × 14)
+  ".....kkaaaakk.....",
+  "....kaaaaaaaak....",
+  "...krrrrrrrrrrk...",
+  "..kaaaaaaaaaaaak..",
+  "..kvvvvvvvvvvvvk..",
+  "..kaaaaaaaaaaaak..",
+  "..krrrrrrrrrrrrk..",
+  "..kaaaaaaaaaaaak..",
+  "...kvvvvvvvvvvk...",
+  "....kaaaaaaaak....",
+  ".....knnnnnnk.....",
+  ".....knkkkknk.....",
+  ".....kcccccck.....",
+  ".....kcccccck.....",
+];
+const P_AEROSTATO = { k: "#2a1a1a", a: "#e8c45a", r: "#c0392b", v: "#2f7fb5", n: "#5a4a3a", c: "#8a6a3a" };
+
+const ALFOMBRA = [    // la alfombra: quiere vender más caro que el precio del mercado (18 × 14)
+  "..k.k.k.k.k.k.k...",
+  ".kfkfkfkfkfkfkfk..",
+  ".kfkfkfkfkfkfkfk..",
+  ".krrrrrrrrrrrrrrk.",
+  ".kraaaaaaaaaaaark.",
+  ".kraaaaaaaaaaaark.",
+  ".kraarrrvrrrraark.",
+  ".kraarvrvvrrvaark.",
+  ".kraarrrrrvrraark.",
+  ".kraaaaaaaaaaaark.",
+  ".krrrrrrrrrrrrrrk.",
+  ".kfkfkfkfkfkfkfk..",
+  ".kfkfkfkfkfkfkfk..",
+  "..k.k.k.k.k.k.k...",
+];
+const P_ALFOMBRA = { k: "#2a1414", r: "#a8302a", a: "#2f6f8a", v: "#e8c45a", f: "#d9c8a0" };
+
+const LAMPARA = [    // la lámpara: se asusta con la caída del ingreso aunque venda un bien inferior (18 × 14)
+  "..................",
+  "..................",
+  ".......kk.......k.",
+  "......kook.....kfk",
+  "..kk.kooook...kfkk",
+  ".kookkoooomkkkkkmm",
+  "kookmmmmmmmmmmmmmm",
+  "koomdmdmdmdmdmdmdm",
+  "koommmmmmmmmmmkkkk",
+  "koommmmmmmmmmmk...",
+  ".kkmmmmmmmmmmmk...",
+  "..kmmmmmmmmmmmk...",
+  "...kkoooooookk....",
+  ".....kkkkkkk......",
+];
+const P_LAMPARA = { k: "#2a2014", m: "#c9a23c", o: "#8a6a24", d: "#a8872c", f: "#f0a83c" };
+
+const ROMANA = [    // la romana: no ve que el ingreso marginal es el precio (18 × 14)
+  "......kmmmmk......",
+  ".......kmmk.......",
+  ".kkkkkkkmmkkkkkkk.",
+  "kmmmmmmmmmmmmmmmmk",
+  "kmmmmmmmmmmmmmmmmk",
+  ".kkmkkmkkmkkmkmmk.",
+  "..kmk.k..k.koooook",
+  "..kmk......koooook",
+  ".kkmkk......kkmkk.",
+  "kpppppk....kpppppk",
+  "pppppppk..kppppppp",
+  "kpppppk....kpppppk",
+  ".kkkkk......kkkkk.",
+  "..................",
+];
+const P_ROMANA = { k: "#231a14", m: "#9a8a6a", p: "#c9a23c", o: "#6b5a3a" };
+
+const DERVICHE = [    // el derviche: cree que quien maximiza nunca pierde (18 × 14)
+  "......kffffk......",
+  "......kffffk......",
+  "......kffffk......",
+  "......kffffk......",
+  ".....kffffffk.....",
+  "......kppppk......",
+  "......kpkkpk......",
+  "..kkkkkppppkkkkk..",
+  ".kppppwwwwwwppppk.",
+  "..kkkkwwwwwwkkkk..",
+  "...kkwwwwwwwwkk...",
+  ".kkwdwwwdwwwdwwkk.",
+  "kwwwdwwwdwwwdwwwdk",
+  "dwwwdwwwdwwwdwwwdw",
+];
+const P_DERVICHE = { k: "#2a2420", f: "#8a6a4a", p: "#d9a273", w: "#f2ece0", d: "#cfc6b4" };
+
+const VASO = [    // el vaso: cree que subir el alquiler de las máquinas cambia la producción (18 × 14)
+  "....kkkkkkkkkk....",
+  "...kvvvvvvvvvvk...",
+  "...kvvvvvvvvvvk...",
+  "....kvvvvvvvvkkk..",
+  "....kttttttttkook.",
+  "....kttttttttkook.",
+  ".....kttttttkkook.",
+  "....kttttttttkook.",
+  "....kttttttttkook.",
+  "....kttttttttkkk..",
+  "...kttttttttttk...",
+  "..kppppppppppppk..",
+  ".kppppppppppppppk.",
+  ".kppppppppppppppk.",
+];
+const P_VASO = { k: "#2a1a14", v: "#dfe6ea", t: "#a8502a", p: "#c9a23c", o: "#9aa4ae" };
+
+const SULTAN = [    // jefe: el sultán del bazar, que quiere ponerle precio al mercado (18 × 17)
+  "....kkdwwdwrok....",
+  "...kwwdwwdwrrwk...",
+  "...kwwdwwdwrrwk...",
+  "...kwwdwwdwwdwk...",
+  "....kwdwwdwwdk....",
+  ".....kppppppk.....",
+  ".....kpkppkpk.....",
+  ".....kppppppk.....",
+  "....kkppppppkk....",
+  "..kkrrrnnnnrrrkk..",
+  ".kppprrnnnnrrpppk.",
+  ".kpppornnnnrrpppk.",
+  ".kpppornnnnrrpppk.",
+  "..kkrornnnnrrokk..",
+  "...krorrrorrrok...",
+  "...krorrrorrrok...",
+  "...krorrrorrrok...",
+];
+const P_SULTAN = { k: "#1e1612", w: "#f2ece0", d: "#cfc6b4", p: "#d9a273", n: "#3a2e28", r: "#2f6f5a", o: "#e8c45a" };
+
+const FERRY = [    // el ferry del Bósforo, que es el vehículo de salida del distrito (32 × 16)
+  "..........kkkhhhhhkkkk..........",
+  ".........knnnhhhhhhhhhkkkk......",
+  ".........krrrrkkkhhhhhhhhhk.....",
+  ".........krrrrk..kkkkhhhhhk.....",
+  ".....kkkkkrrrrkkkkkkkkkkkk......",
+  "....kwwwwwrrrrwwwwwwwwwwwwkk....",
+  "....kwwvvvwvvvwvvvwvvvwvvvwwk...",
+  "....kwwvvvwvvvwvvvwvvvwvvvwwk...",
+  "....kwwwwwwwwwwwwwwwwwwwwwwwk...",
+  "..kkkwwwwwwwwwwwwwwwwwwwwwwwkk..",
+  ".kooooooooooooooooooooooooooook.",
+  "kcccccccccccccccccccccccccccccck",
+  "kcccccccccccccccccccccccccccccck",
+  "kcccccccccccccccccccccccccccccck",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.",
+  "................................",
+];
+const P_FERRY = { k: "#1e1a18", c: "#2f5a74", o: "#e8c45a", w: "#f2ece0", v: "#7fb0c4", r: "#a8302a", n: "#2a2420", h: "#c6ccd2" };
+
+
 
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
@@ -3878,6 +4028,14 @@ const DEFINICIONES = {
   fichador:     [FICHADOR, P_FICHADOR],
   aguila:       [AGUILA, P_AGUILA],
   busamarillo:  [BUSAMARILLO, P_BUSAMARILLO],
+  aerostato:    [AEROSTATO, P_AEROSTATO],
+  alfombra:     [ALFOMBRA, P_ALFOMBRA],
+  lampara:      [LAMPARA, P_LAMPARA],
+  romana:       [ROMANA, P_ROMANA],
+  derviche:     [DERVICHE, P_DERVICHE],
+  vaso:         [VASO, P_VASO],
+  sultan:       [SULTAN, P_SULTAN],
+  ferry:        [FERRY, P_FERRY],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

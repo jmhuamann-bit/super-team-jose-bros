@@ -493,7 +493,7 @@
       "titulo": "El país donde la fábrica creció hasta que ya no le convino",
       "icono": "🏭",
       "seccion": "PC4",
-      "seccionNota": "Costos a largo plazo — y seguimos dando la vuelta al mundo",
+      "seccionNota": "Costos a largo plazo y competencia perfecta — y seguimos dando la vuelta al mundo",
       "retos": 7,
       "duracion": "3 min",
       "abierto": true,
@@ -507,12 +507,26 @@
       "titulo": "El país de la línea de montaje, donde cada auto lleva lo mismo",
       "icono": "🚗",
       "seccion": "PC4",
-      "seccionNota": "Costos a largo plazo — y seguimos dando la vuelta al mundo",
+      "seccionNota": "Costos a largo plazo y competencia perfecta — y seguimos dando la vuelta al mundo",
       "retos": 7,
       "duracion": "3 min",
       "abierto": true,
       "mapa": "levels/level36.json",
       "preguntas": "questions/level36_questions.json"
+    },
+    {
+      "id": "level37",
+      "clase": "Clase 03",
+      "distrito": "Turquía",
+      "titulo": "El país del bazar donde nadie le pone precio a nada",
+      "icono": "🕌",
+      "seccion": "PC4",
+      "seccionNota": "Costos a largo plazo y competencia perfecta — y seguimos dando la vuelta al mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level37.json",
+      "preguntas": "questions/level37_questions.json"
     }
   ]
 }

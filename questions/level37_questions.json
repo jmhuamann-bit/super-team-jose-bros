@@ -1,0 +1,125 @@
+{
+  "nivel": "level37",
+  "clase": "Clase 03 · PC4 — Competencia perfecta",
+  "fuente": "Apuntes de la 3ra clase de la PC4 — Competencia perfecta (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e37-q1",
+      "nivel": "comprension",
+      "enunciado": "Alguien elige una tienda de mochilas que deja 5000 soles, y su otra opción era una tienda de ropa que también deja 5000. Su beneficio económico es 0.\n\nComente: «Como su beneficio económico es 0, no gana nada y debería retirarse».",
+      "opciones": [
+        "Verdadero: con beneficio económico cero la tienda no deja ni para comer",
+        "Verdadero: un negocio solo vale la pena si su beneficio económico es positivo",
+        "Falso: su beneficio contable es 5000; el cero solo dice que cubrió su costo de oportunidad",
+        "Falso: su beneficio económico en realidad es 5000, porque no se resta nada"
+      ],
+      "correcta": 2,
+      "explicacion": "Beneficio contable no es beneficio económico. BE = beneficio contable − costo de oportunidad = 5000 − 5000 = 0. Eso no quiere decir que no gane: gana 5000. Quiere decir que cubrió todos sus costos de oportunidad y que lo elegido no es peor que lo dejado de lado."
+    },
+    {
+      "id": "e37-q2",
+      "nivel": "comprension",
+      "enunciado": "En un mercado de competencia perfecta, cada unidad se vende a 50 soles. Una empresa llega y decide venderla a 80.\n\n¿Qué le pasa?",
+      "opciones": [
+        "Nadie le compra: el producto es igual, todos conocen el precio, y debe aceptar los 50",
+        "Vende menos, pero gana más por unidad, como cualquier empresa que sube su precio",
+        "El precio del mercado sube a 80, porque los demás la siguen",
+        "Vende igual, porque en este mercado hay muchos consumidores"
+      ],
+      "correcta": 0,
+      "explicacion": "Con bienes homogéneos e información perfecta, nadie paga 80 por lo que al lado cuesta 50. Las cuatro características (gran número de vendedores y consumidores, bienes homogéneos, información perfecta y sin barreras) hacen a la empresa PRECIO ACEPTANTE: el precio lo determina el mercado."
+    },
+    {
+      "id": "e37-q3",
+      "nivel": "comprension",
+      "enunciado": "En una época crítica caen los ingresos de los consumidores. Un vendedor de panetones, que son un bien INFERIOR, cree que ya nadie le comprará.\n\n¿Qué pasa con el precio y con la demanda dirigida a su empresa?",
+      "opciones": [
+        "Baja la demanda del mercado, baja el precio y la demanda dirigida se contrae",
+        "El precio no cambia, porque la empresa es precio aceptante",
+        "La demanda del mercado no se mueve, porque es un bien inferior",
+        "Sube la demanda del mercado, sube el precio y la demanda dirigida, horizontal, sube a ese nuevo precio"
+      ],
+      "correcta": 3,
+      "explicacion": "Con un bien inferior, si el ingreso BAJA la demanda SUBE. El mercado se expande y el precio de equilibrio sube, por ejemplo de 10 a 20. Precio aceptante no quiere decir que el precio no cambie: quiere decir que la empresa toma el que salga. Su demanda sigue horizontal, pero a 20. No tiene de qué preocuparse."
+    },
+    {
+      "id": "e37-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Una empresa de competencia perfecta vende al precio de 50 y hoy produce donde su CMg es 30, en el tramo creciente del CMg.\n\n¿Qué le sugiere?",
+      "opciones": [
+        "Reducir q, porque cada unidad extra le cuesta más de lo que le deja",
+        "Aumentar q: cada unidad extra deja 50 de ingreso y cuesta 30, y debe llegar a P = CMg",
+        "Subir el precio a 80, ya que tiene margen sobre su costo marginal",
+        "Quedarse igual, porque ya está obteniendo beneficios"
+      ],
+      "correcta": 1,
+      "explicacion": "En competencia perfecta P = IMg = IMe. Si P > CMg, la unidad adicional deja más de lo que cuesta, así que conviene subir q hasta P = CMg. Si fuera P < CMg, convendría bajarla. Y el precio no lo puede cambiar: es precio aceptante."
+    },
+    {
+      "id": "e37-q5",
+      "nivel": "comprension",
+      "enunciado": "Comente: «Una empresa que maximiza beneficios JAMÁS puede tener beneficios negativos».",
+      "opciones": [
+        "Falso: si CMe > P ≥ CVMe, en P = CMg está en su máximo y aun así el beneficio es negativo",
+        "Verdadero: si tuviera pérdidas, significaría que no está en P = CMg",
+        "Verdadero: la empresa que pierde solo tiene que producir más o menos para arreglarlo",
+        "Falso: toda empresa de competencia perfecta tiene beneficio negativo"
+      ],
+      "correcta": 0,
+      "explicacion": "Son dos pasos: primero se halla q* con P = CMg y después se calcula el beneficio. Si P queda entre el CVMe y el CMe, el máximo es negativo: es la heladería en invierno. Producir más o menos solo empeora la pérdida. Lo que queda es esperar que suba el precio del mercado."
+    },
+    {
+      "id": "e37-q6",
+      "nivel": "aplicacion",
+      "enunciado": "En el corto plazo sube el alquiler de las máquinas (r). La empresa venía produciendo con P > CMe.\n\n¿Qué cambia?",
+      "opciones": [
+        "Suben el CMg, el CVMe y el CMe, así que debe reducir su producción",
+        "No cambia ninguna curva, porque las máquinas ya estaban alquiladas",
+        "Solo sube el CMe; el CMg no cambia, así que q* y la oferta siguen igual y solo cambia el beneficio",
+        "Baja el CMe y la oferta de la empresa se expande"
+      ],
+      "correcta": 2,
+      "explicacion": "Con K fijo, r sube el CF, el CFMe y por eso el CMe. El CMg no cambia y el precio tampoco, así que P = CMg da la misma q*. La oferta depende del CMg y del precio de cierre, y ninguno se movió. Solo baja el beneficio. Si cambiara w, ahí sí se moverían el CMg, el CVMe y el CMe."
+    },
+    {
+      "id": "e37-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Primera pregunta del sultán. Una heladería en invierno tiene CF = 60. Produciendo en su q*, su CV es 30 y su IT es 80.\n\n¿Qué debe hacer?",
+      "opciones": [
+        "Cerrar, porque con pérdidas no tiene sentido abrir: pierde 60",
+        "Cerrar, porque su ingreso no alcanza para pagar el costo total de 90",
+        "Seguir produciendo, porque gana 50, que es lo que queda después de pagar el CV",
+        "Seguir produciendo: abierta pierde 10 y cerrada perdería 60, así que minimiza pérdidas"
+      ],
+      "correcta": 3,
+      "explicacion": "Si no produce: IT = 0 y CT = CF = 60, pierde 60. Si produce: IT = 80 y CT = 30 + 60 = 90, pierde 10. El precio está entre el CMe y el CVMe: el ingreso cubre todo el CV y una parte del alquiler. Por eso sigue, para minimizar pérdidas."
+    },
+    {
+      "id": "e37-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Segunda pregunta. Cae todavía más el precio. Con el mismo CF = 60 y CV = 30, ahora su IT es 10.\n\n¿Qué debe hacer?",
+      "opciones": [
+        "Seguir produciendo, porque así por lo menos entra algo de ingreso",
+        "Suspender temporalmente: abierta pierde 80 y cerrada pierde 60, porque P < CVMe",
+        "Subir su precio hasta cubrir el CVMe, y entonces seguir produciendo",
+        "Producir más, para repartir el costo fijo entre más unidades"
+      ],
+      "correcta": 1,
+      "explicacion": "Si produce: IT = 10 y CT = 90, pierde 80. Si no produce: pierde solo los 60 del CF. Con P < CVMe el ingreso ni siquiera paga el costo variable, así que conviene suspender temporalmente. El precio de cierre es P = CVMe mínimo, y subir el precio no está en sus manos."
+    },
+    {
+      "id": "e37-q9",
+      "nivel": "comprension",
+      "enunciado": "Tercera pregunta. Una empresa de competencia perfecta tiene beneficios negativos en su q óptima.\nMariela dice: «que baje su precio para captar más clientes».\nMariana dice: «que suba su precio para subir su IMg».\n\n¿Quién tiene razón?",
+      "opciones": [
+        "Ninguna: es precio aceptante, subiendo no vende nada y bajando pierde sin necesidad; moverse de q* baja el beneficio",
+        "Mariela: bajar el precio aumenta la cantidad y con eso el beneficio",
+        "Mariana: si P = IMg, subir el precio sube el ingreso sin cambiar la producción",
+        "Las dos, porque con beneficios negativos cualquier cambio ayuda"
+      ],
+      "correcta": 0,
+      "explicacion": "Las dos se equivocan. La empresa no pone el precio: si sube, nadie le compra, porque todos conocen el del mercado; si baja, deja plata sobre la mesa, porque a P ya podía vender todo lo que quisiera. En P = CMg ya está en su máximo: subir o bajar q baja el beneficio. Solo queda esperar que suba el precio del mercado."
+    }
+  ]
+}

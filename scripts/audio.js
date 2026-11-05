@@ -231,6 +231,14 @@ const TEMAS_MUSICA = {
               "D4",2,"E4",1,"G4",1,"A4",2,"G4",1,"E4",1,"E4",4],
     bajo:    ["E2",4,"B2",4,"A2",4,"E2",4,"C3",4,"B2",4,"E2",8],
   },
+  bosforo: { // Turquía: aire de bazar en modo hiyaz, con el segundo grado bajo
+    tempo: 0.20, onda: "square",
+    melodia: ["D4",2,"Eb4",2,"F#4",2,"G4",2,"A4",4,"G4",2,"F#4",2,
+              "Eb4",2,"D4",2,"Eb4",2,"F#4",2,"G4",4,"A4",4,
+              "Bb4",2,"A4",2,"G4",2,"F#4",2,"Eb4",2,"D4",2,"D4",4,
+              "A4",2,"G4",2,"F#4",2,"Eb4",2,"D4",4,"D4",4],
+    bajo:    ["D2",8,"A1",8,"Bb1",4,"A1",4,"D2",8,"D2",8],
+  },
   manhattan: { // Estados Unidos: swing de ciudad, con el bajo caminando y la melodía recostada
     tempo: 0.21, onda: "triangle",
     melodia: ["C4",2,"E4",2,"G4",2,"A4",2,"Bb4",4,"A4",2,"G4",2,

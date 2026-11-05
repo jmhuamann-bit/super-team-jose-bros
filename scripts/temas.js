@@ -4790,6 +4790,202 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     TURQUÍA — se trae del nivel de Turquía de Economía 2. Va por el
+     Gran Bazar: mil puestos, la misma mercadería y un solo precio.
+     ========================================================= */
+  bosforo: {
+    nombre: "Turquía",
+    cielo: [[0, "#3f7fae"], [0.4, "#8fb2c4"], [0.7, "#ecd8b4"], [0.8, "#322c26"], [1, "#16120e"]],
+    suelo: { cara: "#c2a87a", borde: "#e0c89a", tierra: "#6b5438", plataforma: "#a07a4a", plataformaBorde: "#2f6f8a" },
+    acento: "#2f6f8a",
+
+    bichos: ["aerostato", "alfombra", "lampara", "romana", "derviche", "vaso"],
+    nombresBichos: [
+      "El Aerostato que Cree que Cero Es Nada",
+      "La Alfombra que Quiere Vender Más Cara",
+      "La Lámpara que Se Asusta sin Motivo",
+      "La Romana que No Ve el Precio en el Margen",
+      "El Derviche que Cree que Maximizar Es Ganar",
+      "El Vaso que Se Mueve por el Alquiler",
+    ],
+    andares: ["patrulla", "guardia", "veloz", "salta", "vuela"],
+    jefe: "sultan",
+    nombreJefe: "El Sultán que Quiere Poner el Precio",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol bajo sobre el estrecho
+      ctx.fillStyle = "rgba(255,230,180,.26)";
+      ctx.beginPath(); ctx.arc(196, 96, 58, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,242,214,.84)";
+      ctx.beginPath(); ctx.arc(196, 96, 23, 0, Math.PI * 2); ctx.fill();
+
+      // las nubes finas del atardecer
+      repetir(ctx, cam, 324, 0.03, (x, i) => {
+        const by = 38 + ((i * 49) % 56);
+        ctx.fillStyle = "rgba(250,242,232,.44)";
+        ctx.fillRect(x, by, 122, 9);
+        ctx.fillRect(x + 24, by - 6, 72, 6);
+      });
+
+      // LAS COLINAS de la otra orilla, apiladas de casas chiquitas
+      repetir(ctx, cam, 272, 0.05, (x, i) => {
+        const base = 318, alto = 54 + ((i * 37) % 32);
+        ctx.fillStyle = "rgba(142,128,110,.60)";
+        ctx.beginPath();
+        ctx.moveTo(x - 36, base);
+        ctx.quadraticCurveTo(x + 58, base - alto, x + 152, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(216,200,174,.54)";
+        for (let k = 0; k < 9; k++) {
+          ctx.fillRect(x + 6 + k * 15, base - 10 - ((k * 13) % Math.max(10, alto - 16)), 10, 10);
+        }
+      });
+
+      // LA MEZQUITA: la cúpula grande con sus medias cúpulas y los dos alminares
+      repetir(ctx, cam, 468, 0.12, (x, i) => {
+        const bx = x + 70, base = 318;
+        ctx.fillStyle = "#cbbda0";
+        ctx.fillRect(bx, base - 56, 98, 56);                   // el cuerpo
+        ctx.fillStyle = "rgba(118,104,82,.30)";
+        for (let px = bx + 8; px < bx + 92; px += 16) ctx.fillRect(px, base - 40, 9, 24);
+        /* las medias cúpulas de los costados */
+        for (const d of [16, 66]) {
+          ctx.fillStyle = "#9aa8a0";
+          ctx.beginPath();
+          ctx.moveTo(bx + d, base - 56);
+          ctx.quadraticCurveTo(bx + d + 8, base - 84, bx + d + 16, base - 56);
+          ctx.closePath(); ctx.fill();
+        }
+        ctx.fillStyle = "#8a9a94";                             // LA CÚPULA grande
+        ctx.beginPath();
+        ctx.moveTo(bx + 28, base - 62);
+        ctx.quadraticCurveTo(bx + 49, base - 116, bx + 70, base - 62);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#e8c45a";                             // la media luna
+        ctx.fillRect(bx + 48, base - 100, 3, 10);
+        ctx.beginPath(); ctx.arc(bx + 49, base - 103, 4, 0.6, 5.0); ctx.fill();
+        for (const d of [-14, 104]) {                          // los dos alminares
+          ctx.fillStyle = "#d4c7aa";
+          ctx.fillRect(bx + d, base - 118, 11, 118);
+          ctx.fillStyle = "#9aa8a0";                           // el balconcito
+          ctx.fillRect(bx + d - 2, base - 78, 15, 5);
+          ctx.beginPath();                                      // el capirote
+          ctx.moveTo(bx + d - 2, base - 118);
+          ctx.lineTo(bx + d + 5, base - 136);
+          ctx.lineTo(bx + d + 13, base - 118);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+
+      // LAS CASAS DE MADERA del barrio viejo, con sus voladizos
+      repetir(ctx, cam, 116, 0.22, (x, i) => {
+        const bx = x, base = 318;
+        const alto = 52 + ((i * 19) % 18);
+        ctx.fillStyle = elige(["#c08a5a", "#a86a4a", "#d0a070", "#8a6a52"], i);
+        ctx.fillRect(bx, base - alto, 46, alto);
+        ctx.fillStyle = "rgba(60,44,32,.38)";                  // el alero
+        ctx.fillRect(bx - 4, base - alto - 5, 54, 6);
+        ctx.fillStyle = elige(["#c08a5a", "#a86a4a", "#d0a070"], i + 1);
+        ctx.fillRect(bx - 5, base - alto + 14, 56, 13);        // EL VOLADIZO
+        ctx.fillStyle = "rgba(246,238,220,.66)";
+        for (let px = bx - 2; px < bx + 48; px += 11) ctx.fillRect(px, base - alto + 17, 7, 8);
+        ctx.fillStyle = "rgba(246,238,220,.56)";
+        for (let py = base - alto + 32; py < base - 16; py += 15) {
+          ctx.fillRect(bx + 7, py, 10, 11);
+          ctx.fillRect(bx + 28, py, 10, 11);
+        }
+        ctx.fillStyle = "#5a3e2a";
+        ctx.fillRect(bx + 18, base - 16, 11, 16);
+      });
+
+      // EL SUELO: del pie de las casas al adoquín, sin cortes. En el medio va
+      // EL BÓSFORO, que es el que parte la ciudad en dos continentes
+      ctx.fillStyle = "#6b7a4a";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 12);
+      ctx.fillStyle = "#2f6f8a";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#3f8aa4";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 6);
+      for (let i = 0; i < 30; i++) {
+        const x = (i * 60 - cam * 0.17) % 1060 - 60;
+        ctx.fillStyle = "rgba(236,246,248,.34)";
+        ctx.fillRect(x, 328 + ((i * 11) % 14), 22, 2);
+        ctx.fillStyle = "rgba(22,58,74,.24)";
+        ctx.fillRect(x + 12, 338 + ((i * 7) % 8), 16, 2);
+      }
+      ctx.fillStyle = "#c2a87a";                               // el adoquín del muelle
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 32);
+      ctx.fillStyle = "#e0c89a";
+      ctx.fillRect(0, 350, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 42; i++) {
+        const x = (i * 38 - cam * 0.5) % 1000 - 40;
+        ctx.fillStyle = "rgba(96,76,48,.18)";
+        ctx.fillRect(x, 358 + ((i * 11) % 18), 12, 4);
+      }
+
+      // EL PUESTO DEL BAZAR, con su toldo a rayas y sus cajones de especias
+      repetir(ctx, cam, 294, 0.54, (x, i) => {
+        const bx = x + 40, base = 382;
+        ctx.fillStyle = "#6b4a2a";                             // los parantes
+        ctx.fillRect(bx, base - 46, 4, 46);
+        ctx.fillRect(bx + 86, base - 46, 4, 46);
+        for (let k = 0; k < 9; k++) {                          // el toldo a rayas
+          ctx.fillStyle = k % 2 ? "#a8302a" : "#e8dcc0";
+          ctx.fillRect(bx - 4 + k * 11, base - 52, 11, 11);
+        }
+        ctx.fillStyle = "#8a6a3a";                             // el tablón
+        ctx.fillRect(bx - 2, base - 24, 92, 5);
+        for (let k = 0; k < 5; k++) {                          // los conos de especias
+          const px = bx + 6 + k * 17;
+          ctx.fillStyle = elige(["#c9622a", "#d9a22c", "#8a3a2a", "#6b8a3a", "#a8602a"], i + k);
+          ctx.beginPath();
+          ctx.moveTo(px, base - 24);
+          ctx.lineTo(px + 6, base - 36);
+          ctx.lineTo(px + 12, base - 24);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+
+      // LOS GATOS DE ESTAMBUL, echados donde les da el sol
+      repetir(ctx, cam, 104, 0.78, (x, i) => {
+        const bx = x + 20, base = 382;
+        ctx.fillStyle = elige(["#9a8a7a", "#6b5a4a", "#c2b2a0"], i);
+        ctx.beginPath(); ctx.ellipse(bx + 8, base - 5, 9, 5, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(bx + 16, base - 8, 4, 0, Math.PI * 2); ctx.fill();
+        ctx.fillRect(bx + 13, base - 13, 2, 3);                // las orejas
+        ctx.fillRect(bx + 17, base - 13, 2, 3);
+        ctx.fillRect(bx - 3, base - 9, 6, 2);                  // la cola
+        ctx.fillStyle = "rgba(40,34,28,.70)";
+        ctx.fillRect(bx + 18, base - 9, 1, 1);
+      });
+      ctx.fillStyle = "#a8906a";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // las gaviotas del estrecho, que siguen a los ferris
+      for (let i = 0; i < 5; i++) {
+        const x = (i * 211 + t * 1.5) % 1040 - 60;
+        const y = 92 + ((i * 47) % 56) + Math.sin(t / 17 + i) * 9;
+        const ala = Math.sin(t / 8 + i * 1.5) * 4;
+        ctx.fillStyle = "rgba(250,250,246,.80)";
+        ctx.fillRect(x, y, 5, 2);
+        ctx.fillRect(x - 5, y - ala, 5, 2);
+        ctx.fillRect(x + 5, y - ala, 5, 2);
+      }
+      // y el vapor del té que sube de los puestos
+      for (let i = 0; i < 7; i++) {
+        const x = (i * 149 + 30) % 1000 - 40;
+        const subida = (t * 0.8 + i * 29) % 56;
+        ctx.fillStyle = "rgba(240,238,230,." + (20 - Math.round(subida / 4)) + ")";
+        ctx.fillRect(x, 356 - subida, 9 + Math.round(subida / 8), 4);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

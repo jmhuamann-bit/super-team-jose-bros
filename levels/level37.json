@@ -1,0 +1,41 @@
+{
+  "id": "level37",
+  "distrito": "Turquía",
+  "clase": "Clase 03 · PC4",
+  "titulo": "El país del bazar donde nadie le pone precio a nada",
+  "tema": "bosforo",
+  "musica": "bosforo",
+  "vehiculo": "ferry",
+  "intro": "Tercera clase de la PC4: COMPETENCIA PERFECTA. Toca Turquía por el Gran Bazar: cientos de puestos, la misma mercadería, todos saben cuánto cuesta y cualquiera puede abrir o cerrar. Si pides más que el de al lado, nadie te compra. Por eso la empresa es PRECIO ACEPTANTE: el precio lo decide el mercado, y a la empresa solo le queda decidir cuánto producir. Lo hace donde P = CMg, con el CMg creciente y siempre que el precio cubra al menos el CVMe. Y después viene la pregunta clásica: según dónde caiga el precio respecto del CMe y del CVMe, se gana, se minimizan pérdidas o se suspende la producción.",
+  "repaso": [
+    "COSTO DE OPORTUNIDAD: es la mejor alternativa de las que dejaste de lado. Beneficio económico = beneficio contable de lo elegido − costo de oportunidad. Con Messi (900) y CR7 (850) de segunda opción, BE = 50.",
+    "BE = 0 NO ES NO GANAR NADA: quiere decir que cubriste todos los costos de oportunidad, que lo elegido no es peor que lo dejado. Con 5000 contra 5000, el contable es 5000 y el económico es 0; no hay por qué retirarse.",
+    "LAS CUATRO CARACTERÍSTICAS (GHIN): Gran número de consumidores y vendedores, bienes Homogéneos, Información perfecta y No hay barreras de entrada ni de salida. Juntas hacen a cada empresa PRECIO ACEPTANTE. El monopolio sí tiene barreras y poder.",
+    "EL PRECIO LO PONE EL MERCADO, donde se cruzan la oferta y la demanda. La demanda dirigida a la empresa es HORIZONTAL (m = 0) a ese precio, aunque la demanda del mercado sea vertical u horizontal: lo que importa del mercado es el precio. Deja de ser horizontal cuando falla un supuesto.",
+    "QUÉ MUEVE EL PRECIO: más consumidores, gustos o expectativas expanden la demanda. Si cae el ingreso, un bien inferior gana demanda y sube su precio; uno normal la pierde. También importan los sustitutos y los complementarios.",
+    "LOS INGRESOS: IT = P·q, una recta que sale del origen. IMe = IT/q = P e IMg = P. La conclusión que vale más que tu vida: P = IMg = IMe = demanda dirigida a la empresa.",
+    "DÓNDE PRODUCIR, tres condiciones: 1) IMg = CMg, o sea P = CMg. 2) El CMg creciente. 3) El precio mayor o igual al CVMe. Si P > CMg, conviene subir q; si P < CMg, conviene bajarla.",
+    "LOS CASOS: P > CMe, hay beneficio positivo. P = CMe, BE = 0 (IT = CT). CMe > P > CVMe, hay pérdida, pero se sigue produciendo para minimizar pérdidas (la heladería en invierno). P = CVMe es el precio de cierre. P < CVMe, se suspende temporalmente.",
+    "EL EJEMPLO DE LOS CASOS: con CF = 60 y CV = 30, si IT = 80, producir pierde 10 y cerrar pierde 60: se sigue. Si IT = 10, producir pierde 80 y cerrar pierde 60: se suspende.",
+    "MAXIMIZAR NO ES GANAR: son dos pasos, primero hallar q* con P = CMg y después calcular el beneficio. Una empresa puede estar en su máximo y tener BE negativo si CMe > P ≥ CVMe. Moverse de q* solo lo empeora; queda esperar que suba el precio del mercado.",
+    "LA OFERTA DE LA EMPRESA es su CMg por encima del CVMe mínimo. Si sube el precio, sube q (ley de oferta).",
+    "LOS COSTOS: en el corto plazo, si sube r solo suben el CFMe y el CMe; el CMg no cambia, así que q* y la oferta se quedan igual, y solo cambia el beneficio. Si cambia w, se mueven CMg, CVMe y CMe, y cambian q* y la oferta. En el largo plazo w y r mueven todo."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      ?                      V                                                               G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      ooLoo          oooo               oo                                      ooooooooooo               oo            ooooo                       1   L    oooooooo               ",
+    "                    ======                ======                                                     oooo ======               ooooo                        ==========              ",
+    "                                   ooooo                       =====                                                                                                                ",
+    "  P           C             E                       E     C T               E     X   E X       C                   E     X               C   E                         B       M   ",
+    "####################################   ###############################################################  ########################   #################################################",
+    "####################################   ###############################################################  ########################   #################################################",
+    "####################################   ###############################################################  ########################   #################################################"
+  ]
+}

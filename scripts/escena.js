@@ -318,6 +318,13 @@ const FICHAS = [
   { sprite: "dolar", nombre: "El Dólar que Compra de los Dos", texto: "Con sustitutos perfectos se compra SOLO el insumo que da más producto por sol. El otro va en cero." },
   { sprite: "fichador", nombre: "El Fichador que Cree que el Corto Nunca Gana", texto: "El CMg de largo plazo no envuelve a los de corto, y con retornos decrecientes el CMg de corto plazo queda por debajo." },
   { sprite: "aguila", nombre: "El Águila que Arma el Costo de Largo Plazo", texto: "Jefe de Estados Unidos: pide el CT de largo plazo de una línea de impresoras, de un caso típico y de unos sustitutos." },
+  { sprite: "aerostato", nombre: "El Aerostato que Cree que Cero Es Nada", texto: "Turquía: beneficio económico cero no es no ganar nada. Es cubrir el costo de oportunidad: con 5000 contra 5000, el contable sigue siendo 5000." },
+  { sprite: "alfombra", nombre: "La Alfombra que Quiere Vender Más Cara", texto: "Si el mercado vende a 50 y tú pides 80, con información perfecta nadie te compra. La empresa es precio aceptante." },
+  { sprite: "lampara", nombre: "La Lámpara que Se Asusta sin Motivo", texto: "Si cae el ingreso y vendes un bien inferior, la demanda del mercado SUBE, y con ella el precio que recibes." },
+  { sprite: "romana", nombre: "La Romana que No Ve el Precio en el Margen", texto: "En competencia perfecta P = IMg = IMe. Se produce donde P = CMg: si P > CMg conviene producir más; si P < CMg, menos." },
+  { sprite: "derviche", nombre: "El Derviche que Cree que Maximizar Es Ganar", texto: "Una empresa puede maximizar y aun así perder: si CMe > P ≥ CVMe, el beneficio máximo es negativo, y moverse lo empeora." },
+  { sprite: "vaso", nombre: "El Vaso que Se Mueve por el Alquiler", texto: "En el corto plazo, si sube r solo sube el CMe. El CMg no cambia, así que la producción óptima y la oferta se quedan igual." },
+  { sprite: "sultan", nombre: "El Sultán que Quiere Poner el Precio", texto: "Jefe de Turquía: pide decidir si seguir abierto o suspender, y desarmar a quien cree que una empresa puede subir o bajar su precio." },
 ];
 
 export function galeriaPersonajes(contenedor) {
