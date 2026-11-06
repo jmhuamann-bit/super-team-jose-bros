@@ -3819,6 +3819,155 @@ const P_FERRY = { k: "#1e1a18", c: "#2f5a74", o: "#e8c45a", w: "#f2ece0", v: "#7
 
 
 
+const MULA = [    // la mula terca: mezcla la regla de cierre del corto plazo con la del largo (18 × 14)
+  "..................",
+  "..................",
+  "..kkkkkkkkk..kkkk.",
+  ".kssssssssskkmmmmk",
+  ".kstsstsstskkmmmmk",
+  ".kyryryryryrmmmmmk",
+  ".kmmmmmmmmmmmmkmmk",
+  ".knmmmmmmmmmmmmmhh",
+  ".knmmmmmmmmmmmmmhh",
+  "knmmmmmmmmmmmmmmhh",
+  "knmmmmmmmmmmkkkkkk",
+  "nkkmmkkkkmmk......",
+  "k.kmmk..kmmk......",
+  "...kk....kk.......",
+];
+const P_MULA = { k: "#2a2018", m: "#8a6a4a", n: "#5a4030", h: "#c0a088", s: "#e0d2b0", t: "#a89060", r: "#c0392b", y: "#e8b43c" };
+
+const VUELTIAO = [    // el sombrero vueltiao: no sabe que en el largo plazo el beneficio es CERO (18 × 14)
+  "........kkk.......",
+  "......kkwwwkk.....",
+  ".....knwnwnwnk....",
+  "....knwnwnwnwnk...",
+  "....kwwwwwwwwwk...",
+  "....kwwnwwwnwwk...",
+  "....kwnwnwnwnwk...",
+  "...kknwnwnwnwnkk..",
+  ".kkwwwwwwwwwwwwwkk",
+  "kwwwwwwwwwwwwwwwww",
+  "kwnwnwnwnwnwnwnwnw",
+  "knwnwnwnwnwnwnwnwn",
+  ".kkwwwwwwwwwwwwwkk",
+  "...kkkkkkkkkkkkk..",
+];
+const P_VUELTIAO = { k: "#201c18", w: "#efe6d2", n: "#2e2822" };
+
+const AREPA = [    // la arepa: cree que no entran empresas nuevas aunque el beneficio sea positivo (18 × 14)
+  ".........k........",
+  ".....kkkkokkkk....",
+  "....koooooooook...",
+  "...kooaaaaaaaook..",
+  "..kooaaaaaaaaaook.",
+  ".kooaataaaaaaaaook",
+  ".kooaaaqqfqqaaaook",
+  ".koaaaaqfqqfaaaaok",
+  ".kooaaafqqfqaaaook",
+  ".kooataataaaaaaook",
+  "..kooaaaaaaataook.",
+  "...kooaaaaaaaook..",
+  "....koooooooook...",
+  ".....kkkkokkkk....",
+];
+const P_AREPA = { k: "#3a2a14", a: "#f0dc9a", o: "#c89a4a", t: "#8a6428", q: "#fdf6e0", f: "#e8d48a" };
+
+const ACORDEON = [    // el acordeón: cree que nadie se va del mercado aunque esté perdiendo (18 × 14)
+  "..................",
+  "..................",
+  ".kkkkkkkkkkkkkkkk.",
+  "kooooonnnnnnoooook",
+  "krrrrrgfgfgfrrrrrk",
+  "krwrwrgfgfgfrwrwrk",
+  "krrrrrgfgfgfrrrrrk",
+  "krwrwrgfgfgfrwrwrk",
+  "krrrrrgfgfgfrrrrrk",
+  "krwrwrgfgfgfrwrwrk",
+  "krrrrrgfgfgfrrrrrk",
+  "krrrrrgfgfgfrrrrrk",
+  "krrrrrnnnnnnrrrrrk",
+  ".kkkkkkkkkkkkkkkk.",
+];
+const P_ACORDEON = { k: "#201814", r: "#a8302a", f: "#e8d8b8", g: "#b09868", n: "#4a3a28", w: "#f4ece0", o: "#e8b43c" };
+
+const GRANO = [    // el grano de café: se cree capaz de ponerle precio al mercado entero (18 × 14)
+  ".......kvvvk......",
+  "......kgvvvvk.....",
+  ".....kgggsgddk....",
+  "....kggggsgdddk...",
+  "...kggggssggdddk..",
+  "...kgggggsggdddk..",
+  "..kggggggsggddddk.",
+  "..kggggggsgggdddk.",
+  "..kgggggsggggdddk.",
+  "...kggggsggggddk..",
+  "...kggggssgggddk..",
+  "....kgggsgggggk...",
+  ".....kggsggggk....",
+  "......kgsgggk.....",
+];
+const P_GRANO = { k: "#2a1a0e", g: "#9a5a2a", d: "#7a4420", s: "#e8c89a", v: "#4a8a3a" };
+
+const ORQUIDEA = [    // la orquídea: no ve que un insumo más caro sube el CMe Y el CMg en el largo plazo (18 × 14)
+  ".......kpppk......",
+  "......kpppppk.....",
+  "..kkkkkpppppkkkkk.",
+  ".kqqqqkpppppkqqqqk",
+  "kqqqqqqplllpqqqqqq",
+  "kqqqqqqlllllqqqqqq",
+  ".kqqqqlllylllqqqqk",
+  "..kpppllyyyllpppk.",
+  "..kppplllylllpppk.",
+  ".kppppplllllpppppk",
+  "..kppppklllkppppk.",
+  "..kpppk.kvvvvpppk.",
+  "...kkk..kvvvvvkk..",
+  "........kvvkkk....",
+];
+const P_ORQUIDEA = { k: "#2a1830", p: "#c86aa8", q: "#e892c8", l: "#7a2a6a", y: "#f0d050", v: "#3a7a3a" };
+
+const ELDORADO = [    // jefe: El Dorado, convencido de que el beneficio extraordinario dura para siempre (18 × 17)
+  "..kokkoooooookkok.",
+  "..koooooooooooook.",
+  "..koooooooooooook.",
+  "...kooggggggoook..",
+  "....kkggggggokk...",
+  ".....kgkggkgk.....",
+  "....koggggggok....",
+  "....kogddddgok....",
+  "....kkggggggkk....",
+  "..kkgodoodoodgkk..",
+  ".kgggdoodoodogggk.",
+  ".kgggggfefegggggk.",
+  ".kgggggefefgggggk.",
+  "..kkgggfefegggkk..",
+  "...kgggefefgggk...",
+  "...kgdddggdddgk...",
+  "...kgdddggdddgk...",
+];
+const P_ELDORADO = { k: "#2a200a", o: "#f0c838", g: "#d8a428", d: "#9a6a14", e: "#2a8a5a", f: "#4ab07a" };
+
+const CHIVA = [    // la chiva, el bus escalera que es el vehículo de salida del distrito (32 × 16)
+  "...kk....kk....kk....kk.........",
+  "..kbbk..kbbk..kbbk..kbbk........",
+  "..kbbkkkkbbkkkkbbkkkkbbkkkkk....",
+  ".krbbrrrrbbrrrrbbrrrrbbrrrrrk...",
+  ".krrrrrrrrrrrrrrrrrrrrrrrrrrkkk.",
+  ".kyyyyyyyyyyyyyyyyyyyyyyyyyyaaak",
+  ".kyyyyyyyyyyyyyyyyyyyyyyyyyyaaak",
+  ".kaavvvvavvvvavvvvavvvvaaaaawwwk",
+  ".kaavvvvavvvvavvvvavvvvaaaaawwwk",
+  ".kaavvvvavvvvavvvvavvvvaaaaaaffk",
+  ".kyyyyyyyyyyyyyyyyyyyyyyyyyyaffk",
+  ".kaaaaaaaaaaaaaaaaaaaaaaaaaaaaak",
+  "knnnngggnnnnngggnnnnnnngggnnnnnn",
+  ".kkkgnnngkkkgnnngkkkkkgnnngkkkkk",
+  "...kgnnngk.kgnnngk...kgnnngk....",
+  "....kgngk...kgngk.....kgngk.....",
+];
+const P_CHIVA = { k: "#201a10", a: "#e8d44a", r: "#c0392b", y: "#3f7fc0", v: "#f4ecd8", w: "#cfe4ee", f: "#f8e05a", n: "#2a2418", g: "#9a9a92", b: "#6b8a3a" };
+
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
    --------------------------------------------------------------- */
@@ -4036,6 +4185,14 @@ const DEFINICIONES = {
   vaso:         [VASO, P_VASO],
   sultan:       [SULTAN, P_SULTAN],
   ferry:        [FERRY, P_FERRY],
+  mula:         [MULA, P_MULA],
+  vueltiao:     [VUELTIAO, P_VUELTIAO],
+  arepa:        [AREPA, P_AREPA],
+  acordeon:     [ACORDEON, P_ACORDEON],
+  grano:        [GRANO, P_GRANO],
+  orquidea:     [ORQUIDEA, P_ORQUIDEA],
+  eldorado:     [ELDORADO, P_ELDORADO],
+  chiva:        [CHIVA, P_CHIVA],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

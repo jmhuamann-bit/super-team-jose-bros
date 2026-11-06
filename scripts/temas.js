@@ -4986,6 +4986,181 @@ export const TEMAS = {
       }
     },
   },
+  cafetero: {
+    nombre: "Colombia",
+    cielo: [[0, "#4a7fae"], [0.38, "#9ec2d4"], [0.66, "#f0e0c0"], [0.8, "#2a2620"], [1, "#14110e"]],
+    suelo: { cara: "#6b6a5e", borde: "#8d8a78", tierra: "#46443a", plataforma: "#7a6a52", plataformaBorde: "#3f7fc0" },
+    acento: "#3f7fc0",
+
+    bichos: ["mula", "vueltiao", "arepa", "acordeon", "grano", "orquidea"],
+    nombresBichos: [
+      "La Mula que No Se Va del Mercado",
+      "El Vueltiao que Espera Ganar de Más",
+      "La Arepa que Cree que Nadie Entra",
+      "El Acordeón que Cree que Nadie Sale",
+      "El Grano que Se Cree Dueño del Precio",
+      "La Orquídea que Mueve una Curva Sola",
+    ],
+    andares: ["patrulla", "guardia", "salta", "veloz", "vuela"],
+    jefe: "eldorado",
+    nombreJefe: "El Dorado que Cree que el Beneficio Dura",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol de la mañana, que todavía no quema
+      ctx.fillStyle = "rgba(255,236,196,.22)";
+      ctx.beginPath(); ctx.arc(178, 92, 56, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,246,222,.82)";
+      ctx.beginPath(); ctx.arc(178, 92, 20, 0, Math.PI * 2); ctx.fill();
+
+      // LA NEBLINA que se queda colgada entre las lomas
+      repetir(ctx, cam, 332, 0.03, (x, i) => {
+        const by = 52 + ((i * 47) % 62);
+        ctx.fillStyle = "rgba(246,242,236,.42)";
+        ctx.fillRect(x, by, 146, 9);
+        ctx.fillRect(x + 34, by - 7, 84, 6);
+      });
+
+      // LA CORDILLERA, dos filas de lomas verdes una detrás de la otra
+      repetir(ctx, cam, 286, 0.06, (x, i) => {
+        const base = 318, alto = 172 + ((i * 41) % 76);
+        ctx.fillStyle = "rgba(92,118,92,.62)";
+        ctx.beginPath();
+        ctx.moveTo(x - 48, base);
+        ctx.quadraticCurveTo(x + 62, base - alto, x + 168, base);
+        ctx.closePath(); ctx.fill();
+      });
+      repetir(ctx, cam, 214, 0.11, (x, i) => {
+        const base = 318, alto = 116 + ((i * 29) % 60);
+        ctx.fillStyle = "rgba(68,104,70,.78)";
+        ctx.beginPath();
+        ctx.moveTo(x - 36, base);
+        ctx.quadraticCurveTo(x + 48, base - alto, x + 128, base);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // LAS PALMAS DE CERA del Cocora: flaquísimas, altísimas, y no hay otra
+      // palmera en el mundo que se vea así
+      repetir(ctx, cam, 132, 0.16, (x, i) => {
+        const base = 318, alto = 118 + ((i * 37) % 46);
+        const bx = x + 28;
+        ctx.fillStyle = "#d8cfae";                             // el tronco blanquecino
+        ctx.fillRect(bx, base - alto, 5, alto);
+        ctx.fillStyle = "rgba(120,108,80,.40)";                // los anillos
+        for (let py = base - alto + 12; py < base - 10; py += 14) ctx.fillRect(bx, py, 5, 2);
+        ctx.fillStyle = elige(["#3f7a46", "#356a3c", "#48884e"], i);
+        const cy = base - alto;
+        for (const [dx, dy] of [[-26, 6], [-18, -6], [0, -12], [18, -6], [26, 6], [-12, 10], [14, 10]]) {
+          ctx.beginPath();                                      // cada penacho
+          ctx.moveTo(bx + 2, cy + 3);
+          ctx.quadraticCurveTo(bx + dx * 0.6, cy + dy - 4, bx + dx, cy + dy + 5);
+          ctx.quadraticCurveTo(bx + dx * 0.6, cy + dy + 2, bx + 2, cy + 7);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+
+      // LAS CASAS DE SALENTO: blancas, con las puertas y los balcones pintados
+      // de todos los colores que se les ocurrieron
+      repetir(ctx, cam, 118, 0.30, (x, i) => {
+        const base = 318, alto = 52 + ((i * 31) % 20);
+        ctx.fillStyle = "#d6c6ae";                             // la pared encalada
+        ctx.fillRect(x, base - alto, 54, alto);
+        ctx.fillStyle = elige(["#c0392b", "#2f6f8a", "#3f8a4a", "#e0a02a", "#8a4a9a"], i);
+        ctx.fillRect(x - 4, base - alto - 6, 62, 7);           // el alero pintado
+        ctx.fillRect(x + 4, base - alto + 10, 46, 5);          // la baranda del balcón
+        for (let px = x + 6; px < x + 48; px += 9) ctx.fillRect(px, base - alto + 14, 3, 9);
+        const puerta = elige(["#2f6f8a", "#c0392b", "#3f8a4a", "#e0a02a", "#8a4a9a"], i + 2);
+        ctx.fillStyle = puerta;
+        ctx.fillRect(x + 21, base - 18, 13, 18);               // la puerta
+        ctx.fillRect(x + 6, base - 30, 10, 11);                // y las ventanas
+        ctx.fillRect(x + 38, base - 30, 10, 11);
+        ctx.fillStyle = "rgba(60,48,36,.26)";
+        ctx.fillRect(x + 27, base - 10, 2, 3);
+      });
+
+      // EL SUELO. De arriba abajo: la franja del cafetal, las terrazas de
+      // tierra roja y, donde se pelea, el adoquín de piedra del pueblo.
+      ctx.fillStyle = "#3f6b3a";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 12);
+      ctx.fillStyle = "#8a4430";                               // LA TIERRA ROJA
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 26);
+      ctx.fillStyle = "#9c5038";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 30; i++) {                           // los surcos del cafetal
+        const x = (i * 56 - cam * 0.16) % 1080 - 60;
+        ctx.fillStyle = "rgba(48,86,48,.62)";
+        for (let k = 0; k < 4; k++) {
+          ctx.beginPath();
+          ctx.ellipse(x + k * 13, 324 + ((i + k) % 3) * 6, 7, 5, 0, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+      ctx.fillStyle = "#55564a";                               // el cordón de la vereda
+      ctx.fillRect(0, 344, CFG.ANCHO_VISTA, 5);
+      ctx.fillStyle = "#6b6a5e";                               // EL ADOQUÍN
+      ctx.fillRect(0, 349, CFG.ANCHO_VISTA, 33);
+      ctx.fillStyle = "#7d7c6e";
+      ctx.fillRect(0, 349, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 48; i++) {                           // las juntas de las piedras
+        const x = (i * 34 - cam * 0.5) % 1000 - 40;
+        ctx.fillStyle = "rgba(40,40,34,.24)";
+        ctx.fillRect(x, 356 + ((i * 13) % 20), 13, 2);
+      }
+
+      // LOS SACOS DE YUTE apilados en la vereda, esperando el camión
+      repetir(ctx, cam, 268, 0.58, (x, i) => {
+        const bx = x + 34, base = 382;
+        ctx.fillStyle = "#4a3a24";                             // la tarima
+        ctx.fillRect(bx - 6, base - 6, 58, 5);
+        for (const [dx, dy, w] of [[0, 6, 22], [24, 6, 22], [12, 24, 22]]) {
+          ctx.fillStyle = elige(["#8a7a56", "#786a48", "#968660"], i + dx);
+          ctx.fillRect(bx + dx, base - dy - 18, w, 18);
+          ctx.fillStyle = "rgba(90,74,44,.34)";                // la costura de arriba
+          ctx.fillRect(bx + dx, base - dy - 18, w, 3);
+          ctx.fillRect(bx + dx + 7, base - dy - 12, 8, 2);
+        }
+      });
+
+      // Y LOS CANASTOS de mimbre, volcados donde cayeron
+      repetir(ctx, cam, 146, 0.74, (x, i) => {
+        const bx = x + 18, base = 382;
+        ctx.fillStyle = elige(["#6b5638", "#5e4a30", "#776040"], i);
+        ctx.beginPath();
+        ctx.moveTo(bx, base);
+        ctx.lineTo(bx + 3, base - 13);
+        ctx.lineTo(bx + 19, base - 13);
+        ctx.lineTo(bx + 22, base);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(70,52,28,.40)";
+        for (let py = base - 11; py < base - 1; py += 4) ctx.fillRect(bx + 3, py, 16, 2);
+        ctx.fillStyle = elige(["#53421c", "#473818"], i);
+        ctx.fillRect(bx + 1, base - 15, 20, 3);                // el borde
+      });
+      ctx.fillStyle = "#56564a";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // LAS MARIPOSAS AMARILLAS, que acá vienen de Macondo
+      for (let i = 0; i < 7; i++) {
+        const x = (i * 157 + t * 1.1) % 1040 - 50;
+        const y = 150 + ((i * 53) % 150) + Math.sin(t / 11 + i * 1.3) * 16;
+        const ala = Math.abs(Math.sin(t / 5 + i)) * 4 + 1;
+        ctx.fillStyle = "rgba(244,206,58,.90)";
+        ctx.fillRect(x, y, 2, 3);
+        ctx.fillRect(x - 1 - ala, y - 1, ala, 4);
+        ctx.fillRect(x + 2, y - 1, ala, 4);
+      }
+      // y la neblina baja que va cruzando el valle
+      for (let i = 0; i < 9; i++) {
+        const x = (i * 139 - t * 0.5) % 1060 - 60;
+        const y = 236 + ((i * 37) % 54);
+        ctx.fillStyle = "rgba(240,240,232,." + (10 + ((i * 3) % 8)) + ")";
+        ctx.fillRect(x, y, 86, 7);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

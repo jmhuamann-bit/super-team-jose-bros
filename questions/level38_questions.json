@@ -1,0 +1,125 @@
+{
+  "nivel": "level38",
+  "clase": "Clase 04 · PC4 — Competencia perfecta a largo plazo",
+  "fuente": "Apuntes de la 4ta clase de la PC4 — Competencia perfecta a largo plazo (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "b38-q1",
+      "nivel": "comprension",
+      "enunciado": "Una finca tiene el costo variable medio mínimo en 15 y el costo medio mínimo en 24. El precio del mercado cae a 18.\n\n¿Qué hace en el corto plazo y qué hace en el largo?",
+      "opciones": [
+        "Cierra ya mismo en los dos casos: con 18 está perdiendo plata y no hay más que hablar",
+        "Sigue en los dos casos: mientras el precio sea positivo siempre conviene producir",
+        "En el corto sigue, porque 18 le cubre el variable medio; en el largo SE VA",
+        "En el corto cierra, y en el largo vuelve cuando el precio suba"
+      ],
+      "correcta": 2,
+      "explicacion": "Son dos reglas distintas y conviene no mezclarlas. En el CORTO plazo la finca ya pagó sus costos fijos, así que aguanta mientras el precio le cubra al menos el VARIABLE medio: con 18 > 15 sigue produciendo aunque pierda. Solo cierra temporalmente si el precio baja de 15. En el LARGO plazo no hay nada fijo: apenas el beneficio es negativo (18 < 24), se va del mercado para siempre."
+    },
+    {
+      "id": "b38-q2",
+      "nivel": "comprension",
+      "enunciado": "El mercado está en equilibrio de largo plazo y cada finca tiene el costo medio mínimo en 24, con ese mínimo en q = 6.\n\n¿A qué precio se vende y cuánto gana cada finca?",
+      "opciones": [
+        "A 24, y el beneficio económico es CERO: el precio se pega al mínimo del CMe",
+        "A más de 24, porque si no nadie se tomaría el trabajo de producir nada",
+        "A 24, pero el beneficio es positivo porque el precio le iguala al costo marginal",
+        "Al precio que cada finca decida, porque en el largo plazo ya eligió su tamaño"
+      ],
+      "correcta": 0,
+      "explicacion": "En el largo plazo el precio termina clavado en el mínimo del costo medio de largo plazo: acá 24, con q = 6. Ahí el beneficio económico es (24 − 24) × 6 = 0. Ojo con leer mal ese cero: no significa que no se gane nada, significa que no se gana MÁS que en la mejor alternativa. Ese punto tiene tres nombres en el apunte: equilibrio de largo plazo, escala mínimo eficiente y precio de cierre."
+    },
+    {
+      "id": "b38-q3",
+      "nivel": "aplicacion",
+      "enunciado": "El mercado arranca en equilibrio de largo plazo con P = 24 y 300 fincas. Sube la demanda y en el corto plazo el precio salta a 32.\n\n¿Qué pasa de ahí en adelante?",
+      "opciones": [
+        "El precio se queda en 32: ya encontró su nuevo equilibrio de largo plazo",
+        "Las 300 fincas de siempre producen más y con eso alcanza: no entra ninguna nueva",
+        "Entran fincas nuevas porque el beneficio es positivo, y el precio vuelve a 24",
+        "Salen fincas, porque con un precio más alto la gente compra menos café"
+      ],
+      "correcta": 2,
+      "explicacion": "Con P = 32 por encima del costo medio mínimo de 24, el beneficio es positivo, y eso se ve desde afuera. Entran fincas nuevas, la oferta del mercado se corre a la derecha y el precio baja hasta que el beneficio vuelve a cero, o sea hasta 24. El mercado pasa de 1800 a 2400 sacos, repartidos ahora entre 400 fincas en vez de 300."
+    },
+    {
+      "id": "b38-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Mismo mercado, pero ahora la demanda se CONTRAE y el precio de corto plazo cae a 16, con el costo medio mínimo en 24.\n\n¿Cómo termina el largo plazo?",
+      "opciones": [
+        "El precio se queda en 16 y las fincas aprenden a producir más barato",
+        "Salen fincas porque pierden, la oferta se contrae y el precio vuelve a 24",
+        "No sale nadie: en competencia perfecta la entrada es libre, pero la salida no",
+        "Entran fincas a aprovechar el precio bajo y el precio termina cayendo más"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el espejo exacto del caso anterior. Con P = 16 por debajo del costo medio mínimo de 24, el beneficio es negativo y en el largo plazo nadie se queda perdiendo: salen fincas, la oferta del mercado se corre a la izquierda y el precio sube hasta volver a 24. De 300 fincas quedan 200, y el mercado se achica de 1800 a 1200 sacos."
+    },
+    {
+      "id": "b38-q5",
+      "nivel": "comprension",
+      "enunciado": "Cada finca vende su café al precio del mercado y puede vender todo lo que quiera a ese precio: la demanda que ELLA ve es horizontal. Una compañera concluye que entonces la demanda del MERCADO tampoco puede ser inelástica.\n\n¿Tiene razón?",
+      "opciones": [
+        "Sí: si cada finca ve una demanda perfectamente elástica, la del mercado tiene que serlo también",
+        "No: la de la finca es horizontal, pero la del mercado puede ser perfectamente inelástica",
+        "Sí, porque la demanda del mercado se arma sumando las que ve cada finca",
+        "No, pero solo cuando el bien es de primera necesidad y no tiene sustitutos"
+      ],
+      "correcta": 1,
+      "explicacion": "Son dos curvas distintas. La finca es tan chiquita frente al mercado que su decisión no mueve el precio: por eso VE una recta horizontal y se la llama precio-aceptante. La demanda del MERCADO, en cambio, sí tiene pendiente negativa y puede ser muy inelástica. Con Qd = 3000 − 50P, en P = 24 la elasticidad es −0,67: inelástica, y el mercado sigue siendo perfectamente competitivo."
+    },
+    {
+      "id": "b38-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Hay una huelga que sube los salarios y además se encarece el alquiler de las máquinas. El mercado estaba en equilibrio de largo plazo con P = 24.\n\n¿Qué curvas de costo se mueven y cómo termina el mercado?",
+      "opciones": [
+        "Solo sube el CMe, porque el salario y el alquiler son costos fijos de la finca",
+        "Suben los costos pero el precio no se mueve: lo fija la demanda, no los costos",
+        "Sube solo el CMg, así que el precio de equilibrio sigue en 24",
+        "Suben el CMe y el CMg, el precio de largo plazo sube y quedan menos fincas"
+      ],
+      "correcta": 3,
+      "explicacion": "En el LARGO plazo no hay ningún factor fijo, así que tanto el salario w como el alquiler r entran en el costo variable y levantan el CMe Y el CMg juntos. El mínimo del costo medio sube, y con él el precio de equilibrio de largo plazo. A ese precio más alto la gente compra menos, así que el mercado se achica y quedan menos fincas. Ojo con el contraste: en el CORTO plazo la r sola movería únicamente al CMe, porque entra por el costo fijo medio."
+    },
+    {
+      "id": "b38-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Se expande la demanda en una industria donde, al producir más, la mano de obra se encarece porque empieza a escasear.\n\n¿Cómo queda el equilibrio final comparado con el inicial, y qué forma tiene la oferta de largo plazo?",
+      "opciones": [
+        "Mismo precio y más cantidad: la oferta de largo plazo es horizontal igual",
+        "Precio más bajo y más cantidad, con la oferta de largo plazo de pendiente negativa",
+        "Mismo precio y misma cantidad, porque el largo plazo siempre vuelve al punto inicial",
+        "Precio más alto y más cantidad, con la oferta de largo plazo de pendiente POSITIVA"
+      ],
+      "correcta": 3,
+      "explicacion": "Eso son DESECONOMÍAS EXTERNAS: cada finca nueva que entra le sube el salario a todas, así que el mínimo del costo medio se corre hacia arriba. La oferta se expande MENOS que la demanda y el precio no alcanza a volver a 24: termina en 28, con 2200 sacos en vez de los 2400 que habría habido con costos constantes. Uniendo los equilibrios de largo plazo sale una oferta con pendiente POSITIVA."
+    },
+    {
+      "id": "b38-q8",
+      "nivel": "comprension",
+      "enunciado": "Pedrito te cuenta una obra: hay un mercado en equilibrio, suben los ingresos de la gente, y entran productores nuevos con la misma estructura de costos. Le pone de título «La oferta de largo plazo siempre es horizontal».\n\n¿Está bien el título?",
+      "opciones": [
+        "Sí: como todos tienen la misma estructura de costos, el precio siempre vuelve al mismo sitio",
+        "No, es al revés: la oferta de largo plazo nunca llega a ser horizontal del todo",
+        "No: es horizontal solo con costos constantes, y hay otros dos casos posibles",
+        "Sí, porque en el largo plazo el beneficio económico siempre termina en cero"
+      ],
+      "correcta": 2,
+      "explicacion": "El «siempre» es lo que está mal. La oferta de largo plazo es horizontal solo si los precios de los insumos no se mueven cuando entran empresas (costos constantes), y ese es el caso por defecto si el enunciado no aclara nada. Pero si entrar encarece los insumos hay deseconomías externas y la oferta sale con pendiente positiva; si los abarata hay economías externas y sale con pendiente negativa."
+    },
+    {
+      "id": "b38-q9",
+      "nivel": "aplicacion",
+      "enunciado": "El mercado del helado está en equilibrio de largo plazo. Se encarecen los insumos de la GASEOSA, que es un sustituto, así que sube la demanda de helados. Los insumos del helado no cambiaron.\n\nUna vez que todo se acomoda en el largo plazo, ¿cómo termina una heladería y cómo el mercado?",
+      "opciones": [
+        "La heladería produce lo MISMO que antes, y el mercado produce más porque hay más heladerías",
+        "La heladería produce más y el mercado también, porque la demanda quedó más alta",
+        "La heladería produce menos, porque ahora le toca repartirse el mercado con todas las que entraron",
+        "Los dos vuelven exactamente al punto inicial, como si nunca hubiera pasado nada"
+      ],
+      "correcta": 0,
+      "explicacion": "Lo que se encareció fue un insumo de la GASEOSA, no del helado. Como los costos del helado no se movieron, el mínimo del costo medio de largo plazo sigue donde estaba y el precio vuelve a él. En el corto plazo la heladería gana (por eso Matías se equivoca al hablar de pérdidas), pero en el largo entran competidoras hasta que el beneficio vuelve a cero. Cada heladería termina produciendo la misma cantidad que al principio; lo que crece es el NÚMERO de heladerías, y por eso el mercado produce más."
+    }
+  ]
+}

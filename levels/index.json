@@ -527,6 +527,20 @@
       "abierto": true,
       "mapa": "levels/level37.json",
       "preguntas": "questions/level37_questions.json"
+    },
+    {
+      "id": "level38",
+      "clase": "Clase 04",
+      "distrito": "Colombia",
+      "titulo": "El país donde nadie le pone precio al café y aun así todos viven de él",
+      "icono": "☕",
+      "seccion": "PC4",
+      "seccionNota": "Costos a largo plazo y competencia perfecta — y seguimos dando la vuelta al mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level38.json",
+      "preguntas": "questions/level38_questions.json"
     }
   ]
 }

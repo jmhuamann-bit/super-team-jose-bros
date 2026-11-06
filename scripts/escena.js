@@ -325,6 +325,13 @@ const FICHAS = [
   { sprite: "derviche", nombre: "El Derviche que Cree que Maximizar Es Ganar", texto: "Una empresa puede maximizar y aun así perder: si CMe > P ≥ CVMe, el beneficio máximo es negativo, y moverse lo empeora." },
   { sprite: "vaso", nombre: "El Vaso que Se Mueve por el Alquiler", texto: "En el corto plazo, si sube r solo sube el CMe. El CMg no cambia, así que la producción óptima y la oferta se quedan igual." },
   { sprite: "sultan", nombre: "El Sultán que Quiere Poner el Precio", texto: "Jefe de Turquía: pide decidir si seguir abierto o suspender, y desarmar a quien cree que una empresa puede subir o bajar su precio." },
+  { sprite: "mula", nombre: "La Mula que No Se Va del Mercado", texto: "Colombia: mezcla las dos reglas de cierre. En el CORTO plazo se aguanta mientras el precio cubra el variable medio; en el LARGO se va apenas el beneficio es negativo." },
+  { sprite: "vueltiao", nombre: "El Vueltiao que Espera Ganar de Más", texto: "No se hace a la idea de que en el equilibrio de largo plazo el beneficio económico es CERO. No es que no se gane: es que no se gana más que en la mejor alternativa." },
+  { sprite: "arepa", nombre: "La Arepa que Cree que Nadie Entra", texto: "Con el precio en 32 y el costo medio mínimo en 24 hay beneficio positivo, y eso se ve de afuera: entran fincas nuevas hasta que el precio vuelve a 24." },
+  { sprite: "acordeon", nombre: "El Acordeón que Cree que Nadie Sale", texto: "La entrada libre va en los dos sentidos. Con el precio en 16 y el costo medio mínimo en 24 se pierde plata, así que salen fincas y el precio sube hasta volver a 24." },
+  { sprite: "grano", nombre: "El Grano que Se Cree Dueño del Precio", texto: "Cada finca es precio-aceptante y ve una demanda horizontal. Pero que la de la EMPRESA sea perfectamente elástica no obliga a que la del MERCADO también lo sea." },
+  { sprite: "orquidea", nombre: "La Orquídea que Mueve una Curva Sola", texto: "Si suben el salario o el alquiler, en el largo plazo suben el CMe Y el CMg a la vez, porque no queda ningún factor fijo donde esconder el costo." },
+  { sprite: "eldorado", nombre: "El Dorado que Cree que el Beneficio Dura", texto: "Jefe de Colombia: está convencido de que el beneficio extraordinario no se acaba nunca, y de que la oferta de largo plazo siempre sale horizontal." },
 ];
 
 export function galeriaPersonajes(contenedor) {

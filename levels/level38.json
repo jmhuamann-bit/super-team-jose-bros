@@ -1,0 +1,42 @@
+{
+  "id": "level38",
+  "distrito": "Colombia",
+  "clase": "Clase 04 · PC4",
+  "titulo": "El país donde nadie le pone precio al café y aun así todos viven de él",
+  "tema": "cafetero",
+  "musica": "cafetero",
+  "vehiculo": "chiva",
+  "intro": "Cuarta clase de la PC4: COMPETENCIA PERFECTA A LARGO PLAZO. Toca Colombia porque el Eje Cafetero es el ejemplo de manual caminando. Hay más de medio millón de fincas cafeteras, todas chiquitas, todas vendiendo lo mismo, y ninguna puede subir su precio un centavo: si lo intenta, no le compra nadie. Eso es ser precio-aceptante. Y lo interesante pasa en el largo plazo. Cuando el café sube y las fincas ganan de más, no hace falta que nadie avise: los vecinos se enteran, siembran, y entre todos empujan el precio hacia abajo hasta que el negocio vuelve a estar «normal». Cuando el precio cae y se pierde plata, pasa lo mismo al revés: unos cuantos se van y el precio sube solo. Al final el precio siempre termina pegado al punto más barato al que se puede producir, y el beneficio económico vuelve a CERO. Ojo con ese cero: no significa que nadie gane nada, significa que ya no se gana más que haciendo otra cosa.",
+  "repaso": [
+    "LA PREGUNTA DE FONDO: en competencia perfecta hay muchas empresas chiquitas vendiendo un producto idéntico, y entrar y salir es libre. Por eso ninguna empresa pone el precio: lo toma del mercado. La demanda que VE cada empresa es una recta horizontal al precio de mercado.",
+    "OJO CON ESA HORIZONTAL: que la empresa vea una demanda perfectamente elástica NO obliga a que la demanda DEL MERCADO también lo sea. La del mercado tiene pendiente negativa y puede ser muy inelástica. Son dos curvas distintas.",
+    "CUÁNTO PRODUCIR: la empresa produce donde P = CMg, siempre en el tramo creciente del costo marginal. Y lo importante no es «cuánto produzco» sino que esa cantidad sea la que MAXIMIZA el beneficio.",
+    "LA REGLA DE CIERRE DEL CORTO PLAZO: los costos fijos ya están pagados, así que la empresa aguanta perdiendo mientras el precio le cubra al menos el COSTO VARIABLE MEDIO. Solo cierra —y temporalmente— si P cae por debajo del CVMe.",
+    "LA REGLA DEL LARGO PLAZO ES OTRA: no hay nada fijo, así que apenas el beneficio económico es negativo la empresa SE VA, y se va para siempre. Con el CVMe mínimo en 15 y el CMe mínimo en 24, un precio de 18 significa «en el corto plazo sigo, en el largo me voy».",
+    "EL EQUILIBRIO DE LARGO PLAZO: el precio termina clavado en el MÍNIMO del costo medio de largo plazo, y ahí el beneficio económico es CERO. Ese punto tiene tres nombres que conviene reconocer: equilibrio de largo plazo, ESCALA MÍNIMO EFICIENTE y precio (o punto) de cierre.",
+    "CASO 01 · SI EL BENEFICIO ES POSITIVO: entran empresas nuevas, la oferta del mercado se corre a la DERECHA y el precio BAJA hasta que el beneficio vuelve a cero. Con P de corto plazo en 32 y el CMe mínimo en 24, el mercado pasa de 1800 a 2400 sacos y de 300 a 400 fincas.",
+    "CASO 02 · SI EL BENEFICIO ES NEGATIVO: salen empresas, la oferta se corre a la IZQUIERDA y el precio SUBE hasta volver al mismo 24. El mercado se achica de 1800 a 1200 y quedan 200 fincas.",
+    "Y FIJATE EN QUIÉN CAMBIA: después de todo el ajuste, cada empresa produce LO MISMO que al principio y al mismo precio. Lo que cambió es el NÚMERO de empresas. Por eso el mercado produce más aunque cada finca produzca igual.",
+    "CASO 03 · SI SUBEN LOS INSUMOS (el salario w o el alquiler r): en el LARGO plazo no hay costos fijos, así que suben el CMe Y el CMg a la vez. El precio de equilibrio de largo plazo sube y quedan menos empresas. En el CORTO plazo, en cambio, la r sola movería únicamente al CMe, porque entra por el costo fijo medio.",
+    "LA OFERTA DE LARGO PLAZO, CASO NORMAL (costos constantes): los insumos no cambian de precio por más empresas que entren. La oferta se expande IGUAL que la demanda, el precio vuelve al mismo sitio y la oferta de largo plazo sale HORIZONTAL. Si el enunciado no aclara nada, este es el caso.",
+    "LA OFERTA DE LARGO PLAZO CON DESECONOMÍAS EXTERNAS: al entrar empresas los insumos ESCASEAN y se encarecen. La oferta se expande MENOS que la demanda, el precio termina MÁS ALTO que al principio (28 en vez de 24, con 2200 en vez de 2400) y la oferta de largo plazo tiene pendiente POSITIVA.",
+    "Y CON ECONOMÍAS EXTERNAS, que es el caso raro: al entrar empresas el proveedor vende más barato, la oferta se expande MÁS que la demanda, el precio termina MÁS BAJO (20, con 2600) y la oferta de largo plazo tiene pendiente NEGATIVA. Por eso «la oferta de largo plazo siempre es horizontal» es FALSO: depende de qué pase con los insumos."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                              AA                                                    ",
+    "                                                                                                     o o                     o o                                                    ",
+    "                                                                                                      E                                                                             ",
+    "                         o     o     o                                                        o o   ======                  ======                                     o   o        ",
+    "                       oo oo oo oo o? oo      o     o     o                                                             G                        o                 o           o    ",
+    "                                                                           o     o           ======                                            oo oo                  ==o=o=o=      ",
+    "                                             ###   ###   ###               E                                                                                      ====        ====  ",
+    "  P         C           X E   X     X        ###   ###   ### E      C    ===== =====                          C          T           E                E      1        B         M   ",
+    "################# #####################################################              ###############################################################################################",
+    "################# #####################################################              ###############################################################################################",
+    "################# #####################################################              ###############################################################################################"
+  ]
+}
