@@ -1,0 +1,125 @@
+{
+  "nivel": "level39",
+  "clase": "Clase 05 · PC4 — Ejercicios de competencia perfecta",
+  "fuente": "Apuntes de la 5ta clase de la PC4 — Ejercicios de competencia perfecta (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e39-q1",
+      "nivel": "comprension",
+      "enunciado": "Una empresa de competencia perfecta tiene CMg = 3q + 10.\n\n¿Cuál es su oferta individual?",
+      "opciones": [
+        "q = 3P + 10, reemplazando la P en el lugar de la q",
+        "q = P/3 − 10/3, igualando P = CMg y despejando la q",
+        "q = P/3 + 10/3, pasando el 10 al otro lado con el mismo signo",
+        "P = 3q, porque el 10 es un costo fijo y no entra en la oferta"
+      ],
+      "correcta": 1,
+      "explicacion": "La oferta sale de P = CMg: P = 3q + 10. El 10 pasa restando, P − 10 = 3q, y se divide entre 3: q = P/3 − 10/3. Tiene pendiente positiva, como debe: si sube P, sube q."
+    },
+    {
+      "id": "e39-q2",
+      "nivel": "aplicacion",
+      "enunciado": "Cada empresa tiene CMg = q + 10 y hay 30 empresas iguales.\n\n¿Cuál es la oferta del mercado?",
+      "opciones": [
+        "q = P − 10, porque todas las empresas son iguales",
+        "Q = 30P − 10, multiplicando solo el precio por las empresas",
+        "Q = 30P − 300, multiplicando por 30 toda la oferta de la empresa",
+        "P = 30q + 300, multiplicando por 30 antes de despejar la q"
+      ],
+      "correcta": 2,
+      "explicacion": "Primero la empresa: P = q + 10, o sea q = P − 10. Después se suman las 30 empresas, con la q ya despejada: Q = 30(P − 10) = 30P − 300. Se multiplica la q, no el precio: todas venden al mismo precio."
+    },
+    {
+      "id": "e39-q3",
+      "nivel": "aplicacion",
+      "enunciado": "Cada consumidor tiene la demanda individual P = 164 − 20q y hay 40 personas.\n\n¿Cuál es la demanda del mercado?",
+      "opciones": [
+        "Q = −2P + 328: se despeja q = 8,2 − P/20 y se multiplica por 40",
+        "P = 6560 − 800q, multiplicando por 40 toda la ecuación tal como viene",
+        "Q = −800P + 328, multiplicando por 40 sin dividir entre 20",
+        "Q = −2P + 164, porque el 164 ya es del mercado"
+      ],
+      "correcta": 0,
+      "explicacion": "La trampa es multiplicar con el precio despejado. Se despeja la q: 20q = 164 − P, o sea q = 8,2 − P/20. Recién se multiplica por 40: Q = 328 − 2P. Lo que se suma entre consumidores son las cantidades, no los precios."
+    },
+    {
+      "id": "e39-q4",
+      "nivel": "aplicacion",
+      "enunciado": "Una empresa tiene CT = 2,5q² + 10q y CMg = 5q + 10. El precio del mercado es 20.\n\n¿Safo o money?",
+      "opciones": [
+        "q = 2 y π = 40: se queda, porque ese es su beneficio",
+        "q = 4 y π = 0: da lo mismo quedarse, dividiendo 20 entre 5",
+        "q = 2 y π = −10: se retira, restando el ingreso del costo",
+        "q = 2 y π = 10: se queda en el mercado"
+      ],
+      "correcta": 3,
+      "explicacion": "P = CMg: 20 = 5q + 10, así que q = 2. El ingreso es IT = 20 × 2 = 40 y el costo, CT = 2,5(4) + 10(2) = 30. Entonces π = 40 − 30 = 10. Money. El 40 es solo el ingreso: falta restarle el costo."
+    },
+    {
+      "id": "e39-q5",
+      "nivel": "aplicacion",
+      "enunciado": "Una empresa tiene CT = q³/3 − 4q² + 25q y CMg = q² − 8q + 25. El precio es 10.\n\n¿Dónde produce y qué decide?",
+      "opciones": [
+        "q = 3 y π = −18: la q menor, porque cuesta menos, y se queda",
+        "q = 5 y π = −16,67: la q mayor, donde el CMg crece; sin CF es largo plazo y se retira",
+        "q = 5 y π = −16,67: sigue produciendo para minimizar sus pérdidas",
+        "q = 5 y π = 16,67: se queda, porque ese es su beneficio máximo"
+      ],
+      "correcta": 1,
+      "explicacion": "De 10 = q² − 8q + 25 salen q = 3 y q = 5. El óptimo es la mayor, donde el CMg es creciente. IT = 50 y CT = 125/3 − 100 + 125 = 66,67, así que π = −16,67. El CT no tiene número suelto: no hay CF, es largo plazo, y ahí con π negativo se retira del todo. Minimizar pérdidas es del corto plazo."
+    },
+    {
+      "id": "e39-q6",
+      "nivel": "aplicacion",
+      "enunciado": "Una empresa tiene CT = 3q² + 10q + 30 y CMg = 6q + 10. El precio es 28.\n\n¿Qué le conviene?",
+      "opciones": [
+        "Cerrar, porque en q = 3 tiene π = −3 y con pérdidas no se produce",
+        "Quedarse feliz, porque en q = 3 tiene π = 27",
+        "Seguir: en q = 3 pierde 3 y cerrada perdería los 30 del CF",
+        "Producir más de 3, para repartir el costo fijo y salir de la pérdida"
+      ],
+      "correcta": 2,
+      "explicacion": "P = CMg: 28 = 6q + 10, q = 3. IT = 84 y CT = 27 + 30 + 30 = 87, así que π = −3. El 30 suelto es el CF: es corto plazo. Si cierra, IT = 0 y paga el CF: pierde 30. Le conviene seguir para minimizar pérdidas. El 27 sale de olvidarse del CF."
+    },
+    {
+      "id": "e39-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Primera pregunta del marajá. En una feria hay 100 vendedores iguales de quinoa, con CT = 0,5q² + 10q y CMg = q + 10. La demanda del mercado es Q = 2500 − 50P.\n\n¿Cuál es el resultado?",
+      "opciones": [
+        "P = 49,2; q = 39,2; π ≈ 769, usando la oferta de una sola empresa como si fuera la del mercado",
+        "P = 23,33; q = 13,33; π = 311, sin restar el costo",
+        "P = 23,33; q = 1333; π = 88,9; n = 1, usando la Q del mercado como la de la empresa",
+        "P = 23,33; q = 13,33; π ≈ 88,9 y n = 1333/13,33 = 100 empresas"
+      ],
+      "correcta": 3,
+      "explicacion": "La empresa: q = P − 10. El mercado: Q = 100P − 1000. El equilibrio: 100P − 1000 = 2500 − 50P da P = 23,33 y Q = 1333. La empresa: q = 13,33, IT = 311 y CT = 222,2, así que π ≈ 88,9. Como es positivo, entran más empresas. Y n = Q/q = 100."
+    },
+    {
+      "id": "e39-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Segunda pregunta. En el LARGO plazo, cada empresa de frejoles tiene CT = q³ − 20q² + 120q y CMg = 3q² − 40q + 120. La demanda es Q = 55 000 − 500P.\n\n¿Cuál es el equilibrio?",
+      "opciones": [
+        "q = 10, P = 20, Q = 45 000 y n = 4500, igualando CMg = CMe",
+        "q = 10, P = 10, Q = 50 000 y n = 5000, tomando la q como si fuera el precio",
+        "q = 0, P = 120, porque ahí el CMg y el CMe también se igualan",
+        "q = 10, P = 20, Q = 45 000 y n = 450 000, multiplicando Q por q"
+      ],
+      "correcta": 0,
+      "explicacion": "En el largo plazo BE = 0: CMg = CMe = P. El CMe es CT/q = q² − 20q + 120. Igualando con el CMg: 2q² − 20q = 0, que da q = 0 o q = 10, y se toma q = 10. El precio: CMe = 100 − 200 + 120 = 20. La demanda: Q = 55 000 − 10 000 = 45 000. Y n = Q/q = 4500."
+    },
+    {
+      "id": "e39-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Tercera pregunta. Costos de una empresa de polos:\nq:   0, 1, 2, 3, 4, 5, 6\nCT: 2, 7, 11, 14, 18, 24, 32\nEl precio es 4 y la demanda del mercado es P = 60 − Q.\n\n¿Qué se concluye?",
+      "opciones": [
+        "Corto plazo; q = 2, donde el CMg es 4; π = −3 y n = 28 empresas",
+        "Corto plazo, porque CF = 2; q = 4, donde CMg = 4 es creciente; π = −2, igual que si no produce; y n = 14",
+        "Largo plazo; q = 4 con π = 16, porque el ingreso es 4 × 4; y n = 14",
+        "Corto plazo; q = 3, donde el CMg es el más bajo; π = −2 y n = 56/3"
+      ],
+      "correcta": 1,
+      "explicacion": "En q = 0 el CT es 2: ese es el CF, y hay corto plazo. El CMg va 5, 4, 3, 4, 6, 8. P = CMg en q = 2 y en q = 4, pero solo en q = 4 es creciente. Ahí CV = 16 y CVMe = 4 = P. π = 16 − 18 = −2, y sin producir también pierde 2: da lo mismo. En el mercado Q = 60 − 4 = 56, y n = 56/4 = 14."
+    }
+  ]
+}

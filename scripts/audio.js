@@ -28,6 +28,14 @@ function f(nombre) {
  * Un "tiempo" son 0.15 s, así que el bucle completo dura unos 5 segundos.
  */
 const TEMAS_MUSICA = {
+  agra: { // India: frigio sobre D con el bordón fijo, como una tanpura
+    tempo: 0.21, onda: "triangle",
+    melodia: ["D4",2,"Eb4",2,"F4",2,"G4",2,"A4",4,"G4",2,"F4",2,
+              "Eb4",2,"D4",2,"F4",2,"G4",2,"A4",2,"Bb4",2,"A4",4,
+              "C5",2,"Bb4",2,"A4",2,"G4",2,"F4",2,"Eb4",2,"D4",4,
+              "A4",2,"G4",2,"F4",2,"Eb4",2,"D4",2,"Eb4",2,"D4",4],
+    bajo:    ["D2",8,"D2",8,"A1",8,"D2",8,"D2",8,"A1",8,"D2",8,"D2",8],
+  },
   cafetero: { // Colombia: aire de cumbia en re menor, con el bajo saltando a la quinta
     tempo: 0.17, onda: "square",
     melodia: ["A4",2,"A4",1,"G4",1,"F4",2,"E4",2,"D4",4,"F4",2,"E4",2,

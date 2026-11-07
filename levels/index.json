@@ -541,6 +541,20 @@
       "abierto": true,
       "mapa": "levels/level38.json",
       "preguntas": "questions/level38_questions.json"
+    },
+    {
+      "id": "level39",
+      "clase": "Clase 05",
+      "distrito": "India",
+      "titulo": "El país del algodón, donde cada telar saca su propia cuenta",
+      "icono": "🧶",
+      "seccion": "PC4",
+      "seccionNota": "Costos a largo plazo y competencia perfecta — y seguimos dando la vuelta al mundo",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level39.json",
+      "preguntas": "questions/level39_questions.json"
     }
   ]
 }

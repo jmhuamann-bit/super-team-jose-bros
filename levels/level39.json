@@ -1,0 +1,41 @@
+{
+  "id": "level39",
+  "distrito": "India",
+  "clase": "Clase 05 · PC4",
+  "titulo": "El país del algodón, donde cada telar saca su propia cuenta",
+  "tema": "agra",
+  "musica": "agra",
+  "vehiculo": "tren",
+  "intro": "Quinta clase de la PC4: los EJERCICIOS DE COMPETENCIA PERFECTA. Toca India por el algodón: miles de telares que hacen lo mismo, y a cada uno le toca sacar su propia cuenta. ¿Safo o money? Hay tres modelos de pregunta. El primero es el problema completo: la oferta de la empresa, la del mercado, la demanda, el equilibrio, el beneficio y el número de empresas. El segundo es el equilibrio de largo plazo, donde CMg = CMe = P y el beneficio es cero. Y el tercero es la tablita: te dan los costos y te toca buscar dónde producir con las tres condiciones de siempre.",
+  "repaso": [
+    "OFERTA DE LA EMPRESA: se iguala P = CMg y se despeja q. Con CMg = 3q + 10 sale q = P/3 − 10/3. Con CMg = 2q + 3 sale q = P/2 − 3/2.",
+    "OFERTA DEL MERCADO: se multiplica la de la empresa por el número de empresas, con la q ya despejada. Con CMg = q + 10 y 30 empresas: Q = 30P − 300.",
+    "DEMANDA DEL MERCADO: igual, se despeja la q y se multiplica por los consumidores. De P = 164 − 20q con 40 personas sale Q = −2P + 328. De q = −2P + 5 con 5 personas sale Q = −10P + 25.",
+    "EL EQUILIBRIO: oferta del mercado = demanda del mercado da el precio. La empresa, que es precio aceptante, toma ese precio.",
+    "EL BENEFICIO, dos minipasos: 1) q óptima con P = CMg. 2) π = IT − CT = P·q − CT, que es lo mismo que (P − CMe)·q.",
+    "SI SALEN DOS q: se elige la mayor, donde el CMg es creciente. Con CT = q³/3 − 4q² + 25q y P = 10 salen q = 3 y q = 5: el óptimo es 5, con π = −16,67.",
+    "¿CORTO O LARGO PLAZO? Si el CT tiene un número suelto, hay CF y es corto plazo. Si no lo tiene, es largo plazo. En una tablita se ve en q = 0: si el CT no es cero, ese es el CF.",
+    "SI π SALE NEGATIVO: en el LARGO plazo te retiras del todo. En el CORTO plazo comparas con el CF: si produciendo pierdes menos que el CF, sigues; si pierdes más, cierras temporalmente. Con P = 28, CT = 3q² + 10q + 30 y q = 3: pierde 3 contra 30 y sigue.",
+    "OJO CON EL CIERRE: con CT = 3q³ − 9q² + 10q + 10 y P = 2, q = 1,33 y pierde 11,78 contra los 10 del CF: conviene el cierre temporal.",
+    "NÚMERO DE EMPRESAS: n = Q/q, la cantidad del mercado entre la de la empresa. Si el mercado produce 500 y cada una 50, son 10 empresas.",
+    "EQUILIBRIO DE LARGO PLAZO: BE = 0, así que CMg = CMe = P. Se iguala CMg con CMe para sacar q, y se reemplaza para sacar P. Con el precio, la demanda da Q, y n = Q/q. El CMe sale de dividir el CT entre q.",
+    "LA TABLITA: CMg = ΔCT/Δq, CV = CT − CF y CVMe = CV/q. Las 3 condiciones: P = CMg, CMg creciente y P ≥ CVMe. Si se mueve el CF, no cambian ni el CVMe ni el CMg, y la oferta sigue intacta."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                    V                                                                 G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      oo?oo          oooo               oo                                    ooooooooooo                 oo              ooooo                     1   L    oooooooo               ",
+    "                    ======              ======                                           oooo             ======                   ooooo                    ==========              ",
+    "                                 ooooo                         =====                                                                                                                ",
+    "  P           C             E                       E     C T               E     X    EX       C                   E       X             C   E                         B       M   ",
+    "##################################   #####################################################  ########################################   #############################################",
+    "##################################   #####################################################  ########################################   #############################################",
+    "##################################   #####################################################  ########################################   #############################################"
+  ]
+}

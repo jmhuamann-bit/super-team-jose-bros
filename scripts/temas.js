@@ -5161,6 +5161,228 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     INDIA — se trae del nivel de India de Economía 2. Va por el algodón
+     y los telares: muchos talleres iguales, y a cada uno le toca sacar
+     la cuenta de cuánto producir.
+     ========================================================= */
+  agra: {
+    nombre: "India",
+    cielo: [[0, "#2f4a7a"], [0.35, "#7a84a0"], [0.62, "#f2c48a"], [0.8, "#2a241e"], [1, "#141010"]],
+    suelo: { cara: "#9a5a42", borde: "#c07a56", tierra: "#5a3a2a", plataforma: "#8a6a4a", plataformaBorde: "#d8ccb8" },
+    acento: "#d8ccb8",
+
+    bichos: ["rickshaw", "elefante", "vaca", "barrilete", "samosa", "colador"],
+    nombresBichos: [
+      "El Rickshaw que No Despeja la q",
+      "El Elefante que Se Olvida de la Manada",
+      "La Vaca que Multiplica Antes de Despejar",
+      "El Barrilete que No Resta el Costo",
+      "La Samosa que Elige la q Menor",
+      "El Colador que Cierra por Perder Poco",
+    ],
+    andares: ["veloz", "patrulla", "guardia", "vuela", "salta"],
+    jefe: "maharaja",
+    nombreJefe: "El Marajá de los Telares",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol que recién sale sobre el río Yamuna
+      ctx.fillStyle = "rgba(255,222,170,.24)";
+      ctx.beginPath(); ctx.arc(214, 108, 62, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,238,206,.86)";
+      ctx.beginPath(); ctx.arc(214, 108, 21, 0, Math.PI * 2); ctx.fill();
+
+      // la neblina fina del amanecer, en bandas largas
+      repetir(ctx, cam, 348, 0.03, (x, i) => {
+        const by = 44 + ((i * 53) % 58);
+        ctx.fillStyle = "rgba(248,238,224,.40)";
+        ctx.fillRect(x, by, 138, 8);
+        ctx.fillRect(x + 30, by - 7, 80, 6);
+      });
+
+      // EL TAJ MAHAL: el zócalo, los cuatro alminares, el iwán y la cúpula de
+      // cebolla con sus dos chhatris. Va en la capa de más atrás, bien arriba
+      // de donde caminan los bichos, para que ningún bicho claro se le pierda
+      // encima (la vaca y el turbante del jefe son casi del mismo marfil).
+      repetir(ctx, cam, 520, 0.11, (x, i) => {
+        const bx = x + 64, base = 312;
+        ctx.fillStyle = "#a89580";                              // el zócalo de mármol
+        ctx.fillRect(bx - 22, base - 12, 188, 12);
+        for (const d of [-16, 150]) {                           // los cuatro alminares
+          ctx.fillStyle = "#cdc0ad";
+          ctx.fillRect(bx + d, base - 116, 10, 104);
+          ctx.fillStyle = "rgba(120,108,96,.34)";               // los tres balconcitos
+          for (const h of [40, 66, 92]) ctx.fillRect(bx + d - 2, base - h, 14, 4);
+          ctx.fillStyle = "#bfb09c";                            // la cupulita de arriba
+          ctx.beginPath();
+          ctx.moveTo(bx + d - 2, base - 116);
+          ctx.quadraticCurveTo(bx + d + 5, base - 134, bx + d + 12, base - 116);
+          ctx.closePath(); ctx.fill();
+        }
+        ctx.fillStyle = "#d6c9b5";                              // el cuerpo central
+        ctx.fillRect(bx + 16, base - 92, 102, 80);
+        ctx.fillStyle = "rgba(118,104,92,.38)";                 // el iwán, el arco grande
+        ctx.beginPath();
+        ctx.moveTo(bx + 54, base - 12);
+        ctx.lineTo(bx + 54, base - 56);
+        ctx.quadraticCurveTo(bx + 67, base - 78, bx + 80, base - 56);
+        ctx.lineTo(bx + 80, base - 12);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(118,104,92,.28)";                 // y los arcos chicos del costado
+        for (const d of [26, 94]) {
+          ctx.beginPath();
+          ctx.moveTo(bx + d, base - 20);
+          ctx.lineTo(bx + d, base - 44);
+          ctx.quadraticCurveTo(bx + d + 7, base - 58, bx + d + 14, base - 44);
+          ctx.lineTo(bx + d + 14, base - 20);
+          ctx.closePath(); ctx.fill();
+        }
+        for (const d of [20, 100]) {                            // las dos chhatris
+          ctx.fillStyle = "#c6b8a4";
+          ctx.fillRect(bx + d, base - 104, 16, 12);
+          ctx.beginPath();
+          ctx.moveTo(bx + d - 2, base - 104);
+          ctx.quadraticCurveTo(bx + d + 8, base - 122, bx + d + 18, base - 104);
+          ctx.closePath(); ctx.fill();
+        }
+        ctx.fillStyle = "#ddd1bd";                              // LA CÚPULA DE CEBOLLA
+        ctx.beginPath();
+        ctx.moveTo(bx + 40, base - 88);
+        ctx.bezierCurveTo(bx + 36, base - 134, bx + 60, base - 150, bx + 67, base - 150);
+        ctx.bezierCurveTo(bx + 74, base - 150, bx + 98, base - 134, bx + 94, base - 88);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#a89580";                              // el cuello y el pináculo
+        ctx.fillRect(bx + 63, base - 164, 4, 16);
+        ctx.beginPath(); ctx.arc(bx + 65, base - 166, 4, 0, Math.PI * 2); ctx.fill();
+      });
+
+      // LOS CIPRESES del jardín, en dos hileras hacia el fondo
+      repetir(ctx, cam, 96, 0.19, (x, i) => {
+        const alto = 46 + ((i * 23) % 20), base = 318;
+        ctx.fillStyle = elige(["#2a4a34", "#33563c", "#243f2c"], i);
+        ctx.beginPath();
+        ctx.moveTo(x + 12, base - alto);
+        ctx.quadraticCurveTo(x + 22, base - alto / 2, x + 17, base);
+        ctx.lineTo(x + 7, base);
+        ctx.quadraticCurveTo(x + 2, base - alto / 2, x + 12, base - alto);
+        ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#4a2a1a";
+        ctx.fillRect(x + 11, base - 5, 3, 5);
+      });
+
+      // LAS CASAS PINTADAS de la ciudad vieja, con sus jaalis y sus terrazas
+      repetir(ctx, cam, 124, 0.30, (x, i) => {
+        const alto = 50 + ((i * 29) % 22), base = 318;
+        ctx.fillStyle = elige(["#c4645a", "#d4786a", "#b8564a", "#d8906a"], i);
+        ctx.fillRect(x, base - alto, 52, alto);
+        ctx.fillStyle = "rgba(248,238,224,.58)";                // el filete blanco de la cornisa
+        ctx.fillRect(x - 3, base - alto - 4, 58, 5);
+        ctx.fillStyle = "rgba(248,238,224,.44)";                // la jaali: la celosía calada
+        for (let px = x + 5; px < x + 48; px += 8) {
+          for (let py = base - alto + 10; py < base - 14; py += 10) ctx.fillRect(px, py, 5, 6);
+        }
+        ctx.fillStyle = elige(["#8a3a34", "#6b2a24"], i);       // el portal
+        ctx.fillRect(x + 20, base - 16, 12, 16);
+        if (i % 3 === 0) {                                      // y a veces un chhatri en la azotea
+          ctx.fillStyle = "rgba(224,214,198,.72)";
+          ctx.fillRect(x + 16, base - alto - 14, 20, 10);
+          ctx.beginPath();
+          ctx.moveTo(x + 14, base - alto - 14);
+          ctx.quadraticCurveTo(x + 26, base - alto - 28, x + 38, base - alto - 14);
+          ctx.closePath(); ctx.fill();
+        }
+      });
+
+      // EL SUELO. De arriba hacia abajo: el césped del charbagh, el espejo de
+      // agua que refleja al Taj, y el patio de arenisca roja donde se pelea.
+      ctx.fillStyle = "#4a6a3a";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 12);
+      ctx.fillStyle = "#3a6a8a";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 26);
+      ctx.fillStyle = "#4e82a4";
+      ctx.fillRect(0, 318, CFG.ANCHO_VISTA, 5);
+      for (let i = 0; i < 26; i++) {                            // el reflejo temblando
+        const x = (i * 64 - cam * 0.14) % 1080 - 60;
+        ctx.fillStyle = "rgba(240,232,220,.30)";
+        ctx.fillRect(x, 324 + ((i * 9) % 12), 26, 2);
+        ctx.fillStyle = "rgba(22,52,70,.22)";
+        ctx.fillRect(x + 14, 334 + ((i * 7) % 6), 18, 2);
+      }
+      ctx.fillStyle = "#a89580";                                // el bordillo de mármol
+      ctx.fillRect(0, 344, CFG.ANCHO_VISTA, 5);
+      ctx.fillStyle = "#9a5a42";                                // LA ARENISCA ROJA
+      ctx.fillRect(0, 349, CFG.ANCHO_VISTA, 33);
+      ctx.fillStyle = "#b06a4e";
+      ctx.fillRect(0, 349, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 46; i++) {                            // las juntas de las lajas
+        const x = (i * 36 - cam * 0.5) % 1000 - 40;
+        ctx.fillStyle = "rgba(70,40,28,.20)";
+        ctx.fillRect(x, 356 + ((i * 13) % 20), 14, 2);
+      }
+
+      // LOS RANGOLIS dibujados con polvo de color sobre las lajas
+      repetir(ctx, cam, 158, 0.56, (x, i) => {
+        const cx = x + 40, cy = 374;
+        for (let k = 3; k >= 1; k--) {
+          ctx.fillStyle = elige(["rgba(232,146,60,.52)", "rgba(216,86,120,.48)",
+            "rgba(240,210,90,.50)", "rgba(110,170,200,.46)"], i + k);
+          ctx.beginPath(); ctx.ellipse(cx, cy, k * 7, k * 3, 0, 0, Math.PI * 2); ctx.fill();
+        }
+        ctx.fillStyle = "rgba(250,244,230,.60)";
+        ctx.beginPath(); ctx.ellipse(cx, cy, 3, 2, 0, 0, Math.PI * 2); ctx.fill();
+      });
+
+      // EL PUESTO DE TELAS: el bastidor con los rollos apilados y dos piezas
+      // colgando, que es lo primero que se ve en cualquier bazar de acá
+      repetir(ctx, cam, 306, 0.62, (x, i) => {
+        const bx = x + 46, base = 382;
+        ctx.fillStyle = "#5a3a22";                              // los parantes y el travesaño
+        ctx.fillRect(bx, base - 54, 4, 54);
+        ctx.fillRect(bx + 80, base - 54, 4, 54);
+        ctx.fillRect(bx, base - 56, 84, 4);
+        for (let k = 0; k < 3; k++) {                           // las piezas que cuelgan
+          ctx.fillStyle = elige(["rgba(216,56,100,.66)", "rgba(240,180,50,.66)",
+            "rgba(70,150,160,.66)", "rgba(140,80,180,.64)"], i + k);
+          ctx.fillRect(bx + 8 + k * 26, base - 52, 18, 30 + ((k * 11) % 14));
+        }
+        ctx.fillStyle = "#7a5230";                              // el tablón
+        ctx.fillRect(bx - 3, base - 18, 90, 4);
+        for (let k = 0; k < 4; k++) {                           // y los rollos apilados
+          ctx.fillStyle = elige(["#c4304a", "#e0a02a", "#2a7a8a", "#6b3a9a", "#d85a2a"], i + k * 3);
+          ctx.fillRect(bx + 4 + k * 21, base - 14, 18, 7);
+          ctx.fillStyle = "rgba(250,244,230,.40)";
+          ctx.fillRect(bx + 4 + k * 21, base - 14, 18, 2);
+        }
+      });
+      ctx.fillStyle = "#8a4a34";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // los loros verdes, que cruzan en bandada y chillan al amanecer
+      for (let i = 0; i < 6; i++) {
+        const x = (i * 181 + t * 1.9) % 1060 - 60;
+        const y = 86 + ((i * 41) % 62) + Math.sin(t / 15 + i) * 8;
+        const ala = Math.sin(t / 7 + i * 1.4) * 4;
+        ctx.fillStyle = "rgba(118,196,86,.88)";
+        ctx.fillRect(x, y, 6, 2);
+        ctx.fillRect(x - 5, y - ala, 5, 2);
+        ctx.fillRect(x + 6, y - ala, 5, 2);
+        ctx.fillStyle = "rgba(220,70,60,.80)";                  // el pico rojo
+        ctx.fillRect(x + 6, y, 2, 2);
+      }
+      // y el polvo que flota en la luz rasante del amanecer
+      for (let i = 0; i < 16; i++) {
+        const x = (i * 71 + t * 0.4) % 1020 - 40;
+        const y = 180 + ((i * 53) % 140) + Math.sin(t / 23 + i * 0.7) * 11;
+        ctx.fillStyle = "rgba(250,232,198,." + (12 + ((i * 3) % 10)) + ")";
+        ctx.fillRect(x, y, 2, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

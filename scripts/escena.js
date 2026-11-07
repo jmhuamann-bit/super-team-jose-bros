@@ -332,6 +332,13 @@ const FICHAS = [
   { sprite: "grano", nombre: "El Grano que Se Cree Dueño del Precio", texto: "Cada finca es precio-aceptante y ve una demanda horizontal. Pero que la de la EMPRESA sea perfectamente elástica no obliga a que la del MERCADO también lo sea." },
   { sprite: "orquidea", nombre: "La Orquídea que Mueve una Curva Sola", texto: "Si suben el salario o el alquiler, en el largo plazo suben el CMe Y el CMg a la vez, porque no queda ningún factor fijo donde esconder el costo." },
   { sprite: "eldorado", nombre: "El Dorado que Cree que el Beneficio Dura", texto: "Jefe de Colombia: está convencido de que el beneficio extraordinario no se acaba nunca, y de que la oferta de largo plazo siempre sale horizontal." },
+  { sprite: "rickshaw", nombre: "El Rickshaw que No Despeja la q", texto: "India: la oferta de la empresa sale de P = CMg despejando q. Con CMg = 3q + 10, q = P/3 − 10/3." },
+  { sprite: "elefante", nombre: "El Elefante que Se Olvida de la Manada", texto: "La oferta del mercado es la de una empresa por el número de empresas: con q = P − 10 y 30 empresas, Q = 30P − 300." },
+  { sprite: "vaca", nombre: "La Vaca que Multiplica Antes de Despejar", texto: "Primero se despeja la q y recién se multiplica: de P = 164 − 20q con 40 personas sale Q = −2P + 328." },
+  { sprite: "barrilete", nombre: "El Barrilete que No Resta el Costo", texto: "π = IT − CT. Con CT = 2,5q² + 10q y P = 20, q = 2, IT = 40, CT = 30 y π = 10." },
+  { sprite: "samosa", nombre: "La Samosa que Elige la q Menor", texto: "Si P = CMg da dos valores, el óptimo es la q mayor, donde el CMg es creciente: de q = 3 y q = 5, se queda con 5." },
+  { sprite: "colador", nombre: "El Colador que Cierra por Perder Poco", texto: "En el corto plazo se compara con el CF: si produciendo pierde 3 y cerrando pierde 30, sigue produciendo." },
+  { sprite: "maharaja", nombre: "El Marajá de los Telares", texto: "Jefe de India: pide el problema completo, el equilibrio de largo plazo con CMg = CMe = P y la tablita de costos." },
 ];
 
 export function galeriaPersonajes(contenedor) {
