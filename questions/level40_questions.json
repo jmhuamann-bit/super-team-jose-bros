@@ -1,0 +1,125 @@
+{
+  "nivel": "level40",
+  "clase": "Clase 01 · Final — Conocimiento previo y monopolio",
+  "fuente": "Apuntes de la 1era clase del final — Conocimiento previo y monopolio (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e40-q1",
+      "nivel": "comprension",
+      "enunciado": "En competencia perfecta la empresa es precio aceptante.\n\n¿Qué pasa en el monopolio?",
+      "opciones": [
+        "También es precio aceptante, porque el precio lo pone el mercado",
+        "Es precio decisor: como es el único vendedor, su demanda es la del mercado",
+        "El precio lo fija siempre el gobierno",
+        "Vende al precio que le cueste producir, sin ganar nada"
+      ],
+      "correcta": 1,
+      "explicacion": "El monopolio es el único vendedor: la demanda de la empresa es la demanda del mercado, que tiene pendiente negativa. Por eso decide el precio, mientras que en competencia perfecta cada empresa tiene una demanda horizontal."
+    },
+    {
+      "id": "e40-q2",
+      "nivel": "comprension",
+      "enunciado": "Comente: «Como soy un monopolio, puedo ponerle a mi producto un precio de un billón de dólares».",
+      "opciones": [
+        "Verdadero: el monopolio decide el precio sin ningún límite",
+        "Verdadero, siempre que tenga una patente",
+        "Falso: el monopolio solo puede cobrar el precio de competencia perfecta",
+        "Falso: la demanda tiene una máxima disposición a pagar, el intercepto, y el precio no la puede pasar"
+      ],
+      "correcta": 3,
+      "explicacion": "El monopolio decide el precio, pero sobre la demanda. Si pide más que la máxima disposición a pagar (el intercepto de la demanda), nadie le compra. El precio sale de la demanda, una vez que se sabe la cantidad."
+    },
+    {
+      "id": "e40-q3",
+      "nivel": "comprension",
+      "enunciado": "En competencia perfecta, en el largo plazo el beneficio económico llega a cero.\n\n¿Pasa lo mismo con el monopolio?",
+      "opciones": [
+        "Sí: tarde o temprano llegan otras empresas",
+        "No: hay barreras de entrada, así que el beneficio positivo se mantiene en el largo plazo",
+        "Sí, porque el monopolio baja su precio en el largo plazo",
+        "No, porque en el largo plazo el monopolio siempre pierde"
+      ],
+      "correcta": 1,
+      "explicacion": "En competencia perfecta, si hay beneficio entran empresas hasta que BE = 0. En el monopolio hay barreras: un recurso clave, una patente o un monopolio natural. Nadie entra, así que el beneficio positivo se mantiene."
+    },
+    {
+      "id": "e40-q4",
+      "nivel": "aplicacion",
+      "enunciado": "La demanda de mercado de un monopolio es p = −q + 3.\n\n¿Cuánto vale su ingreso marginal?",
+      "opciones": [
+        "IMg = −q + 3, igual que la demanda",
+        "IMg = −q/2 + 3, con la mitad de la pendiente",
+        "IMg = −2q + 3: mismo intercepto y el doble de pendiente",
+        "IMg = −2q + 6, duplicando todo"
+      ],
+      "correcta": 2,
+      "explicacion": "Con una demanda inversa lineal, IT = p·q = −q² + 3q y el IMg = −2q + 3. El atajo: se queda el intercepto y se duplica la pendiente. El IMe es el precio, la demanda; el IMg queda por debajo."
+    },
+    {
+      "id": "e40-q5",
+      "nivel": "comprension",
+      "enunciado": "Comente: «El monopolio debe producir donde su ingreso total es máximo, o sea donde IMg = 0».",
+      "opciones": [
+        "Verdadero: si el ingreso es máximo, el beneficio también",
+        "Falso: produce donde IMg = CMg, un poco antes; llegar al IT máximo cuesta demasiado",
+        "Verdadero, siempre que el costo sea fijo",
+        "Falso: el monopolio produce donde P = CMg, igual que en competencia perfecta"
+      ],
+      "correcta": 1,
+      "explicacion": "El beneficio es IT − CT. Más allá de donde IMg = CMg, cada unidad extra cuesta más de lo que deja, aunque el IT siga subiendo. Y P = CMg es de competencia perfecta: en el monopolio no vale, porque P ≠ IMg."
+    },
+    {
+      "id": "e40-q6",
+      "nivel": "comprension",
+      "enunciado": "Comente: «Un monopolio puede maximizar beneficios en el tramo inelástico de la demanda».",
+      "opciones": [
+        "Verdadero: en el tramo inelástico el producto es muy necesario y vende más caro",
+        "Verdadero, si el costo marginal es cero",
+        "Falso: en el monopolio la elasticidad no importa",
+        "Falso: ahí el IMg es negativo y no puede igualarse al CMg; le convendría reducir q"
+      ],
+      "correcta": 3,
+      "explicacion": "En el tramo inelástico el IMg es negativo, y el CMg es positivo: nunca se igualan. Si la empresa estuviera ahí, produciendo menos subiría el ingreso y bajaría el costo, doble beneficio. Por eso el monopolio produce en el tramo elástico."
+    },
+    {
+      "id": "e40-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Primera pregunta del dueño del oxígeno. Un monopolio enfrenta p = 20 − 4q y tiene CT = 4q.\n\n¿Cuál es su cantidad, su precio y su beneficio?",
+      "opciones": [
+        "q = 2, p = 12 y π = 16",
+        "q = 4, p = 4 y π = 0, igualando el precio con el CMg",
+        "q = 2, p = 4 y π = 0, tomando el precio del CMg",
+        "q = 2,5, p = 10 y π = 15, donde el ingreso total es máximo"
+      ],
+      "correcta": 0,
+      "explicacion": "CMg = 4 y el IMg = 20 − 8q. IMg = CMg da q = 2. El precio sale de la DEMANDA: p = 20 − 8 = 12. Entonces π = 24 − 8 = 16. P = CMg es de competencia perfecta; e IMg = 0 es el IT máximo, no el beneficio máximo."
+    },
+    {
+      "id": "e40-q8",
+      "nivel": "aplicacion",
+      "enunciado": "Segunda pregunta. Cada consumidor tiene la demanda p = −q + 8 y hay 4 consumidores. El monopolio tiene CT = 3q + 1.\n\n¿Cuál es el resultado?",
+      "opciones": [
+        "Q = 5, p = 3 y π = −1, igualando el precio con el CMg y sin sumar a los consumidores",
+        "Q = 2,5, p = 5,5 y π = 5,25, sin sumar a los consumidores",
+        "Q = 10, p = 5,5 y π = 24",
+        "Q = 10, p = 3 y π = −1, tomando el precio del CMg"
+      ],
+      "correcta": 2,
+      "explicacion": "Se despeja q = 8 − p y se multiplica por 4: Q = 32 − 4p, o sea p = 8 − Q/4. El IMg = 8 − Q/2 = 3 da Q = 10. En la demanda, p = 8 − 2,5 = 5,5. IT = 55 y CT = 31: π = 24."
+    },
+    {
+      "id": "e40-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Tercera pregunta. Una empresa usa trabajo y maquinaria como sustitutos perfectos, q = 4L + 10K, con w = 5 y r = 10, así que su CT = q. Es un monopolio frente a p = 201 − 2q.\n\n¿Qué precio cobra y cuánto gana?",
+      "opciones": [
+        "q = 100, p = 1 y π = 0, igualando el precio con el CMg",
+        "q = 50, p = 101 y π = 5000",
+        "q = 50, p = 1 y π = 0, tomando el precio del CMg",
+        "q ≈ 50, p ≈ 101 y π ≈ 4988, usando solo trabajo (CT = 1,25q)"
+      ],
+      "correcta": 1,
+      "explicacion": "Por sol, el trabajo da 4/5 = 0,8 y la máquina 10/10 = 1: se usa solo K, K = q/10 y CT = 10·q/10 = q, así que CMg = 1. IMg = 201 − 4q = 1 da q = 50. En la demanda, p = 201 − 100 = 101. π = 5050 − 50 = 5000."
+    }
+  ]
+}

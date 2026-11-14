@@ -5383,6 +5383,144 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     MARTE — arranca el modo galaxia en el examen final. En la colonia
+     hay una sola empresa que vende oxígeno: el monopolio de manual.
+     Es el mismo planeta que el del nivel de Marte de Economía 2.
+     ========================================================= */
+  marte: {
+    nombre: "Marte",
+    cielo: [[0, "#05040e"], [0.45, "#1a0e2a"], [0.72, "#5a2a2a"], [0.82, "#3a1a14"], [1, "#1a0c08"]],
+    suelo: { cara: "#a8502e", borde: "#d0784a", tierra: "#5a2a18", plataforma: "#6a7488", plataformaBorde: "#9fe0f0" },
+    acento: "#9fe0f0",
+
+    bichos: ["alien", "ovni", "astronauta", "satelite", "meteorito", "robotin"],
+    nombresBichos: [
+      "El Marciano que Cree que Acepta el Precio",
+      "El Ovni que Quiere Cobrar un Billón",
+      "El Astronauta que No Duplica la Pendiente",
+      "El Satélite que Persigue el Ingreso Máximo",
+      "El Meteorito que Espera el Beneficio Cero",
+      "El Robotín que Vende en el Tramo Inelástico",
+    ],
+    andares: ["salta", "vuela", "patrulla", "vuela", "veloz", "guardia"],
+    jefe: "emperador",
+    nombreJefe: "El Dueño del Oxígeno",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // las estrellas, que titilan y casi no se mueven con la cámara
+      for (let i = 0; i < 90; i++) {
+        const x = ((i * 97 - cam * 0.02) % 860 + 860) % 860 - 30;
+        const y = (i * 53) % 230;
+        const brillo = 0.35 + 0.35 * Math.abs(Math.sin(t / 40 + i));
+        ctx.fillStyle = `rgba(240,240,255,${brillo.toFixed(2)})`;
+        ctx.fillRect(x, y, i % 7 === 0 ? 2 : 1, i % 7 === 0 ? 2 : 1);
+      }
+
+      // una nebulosa morada, muy al fondo
+      ctx.fillStyle = "rgba(140,80,200,.10)";
+      ctx.beginPath(); ctx.ellipse(560, 90, 220, 50, -0.3, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(80,140,220,.08)";
+      ctx.beginPath(); ctx.ellipse(620, 110, 140, 30, -0.2, 0, Math.PI * 2); ctx.fill();
+
+      // LA TIERRA, chiquita y azul: la que manda la tasa
+      ctx.fillStyle = "rgba(90,160,240,.25)";
+      ctx.beginPath(); ctx.arc(160, 80, 30, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#3a7ad0";
+      ctx.beginPath(); ctx.arc(160, 80, 20, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#5ab060";
+      ctx.fillRect(150, 72, 9, 6); ctx.fillRect(163, 82, 8, 7); ctx.fillRect(154, 88, 5, 3);
+      ctx.fillStyle = "rgba(255,255,255,.55)";
+      ctx.fillRect(148, 66, 12, 2); ctx.fillRect(160, 92, 10, 2);
+
+      // las dos lunas, Fobos y Deimos
+      ctx.fillStyle = "#b8a898";
+      ctx.beginPath(); ctx.ellipse(420 - (cam * 0.03) % 900, 60, 9, 7, 0.4, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#9a8a7a";
+      ctx.beginPath(); ctx.arc(700 - (cam * 0.025) % 900, 140, 5, 0, Math.PI * 2); ctx.fill();
+
+      // las montañas lejanas y el volcán gigante
+      repetir(ctx, cam, 700, 0.06, (x) => {
+        ctx.fillStyle = "#4a2018";
+        ctx.beginPath();
+        ctx.moveTo(x + 40, 300); ctx.lineTo(x + 230, 212); ctx.lineTo(x + 290, 206);
+        ctx.lineTo(x + 480, 300); ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "#2a100c";
+        ctx.fillRect(x + 236, 206, 48, 6);
+      });
+      repetir(ctx, cam, 300, 0.14, (x, i) => {
+        const alto = 40 + ((i * 29) % 30);
+        ctx.fillStyle = elige(["#6a2a1a", "#5a2416", "#702e1c"], i);
+        ctx.beginPath();
+        ctx.moveTo(x, 306); ctx.lineTo(x + 80, 306 - alto); ctx.lineTo(x + 170, 306); ctx.closePath(); ctx.fill();
+      });
+
+      // EL SUELO de la llanura, con cráteres
+      ctx.fillStyle = "#8a3a22";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 76);
+      ctx.fillStyle = "#a04a2c";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 4);
+      repetir(ctx, cam, 170, 0.4, (x, i) => {
+        const r = 10 + ((i * 7) % 12);
+        ctx.fillStyle = "rgba(40,14,8,.35)";
+        ctx.beginPath(); ctx.ellipse(x + 60, 330 + ((i * 13) % 20), r, r / 3, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "rgba(220,140,90,.25)";
+        ctx.fillRect(x + 60 - r, 328 + ((i * 13) % 20), r, 2);
+      });
+
+      // LOS DOMOS de la colonia, con las ventanitas prendidas
+      repetir(ctx, cam, 260, 0.32, (x, i) => {
+        const bx = x + 40, base = 352, r = 34 + ((i * 11) % 14);
+        ctx.fillStyle = "rgba(160,220,240,.22)";
+        ctx.beginPath(); ctx.arc(bx + r, base, r, Math.PI, 0); ctx.fill();
+        ctx.strokeStyle = "rgba(200,240,255,.55)";
+        ctx.beginPath(); ctx.arc(bx + r, base, r, Math.PI, 0); ctx.stroke();
+        ctx.fillStyle = "#5a6478";
+        ctx.fillRect(bx - 4, base, 2 * r + 8, 6);
+        ctx.fillStyle = "#3a4458";
+        ctx.fillRect(bx + r - 12, base - 22, 24, 22);
+        ctx.fillStyle = (t / 30 + i) % 4 < 3 ? "#f2d24a" : "#7a6a2a";
+        ctx.fillRect(bx + r - 8, base - 18, 6, 5); ctx.fillRect(bx + r + 2, base - 18, 6, 5);
+        if (i % 2 === 0) {                                   // la antena con su luz roja
+          ctx.fillStyle = "#8a92a6";
+          ctx.fillRect(bx + 2 * r + 12, base - 46, 2, 46);
+          ctx.fillStyle = (t / 20) % 2 < 1 ? "#ff4a4a" : "#6a1a1a";
+          ctx.fillRect(bx + 2 * r + 10, base - 50, 6, 4);
+        }
+      });
+
+      // las rocas sueltas del frente
+      repetir(ctx, cam, 120, 0.62, (x, i) => {
+        ctx.fillStyle = elige(["#5a2414", "#6a2c18", "#4a1c10"], i);
+        ctx.fillRect(x + 20, 372, 14 + (i % 3) * 6, 8);
+        ctx.fillRect(x + 24, 368, 8 + (i % 3) * 4, 4);
+      });
+      ctx.fillStyle = "#4a1c10";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // el polvo rojo que arrastra el viento
+      for (let i = 0; i < 40; i++) {
+        const x = (i * 71 + t * 2.2) % 900 - 50;
+        const y = 160 + ((i * 37) % 220) + Math.sin(t / 30 + i) * 6;
+        ctx.fillStyle = "rgba(230,140,90,.30)";
+        ctx.fillRect(x, y, 3, 1);
+      }
+      // y de vez en cuando cruza una estrella fugaz
+      const f = t % 400;
+      if (f < 40) {
+        const x = 900 - f * 18, y = 40 + f * 3;
+        ctx.fillStyle = "rgba(255,255,255,.8)";
+        ctx.fillRect(x, y, 3, 2);
+        ctx.fillStyle = "rgba(255,255,255,.3)";
+        ctx.fillRect(x + 3, y - 1, 16, 1);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

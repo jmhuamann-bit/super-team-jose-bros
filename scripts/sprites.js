@@ -4097,6 +4097,155 @@ const MAHARAJA = [    // jefe: el marajá de los telares, que pide el problema c
 ];
 const P_MAHARAJA = { k: "#1e1612", t: "#f0e8d4", o: "#e8b43c", p: "#c98a4e", n: "#3a2e28", r: "#8a2a6a", w: "#f4eee2" };
 
+const ALIEN = [    // el marciano: cree que el monopolio es precio aceptante (18 × 14)
+  "....k........k....",
+  ".....k......k.....",
+  "......kggggggk....",
+  "....kggggggggggk..",
+  "...kgggwwggwwgggk.",
+  "...kggwkkggkkwggk.",
+  "...kgggwwggwwgggk.",
+  "....kggggggggggk..",
+  ".....kgggkkgggk...",
+  "......kggggggk....",
+  "....kkgggggggkk...",
+  "...kgk.kgggk.kgk..",
+  "...kk..kg.gk..kk..",
+  ".......kk.kk......",
+];
+const P_ALIEN = { k: "#14201a", g: "#6ad06a", w: "#f4f8f0" };
+
+const OVNI = [    // el ovni: cree que el monopolio puede cobrar lo que quiera (18 × 14)
+  "..................",
+  "......kkkkkk......",
+  ".....kccccccck....",
+  "....kcwccccccck...",
+  "....kccccccccck...",
+  "..kkkkkkkkkkkkkkk.",
+  ".kmmmmmmmmmmmmmmmk",
+  "kmmymmmymmmymmmymk",
+  ".kmmmmmmmmmmmmmmk.",
+  "..kkkkkkkkkkkkkk..",
+  "....k..k..k..k....",
+  "...yy.yy..yy.yy...",
+  "..................",
+  "..................",
+];
+const P_OVNI = { k: "#141420", c: "#9fe0f0", w: "#ffffff", m: "#8a92a6", y: "#f2d24a" };
+
+const ASTRONAUTA = [    // el astronauta: no duplica la pendiente para sacar el IMg (18 × 14)
+  "......kkkkkk......",
+  ".....kwwwwwwk.....",
+  "....kwwkkkkwwk....",
+  "....kwkoooobkk....",
+  "....kwkoooobwk....",
+  "....kwwkkkkwwk....",
+  ".....kwwwwwwk.....",
+  "...kkwwwrrwwwkk...",
+  "..kwwkwwrrwwkwwk..",
+  "..kwk.kwwwwwk.kwk.",
+  "..kk..kwwwwwk..kk.",
+  "......kwwkwwk.....",
+  "......kwwkwwk.....",
+  ".....kkkk.kkkk....",
+];
+const P_ASTRONAUTA = { k: "#1a1a22", w: "#eef0f4", o: "#f0a83c", b: "#ffe2a8", r: "#c0392b" };
+
+const SATELITE = [    // el satélite: produce donde el ingreso total es máximo (18 × 14)
+  "..................",
+  "kkkkk........kkkkk",
+  "kbbbk........kbbbk",
+  "kbbbk...kk...kbbbk",
+  "kbbbkkkkmmkkkkbbbk",
+  "kbbbk..kmmk..kbbbk",
+  "kbbbk..kmmk..kbbbk",
+  "kkkkk..kmmk..kkkkk",
+  "........kk........",
+  ".......k..k.......",
+  "......k....k......",
+  ".....ky....yk.....",
+  "..................",
+  "..................",
+];
+const P_SATELITE = { k: "#141420", b: "#3a6ab0", m: "#c6ccd6", y: "#f2d24a" };
+
+const METEORITO = [    // el meteorito: cree que en el largo plazo el monopolio queda en cero (18 × 14)
+  "..................",
+  "..o...............",
+  "...oo....kkkkk....",
+  "....ooo.kmmmmmk...",
+  ".....oookmdmmmmk..",
+  "......okmmmmdmmmk.",
+  ".......kmwkmmwkmk.",
+  ".......kmmmmmmmmk.",
+  ".......kmdmkkmmdk.",
+  "........kmmmmmmk..",
+  ".........kmmdmk...",
+  "..........kkkk....",
+  "..................",
+  "..................",
+];
+const P_METEORITO = { k: "#1a1410", m: "#8a5a3a", d: "#5a3a26", o: "#f0a83c", w: "#ffffff" };
+
+const ROBOTIN = [    // el robotín: produce en el tramo inelástico (18 × 14)
+  "........kk........",
+  "........kr........",
+  "....kkkkkkkkkk....",
+  "....kmmmmmmmmk....",
+  "....kmcckmcckk....",
+  "....kmmmmmmmmk....",
+  "....kmkkkkkkmk....",
+  "....kkkkkkkkkk....",
+  "..kkkmmmmmmmmkkk..",
+  "..kmkmyymmyymkmk..",
+  "..kmkmmmmmmmmkmk..",
+  "....kmmmmmmmmk....",
+  "....kmk....kmk....",
+  "...kkkk....kkkk...",
+];
+const P_ROBOTIN = { k: "#141420", m: "#a8b2c2", c: "#5ae0f0", r: "#e83a3a", y: "#f2d24a" };
+
+const EMPERADOR = [    // jefe: el dueño del oxígeno, la única empresa del planeta (18 × 17)
+  "....y..y..y..y....",
+  "....yyyyyyyyyy....",
+  "....yryyyryyyy....",
+  "....kkkkkkkkkk....",
+  "...kppppppppppk...",
+  "...kpkkppppkkpk...",
+  "...kpwkppppwkpk...",
+  "...kppppppppppk...",
+  "....kpppkkpppk....",
+  ".....kppppppk.....",
+  "...kkvvvvvvvvkk...",
+  "..kvvvvyyyyvvvvk..",
+  ".kvvvvvyyyyvvvvvk.",
+  ".kpvvvvvyyvvvvvpk.",
+  ".kpkvvvvvvvvvvkpk.",
+  "..kkvvvvvvvvvvkk..",
+  "...kvvvvkkvvvvk...",
+];
+const P_EMPERADOR = { k: "#14101a", y: "#f2c84a", r: "#e83a5a", p: "#8ad0a0", w: "#ffffff", v: "#6a3ab0" };
+
+const NAVE = [    // la nave, que es el vehículo de salida del planeta (32 × 16)
+  "................................",
+  "................................",
+  "..........kkkkkk................",
+  ".........kccccccck..............",
+  "........kcwccccccck.............",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkk......",
+  "kmmmmmmmmmmmmmmmmmmmmmmmmmkk....",
+  "kmrrmmmmmmmmmmmmmmmmmmmmmmmmkk..",
+  "kmmmmmyymmmyymmmyymmmyymmmmmmmk.",
+  "kmmmmmmmmmmmmmmmmmmmmmmmmmmmmkk.",
+  ".kkkkkkkkkkkkkkkkkkkkkkkkkkkk...",
+  "....kmmk..........kmmk..........",
+  "...kmmmmk........kmmmmk.........",
+  "..oooooooo......oooooooo........",
+  "...oyyyyo........oyyyyo.........",
+  "....oooo..........oooo..........",
+];
+const P_NAVE = { k: "#141420", m: "#c6ccd6", c: "#9fe0f0", w: "#ffffff", r: "#c0392b", y: "#f2d24a", o: "#f0a83c" };
+
 
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
@@ -4330,6 +4479,14 @@ const DEFINICIONES = {
   samosa:       [SAMOSA, P_SAMOSA],
   colador:      [COLADOR, P_COLADOR],
   maharaja:     [MAHARAJA, P_MAHARAJA],
+  alien:        [ALIEN, P_ALIEN],
+  ovni:         [OVNI, P_OVNI],
+  astronauta:   [ASTRONAUTA, P_ASTRONAUTA],
+  satelite:     [SATELITE, P_SATELITE],
+  meteorito:    [METEORITO, P_METEORITO],
+  robotin:      [ROBOTIN, P_ROBOTIN],
+  emperador:    [EMPERADOR, P_EMPERADOR],
+  nave:         [NAVE, P_NAVE],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

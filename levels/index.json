@@ -555,6 +555,20 @@
       "abierto": true,
       "mapa": "levels/level39.json",
       "preguntas": "questions/level39_questions.json"
+    },
+    {
+      "id": "level40",
+      "clase": "Clase 01",
+      "distrito": "Marte",
+      "titulo": "El planeta donde una sola empresa vende el oxígeno",
+      "icono": "🪐",
+      "seccion": "Final",
+      "seccionNota": "Monopolio y lo que viene — modo galaxia, ahora visitando otros mundos",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level40.json",
+      "preguntas": "questions/level40_questions.json"
     }
   ]
 }

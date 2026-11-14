@@ -339,6 +339,13 @@ const FICHAS = [
   { sprite: "samosa", nombre: "La Samosa que Elige la q Menor", texto: "Si P = CMg da dos valores, el óptimo es la q mayor, donde el CMg es creciente: de q = 3 y q = 5, se queda con 5." },
   { sprite: "colador", nombre: "El Colador que Cierra por Perder Poco", texto: "En el corto plazo se compara con el CF: si produciendo pierde 3 y cerrando pierde 30, sigue produciendo." },
   { sprite: "maharaja", nombre: "El Marajá de los Telares", texto: "Jefe de India: pide el problema completo, el equilibrio de largo plazo con CMg = CMe = P y la tablita de costos." },
+  { sprite: "alien", nombre: "El Marciano que Cree que Acepta el Precio", texto: "Marte: en competencia perfecta la empresa es precio aceptante; el monopolio es precio decisor, porque su demanda es la del mercado." },
+  { sprite: "ovni", nombre: "El Ovni que Quiere Cobrar un Billón", texto: "El monopolio pone el precio, pero no puede pasarse de la máxima disposición a pagar: el intercepto de la demanda." },
+  { sprite: "astronauta", nombre: "El Astronauta que No Duplica la Pendiente", texto: "Con la demanda inversa lineal, el IMg tiene el mismo intercepto y el doble de pendiente: de p = −q + 3 sale IMg = −2q + 3." },
+  { sprite: "satelite", nombre: "El Satélite que Persigue el Ingreso Máximo", texto: "El monopolio no produce donde el IT es máximo (IMg = 0), sino donde IMg = CMg, un poco antes." },
+  { sprite: "meteorito", nombre: "El Meteorito que Espera el Beneficio Cero", texto: "Con barreras de entrada no llegan competidores: el beneficio positivo del corto plazo se mantiene en el largo plazo." },
+  { sprite: "robotin", nombre: "El Robotín que Vende en el Tramo Inelástico", texto: "El monopolio no produce en el tramo inelástico: ahí el IMg es negativo, y subiendo el precio gana más vendiendo menos." },
+  { sprite: "emperador", nombre: "El Dueño del Oxígeno", texto: "Jefe de Marte: pide la receta completa del monopolio: demanda de mercado, IMg, q óptima, precio y beneficio." },
 ];
 
 export function galeriaPersonajes(contenedor) {

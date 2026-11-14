@@ -28,6 +28,14 @@ function f(nombre) {
  * Un "tiempo" son 0.15 s, así que el bucle completo dura unos 5 segundos.
  */
 const TEMAS_MUSICA = {
+  marte: { // Marte: arpegio espacial en la menor, con el bajo latiendo como un radar
+    tempo: 0.17, onda: "sine",
+    melodia: ["A4",2,"C5",2,"E5",2,"A5",2,"G5",2,"E5",2,"C5",4,
+              "F4",2,"A4",2,"C5",2,"F5",2,"E5",2,"C5",2,"A4",4,
+              "D4",2,"F4",2,"A4",2,"D5",2,"C5",2,"A4",2,"F4",4,
+              "E4",2,"G#4",2,"B4",2,"E5",2,"D5",2,"B4",2,"G#4",4],
+    bajo:    ["A1",4,"A2",4,"F1",4,"F2",4,"D2",4,"D2",4,"E1",4,"E2",4],
+  },
   agra: { // India: frigio sobre D con el bordón fijo, como una tanpura
     tempo: 0.21, onda: "triangle",
     melodia: ["D4",2,"Eb4",2,"F4",2,"G4",2,"A4",4,"G4",2,"F4",2,

@@ -1,0 +1,41 @@
+{
+  "id": "level40",
+  "distrito": "Marte",
+  "clase": "Clase 01 · Final",
+  "titulo": "El planeta donde una sola empresa vende el oxígeno",
+  "tema": "marte",
+  "musica": "marte",
+  "vehiculo": "nave",
+  "intro": "Arranca el EXAMEN FINAL y salimos del mundo: modo galaxia. Primera parada, Marte. En la colonia hay una sola empresa que vende oxígeno, nadie más tiene permiso para fabricarlo y no hay nada que lo reemplace: es un MONOPOLIO de manual. A diferencia de la competencia perfecta, aquí la empresa no acepta el precio: lo decide. Pero no puede cobrar lo que quiera, porque la demanda tiene un tope. La receta tiene cinco pasos: costos, IMg, IMg = CMg para la cantidad, la demanda para el precio, y el beneficio.",
+  "repaso": [
+    "PARA EL FINAL SE REFUERZAN: teoría del productor y costos de corto plazo (PC3), y costos de largo plazo y competencia perfecta (PC4).",
+    "DEMANDA INVERSA: si el P está despejado es inversa; si la Q está despejada es normal. De p = −q + 2 con 50 consumidores, primero se despeja q = 2 − p, se multiplica por 50 (Q = 100 − 50p) y se vuelve a despejar: p = 2 − Q/50.",
+    "INGRESO Y ELASTICIDAD: en el tramo INELÁSTICO (pocos sustitutos, muy necesario, como la insulina) si sube el precio sube el ingreso. En el ELÁSTICO (muchos sustitutos, como las galletas) conviene bajarlo.",
+    "LAS CARACTERÍSTICAS DEL MONOPOLIO: un ÚNICO VENDEDOR, así que la demanda de la empresa es la del mercado. Y BARRERAS de entrada: un recurso clave de una sola empresa, una patente del gobierno o un monopolio natural (costos tan altos que solo una puede producir, como Sedapal).",
+    "PRECIO DECISOR: en competencia perfecta la empresa es precio aceptante; el monopolio decide el precio. Pero no puede pasarse de la máxima disposición a pagar, que es el intercepto de la demanda.",
+    "BENEFICIO EN EL LARGO PLAZO: en competencia perfecta llegan empresas hasta que BE = 0. En el monopolio hay barreras: el beneficio positivo se MANTIENE en el largo plazo.",
+    "LOS INGRESOS: IMe = P, que es la demanda. El IMg es MENOR que el precio: en una demanda inversa lineal tiene el mismo intercepto y el DOBLE de pendiente. De p = −q + 3 sale IMg = −2q + 3.",
+    "DÓNDE PRODUCIR: donde IMg = CMg. No donde el IT es máximo (IMg = 0): eso queda un poco a la derecha, y llegar ahí cuesta demasiado. En el monopolio no vale P = CMg, porque P ≠ IMg.",
+    "LA RECETA: 1) la función de costos y la demanda de mercado inversa. 2) CMg e IMg. 3) IMg = CMg da la q. 4) Esa q va en la DEMANDA para sacar el precio. 5) π = IT − CT = P·q − CT.",
+    "EJEMPLO: p = 20 − 4q y CT = 4q. IMg = 20 − 8q = 4 da q = 2; p = 20 − 8 = 12; π = 24 − 8 = 16.",
+    "NO SE PRODUCE EN EL TRAMO INELÁSTICO: ahí el IMg es negativo, y como el CMg es positivo nunca se cruzan. Si la empresa estuviera ahí, le convendría reducir q: sube el IT y baja el CT, doble beneficio.",
+    "EL MONOPOLIO NO TIENE CURVA DE OFERTA: decide la cantidad y el precio a la vez, mirando la demanda."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                    V                                                                 ?                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      ooGoo          oooo               oo                                      ooooooooooo               oo              ooooo                     1   L    oooooooo               ",
+    "                    ======              ======                                             oooooo         ======                   oooooo                   ==========              ",
+    "                                   oooooo                      =====                                                                                                                ",
+    "  P           C             E                       E     C T               E     X   E X         C                 E       X             C   E                         B       M   ",
+    "####################################    ####################################################    ####################################    ############################################",
+    "####################################    ####################################################    ####################################    ############################################",
+    "####################################    ####################################################    ####################################    ############################################"
+  ]
+}
