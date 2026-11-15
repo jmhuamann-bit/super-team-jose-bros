@@ -5521,6 +5521,124 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     SATURNO — segunda parada del modo galaxia del final. Es el mismo
+     mundo del nivel de Saturno de Economía 2. Se camina sobre Titán,
+     su luna, con el planeta y sus anillos llenando el cielo, lagos de
+     metano, niebla anaranjada y cristales de hielo.
+     ========================================================= */
+  saturno: {
+    nombre: "Saturno",
+    cielo: [[0, "#0a0614"], [0.4, "#2a1a3a"], [0.68, "#8a5a3a"], [0.8, "#4a3020"], [1, "#1e140c"]],
+    suelo: { cara: "#b08a5a", borde: "#e0b878", tierra: "#5a4028", plataforma: "#4a5a7a", plataformaBorde: "#e8b86a" },
+    acento: "#e8b86a",
+
+    bichos: ["anillo", "sonda", "asteroide", "cristal", "gusano", "medusa"],
+    nombresBichos: [
+      "El Anillo que Cree que el IMg Es el Precio",
+      "La Sonda que No Ve que Se Produce Menos",
+      "El Asteroide que No Ve la Pérdida Social",
+      "El Cristal que Confunde los Excedentes",
+      "El Gusano que Se Asusta con el Costo Fijo",
+      "La Medusa que No Arma su Canasta",
+    ],
+    andares: ["vuela", "salta", "patrulla", "guardia", "veloz", "vuela"],
+    jefe: "reysaturno",
+    nombreJefe: "El Rey del Oxígeno de Titán",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // las estrellas
+      for (let i = 0; i < 70; i++) {
+        const x = ((i * 89 - cam * 0.02) % 860 + 860) % 860 - 30;
+        const y = (i * 41) % 200;
+        const brillo = 0.3 + 0.3 * Math.abs(Math.sin(t / 50 + i * 1.3));
+        ctx.fillStyle = `rgba(250,240,230,${brillo.toFixed(2)})`;
+        ctx.fillRect(x, y, 1, 1);
+      }
+
+      // SATURNO y sus anillos, enormes, llenando medio cielo
+      const sx = 520 - (cam * 0.015) % 200, sy = 120;
+      ctx.fillStyle = "rgba(232,184,106,.18)";                  // el anillo de atrás
+      ctx.beginPath(); ctx.ellipse(sx, sy, 210, 40, -0.25, Math.PI, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#d8a860";                                // el planeta con sus bandas
+      ctx.beginPath(); ctx.arc(sx, sy, 92, 0, Math.PI * 2); ctx.fill();
+      ctx.save();
+      ctx.beginPath(); ctx.arc(sx, sy, 92, 0, Math.PI * 2); ctx.clip();
+      for (let k = 0; k < 8; k++) {
+        ctx.fillStyle = elige(["rgba(200,140,80,.6)", "rgba(240,200,140,.5)", "rgba(170,110,60,.5)"], k);
+        ctx.fillRect(sx - 100, sy - 92 + k * 24, 200, 10 + (k % 3) * 4);
+      }
+      ctx.fillStyle = "rgba(20,10,20,.35)";                     // la sombra del lado nocturno
+      ctx.beginPath(); ctx.arc(sx + 40, sy + 20, 92, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+      ctx.strokeStyle = "rgba(240,210,150,.75)";                // los anillos de adelante
+      ctx.lineWidth = 6;
+      ctx.beginPath(); ctx.ellipse(sx, sy, 180, 32, -0.25, 0, Math.PI); ctx.stroke();
+      ctx.strokeStyle = "rgba(200,160,110,.6)";
+      ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.ellipse(sx, sy, 205, 38, -0.25, 0, Math.PI); ctx.stroke();
+      ctx.lineWidth = 1;
+
+      // la niebla anaranjada de Titán, en bandas
+      repetir(ctx, cam, 320, 0.05, (x, i) => {
+        ctx.fillStyle = "rgba(230,150,80,.14)";
+        ctx.fillRect(x, 220 + ((i * 31) % 40), 220, 10);
+      });
+
+      // las colinas de hielo y roca
+      repetir(ctx, cam, 280, 0.12, (x, i) => {
+        const alto = 50 + ((i * 23) % 30);
+        ctx.fillStyle = elige(["#5a4030", "#4a3424", "#6a4a34"], i);
+        ctx.beginPath();
+        ctx.moveTo(x, 310); ctx.quadraticCurveTo(x + 80, 310 - alto * 2, x + 190, 310);
+        ctx.closePath(); ctx.fill();
+      });
+
+      // EL LAGO DE METANO, oscuro y quieto, con los anillos reflejados
+      ctx.fillStyle = "#2a2a3a";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 30);
+      for (let i = 0; i < 20; i++) {
+        const x = (i * 63 - cam * 0.14) % 1000 - 40;
+        ctx.fillStyle = "rgba(232,184,106,.22)";
+        ctx.fillRect(x, 314 + ((i * 7) % 16), 22, 2);
+      }
+
+      // la orilla y LOS CRISTALES DE HIELO
+      ctx.fillStyle = "#8a6a44";
+      ctx.fillRect(0, 336, CFG.ANCHO_VISTA, 46);
+      repetir(ctx, cam, 150, 0.35, (x, i) => {
+        const bx = x + 30, base = 360, h = 24 + ((i * 13) % 26);
+        ctx.fillStyle = elige(["rgba(160,220,240,.75)", "rgba(190,230,250,.7)", "rgba(130,200,230,.75)"], i);
+        ctx.beginPath();
+        ctx.moveTo(bx, base); ctx.lineTo(bx + 7, base - h); ctx.lineTo(bx + 14, base); ctx.closePath(); ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(bx + 10, base); ctx.lineTo(bx + 16, base - h * 0.6); ctx.lineTo(bx + 22, base); ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(255,255,255,.6)";
+        ctx.fillRect(bx + 6, base - h + 6, 2, h / 2);
+      });
+
+      // las rocas del frente
+      repetir(ctx, cam, 110, 0.6, (x, i) => {
+        ctx.fillStyle = elige(["#5a4028", "#4a3420"], i);
+        ctx.fillRect(x + 30, 372, 12 + (i % 3) * 5, 8);
+      });
+      ctx.fillStyle = "#4a3420";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // la nieve de metano, lenta y dorada
+      for (let i = 0; i < 45; i++) {
+        const x = (i * 83 + Math.sin(t / 40 + i) * 20) % 860 - 30;
+        const y = (i * 61 + t * 0.6) % 420;
+        ctx.fillStyle = "rgba(250,220,170,.45)";
+        ctx.fillRect(x, y, 2, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

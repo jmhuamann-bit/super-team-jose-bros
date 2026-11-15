@@ -1,0 +1,125 @@
+{
+  "nivel": "level41",
+  "clase": "Clase 02 · Final — Monopolio, la intuición",
+  "fuente": "Apuntes de la 2da clase del final — Ejercicios de monopolio (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e41-q1",
+      "nivel": "comprension",
+      "enunciado": "¿Qué es igual a qué en un monopolio?",
+      "opciones": [
+        "La demanda, el precio, el IMe y el IMg son todos iguales",
+        "La demanda de mercado es la de la empresa, igual al precio y al IMe; el IMg queda por debajo",
+        "El IMg es igual al precio, y la demanda va por encima",
+        "El precio es igual al CMg, como en competencia perfecta"
+      ],
+      "correcta": 1,
+      "explicacion": "Como hay un solo vendedor, la demanda de mercado es la demanda de la empresa, y esa curva es el precio y el ingreso medio. Para vender una unidad más tiene que bajar el precio de todas, por eso el IMg queda debajo de la demanda."
+    },
+    {
+      "id": "e41-q2",
+      "nivel": "comprension",
+      "enunciado": "Comparado con un mercado de competencia perfecta con los mismos costos, ¿qué hace el monopolio?",
+      "opciones": [
+        "Produce lo mismo y cobra lo mismo",
+        "Produce más y cobra menos, porque tiene más poder",
+        "Produce menos y cobra más",
+        "Produce menos y cobra menos"
+      ],
+      "correcta": 2,
+      "explicacion": "En competencia se produce donde la demanda corta al CMg. El monopolio produce donde IMg = CMg, que queda a la izquierda: menos cantidad. Y con menos cantidad, la demanda le permite cobrar más."
+    },
+    {
+      "id": "e41-q3",
+      "nivel": "comprension",
+      "enunciado": "En el gráfico del monopolio, ¿qué es la pérdida de eficiencia social (PES)?",
+      "opciones": [
+        "El beneficio del monopolio",
+        "El área que pierden los consumidores y gana el monopolio",
+        "El costo fijo de la empresa",
+        "El triángulo entre lo que produce el monopolio y lo eficiente: ventas que valían la pena y nadie hizo"
+      ],
+      "correcta": 3,
+      "explicacion": "Entre la cantidad del monopolio y la eficiente, los consumidores valoran el bien más de lo que cuesta producirlo, pero esas unidades no se producen. Ese triángulo, entre la demanda y el CMg, no se lo queda nadie: es la PES."
+    },
+    {
+      "id": "e41-q4",
+      "nivel": "comprension",
+      "enunciado": "¿Qué área es el EXCEDENTE DEL CONSUMIDOR en un monopolio?",
+      "opciones": [
+        "Debajo de la demanda y sobre el precio que se paga, hasta la cantidad transada",
+        "Sobre el CMg y debajo del precio, hasta la cantidad transada",
+        "Todo lo que queda debajo de la demanda",
+        "El triángulo entre la cantidad del monopolio y la eficiente"
+      ],
+      "correcta": 0,
+      "explicacion": "El consumidor gana la diferencia entre lo que estaba dispuesto a pagar (la demanda) y lo que paga (el precio), por cada unidad que compra. Sobre el CMg y debajo del precio es el excedente del PRODUCTOR; el triángulo es la PES."
+    },
+    {
+      "id": "e41-q5",
+      "nivel": "comprension",
+      "enunciado": "La empresa de oxígeno tenía un costo fijo de 20 y ahora el alquiler de su local sube, y el costo fijo pasa a 50.\n\n¿Qué cambia?",
+      "opciones": [
+        "Produce menos y cobra más, para cubrir el nuevo costo",
+        "Solo cambia el beneficio: el CMg no se mueve, así que la cantidad y el precio siguen igual",
+        "Produce más, para repartir el costo fijo",
+        "Tiene que cerrar, porque el costo subió"
+      ],
+      "correcta": 1,
+      "explicacion": "La decisión del monopolio depende de IMg = CMg, y el costo fijo no está en el CMg. Por eso la cantidad y el precio no se mueven. Lo único que cambia es cuánto gana: 30 menos."
+    },
+    {
+      "id": "e41-q6",
+      "nivel": "comprension",
+      "enunciado": "Un monopolio produce con q = mín(L; 4K) y decidió producir 3000.\n\n¿Cuál es su plan de producción?",
+      "opciones": [
+        "L = 750 y K = 3000",
+        "L = 3000 y K = 3000",
+        "L = 3000 y K = 750, con la triple igualdad",
+        "Cualquier combinación que sume 3000"
+      ],
+      "correcta": 2,
+      "explicacion": "El plan de producción es la canasta óptima. Con complementarios perfectos se usa la triple igualdad: q = L = 4K. Con q = 3000, L = 3000 y K = 3000/4 = 750."
+    },
+    {
+      "id": "e41-q7",
+      "nivel": "comprension",
+      "enunciado": "Primera pregunta del rey del oxígeno. Para ver el BENEFICIO del monopolio en el gráfico, ¿qué curvas necesitas?",
+      "opciones": [
+        "La demanda y el IMg",
+        "El IMg y el CMg",
+        "Solo la demanda",
+        "El precio y el CMe: el beneficio es el rectángulo entre los dos, hasta la cantidad"
+      ],
+      "correcta": 3,
+      "explicacion": "El beneficio es (P − CMe) × q. En el gráfico es el rectángulo con base en la cantidad y altura entre el precio y el CMe. El IMg y el CMg sirven para elegir la cantidad, no para ver cuánto se gana."
+    },
+    {
+      "id": "e41-q8",
+      "nivel": "comprension",
+      "enunciado": "Segunda pregunta. El oxígeno se vende con P = 40 − 2Q y un CMg de 8. El monopolio vende 8 balones a 24, y lo eficiente serían 16.\n\n¿Qué se puede decir?",
+      "opciones": [
+        "Hay PES: se dejan de vender 8 balones que los consumidores valoraban más de lo que costaban",
+        "No hay PES, porque el monopolio gana",
+        "La PES es el beneficio del monopolio",
+        "No hay PES, porque se vende al precio de la demanda"
+      ],
+      "correcta": 0,
+      "explicacion": "Entre los balones 8 y 16, la gente estaba dispuesta a pagar más que el costo de 8, pero el monopolio no los vende para mantener el precio en 24. Esas ventas perdidas son la PES, que aquí vale 64."
+    },
+    {
+      "id": "e41-q9",
+      "nivel": "comprension",
+      "enunciado": "Tercera pregunta. El monopolio del oxígeno gana mucho.\n\n¿Qué pasará con su beneficio en el largo plazo?",
+      "opciones": [
+        "Llega a cero, porque entran otras empresas",
+        "Se vuelve negativo, porque los costos suben",
+        "Se mantiene positivo: las barreras de entrada no dejan entrar a nadie",
+        "Llega a cero, porque el precio baja hasta el CMg"
+      ],
+      "correcta": 2,
+      "explicacion": "En competencia perfecta entran empresas hasta que BE = 0. En el monopolio hay barreras: un recurso clave, una patente o un monopolio natural. Nadie entra, y el beneficio se mantiene en el corto y en el largo plazo."
+    }
+  ]
+}

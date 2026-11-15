@@ -569,6 +569,20 @@
       "abierto": true,
       "mapa": "levels/level40.json",
       "preguntas": "questions/level40_questions.json"
+    },
+    {
+      "id": "level41",
+      "clase": "Clase 02",
+      "distrito": "Saturno",
+      "titulo": "La luna donde una sola empresa vende el oxígeno en balones",
+      "icono": "💫",
+      "seccion": "Final",
+      "seccionNota": "Monopolio y lo que viene — modo galaxia, ahora visitando otros mundos",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level41.json",
+      "preguntas": "questions/level41_questions.json"
     }
   ]
 }

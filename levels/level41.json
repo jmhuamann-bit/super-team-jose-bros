@@ -1,0 +1,41 @@
+{
+  "id": "level41",
+  "distrito": "Saturno",
+  "clase": "Clase 02 · Final",
+  "titulo": "La luna donde una sola empresa vende el oxígeno en balones",
+  "tema": "saturno",
+  "musica": "saturno",
+  "vehiculo": "nave",
+  "intro": "Segunda parada del modo galaxia: Titán, la luna de Saturno. Como en el problema de Oxigena SA, aquí una sola empresa vende oxígeno en balones. Esta vez, más intuición que cuentas: por qué el monopolio produce menos y cobra más que la competencia, qué áreas del gráfico son el excedente del consumidor, el del productor y la pérdida de eficiencia social, por qué su beneficio no desaparece, y cómo decide cuántos trabajadores y máquinas usar.",
+  "repaso": [
+    "LA IDEA DE BASE: en el monopolio la demanda de mercado es la demanda de la empresa, y es igual al precio y al IMe. Pero el IMg es distinto y queda por debajo. En competencia perfecta, en cambio, P = IMe = IMg.",
+    "DÓNDE PRODUCE: donde IMg = CMg. Esa cantidad se lleva a la DEMANDA, y ahí se lee el precio. El precio queda por encima del CMg.",
+    "MENOS Y MÁS CARO: si fuera competencia, se produciría donde la demanda corta al CMg (P = CMg). El monopolio produce menos que eso y cobra más.",
+    "EXCEDENTE DEL CONSUMIDOR (EC): el área debajo de la demanda, sobre el precio que se paga, hasta la cantidad transada. Es lo que ganan los compradores.",
+    "EXCEDENTE DEL PRODUCTOR (EP): el área sobre el CMg, debajo del precio, hasta la cantidad transada. Es lo que gana el vendedor.",
+    "PÉRDIDA DE EFICIENCIA SOCIAL (PES): el triángulo entre la cantidad del monopolio y la eficiente, entre la demanda y el CMg. Son ventas que valían la pena y nunca se hicieron: nadie se las queda.",
+    "EL EJEMPLO DE OXIGENA: con P = 40 − 2Q y CMg = 8, el monopolio vende 8 a 24, pero lo eficiente era 16. EC = 64, EP = 128 y PES = 64.",
+    "EL COSTO FIJO no cambia el CMg, así que no cambia ni la cantidad ni el precio del monopolio. Solo cambia cuánto gana.",
+    "EN EL CORTO Y EN EL LARGO PLAZO el beneficio positivo se mantiene, porque hay barreras de entrada: recurso clave, patente o monopolio natural.",
+    "EL PLAN DE PRODUCCIÓN es la canasta óptima: cuántos trabajadores (L) y máquinas (K) usar para la cantidad elegida. Con complementarios perfectos sale de la triple igualdad: con q = mín(L; 4K) y q = 3000, L = 3000 y K = 750.",
+    "RECORDATORIO DE COSTOS: con complementarios perfectos se usa la triple igualdad; con sustitutos se compra solo el insumo que da más producto por sol; en el caso típico se iguala la TTS al ratio de precios.",
+    "PARA VER EL BENEFICIO EN EL GRÁFICO se necesitan el precio y el CMe: es el rectángulo entre los dos, hasta la cantidad."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                          V                                                           G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      oo?oo          oooo               oo                                      ooooooooooo               oo              ooooo                     1   L    oooooooo               ",
+    "                    ======                    ======                                       ooooo          ======               oooooo                       ==========              ",
+    "                                       oooooo                  =====                                                                                                                ",
+    "  P           C             E                           E C T               E     X   E X       C                   E       X             C   E                         B       M   ",
+    "########################################    ################################################   #################################    ################################################",
+    "########################################    ################################################   #################################    ################################################",
+    "########################################    ################################################   #################################    ################################################"
+  ]
+}

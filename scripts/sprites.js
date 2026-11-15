@@ -4246,6 +4246,135 @@ const NAVE = [    // la nave, que es el vehículo de salida del planeta (32 × 1
 ];
 const P_NAVE = { k: "#141420", m: "#c6ccd6", c: "#9fe0f0", w: "#ffffff", r: "#c0392b", y: "#f2d24a", o: "#f0a83c" };
 
+const ANILLO = [    // el anillo: cree que en el monopolio el IMg es igual al precio (18 × 14)
+  "..................",
+  "......kkkkkk......",
+  "....kkooooookk....",
+  "...kooywwooyook...",
+  ".kkkooykkooykookkk",
+  "kppkoooooooookpppk",
+  "kpppkkkkkkkkkkpppk",
+  ".kkppppppppppppkk.",
+  "...kkkooooooookk..",
+  "....kooookkoook...",
+  ".....kooooooook...",
+  "......kkkkkkkk....",
+  "..................",
+  "..................",
+];
+const P_ANILLO = { k: "#1a1420", o: "#e8b86a", y: "#fff2c0", w: "#ffffff", p: "#c49a5a" };
+
+const SONDA = [    // la sonda: no ve que el monopolio produce menos que la competencia (18 × 14)
+  "........kk........",
+  "........kr........",
+  ".......kkkk.......",
+  "......kmmmmk......",
+  "..kkkkmmccmmkkkk..",
+  "..kbbkmmccmmkbbk..",
+  "..kbbkmmmmmmkbbk..",
+  "..kkkkmmmmmmkkkk..",
+  "......kmmmmk......",
+  ".......kmmk.......",
+  "......kk..kk......",
+  ".....ky....yk.....",
+  "..................",
+  "..................",
+];
+const P_SONDA = { k: "#141420", r: "#ff4a4a", m: "#c6ccd6", c: "#5ae0f0", b: "#e8a83a", y: "#f2d24a" };
+
+const ASTEROIDE = [    // el asteroide: cree que el monopolio no le quita nada a la sociedad (18 × 14)
+  "..................",
+  ".......kkkkk......",
+  ".....kkgggggkk....",
+  "....kgggdggggk....",
+  "...kggwkggwkggk...",
+  "...kgggggggggdk...",
+  "..kgdgggkkgggggk..",
+  "..kggggggggdgggk..",
+  "...kgggdgggggggk..",
+  "...kgggggggdggk...",
+  "....kkgggggggk....",
+  "......kkkkkkk.....",
+  "..................",
+  "..................",
+];
+const P_ASTEROIDE = { k: "#141418", g: "#8a8a96", d: "#5a5a66", w: "#ffffff" };
+
+const CRISTAL = [    // el cristal: confunde el excedente del consumidor con el del productor (18 × 14)
+  "........kk........",
+  ".......kcck.......",
+  "......kcwcck......",
+  ".....kccwccck.....",
+  "....kcccccccck....",
+  "...kccwkcckwcck...",
+  "...kcccccccccck...",
+  "....kcccckkccck...",
+  ".....kcccccccck...",
+  "......kcccccck....",
+  ".......kcccck.....",
+  "........kcck......",
+  ".........kk.......",
+  "..................",
+];
+const P_CRISTAL = { k: "#142030", c: "#9ad8f0", w: "#ffffff" };
+
+const GUSANO = [    // el gusano: cree que el costo fijo cambia la producción óptima (18 × 14)
+  "..................",
+  "..................",
+  "............kkkk..",
+  "...........kvvvvk.",
+  "..........kvwkvwk.",
+  "..........kvvvvvk.",
+  "..kkkk...kvvvvvk..",
+  ".kvvvvk.kvvvvvk...",
+  "kvvvvvvkvvvvvk....",
+  "kvvkvvvvvvvvk.....",
+  ".kvvvvvvvvvk......",
+  "..kkvvvvvkk.......",
+  "....kkkkk.........",
+  "..................",
+];
+const P_GUSANO = { k: "#14201a", v: "#b06ad0", w: "#ffffff" };
+
+const MEDUSA = [    // la medusa: no sabe qué insumos usar para producir lo óptimo (18 × 14)
+  "......kkkkkk......",
+  "....kkppppppkk....",
+  "...kppwppppwppk...",
+  "..kppwkppppwkppk..",
+  "..kppppppppppppk..",
+  "..kppppkkkkppppk..",
+  "...kkkkkkkkkkkk...",
+  "...k.p.k.p.k.p.k..",
+  "...p.k.p.k.p.k.p..",
+  "...k.p.k.p.k.p.k..",
+  "...p...p...p...p..",
+  "..................",
+  "..................",
+  "..................",
+];
+const P_MEDUSA = { k: "#201428", p: "#e870b0", w: "#ffffff" };
+
+const REYSATURNO = [    // jefe: el rey de los anillos, dueño del único oxígeno de Titán (18 × 17)
+  "....y..y..y..y....",
+  "....yyyyyyyyyy....",
+  "....ycyyyyyycy....",
+  "....kkkkkkkkkk....",
+  "...koooooooooook..",
+  "...kokkoooookkok..",
+  "...kowkoooooowkk..",
+  "...koooooooooook..",
+  "kkkkkooookkoookkkk",
+  "kppppkoooooookpppk",
+  ".kkkpppkkkkkpppkk.",
+  "...kvvvvvvvvvvk...",
+  "..kvvvyyyyyyvvvk..",
+  ".kvvvvvyyyyvvvvvk.",
+  ".kvvvvvvyyvvvvvvk.",
+  "..kkvvvvvvvvvvkk..",
+  "...kvvvvkkvvvvk...",
+];
+const P_REYSATURNO = { k: "#1a1420", y: "#f2c84a", c: "#5ae0f0", o: "#e8b86a", w: "#ffffff", p: "#c49a5a", v: "#3a5ab0" };
+
 
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
@@ -4487,6 +4616,13 @@ const DEFINICIONES = {
   robotin:      [ROBOTIN, P_ROBOTIN],
   emperador:    [EMPERADOR, P_EMPERADOR],
   nave:         [NAVE, P_NAVE],
+  anillo:       [ANILLO, P_ANILLO],
+  sonda:        [SONDA, P_SONDA],
+  asteroide:    [ASTEROIDE, P_ASTEROIDE],
+  cristal:      [CRISTAL, P_CRISTAL],
+  gusano:       [GUSANO, P_GUSANO],
+  medusa:       [MEDUSA, P_MEDUSA],
+  reysaturno:   [REYSATURNO, P_REYSATURNO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

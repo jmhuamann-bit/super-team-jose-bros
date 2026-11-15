@@ -28,6 +28,14 @@ function f(nombre) {
  * Un "tiempo" son 0.15 s, así que el bucle completo dura unos 5 segundos.
  */
 const TEMAS_MUSICA = {
+  saturno: { // Saturno: vals lento en re menor, con los anillos girando en el bajo
+    tempo: 0.2, onda: "triangle",
+    melodia: ["D5",4,"A4",2,"F4",2,"D4",4,"E4",2,"F4",2,
+              "G4",4,"Bb4",2,"A4",2,"G4",4,"F4",2,"E4",2,
+              "F4",4,"A4",2,"D5",2,"C5",4,"A4",2,"G4",2,
+              "E4",4,"G4",2,"A4",2,"D4",8],
+    bajo:    ["D2",6,"A2",6,"G2",6,"D2",6,"Bb1",6,"F2",6,"A1",6,"D2",6],
+  },
   marte: { // Marte: arpegio espacial en la menor, con el bajo latiendo como un radar
     tempo: 0.17, onda: "sine",
     melodia: ["A4",2,"C5",2,"E5",2,"A5",2,"G5",2,"E5",2,"C5",4,

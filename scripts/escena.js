@@ -346,6 +346,13 @@ const FICHAS = [
   { sprite: "meteorito", nombre: "El Meteorito que Espera el Beneficio Cero", texto: "Con barreras de entrada no llegan competidores: el beneficio positivo del corto plazo se mantiene en el largo plazo." },
   { sprite: "robotin", nombre: "El Robotín que Vende en el Tramo Inelástico", texto: "El monopolio no produce en el tramo inelástico: ahí el IMg es negativo, y subiendo el precio gana más vendiendo menos." },
   { sprite: "emperador", nombre: "El Dueño del Oxígeno", texto: "Jefe de Marte: pide la receta completa del monopolio: demanda de mercado, IMg, q óptima, precio y beneficio." },
+  { sprite: "anillo", nombre: "El Anillo que Cree que el IMg Es el Precio", texto: "Saturno: en el monopolio la demanda de mercado es la de la empresa, y es igual al precio y al IMe. Pero el IMg queda por debajo." },
+  { sprite: "sonda", nombre: "La Sonda que No Ve que Se Produce Menos", texto: "El monopolio produce donde IMg = CMg: menos cantidad y más precio que si se cruzaran la demanda y el CMg." },
+  { sprite: "asteroide", nombre: "El Asteroide que No Ve la Pérdida Social", texto: "Las unidades entre lo que produce el monopolio y lo eficiente se pierden para todos: esa es la PES." },
+  { sprite: "cristal", nombre: "El Cristal que Confunde los Excedentes", texto: "EC: debajo de la demanda y sobre el precio. EP: sobre el CMg y debajo del precio. Los dos hasta la cantidad transada." },
+  { sprite: "gusano", nombre: "El Gusano que Se Asusta con el Costo Fijo", texto: "El costo fijo no mueve el CMg: la cantidad y el precio del monopolio no cambian, solo el beneficio." },
+  { sprite: "medusa", nombre: "La Medusa que No Arma su Canasta", texto: "El plan de producción es la canasta óptima: con complementarios, la triple igualdad dice cuántos K y L usar." },
+  { sprite: "reysaturno", nombre: "El Rey del Oxígeno de Titán", texto: "Jefe de Saturno: pide leer el gráfico del monopolio, sus áreas y por qué su beneficio dura en el largo plazo." },
 ];
 
 export function galeriaPersonajes(contenedor) {
