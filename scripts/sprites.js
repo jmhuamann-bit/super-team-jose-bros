@@ -4375,6 +4375,135 @@ const REYSATURNO = [    // jefe: el rey de los anillos, dueño del único oxíge
 ];
 const P_REYSATURNO = { k: "#1a1420", y: "#f2c84a", c: "#5ae0f0", o: "#e8b86a", w: "#ffffff", p: "#c49a5a", v: "#3a5ab0" };
 
+const LENTES = [    // los lentes inteligentes: no ven que en primer grado no queda excedente del consumidor (18 × 14)
+  "..................",
+  "..................",
+  "..................",
+  "kkkkkkkkkkkkkkkkkk",
+  "kccccck....kccccck",
+  "kcwccckkkkkkcwccck",
+  "kccccck....kccccck",
+  "kcccrck....kcccrck",
+  ".kkkkk......kkkkk.",
+  "..................",
+  "..................",
+  "..................",
+  "..................",
+  "..................",
+];
+const P_LENTES = { k: "#141420", c: "#5ae0f0", w: "#ffffff", r: "#e83a5a" };
+
+const BOLETO = [    // el boleto: cree que con discriminación perfecta sigue habiendo PES (18 × 14)
+  "..................",
+  "..................",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kyyyyyyyyyyyyyyk.",
+  "kyykyyyyyyyyyykyyk",
+  "kyyyyrrrrrrrryyyyk",
+  ".kyyyyyyyyyyyyyyk.",
+  ".kyyyrryyyyrryyyk.",
+  "kyyyyyyyyyyyyyyyyk",
+  "kyykyyyyyyyyyykyyk",
+  ".kyyyyyyyyyyyyyyk.",
+  ".kkkkkkkkkkkkkkkk.",
+  "..................",
+  "..................",
+];
+const P_BOLETO = { k: "#201a10", y: "#f2d24a", r: "#c0392b" };
+
+const CAJOTA = [    // la cajota: no reconoce el descuento por mayor, el segundo grado (18 × 14)
+  "..................",
+  "...kkkkkkkkkkkk...",
+  "..kmmmmmmmmmmmmk..",
+  ".kmmmmmmmmmmmmmmk.",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kbbwkbbbbbbwkbbk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kbbbbbkkkkbbbbbk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kbbrrrrrrrrrrbbk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kkkkkkkkkkkkkkkk.",
+  "..................",
+];
+const P_CAJOTA = { k: "#1e140c", m: "#d8a860", b: "#b07a40", w: "#ffffff", r: "#c0392b" };
+
+const ESCALERA = [    // la escalera: cree que se discrimina aunque los dos grupos tengan la misma elasticidad (18 × 14)
+  "..................",
+  "............kkkkk.",
+  "............kgggk.",
+  "........kkkkkgggk.",
+  "........kgggggggk.",
+  "....kkkkkgggggggk.",
+  "....kgwkgggwkggk..",
+  "kkkkkgggggggggggk.",
+  "kgggggggggggggggk.",
+  "kgggggggggggggggk.",
+  "kggggggkkkkggggk..",
+  "kgggggggggggggggk.",
+  "kkkkkkkkkkkkkkkkk.",
+  "..................",
+];
+const P_ESCALERA = { k: "#141c14", g: "#7ac07a", w: "#ffffff" };
+
+const DNI = [    // el DNI: no sabe qué grupo paga más en el tercer grado (18 × 14)
+  "..................",
+  ".kkkkkkkkkkkkkkkk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kbkkkkbbbbbbbbbk.",
+  ".kbkppkbmmmmmmbbk.",
+  ".kbkpwkbbbbbbbbbk.",
+  ".kbkppkbmmmmbbbbk.",
+  ".kbkkkkbbbbbbbbbk.",
+  ".kbbbbbbmmmmmmmbk.",
+  ".kbbbbbbbbbbbbbbk.",
+  ".kbmmmmmmmmmmmbbk.",
+  ".kkkkkkkkkkkkkkkk.",
+  "..................",
+  "..................",
+];
+const P_DNI = { k: "#141420", b: "#bfe0f0", p: "#e8b896", w: "#ffffff", m: "#5a6a8a" };
+
+const LUNITA = [    // la lunita de Ío: cree que el ingreso de primer grado es precio por cantidad (18 × 14)
+  "......kkkkkk......",
+  "....kkyyyyyykk....",
+  "...kyyoyyyyyyyk...",
+  "..kyyyyyyyoyyyyk..",
+  "..kyywkyyyywkyyk..",
+  ".kyyyyyyyyyyyyyyk.",
+  ".kyoyyyyyyyyyoyyk.",
+  ".kyyyykkkkkkyyyyk.",
+  "..kyyyyyyyyyyyyk..",
+  "..kyyyyyoyyyyyyk..",
+  "...kyyyyyyyyyyk...",
+  "....kkyyyyyykk....",
+  "......kkkkkk......",
+  "..................",
+];
+const P_LUNITA = { k: "#2a1a08", y: "#f2d24a", o: "#e8763a", w: "#ffffff" };
+
+const JUPITERINO = [    // jefe: el señor de Júpiter, que le cobra distinto a cada luna (18 × 17)
+  "....r..r..r..r....",
+  "....rrrrrrrrrr....",
+  "....ryrrrrrryr....",
+  "....kkkkkkkkkk....",
+  "...koooooooooook..",
+  "...kccccccccccck..",
+  "...kowkoooooowkk..",
+  "...koooooooooook..",
+  "...kccckkkkcccck..",
+  "....koooooooook...",
+  "...kkrrrrrrrrrkk..",
+  "..krrrrryyrrrrrk..",
+  ".krrrrryyyyrrrrrk.",
+  ".kcrrrrryyrrrrrck.",
+  ".kckrrrrrrrrrrkck.",
+  "..kkrrrrrrrrrrkk..",
+  "...krrrrkkrrrrk...",
+];
+const P_JUPITERINO = { k: "#1a1010", r: "#c0502a", y: "#f2d24a", o: "#e8c08a", c: "#c08a5a", w: "#ffffff" };
+
 
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
@@ -4623,6 +4752,13 @@ const DEFINICIONES = {
   gusano:       [GUSANO, P_GUSANO],
   medusa:       [MEDUSA, P_MEDUSA],
   reysaturno:   [REYSATURNO, P_REYSATURNO],
+  lentes:       [LENTES, P_LENTES],
+  boleto:       [BOLETO, P_BOLETO],
+  cajota:       [CAJOTA, P_CAJOTA],
+  escalera:     [ESCALERA, P_ESCALERA],
+  dni:          [DNI, P_DNI],
+  lunita:       [LUNITA, P_LUNITA],
+  jupiterino:   [JUPITERINO, P_JUPITERINO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

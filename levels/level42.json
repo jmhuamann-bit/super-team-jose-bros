@@ -1,0 +1,41 @@
+{
+  "id": "level42",
+  "distrito": "Júpiter",
+  "clase": "Clase 03 · Final",
+  "titulo": "El planeta de las mil lunas, donde cada una paga distinto",
+  "tema": "jupiter",
+  "musica": "jupiter",
+  "vehiculo": "nave",
+  "intro": "Tercera parada del modo galaxia: Europa, la luna helada de Júpiter. Júpiter tiene decenas de lunas, y el único vendedor de la zona descubrió que no todas están dispuestas a pagar lo mismo. Es la DISCRIMINACIÓN DE PRECIOS: la herramienta del monopolio para ganar todavía más. Hay tres grados. En el PRIMERO le cobras a cada uno exactamente lo máximo que pagaría. En el SEGUNDO das descuento por comprar al por mayor. En el TERCERO separas a los clientes en grupos y le cobras más al grupo más inelástico.",
+  "repaso": [
+    "EL OBJETIVO: ganar más de lo que ya se ganaba como monopolio sin discriminar.",
+    "LAS TRES CONDICIONES: 1) la empresa tiene poder de mercado; 2) costos iguales para todos los productos (CMg constante); 3) se evita la reventa o arbitraje: los mercados están separados.",
+    "PRIMER GRADO (discriminación perfecta): se identifica la máxima disposición a pagar de cada consumidor, como con unos lentes inteligentes, y se le cobra exactamente eso.",
+    "EN EL PRIMER GRADO el IMg es igual a la demanda (P = IMe = IMg). Se produce donde la demanda corta al CMg, como en competencia perfecta.",
+    "LO QUE PASA CON LOS EXCEDENTES: no hay PES, porque se vende todo lo eficiente. No hay excedente del consumidor: todo se vuelve excedente del productor.",
+    "EL INGRESO EN EL PRIMER GRADO no es P × q: es toda el área debajo de la demanda, hasta la cantidad vendida. El precio que se calcula es el de la ÚLTIMA unidad.",
+    "EJEMPLO: con P = 10 − 2q y CT = 4 + 2q, sin discriminar se venden 2 a 6 (ingreso 12). Con primer grado se venden 4, y el ingreso es el área (10 + 2)/2 × 4 = 24.",
+    "SEGUNDO GRADO: descuentos por comprar grandes cantidades, comprar al por mayor. El IMg queda como una escalera.",
+    "TERCER GRADO: se separa a los clientes en grupos (por ejemplo, por DNI o por zona) y a cada grupo se le hace su propio monopolio: IMg = CMg en cada uno.",
+    "QUIÉN PAGA MÁS: el grupo más INELÁSTICO. Inelástico es elasticidad entre 0 y 1 en valor absoluto; elástico, mayor que 1. Si A paga 2000 y B 300, A es el más inelástico.",
+    "SI LOS DOS GRUPOS TIENEN LA MISMA ELASTICIDAD a los dos se les cobraría lo mismo: no se puede discriminar.",
+    "EJEMPLO DE TERCER GRADO: Norte p = 100 − q y Sur p = 200 − 2q, con CMg = 40. Norte compra 30 a 70; Sur, 40 a 120. El Sur es más inelástico y paga más. Discriminando gana 3900; con un solo precio ganaría 3000."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                    V                                                                 G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      ooLoo          oooo               oo                                      ooooooooooo               oo              ooooo                     1   L    oooooooo               ",
+    "                    ======              ======                                                 ooooo      ======                     oooooo                 ==========              ",
+    "                              ooooo                            =====                                                                                                                ",
+    "  P           C             E                       E     C T               E     X   E X    C                      E       X                C   E                      B       M   ",
+    "###############################   ##############################################################   ###################################    ##########################################",
+    "###############################   ##############################################################   ###################################    ##########################################",
+    "###############################   ##############################################################   ###################################    ##########################################"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "nivel": "level42",
+  "clase": "Clase 03 · Final — Discriminación de precios",
+  "fuente": "Apuntes de la 3ra clase del final — Discriminación de precios (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e42-q1",
+      "nivel": "comprension",
+      "enunciado": "Con unos lentes inteligentes, el monopolio ve exactamente cuánto pagaría cada cliente y le cobra eso.\n\n¿Qué pasa con el excedente del consumidor?",
+      "opciones": [
+        "Crece, porque cada uno paga lo justo",
+        "Desaparece: todo se vuelve excedente del productor",
+        "Se mantiene igual que en el monopolio sin discriminar",
+        "Se convierte en pérdida de eficiencia social"
+      ],
+      "correcta": 1,
+      "explicacion": "En el primer grado a cada consumidor se le cobra su máxima disposición a pagar: no le queda ninguna ganancia. Todo el excedente pasa al productor."
+    },
+    {
+      "id": "e42-q2",
+      "nivel": "comprension",
+      "enunciado": "¿Hay pérdida de eficiencia social (PES) en un monopolio que discrimina precios de PRIMER grado?",
+      "opciones": [
+        "Sí, más que en el monopolio normal",
+        "Sí, la misma que en el monopolio normal",
+        "No: vende hasta donde la demanda corta al CMg, como en competencia perfecta",
+        "Depende de si tiene costo fijo"
+      ],
+      "correcta": 2,
+      "explicacion": "En el primer grado el IMg es la demanda, así que la empresa sigue vendiendo hasta donde P = CMg. Se venden todas las unidades que valían la pena: no hay PES, igual que en competencia perfecta."
+    },
+    {
+      "id": "e42-q3",
+      "nivel": "reconocimiento",
+      "enunciado": "Una tienda vende un chocolate a 3 soles, pero si llevas una caja de 20 te sale a 2 cada uno.\n\n¿Qué tipo de discriminación es?",
+      "opciones": [
+        "De segundo grado: descuento por comprar al por mayor",
+        "De primer grado, porque a cada uno le cobra distinto",
+        "De tercer grado, porque separa por grupos",
+        "No es discriminación, es una oferta"
+      ],
+      "correcta": 0,
+      "explicacion": "Cobrar menos por comprar grandes cantidades es discriminación de segundo grado. No depende de quién eres, sino de cuánto compras."
+    },
+    {
+      "id": "e42-q4",
+      "nivel": "comprension",
+      "enunciado": "Un monopolio separa a sus clientes en dos grupos. El grupo A paga 2000 y el grupo B paga 300.\n\n¿Quién es más inelástico?",
+      "opciones": [
+        "B, porque paga menos",
+        "Los dos son iguales, porque los atiende la misma empresa",
+        "No se puede saber sin la fórmula",
+        "A: en el tercer grado paga más el grupo más inelástico"
+      ],
+      "correcta": 3,
+      "explicacion": "En el tercer grado se le cobra más al grupo al que le cuesta dejar de comprar, el más inelástico (elasticidad entre 0 y 1). Si A paga 2000, A es el más inelástico; B, más elástico, paga menos."
+    },
+    {
+      "id": "e42-q5",
+      "nivel": "comprension",
+      "enunciado": "Los dos grupos de clientes de un monopolio tienen exactamente la misma elasticidad precio.\n\n¿Se puede discriminar?",
+      "opciones": [
+        "Sí, siempre que estén separados",
+        "No: a los dos se les cobraría el mismo precio",
+        "Sí, cobrándole más al grupo más grande",
+        "Sí, pero solo de primer grado"
+      ],
+      "correcta": 1,
+      "explicacion": "El tercer grado funciona porque los grupos reaccionan distinto al precio. Si tienen la misma elasticidad, el precio óptimo sale igual para los dos: no hay nada que discriminar."
+    },
+    {
+      "id": "e42-q6",
+      "nivel": "comprension",
+      "enunciado": "¿Cuál NO es una condición para poder discriminar precios?",
+      "opciones": [
+        "Que la empresa tenga poder de mercado",
+        "Que se pueda evitar la reventa entre los grupos",
+        "Que haya muchas empresas compitiendo en el mercado",
+        "Que los costos sean iguales para todos los productos"
+      ],
+      "correcta": 2,
+      "explicacion": "Las tres condiciones son poder de mercado, costos iguales (CMg constante) y evitar la reventa o arbitraje. Si hubiera mucha competencia, nadie podría cobrar más que el precio del mercado."
+    },
+    {
+      "id": "e42-q7",
+      "nivel": "aplicacion",
+      "enunciado": "Primera pregunta del señor de las lunas. Un monopolio con P = 10 − 2q y CT = 4 + 2q gana sin discriminar un ingreso de 12. Si discrimina de PRIMER grado vende 4 unidades.\n\n¿Cuál es su nuevo ingreso?",
+      "opciones": [
+        "8, multiplicando el precio de la última unidad (2) por 4",
+        "12, porque el ingreso no cambia",
+        "40, multiplicando el precio máximo (10) por 4",
+        "24: el área debajo de la demanda hasta 4, (10 + 2)/2 × 4"
+      ],
+      "correcta": 3,
+      "explicacion": "En el primer grado cada unidad se cobra a su propio precio, así que el ingreso es toda el área debajo de la demanda: un trapecio que va de 10 a 2, con base 4. (10 + 2)/2 × 4 = 24. El doble de lo que ganaba sin discriminar."
+    },
+    {
+      "id": "e42-q8",
+      "nivel": "comprension",
+      "enunciado": "Segunda pregunta. Una gasolinera tiene dos tipos de clientes: los de AUTO, que recorren distancias largas y no pueden dejar el auto, y los de MOTO, que podrían ir en bici o a pie.\n\n¿Cuál es la mejor estrategia?",
+      "opciones": [
+        "Cobrarle más a los de moto, porque son más",
+        "Cobrarles lo mismo, porque es la misma gasolina",
+        "Cobrarle más a los de auto: son más inelásticos, les cuesta dejar de comprar",
+        "Cobrarle más a quien compre más litros"
+      ],
+      "correcta": 2,
+      "explicacion": "Discriminación de tercer grado: se separa a los clientes y paga más el más inelástico. Los de auto no tienen alternativa, su demanda es inelástica. Los de moto tienen sustitutos (bici, caminar): son más elásticos y pagan menos."
+    },
+    {
+      "id": "e42-q9",
+      "nivel": "aplicacion",
+      "enunciado": "Tercera pregunta. Un monopolio discrimina entre Norte (p = 100 − q) y Sur (p = 200 − 2q), con CMg = 40. Cobra 70 en el Norte y 120 en el Sur, y gana 3900. Con un solo precio para toda la ciudad ganaría 3000.\n\n¿Qué se concluye?",
+      "opciones": [
+        "Le conviene discriminar: gana 900 más, y el Sur paga más por ser más inelástico",
+        "Le conviene un solo precio, porque es más justo",
+        "Da lo mismo, porque vende la misma cantidad",
+        "Le conviene discriminar, pero cobrándole más al Norte"
+      ],
+      "correcta": 0,
+      "explicacion": "Discriminando gana 3900, contra 3000 con un solo precio. Y es razonable que el Sur pague más: su elasticidad es 1,5 en valor absoluto, contra 2,33 del Norte. El Sur es el más inelástico."
+    }
+  ]
+}

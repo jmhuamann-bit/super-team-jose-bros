@@ -583,6 +583,20 @@
       "abierto": true,
       "mapa": "levels/level41.json",
       "preguntas": "questions/level41_questions.json"
+    },
+    {
+      "id": "level42",
+      "clase": "Clase 03",
+      "distrito": "Júpiter",
+      "titulo": "El planeta de las mil lunas, donde cada una paga distinto",
+      "icono": "🌕",
+      "seccion": "Final",
+      "seccionNota": "Monopolio y lo que viene — modo galaxia, ahora visitando otros mundos",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level42.json",
+      "preguntas": "questions/level42_questions.json"
     }
   ]
 }

@@ -5639,6 +5639,132 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     JÚPITER — tercera parada del modo galaxia. Se camina sobre Europa,
+     la luna helada, con Júpiter y su gran mancha roja en el cielo, Ío
+     echando volcanes a lo lejos y el hielo rajado bajo los pies. Cada
+     luna es un mercado distinto: el terreno de la discriminación.
+     ========================================================= */
+  jupiter: {
+    nombre: "Júpiter",
+    cielo: [[0, "#04060e"], [0.45, "#141a30"], [0.7, "#2a3a5a"], [0.8, "#3a4a5a"], [1, "#141c24"]],
+    suelo: { cara: "#c8d8e0", borde: "#eef6fa", tierra: "#6a7a88", plataforma: "#8a5a3a", plataformaBorde: "#f2c84a" },
+    acento: "#e8763a",
+
+    bichos: ["lentes", "boleto", "cajota", "escalera", "dni", "lunita"],
+    nombresBichos: [
+      "Los Lentes que Buscan un Excedente que No Queda",
+      "El Boleto que Ve Pérdida donde No Hay",
+      "La Cajota que No Reconoce el Descuento",
+      "La Escalera que Discrimina sin Diferencias",
+      "El DNI que No Sabe Quién Paga Más",
+      "La Lunita que Multiplica en vez de Sumar",
+    ],
+    andares: ["guardia", "veloz", "patrulla", "salta", "guardia", "vuela"],
+    jefe: "jupiterino",
+    nombreJefe: "El Señor de las Lunas",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // las estrellas
+      for (let i = 0; i < 80; i++) {
+        const x = ((i * 101 - cam * 0.02) % 860 + 860) % 860 - 30;
+        const y = (i * 47) % 210;
+        const brillo = 0.3 + 0.35 * Math.abs(Math.sin(t / 45 + i * 0.9));
+        ctx.fillStyle = `rgba(230,240,255,${brillo.toFixed(2)})`;
+        ctx.fillRect(x, y, 1, 1);
+      }
+
+      // JÚPITER, gigante, con sus franjas y la gran mancha roja girando
+      const jx = 250 - (cam * 0.012) % 160, jy = 150, jr = 120;
+      ctx.save();
+      ctx.beginPath(); ctx.arc(jx, jy, jr, 0, Math.PI * 2); ctx.clip();
+      for (let k = 0; k < 14; k++) {
+        ctx.fillStyle = elige(["#d8b490", "#c08a5a", "#ead2b0", "#a86a44", "#e0c4a0"], k);
+        ctx.fillRect(jx - jr, jy - jr + k * 18, 2 * jr, 18);
+      }
+      const mx = jx + ((t * 0.15) % 260) - 130;                 // la mancha roja se va moviendo
+      ctx.fillStyle = "#b8442a";
+      ctx.beginPath(); ctx.ellipse(mx, jy + 34, 26, 13, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(240,200,170,.5)";
+      ctx.beginPath(); ctx.ellipse(mx, jy + 34, 14, 6, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(10,10,30,.35)";                     // el lado de la noche
+      ctx.beginPath(); ctx.arc(jx + 60, jy + 10, jr, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+
+      // ÍO a lo lejos, amarillo, con un volcán que escupe azufre
+      const ix = 640 - (cam * 0.03) % 300, iy = 70;
+      ctx.fillStyle = "#e8c84a";
+      ctx.beginPath(); ctx.arc(ix, iy, 16, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#c86a2a";
+      ctx.fillRect(ix - 6, iy - 4, 4, 4); ctx.fillRect(ix + 4, iy + 5, 5, 3);
+      const sube = (t % 60) / 60;
+      ctx.fillStyle = `rgba(150,180,255,${(0.6 - sube * 0.6).toFixed(2)})`;
+      ctx.beginPath(); ctx.arc(ix + 2, iy - 16 - sube * 18, 3 + sube * 6, 0, Math.PI * 2); ctx.fill();
+
+      // las crestas de hielo lejanas
+      repetir(ctx, cam, 260, 0.12, (x, i) => {
+        const alto = 30 + ((i * 19) % 30);
+        ctx.fillStyle = elige(["#8aa0b4", "#7a90a6", "#9ab0c4"], i);
+        ctx.beginPath();
+        ctx.moveTo(x, 306); ctx.lineTo(x + 50, 306 - alto); ctx.lineTo(x + 70, 306 - alto + 8);
+        ctx.lineTo(x + 140, 306); ctx.closePath(); ctx.fill();
+      });
+
+      // LA LLANURA DE HIELO de Europa, con las grietas rojizas
+      ctx.fillStyle = "#b0c4d2";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 76);
+      ctx.fillStyle = "#d4e4ee";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 4);
+      repetir(ctx, cam, 140, 0.35, (x, i) => {
+        ctx.strokeStyle = "rgba(160,80,50,.55)";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(x, 318 + (i % 3) * 10);
+        ctx.lineTo(x + 40, 326 + ((i * 7) % 12));
+        ctx.lineTo(x + 90, 316 + ((i * 11) % 18));
+        ctx.lineTo(x + 140, 330);
+        ctx.stroke();
+        ctx.lineWidth = 1;
+      });
+
+      // los géiseres de agua que salen por las grietas
+      repetir(ctx, cam, 330, 0.45, (x, i) => {
+        const bx = x + 80, fase = ((t + i * 37) % 90) / 90;
+        ctx.fillStyle = "#e8f4fa";
+        ctx.fillRect(bx - 6, 356, 12, 4);
+        if (fase < 0.6) {
+          const h = 20 + fase * 70;
+          ctx.fillStyle = `rgba(220,240,255,${(0.7 - fase).toFixed(2)})`;
+          ctx.fillRect(bx - 2, 356 - h, 4, h);
+          ctx.beginPath(); ctx.arc(bx, 356 - h, 6 + fase * 6, 0, Math.PI * 2); ctx.fill();
+        }
+      });
+
+      // los bloques de hielo del frente
+      repetir(ctx, cam, 120, 0.6, (x, i) => {
+        ctx.fillStyle = elige(["#d8eaf4", "#c0d6e4", "#e8f4fa"], i);
+        ctx.fillRect(x + 20, 368, 16 + (i % 3) * 6, 12);
+        ctx.fillStyle = "rgba(255,255,255,.7)";
+        ctx.fillRect(x + 22, 370, 4, 4);
+      });
+      ctx.fillStyle = "#8aa0b4";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // escarcha que brilla y flota
+      for (let i = 0; i < 35; i++) {
+        const x = (i * 97 + t * 0.5) % 860 - 30;
+        const y = 120 + ((i * 53) % 260) + Math.sin(t / 25 + i) * 5;
+        const b = 0.3 + 0.4 * Math.abs(Math.sin(t / 15 + i));
+        ctx.fillStyle = `rgba(230,245,255,${b.toFixed(2)})`;
+        ctx.fillRect(x, y, 2, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

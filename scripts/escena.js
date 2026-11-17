@@ -353,6 +353,13 @@ const FICHAS = [
   { sprite: "gusano", nombre: "El Gusano que Se Asusta con el Costo Fijo", texto: "El costo fijo no mueve el CMg: la cantidad y el precio del monopolio no cambian, solo el beneficio." },
   { sprite: "medusa", nombre: "La Medusa que No Arma su Canasta", texto: "El plan de producción es la canasta óptima: con complementarios, la triple igualdad dice cuántos K y L usar." },
   { sprite: "reysaturno", nombre: "El Rey del Oxígeno de Titán", texto: "Jefe de Saturno: pide leer el gráfico del monopolio, sus áreas y por qué su beneficio dura en el largo plazo." },
+  { sprite: "lentes", nombre: "Los Lentes que Buscan un Excedente que No Queda", texto: "Júpiter: con los lentes inteligentes el monopolio ve cuánto pagaría cada uno y le cobra justo eso. No queda excedente del consumidor: todo es del productor." },
+  { sprite: "boleto", nombre: "El Boleto que Ve Pérdida donde No Hay", texto: "En el primer grado se vende hasta donde P = CMg, como en competencia perfecta. No hay pérdida de eficiencia social." },
+  { sprite: "cajota", nombre: "La Cajota que No Reconoce el Descuento", texto: "Cobrar menos por comprar al por mayor es discriminación de segundo grado. El IMg queda como una escalera." },
+  { sprite: "escalera", nombre: "La Escalera que Discrimina sin Diferencias", texto: "Si los dos grupos tienen la misma elasticidad, a los dos se les cobraría lo mismo: no se puede discriminar." },
+  { sprite: "dni", nombre: "El DNI que No Sabe Quién Paga Más", texto: "En el tercer grado se separa a los clientes por grupos, y paga más el grupo más INELÁSTICO." },
+  { sprite: "lunita", nombre: "La Lunita que Multiplica en vez de Sumar", texto: "En el primer grado el ingreso no es P × q: es toda el área debajo de la demanda hasta la cantidad vendida." },
+  { sprite: "jupiterino", nombre: "El Señor de las Lunas", texto: "Jefe de Júpiter: le cobra distinto a cada luna. Pide las condiciones para discriminar, comparar ingresos y elegir la mejor estrategia." },
 ];
 
 export function galeriaPersonajes(contenedor) {
