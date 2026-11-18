@@ -5765,6 +5765,136 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     NEPTUNO — cuarta parada del modo galaxia. Un mercado flotante en
+     órbita: cientos de tiendas con letreros de neón que venden casi lo
+     mismo, cada una con su sabor. Neptuno azul y sus vientos al fondo.
+     ========================================================= */
+  neptuno: {
+    nombre: "Neptuno",
+    cielo: [[0, "#02030a"], [0.45, "#0a1430"], [0.72, "#14285a"], [0.8, "#1a2440"], [1, "#0a1020"]],
+    suelo: { cara: "#5a6478", borde: "#8a94a8", tierra: "#2a3040", plataforma: "#3a2a5a", plataformaBorde: "#e85ac8" },
+    acento: "#5ae0f0",
+
+    bichos: ["botella", "letrero", "cajero", "burbuja", "calamar", "tritoncito"],
+    nombresBichos: [
+      "La Botella que Se Cree Idéntica",
+      "El Letrero que No Pone su Precio",
+      "El Cajero que Espera Ganar Siempre",
+      "La Burbuja que No Ve la Pérdida Social",
+      "El Calamar que Busca la Escala Mínima",
+      "El Tritoncito que Iguala Precio y Costo Marginal",
+    ],
+    andares: ["salta", "guardia", "patrulla", "vuela", "veloz", "salta"],
+    jefe: "neptunio",
+    nombreJefe: "El Administrador de la Estación",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // las estrellas
+      for (let i = 0; i < 80; i++) {
+        const x = ((i * 93 - cam * 0.02) % 860 + 860) % 860 - 30;
+        const y = (i * 43) % 220;
+        const brillo = 0.3 + 0.35 * Math.abs(Math.sin(t / 40 + i * 1.1));
+        ctx.fillStyle = `rgba(220,235,255,${brillo.toFixed(2)})`;
+        ctx.fillRect(x, y, 1, 1);
+      }
+
+      // NEPTUNO, azul profundo, con sus vientos blancos que corren
+      const nx = 600 - (cam * 0.012) % 140, ny = 130, nr = 100;
+      ctx.save();
+      ctx.beginPath(); ctx.arc(nx, ny, nr, 0, Math.PI * 2); ctx.clip();
+      ctx.fillStyle = "#2a5ac0"; ctx.fillRect(nx - nr, ny - nr, 2 * nr, 2 * nr);
+      for (let k = 0; k < 7; k++) {
+        ctx.fillStyle = elige(["rgba(60,120,220,.7)", "rgba(30,70,170,.6)", "rgba(80,150,240,.5)"], k);
+        ctx.fillRect(nx - nr, ny - nr + k * 30, 2 * nr, 14);
+      }
+      const v = (t * 0.6) % 260;                                // las nubes blancas que viajan
+      ctx.fillStyle = "rgba(240,250,255,.7)";
+      ctx.fillRect(nx - nr + v - 60, ny - 30, 40, 4);
+      ctx.fillRect(nx - nr + ((v + 120) % 260) - 60, ny + 22, 30, 3);
+      ctx.fillStyle = "#14286a";                                // la gran mancha oscura
+      ctx.beginPath(); ctx.ellipse(nx - 20, ny + 4, 18, 10, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(5,10,30,.4)";
+      ctx.beginPath(); ctx.arc(nx + 50, ny + 20, nr, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+
+      // LAS NAVES de los clientes que llegan y se van (libre entrada y salida)
+      for (let i = 0; i < 4; i++) {
+        const x = ((i * 240 + t * (1 + i * 0.3)) % 1000) - 100;
+        const y = 70 + i * 34;
+        ctx.fillStyle = "rgba(200,210,230,.85)";
+        ctx.fillRect(x, y, 14, 4);
+        ctx.fillStyle = "rgba(255,180,80,.8)";
+        ctx.fillRect(x - 4, y + 1, 4, 2);
+      }
+
+      // LAS TORRES de la estación, al fondo
+      repetir(ctx, cam, 240, 0.12, (x, i) => {
+        const alto = 90 + ((i * 37) % 60), base = 310;
+        ctx.fillStyle = elige(["#1a2238", "#202a44", "#161c30"], i);
+        ctx.fillRect(x + 40, base - alto, 34, alto);
+        ctx.fillRect(x + 34, base - alto - 8, 46, 8);
+        for (let py = base - alto + 10; py < base - 8; py += 14) {
+          ctx.fillStyle = (py + i * 7 + Math.floor(t / 30)) % 3 === 0 ? "#f2d24a" : "rgba(90,224,240,.5)";
+          ctx.fillRect(x + 46, py, 6, 5); ctx.fillRect(x + 60, py, 6, 5);
+        }
+      });
+
+      // EL PISO de la plataforma, metálico
+      ctx.fillStyle = "#3a4256";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 76);
+      ctx.fillStyle = "#5a6478";
+      ctx.fillRect(0, 306, CFG.ANCHO_VISTA, 4);
+      for (let i = 0; i < 30; i++) {
+        const x = (i * 40 - cam * 0.5) % 1200 - 40;
+        ctx.fillStyle = "rgba(10,14,24,.4)";
+        ctx.fillRect(x, 310, 2, 70);
+      }
+
+      // LAS TIENDAS con letreros de neón: todas venden casi lo mismo
+      repetir(ctx, cam, 180, 0.35, (x, i) => {
+        const bx = x + 20, base = 362;
+        const neon = elige(["#e85ac8", "#5ae0f0", "#f2d24a", "#7ae08a", "#ff7a4a"], i);
+        ctx.fillStyle = "#242c40";
+        ctx.fillRect(bx, base - 44, 70, 44);
+        ctx.fillStyle = "#141a2a";
+        ctx.fillRect(bx + 8, base - 30, 54, 30);
+        ctx.fillStyle = neon;                                   // el letrero prende y apaga
+        ctx.globalAlpha = (t / 20 + i) % 6 < 5 ? 0.95 : 0.35;
+        ctx.fillRect(bx + 6, base - 54, 58, 10);
+        ctx.globalAlpha = 1;
+        ctx.fillStyle = "#141a2a";
+        for (let k = 0; k < 4; k++) ctx.fillRect(bx + 12 + k * 13, base - 52, 7, 6);
+        ctx.fillStyle = neon;                                   // la botella de la vitrina, de otro color
+        ctx.fillRect(bx + 30, base - 24, 8, 16);
+        ctx.fillRect(bx + 32, base - 28, 4, 4);
+      });
+
+      // las cajas y barandas del frente
+      repetir(ctx, cam, 130, 0.6, (x, i) => {
+        ctx.fillStyle = elige(["#4a5266", "#3a4256"], i);
+        ctx.fillRect(x + 20, 368, 18, 12);
+        ctx.fillStyle = "rgba(90,224,240,.6)";
+        ctx.fillRect(x + 20, 368, 18, 2);
+      });
+      ctx.fillStyle = "#2a3040";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // chispas de neón que flotan en el aire de la estación
+      for (let i = 0; i < 30; i++) {
+        const x = (i * 89 + t * 0.7) % 860 - 30;
+        const y = 150 + ((i * 51) % 220) + Math.sin(t / 20 + i) * 6;
+        const c = ["232,90,200", "90,224,240", "242,210,74"][i % 3];
+        ctx.fillStyle = `rgba(${c},${(0.3 + 0.4 * Math.abs(Math.sin(t / 12 + i))).toFixed(2)})`;
+        ctx.fillRect(x, y, 2, 2);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

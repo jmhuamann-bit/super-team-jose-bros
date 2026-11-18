@@ -360,6 +360,13 @@ const FICHAS = [
   { sprite: "dni", nombre: "El DNI que No Sabe Quién Paga Más", texto: "En el tercer grado se separa a los clientes por grupos, y paga más el grupo más INELÁSTICO." },
   { sprite: "lunita", nombre: "La Lunita que Multiplica en vez de Sumar", texto: "En el primer grado el ingreso no es P × q: es toda el área debajo de la demanda hasta la cantidad vendida." },
   { sprite: "jupiterino", nombre: "El Señor de las Lunas", texto: "Jefe de Júpiter: le cobra distinto a cada luna. Pide las condiciones para discriminar, comparar ingresos y elegir la mejor estrategia." },
+  { sprite: "botella", nombre: "La Botella que Se Cree Idéntica", texto: "Neptuno: en competencia monopolística los productos son DIFERENCIADOS: parecidos, pero no idénticos. Cada bebida cambia su sabor, color o etiqueta." },
+  { sprite: "letrero", nombre: "El Letrero que No Pone su Precio", texto: "Aunque haya muchas tiendas, cada una tiene un pequeño poder por su producto diferenciado: es precio decisora, como un monopolio." },
+  { sprite: "cajero", nombre: "El Cajero que Espera Ganar Siempre", texto: "En el corto plazo puede haber beneficio positivo, pero como hay libre entrada, llegan nuevas tiendas y en el largo plazo el beneficio es cero." },
+  { sprite: "burbuja", nombre: "La Burbuja que No Ve la Pérdida Social", texto: "Hay PES en el corto y en el largo plazo, porque el precio queda por encima del CMg." },
+  { sprite: "calamar", nombre: "El Calamar que Busca la Escala Mínima", texto: "La empresa no produce en su escala mínima eficiente (el mínimo del CMe): produce donde IMg = CMg, antes de llegar a ese punto." },
+  { sprite: "tritoncito", nombre: "El Tritoncito que Iguala Precio y Costo Marginal", texto: "En el largo plazo, P = CMe > CMg. Solo en competencia perfecta P = CMe = CMg." },
+  { sprite: "neptunio", nombre: "El Administrador de la Estación", texto: "Jefe de Neptuno: pide diferenciar las tres estructuras de mercado y leer el equilibrio de largo plazo." },
 ];
 
 export function galeriaPersonajes(contenedor) {

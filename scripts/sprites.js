@@ -4504,6 +4504,135 @@ const JUPITERINO = [    // jefe: el señor de Júpiter, que le cobra distinto a 
 ];
 const P_JUPITERINO = { k: "#1a1010", r: "#c0502a", y: "#f2d24a", o: "#e8c08a", c: "#c08a5a", w: "#ffffff" };
 
+const BOTELLA = [    // la botella: cree que todas las bebidas de la estación son idénticas (18 × 14)
+  "........kk........",
+  ".......kwwk.......",
+  ".......kkkk.......",
+  "......kbbbbk......",
+  ".....kbbbbbbk.....",
+  ".....kbwbbbbk.....",
+  ".....krrrrrrk.....",
+  ".....kryykyrk.....",
+  ".....krrrrrrk.....",
+  ".....kbbbbbbk.....",
+  ".....kbkbbkbk.....",
+  ".....kbbbbbbk.....",
+  "......kkkkkk......",
+  "..................",
+];
+const P_BOTELLA = { k: "#101828", w: "#ffffff", b: "#5ac8e8", r: "#e8503a", y: "#f2d24a" };
+
+const LETRERO = [    // el letrero de neón: cree que con tantas tiendas nadie puede poner su precio (18 × 14)
+  "kkkkkkkkkkkkkkkkkk",
+  "kppppppppppppppppk",
+  "kpwppwppwppwppwppk",
+  "kppppppppppppppppk",
+  "kpkkpkkpkkpkkpkkpk",
+  "kppppppppppppppppk",
+  "kkkkkkkkkkkkkkkkkk",
+  "......kk..kk......",
+  "......kk..kk......",
+  "......kk..kk......",
+  "......kk..kk......",
+  "....kkkkkkkkkk....",
+  "..................",
+  "..................",
+];
+const P_LETRERO = { k: "#140a20", p: "#e85ac8", w: "#ffffff" };
+
+const CAJERO = [    // el robocajero: cree que el beneficio positivo dura para siempre (18 × 14)
+  "......kkkkkk......",
+  ".....kmmmmmmk.....",
+  ".....kmcckcck.....",
+  ".....kmmmmmmk.....",
+  ".....kmkkkkmk.....",
+  "......kkkkkk......",
+  "..kkkkkkkkkkkkkk..",
+  "..kggggggggggggk..",
+  "..kgyykgggykyygk..",
+  "..kggggggggggggk..",
+  "..kgkkkkkkkkkkgk..",
+  "..kggggggggggggk..",
+  "..kkkkkkkkkkkkkk..",
+  "..................",
+];
+const P_CAJERO = { k: "#101420", m: "#a8b2c2", c: "#5ae0f0", g: "#4a8a6a", y: "#f2d24a" };
+
+const BURBUJA = [    // la burbuja: cree que en competencia monopolística no hay pérdida social (18 × 14)
+  "......kkkkkk......",
+  "....kkcccccckk....",
+  "...kcwwcccccccck..",
+  "..kcwwccccccccck..",
+  "..kcwccckcckcccck.",
+  ".kcccccccccccccck.",
+  ".kcccccccccccccck.",
+  ".kcccckcccccccck..",
+  "..kccccckkkcccck..",
+  "..kcccccccccccck..",
+  "...kccccccccccck..",
+  "....kkcccccckk....",
+  "......kkkkkk......",
+  "..................",
+];
+const P_BURBUJA = { k: "#102030", c: "#9ad8f0", w: "#ffffff" };
+
+const CALAMAR = [    // el calamar: cree que la empresa produce en su escala mínima eficiente (18 × 14)
+  "......kkkkkk......",
+  ".....kppppppk.....",
+  "....kppppppppk....",
+  "....kpwkppwkpk....",
+  "....kppppppppk....",
+  "....kppppppppk....",
+  ".....kkkkkkkk.....",
+  "....kp.kp.kp.k....",
+  "...kp.kp..kp.kp...",
+  "...kp..kp.kp..kp..",
+  "..kp...kp..kp..kp.",
+  "..k....k....k...k.",
+  "..................",
+  "..................",
+];
+const P_CALAMAR = { k: "#201018", p: "#c05ab0", w: "#ffffff" };
+
+const TRITONCITO = [    // el tritoncito: confunde P = CMe > CMg con P = CMg (18 × 14)
+  "..................",
+  "......kkkkkk......",
+  ".....kppppppk.....",
+  "....kppwkpwkpk....",
+  "....kppppppppk....",
+  ".....kppkkppk.....",
+  "......kppppk......",
+  "....kkkbbbbkkk....",
+  "...kbbbbbbbbbbk...",
+  "...kbkbbbbbbkbk...",
+  "....kbbbbbbbbk....",
+  ".....kbbkkbbk.....",
+  ".....kkk..kkk.....",
+  "..................",
+];
+const P_TRITONCITO = { k: "#10141e", p: "#e8b0c0", w: "#ffffff", b: "#3a6ac0" };
+
+const NEPTUNIO = [    // jefe: el administrador de la estación, que reparte los puestos del mercado (18 × 17)
+  ".....b..b..b......",
+  ".....bbbbbbb......",
+  ".....bcbbbcb......",
+  "....kkkkkkkkk.....",
+  "...kpppppppppk....",
+  "...kpkkpppkkpk....",
+  "...kpwkpppwkpk....",
+  "...kpppppppppk....",
+  "...kppkkkkkppk....",
+  "....kpppppppk.....",
+  "...kkbbbbbbbkk....",
+  "..kbbbbcccbbbbk...",
+  ".kbbbbbcccbbbbbk..",
+  ".kpbbbbbcbbbbbpk..",
+  ".kpkbbbbbbbbbkpk..",
+  "..kkbbbbbbbbbkk...",
+  "...kbbbbkbbbbk....",
+];
+const P_NEPTUNIO = { k: "#0a1020", b: "#2a5ab0", c: "#5ae0f0", p: "#b0c8e0", w: "#ffffff" };
+
 
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
@@ -4759,6 +4888,13 @@ const DEFINICIONES = {
   dni:          [DNI, P_DNI],
   lunita:       [LUNITA, P_LUNITA],
   jupiterino:   [JUPITERINO, P_JUPITERINO],
+  botella:      [BOTELLA, P_BOTELLA],
+  letrero:      [LETRERO, P_LETRERO],
+  cajero:       [CAJERO, P_CAJERO],
+  burbuja:      [BURBUJA, P_BURBUJA],
+  calamar:      [CALAMAR, P_CALAMAR],
+  tritoncito:   [TRITONCITO, P_TRITONCITO],
+  neptunio:     [NEPTUNIO, P_NEPTUNIO],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

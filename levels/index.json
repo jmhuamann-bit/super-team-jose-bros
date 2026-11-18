@@ -597,6 +597,20 @@
       "abierto": true,
       "mapa": "levels/level42.json",
       "preguntas": "questions/level42_questions.json"
+    },
+    {
+      "id": "level43",
+      "clase": "Clase 04",
+      "distrito": "Neptuno",
+      "titulo": "La estación de los mil puestos, donde nadie vende lo mismo",
+      "icono": "🔵",
+      "seccion": "Final",
+      "seccionNota": "Monopolio y lo que viene — modo galaxia, ahora visitando otros mundos",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level43.json",
+      "preguntas": "questions/level43_questions.json"
     }
   ]
 }

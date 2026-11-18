@@ -1,0 +1,41 @@
+{
+  "id": "level43",
+  "distrito": "Neptuno",
+  "clase": "Clase 04 · Final",
+  "titulo": "La estación de los mil puestos, donde nadie vende lo mismo",
+  "tema": "neptuno",
+  "musica": "neptuno",
+  "vehiculo": "nave",
+  "intro": "Cuarta parada del modo galaxia: un mercado flotante en la órbita de Neptuno. Hay cientos de tiendas, cada una con su letrero de neón, y todas venden bebidas parecidas, pero ninguna igual: una cambia el sabor, otra el color, otra la etiqueta. Es la COMPETENCIA MONOPOLÍSTICA, un mix de las dos que ya conoces: de la competencia perfecta tiene muchos vendedores y libre entrada; del monopolio, que cada uno decide su precio. Y la pregunta favorita del examen: ¿qué pasa en el largo plazo?",
+  "repaso": [
+    "LAS CARACTERÍSTICAS: muchos vendedores y compradores, libre entrada y salida de empresas, y productos DIFERENCIADOS (similares, pero no idénticos).",
+    "PRECIO DECISORA: por tener un producto diferenciado, cada empresa tiene un pequeño poder de mercado. Decide su precio llevando su q óptima a su demanda, como el monopolio sin discriminar.",
+    "DÓNDE PRODUCE: donde IMg = CMg, como el monopolio.",
+    "EL BENEFICIO: en el CORTO plazo puede ser mayor a cero. En el LARGO plazo es CERO, porque al haber libre entrada llegan nuevas empresas y le quitan clientes.",
+    "LA PES: hay pérdida de eficiencia social tanto en el corto como en el largo plazo, porque P > CMg.",
+    "LA ESCALA MÍNIMA EFICIENTE es el punto mínimo del CMe. La empresa NO produce ahí: produce antes, donde IMg = CMg. Su cantidad es MENOR que la del mínimo del CMe.",
+    "LARGO PLAZO, la que siempre preguntan: P = CMe > CMg. En competencia perfecta, en cambio, P = CMe = CMg.",
+    "CORTO PLAZO, casi nunca preguntan: P ≠ CMe y CMe > CMg.",
+    "LA MEZCLA: de la competencia perfecta se distingue porque los productos son diferenciados y no homogéneos. Del monopolio, porque hay muchos vendedores y no hay barreras de entrada.",
+    "LA REGLA DE LA PES: no hay PES si P = CMg, o sea si la cantidad es la eficiente (competencia perfecta y monopolio de primer grado). Hay PES si P > CMg (monopolio sin discriminar, de segundo y tercer grado, y competencia monopolística).",
+    "BENEFICIO CERO EN EL LARGO PLAZO de todas maneras: competencia perfecta y competencia monopolística. El monopolio no, porque tiene barreras.",
+    "OJO CON EL COMENTE: si hay beneficios positivos en el corto plazo, entrarán nuevas empresas en el largo plazo y la oferta del mercado se desplazará a la derecha. Es VERDADERO."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                    V                                                                 G                                                                      ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      ooVoo          oooo               oo                                      ooooooooooo               oo           ooooo                        1   L    oooooooo               ",
+    "                    ======              ======                                            ooooo           ======             oooooo                         ==========              ",
+    "                                     ooooo                     =====                                                                                                                ",
+    "  P           C             E                       E     C T               E     X   E X       C                   E    X                C   E                         B       M   ",
+    "######################################   ##################################################   ################################    ##################################################",
+    "######################################   ##################################################   ################################    ##################################################",
+    "######################################   ##################################################   ################################    ##################################################"
+  ]
+}

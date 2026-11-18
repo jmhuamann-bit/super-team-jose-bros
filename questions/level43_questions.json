@@ -1,0 +1,125 @@
+{
+  "nivel": "level43",
+  "clase": "Clase 04 · Final — Competencia monopolística",
+  "fuente": "Apuntes de la 4ta clase del final — Competencia monopolística (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e43-q1",
+      "nivel": "reconocimiento",
+      "enunciado": "Con respecto a la competencia monopolística, indique la afirmación verdadera.",
+      "opciones": [
+        "El bien que ofrecen las empresas es idéntico",
+        "Siempre son pocas las empresas que compiten",
+        "Hay libre entrada y salida de empresas",
+        "Las empresas son tomadoras de precio"
+      ],
+      "correcta": 2,
+      "explicacion": "Hay muchos vendedores, libre entrada y salida, y productos DIFERENCIADOS, no idénticos. Por esa diferenciación, cada empresa tiene un pequeño poder: es precio decisora, no tomadora."
+    },
+    {
+      "id": "e43-q2",
+      "nivel": "comprension",
+      "enunciado": "Comente: «Como hay un gran número de empresas, cada una de ellas es precio aceptante».",
+      "opciones": [
+        "Verdadero: con muchas empresas nadie puede mover el precio",
+        "Falso: su producto es diferenciado, así que cada una tiene un pequeño poder y decide su precio",
+        "Verdadero, igual que en competencia perfecta",
+        "Falso: el precio lo fija el gobierno"
+      ],
+      "correcta": 1,
+      "explicacion": "En competencia perfecta los productos son homogéneos y por eso nadie puede subir el precio. Aquí cada bebida es un poco distinta: algunos clientes prefieren la tuya. Eso te da poder para decidir el precio con tu demanda."
+    },
+    {
+      "id": "e43-q3",
+      "nivel": "comprension",
+      "enunciado": "Una tienda de la estación gana mucho este año.\n\n¿Qué pasará en el largo plazo?",
+      "opciones": [
+        "Seguirá ganando, porque tiene clientes fieles",
+        "Ganará todavía más, porque crece la demanda",
+        "Perderá dinero para siempre",
+        "Entrarán nuevas tiendas, la oferta del mercado se moverá a la derecha y su beneficio llegará a cero"
+      ],
+      "correcta": 3,
+      "explicacion": "Hay libre entrada: el beneficio atrae competidores que le quitan clientes. Su demanda se achica hasta que el beneficio es cero. El comente de que la oferta del mercado se desplaza a la derecha es verdadero."
+    },
+    {
+      "id": "e43-q4",
+      "nivel": "comprension",
+      "enunciado": "¿Hay pérdida de eficiencia social (PES) en competencia monopolística?",
+      "opciones": [
+        "Sí, en el corto y en el largo plazo, porque el precio queda por encima del CMg",
+        "Solo en el corto plazo; en el largo desaparece",
+        "No, porque hay muchas empresas",
+        "No, porque el beneficio en el largo plazo es cero"
+      ],
+      "correcta": 0,
+      "explicacion": "Que el beneficio sea cero no elimina la PES. La PES existe cuando P > CMg, y en competencia monopolística eso pasa en los dos plazos, porque cada empresa produce donde IMg = CMg, como un pequeño monopolio."
+    },
+    {
+      "id": "e43-q5",
+      "nivel": "comprension",
+      "enunciado": "En el largo plazo, ¿la empresa produce en su escala mínima eficiente (el mínimo del CMe)?",
+      "opciones": [
+        "Sí, igual que en competencia perfecta",
+        "Sí, porque el beneficio es cero",
+        "No: produce donde IMg = CMg, una cantidad menor que la del mínimo del CMe",
+        "No: produce una cantidad mayor que la del mínimo del CMe"
+      ],
+      "correcta": 2,
+      "explicacion": "En el largo plazo su demanda queda tocando al CMe en la parte que todavía baja, antes del mínimo. Por eso produce menos que la escala mínima eficiente: le queda capacidad sin usar."
+    },
+    {
+      "id": "e43-q6",
+      "nivel": "comprension",
+      "enunciado": "¿En cuál de estas estructuras NO hay pérdida de eficiencia social?",
+      "opciones": [
+        "Monopolio que no discrimina precios",
+        "Competencia perfecta",
+        "Competencia monopolística",
+        "Monopolio que discrimina en tercer grado"
+      ],
+      "correcta": 1,
+      "explicacion": "No hay PES cuando P = CMg, es decir, en competencia perfecta y en el monopolio de primer grado. El monopolio sin discriminar, el de tercer grado y la competencia monopolística cobran P > CMg."
+    },
+    {
+      "id": "e43-q7",
+      "nivel": "comprension",
+      "enunciado": "Primera pregunta del administrador. En el equilibrio de LARGO plazo de la competencia monopolística, ¿qué se cumple en la cantidad óptima?",
+      "opciones": [
+        "P = CMe = CMg, como en competencia perfecta",
+        "P = CMg > CMe",
+        "P > CMe, con beneficio positivo",
+        "P = CMe > CMg"
+      ],
+      "correcta": 3,
+      "explicacion": "Beneficio cero significa P = CMe. Y como produce donde IMg = CMg, con el IMg debajo del precio, el CMg queda por debajo: P = CMe > CMg. En competencia perfecta, en cambio, P = CMe = CMg."
+    },
+    {
+      "id": "e43-q8",
+      "nivel": "comprension",
+      "enunciado": "Segunda pregunta. ¿En qué se diferencia la competencia monopolística del monopolio?",
+      "opciones": [
+        "En que hay muchos vendedores y no hay barreras de entrada",
+        "En que los productos son idénticos",
+        "En que las empresas no deciden su precio",
+        "En nada: es un monopolio con otro nombre"
+      ],
+      "correcta": 0,
+      "explicacion": "Del monopolio toma el poder de decidir el precio, pero con muchos vendedores y libre entrada. Por eso su beneficio cae a cero en el largo plazo, mientras que el monopolio lo mantiene gracias a sus barreras."
+    },
+    {
+      "id": "e43-q9",
+      "nivel": "comprension",
+      "enunciado": "Tercera pregunta. ¿En qué estructuras el beneficio económico será de todas maneras cero en el largo plazo?",
+      "opciones": [
+        "Solo en competencia perfecta",
+        "Solo en el monopolio",
+        "En competencia perfecta y en competencia monopolística",
+        "En las tres: competencia perfecta, monopolio y competencia monopolística"
+      ],
+      "correcta": 2,
+      "explicacion": "En las dos hay libre entrada: cualquier beneficio atrae nuevas empresas hasta que se acaba. El monopolio no, porque las barreras de entrada le permiten mantener su beneficio en el largo plazo."
+    }
+  ]
+}
