@@ -1,0 +1,41 @@
+{
+  "id": "level44",
+  "distrito": "Venus",
+  "clase": "Clase 05 · Final",
+  "titulo": "El planeta del humo, donde lo que hace uno lo paga otro",
+  "tema": "venus",
+  "musica": "venus",
+  "vehiculo": "nave",
+  "intro": "Quinta parada del modo galaxia: Venus, el planeta del efecto invernadero. Las fábricas de la colonia echan humo que les cae a vecinos que no compraron nada: eso es una EXTERNALIDAD, la primera FALLA DE MERCADO. La segunda son los BIENES PÚBLICOS, como el alumbrado de las calles: todos lo usan y nadie lo quiere pagar. En los dos casos el mercado solo no llega a la cantidad que le conviene a la sociedad. La pregunta es cómo se arregla: entre privados, con el teorema de Coase, o con el gobierno, con impuestos, subsidios y reglas.",
+  "repaso": [
+    "QUÉ ES UNA EXTERNALIDAD: un costo o beneficio que afecta a un TERCERO que no participa directamente en la compra y venta.",
+    "NEGATIVAS, en la producción o en el consumo: si no se corrigen, el mercado produce una cantidad MAYOR que la socialmente deseable. Ejemplos: la fábrica que contamina, el vecino que fuma.",
+    "POSITIVAS, en la producción o en el consumo: si no se corrigen, el mercado produce una cantidad MENOR que la socialmente deseable. Ejemplos: la mina que construye carreteras, quien se vacuna.",
+    "LA PES: siempre que una externalidad no se corrija (no se internalice) habrá PES. El caso raro: si la demanda o la oferta es perfectamente inelástica, la PES puede ser nula.",
+    "SOLUCIÓN PRIVADA, EL TEOREMA DE COASE: funciona si 1) las partes NO son numerosas, 2) los derechos de propiedad están claramente asignados (no importa a quién, sino que estén asignados) y 3) los costos de negociación son nulos o muy bajos.",
+    "EJEMPLO DE COASE: el concierto le deja 400 a Laura y le cuesta 10 000 a su vecino. Negociando, el concierto no se hace, porque el daño es mucho mayor que el beneficio.",
+    "SOLUCIÓN PÚBLICA, si la privada no funciona: IMPUESTOS pigouvianos para las externalidades negativas y SUBSIDIOS pigouvianos para las positivas. También REGULACIONES: prohibiciones.",
+    "A QUIÉN SE LE COBRA: si la externalidad la genera el productor, el impuesto o el subsidio se le aplica a él, no al consumidor.",
+    "COMPETENCIA PERFECTA SIN FALLAS: transa la cantidad socialmente eficiente, salvo que haya externalidades no internalizadas o el bien sea público.",
+    "BIENES PÚBLICOS, dos características: NO EXCLUYENTES (no se puede impedir que alguien lo use: es gratuito) y NO RIVALES (dos personas pueden usarlo a la vez sin estorbarse). Ejemplos: los fuegos artificiales de Navidad, el alumbrado público.",
+    "EL PROBLEMA DE LOS BIENES PÚBLICOS: los free riders o polizontes, que lo usan sin pagar. Ninguna empresa privada quiere ofrecerlos porque no puede cobrar, y se produce poco. Por eso el Estado los provee.",
+    "OJO: no todo lo que da el Estado es un bien público. El agua de Sedapal o un baño que cobra S/ 1 son excluyentes. Un lapicero es rival: si lo usas tú, no lo usa otro."
+  ],
+  "mapa": [
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                                                                                                                                    ",
+    "                                                                   AA                                                                                                               ",
+    "                      L                    V                                                                   G                                                                    ",
+    "                                                                 oo  oo                                                                                                             ",
+    "                                                                 ======                                                                                                             ",
+    "      oo1oo          oooo               oo                                      ooooooooooo                 oo         ooooo                        1   L    oooooooo               ",
+    "                    ======              ======                                                       ooooo  ======             ooooo                        ==========              ",
+    "                                  ooooo                        =====                                                                                                                ",
+    "  P           C             E                       E     C T               E     X   E X       C                   E    X                C   E                         B       M   ",
+    "###################################   ################################################################   #######################   #################################################",
+    "###################################   ################################################################   #######################   #################################################",
+    "###################################   ################################################################   #######################   #################################################"
+  ]
+}

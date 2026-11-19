@@ -1,0 +1,125 @@
+{
+  "nivel": "level44",
+  "clase": "Clase 05 · Final — Fallas de mercado",
+  "fuente": "Apuntes de la 5ta clase del final — Fallas de mercado (Economía General I)",
+  "preguntasJefe": 3,
+  "preguntas": [
+    {
+      "id": "e44-q1",
+      "nivel": "comprension",
+      "enunciado": "Una fábrica contamina un río y no se hace nada para corregirlo.\n\n¿Qué cantidad produce el mercado?",
+      "opciones": [
+        "Una cantidad menor que la socialmente deseable",
+        "Una cantidad mayor que la socialmente deseable",
+        "Exactamente la cantidad socialmente deseable",
+        "Ninguna, porque la contaminación cierra la fábrica"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una externalidad NEGATIVA en la producción. La fábrica no paga el daño que hace, así que para ella producir sale más barato de lo que le cuesta a la sociedad: produce de más. Las negativas llevan a producir MÁS; las positivas, MENOS."
+    },
+    {
+      "id": "e44-q2",
+      "nivel": "comprension",
+      "enunciado": "Con respecto a las externalidades, indique la afirmación verdadera.",
+      "opciones": [
+        "Una externalidad positiva en el consumo lleva a producir más de lo socialmente deseable",
+        "El teorema de Coase solo se puede emplear si las partes son muy numerosas",
+        "Una externalidad negativa en el consumo lleva a producir menos de lo socialmente deseable",
+        "Una externalidad positiva en el consumo lleva a producir menos de lo socialmente deseable"
+      ],
+      "correcta": 3,
+      "explicacion": "Si el consumo de algo beneficia a terceros (como vacunarse), cada persona compra pensando solo en su beneficio y el mercado se queda corto: produce MENOS de lo socialmente deseable. Coase pide que las partes NO sean numerosas."
+    },
+    {
+      "id": "e44-q3",
+      "nivel": "comprension",
+      "enunciado": "Tu vecino fuma en su balcón y el humo entra a tu cuarto.\n\n¿Qué es?",
+      "opciones": [
+        "Una externalidad: un costo que te afecta a ti, que no participaste en la compra del cigarro",
+        "Un bien público, porque el humo es gratis para todos",
+        "Una falla del cigarro, que debería venir con filtro",
+        "Nada, porque tú no compraste el cigarro"
+      ],
+      "correcta": 0,
+      "explicacion": "Una externalidad es un costo o beneficio que le cae a un tercero que no participó en la transacción. Tú no compraste ni vendiste el cigarro, pero pagas el costo. Es una externalidad negativa en el consumo."
+    },
+    {
+      "id": "e44-q4",
+      "nivel": "comprension",
+      "enunciado": "Una externalidad negativa en la producción se puede solucionar…",
+      "opciones": [
+        "otorgando un subsidio al productor",
+        "otorgando un subsidio al consumidor",
+        "con la intervención del Estado, si los costos de transacción hacen imposible una solución entre privados",
+        "dejando que las partes negocien aunque los costos de transacción sean muy altos"
+      ],
+      "correcta": 2,
+      "explicacion": "Las negativas se corrigen con un IMPUESTO pigouviano, no con subsidios, que son para las positivas. Si negociar entre privados es muy caro, Coase no funciona y le toca al Estado: impuestos o regulaciones."
+    },
+    {
+      "id": "e44-q5",
+      "nivel": "reconocimiento",
+      "enunciado": "¿Cuáles son las dos características de un bien público?",
+      "opciones": [
+        "Es no excluyente (no se puede cobrar) y no rival (varias personas lo usan a la vez sin estorbarse)",
+        "Lo produce el Estado y es gratuito",
+        "Es excluyente y rival, como cualquier bien",
+        "Su costo de producción es cero"
+      ],
+      "correcta": 0,
+      "explicacion": "No excluyente: no se puede impedir que alguien lo use, aunque no pague. No rival: que tú lo uses no le quita nada a otro. Que lo produzca el Estado no lo hace público: el agua de Sedapal es excluyente."
+    },
+    {
+      "id": "e44-q6",
+      "nivel": "comprension",
+      "enunciado": "¿Por qué ninguna empresa privada quiere poner el alumbrado de las calles?",
+      "opciones": [
+        "Porque las calles son del Estado y está prohibido",
+        "Porque nadie necesita alumbrado",
+        "Porque la luz es un recurso muy caro",
+        "Por los free riders: todos lo usarían sin pagar, y no habría cómo cobrarles"
+      ],
+      "correcta": 3,
+      "explicacion": "El alumbrado es un bien público. Si una empresa lo pone, todos se benefician paguen o no: son polizontes o free riders. Como nadie paga, ninguna empresa privada lo ofrece y la sociedad se queda sin él. Por eso lo provee el Estado."
+    },
+    {
+      "id": "e44-q7",
+      "nivel": "comprension",
+      "enunciado": "Primera pregunta del gobernador. María quiere plantar un mango que le deja S/ 800, pero a su vecino Juan le costaría S/ 2000 por las hojas y frutas que le caen en la piscina. Son dos personas, los derechos están claros y negociar no cuesta nada.\n\n¿Qué pasa con el árbol?",
+      "opciones": [
+        "Se planta, porque el jardín es de María",
+        "No se planta: por Coase, negociando llegan a la solución eficiente, y el daño de 2000 es mayor que el beneficio de 800",
+        "Hace falta que el gobierno lo prohíba",
+        "Se planta, y Juan tiene que aguantarse"
+      ],
+      "correcta": 1,
+      "explicacion": "Se cumplen las tres condiciones de Coase: pocas partes, derechos claros y negociación barata. Juan puede ofrecerle a María más de 800 para que no lo plante, y aun así le conviene. Gana la opción que más valor le deja a la sociedad: no plantarlo."
+    },
+    {
+      "id": "e44-q8",
+      "nivel": "comprension",
+      "enunciado": "Segunda pregunta. ¿En qué caso el teorema de Coase NO sirve?",
+      "opciones": [
+        "Cuando hay solo dos vecinos",
+        "Cuando los derechos de propiedad están claramente asignados",
+        "Cuando miles de personas sufren el humo de una fábrica y negociar entre todos es carísimo",
+        "Cuando el daño es más grande que el beneficio"
+      ],
+      "correcta": 2,
+      "explicacion": "Coase pide pocas partes y costos de negociación bajos. Con miles de afectados, ponerse de acuerdo es imposible. Ahí entra la solución pública: un impuesto pigouviano a la fábrica o una regulación."
+    },
+    {
+      "id": "e44-q9",
+      "nivel": "comprension",
+      "enunciado": "Tercera pregunta. Un mercado de competencia perfecta, ¿siempre transa la cantidad socialmente eficiente?",
+      "opciones": [
+        "Sí, siempre, porque P = CMg",
+        "No, nunca: siempre tiene PES",
+        "Solo si el gobierno pone un impuesto",
+        "Sí, salvo que haya externalidades no internalizadas o que el bien sea público"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin fallas, la competencia perfecta llega a la cantidad eficiente y no tiene PES. Pero si hay una externalidad que no se corrigió, o el bien es público, el mercado se equivoca y aparece la PES."
+    }
+  ]
+}

@@ -611,6 +611,20 @@
       "abierto": true,
       "mapa": "levels/level43.json",
       "preguntas": "questions/level43_questions.json"
+    },
+    {
+      "id": "level44",
+      "clase": "Clase 05",
+      "distrito": "Venus",
+      "titulo": "El planeta del humo, donde lo que hace uno lo paga otro",
+      "icono": "🌋",
+      "seccion": "Final",
+      "seccionNota": "Monopolio y lo que viene — modo galaxia, ahora visitando otros mundos",
+      "retos": 7,
+      "duracion": "3 min",
+      "abierto": true,
+      "mapa": "levels/level44.json",
+      "preguntas": "questions/level44_questions.json"
     }
   ]
 }

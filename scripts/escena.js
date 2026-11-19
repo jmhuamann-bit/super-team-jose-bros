@@ -367,6 +367,13 @@ const FICHAS = [
   { sprite: "calamar", nombre: "El Calamar que Busca la Escala Mínima", texto: "La empresa no produce en su escala mínima eficiente (el mínimo del CMe): produce donde IMg = CMg, antes de llegar a ese punto." },
   { sprite: "tritoncito", nombre: "El Tritoncito que Iguala Precio y Costo Marginal", texto: "En el largo plazo, P = CMe > CMg. Solo en competencia perfecta P = CMe = CMg." },
   { sprite: "neptunio", nombre: "El Administrador de la Estación", texto: "Jefe de Neptuno: pide diferenciar las tres estructuras de mercado y leer el equilibrio de largo plazo." },
+  { sprite: "nubeacida", nombre: "La Nube que Cree que Se Produce de Menos", texto: "Venus: una externalidad NEGATIVA que no se corrige, en la producción o en el consumo, hace producir MÁS de lo socialmente deseable." },
+  { sprite: "chimenea", nombre: "La Chimenea que Pide un Subsidio", texto: "Una externalidad negativa se corrige con un IMPUESTO pigouviano, no con un subsidio. Y si la genera el productor, se le cobra a él." },
+  { sprite: "cigarro", nombre: "El Cigarro que No Ve al Tercero", texto: "Una externalidad es un costo o beneficio que afecta a un tercero que no participa en la compra y venta." },
+  { sprite: "fuegos", nombre: "Los Fuegos que No Saben que Son Públicos", texto: "Un bien público es no excluyente (no se puede cobrar) y no rival (dos personas lo usan a la vez sin estorbarse), como ver fuegos artificiales." },
+  { sprite: "farola", nombre: "La Farola que Nadie Quiere Prender", texto: "Por los polizontes (free riders), ninguna empresa privada alumbra las calles: nadie le pagaría. Por eso lo provee el Estado." },
+  { sprite: "mango", nombre: "El Mango que No Sabe Negociar", texto: "Coase funciona si las partes son pocas, los derechos de propiedad están claros y los costos de negociar son bajos." },
+  { sprite: "pigou", nombre: "El Gobernador de los Impuestos Verdes", texto: "Jefe de Venus: pide decidir entre la solución privada (Coase) y la pública (impuestos, subsidios y regulaciones)." },
 ];
 
 export function galeriaPersonajes(contenedor) {

@@ -5895,6 +5895,116 @@ export const TEMAS = {
       }
     },
   },
+
+  /* =========================================================
+     VENUS — quinta parada del modo galaxia. El planeta del efecto
+     invernadero: nubes ácidas amarillas, un cielo anaranjado que casi
+     no deja ver, fábricas de la colonia echando humo y un sol enorme.
+     ========================================================= */
+  venus: {
+    nombre: "Venus",
+    cielo: [[0, "#3a2010"], [0.35, "#8a5020"], [0.62, "#d89a40"], [0.8, "#6a4020"], [1, "#2a180a"]],
+    suelo: { cara: "#8a6a3a", borde: "#b8904a", tierra: "#4a3418", plataforma: "#5a4a5a", plataformaBorde: "#c8d84a" },
+    acento: "#c8d84a",
+
+    bichos: ["nubeacida", "chimenea", "cigarro", "fuegos", "farola", "mango"],
+    nombresBichos: [
+      "La Nube que Cree que Se Produce de Menos",
+      "La Chimenea que Pide un Subsidio",
+      "El Cigarro que No Ve al Tercero",
+      "Los Fuegos que No Saben que Son Públicos",
+      "La Farola que Nadie Quiere Prender",
+      "El Mango que No Sabe Negociar",
+    ],
+    andares: ["vuela", "guardia", "patrulla", "salta", "guardia", "salta"],
+    jefe: "pigou",
+    nombreJefe: "El Gobernador de los Impuestos Verdes",
+
+    fondo(ctx, cam, t) {
+      const elige = (a, n) => a[((n % a.length) + a.length) % a.length];
+
+      // el sol, grande y borroso detrás de las nubes
+      ctx.fillStyle = "rgba(255,230,160,.18)";
+      ctx.beginPath(); ctx.arc(620, 90, 90, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(255,240,190,.55)";
+      ctx.beginPath(); ctx.arc(620, 90, 36, 0, Math.PI * 2); ctx.fill();
+
+      // LAS NUBES ÁCIDAS, en capas que se mueven a distinta velocidad
+      for (let capa = 0; capa < 3; capa++) {
+        repetir(ctx, cam + t * (0.3 + capa * 0.25), 300, 0.05 + capa * 0.04, (x, i) => {
+          const y = 40 + capa * 55 + ((i * 23) % 20);
+          ctx.fillStyle = ["rgba(220,200,90,.30)", "rgba(200,160,60,.32)", "rgba(180,130,50,.35)"][capa];
+          ctx.beginPath(); ctx.ellipse(x + 100, y, 120, 18, 0, 0, Math.PI * 2); ctx.fill();
+          ctx.beginPath(); ctx.ellipse(x + 60, y - 10, 60, 14, 0, 0, Math.PI * 2); ctx.fill();
+        });
+      }
+
+      // los volcanes y las montañas lejanas
+      repetir(ctx, cam, 360, 0.1, (x, i) => {
+        const alto = 70 + ((i * 29) % 40);
+        ctx.fillStyle = elige(["#5a3418", "#4a2c14", "#643a1c"], i);
+        ctx.beginPath();
+        ctx.moveTo(x, 306); ctx.lineTo(x + 120, 306 - alto); ctx.lineTo(x + 150, 306 - alto);
+        ctx.lineTo(x + 270, 306); ctx.closePath(); ctx.fill();
+        ctx.fillStyle = "rgba(255,120,40,.6)";                  // la lava en la cima
+        ctx.fillRect(x + 122, 306 - alto, 26, 3);
+      });
+
+      // LAS FÁBRICAS de la colonia, con el humo que molesta a los vecinos
+      repetir(ctx, cam, 300, 0.25, (x, i) => {
+        const bx = x + 60, base = 330;
+        ctx.fillStyle = "#3a2a20";
+        ctx.fillRect(bx, base - 50, 90, 50);
+        ctx.fillRect(bx + 10, base - 90, 14, 40);
+        ctx.fillRect(bx + 60, base - 76, 12, 26);
+        ctx.fillStyle = "#f2c84a";
+        for (let k = 0; k < 4; k++) ctx.fillRect(bx + 8 + k * 20, base - 34, 10, 8);
+        for (let k = 0; k < 4; k++) {                            // el humo que sube y se va
+          const f = ((t * 0.5 + k * 25 + i * 13) % 100) / 100;
+          ctx.fillStyle = `rgba(110,100,80,${(0.55 - f * 0.5).toFixed(2)})`;
+          ctx.beginPath(); ctx.arc(bx + 17 + f * 40, base - 96 - f * 60, 6 + f * 14, 0, Math.PI * 2); ctx.fill();
+        }
+      });
+
+      // EL SUELO rocoso y caliente
+      ctx.fillStyle = "#6a4a26";
+      ctx.fillRect(0, 330, CFG.ANCHO_VISTA, 52);
+      ctx.fillStyle = "#8a6232";
+      ctx.fillRect(0, 330, CFG.ANCHO_VISTA, 4);
+      repetir(ctx, cam, 150, 0.4, (x, i) => {                    // las grietas con brillo de lava
+        ctx.strokeStyle = "rgba(255,110,40,.55)";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(x + 10, 344 + (i % 3) * 6); ctx.lineTo(x + 50, 350); ctx.lineTo(x + 90, 342 + ((i * 7) % 10));
+        ctx.stroke();
+        ctx.lineWidth = 1;
+      });
+
+      // LAS FAROLAS de la colonia, el bien público que nadie quiere pagar
+      repetir(ctx, cam, 200, 0.6, (x, i) => {
+        const bx = x + 50, base = 382;
+        ctx.fillStyle = "#2a2420";
+        ctx.fillRect(bx, base - 56, 4, 56);
+        ctx.fillRect(bx - 6, base - 60, 16, 5);
+        ctx.fillStyle = "rgba(255,240,170,.9)";
+        ctx.fillRect(bx - 4, base - 56, 12, 4);
+        ctx.fillStyle = "rgba(255,240,170,.12)";
+        ctx.beginPath(); ctx.arc(bx + 2, base - 52, 18, 0, Math.PI * 2); ctx.fill();
+      });
+      ctx.fillStyle = "#3a2810";
+      ctx.fillRect(0, 380, CFG.ANCHO_VISTA, 4);
+    },
+
+    clima(ctx, t) {
+      // la lluvia ácida, fina y amarilla, que se evapora antes de tocar el piso
+      for (let i = 0; i < 55; i++) {
+        const x = (i * 67 + t * 0.8) % 860 - 30;
+        const y = (i * 89 + t * 4) % 320;
+        ctx.fillStyle = `rgba(210,220,90,${(0.45 - y / 900).toFixed(2)})`;
+        ctx.fillRect(x, y, 1, 6);
+      }
+    },
+  },
 };
 
 /** Pinta el cielo del tema (degradado vertical). */

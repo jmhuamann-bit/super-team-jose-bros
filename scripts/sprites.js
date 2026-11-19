@@ -4633,6 +4633,135 @@ const NEPTUNIO = [    // jefe: el administrador de la estación, que reparte los
 ];
 const P_NEPTUNIO = { k: "#0a1020", b: "#2a5ab0", c: "#5ae0f0", p: "#b0c8e0", w: "#ffffff" };
 
+const NUBEACIDA = [    // la nube ácida: cree que la contaminación de la fábrica hace producir de menos (18 × 14)
+  "..................",
+  "......kkkkk.......",
+  "....kkgggggkk.....",
+  "...kgggggggggkk...",
+  "..kggwkggggwkggk..",
+  ".kgggggggggggggk..",
+  "kggggggkkkkgggggk.",
+  ".kkggggggggggggkk.",
+  "...kkkkkkkkkkkk...",
+  "....g...g...g.....",
+  "...g...g...g......",
+  "..g...g...g.......",
+  "..................",
+  "..................",
+];
+const P_NUBEACIDA = { k: "#1a2010", g: "#c8d84a", w: "#ffffff" };
+
+const CHIMENEA = [    // la chimenea: cree que se arregla la contaminación con un subsidio (18 × 14)
+  "....ggg...........",
+  "...ggggg..........",
+  "....ggg...........",
+  "...kkkkk..........",
+  "...krrrk..........",
+  "...krrrk..........",
+  "...krrrkkkkkkkkkk.",
+  "...krrrrrrrrrrrrk.",
+  "...krwkrrrrrwkrrk.",
+  "...krrrrrrrrrrrrk.",
+  "...krrrkkkkkkrrrk.",
+  "...krrrrrrrrrrrrk.",
+  "...kkkkkkkkkkkkkk.",
+  "..................",
+];
+const P_CHIMENEA = { k: "#1a1010", r: "#a84a3a", w: "#ffffff", g: "#9a9a8a" };
+
+const CIGARRO = [    // el cigarro: no ve que fumar molesta a un tercero que no compró nada (18 × 14)
+  "..................",
+  "............g.....",
+  "...........g.g....",
+  "............g.....",
+  "...........g......",
+  "..................",
+  "kkkkkkkkkkkkkkkk..",
+  "kwwwwwwwwwwwooork.",
+  "kwwkwwwwwwkwoooyk.",
+  "kwwwwwwwwwwwooork.",
+  "kkkkkkkkkkkkkkkk..",
+  "..................",
+  "..................",
+  "..................",
+];
+const P_CIGARRO = { k: "#201410", w: "#f4f0e8", o: "#d88a3a", r: "#e8503a", y: "#f2d24a", g: "#a0a0a0" };
+
+const FUEGOS = [    // los fuegos artificiales: no reconocen un bien público (18 × 14)
+  "....y.....p.......",
+  "..y.y.y.p.p.p.....",
+  "...yyy...ppp......",
+  "..yyyyy.ppppp.....",
+  "...yyy...ppp......",
+  "..y.y.y.p.p.p.....",
+  "....y..k..p.......",
+  "......kwk.........",
+  ".....kwkwk........",
+  ".....kwwwk........",
+  ".....kwkwk........",
+  ".....kwwwk........",
+  ".....kkkkk........",
+  "..................",
+];
+const P_FUEGOS = { k: "#1a1020", y: "#f2d24a", p: "#e85ac8", w: "#5ae0f0" };
+
+const FAROLA = [    // la farola: no sabe por qué ninguna empresa privada alumbra las calles (18 × 14)
+  "......kkkkkk......",
+  ".....kyyyyyyk.....",
+  ".....kywkywyk.....",
+  ".....kyyyyyyk.....",
+  "......kkkkkk......",
+  "........kk........",
+  "........kk........",
+  "........kk........",
+  "........kk........",
+  "........kk........",
+  "........kk........",
+  "......kkkkkk......",
+  ".....kkkkkkkk.....",
+  "..................",
+];
+const P_FAROLA = { k: "#1a1a20", y: "#f8e88a", w: "#ffffff" };
+
+const MANGO = [    // el mango del vecino: no sabe cuándo funciona el teorema de Coase (18 × 14)
+  "......kkkk........",
+  ".....kgggk........",
+  "......kkk.........",
+  "....kkkoookk......",
+  "...koooooooook....",
+  "..kooowkooowkok...",
+  "..koooooooooook...",
+  "..koooookkooook...",
+  "..koooooooooook...",
+  "...kooooooooook...",
+  "....kooooooook....",
+  ".....kkkkkkkk.....",
+  "..................",
+  "..................",
+];
+const P_MANGO = { k: "#201408", g: "#4a8a3a", o: "#f0a83a", w: "#ffffff" };
+
+const PIGOU = [    // jefe: el gobernador de la colonia, que cobra impuestos y reparte subsidios (18 × 17)
+  ".....kkkkkkkk.....",
+  "....kssssssssk....",
+  "....ksyssssysk....",
+  "....kkkkkkkkkk....",
+  "...kppppppppppk...",
+  "...kpkkppppkkpk...",
+  "...kpwkppppwkpk...",
+  "...kppppppppppk...",
+  "...kppkkkkkkppk...",
+  "....kppppppppk....",
+  "...kkvvvvvvvvkk...",
+  "..kvvvvvyyvvvvvk..",
+  ".kvvvvvyyyyvvvvvk.",
+  ".kpvvvvvyyvvvvvpk.",
+  ".kpkvvvvvvvvvvkpk.",
+  "..kkvvvvvvvvvvkk..",
+  "...kvvvvkkvvvvk...",
+];
+const P_PIGOU = { k: "#1a1410", s: "#2a2a30", y: "#f2d24a", p: "#e8b896", w: "#ffffff", v: "#4a6a3a" };
+
 
 /* ---------------------------------------------------------------
    REGISTRO Y COCINADO
@@ -4895,6 +5024,13 @@ const DEFINICIONES = {
   calamar:      [CALAMAR, P_CALAMAR],
   tritoncito:   [TRITONCITO, P_TRITONCITO],
   neptunio:     [NEPTUNIO, P_NEPTUNIO],
+  nubeacida:    [NUBEACIDA, P_NUBEACIDA],
+  chimenea:     [CHIMENEA, P_CHIMENEA],
+  cigarro:      [CIGARRO, P_CIGARRO],
+  fuegos:       [FUEGOS, P_FUEGOS],
+  farola:       [FAROLA, P_FAROLA],
+  mango:        [MANGO, P_MANGO],
+  pigou:        [PIGOU, P_PIGOU],
 };
 
 const cocidos = {};   // nombre -> { canvas, ancho, alto } (ya escalados)

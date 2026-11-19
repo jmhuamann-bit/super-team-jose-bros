@@ -28,6 +28,14 @@ function f(nombre) {
  * Un "tiempo" son 0.15 s, así que el bucle completo dura unos 5 segundos.
  */
 const TEMAS_MUSICA = {
+  venus: { // Venus: tema pesado en mi frigio, caliente y lento como el planeta
+    tempo: 0.22, onda: "sawtooth",
+    melodia: ["E4",4,"F4",2,"G4",2,"A4",4,"G4",2,"F4",2,
+              "E4",4,"D4",2,"E4",2,"F4",4,"E4",4,
+              "B4",4,"A4",2,"G4",2,"F4",4,"G4",2,"A4",2,
+              "G4",2,"F4",2,"E4",4,"F4",2,"E4",2,"E4",4],
+    bajo:    ["E2",8,"E2",8,"F2",8,"E2",8,"D2",8,"E2",8,"F2",8,"E2",8],
+  },
   neptuno: { // Neptuno: tema de mercado espacial en sol mayor, ligero y con síncopa
     tempo: 0.16, onda: "square",
     melodia: ["G4",2,"B4",2,"D5",2,"B4",2,"A4",2,"G4",2,"E4",4,
